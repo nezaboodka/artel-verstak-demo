@@ -1,0 +1,12 @@
+{
+  "name": "artel-verstak-demo",
+  "description": "Демонстрация возможностей: Артель + Верстак",
+  "devDependencies":
+  {
+    "artel": "0.4.200"
+  },
+  "scripts":
+  {
+    "настроить": "npm install"
+  }
+}
