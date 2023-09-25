@@ -4,7 +4,7 @@
     {
       "label": "Собрать проект (артель собрать)",
       "type": "shell",
-      "command": "node n-artel.js собрать приложение !сборка",
+      "command": "node n-artel.js собрать приложение .сборка",
       "group": "build",
     },
     {
