@@ -1,0 +1,62 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type ButtonState = variant
+  {
+    Pressed
+    Selecting
+    Selected
+    Released
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type ButtonSensor = object based on BasePointerSensor
+  {
+    state: ButtonState
+
+    pointerButton: PointerButton
+
+    originData: Object?
+
+    selectedData: Object?
+
+    selectedX: Number
+
+    selectedY: Number
+
+    selected: YesNo
+
+    on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
+
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+
+    hidden by type
+    {
+      operation onPointerDown(e: PointerEvent)
+
+      operation onPointerMove(e: PointerEvent)
+
+      operation onPointerUp(e: PointerEvent)
+
+      operation onLostPointerCapture(e: PointerEvent)
+
+      operation onKeyDown(e: KeyboardEvent)
+
+      operation press(e: PointerEvent)
+
+      operation selecting(e: PointerEvent)
+
+      operation select(e: PointerEvent)
+
+      operation release()
+
+      operation cancel()
+
+      operation reset()
+
+      operation updateSensorData(e: PointerEvent)
+    }
+  }
+}

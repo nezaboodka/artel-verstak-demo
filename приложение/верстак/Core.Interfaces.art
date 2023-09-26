@@ -1,0 +1,266 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type Callback<T> = operation(native: T)
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Delegate<T, M, C, R> = operation(block: Block<T, M, C, R>, super: operation(): R): R
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Void>>): Promise<Void>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type SimpleDelegate<T> = operation(block: Block<T, Object, Object, Object>)
+
+  // Block
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockKind = вариант
+  {
+    Section = 0
+    Table = 1
+    Note = 2
+    Group = 3
+    Row = 4
+    Cursor = 5
+    Native = 6
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Block<T, M, C, R> = interface
+  {
+    protected
+    {
+      node: BlockNode<T, M, C, R>
+
+      native: T
+
+      isSection: YesNo
+
+      isTable: YesNo
+
+      isInitialRebuild: YesNo
+    }
+
+    model: M
+
+    controller: C
+
+    kind: BlockKind
+
+    area: BlockArea
+
+    widthGrowth: Number
+
+    minWidth: Text
+
+    maxWidth: Text
+
+    heightGrowth: Number
+
+    minHeight: Text
+
+    maxHeight: Text
+
+    contentAlignment: Align
+
+    blockAlignment: Align
+
+    contentWrapping: YesNo
+
+    overlayVisible: YesNo?
+
+    rebuildPriority: Priority
+
+    childrenShuffling: YesNo
+
+    strictOrder: YesNo
+
+    operation useStyle(styleName: Text, enabled: YesNo?)
+
+    operation configureReactronic(options: Partial<MemberOptions>): MemberOptions
+  }
+
+  // BlockNode
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockNode<T, M, C, R> = interface
+  {
+    protected
+    {
+      key: Text
+
+      driver: Driver<T>
+
+      builder: Readonly<BlockBuilder<T, M, C, R>>
+
+      level: Number
+
+      owner: Block
+
+      host: Block
+
+      children: CollectionReader<Block>
+
+      ties: Item<Block>?
+
+      stamp: Number
+
+      outer: Block
+
+      context: BlockCtx?
+    }
+  }
+
+  // BlockBuilder
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockBuilder<T, M, C, R> = interface
+  {
+    base`: BlockBuilder<T, M, C, R>? = empty
+
+    key: Text? = empty
+
+    mode: Mode? = empty
+
+    triggers: Object? = empty
+
+    claim: Delegate<T, M, C, R>? = empty
+
+    create: Delegate<T, M, C, R>? = empty
+
+    initialize: Delegate<T, M, C, R>? = empty
+
+    rebuild: Delegate<T, M, C, R>? = empty
+
+    finalize: Delegate<T, M, C, R>? = empty
+  }
+
+  // BlockCtx
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockCtx<T = Object> = interface
+  {
+    value: T
+  }
+
+  // Driver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Driver<T, C> = interface
+  {
+    protected
+    {
+      name: Text
+
+      isRow: YesNo
+
+      preset: SimpleDelegate<T>
+    }
+
+    operation claim(block: Block<T, Object, C>)
+
+    operation create(block: Block<T, Object, C>, b: object { native: T; controller: C })
+
+    operation initialize(block: Block<T, Object, C>)
+
+    operation mount(block: Block<T, Object, C>)
+
+    operation rebuild(block: Block<T, Object, C>)
+
+    operation finalize(block: Block<T, Object, C>, isLeader: YesNo): YesNo
+
+    operation applyKind(block: Block<T, Object, C, Object>, value: BlockKind)
+
+    operation applyCoords(block: Block<T, Object, C, Object>, value: BlockCoords?)
+
+    operation applyWidthGrowth(block: Block<T, Object, C, Object>, value: Number)
+
+    operation applyMinWidth(block: Block<T, Object, C, Object>, value: Text)
+
+    operation applyMaxWidth(block: Block<T, Object, C, Object>, value: Text)
+
+    operation applyHeightGrowth(block: Block<T, Object, C, Object>, value: Number)
+
+    operation applyMinHeight(block: Block<T, Object, C, Object>, value: Text)
+
+    operation applyMaxHeight(block: Block<T, Object, C, Object>, value: Text)
+
+    operation applyContentAlignment(block: Block<T, Object, C, Object>, value: Align)
+
+    operation applyBlockAlignment(block: Block<T, Object, C, Object>, value: Align)
+
+    operation applyContentWrapping(block: Block<T, Object, C, Object>, value: YesNo)
+
+    operation applyOverlayVisible(block: Block<T, Object, C, Object>, value: YesNo?)
+
+    operation applyStyle(block: Block<T, Object, C, Object>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+  }
+
+  // Other
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockCoords = interface
+  {
+    x1: Number
+
+    y1: Number
+
+    x2: Number
+
+    y2: Number
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Priority = вариант
+  {
+    Realtime = 0
+    Normal = 1
+    Background = 2
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Mode = вариант
+  {
+    Default = 0
+    PinpointRebuild = 1
+    ManualMount = 2
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type Align = вариант
+  {
+    Stretch = 0b00000
+    Left = 0b00001
+    CenterX = 0b00010
+    Right = 0b00011
+    Top = 0b00100
+    CenterY = 0b01000
+    Bottom = 0b01100
+    Default = 0b10000
+    Center = 0b00010 + 0b01000
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type ElasticSize = interface
+  {
+    cells: Number
+
+    min: Text
+
+    max: Text
+
+    growth: Number
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type TrackSize = interface
+  {
+    track: Text | Number
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BlockArea = empty | Text | object { cellsOverWidth: Number; cellsOverHeight: Number }
+}

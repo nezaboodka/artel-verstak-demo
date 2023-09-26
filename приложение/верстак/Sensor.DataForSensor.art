@@ -1,0 +1,50 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type DataForSensor = интерфейс
+  {
+    context: Object?
+
+    window: Object?
+
+    focus: Object?
+
+    hover: Object?
+
+    keyboard: Object?
+
+    click: Object?
+
+    wheel: Object?
+
+    resize: Object?
+
+    drag: Object?
+
+    draggable: Object?
+
+    htmlDrag: Object?
+
+    htmlDraggable: Object?
+
+    button: Object?
+
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  конст SymDataForSensor: unique /*(!) = Symbol("DataForSensor") */
+
+  #ВнешняяРеализация(модуль = "verstak")
+  конст SymResizeObserver: unique /*(!) = Symbol("ResizeObserver") */
+
+  #ВнешняяРеализация(модуль = "verstak")
+  конст EmptyDataArray: List<Object> /*(!) = [] */
+
+  #ВнешняяРеализация(модуль = "verstak")
+  операция findTargetElementData(targetPath: List<Object>, underPointer: List<Object>, sym: Symbol, anyOfPayloadKeys: Array</*(!) any */ Object>, ignoreWindow: ДаНет = нет): object { data: DataForSensor?; window: Object? }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  операция grabElementDataList(targetPath: List<Object>, sym: Symbol, payloadKey: Object?, existing: Array<Object?>, ignoreWindow: ДаНет = нет, predicate: операция(element: Object): ДаНет = { возврат нет } ): object { dataList: Array<Object?>; window: Object?; activeData: Object? }
+}

@@ -1,0 +1,63 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  operation Section<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, super: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, super: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation row<T>(builder: operation(block: Void): T?, shiftCursorDown: Integer?)
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation startNewRow(shiftCursorDown: Integer?)
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation cursor(areaParams: BlockArea)
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation Note(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>?): Block<HTMLElement, Void, Void>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>?): Block<HTMLElement, Void, Void>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation Group<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, super: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation Fragment<M, R>(builder: BlockBuilder<Void, M, R>?, super: BlockBuilder<Void, M, R>?): Block<Void, M, R>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type VerstakHtmlDriver<T = HTMLElement> = object based on HtmlDriver<T>
+  {
+    operation applyKind(block: Block<T, Object, Object>, value: BlockKind)
+
+    operation applyCoords(block: Block<T>, value: BlockCoords?)
+
+    operation applyWidthGrowth(block: Block<T>, value: Number)
+
+    operation applyMinWidth(block: Block<T>, value: Text)
+
+    operation applyMaxWidth(block: Block<T>, value: Text)
+
+    operation applyHeightGrowth(block: Block<T>, value: Number)
+
+    operation applyMinHeight(block: Block<T>, value: Text)
+
+    operation applyMaxHeight(block: Block<T>, value: Text)
+
+    operation applyContentAlignment(block: Block<T>, value: Align)
+
+    operation applyBlockAlignment(block: Block<T>, value: Align)
+
+    operation applyContentWrapping(block: Block<T>, value: YesNo)
+
+    operation applyOverlayVisible(block: Block<T>, value: YesNo?)
+
+    operation applyStyle(block: Block<T, Object, Object>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+
+    operation rebuild(block: Block<T>)
+  }
+}

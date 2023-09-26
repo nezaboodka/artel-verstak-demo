@@ -1,0 +1,11 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  operation FocuserReaction(
+    key: Text,
+    target: HTMLElement,
+    model: FocusModel,
+    switchEditMode: операция(model: FocusModel?): Void? = empty)
+}

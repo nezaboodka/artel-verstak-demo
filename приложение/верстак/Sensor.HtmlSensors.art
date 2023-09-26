@@ -1,0 +1,33 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type HtmlSensors = object
+  {
+    protected
+    {
+      window: WindowSensor
+
+      focus: FocusSensor
+
+      hover: HoverSensor
+
+      keyboard: KeyboardSensor
+
+      wheel: WheelSensor
+
+      resize: ResizeSensor
+
+      htmlDrag: HtmlDragSensor
+
+      button: ButtonSensor
+
+      pointer: PointerSensor
+    }
+
+    on create()
+
+    operation listen(element: HTMLElement?, enabled: ДаНет = да)
+  }
+}

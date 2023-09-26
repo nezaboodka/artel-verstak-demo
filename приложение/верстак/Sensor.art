@@ -1,0 +1,15 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type Sensor = object based on ObservableObject
+  {
+    revision: Integer
+
+    elementDataList: List<Object?>
+
+    protected
+    topElementData: Object?
+  }
+}

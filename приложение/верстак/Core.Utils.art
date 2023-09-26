@@ -1,0 +1,19 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  operation parseBlockCoords(text: Text, buffer: BlockCoords): BlockCoords
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation emitBlockCoords(value: BlockCoords): Text
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation emitLetters(n: Integer): Text
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation emitCellPosition(x: Integer, y: Integer): Text
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation equalBlockCoords(a: BlockCoords, b: BlockCoords): YesNo
+}

@@ -1,0 +1,40 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type ResizedElement = interface
+  {
+    protected
+    {
+      borderBoxSize: ReadonlyArray<ResizeObserverSize>
+
+      contentBoxSize: ReadonlyArray<ResizeObserverSize>
+
+      contentRect: DOMRectReadOnly
+
+      resizeData: Объект
+    }
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type ResizeSensor = object based on Sensor
+  {
+    resizedElements: Array<ResizedElement>
+
+    on create()
+
+    operation reset()
+
+    operation observeResizing(block: Block<Объект, Объект, Объект>, value: YesNo, boxSizing: ResizeObserverBoxOptions = "content-box")
+
+    hidden by type
+    {
+      operation onResize(entries: List<ResizeObserverEntry>)
+
+      operation resize(entries: List<ResizeObserverEntry>)
+
+      operation doReset()
+    }
+  }
+}

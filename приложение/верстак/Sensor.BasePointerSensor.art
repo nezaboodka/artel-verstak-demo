@@ -1,0 +1,31 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type PointerButton = variant
+  {
+    None = 0
+    Left = 1
+    Right = 2
+    Middle = 4
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BasePointerSensor = object based on HtmlElementSensor
+  {
+    positionX: Number
+
+    positionY: Number
+
+    modifiers: KeyboardModifiers
+
+    on create(focusSensor: FocusSensor? = empty, windowSensor: WindowSensor? = empty)
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation extractPointerButton(e: MouseEvent): PointerButton
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation isPointerButtonDown(button: PointerButton, buttonsMask: Integer): YesNo
+}

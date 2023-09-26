@@ -1,0 +1,29 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type HtmlElementSensor = object based on Sensor
+  {
+    protected
+    focusSensor: Object?
+
+    protected
+    windowSensor: WindowSensor?
+
+    sourceElement: HTMLElement?
+
+    preventDefault: YesNo
+
+    stopPropagation: YesNo
+
+    on create(focusSensor: Object? = empty, windowSensor: WindowSensor? = empty)
+
+    hidden by type
+    {
+      operation getDefaultSensorData(): DataForSensor?
+      operation setPreventDefaultAndStopPropagation(e: Event)
+    }
+  }
+
+}

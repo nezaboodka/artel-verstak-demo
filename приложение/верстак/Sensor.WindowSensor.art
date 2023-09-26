@@ -1,0 +1,20 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type WindowModel = interface
+  {
+    popupToggle: ToggleRef
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type WindowSensor = object based on Sensor
+  {
+    activeData: Object?
+
+    previousActiveData: Object?
+
+    операция setActiveWindow(window: Object?, debugHint: Text = "")
+  }
+}

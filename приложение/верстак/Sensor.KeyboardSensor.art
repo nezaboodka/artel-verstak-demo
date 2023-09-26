@@ -1,0 +1,59 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type KeyboardModifiers = variant
+  {
+    None = 0
+    Ctrl = 1
+    Shift = 2
+    Alt = 4
+    Meta = 8
+    CtrlShift = 1 + 2
+    CtrlAlt = 1 + 4
+    CtrlMeta = 1 + 8
+    CtrlShiftAlt = 1 + 2 + 4
+    CtrlShiftAltMeta = 1 + 2 + 4 + 8
+    CtrlShiftMeta = 1 + 2 + 8
+    ShiftAlt = 2 + 4
+    ShiftMeta = 2 + 8
+    ShiftAltMeta = 2 + 4 + 8
+    AltMeta = 4 + 8
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type KeyboardSensor = object based on HtmlElementSensor
+  {
+    down: Text
+
+    up: Text
+
+    modifiers: KeyboardModifiers
+
+    при создании()
+
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+
+    operation reset()
+
+    hidden by type
+    {
+      operation onKeyDown(e: KeyboardEvent)
+
+      operation onKeyUp(e: KeyboardEvent)
+
+      operation keyDown(e: KeyboardEvent)
+
+      operation keyUp(e: KeyboardEvent)
+
+      operation updateSensorData(e: KeyboardEvent)
+
+      global
+      operation getKeyAsModifierIfAny(key: Text): KeyboardModifiers
+    }
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  operation extractModifierKeys(e: MouseEvent | KeyboardEvent | WheelEvent): KeyboardModifiers
+}

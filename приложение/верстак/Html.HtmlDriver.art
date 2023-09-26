@@ -1,0 +1,49 @@
+import artel.js
+
+external
+{
+  // BaseHtmlDriver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object based on BaseDriver<T, C>
+  {
+
+    operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C? })
+
+    operation initialize(block: Block<T, Object?, C, Void>)
+
+    operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
+
+    operation mount(block: Block<T, Object?, C>)
+
+    operation relocate(block: Block<T, Object?, C>)
+
+    operation rebuild(block: Block<T, Object?, C>)
+
+    global
+    {
+      blinkingEffectMarker: Text?
+
+      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<HTMLElement | SVGElement>
+
+      operation findPrevSiblingHtmlBlock(ties: Item<Block<Object>>): Item<Block<HTMLElement | SVGElement>>?
+    }
+
+  }
+
+  // HtmlDriver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type HtmlDriver<T = HTMLElement, C> = object based on BaseHtmlDriver<T, C>
+  {
+    operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C?})
+  }
+
+  // SvgDriver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type SvgDriver<T = SVGElement, C> = object based on BaseHtmlDriver<T, C>
+  {
+    operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C? })
+  }
+}

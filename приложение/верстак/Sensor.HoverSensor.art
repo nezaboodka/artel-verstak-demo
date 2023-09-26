@@ -1,0 +1,25 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type HoverSensor = object based on BasePointerSensor
+  {
+    target: Object?
+
+    on create()
+
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+
+    hidden by type
+    {
+      operation onPointerOver(e: PointerEvent)
+
+      operation onPointerOut(e: PointerEvent)
+
+      operation doPointerOver(e: PointerEvent)
+
+      operation doPointerOut()
+    }
+  }
+}

@@ -1,0 +1,115 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type DragEffectAllowed = "none" | "copy" | "copyLink" | "copyMove" | "link" | "linkMove" | "move" | "all" | "uninitialized"
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type DropEffect = "none" | "copy" | "link" | "move"
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type HtmlDragSensor = object based on HtmlElementSensor
+  {
+    draggable: Object?
+
+    dragSource: Object?
+
+    dragTarget: Object?
+
+    dragTargetWindow: Object?
+
+    previousDragTarget: Object?
+
+    dragStarted: YesNo
+
+    dragFinished: YesNo
+
+    startX: Number
+
+    startY: Number
+
+    dropEffect: DropEffect
+
+    dataTypesAllowed: List<Text>
+
+    effectAllowed: DragEffectAllowed
+
+    dropAllowed: YesNo
+
+    draggingOver: YesNo
+
+    draggingDataTypes: List<Text>
+
+    positionX: Number
+
+    positionY: Number
+
+    modifiers: KeyboardModifiers
+
+    dropX: Number
+
+    dropY: Number
+
+    dropped: YesNo
+
+    immediatePositionX: Number
+
+    immediatePositionY: Number
+
+    immediateModifiers: KeyboardModifiers
+
+    on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
+
+    operation getData(format: Text): Object?
+
+    operation setData(format: Text, value: Object?)
+
+    operation clearData(format: Text? = empty)
+
+    operation setDragImage(value: HTMLElement, x: Number, y: Number)
+
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+
+    hidden by type
+    {
+      operation onDragStart(e: DragEvent)
+
+      operation onDrag(e: DragEvent)
+
+      operation onDragEnter(e: DragEvent)
+
+      operation onDragLeave(e: DragEvent)
+
+      operation onDragOver(e: DragEvent)
+
+      operation onDrop(e: DragEvent)
+
+      operation onDragEnd(e: DragEvent)
+
+      operation startDragging(e: DragEvent)
+
+      operation dragging(e: DragEvent)
+
+      operation finishDragging(e: DragEvent)
+
+      operation enterTarget(e: DragEvent)
+
+      operation leaveTarget(e: DragEvent)
+
+      operation dragOver(e: DragEvent)
+
+      operation drop(e: DragEvent)
+
+      operation updateEventOnDragStart(e: DragEvent)
+
+      operation updateEventOnDropAllowed(e: DragEvent)
+
+      operation reset()
+
+      operation updateDragTarget(e: DragEvent)
+
+      operation whenDragging()
+    }
+  }
+}

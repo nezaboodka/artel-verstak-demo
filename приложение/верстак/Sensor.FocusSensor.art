@@ -1,0 +1,69 @@
+import artel.js
+
+external
+{
+  // FocusModel
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type FocusModel = интерфейс
+  {
+    isEditMode: YesNo
+
+    onFocusIn: operation(focus: FocusSensor)
+
+    onFocusOut: operation(focus: FocusSensor)
+  }
+
+  // ContextModel
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type ContextModel = интерфейс
+  {
+    contextToggle: ToggleRef
+
+    onContextIn: operation(focus: FocusSensor)
+
+    onContextOut: operation(focus: FocusSensor)
+  }
+
+  // FocusSensor
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type FocusSensor = object based on HtmlElementSensor
+  {
+    activeData: Object?
+
+    oldActiveData: Object?
+
+    contextElementDataList: Список<Object?>
+
+    on create(windowSensor: WindowSensor)
+
+    operation setActiveData(data: Object?, debugHint: Текст = "")
+
+    operation listen(element: HTMLElement?, enabled: YesNo = да)
+
+    operation reset()
+
+    /*(!) protected */
+    operation onFocusIn(e: FocusEvent)
+
+    /*(!) protected */
+    operation onFocusOut(e: FocusEvent)
+
+    /*(!) protected */
+    operation onMouseDown(e: MouseEvent)
+
+    /*(!) protected */
+    operation doFocusIn(e: FocusEvent)
+
+    /*(!) protected */
+    operation doFocusOut(e: FocusEvent)
+
+    /*(!) protected */
+    operation doMouseDown(e: MouseEvent)
+
+    /*(!) private */
+    operation trySetEditMode(candidateData: Object?, indent: Текст = "")
+  }
+}

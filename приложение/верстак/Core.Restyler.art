@@ -1,0 +1,16 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  operation restyler<T>(restyle: operation(): T): ObservablesStyles<T>
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type ObservablesStyles<T> = object
+  {
+    on create(restyle: operation(): T)
+
+    защищено
+    class: T
+  }
+}

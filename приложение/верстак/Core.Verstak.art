@@ -1,0 +1,134 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type Verstak = object
+  {
+    global
+    {
+      protected
+      {
+        shortFrameDuration: /*(!) any */ Object
+
+        longFrameDuration: /*(!) any */ Object
+
+        block: Block
+      }
+
+      currentRebuildPriority: Integer
+
+      frameDuration: Integer
+
+      operation claim<T, M, C, R>(driver: Driver<T>, builder: BlockBuilder<T, M, C, R>?, base: BlockBuilder<T, M, C, R>?): Block<T, M, C, R>
+
+      operation triggerRebuild(block: Block<Object, Object, Object, Void>, triggers: Object?)
+
+      operation rebuildNestedTreesThenDo(action: operation(err: Object?))
+
+      operation getDefaultLoggingOptions(): LoggingOptions?
+
+      operation setDefaultLoggingOptions(logging: LoggingOptions?)
+    }
+
+  }
+
+  // BaseDriver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type BaseDriver<T, C> = object based on Driver<T, C>
+  {
+    global protected
+    fragment: BaseDriver<Object>
+
+    on create(name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
+
+    operation claim(block: Block<T, Object?, C>)
+
+    operation create(block: Block<T, Object?, C>, b: object { native: T; controller: C })
+
+    operation initialize(block: Block<T, Object?, C>)
+
+    operation mount(block: Block<T, Object?, C>)
+
+    operation rebuild(block: Block<T, Object?, C>)
+
+    operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
+
+    operation applyKind(block: Block<T, Object?, C, Object?>, value: BlockKind)
+
+    operation applyCoords(block: Block<T, Object?, C, Object?>, value: BlockCoords?)
+
+    operation applyWidthGrowth(block: Block<T, Object?, C, Object?>, value: Число)
+
+    operation applyMinWidth(block: Block<T, Object?, C, Object?>, value: Text)
+
+    operation applyMaxWidth(block: Block<T, Object?, C, Object?>, value: Text)
+
+    operation applyHeightGrowth(block: Block<T, Object?, C, Object?>, value: Число)
+
+    operation applyMinHeight(block: Block<T, Object?, C, Object?>, value: Text)
+
+    operation applyMaxHeight(block: Block<T, Object?, C, Object?>, value: Text)
+
+    operation applyContentAlignment(block: Block<T, Object?, C, Object?>, value: Align)
+
+    operation applyBlockAlignment(block: Block<T, Object?, C, Object?>, value: Align)
+
+    operation applyContentWrapping(block: Block<T, Object?, C, Object?>, value: YesNo)
+
+    operation applyOverlayVisible(block: Block<T, Object?, C, Object?>, value: YesNo?)
+
+    operation applyStyle(block: Block<T, Object?, C, Object?>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+  }
+
+  // Utils
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type StaticDriver<T> = object based on BaseDriver<T>
+  {
+    protected
+    element: T
+
+    on create(element: T, name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
+
+    operation create(block: Block<T, Object?, Object?, Void>, b: object { native: T; controller: Object? })
+  }
+
+  // CursorCommandDriver
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type CursorCommand = object
+  {
+    absolute: Text?
+
+    columnShift: Целое?
+
+    rowShift: Целое?
+  }
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type CursorCommandDriver = object based on BaseDriver<CursorCommand, Void>
+  {
+    on create()
+
+    operation create(block: Block<CursorCommand, Object?, Void, Void>, b: object { native: CursorCommand?; controller: Void? })
+  }
+
+  // SubTreeVariable
+
+  #ВнешняяРеализация(модуль = "verstak")
+  type SubTreeVariable<T = Object> = object
+  {
+    protected
+    {
+      defaultValue: T?
+
+      valueOrUndefined: T?
+    }
+
+    value: T
+
+    on create(defaultValue: T? = пусто)
+  }
+}

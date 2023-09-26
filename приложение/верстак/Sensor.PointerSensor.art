@@ -1,0 +1,120 @@
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "verstak")
+  type PointerSensor = object based on BasePointerSensor
+  {
+    pointerButton: PointerButton
+
+    hotPositionX: Number
+
+    hotPositionY: Number
+
+    clicking: Object?
+
+    clicked: Object?
+
+    clickX: Number
+
+    clickY: Number
+
+    /*(!) private */
+    tryingDragging: YesNo
+
+    draggableData: Object?
+
+    dragSource: Object?
+
+    dragTarget: Object?
+
+    dragTargetWindow: Object?
+
+    previousDragTarget: Object?
+
+    dragStarted: YesNo
+
+    dragFinished: YesNo
+
+    startX: Number
+
+    startY: Number
+
+    /*(!) private */
+    draggingData: Object?
+
+    dropAllowed: YesNo
+
+    draggingOver: YesNo
+
+    positionX: Number
+
+    positionY: Number
+
+    modifiers: KeyboardModifiers
+
+    dropX: Number
+
+    dropY: Number
+
+    dropped: YesNo
+
+    immediatePositionX: Number
+
+    immediatePositionY: Number
+
+    immediateModifiers: KeyboardModifiers
+
+    global hidden by type
+    DraggingThreshold: Object?
+
+    on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
+
+    operation getData(): Object?
+
+    operation setData(value: Object?)
+
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+
+    hidden by type
+    {
+      operation onPointerDown(e: PointerEvent)
+
+      operation onPointerMove(e: PointerEvent)
+
+      operation onPointerUp(e: PointerEvent)
+
+      operation onLostPointerCapture(e: PointerEvent)
+
+      operation onKeyDown(e: KeyboardEvent)
+
+      operation moveOver(e: PointerEvent)
+
+      operation tryClickingOrDragging(e: PointerEvent)
+
+      operation clickingOver(e: PointerEvent)
+
+      operation click(e: PointerEvent)
+
+      operation startDragging(e: PointerEvent)
+
+      operation dragOver(e: PointerEvent)
+
+      operation drop(e: PointerEvent)
+
+      operation finishDragging()
+
+      operation cancelDragging()
+
+      operation reset()
+
+      operation updateClicking(e: PointerEvent): YesNo
+
+      operation updateDragTarget(e: PointerEvent)
+
+      operation whenClickingOrDragging()
+
+      operation whenMoving()
+    }
+  }
+}
