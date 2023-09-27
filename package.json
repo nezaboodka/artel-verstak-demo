@@ -11,6 +11,6 @@
   "scripts":
   {
     "настроить": "npm install",
-    "старт": "vite -d"
+    "пуск": "vite -d"
   }
 }

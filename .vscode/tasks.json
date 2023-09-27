@@ -2,9 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Старт приложения 1 (vite)",
+      "label": "Пуск приложения 1 (vite)",
       "type": "shell",
-      "command": "npm run старт",
+      "command": "npm run пуск",
       "group": "build",
     },
     {
