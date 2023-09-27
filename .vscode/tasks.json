@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Старт приложение (vite)",
+      "label": "Старт приложения 1 (vite)",
       "type": "shell",
       "command": "npm run старт",
       "group": "build",
@@ -10,7 +10,7 @@
     {
       "label": "Собрать проект (артель собрать)",
       "type": "shell",
-      "command": "node n-artel.js собрать приложение .сборка/приложение",
+      "command": "node n-artel.js собрать приложение-1 .сборка/приложение-1",
       "group": "build",
     },
     {
