@@ -1,3 +1,4 @@
+import artel
 import artel.js
 
 external

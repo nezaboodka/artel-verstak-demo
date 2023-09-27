@@ -13,11 +13,11 @@
 
 выполнить
 {
-  HtmlBody(BlockBuilder<HTMLElement>(
-    mode = Mode.PinpointRebuild,
-    rebuild =
-    {
-      Note("Hello, World!", empty)
-    }),
-    super = empty)
+  let b = BlockBuilder<HTMLElement>()
+  b.mode = Mode.PinpointRebuild
+  b.rebuild =
+  {
+    Note("Hello, World!", empty)
+  }
+  HtmlBody(b, empty)
 }
