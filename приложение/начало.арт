@@ -13,11 +13,11 @@
 
 выполнить
 {
-  let b = BlockBuilder<HTMLElement>()
+  пусть b: BlockBuilder<HTMLElement> = Object() as BlockBuilder<HTMLElement>
   b.mode = Mode.PinpointRebuild
   b.rebuild =
   {
-    Note("Hello, World!", empty)
+    Note("Поехали!", пусто)
   }
-  HtmlBody(b, empty)
+  HtmlBody(b, пусто)
 }
