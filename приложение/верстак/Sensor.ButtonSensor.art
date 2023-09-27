@@ -30,7 +30,7 @@ external
 
     on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {

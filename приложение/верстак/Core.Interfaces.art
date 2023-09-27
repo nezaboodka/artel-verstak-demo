@@ -117,25 +117,25 @@ external
   // BlockBuilder
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BlockBuilder<T, M, C, R> = interface
+  type BlockBuilder<T, M, C, R> = object
   {
-    base`: BlockBuilder<T, M, C, R>? = empty
+    base`: BlockBuilder<T, M, C, R>?
 
-    key: Text? = empty
+    key: Text?
 
-    mode: Mode? = empty
+    mode: Mode?
 
-    triggers: Object? = empty
+    triggers: Object?
 
-    claim: Delegate<T, M, C, R>? = empty
+    claim: Delegate<T, M, C, R>?
 
-    create: Delegate<T, M, C, R>? = empty
+    create: Delegate<T, M, C, R>?
 
-    initialize: Delegate<T, M, C, R>? = empty
+    initialize: Delegate<T, M, C, R>?
 
-    rebuild: Delegate<T, M, C, R>? = empty
+    rebuild: Delegate<T, M, C, R>?
 
-    finalize: Delegate<T, M, C, R>? = empty
+    finalize: Delegate<T, M, C, R>?
   }
 
   // BlockCtx
@@ -258,9 +258,9 @@ external
   #ВнешняяРеализация(модуль = "verstak")
   type TrackSize = interface
   {
-    track: Text | Number
+    track: Object /*(!) Text | Number*/
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BlockArea = empty | Text | object { cellsOverWidth: Number; cellsOverHeight: Number }
+  type BlockArea = Object? /*(!) empty | Text | object { cellsOverWidth: Number; cellsOverHeight: Number }*/
 }

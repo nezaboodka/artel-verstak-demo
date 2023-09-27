@@ -39,31 +39,25 @@ external
 
     on create(windowSensor: WindowSensor)
 
-    operation setActiveData(data: Object?, debugHint: Текст = "")
+    operation setActiveData(data: Object?, debugHint: Текст /*(!)= ""*/)
 
-    operation listen(element: HTMLElement?, enabled: YesNo = да)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= да*/)
 
     operation reset()
 
-    /*(!) protected */
-    operation onFocusIn(e: FocusEvent)
+    hidden by type
+    {
+      operation onFocusIn(e: FocusEvent)
 
-    /*(!) protected */
-    operation onFocusOut(e: FocusEvent)
+      operation onFocusOut(e: FocusEvent)
 
-    /*(!) protected */
-    operation onMouseDown(e: MouseEvent)
+      operation onMouseDown(e: MouseEvent)
 
-    /*(!) protected */
-    operation doFocusIn(e: FocusEvent)
+      operation doFocusIn(e: FocusEvent)
 
-    /*(!) protected */
-    operation doFocusOut(e: FocusEvent)
+      operation doFocusOut(e: FocusEvent)
 
-    /*(!) protected */
-    operation doMouseDown(e: MouseEvent)
-
-    /*(!) private */
-    operation trySetEditMode(candidateData: Object?, indent: Текст = "")
+      operation doMouseDown(e: MouseEvent)
+    }
   }
 }

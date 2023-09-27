@@ -15,6 +15,6 @@ external
 
     previousActiveData: Object?
 
-    операция setActiveWindow(window: Object?, debugHint: Text = "")
+    операция setActiveWindow(window: Object?, debugHint: Text /*(!)= ""*/)
   }
 }

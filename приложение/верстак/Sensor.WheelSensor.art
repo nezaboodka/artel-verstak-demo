@@ -13,7 +13,7 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     operation reset()
 

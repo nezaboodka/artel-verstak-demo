@@ -43,8 +43,8 @@ external
   конст EmptyDataArray: List<Object> /*(!) = [] */
 
   #ВнешняяРеализация(модуль = "verstak")
-  операция findTargetElementData(targetPath: List<Object>, underPointer: List<Object>, sym: Symbol, anyOfPayloadKeys: Array</*(!) any */ Object>, ignoreWindow: ДаНет = нет): object { data: DataForSensor?; window: Object? }
+  операция findTargetElementData(targetPath: List<Object>, underPointer: List<Object>, sym: Symbol, anyOfPayloadKeys: Array</*(!) any */ Object>, ignoreWindow: YesNo /*(!)= нет*/): object { data: DataForSensor?; window: Object? }
 
   #ВнешняяРеализация(модуль = "verstak")
-  операция grabElementDataList(targetPath: List<Object>, sym: Symbol, payloadKey: Object?, existing: Array<Object?>, ignoreWindow: ДаНет = нет, predicate: операция(element: Object): ДаНет = { возврат нет } ): object { dataList: Array<Object?>; window: Object?; activeData: Object? }
+  операция grabElementDataList(targetPath: List<Object>, sym: Symbol, payloadKey: Object?, existing: Array<Object?>, ignoreWindow: YesNo /*(!)= нет*/, predicate: операция(element: Object): YesNo /*(!)= { return no }*/ ): object { dataList: Array<Object?>; window: Object?; activeData: Object? }
 }

@@ -28,6 +28,6 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: ДаНет = да)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= да*/)
   }
 }

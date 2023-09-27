@@ -24,9 +24,9 @@ external
     {
       blinkingEffectMarker: Text?
 
-      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<HTMLElement | SVGElement>
+      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<HTMLElement /*(!)| SVGElement*/>
 
-      operation findPrevSiblingHtmlBlock(ties: Item<Block<Object>>): Item<Block<HTMLElement | SVGElement>>?
+      operation findPrevSiblingHtmlBlock(ties: Item<Block<Object>>): Item<Block<HTMLElement /*(!)| SVGElement*/>>?
     }
 
   }

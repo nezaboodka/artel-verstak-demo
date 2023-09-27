@@ -74,7 +74,7 @@ external
 
     operation setData(value: Object?)
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {

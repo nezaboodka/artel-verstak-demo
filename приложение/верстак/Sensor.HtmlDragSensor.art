@@ -3,10 +3,10 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type DragEffectAllowed = "none" | "copy" | "copyLink" | "copyMove" | "link" | "linkMove" | "move" | "all" | "uninitialized"
+  type DragEffectAllowed = Text /*(!)"none" | "copy" | "copyLink" | "copyMove" | "link" | "linkMove" | "move" | "all" | "uninitialized"*/
 
   #ВнешняяРеализация(модуль = "verstak")
-  type DropEffect = "none" | "copy" | "link" | "move"
+  type DropEffect = Text/*(!)"none" | "copy" | "link" | "move"*/
 
   #ВнешняяРеализация(модуль = "verstak")
   type HtmlDragSensor = object based on HtmlElementSensor
@@ -65,11 +65,11 @@ external
 
     operation setData(format: Text, value: Object?)
 
-    operation clearData(format: Text? = empty)
+    operation clearData(format: Text? /*(!)= empty*/)
 
     operation setDragImage(value: HTMLElement, x: Number, y: Number)
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {
