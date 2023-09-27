@@ -136,6 +136,8 @@ external
     rebuild: Delegate<T, M, C, R>?
 
     finalize: Delegate<T, M, C, R>?
+
+    on create(mode: Mode?, rebuild: Delegate<T, M, C, R>?)
   }
 
   // BlockCtx

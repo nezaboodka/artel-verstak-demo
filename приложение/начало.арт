@@ -13,5 +13,11 @@
 
 выполнить
 {
-  написать("Здесь будет приложение...")
+  HtmlBody(BlockBuilder<HTMLElement>(
+    mode = Mode.PinpointRebuild,
+    rebuild =
+    {
+      Note("Hello, World!", empty)
+    }),
+    super = empty)
 }
