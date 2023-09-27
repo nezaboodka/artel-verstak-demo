@@ -14,7 +14,7 @@
 выполнить
 {
   пусть b: BlockBuilder<HTMLElement> = Object() as BlockBuilder<HTMLElement>
-  b.mode = Mode.PinpointRebuild
+  // b.mode = Mode.PinpointRebuild
   b.rebuild =
   {
     Note("Поехали!", пусто)
