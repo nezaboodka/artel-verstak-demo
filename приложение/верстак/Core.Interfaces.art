@@ -7,7 +7,7 @@ external
   type Callback<T> = operation(native: T)
 
   #ВнешняяРеализация(модуль = "verstak")
-  type Delegate<T, M, C, R> = operation(block: Block<T, M, C, R>, super: operation(): R): R
+  type Delegate<T, M, C, R> = operation(block: Block<T, M, C, R>, basis: operation(): R): R
 
   #ВнешняяРеализация(модуль = "verstak")
   type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Void>>): Promise<Void>
