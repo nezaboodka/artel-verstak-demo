@@ -19,7 +19,7 @@ external
   operation cursor(areaParams: BlockArea)
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>?): Block<HTMLElement, Void, Void>
+  operation Note(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>? = empty): Block<HTMLElement, Void, Void>
 
   #ВнешняяРеализация(модуль = "verstak")
   operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>?): Block<HTMLElement, Void, Void>

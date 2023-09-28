@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>?): Block<HTMLElement>
+  operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>? = empty): Block<HTMLElement>
 
   #ВнешняяРеализация(модуль = "verstak")
   operation A<M, R>(builder: BlockBuilder<HTMLAnchorElement, M, Void, R>?, basis: BlockBuilder<HTMLAnchorElement, M, Void, R>?): Block<HTMLAnchorElement, M, Void, R>

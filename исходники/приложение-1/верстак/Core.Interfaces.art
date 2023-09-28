@@ -1,16 +1,16 @@
 import artel
 import artel.js
 
-// type StyleSheet = interface
-// {
-//   color: Text
-//   backgroundColor: Text
-// }
+type StyleSheet = interface
+{
+  color: Text
+  backgroundColor: Text
+}
 
-// type HTMLElement = interface
-// {
-//   style: StyleSheet
-// }
+type HTMLElement = interface
+{
+  style: StyleSheet
+}
 
 type Callback<T> = operation(native: T)
 
@@ -56,6 +56,35 @@ type Align = вариант
   Bottom = 0b01100
   Default = 0b10000
   Center = 0b01010
+}
+
+// BlockBuilder
+
+type BlockBuilder<T, M, C, R> = object
+{
+  //base`: BlockBuilder<T, M, C, R>?
+
+  key: Text?
+
+  mode: Mode?
+
+  triggers: Object?
+
+  claim: Delegate<T, M, C, R>?
+
+  create: Delegate<T, M, C, R>?
+
+  initialize: Delegate<T, M, C, R>?
+
+  rebuild: Delegate<T, M, C, R>?
+
+  finalize: Delegate<T, M, C, R>?
+
+  on create(mode: Mode?, rebuild: Delegate<T, M, C, R>?)
+  {
+    object.mode = mode
+    object.rebuild = rebuild
+  }
 }
 
 external
@@ -146,30 +175,6 @@ external
 
       context: BlockCtx?
     }
-  }
-
-  // BlockBuilder
-
-  #ВнешняяРеализация(модуль = "verstak")
-  type BlockBuilder<T, M, C, R> = object
-  {
-    base`: BlockBuilder<T, M, C, R>?
-
-    key: Text?
-
-    mode: Mode?
-
-    triggers: Object?
-
-    claim: Delegate<T, M, C, R>?
-
-    create: Delegate<T, M, C, R>?
-
-    initialize: Delegate<T, M, C, R>?
-
-    rebuild: Delegate<T, M, C, R>?
-
-    finalize: Delegate<T, M, C, R>?
   }
 
   // BlockCtx
