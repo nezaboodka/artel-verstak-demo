@@ -26,9 +26,9 @@
 
   тип Режим = Mode
   {
-    Стандартный = Default
-    ТочечноеПерестроение = PinpointRebuild
-    РучноеВстраивание = ManualMount
+    стандартный = Default
+    точечное-перестроение = PinpointRebuild
+    ручное-встраивание = ManualMount
   }
 
   тип Стили = StyleSheet
