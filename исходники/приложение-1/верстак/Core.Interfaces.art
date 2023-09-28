@@ -5,6 +5,7 @@ type StyleSheet = interface
 {
   color: Text
   backgroundColor: Text
+  fontSize: Text
 }
 
 type HTMLElement = interface
