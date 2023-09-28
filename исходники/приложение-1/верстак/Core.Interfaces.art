@@ -1,6 +1,17 @@
 import artel
 import artel.js
 
+// type StyleSheet = interface
+// {
+//   color: Text
+//   backgroundColor: Text
+// }
+
+// type HTMLElement = interface
+// {
+//   style: StyleSheet
+// }
+
 type Callback<T> = operation(native: T)
 
 type Delegate<T, M, C, R> = operation(block: Block<T, M, C, R>, basis: operation(): R): R
@@ -9,21 +20,47 @@ type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Void>>): Promise
 
 type SimpleDelegate<T> = operation(block: Block<T, Object, Object, Object>)
 
+type Mode = вариант
+{
+  Default = 0
+  PinpointRebuild = 1
+  ManualMount = 2
+}
+
+type BlockKind = вариант
+{
+  Section = 0
+  Table = 1
+  Note = 2
+  Group = 3
+  Row = 4
+  Cursor = 5
+  Native = 6
+}
+
+type Priority = вариант
+{
+  Realtime = 0
+  Normal = 1
+  Background = 2
+}
+
+type Align = вариант
+{
+  Stretch = 0b00000
+  Left = 0b00001
+  CenterX = 0b00010
+  Right = 0b00011
+  Top = 0b00100
+  CenterY = 0b01000
+  Bottom = 0b01100
+  Default = 0b10000
+  Center = 0b01010
+}
+
 external
 {
   // Block
-
-  #ВнешняяРеализация(модуль = "verstak")
-  type BlockKind = вариант
-  {
-    Section = 0
-    Table = 1
-    Note = 2
-    Group = 3
-    Row = 4
-    Cursor = 5
-    Native = 6
-  }
 
   #ВнешняяРеализация(модуль = "verstak")
   type Block<T, M, C, R> = interface
@@ -208,36 +245,6 @@ external
     x2: Number
 
     y2: Number
-  }
-
-  #ВнешняяРеализация(модуль = "verstak")
-  type Priority = вариант
-  {
-    Realtime = 0
-    Normal = 1
-    Background = 2
-  }
-
-  #ВнешняяРеализация(модуль = "verstak")
-  type Mode = вариант
-  {
-    Default = 0
-    PinpointRebuild = 1
-    ManualMount = 2
-  }
-
-  #ВнешняяРеализация(модуль = "verstak")
-  type Align = вариант
-  {
-    Stretch = 0b00000
-    Left = 0b00001
-    CenterX = 0b00010
-    Right = 0b00011
-    Top = 0b00100
-    CenterY = 0b01000
-    Bottom = 0b01100
-    Default = 0b10000
-    Center = 0b00010 + 0b01000
   }
 
   #ВнешняяРеализация(модуль = "verstak")

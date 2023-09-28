@@ -12,9 +12,12 @@
 выполнить
 {
   пусть b: BlockBuilder<HTMLElement> = Object() as BlockBuilder<HTMLElement>
-  // b.mode = Mode.PinpointRebuild
+  b.mode = Mode.PinpointRebuild
   b.rebuild =
   {
+    // let s = block.native.style
+    // s.color = "red"
+    // s.backgroundColor = "#1a3043"
     Note("Поехали!", пусто)
   }
   HtmlBody(b, пусто)
