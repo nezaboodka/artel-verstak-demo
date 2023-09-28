@@ -13,7 +13,7 @@ external
   operation row<T>(builder: operation(block: Void): T?, shiftCursorDown: Integer?)
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation startNewRow(shiftCursorDown: Integer?)
+  operation startNewRow(shiftCursorDown: Integer? = empty)
 
   #ВнешняяРеализация(модуль = "verstak")
   operation cursor(areaParams: BlockArea)
