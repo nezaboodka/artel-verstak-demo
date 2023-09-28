@@ -34,4 +34,51 @@
   {
     стили = style
   }
+
+  тип Блок = Block
+  {
+    узел = node
+
+    элемент = native
+
+    это-есть-секция = isSection
+
+    это-есть-таблица = isTable
+
+    начальное-перестроение = isInitialRebuild
+
+    модель = model
+
+    контроллер = controller
+
+    вид = kind
+
+    область = area
+
+    рост-ширины = widthGrowth
+
+    минимальная-ширина = minWidth
+
+    максимальная-ширина = maxWidth
+
+    рост-высоты = heightGrowth
+
+    минимальная-высота = minHeight
+
+    максимальная-высота = maxHeight
+
+    выравнивание-содержимого = contentAlignment
+
+    выравнивание-блока = blockAlignment
+
+    перенос-содержимого = contentWrapping
+
+    всплывающий-элемент = overlayVisible
+
+    приоритет-перестроения = rebuildPriority
+
+    перетасовка-элементов = childrenShuffling
+
+    строгий-порядок = strictOrder
+  }
 }

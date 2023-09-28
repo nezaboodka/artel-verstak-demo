@@ -14,7 +14,7 @@ type HTMLElement = interface
 
 type Callback<T> = operation(native: T)
 
-type Delegate<T, M, C, R> = operation(block: Block<T, M, C, R>, basis: operation(): R): R
+type Delegate<T, M, C, R> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R
 
 type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Void>>): Promise<Void>
 
