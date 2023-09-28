@@ -14,10 +14,9 @@ function noTreeShakeForFilesWithEvalPlugin() {
 }
 
 export default defineConfig({
-  base: "./",
   server: {
     port: 1234,
-    hmr: false,
+    hmr: true,
   },
   build: {
     target: 'es2016',

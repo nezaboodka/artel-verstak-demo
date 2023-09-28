@@ -8,15 +8,15 @@
       "group": "build",
     },
     {
-      "label": "Собрать проект (артель собрать)",
+      "label": "Собрать приложение (артель собрать)",
       "type": "shell",
-      "command": "node n-artel.js собрать приложение-1 .сборка/приложение-1",
+      "command": "npm run собрать",
       "group": "build",
     },
     {
-      "label": "Настроить проект (артель настроить)",
+      "label": "Скачать пакеты (артель скачать-пакеты)",
       "type": "shell",
-      "command": "npm install --no-fund",
+      "command": "npm run скачать-пакеты",
       "group": "build",
     },
   ]
