@@ -3,10 +3,10 @@ import artel.js
 
 external
 {
-  // Controller
+  // AbstractReaction
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Controller<T> = /*(!) abstract */ object
+  type AbstractReaction<T> = /*(!) abstract */ object
   {
     /*(!) abstract */ protected
     options: MemberOptions
