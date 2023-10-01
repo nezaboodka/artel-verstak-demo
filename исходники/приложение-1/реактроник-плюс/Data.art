@@ -140,7 +140,7 @@ external
   {
     memberName: MemberName
 
-    patchKind: "update" | "add" | "remove"
+    patchKind: Text // "update" | "add" | "remove"
 
     freshValue: Object?
 

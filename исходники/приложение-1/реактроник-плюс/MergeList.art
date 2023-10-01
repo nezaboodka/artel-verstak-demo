@@ -1,6 +1,11 @@
 import artel
 import artel.js
 
+type MergeListResolution = interface
+{
+  isDuplicate: Boolean
+}
+
 external
 {
   // GetMergeItemKey
@@ -88,7 +93,7 @@ external
 
     operation lookup(key: Text?): MergeItem<T>?
 
-    operation claim(key: Text, resolution: object { isDuplicate: Boolean }? = empty, err: Text? = empty): MergeItem<T>?
+    operation claim(key: Text, resolution: MergeListResolution? = empty, err: Text? = empty): MergeItem<T>?
 
     operation add(instance: T): MergeItem<T>
 
