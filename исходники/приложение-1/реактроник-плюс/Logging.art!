@@ -1,0 +1,89 @@
+import artel
+import artel.js
+
+external
+{
+  // LoggingOptions
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type LoggingOptions = interface
+  {
+    protected
+    enabled: Boolean
+
+    protected
+    transaction`: Boolean
+
+    protected
+    operation`: Boolean
+
+    protected
+    step: Boolean
+
+    protected
+    monitor: Boolean
+
+    protected
+    read: Boolean
+
+    protected
+    write: Boolean
+
+    protected
+    change: Boolean
+
+    protected
+    obsolete: Boolean
+
+    protected
+    error`: Boolean
+
+    protected
+    warning: Boolean
+
+    protected
+    gc: Boolean
+
+    protected
+    color: Integer
+
+    protected
+    prefix: Текст
+
+    protected
+    margin1: Integer
+
+    protected
+    margin2: Integer
+  }
+
+  // ProfilingOptions
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ProfilingOptions = interface
+  {
+    repetitiveUsageWarningThreshold: Integer
+
+    mainThreadBlockingWarningThreshold: Integer
+
+    asyncActionDurationWarningThreshold: Integer
+
+    garbageCollectionSummaryInterval: Integer
+  }
+
+  // LoggingLevel
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  конст LoggingLevel: interface
+  {
+    protected
+    {
+      Off: LoggingOptions;
+      ErrorsOnly: LoggingOptions;
+      Reactions: LoggingOptions;
+      Transactions: LoggingOptions;
+      Operations: LoggingOptions;
+      Debug: LoggingOptions
+    }
+  }
+}

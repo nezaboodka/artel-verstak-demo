@@ -1,0 +1,21 @@
+import artel
+import artel.js
+
+external
+{
+  // TransactionalObject
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type TransactionalObject = /*(!) abstract */ object
+  based on MvccObject
+  {
+  }
+
+  // ObservableObject
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ObservableObject = /*(!) abstract */ object
+  based on MvccObject
+  {
+  }
+}

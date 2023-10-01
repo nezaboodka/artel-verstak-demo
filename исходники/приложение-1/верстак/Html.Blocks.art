@@ -53,11 +53,11 @@ external
 
     operation applyBlockAlignment(block: Block<T>, value: Align)
 
-    operation applyContentWrapping(block: Block<T>, value: YesNo)
+    operation applyContentWrapping(block: Block<T>, value: Boolean)
 
-    operation applyOverlayVisible(block: Block<T>, value: YesNo?)
+    operation applyOverlayVisible(block: Block<T>, value: Boolean?)
 
-    operation applyStyle(block: Block<T, Object, Object>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+    operation applyStyle(block: Block<T, Object, Object>, secondary: Boolean, styleName: Text, enabled: Boolean?)
 
     operation rebuild(block: Block<T>)
   }

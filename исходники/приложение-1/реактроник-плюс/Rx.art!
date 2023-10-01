@@ -1,0 +1,58 @@
+import artel
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Rx = object
+  {
+    global
+    operation why(brief: Boolean = no): Text
+
+    global
+    operation getController<T>(method: F<T>): Controller<T>
+
+    global
+    operation pullLastResult<T>(method: F<Promise<T>>, args: List<Object?>? = empty): T?
+
+    global
+    operation configureCurrentOperation(options: Partial<MemberOptions>): MemberOptions
+
+    global
+    operation getRevisionOf(obj: Object?): Integer
+
+    global
+    operation takeSnapshot<T>(obj: T): T
+
+    global
+    operation dispose`(obj: Object?)
+
+    global
+    operation setLoggingMode(isOn: Boolean, options: LoggingOptions? = empty)
+
+    global
+    operation setLoggingHint<T = Object>(obj: T, name: Text?)
+
+    global
+    operation getLoggingHint<T = Object>(obj: T, full: Boolean = no): Text?
+
+    global
+    operation setProfilingMode(isOn: Boolean, options: ProfilingOptions? = empty)
+
+    reactivityAutoStartDisabled: Boolean
+
+    protected
+    isLogging: Boolean
+
+    protected
+    loggingOptions: LoggingOptions
+  }
+
+  // Global Operations
+
+  #js.МассивПараметров
+  operation nonreactive`<T>(func: F<T>, args: List<Object?>): T
+
+  #js.МассивПараметров
+  operation sensitive<T>(sensitivity: Boolean, func: F<T>, args: List<Object?>): T
+}

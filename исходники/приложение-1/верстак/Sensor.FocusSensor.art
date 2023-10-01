@@ -8,7 +8,7 @@ external
   #ВнешняяРеализация(модуль = "verstak")
   type FocusModel = интерфейс
   {
-    isEditMode: YesNo
+    isEditMode: Boolean
 
     onFocusIn: operation(focus: FocusSensor)
 
@@ -40,9 +40,9 @@ external
 
     on create(windowSensor: WindowSensor)
 
-    operation setActiveData(data: Object?, debugHint: Текст /*(!)= ""*/)
+    operation setActiveData(data: Object?, debugHint: Text = "")
 
-    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= да*/)
+    operation listen(element: HTMLElement?, enabled: Boolean = да)
 
     operation reset()
 

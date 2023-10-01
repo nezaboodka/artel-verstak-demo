@@ -1,0 +1,31 @@
+import artel
+import artel.js
+
+external
+{
+  // Monitor
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Monitor = /*(!) abstract */ object
+  based on ObservableObject
+  {
+    /*(!) abstract */
+    protected
+    isActive: Boolean
+
+    /*(!) abstract */
+    protected
+    counter: Integer
+
+    /*(!) abstract */
+    protected
+    workers: Set<Worker>
+
+    /*(!) abstract */
+    protected
+    duration: Integer
+
+    global
+    operation create(hint: Text, activationDelay: Integer, deactivationDelay: Integer, durationResolution: Integer): Monitor
+  }
+}

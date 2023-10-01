@@ -13,7 +13,7 @@ external
 
     operation initialize(block: Block<T, Object?, C, Void>)
 
-    operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
+    operation finalize(block: Block<T, Object?, C>, isLeader: Boolean): Boolean
 
     operation mount(block: Block<T, Object?, C>)
 

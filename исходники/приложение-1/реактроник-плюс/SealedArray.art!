@@ -1,0 +1,15 @@
+import artel
+import artel.js
+
+type Comparer = operation(a: T, b: T): Integer
+
+external
+{
+  // SealedArray
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type SealedArray<T> = /*(!) abstract */ object
+  based on Array<T>, Sealed<Array<T>>
+  {
+  }
+}

@@ -42,7 +42,7 @@ external
     global protected
     fragment: BaseDriver<Object>
 
-    on create(name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
+    on create(name: Text, isRow: Boolean, preset: SimpleDelegate<T>?)
 
     operation claim(block: Block<T, Object?, C>)
 
@@ -54,7 +54,7 @@ external
 
     operation rebuild(block: Block<T, Object?, C>)
 
-    operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
+    operation finalize(block: Block<T, Object?, C>, isLeader: Boolean): Boolean
 
     operation applyKind(block: Block<T, Object?, C, Object?>, value: BlockKind)
 
@@ -76,11 +76,11 @@ external
 
     operation applyBlockAlignment(block: Block<T, Object?, C, Object?>, value: Align)
 
-    operation applyContentWrapping(block: Block<T, Object?, C, Object?>, value: YesNo)
+    operation applyContentWrapping(block: Block<T, Object?, C, Object?>, value: Boolean)
 
-    operation applyOverlayVisible(block: Block<T, Object?, C, Object?>, value: YesNo?)
+    operation applyOverlayVisible(block: Block<T, Object?, C, Object?>, value: Boolean?)
 
-    operation applyStyle(block: Block<T, Object?, C, Object?>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+    operation applyStyle(block: Block<T, Object?, C, Object?>, secondary: Boolean, styleName: Text, enabled: Boolean?)
   }
 
   // Utils
@@ -91,7 +91,7 @@ external
     protected
     element: T
 
-    on create(element: T, name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
+    on create(element: T, name: Text, isRow: Boolean, preset: SimpleDelegate<T>?)
 
     operation create(block: Block<T, Object?, Object?, Void>, b: object { native: T; controller: Object? })
   }

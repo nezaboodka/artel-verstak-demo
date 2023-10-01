@@ -1,0 +1,149 @@
+import artel
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "reactronic")
+  type AbstractChangeset = interface
+  {
+    protected
+    id: Integer
+
+    protected
+    hint: Text
+
+    protected
+    timestamp: Integer
+
+    protected
+    sealed: Boolean
+
+  }
+
+  // ObservableValue & Observer
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ObservableValue = object
+  {
+    content: Object?
+
+    observers: Set<Observer>?
+
+    при создании(content: Object?)
+
+    protected
+    isOperation: Boolean
+
+    protected
+    originSnapshotId: Integer?
+  }
+
+  // #ВнешняяРеализация(модуль = "reactronic")
+  // type SeparationMode = Boolean | "isolated" | "disposal"
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Observer = interface
+  {
+    protected
+    order: Integer
+
+    protected
+    observables: Map<ObservableValue, Subscription>?
+
+    protected
+    obsoleteSince: Integer
+
+    операция hint(nop: Boolean? = empty): Text
+
+    операция markObsoleteDueTo(observable`: ObservableValue, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Integer, reactive`: Array<Observer>)
+
+    операция runIfNotUpToDate(now: Boolean, nothrow: Boolean)
+
+  }
+
+  type MemberName = Text // PropertyKey
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Subscription = interface
+  {
+    protected
+    memberHint: Text
+
+    protected
+    usageCount: Integer
+
+  }
+
+  //// ObjectSnapshot
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ObjectSnapshot = object
+  {
+    protected
+    changeset: AbstractChangeset
+
+    protected
+    former: object { snapshot: ObjectSnapshot }
+
+    protected
+    data: /*(!) any */ Object?
+
+    protected
+    changes: Set<MemberName>
+
+    protected
+    conflicts: Map<MemberName, ObjectSnapshot>
+
+    при создании(changeset: AbstractChangeset, former: ObjectSnapshot?, data: Object)
+
+    protected
+    revision: Integer
+
+    disposed: Boolean
+  }
+
+  // ObjectHandle
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ObjectHandle = object
+  {
+    protected
+    id: Integer
+
+    protected
+    data: Object?
+
+    protected
+    proxy: Object?
+
+    head: ObjectSnapshot
+
+    editing: ObjectSnapshot?
+
+    editors: Integer
+
+    hint: Text
+
+    при создании(data: Object?, proxy: Object?, handler: ProxyHandler<ObjectHandle>, head: ObjectSnapshot, hint: Text)
+
+    глобальный 
+    операция getHint(obj: Object, full: Boolean): Text?
+  }
+
+  // PatchSet & ObjectPatch
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type PatchSet = Map<Object, Map<MemberName, ValuePatch>>
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ValuePatch = interface
+  {
+    memberName: MemberName
+
+    patchKind: "update" | "add" | "remove"
+
+    freshValue: Object?
+
+    formerValue: Object?
+  }
+}

@@ -1,0 +1,155 @@
+import artel
+import artel.js
+
+external
+{
+  // MvccArray
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  hidden
+  type MvccArray<T> = object
+  based on MvccObject<T>
+  {
+    on create(isObservable: Boolean, array: Array<T>)
+
+    operation getItem(n: Integer): T
+
+    operation setItem(n: Integer, item: T)
+
+    operation toString(): Text
+
+    operation toLocaleString(): Text
+
+    operation pop(): T?
+
+    #js.МассивПараметров
+    operation push(items: List<T>): Число
+
+    #js.МассивПараметров
+    operation concat(items: List<T>): List<T>
+
+    #js.МассивПараметров
+    operation concat(items: List<ConcatArray<T>>): List<T>
+
+    #js.МассивПараметров
+    operation concat(items: List<ConcatArray<T>>): List<T>
+
+    operation join(separator: Text? = empty): Text
+
+    operation reverse(): List<T>
+
+    operation shift(): T?
+
+    operation slice(start: Число? = empty, end: Число? = empty): List<T>
+
+    operation sort(compareFn: operation(a: T, b: T): Число?)
+
+    operation splice(start: Число, deleteCount: Число? = empty): List<T>
+
+    #js.МассивПараметров
+    operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
+
+    #js.МассивПараметров
+    operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
+
+    #js.МассивПараметров
+    operation unshift(items: List<T>): Число
+
+    operation includes(searchElement: T, fromIndex: Число? = empty): Boolean
+
+    operation indexOf(searchElement: T, fromIndex: Число? = empty): Число
+
+    operation lastIndexOf(searchElement: T, fromIndex: Число? = empty): Число
+
+    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Boolean
+
+    operation every<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): /*(!) this is */ List<S>
+
+    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = empty): /*(!) any */ Object?
+
+    operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Boolean
+
+    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): Ничего, thisArg: /*(!) any */ Object? = empty)
+
+    operation map<U>(callbackfn: operation(value: T, index: Число, array: List<T>): U, thisArg: /*(!) any */ Object? = empty): List<U>
+
+    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): List<T>
+
+    operation filter<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): List<S>
+
+    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = empty): List</*(!) any */ Object?>
+
+    operation reduce(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T): T
+
+    operation reduce(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T, initialValue: T): T
+
+    operation reduce<U>(callbackfn: operation(previousValue: U, currentValue: T, currentIndex: Число, array: List<T>): U, initialValue: U): U
+
+    operation reduce(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
+
+    operation reduceRight(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T): T
+
+    operation reduceRight(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T, initialValue: T): T
+
+    operation reduceRight<U>(callbackfn: operation(previousValue: U, currentValue: T, currentIndex: Число, array: List<T>): U, initialValue: U): U
+
+    operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
+
+    operation find<S = T>(predicate: operation(this: Ничего, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
+
+    operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Число
+
+    operation fill(value: T, start: Integer? = empty, end: Integer? = empty): /*(!) any */ Object?
+
+    operation copyWithin(target: Integer, start: Integer, end: Integer? = empty): /*(!) any */ Object?
+
+    // operation [Symbol.iterator](): IterableIterator<T>
+
+    // operation entries(): IterableIterator<Object { _0: Число, _1: T }>
+
+    operation keys(): IterableIterator<Integer>
+
+    operation values(): IterableIterator<T>
+
+    length: Integer
+
+    protected
+    mutable: Array<T>
+  }
+
+  // TransactionalArray
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type TransactionalArray<T> = object
+  based on MvccArray<T>
+  {
+    on create()
+
+    on create(arrayLength: Число)
+
+    on create(arrayLength: Число? = empty)
+
+    #js.МассивПараметров
+    on create(items: List<T>)
+
+    on create(args: Object? = empty)
+  }
+
+  // ObservableArray
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type ObservableArray<T> = object
+  based on MvccArray<T>
+  {
+    on create()
+
+    on create(arrayLength: Число)
+
+    on create(arrayLength: Число? = empty)
+
+    #js.МассивПараметров
+    on create(items: List<T>)
+
+    on create(args: Object? = empty)
+  }
+}

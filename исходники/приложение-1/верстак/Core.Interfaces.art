@@ -101,11 +101,11 @@ external
 
       native: T
 
-      isSection: YesNo
+      isSection: Boolean
 
-      isTable: YesNo
+      isTable: Boolean
 
-      isInitialRebuild: YesNo
+      isInitialRebuild: Boolean
     }
 
     model: M
@@ -132,17 +132,17 @@ external
 
     blockAlignment: Align
 
-    contentWrapping: YesNo
+    contentWrapping: Boolean
 
-    overlayVisible: YesNo?
+    overlayVisible: Boolean?
 
     rebuildPriority: Priority
 
-    childrenShuffling: YesNo
+    childrenShuffling: Boolean
 
-    strictOrder: YesNo
+    strictOrder: Boolean
 
-    operation useStyle(styleName: Text, enabled: YesNo?)
+    operation useStyle(styleName: Text, enabled: Boolean?)
 
     operation configureReactronic(options: Partial<MemberOptions>): MemberOptions
   }
@@ -195,7 +195,7 @@ external
     {
       name: Text
 
-      isRow: YesNo
+      isRow: Boolean
 
       preset: SimpleDelegate<T>
     }
@@ -210,7 +210,7 @@ external
 
     operation rebuild(block: Block<T, Object, C>)
 
-    operation finalize(block: Block<T, Object, C>, isLeader: YesNo): YesNo
+    operation finalize(block: Block<T, Object, C>, isLeader: Boolean): Boolean
 
     operation applyKind(block: Block<T, Object, C, Object>, value: BlockKind)
 
@@ -232,11 +232,11 @@ external
 
     operation applyBlockAlignment(block: Block<T, Object, C, Object>, value: Align)
 
-    operation applyContentWrapping(block: Block<T, Object, C, Object>, value: YesNo)
+    operation applyContentWrapping(block: Block<T, Object, C, Object>, value: Boolean)
 
-    operation applyOverlayVisible(block: Block<T, Object, C, Object>, value: YesNo?)
+    operation applyOverlayVisible(block: Block<T, Object, C, Object>, value: Boolean?)
 
-    operation applyStyle(block: Block<T, Object, C, Object>, secondary: YesNo, styleName: Text, enabled: YesNo?)
+    operation applyStyle(block: Block<T, Object, C, Object>, secondary: Boolean, styleName: Text, enabled: Boolean?)
   }
 
   // Other

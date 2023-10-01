@@ -1,0 +1,140 @@
+import artel
+import artel.js
+
+external
+{
+  // GetMergeItemKey
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type GetMergeItemKey<T> = operation(item: T): Text?
+
+  // MergeListReader
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type MergeListReader<T> = interface
+  {
+    protected
+    isStrict: Boolean
+
+    protected
+    count: Integer
+
+    protected
+    addedCount: Integer
+
+    protected
+    removedCount: Integer
+
+    protected
+    isMergeInProgress: Boolean
+
+    operation lookup(key: Text): MergeItem<T>?
+
+    operation claim(key: Text): MergeItem<T>?
+
+    operation add(instance: T): MergeItem<T>
+
+    operation remove(item: MergeItem<T>)
+
+    operation move(item: MergeItem<T>, after: MergeItem<T>)
+
+    operation beginMerge()
+
+    operation endMerge(err`: Object? = empty)
+
+    operation resetAddedAndRemovedLists()
+
+    operation lastClaimedItem(): MergeItem<T>?
+
+    operation items(): Generator<MergeItem<T>>
+
+    operation addedItems(reset: Boolean? /*(!)= empty*/): Generator<MergeItem<T>>
+
+    operation removedItems(reset: Boolean? /*(!)= empty*/): Generator<MergeItem<T>>
+
+    operation isAdded(item: MergeItem<T>): Boolean
+
+    operation isMoved(item: MergeItem<T>): Boolean
+
+    operation isRemoved(item: MergeItem<T>): Boolean
+
+    operation isCurrent(item: MergeItem<T>): Boolean
+
+  }
+
+  // MergeItem
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type MergeItem<T> = interface
+  {
+    protected
+    instance: T
+
+    protected
+    prev: MergeItem<T>
+
+    aux: MergeItem<T>
+  }
+
+  // MergeList
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type MergeList<T> = object based on MergeListReader<T>
+  {
+    protected
+    getKey: GetItemKey<T>
+
+    on create(getKey: GetItemKey<T>, strict: Boolean = no)
+
+    operation lookup(key: Text?): MergeItem<T>?
+
+    operation claim(key: Text, resolution: object { isDuplicate: Boolean }? = empty, err: Text? = empty): MergeItem<T>?
+
+    operation add(instance: T): MergeItem<T>
+
+    operation remove(item: MergeItem<T>)
+
+    operation move(item: MergeItem<T>, after: MergeItem<T>)
+
+    operation beginMerge()
+
+    operation endMerge(err: Object? = empty)
+
+    operation resetAddedAndRemovedLists()
+
+    operation lastClaimedItem(): MergeItem<T>?
+
+    operation items(): Generator<MergeItem<T>>
+
+    operation addedItems(reset: Boolean? = empty): Generator<MergeItem<T>>
+
+    operation removedItems(reset: Boolean? = empty): Generator<MergeItem<T>>
+
+    operation isAdded(item: MergeItem<T>): Boolean
+
+    operation isMoved(item: MergeItem<T>): Boolean
+
+    operation isRemoved(item: MergeItem<T>): Boolean
+
+    operation isCurrent(item: MergeItem<T>): Boolean
+
+    operation markAsMoved(item: MergeItem<T>)
+
+    global 
+    operation createMergeItem<T>(instance: T): MergeItem<T>
+
+    isStrict: Boolean
+
+    protected
+    count: Integer
+
+    protected
+    addedCount: Integer
+
+    protected
+    removedCount: Integer
+
+    protected
+    isMergeInProgress: Boolean
+  }
+}

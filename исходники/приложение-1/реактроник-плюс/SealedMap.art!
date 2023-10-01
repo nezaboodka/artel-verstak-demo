@@ -1,0 +1,13 @@
+import artel
+import artel.js
+
+external
+{
+  // SealedMap
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type SealedMap<K, V> = /*(!) abstract */ object
+  based on Map<K, V>, Sealed<Map<K, V>>
+  {
+  }
+}

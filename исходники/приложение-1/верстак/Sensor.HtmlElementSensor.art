@@ -14,9 +14,9 @@ external
 
     sourceElement: HTMLElement?
 
-    preventDefault: YesNo
+    preventDefault: Boolean
 
-    stopPropagation: YesNo
+    stopPropagation: Boolean
 
     on create(focusSensor: Object? = empty, windowSensor: WindowSensor? = empty)
 

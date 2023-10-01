@@ -1,0 +1,86 @@
+import artel
+import artel.js
+
+external
+{
+  // SnapshotOptions
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type SnapshotOptions = interface
+  {
+    protected
+    hint: Text
+
+    protected
+    separation: SeparationMode
+
+    protected
+    journal: Journal
+
+    protected
+    logging: LoggingOptions
+
+    protected
+    token: Объект?
+  }
+
+  // MemberOptions
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type MemberOptions = interface
+  {
+    protected
+    kind: Kind
+
+    protected
+    separation: SeparationMode
+
+    protected
+    order: Integer
+
+    protected
+    noSideEffects: Boolean
+
+    protected
+    triggeringArgs: Boolean
+
+    protected
+    throttling: Integer
+
+    protected
+    reentrance: Reentrance
+
+    protected
+    journal: Journal?
+
+    protected
+    monitor: Monitor?
+
+    protected
+    logging: LoggingOptions
+  }
+
+  // Kind
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Kind = variant
+  {
+    Plain = 0
+    Transactional = 1
+    Reactive = 2
+    Cached = 3
+  }
+
+  // Reentrance
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Reentrance = variant
+  {
+    PreventWithError = 1
+    WaitAndRestart = 0
+    CancelPrevious = -1
+    CancelAndWaitPrevious = -2
+    OverwritePrevious = -3
+    RunSideBySide = -4
+  }
+}

@@ -1,0 +1,13 @@
+import artel
+import artel.js
+
+external
+{
+  #ВнешняяРеализация(модуль = "reactronic")
+  parallel
+  operation all(promises: Array<Promise<Object?>>): Promise<List<Object?>>
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  parallel
+  operation pause<T>(timeout: Integer): Promise<T>
+}

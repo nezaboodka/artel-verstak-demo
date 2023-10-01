@@ -1,0 +1,13 @@
+import artel
+import artel.js
+
+external
+{
+  // SealedSet
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type SealedSet<T> = /*(!) abstract */ object
+  based on Set<T>, Sealed<Set<T>>
+  {
+  }
+}

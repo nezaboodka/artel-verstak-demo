@@ -1,0 +1,28 @@
+import artel
+import artel.js
+
+external
+{
+  // Worker
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Worker = interface
+  {
+    protected
+    id: Integer
+
+    protected
+    hint: Text
+
+    protected
+    isCanceled: Boolean
+
+    protected
+    isFinished: Boolean
+
+    operation cancel(err: Error, restartAfter: Worker? = empty): Object?
+
+    parallel
+    operation whenFinished()
+  }
+}

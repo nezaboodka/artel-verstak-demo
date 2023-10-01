@@ -1,0 +1,38 @@
+import artel
+import artel.js
+
+external
+{
+  // Controller
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type Controller<T> = /*(!) abstract */ object
+  {
+    /*(!) abstract */ protected
+    options: MemberOptions
+
+    /*(!) abstract */ protected
+    args: ReadonlyArray<Object?>
+
+    /*(!) abstract */ protected
+    result`: T
+
+    /*(!) abstract */ protected
+    error`: Object?
+
+    /*(!) abstract */ protected
+    stamp: Integer
+
+    /*(!) abstract */ protected
+    isUpToDate: Boolean
+
+    /*(!) abstract */ 
+    operation configure(options: Partial<MemberOptions>): MemberOptions
+
+    /*(!) abstract */ 
+    operation markObsolete()
+
+    /*(!) abstract */ 
+    operation pullLastResult(args: List<Object?>? = empty): T?
+  }
+}

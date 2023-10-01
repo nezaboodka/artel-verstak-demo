@@ -1,0 +1,66 @@
+import artel
+import artel.js
+
+external
+{
+  // MvccMap
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  hidden
+  type MvccMap<K, V> = object
+  based on MvccObject<K, V>
+  {
+    on create(isObservable: Boolean, map: Map<K, V>)
+
+    operation clear()
+
+    operation delete(key: K): Boolean
+
+    operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = empty)
+
+    operation get`(key: K): V?
+
+    operation has(key: K): Boolean
+
+    operation set`(key: K, value: V)
+
+    // operation entries(): IterableIterator<Object { _0: K, _1: V }>
+
+    operation keys(): IterableIterator<K>
+
+    operation values(): IterableIterator<V>
+
+    // operation [Symbol.toStringTag](): Текст
+
+    protected
+    size: Integer
+
+    protected
+    mutable: Map<K, V>
+  }
+
+  // TransactionalMap
+
+  #ВнешняяРеализация(модуль = "reactronic")
+  type TransactionalMap<K, V> = object
+  based on MvccMap<K, V>
+  {
+    on create()
+
+    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = empty)/*(!) any */ Object?
+
+    on create(args: Object? = empty)
+  }
+
+  // ObservableMap
+
+  type ObservableMap<K, V> = object
+  based on MvccMap<K, V>
+  {
+    on create()
+
+    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = empty)
+
+    on create(args: Object? = empty)
+  }
+}
