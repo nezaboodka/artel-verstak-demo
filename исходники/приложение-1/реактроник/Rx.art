@@ -13,7 +13,7 @@ external
     operation getController<T>(method: F<T>): Controller<T>
 
     global
-    operation pullLastResult<T>(method: F<Promise<T>>, args: List<Object?>? = empty): T?
+    operation pullLastResult<T>(method: F<Promise<T>>, args: Array<Object?>? = empty): T?
 
     global
     operation configureCurrentOperation(options: Partial<MemberOptions>): MemberOptions
@@ -51,8 +51,8 @@ external
   // Global Operations
 
   #js.МассивПараметров
-  operation nonreactive`<T>(func: F<T>, args: List<Object?>): T
+  operation nonreactive`<T>(func: F<T>, args: Array<Object?>): T
 
   #js.МассивПараметров
-  operation sensitive<T>(sensitivity: Boolean, func: F<T>, args: List<Object?>): T
+  operation sensitive<T>(sensitivity: Boolean, func: F<T>, args: Array<Object?>): T
 }

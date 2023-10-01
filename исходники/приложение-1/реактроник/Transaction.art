@@ -41,17 +41,17 @@ external
 
     // #js.МассивПараметров
     // /*(!) abstract */ 
-    // operation run<T>(func: F<T>, args: List</*(!) any */ Object?>): T
+    // operation run<T>(func: F<T>, args: Array<Object?>): T
 
     #js.МассивПараметров
     /*(!) abstract */ 
-    operation inspect<T>(func: F<T>, args: List</*(!) any */ Object?>): T
+    operation inspect<T>(func: F<T>, args: Array<Object?>): T
 
     /*(!) abstract */ 
     operation apply()
 
     /*(!) abstract */ 
-    operation seal(): /*(!) any */ Object?
+    operation seal(): Object?
 
     /*(!) abstract */ 
     operation wrap<T>(func: F<T>, secondary: Boolean): F<T>
@@ -67,7 +67,7 @@ external
     protected
     isFinished: Boolean
 
-    параллельная
+    parallel
     operation whenFinished(): Promise<Void>
 
     global 
@@ -75,15 +75,15 @@ external
 
     #js.МассивПараметров
     global 
-    operation run<T>(options: SnapshotOptions?, func: operation (): T, args: List<Object?>): T
+    operation run<T>(options: SnapshotOptions?, func: operation (): T, args: Array<Object?>): T
 
     #js.МассивПараметров
     global 
-    operation separate<T>(func: F<T>, args: List</*(!) any */ Object?>): T
+    operation separate<T>(func: F<T>, args: Array<Object?>): T
 
     #js.МассивПараметров
     global 
-    operation outside<T>(func: F<T>, args: List</*(!) any */ Object?>): T
+    operation outside<T>(func: F<T>, args: Array<Object?>): T
 
     global 
     operation isFrameOver(everyN: Integer = 1, timeLimit: Integer = 10): Boolean
