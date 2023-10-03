@@ -50,9 +50,15 @@ external
 
   // Global Operations
 
+  #ВнешняяРеализация(модуль = "reactronic")
+  #js.МассивПараметров
+  operation transaction<T>(func: F<T>, args: Array<Object?>): T
+
+  #ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
   operation nonreactive`<T>(func: F<T>, args: Array<Object?>): T
 
+  #ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
   operation sensitive<T>(sensitivity: Boolean, func: F<T>, args: Array<Object?>): T
 }

@@ -4,8 +4,8 @@
   "devDependencies":
   {
     "artel": "0.4.206",
-    "reactronic": "0.23.105",
-    "verstak": "0.23.116",
+    "reactronic": "0.23.109",
+    "verstak": "0.23.118",
     "vite": "4.4.9"
   },
   "scripts":
