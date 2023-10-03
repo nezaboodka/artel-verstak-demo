@@ -31,7 +31,7 @@ external
   operation Fragment<M, R>(builder: BlockBuilder<Void, M, R>?, basis: BlockBuilder<Void, M, R>?): Block<Void, M, R>
 
   #ВнешняяРеализация(модуль = "verstak")
-  type VerstakHtmlDriver<T = HTMLElement> = object based on HtmlDriver<T>
+  type VerstakHtmlDriver<T = HTMLElement> = object HtmlDriver<T>
   {
     operation applyKind(block: Block<T, Object, Object>, value: BlockKind)
 

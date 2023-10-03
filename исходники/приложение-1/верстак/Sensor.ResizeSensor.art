@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type ResizedElement = interface
+  type ResizedElement = aspect
   {
     protected
     {
@@ -19,7 +19,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type ResizeSensor = object based on Sensor
+  type ResizeSensor = object Sensor
   {
     resizedElements: Array<ResizedElement>
 

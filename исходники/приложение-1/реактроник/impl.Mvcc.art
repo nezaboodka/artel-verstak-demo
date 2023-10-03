@@ -6,16 +6,14 @@ external
   // TransactionalObject
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type TransactionalObject = /*(!) abstract */ object
-  based on MvccObject
+  type TransactionalObject = /*(!) abstract */ object MvccObject
   {
   }
 
   // ObservableObject
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type ObservableObject = /*(!) abstract */ object
-  based on MvccObject
+  type ObservableObject = /*(!) abstract */ object MvccObject
   {
   }
 }

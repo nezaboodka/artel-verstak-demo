@@ -6,7 +6,7 @@ external
   // BaseHtmlDriver
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object based on BaseDriver<T, C>
+  type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
   {
 
     operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C? })
@@ -35,7 +35,7 @@ external
   // HtmlDriver
 
   #ВнешняяРеализация(модуль = "verstak")
-  type HtmlDriver<T = HTMLElement, C> = object based on BaseHtmlDriver<T, C>
+  type HtmlDriver<T = HTMLElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C?})
   }
@@ -43,7 +43,7 @@ external
   // SvgDriver
 
   #ВнешняяРеализация(модуль = "verstak")
-  type SvgDriver<T = SVGElement, C> = object based on BaseHtmlDriver<T, C>
+  type SvgDriver<T = SVGElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, Void>, b: object { native: T?; controller: C? })
   }

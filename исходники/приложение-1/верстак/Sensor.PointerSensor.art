@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type PointerSensor = object based on BasePointerSensor
+  type PointerSensor = object BasePointerSensor
   {
     pointerButton: PointerButton
 

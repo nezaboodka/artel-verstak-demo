@@ -37,7 +37,7 @@ external
   // BaseDriver
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BaseDriver<T, C> = object based on Driver<T, C>
+  type BaseDriver<T, C> = object Driver<T, C>
   {
     global protected
     fragment: BaseDriver<Object>
@@ -86,7 +86,7 @@ external
   // Utils
 
   #ВнешняяРеализация(модуль = "verstak")
-  type StaticDriver<T> = object based on BaseDriver<T>
+  type StaticDriver<T> = object BaseDriver<T>
   {
     protected
     element: T
@@ -109,7 +109,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type CursorCommandDriver = object based on BaseDriver<CursorCommand, Void>
+  type CursorCommandDriver = object BaseDriver<CursorCommand, Void>
   {
     on create()
 

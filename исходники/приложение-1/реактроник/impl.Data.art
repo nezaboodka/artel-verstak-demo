@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "reactronic")
-  type AbstractChangeset = interface
+  type AbstractChangeset = aspect
   {
     protected
     id: Integer
@@ -42,7 +42,7 @@ external
   // type SeparationMode = Boolean | "isolated" | "disposal"
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Observer = interface
+  type Observer = aspect
   {
     protected
     order: Integer
@@ -64,7 +64,7 @@ external
   type MemberName = Text // PropertyKey
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Subscription = interface
+  type Subscription = aspect
   {
     protected
     memberHint: Text
@@ -136,7 +136,7 @@ external
   type PatchSet = Map<Object, Map<MemberName, ValuePatch>>
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type ValuePatch = interface
+  type ValuePatch = aspect
   {
     memberName: MemberName
 

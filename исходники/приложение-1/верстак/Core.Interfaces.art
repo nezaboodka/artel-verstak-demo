@@ -1,14 +1,14 @@
 import artel
 import artel.js
 
-type StyleSheet = interface
+type StyleSheet = aspect
 {
   color: Text
   backgroundColor: Text
   fontSize: Text
 }
 
-type HTMLElement = interface
+type HTMLElement = aspect
 {
   style: StyleSheet
 }
@@ -93,7 +93,7 @@ external
   // Block
 
   #ВнешняяРеализация(модуль = "verstak")
-  type Block<T, M, C, R> = interface
+  type Block<T, M, C, R> = aspect
   {
     protected
     {
@@ -150,7 +150,7 @@ external
   // BlockNode
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BlockNode<T, M, C, R> = interface
+  type BlockNode<T, M, C, R> = aspect
   {
     protected
     {
@@ -181,7 +181,7 @@ external
   // BlockCtx
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BlockCtx<T = Object> = interface
+  type BlockCtx<T = Object> = aspect
   {
     value: T
   }
@@ -189,7 +189,7 @@ external
   // Driver
 
   #ВнешняяРеализация(модуль = "verstak")
-  type Driver<T, C> = interface
+  type Driver<T, C> = aspect
   {
     protected
     {
@@ -242,7 +242,7 @@ external
   // Other
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BlockCoords = interface
+  type BlockCoords = aspect
   {
     x1: Number
 
@@ -254,7 +254,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type ElasticSize = interface
+  type ElasticSize = aspect
   {
     cells: Number
 
@@ -266,7 +266,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type TrackSize = interface
+  type TrackSize = aspect
   {
     track: Object /*(!) Text | Number*/
   }

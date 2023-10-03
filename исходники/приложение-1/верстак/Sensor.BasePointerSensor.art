@@ -13,7 +13,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type BasePointerSensor = object based on HtmlElementSensor
+  type BasePointerSensor = object HtmlElementSensor
   {
     positionX: Number
 

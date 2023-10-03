@@ -1,7 +1,7 @@
 import artel
 import artel.js
 
-type MergeListResolution = interface
+type MergeListResolution = aspect
 {
   isDuplicate: Boolean
 }
@@ -16,7 +16,7 @@ external
   // MergeListReader
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type MergeListReader<T> = interface
+  type MergeListReader<T> = aspect
   {
     protected
     isStrict: Boolean
@@ -70,7 +70,7 @@ external
   // MergeItem
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type MergeItem<T> = interface
+  type MergeItem<T> = aspect
   {
     protected
     instance: T
@@ -84,7 +84,7 @@ external
   // MergeList
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type MergeList<T> = object based on MergeListReader<T>
+  type MergeList<T> = object MergeListReader<T>
   {
     protected
     getKey: GetItemKey<T>

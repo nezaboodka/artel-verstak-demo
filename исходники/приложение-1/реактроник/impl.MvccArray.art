@@ -7,8 +7,7 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   hidden
-  type MvccArray<T> = object
-  based on MvccObject<T>
+  type MvccArray<T> = object MvccObject<T>
   {
     on create(isObservable: Boolean, array: Array<T>)
 
@@ -120,8 +119,7 @@ external
   // TransactionalArray
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type TransactionalArray<T> = object
-  based on MvccArray<T>
+  type TransactionalArray<T> = object MvccArray<T>
   {
     on create()
 
@@ -138,8 +136,7 @@ external
   // ObservableArray
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type ObservableArray<T> = object
-  based on MvccArray<T>
+  type ObservableArray<T> = object MvccArray<T>
   {
     on create()
 

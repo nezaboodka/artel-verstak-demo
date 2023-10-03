@@ -24,7 +24,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type KeyboardSensor = object based on HtmlElementSensor
+  type KeyboardSensor = object HtmlElementSensor
   {
     down: Text
 

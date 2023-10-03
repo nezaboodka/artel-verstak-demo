@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type HtmlElementSensor = object based on Sensor
+  type HtmlElementSensor = object Sensor
   {
     protected
     focusSensor: Object?

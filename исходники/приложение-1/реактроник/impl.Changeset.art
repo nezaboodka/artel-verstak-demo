@@ -6,8 +6,7 @@ external
   // Snapshot
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Changeset = object
-  based on AbstractChangeset
+  type Changeset = object AbstractChangeset
   {
     global
     idGen: Integer

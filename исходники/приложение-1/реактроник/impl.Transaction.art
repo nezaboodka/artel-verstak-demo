@@ -8,8 +8,7 @@ external
   // Transaction
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Transaction = /*(!) abstract */ object
-  based on Worker
+  type Transaction = /*(!) abstract */ object Worker
   {
     /*(!) abstract */
     protected

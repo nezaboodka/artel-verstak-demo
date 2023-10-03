@@ -4,13 +4,13 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type WindowModel = interface
+  type WindowModel = aspect
   {
     popupToggle: ToggleRef
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type WindowSensor = object based on Sensor
+  type WindowSensor = object Sensor
   {
     activeData: Object?
 

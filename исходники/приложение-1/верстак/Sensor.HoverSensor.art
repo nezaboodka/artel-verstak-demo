@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type HoverSensor = object based on BasePointerSensor
+  type HoverSensor = object BasePointerSensor
   {
     target: Object?
 

@@ -10,7 +10,7 @@ external
   type DropEffect = Text/*(!)"none" | "copy" | "link" | "move"*/
 
   #ВнешняяРеализация(модуль = "verstak")
-  type HtmlDragSensor = object based on HtmlElementSensor
+  type HtmlDragSensor = object HtmlElementSensor
   {
     draggable: Object?
 

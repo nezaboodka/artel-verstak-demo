@@ -6,7 +6,7 @@ external
   // LoggingOptions
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type LoggingOptions = interface
+  type LoggingOptions = aspect
   {
     protected
     enabled: Boolean
@@ -60,7 +60,7 @@ external
   // ProfilingOptions
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type ProfilingOptions = interface
+  type ProfilingOptions = aspect
   {
     repetitiveUsageWarningThreshold: Integer
 
@@ -74,7 +74,7 @@ external
   // LoggingLevel
 
   #ВнешняяРеализация(модуль = "reactronic")
-  конст LoggingLevel: interface
+  конст LoggingLevel: aspect
   {
     protected
     {

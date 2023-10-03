@@ -13,7 +13,7 @@ external
   }
 
   #ВнешняяРеализация(модуль = "verstak")
-  type ButtonSensor = object based on BasePointerSensor
+  type ButtonSensor = object BasePointerSensor
   {
     state: ButtonState
 

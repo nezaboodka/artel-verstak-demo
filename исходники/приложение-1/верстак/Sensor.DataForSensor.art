@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type DataForSensor = интерфейс
+  type DataForSensor = aspect
   {
     context: Object?
 

@@ -6,8 +6,7 @@ external
   // Monitor
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Monitor = /*(!) abstract */ object
-  based on ObservableObject
+  type Monitor = /*(!) abstract */ object ObservableObject
   {
     /*(!) abstract */
     protected

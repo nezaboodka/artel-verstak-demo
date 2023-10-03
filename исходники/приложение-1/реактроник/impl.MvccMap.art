@@ -7,8 +7,7 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   hidden
-  type MvccMap<K, V> = object
-  based on MvccObject<K, V>
+  type MvccMap<K, V> = object MvccObject<K, V>
   {
     on create(isObservable: Boolean, map: Map<K, V>)
 
@@ -42,8 +41,7 @@ external
   // TransactionalMap
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type TransactionalMap<K, V> = object
-  based on MvccMap<K, V>
+  type TransactionalMap<K, V> = object MvccMap<K, V>
   {
     on create()
 
@@ -54,8 +52,7 @@ external
 
   // ObservableMap
 
-  type ObservableMap<K, V> = object
-  based on MvccMap<K, V>
+  type ObservableMap<K, V> = object MvccMap<K, V>
   {
     on create()
 

@@ -6,7 +6,7 @@ external
   // Worker
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type Worker = interface
+  type Worker = aspect
   {
     protected
     id: Integer

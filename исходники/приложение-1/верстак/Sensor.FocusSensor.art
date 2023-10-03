@@ -6,7 +6,7 @@ external
   // FocusModel
 
   #ВнешняяРеализация(модуль = "verstak")
-  type FocusModel = интерфейс
+  type FocusModel = aspect
   {
     isEditMode: Boolean
 
@@ -18,7 +18,7 @@ external
   // ContextModel
 
   #ВнешняяРеализация(модуль = "verstak")
-  type ContextModel = интерфейс
+  type ContextModel = aspect
   {
     contextToggle: ToggleRef
 
@@ -30,7 +30,7 @@ external
   // FocusSensor
 
   #ВнешняяРеализация(модуль = "verstak")
-  type FocusSensor = object based on HtmlElementSensor
+  type FocusSensor = object HtmlElementSensor
   {
     activeData: Object?
 

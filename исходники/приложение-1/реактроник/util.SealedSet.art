@@ -7,7 +7,7 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   type SealedSet<T> = /*(!) abstract */ object
-  based on Set<T>, Sealed<Set<T>>
+    Set<T>, Sealed<Set<T>>
   {
   }
 }

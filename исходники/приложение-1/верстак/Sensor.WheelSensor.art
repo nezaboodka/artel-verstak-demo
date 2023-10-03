@@ -4,7 +4,7 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  type WheelSensor = object based on BasePointerSensor
+  type WheelSensor = object BasePointerSensor
   {
     target: Object?
 

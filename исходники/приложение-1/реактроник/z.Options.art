@@ -6,7 +6,7 @@ external
   // SnapshotOptions
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type SnapshotOptions = interface
+  type SnapshotOptions = aspect
   {
     protected
     hint: Text
@@ -27,7 +27,7 @@ external
   // MemberOptions
 
   #ВнешняяРеализация(модуль = "reactronic")
-  type MemberOptions = interface
+  type MemberOptions = aspect
   {
     protected
     kind: Kind
