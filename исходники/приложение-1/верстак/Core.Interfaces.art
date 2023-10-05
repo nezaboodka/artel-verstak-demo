@@ -1,5 +1,5 @@
 import artel
-import artel.js
+import js = artel.js
 
 type StyleSheet = aspect
 {
@@ -92,7 +92,7 @@ external
 {
   // Block
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type Block<T, M, C, R> = aspect
   {
     protected
@@ -149,7 +149,7 @@ external
 
   // BlockNode
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BlockNode<T, M, C, R> = aspect
   {
     protected
@@ -180,7 +180,7 @@ external
 
   // BlockCtx
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BlockCtx<T = Object> = aspect
   {
     value: T
@@ -188,7 +188,7 @@ external
 
   // Driver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type Driver<T, C> = aspect
   {
     protected
@@ -241,7 +241,7 @@ external
 
   // Other
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BlockCoords = aspect
   {
     x1: Number
@@ -253,7 +253,7 @@ external
     y2: Number
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type ElasticSize = aspect
   {
     cells: Number
@@ -265,12 +265,12 @@ external
     growth: Number
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type TrackSize = aspect
   {
     track: Object /*(!) Text | Number*/
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BlockArea = Object? /*(!) empty | Text | object { cellsOverWidth: Number; cellsOverHeight: Number }*/
 }
