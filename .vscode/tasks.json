@@ -2,13 +2,13 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Пуск: Приложения-1 (vite)",
+      "label": "Пуск (vite)",
       "type": "shell",
       "command": "npm run пуск",
       "group": "build",
     },
     {
-      "label": "Собрать: Приложение-1 (артель собрать)",
+      "label": "Собрать (артель собрать)",
       "type": "shell",
       "command": "npm run собрать",
       "group": "build",

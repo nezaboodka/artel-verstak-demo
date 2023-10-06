@@ -8,7 +8,7 @@
       "name": "Пуск",
       "type": "node",
       "request": "launch",
-      "program": "n-artel",
+      "program": "Инструменты/n-artel",
       "runtimeArgs": [
         // "--inspect"
       ],
