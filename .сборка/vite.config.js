@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import * as path from 'path'
 
-const outDir = path.resolve(__dirname, './сборка/Приложение-1')
+const outDir = path.resolve(__dirname, './сборка/ПримерВебПриложения')
 
 function noTreeShakeForFilesWithEvalPlugin() {
   return {
