@@ -16,5 +16,5 @@ external
   operation emitCellPosition(x: Integer, y: Integer): Text
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation equalBlockCoords(a: BlockCoords, b: BlockCoords): Boolean
+  operation equalBlockCoords(a: BlockCoords, b: BlockCoords): YesNo
 }

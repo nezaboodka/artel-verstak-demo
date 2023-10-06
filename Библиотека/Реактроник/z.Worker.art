@@ -15,10 +15,10 @@ external
     hint: Text
 
     protected
-    isCanceled: Boolean
+    isCanceled: YesNo
 
     protected
-    isFinished: Boolean
+    isFinished: YesNo
 
     operation cancel(err: Error, restartAfter: Worker? = empty): Object?
 

@@ -39,10 +39,10 @@ external
     order: Integer
 
     protected
-    noSideEffects: Boolean
+    noSideEffects: YesNo
 
     protected
-    triggeringArgs: Boolean
+    triggeringArgs: YesNo
 
     protected
     throttling: Integer

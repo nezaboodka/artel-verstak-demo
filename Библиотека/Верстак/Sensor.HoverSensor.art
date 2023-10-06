@@ -10,7 +10,7 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: Boolean = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
 
     hidden by type
     {

@@ -10,7 +10,7 @@ external
   {
     /*(!) abstract */
     protected
-    isActive: Boolean
+    isActive: YesNo
 
     /*(!) abstract */
     protected

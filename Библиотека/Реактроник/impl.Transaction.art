@@ -53,18 +53,18 @@ external
     operation seal(): Object?
 
     /*(!) abstract */ 
-    operation wrap<T>(func: F<T>, secondary: Boolean): F<T>
+    operation wrap<T>(func: F<T>, secondary: YesNo): F<T>
 
     /*(!) abstract */ 
     operation cancel(error`: Error, retryAfterOrIgnore: Worker? = empty): Object?
 
     /*(!) abstract */
     protected
-    isCanceled: Boolean
+    isCanceled: YesNo
 
     /*(!) abstract */
     protected
-    isFinished: Boolean
+    isFinished: YesNo
 
     parallel
     operation whenFinished(): Promise<Nothing>
@@ -85,7 +85,7 @@ external
     operation outside<T>(func: F<T>, args: Array<Object?>): T
 
     global 
-    operation isFrameOver(everyN: Integer = 1, timeLimit: Integer = 10): Boolean
+    operation isFrameOver(everyN: Integer = 1, timeLimit: Integer = 10): YesNo
 
     global 
     operation requestNextFrame(sleepTime: Integer = 0): Promise<Nothing>
@@ -94,6 +94,6 @@ external
     current: Transaction
 
     protected
-    isCanceled: Boolean
+    isCanceled: YesNo
   }
 }

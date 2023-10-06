@@ -33,7 +33,7 @@ external
 
     reactive`: List<Observer>
 
-    sealed: Boolean
+    sealed: YesNo
 
     on create(options: SnapshotOptions?)
 
@@ -44,13 +44,13 @@ external
     edit: operation(): Changeset
 
     global
-    markUsed: operation(observable`: ObservableValue, os: ObjectSnapshot, m: MemberName, h: ObjectHandle, kind: Kind, weak: Boolean)
+    markUsed: operation(observable`: ObservableValue, os: ObjectSnapshot, m: MemberName, h: ObjectHandle, kind: Kind, weak: YesNo)
 
     global
-    markEdited: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?, edited: Boolean, os: ObjectSnapshot, m: MemberName, h: ObjectHandle): Ничего
+    markEdited: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?, edited: YesNo, os: ObjectSnapshot, m: MemberName, h: ObjectHandle): Ничего
 
     global
-    isConflicting: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?): Boolean
+    isConflicting: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?): YesNo
 
     global
     propagateAllChangesThroughSubscriptions: /*(!) any */ Object?

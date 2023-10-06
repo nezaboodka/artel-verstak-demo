@@ -21,7 +21,7 @@ external
     clickY: Number
 
     /*(!) private */
-    tryingDragging: Boolean
+    tryingDragging: YesNo
 
     draggableData: Object?
 
@@ -33,9 +33,9 @@ external
 
     previousDragTarget: Object?
 
-    dragStarted: Boolean
+    dragStarted: YesNo
 
-    dragFinished: Boolean
+    dragFinished: YesNo
 
     startX: Number
 
@@ -44,9 +44,9 @@ external
     /*(!) private */
     draggingData: Object?
 
-    dropAllowed: Boolean
+    dropAllowed: YesNo
 
-    draggingOver: Boolean
+    draggingOver: YesNo
 
     positionX: Number
 
@@ -58,7 +58,7 @@ external
 
     dropY: Number
 
-    dropped: Boolean
+    dropped: YesNo
 
     immediatePositionX: Number
 
@@ -75,7 +75,7 @@ external
 
     operation setData(value: Object?)
 
-    operation listen(element: HTMLElement?, enabled: Boolean /*(!)= yes*/)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {
@@ -109,7 +109,7 @@ external
 
       operation reset()
 
-      operation updateClicking(e: PointerEvent): Boolean
+      operation updateClicking(e: PointerEvent): YesNo
 
       operation updateDragTarget(e: PointerEvent)
 

@@ -28,5 +28,5 @@ external
   operation extractPointerButton(e: MouseEvent): PointerButton
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation isPointerButtonDown(button: PointerButton, buttonsMask: Integer): Boolean
+  operation isPointerButtonDown(button: PointerButton, buttonsMask: Integer): YesNo
 }

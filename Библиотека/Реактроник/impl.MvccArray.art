@@ -9,7 +9,7 @@ external
   hidden
   type MvccArray<T> = object MvccObject
   {
-    on create(isObservable: Boolean, array: Array<T>)
+    on create(isObservable: YesNo, array: Array<T>)
 
     operation getItem(n: Integer): T
 
@@ -54,19 +54,19 @@ external
     #js.МассивПараметров
     operation unshift(items: List<T>): Число
 
-    operation includes(searchElement: T, fromIndex: Число? = empty): Boolean
+    operation includes(searchElement: T, fromIndex: Число? = empty): YesNo
 
     operation indexOf(searchElement: T, fromIndex: Число? = empty): Число
 
     operation lastIndexOf(searchElement: T, fromIndex: Число? = empty): Число
 
-    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Boolean
+    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
 
     operation every<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): /*(!) this is */ List<S>
 
     operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = empty): /*(!) any */ Object?
 
-    operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Boolean
+    operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
 
     operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): Ничего, thisArg: /*(!) any */ Object? = empty)
 

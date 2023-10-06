@@ -27,11 +27,11 @@ external
 
     selectedY: Number
 
-    selected: Boolean
+    selected: YesNo
 
     on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
 
-    operation listen(element: HTMLElement?, enabled: Boolean = yes)
+    operation listen(element: HTMLElement?, enabled: YesNo = yes)
 
     hidden by type
     {

@@ -18,10 +18,10 @@ external
 
     interval: Integer
 
-    paused: Boolean
+    paused: YesNo
 
     on create(interval: Integer = 1000)
 
-    operation pause(value: Boolean)
+    operation pause(value: YesNo)
   }
 }

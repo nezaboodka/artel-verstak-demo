@@ -9,17 +9,17 @@ external
   hidden
   type MvccMap<K, V> = object MvccObject
   {
-    on create(isObservable: Boolean, map: Map<K, V>)
+    on create(isObservable: YesNo, map: Map<K, V>)
 
     operation clear()
 
-    operation delete(key: K): Boolean
+    operation delete(key: K): YesNo
 
     operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = empty)
 
     operation get`(key: K): V?
 
-    operation has(key: K): Boolean
+    operation has(key: K): YesNo
 
     operation set`(key: K, value: V)
 

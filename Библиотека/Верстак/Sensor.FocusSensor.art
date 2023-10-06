@@ -8,7 +8,7 @@ external
   #ВнешняяРеализация(модуль = "verstak")
   type FocusModel = aspect
   {
-    isEditMode: Boolean
+    isEditMode: YesNo
 
     onFocusIn: operation(focus: FocusSensor)
 
@@ -42,7 +42,7 @@ external
 
     operation setActiveData(data: Object?, debugHint: Text = "")
 
-    operation listen(element: HTMLElement?, enabled: Boolean = да)
+    operation listen(element: HTMLElement?, enabled: YesNo = да)
 
     operation reset()
 

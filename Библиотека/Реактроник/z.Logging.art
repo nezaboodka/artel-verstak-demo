@@ -9,40 +9,40 @@ external
   type LoggingOptions = aspect
   {
     protected
-    enabled: Boolean
+    enabled: YesNo
 
     protected
-    transaction`: Boolean
+    transaction`: YesNo
 
     protected
-    operation`: Boolean
+    operation`: YesNo
 
     protected
-    step: Boolean
+    step: YesNo
 
     protected
-    monitor: Boolean
+    monitor: YesNo
 
     protected
-    read: Boolean
+    read: YesNo
 
     protected
-    write: Boolean
+    write: YesNo
 
     protected
-    change: Boolean
+    change: YesNo
 
     protected
-    obsolete: Boolean
+    obsolete: YesNo
 
     protected
-    error`: Boolean
+    error`: YesNo
 
     protected
-    warning: Boolean
+    warning: YesNo
 
     protected
-    gc: Boolean
+    gc: YesNo
 
     protected
     color: Integer

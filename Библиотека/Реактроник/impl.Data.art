@@ -16,7 +16,7 @@ external
     timestamp: Integer
 
     protected
-    sealed: Boolean
+    sealed: YesNo
 
   }
 
@@ -32,14 +32,14 @@ external
     при создании(content: Object?)
 
     protected
-    isOperation: Boolean
+    isOperation: YesNo
 
     protected
     originSnapshotId: Integer?
   }
 
   // #ВнешняяРеализация(модуль = "reactronic")
-  // type SeparationMode = Boolean | "isolated" | "disposal"
+  // type SeparationMode = YesNo | "isolated" | "disposal"
 
   #ВнешняяРеализация(модуль = "reactronic")
   type Observer = aspect
@@ -53,11 +53,11 @@ external
     protected
     obsoleteSince: Integer
 
-    операция hint(nop: Boolean? = empty): Text
+    операция hint(nop: YesNo? = empty): Text
 
     операция markObsoleteDueTo(observable`: ObservableValue, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Integer, reactive`: Array<Observer>)
 
-    операция runIfNotUpToDate(now: Boolean, nothrow: Boolean)
+    операция runIfNotUpToDate(now: YesNo, nothrow: YesNo)
 
   }
 
@@ -99,7 +99,7 @@ external
     protected
     revision: Integer
 
-    disposed: Boolean
+    disposed: YesNo
   }
 
   // ObjectHandle
@@ -127,7 +127,7 @@ external
     при создании(data: Object?, proxy: Object?, handler: ProxyHandler<ObjectHandle>, head: ObjectSnapshot, hint: Text)
 
     глобальный 
-    операция getHint(obj: Object, full: Boolean): Text?
+    операция getHint(obj: Object, full: YesNo): Text?
   }
 
   // PatchSet & ObjectPatch

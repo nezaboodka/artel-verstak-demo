@@ -3,7 +3,7 @@ import artel.js
 
 type MergeListResolution = aspect
 {
-  isDuplicate: Boolean
+  isDuplicate: YesNo
 }
 
 external
@@ -19,7 +19,7 @@ external
   type MergeListReader<T> = aspect
   {
     protected
-    isStrict: Boolean
+    isStrict: YesNo
 
     protected
     count: Integer
@@ -31,7 +31,7 @@ external
     removedCount: Integer
 
     protected
-    isMergeInProgress: Boolean
+    isMergeInProgress: YesNo
 
     operation lookup(key: Text): MergeItem<T>?
 
@@ -53,17 +53,17 @@ external
 
     operation items(): Generator<MergeItem<T>>
 
-    operation addedItems(reset: Boolean? /*(!)= empty*/): Generator<MergeItem<T>>
+    operation addedItems(reset: YesNo? /*(!)= empty*/): Generator<MergeItem<T>>
 
-    operation removedItems(reset: Boolean? /*(!)= empty*/): Generator<MergeItem<T>>
+    operation removedItems(reset: YesNo? /*(!)= empty*/): Generator<MergeItem<T>>
 
-    operation isAdded(item: MergeItem<T>): Boolean
+    operation isAdded(item: MergeItem<T>): YesNo
 
-    operation isMoved(item: MergeItem<T>): Boolean
+    operation isMoved(item: MergeItem<T>): YesNo
 
-    operation isRemoved(item: MergeItem<T>): Boolean
+    operation isRemoved(item: MergeItem<T>): YesNo
 
-    operation isCurrent(item: MergeItem<T>): Boolean
+    operation isCurrent(item: MergeItem<T>): YesNo
 
   }
 
@@ -89,7 +89,7 @@ external
     protected
     getKey: GetItemKey<T>
 
-    on create(getKey: GetItemKey<T>, strict: Boolean = no)
+    on create(getKey: GetItemKey<T>, strict: YesNo = no)
 
     operation lookup(key: Text?): MergeItem<T>?
 
@@ -111,24 +111,24 @@ external
 
     operation items(): Generator<MergeItem<T>>
 
-    operation addedItems(reset: Boolean? = empty): Generator<MergeItem<T>>
+    operation addedItems(reset: YesNo? = empty): Generator<MergeItem<T>>
 
-    operation removedItems(reset: Boolean? = empty): Generator<MergeItem<T>>
+    operation removedItems(reset: YesNo? = empty): Generator<MergeItem<T>>
 
-    operation isAdded(item: MergeItem<T>): Boolean
+    operation isAdded(item: MergeItem<T>): YesNo
 
-    operation isMoved(item: MergeItem<T>): Boolean
+    operation isMoved(item: MergeItem<T>): YesNo
 
-    operation isRemoved(item: MergeItem<T>): Boolean
+    operation isRemoved(item: MergeItem<T>): YesNo
 
-    operation isCurrent(item: MergeItem<T>): Boolean
+    operation isCurrent(item: MergeItem<T>): YesNo
 
     operation markAsMoved(item: MergeItem<T>)
 
     global 
     operation createMergeItem<T>(instance: T): MergeItem<T>
 
-    isStrict: Boolean
+    isStrict: YesNo
 
     protected
     count: Integer
@@ -140,6 +140,6 @@ external
     removedCount: Integer
 
     protected
-    isMergeInProgress: Boolean
+    isMergeInProgress: YesNo
   }
 }

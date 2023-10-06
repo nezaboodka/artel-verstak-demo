@@ -22,9 +22,9 @@ external
 
     previousDragTarget: Object?
 
-    dragStarted: Boolean
+    dragStarted: YesNo
 
-    dragFinished: Boolean
+    dragFinished: YesNo
 
     startX: Number
 
@@ -36,9 +36,9 @@ external
 
     effectAllowed: DragEffectAllowed
 
-    dropAllowed: Boolean
+    dropAllowed: YesNo
 
-    draggingOver: Boolean
+    draggingOver: YesNo
 
     draggingDataTypes: List<Text>
 
@@ -52,7 +52,7 @@ external
 
     dropY: Number
 
-    dropped: Boolean
+    dropped: YesNo
 
     immediatePositionX: Number
 
@@ -70,7 +70,7 @@ external
 
     operation setDragImage(value: HTMLElement, x: Number, y: Number)
 
-    operation listen(element: HTMLElement?, enabled: Boolean /*(!)= yes*/)
+    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {

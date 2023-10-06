@@ -7,7 +7,7 @@ external
   type Rx = object
   {
     global
-    operation why(brief: Boolean = no): Text
+    operation why(brief: YesNo = no): Text
 
     global
     operation getController<T>(method: F<T>): Controller<T>
@@ -28,21 +28,21 @@ external
     operation dispose`(obj: Object?)
 
     global
-    operation setLoggingMode(isOn: Boolean, options: LoggingOptions? = empty)
+    operation setLoggingMode(isOn: YesNo, options: LoggingOptions? = empty)
 
     global
     operation setLoggingHint<T = Object>(obj: T, name: Text?)
 
     global
-    operation getLoggingHint<T = Object>(obj: T, full: Boolean = no): Text?
+    operation getLoggingHint<T = Object>(obj: T, full: YesNo = no): Text?
 
     global
-    operation setProfilingMode(isOn: Boolean, options: ProfilingOptions? = empty)
+    operation setProfilingMode(isOn: YesNo, options: ProfilingOptions? = empty)
 
-    reactivityAutoStartDisabled: Boolean
+    reactivityAutoStartDisabled: YesNo
 
     protected
-    isLogging: Boolean
+    isLogging: YesNo
 
     protected
     loggingOptions: LoggingOptions
@@ -60,5 +60,5 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
-  operation sensitive<T>(sensitivity: Boolean, func: F<T>, args: Array<Object?>): T
+  operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: Array<Object?>): T
 }

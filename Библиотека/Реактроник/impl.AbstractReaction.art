@@ -24,7 +24,7 @@ external
     stamp: Integer
 
     /*(!) abstract */ protected
-    isUpToDate: Boolean
+    isUpToDate: YesNo
 
     /*(!) abstract */ 
     operation configure(options: Partial<MemberOptions>): MemberOptions
