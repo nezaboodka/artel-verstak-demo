@@ -7,7 +7,7 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   hidden
-  type MvccArray<T> = object MvccObject<T>
+  type MvccArray<T> = object MvccObject
   {
     on create(isObservable: Boolean, array: Array<T>)
 

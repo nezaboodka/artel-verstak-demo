@@ -7,7 +7,7 @@ external
 
   #ВнешняяРеализация(модуль = "reactronic")
   hidden
-  type MvccMap<K, V> = object MvccObject<K, V>
+  type MvccMap<K, V> = object MvccObject
   {
     on create(isObservable: Boolean, map: Map<K, V>)
 

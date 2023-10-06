@@ -3,6 +3,12 @@ import artel.js
 
 external
 {
+  // MvccObject
+
+  type MvccObject = /*(!) abstract */ object
+  {
+  }
+
   // TransactionalObject
 
   #ВнешняяРеализация(модуль = "reactronic")
