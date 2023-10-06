@@ -67,7 +67,7 @@ external
     isFinished: Boolean
 
     parallel
-    operation whenFinished(): Promise<Void>
+    operation whenFinished(): Promise<Nothing>
 
     global 
     operation create(options: SnapshotOptions?): Transaction
@@ -88,7 +88,7 @@ external
     operation isFrameOver(everyN: Integer = 1, timeLimit: Integer = 10): Boolean
 
     global 
-    operation requestNextFrame(sleepTime: Integer = 0): Promise<Void>
+    operation requestNextFrame(sleepTime: Integer = 0): Promise<Nothing>
 
     protected
     current: Transaction

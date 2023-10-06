@@ -4,13 +4,13 @@ import artel.js
 external
 {
   #ВнешняяРеализация(модуль = "verstak")
-  operation Section<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>? = empty): Block<HTMLElement, M, R>
+  operation Section<M = Nothing, R = Nothing>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>? = empty): Block<HTMLElement, M, Nothing, R>
 
   #ВнешняяРеализация(модуль = "verstak")
   operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation row<T>(builder: operation(block: Void): T?, shiftCursorDown: Integer?)
+  operation row<T>(builder: operation(block: Nothing): T?, shiftCursorDown: Integer?)
 
   #ВнешняяРеализация(модуль = "verstak")
   operation startNewRow(shiftCursorDown: Integer? = empty)
@@ -19,16 +19,16 @@ external
   operation cursor(areaParams: BlockArea)
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>? = empty): Block<HTMLElement, Void, Void>
+  operation Note(content: Text, builder: BlockBuilder<HTMLElement, Nothing, Nothing>? = empty): Block<HTMLElement>
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, Void, Void>?): Block<HTMLElement, Void, Void>
+  operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, Nothing, Nothing>?): Block<HTMLElement>
 
   #ВнешняяРеализация(модуль = "verstak")
   operation Group<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
 
   #ВнешняяРеализация(модуль = "verstak")
-  operation Fragment<M, R>(builder: BlockBuilder<Void, M, R>?, basis: BlockBuilder<Void, M, R>?): Block<Void, M, R>
+  operation Fragment<M, R>(builder: BlockBuilder<Nothing, M, R>?, basis: BlockBuilder<Nothing, M, R>?): Block<Nothing, M, R>
 
   #ВнешняяРеализация(модуль = "verstak")
   type VerstakHtmlDriver<T = HTMLElement> = object HtmlDriver<T>

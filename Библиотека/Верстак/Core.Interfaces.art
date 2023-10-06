@@ -15,9 +15,9 @@ type HTMLElement = aspect
 
 type Callback<T> = operation(native: T)
 
-type Delegate<T, M, C, R> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R
+type Delegate<T, M = Nothing, C = Nothing, R = Nothing> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R
 
-type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Void>>): Promise<Void>
+type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Nothing>>): Promise<Nothing>
 
 type SimpleDelegate<T> = operation(block: Block<T, Object, Object, Object>)
 
@@ -61,7 +61,7 @@ type Align = вариант
 
 // BlockBuilder
 
-type BlockBuilder<T, M, C, R> = object
+type BlockBuilder<T, M = Nothing, C = Nothing, R = Nothing> = object
 {
   //base`: BlockBuilder<T, M, C, R>?
 
@@ -93,7 +93,7 @@ external
   // Block
 
   #js.ВнешняяРеализация(модуль = "verstak")
-  type Block<T, M, C, R> = aspect
+  type Block<T, M = Nothing, C = Nothing, R = Nothing> = aspect
   {
     protected
     {
@@ -150,7 +150,7 @@ external
   // BlockNode
 
   #js.ВнешняяРеализация(модуль = "verstak")
-  type BlockNode<T, M, C, R> = aspect
+  type BlockNode<T, M = Nothing, C = Nothing, R = Nothing> = aspect
   {
     protected
     {
