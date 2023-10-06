@@ -4,7 +4,9 @@ import js = artel.js
 type StyleSheet = aspect
 {
   color: Text
+
   backgroundColor: Text
+
   fontSize: Text
 }
 
