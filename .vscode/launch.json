@@ -8,14 +8,15 @@
       "name": "Пуск",
       "type": "node",
       "request": "launch",
-      "program": "Инструменты/n-artel",
+      "cwd": "${workspaceFolder}/.сборка",
+      "program": "n-artel",
       "runtimeArgs": [
         // "--inspect"
       ],
       "args": [
         "пуск",
-        "${relativeFileDirname}",
-        ".сборка/${relativeFileDirname}"
+        "..",
+        "${relativeFileDirname}"
       ],
       "console": "integratedTerminal",
       "autoAttachChildProcesses": false,
