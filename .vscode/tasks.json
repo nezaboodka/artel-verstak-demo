@@ -3,21 +3,30 @@
   "tasks": [
     {
       "label": "Пуск (vite)",
+      "group": "build",
       "type": "shell",
       "command": "npm run пуск",
-      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/.сборка"
+      },
     },
     {
       "label": "Собрать (артель собрать)",
+      "group": "build",
       "type": "shell",
       "command": "npm run собрать",
-      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/.сборка"
+      },
     },
     {
       "label": "Скачать пакеты (артель скачать-пакеты)",
+      "group": "build",
       "type": "shell",
       "command": "npm run скачать-пакеты",
-      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/.сборка"
+      },
     },
   ]
 }
