@@ -11,7 +11,7 @@
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать": "node n-artel.js собрать .. bin",
+    "собрать": "node n-artel.js собрать .. executable",
     "пуск": "npm run собрать && vite"
   }
 }
