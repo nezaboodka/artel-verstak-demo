@@ -10,7 +10,7 @@ external
 
     elementDataList: List<Object?>
 
-    protected
+    guarded
     topElementData: Object?
   }
 }

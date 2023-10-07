@@ -41,10 +41,10 @@ external
 
     reactivityAutoStartDisabled: YesNo
 
-    protected
+    guarded
     isLogging: YesNo
 
-    protected
+    guarded
     loggingOptions: LoggingOptions
   }
 

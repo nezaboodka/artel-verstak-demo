@@ -23,10 +23,10 @@ external
     global
     totalObjectSnapshotCount: Integer
 
-    protected
+    guarded
     id: Integer
 
-    protected
+    guarded
     options: SnapshotOptions
 
     items: Map<ObjectHandle, ObjectSnapshot>
@@ -95,10 +95,10 @@ external
 
     operation triggerGarbageCollection()
 
-    protected
+    guarded
     hint: Text
 
-    protected
+    guarded
     timestamp: Integer
   }
 

@@ -6,7 +6,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type ResizedElement = aspect
   {
-    protected
+    guarded
     {
       borderBoxSize: ReadonlyArray<ResizeObserverSize>
 

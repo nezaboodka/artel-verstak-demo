@@ -8,22 +8,22 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type AbstractReaction<T> = /*(!) abstract */ object
   {
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     options: MemberOptions
 
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     args: ReadonlyArray<Object?>
 
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     result`: T
 
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     error`: Object?
 
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     stamp: Integer
 
-    /*(!) abstract */ protected
+    /*(!) abstract */ guarded
     isUpToDate: YesNo
 
     /*(!) abstract */ 

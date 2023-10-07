@@ -8,19 +8,19 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type SnapshotOptions = aspect
   {
-    protected
+    guarded
     hint: Text
 
-    protected
+    guarded
     separation: SeparationMode
 
-    protected
+    guarded
     journal: Journal
 
-    protected
+    guarded
     logging: LoggingOptions
 
-    protected
+    guarded
     token: Объект?
   }
 
@@ -29,34 +29,34 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type MemberOptions = aspect
   {
-    protected
+    guarded
     kind: Kind
 
-    protected
+    guarded
     separation: SeparationMode
 
-    protected
+    guarded
     order: Integer
 
-    protected
+    guarded
     noSideEffects: YesNo
 
-    protected
+    guarded
     triggeringArgs: YesNo
 
-    protected
+    guarded
     throttling: Integer
 
-    protected
+    guarded
     reentrance: Reentrance
 
-    protected
+    guarded
     journal: Journal?
 
-    protected
+    guarded
     monitor: Monitor?
 
-    protected
+    guarded
     logging: LoggingOptions
   }
 

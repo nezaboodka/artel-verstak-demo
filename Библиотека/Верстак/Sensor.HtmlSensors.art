@@ -6,7 +6,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type HtmlSensors = object
   {
-    protected
+    guarded
     {
       window: WindowSensor
 

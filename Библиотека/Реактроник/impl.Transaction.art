@@ -11,31 +11,31 @@ external
   type Transaction = /*(!) abstract */ object Worker
   {
     /*(!) abstract */
-    protected
+    guarded
     id: Integer
 
     /*(!) abstract */
-    protected
+    guarded
     hint: Текст
 
     /*(!) abstract */
-    protected
+    guarded
     options: SnapshotOptions
 
     /*(!) abstract */
-    protected
+    guarded
     timestamp: Integer
 
     /*(!) abstract */
-    protected
+    guarded
     error`: Error?
 
     /*(!) abstract */
-    protected
+    guarded
     changeset: Changeset
 
     /*(!) abstract */
-    protected
+    guarded
     margin: Integer
 
     // #js.МассивПараметров
@@ -59,11 +59,11 @@ external
     operation cancel(error`: Error, retryAfterOrIgnore: Worker? = empty): Object?
 
     /*(!) abstract */
-    protected
+    guarded
     isCanceled: YesNo
 
     /*(!) abstract */
-    protected
+    guarded
     isFinished: YesNo
 
     parallel
@@ -90,10 +90,10 @@ external
     global 
     operation requestNextFrame(sleepTime: Integer = 0): Promise<Nothing>
 
-    protected
+    guarded
     current: Transaction
 
-    protected
+    guarded
     isCanceled: YesNo
   }
 }

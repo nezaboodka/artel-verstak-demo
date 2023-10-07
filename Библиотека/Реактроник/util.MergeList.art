@@ -18,19 +18,19 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type MergeListReader<T> = aspect
   {
-    protected
+    guarded
     isStrict: YesNo
 
-    protected
+    guarded
     count: Integer
 
-    protected
+    guarded
     addedCount: Integer
 
-    protected
+    guarded
     removedCount: Integer
 
-    protected
+    guarded
     isMergeInProgress: YesNo
 
     operation lookup(key: Text): MergeItem<T>?
@@ -72,10 +72,10 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type MergeItem<T> = aspect
   {
-    protected
+    guarded
     instance: T
 
-    protected
+    guarded
     prev: MergeItem<T>
 
     aux: MergeItem<T>
@@ -86,7 +86,7 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type MergeList<T> = object MergeListReader<T>
   {
-    protected
+    guarded
     getKey: GetItemKey<T>
 
     on create(getKey: GetItemKey<T>, strict: YesNo = no)
@@ -130,16 +130,16 @@ external
 
     isStrict: YesNo
 
-    protected
+    guarded
     count: Integer
 
-    protected
+    guarded
     addedCount: Integer
 
-    protected
+    guarded
     removedCount: Integer
 
-    protected
+    guarded
     isMergeInProgress: YesNo
   }
 }

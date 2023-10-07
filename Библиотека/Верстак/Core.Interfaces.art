@@ -97,7 +97,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type Block<T, M = Nothing, C = Nothing, R = Nothing> = aspect
   {
-    protected
+    guarded
     {
       node: BlockNode<T, M, C, R>
 
@@ -154,7 +154,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type BlockNode<T, M = Nothing, C = Nothing, R = Nothing> = aspect
   {
-    protected
+    guarded
     {
       key: Text
 
@@ -193,7 +193,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type Driver<T, C> = aspect
   {
-    protected
+    guarded
     {
       name: Text
 

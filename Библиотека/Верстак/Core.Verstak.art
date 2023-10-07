@@ -8,7 +8,7 @@ external
   {
     global
     {
-      protected
+      guarded
       {
         shortFrameDuration: /*(!) any */ Object
 
@@ -39,7 +39,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type BaseDriver<T, C> = object Driver<T, C>
   {
-    global protected
+    global guarded
     fragment: BaseDriver<Object>
 
     on create(name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
@@ -88,7 +88,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type StaticDriver<T> = object BaseDriver<T>
   {
-    protected
+    guarded
     element: T
 
     on create(element: T, name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
@@ -121,7 +121,7 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type SubTreeVariable<T = Object> = object
   {
-    protected
+    guarded
     {
       defaultValue: T?
 

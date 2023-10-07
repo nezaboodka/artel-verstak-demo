@@ -9,19 +9,19 @@ external
   type Monitor = /*(!) abstract */ object ObservableObject
   {
     /*(!) abstract */
-    protected
+    guarded
     isActive: YesNo
 
     /*(!) abstract */
-    protected
+    guarded
     counter: Integer
 
     /*(!) abstract */
-    protected
+    guarded
     workers: Set<Worker>
 
     /*(!) abstract */
-    protected
+    guarded
     duration: Integer
 
     global

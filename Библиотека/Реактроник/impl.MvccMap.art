@@ -31,10 +31,10 @@ external
 
     // operation [Symbol.toStringTag](): Текст
 
-    protected
+    guarded
     size: Integer
 
-    protected
+    guarded
     mutable: Map<K, V>
   }
 

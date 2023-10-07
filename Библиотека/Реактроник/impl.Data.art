@@ -6,16 +6,16 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type AbstractChangeset = aspect
   {
-    protected
+    guarded
     id: Integer
 
-    protected
+    guarded
     hint: Text
 
-    protected
+    guarded
     timestamp: Integer
 
-    protected
+    guarded
     sealed: YesNo
 
   }
@@ -31,10 +31,10 @@ external
 
     при создании(content: Object?)
 
-    protected
+    guarded
     isOperation: YesNo
 
-    protected
+    guarded
     originSnapshotId: Integer?
   }
 
@@ -44,13 +44,13 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type Observer = aspect
   {
-    protected
+    guarded
     order: Integer
 
-    protected
+    guarded
     observables: Map<ObservableValue, Subscription>?
 
-    protected
+    guarded
     obsoleteSince: Integer
 
     операция hint(nop: YesNo? = empty): Text
@@ -66,10 +66,10 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type Subscription = aspect
   {
-    protected
+    guarded
     memberHint: Text
 
-    protected
+    guarded
     usageCount: Integer
 
   }
@@ -79,24 +79,24 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type ObjectSnapshot = object
   {
-    protected
+    guarded
     changeset: AbstractChangeset
 
-    protected
+    guarded
     former: object { snapshot: ObjectSnapshot }
 
-    protected
+    guarded
     data: /*(!) any */ Object?
 
-    protected
+    guarded
     changes: Set<MemberName>
 
-    protected
+    guarded
     conflicts: Map<MemberName, ObjectSnapshot>
 
     при создании(changeset: AbstractChangeset, former: ObjectSnapshot?, data: Object)
 
-    protected
+    guarded
     revision: Integer
 
     disposed: YesNo
@@ -107,13 +107,13 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type ObjectHandle = object
   {
-    protected
+    guarded
     id: Integer
 
-    protected
+    guarded
     data: Object?
 
-    protected
+    guarded
     proxy: Object?
 
     head: ObjectSnapshot

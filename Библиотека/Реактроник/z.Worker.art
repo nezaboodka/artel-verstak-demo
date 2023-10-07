@@ -8,16 +8,16 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type Worker = aspect
   {
-    protected
+    guarded
     id: Integer
 
-    protected
+    guarded
     hint: Text
 
-    protected
+    guarded
     isCanceled: YesNo
 
-    protected
+    guarded
     isFinished: YesNo
 
     operation cancel(err: Error, restartAfter: Worker? = empty): Object?

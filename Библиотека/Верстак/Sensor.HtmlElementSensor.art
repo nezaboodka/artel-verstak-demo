@@ -6,10 +6,10 @@ external
   #js.ВнешняяРеализация(модуль = "verstak")
   type HtmlElementSensor = object Sensor
   {
-    protected
+    guarded
     focusSensor: Object?
 
-    protected
+    guarded
     windowSensor: WindowSensor?
 
     sourceElement: HTMLElement?
