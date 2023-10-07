@@ -38,8 +38,9 @@
     "yarn.lock",
   ],
   "cSpell.words": [
+    "contenteditable",
     "reactronic",
     "verstak",
-    "реактроник",
+    "реактроник"
   ]
 }
