@@ -1,36 +1,36 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Section<M = Nothing, R = Nothing>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>? = empty): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation row<T>(builder: operation(block: Nothing): T?, shiftCursorDown: Integer?)
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation startNewRow(shiftCursorDown: Integer? = empty)
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation cursor(areaParams: BlockArea)
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Note(content: Text, builder: BlockBuilder<HTMLElement, Nothing, Nothing>? = empty): Block<HTMLElement>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, Nothing, Nothing>?): Block<HTMLElement>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Group<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Fragment<M, R>(builder: BlockBuilder<Nothing, M, R>?, basis: BlockBuilder<Nothing, M, R>?): Block<Nothing, M, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type VerstakHtmlDriver<T = HTMLElement> = object HtmlDriver<T>
   {
     operation applyKind(block: Block<T, Object, Object>, value: BlockKind)

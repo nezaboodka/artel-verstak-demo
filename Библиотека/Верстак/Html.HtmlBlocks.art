@@ -1,527 +1,527 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>? = empty): Block<HTMLElement>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation A<M, R>(builder: BlockBuilder<HTMLAnchorElement, M, Nothing, R>?, basis: BlockBuilder<HTMLAnchorElement, M, Nothing, R>?): Block<HTMLAnchorElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Abbr<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Address<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Area<M, R>(builder: BlockBuilder<HTMLAreaElement, M, Nothing, R>?, basis: BlockBuilder<HTMLAreaElement, M, Nothing, R>?): Block<HTMLAreaElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Article<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Aside<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Audio<M, R>(builder: BlockBuilder<HTMLAudioElement, M, Nothing, R>?, basis: BlockBuilder<HTMLAudioElement, M, Nothing, R>?): Block<HTMLAudioElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation B<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Base<M, R>(builder: BlockBuilder<HTMLBaseElement, M, Nothing, R>?, basis: BlockBuilder<HTMLBaseElement, M, Nothing, R>?): Block<HTMLBaseElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Bdi<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Bdo<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Big<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation BlockQuote<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Body<M, R>(builder: BlockBuilder<HTMLBodyElement, M, Nothing, R>?, basis: BlockBuilder<HTMLBodyElement, M, Nothing, R>?): Block<HTMLBodyElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation BR<M, R>(builder: BlockBuilder<HTMLBRElement, M, Nothing, R>?, basis: BlockBuilder<HTMLBRElement, M, Nothing, R>?): Block<HTMLBRElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Button<M, R>(builder: BlockBuilder<HTMLButtonElement, M, Nothing, R>?, basis: BlockBuilder<HTMLButtonElement, M, Nothing, R>?): Block<HTMLButtonElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Canvas<M, R>(builder: BlockBuilder<HTMLCanvasElement, M, Nothing, R>?, basis: BlockBuilder<HTMLCanvasElement, M, Nothing, R>?): Block<HTMLCanvasElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Caption<M, R>(builder: BlockBuilder<HTMLTableCaptionElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableCaptionElement, M, Nothing, R>?): Block<HTMLTableCaptionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Cite<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Code<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Col<M, R>(builder: BlockBuilder<HTMLTableColElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableColElement, M, Nothing, R>?): Block<HTMLTableColElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation ColGroup<M, R>(builder: BlockBuilder<HTMLTableColElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableColElement, M, Nothing, R>?): Block<HTMLTableColElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Data<M, R>(builder: BlockBuilder<HTMLDataElement, M, Nothing, R>?, basis: BlockBuilder<HTMLDataElement, M, Nothing, R>?): Block<HTMLDataElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation DataList<M, R>(builder: BlockBuilder<HTMLDataListElement, M, Nothing, R>?, basis: BlockBuilder<HTMLDataListElement, M, Nothing, R>?): Block<HTMLDataListElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation DD<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Del<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Details<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Dfn<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Div<M, R>(builder: BlockBuilder<HTMLDivElement, M, Nothing, R>?, basis: BlockBuilder<HTMLDivElement, M, Nothing, R>?): Block<HTMLDivElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation DL<M, R>(builder: BlockBuilder<HTMLDListElement, M, Nothing, R>?, basis: BlockBuilder<HTMLDListElement, M, Nothing, R>?): Block<HTMLDListElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation DT<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation EM<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Embed<M, R>(builder: BlockBuilder<HTMLEmbedElement, M, Nothing, R>?, basis: BlockBuilder<HTMLEmbedElement, M, Nothing, R>?): Block<HTMLEmbedElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FieldSet<M, R>(builder: BlockBuilder<HTMLFieldSetElement, M, Nothing, R>?, basis: BlockBuilder<HTMLFieldSetElement, M, Nothing, R>?): Block<HTMLFieldSetElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FigCaption<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Figure<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Footer<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Form<M, R>(builder: BlockBuilder<HTMLFormElement, M, Nothing, R>?, basis: BlockBuilder<HTMLFormElement, M, Nothing, R>?): Block<HTMLFormElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H1<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H2<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H3<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H4<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H5<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation H6<M, R>(builder: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadingElement, M, Nothing, R>?): Block<HTMLHeadingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Head<M, R>(builder: BlockBuilder<HTMLHeadElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHeadElement, M, Nothing, R>?): Block<HTMLHeadElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Header<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation HGroup<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation HR<M, R>(builder: BlockBuilder<HTMLHRElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHRElement, M, Nothing, R>?): Block<HTMLHRElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Html<M, R>(builder: BlockBuilder<HTMLHtmlElement, M, Nothing, R>?, basis: BlockBuilder<HTMLHtmlElement, M, Nothing, R>?): Block<HTMLHtmlElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation I<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation IFrame<M, R>(builder: BlockBuilder<HTMLIFrameElement, M, Nothing, R>?, basis: BlockBuilder<HTMLIFrameElement, M, Nothing, R>?): Block<HTMLIFrameElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Img<M, R>(builder: BlockBuilder<HTMLImageElement, M, Nothing, R>?, basis: BlockBuilder<HTMLImageElement, M, Nothing, R>?): Block<HTMLImageElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Input<M, R>(builder: BlockBuilder<HTMLInputElement, M, Nothing, R>?, basis: BlockBuilder<HTMLInputElement, M, Nothing, R>?): Block<HTMLInputElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Ins<M, R>(builder: BlockBuilder<HTMLModElement, M, Nothing, R>?, basis: BlockBuilder<HTMLModElement, M, Nothing, R>?): Block<HTMLModElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Kbd<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation KeyGen<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Label<M, R>(builder: BlockBuilder<HTMLLabelElement, M, Nothing, R>?, basis: BlockBuilder<HTMLLabelElement, M, Nothing, R>?): Block<HTMLLabelElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Legend<M, R>(builder: BlockBuilder<HTMLLegendElement, M, Nothing, R>?, basis: BlockBuilder<HTMLLegendElement, M, Nothing, R>?): Block<HTMLLegendElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation LI<M, R>(builder: BlockBuilder<HTMLLIElement, M, Nothing, R>?, basis: BlockBuilder<HTMLLIElement, M, Nothing, R>?): Block<HTMLLIElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Link<M, R>(builder: BlockBuilder<HTMLLinkElement, M, Nothing, R>?, basis: BlockBuilder<HTMLLinkElement, M, Nothing, R>?): Block<HTMLLinkElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Main<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Map<M, R>(builder: BlockBuilder<HTMLMapElement, M, Nothing, R>?, basis: BlockBuilder<HTMLMapElement, M, Nothing, R>?): Block<HTMLMapElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Mark<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Menu<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation MenuItem<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Meta<M, R>(builder: BlockBuilder<HTMLMetaElement, M, Nothing, R>?, basis: BlockBuilder<HTMLMetaElement, M, Nothing, R>?): Block<HTMLMetaElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Meter<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Nav<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation NoIndex<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation NoScript<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Obj<M, R>(builder: BlockBuilder<HTMLObjectElement, M, Nothing, R>?, basis: BlockBuilder<HTMLObjectElement, M, Nothing, R>?): Block<HTMLObjectElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation OL<M, R>(builder: BlockBuilder<HTMLOListElement, M, Nothing, R>?, basis: BlockBuilder<HTMLOListElement, M, Nothing, R>?): Block<HTMLOListElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation OptGroup<M, R>(builder: BlockBuilder<HTMLOptGroupElement, M, Nothing, R>?, basis: BlockBuilder<HTMLOptGroupElement, M, Nothing, R>?): Block<HTMLOptGroupElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Option<M, R>(builder: BlockBuilder<HTMLOptionElement, M, Nothing, R>?, basis: BlockBuilder<HTMLOptionElement, M, Nothing, R>?): Block<HTMLOptionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Output<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation P<M, R>(builder: BlockBuilder<HTMLParagraphElement, M, Nothing, R>?, basis: BlockBuilder<HTMLParagraphElement, M, Nothing, R>?): Block<HTMLParagraphElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Param<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Picture<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Pre<M, R>(builder: BlockBuilder<HTMLPreElement, M, Nothing, R>?, basis: BlockBuilder<HTMLPreElement, M, Nothing, R>?): Block<HTMLPreElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Progress<M, R>(builder: BlockBuilder<HTMLProgressElement, M, Nothing, R>?, basis: BlockBuilder<HTMLProgressElement, M, Nothing, R>?): Block<HTMLProgressElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Q<M, R>(builder: BlockBuilder<HTMLQuoteElement, M, Nothing, R>?, basis: BlockBuilder<HTMLQuoteElement, M, Nothing, R>?): Block<HTMLQuoteElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation RP<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation RT<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Ruby<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation S<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Samp<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Script<M, R>(builder: BlockBuilder<HTMLScriptElement, M, Nothing, R>?, basis: BlockBuilder<HTMLScriptElement, M, Nothing, R>?): Block<HTMLScriptElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Sctn<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Select<M, R>(builder: BlockBuilder<HTMLSelectElement, M, Nothing, R>?, basis: BlockBuilder<HTMLSelectElement, M, Nothing, R>?): Block<HTMLSelectElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Small<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Source<M, R>(builder: BlockBuilder<HTMLSourceElement, M, Nothing, R>?, basis: BlockBuilder<HTMLSourceElement, M, Nothing, R>?): Block<HTMLSourceElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Span<M, R>(builder: BlockBuilder<HTMLSpanElement, M, Nothing, R>?, basis: BlockBuilder<HTMLSpanElement, M, Nothing, R>?): Block<HTMLSpanElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Strong<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Style<M, R>(builder: BlockBuilder<HTMLStyleElement, M, Nothing, R>?, basis: BlockBuilder<HTMLStyleElement, M, Nothing, R>?): Block<HTMLStyleElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Sub<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Summary<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Sup<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Tbl<M, R>(builder: BlockBuilder<HTMLTableElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableElement, M, Nothing, R>?): Block<HTMLTableElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Template<M, R>(builder: BlockBuilder<HTMLTemplateElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTemplateElement, M, Nothing, R>?): Block<HTMLTemplateElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TBody<M, R>(builder: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?): Block<HTMLTableSectionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TD<M, R>(builder: BlockBuilder<HTMLTableCellElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableCellElement, M, Nothing, R>?): Block<HTMLTableCellElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TextArea<M, R>(builder: BlockBuilder<HTMLTextAreaElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTextAreaElement, M, Nothing, R>?): Block<HTMLTextAreaElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TFoot<M, R>(builder: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?): Block<HTMLTableSectionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TH<M, R>(builder: BlockBuilder<HTMLTableCellElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableCellElement, M, Nothing, R>?): Block<HTMLTableCellElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation THead<M, R>(builder: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableSectionElement, M, Nothing, R>?): Block<HTMLTableSectionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Time<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Title<M, R>(builder: BlockBuilder<HTMLTitleElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTitleElement, M, Nothing, R>?): Block<HTMLTitleElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TR<M, R>(builder: BlockBuilder<HTMLTableRowElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTableRowElement, M, Nothing, R>?): Block<HTMLTableRowElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Track<M, R>(builder: BlockBuilder<HTMLTrackElement, M, Nothing, R>?, basis: BlockBuilder<HTMLTrackElement, M, Nothing, R>?): Block<HTMLTrackElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation U<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation UL<M, R>(builder: BlockBuilder<HTMLUListElement, M, Nothing, R>?, basis: BlockBuilder<HTMLUListElement, M, Nothing, R>?): Block<HTMLUListElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Var<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Video<M, R>(builder: BlockBuilder<HTMLVideoElement, M, Nothing, R>?, basis: BlockBuilder<HTMLVideoElement, M, Nothing, R>?): Block<HTMLVideoElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Wbr<M, R>(builder: BlockBuilder<HTMLElement, M, Nothing, R>?, basis: BlockBuilder<HTMLElement, M, Nothing, R>?): Block<HTMLElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Svg<M, R>(builder: BlockBuilder<SVGSVGElement, M, Nothing, R>?, basis: BlockBuilder<SVGSVGElement, M, Nothing, R>?): Block<SVGSVGElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation SvgA<M, R>(builder: BlockBuilder<SVGAElement, M, Nothing, R>?, basis: BlockBuilder<SVGAElement, M, Nothing, R>?): Block<SVGAElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Animate<M, R>(builder: BlockBuilder<SVGAnimateElement, M, Nothing, R>?, basis: BlockBuilder<SVGAnimateElement, M, Nothing, R>?): Block<SVGAnimateElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation AnimateMotion<M, R>(builder: BlockBuilder<SVGAnimateMotionElement, M, Nothing, R>?, basis: BlockBuilder<SVGAnimateMotionElement, M, Nothing, R>?): Block<SVGAnimateMotionElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation AnimateTransform<M, R>(builder: BlockBuilder<SVGAnimateTransformElement, M, Nothing, R>?, basis: BlockBuilder<SVGAnimateTransformElement, M, Nothing, R>?): Block<SVGAnimateTransformElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Circle<M, R>(builder: BlockBuilder<SVGCircleElement, M, Nothing, R>?, basis: BlockBuilder<SVGCircleElement, M, Nothing, R>?): Block<SVGCircleElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation ClipPath<M, R>(builder: BlockBuilder<SVGClipPathElement, M, Nothing, R>?, basis: BlockBuilder<SVGClipPathElement, M, Nothing, R>?): Block<SVGClipPathElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Defs<M, R>(builder: BlockBuilder<SVGDefsElement, M, Nothing, R>?, basis: BlockBuilder<SVGDefsElement, M, Nothing, R>?): Block<SVGDefsElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Desc<M, R>(builder: BlockBuilder<SVGDescElement, M, Nothing, R>?, basis: BlockBuilder<SVGDescElement, M, Nothing, R>?): Block<SVGDescElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Ellipse<M, R>(builder: BlockBuilder<SVGEllipseElement, M, Nothing, R>?, basis: BlockBuilder<SVGEllipseElement, M, Nothing, R>?): Block<SVGEllipseElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeBlend<M, R>(builder: BlockBuilder<SVGFEBlendElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEBlendElement, M, Nothing, R>?): Block<SVGFEBlendElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeColorMatrix<M, R>(builder: BlockBuilder<SVGFEColorMatrixElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEColorMatrixElement, M, Nothing, R>?): Block<SVGFEColorMatrixElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeComponentTransfer<M, R>(builder: BlockBuilder<SVGFEComponentTransferElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEComponentTransferElement, M, Nothing, R>?): Block<SVGFEComponentTransferElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeComposite<M, R>(builder: BlockBuilder<SVGFECompositeElement, M, Nothing, R>?, basis: BlockBuilder<SVGFECompositeElement, M, Nothing, R>?): Block<SVGFECompositeElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeConvolveMatrix<M, R>(builder: BlockBuilder<SVGFEConvolveMatrixElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEConvolveMatrixElement, M, Nothing, R>?): Block<SVGFEConvolveMatrixElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeDiffuseLighting<M, R>(builder: BlockBuilder<SVGFEDiffuseLightingElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEDiffuseLightingElement, M, Nothing, R>?): Block<SVGFEDiffuseLightingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeDisplacementMap<M, R>(builder: BlockBuilder<SVGFEDisplacementMapElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEDisplacementMapElement, M, Nothing, R>?): Block<SVGFEDisplacementMapElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeDistantLight<M, R>(builder: BlockBuilder<SVGFEDistantLightElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEDistantLightElement, M, Nothing, R>?): Block<SVGFEDistantLightElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeDropShadow<M, R>(builder: BlockBuilder<SVGFEDropShadowElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEDropShadowElement, M, Nothing, R>?): Block<SVGFEDropShadowElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeFlood<M, R>(builder: BlockBuilder<SVGFEFloodElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEFloodElement, M, Nothing, R>?): Block<SVGFEFloodElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeFuncA<M, R>(builder: BlockBuilder<SVGFEFuncAElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEFuncAElement, M, Nothing, R>?): Block<SVGFEFuncAElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeFuncB<M, R>(builder: BlockBuilder<SVGFEFuncBElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEFuncBElement, M, Nothing, R>?): Block<SVGFEFuncBElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeFuncG<M, R>(builder: BlockBuilder<SVGFEFuncGElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEFuncGElement, M, Nothing, R>?): Block<SVGFEFuncGElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeFuncR<M, R>(builder: BlockBuilder<SVGFEFuncRElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEFuncRElement, M, Nothing, R>?): Block<SVGFEFuncRElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeGaussianBlur<M, R>(builder: BlockBuilder<SVGFEGaussianBlurElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEGaussianBlurElement, M, Nothing, R>?): Block<SVGFEGaussianBlurElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeImage<M, R>(builder: BlockBuilder<SVGFEImageElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEImageElement, M, Nothing, R>?): Block<SVGFEImageElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeMerge<M, R>(builder: BlockBuilder<SVGFEMergeElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEMergeElement, M, Nothing, R>?): Block<SVGFEMergeElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeMergeNode<M, R>(builder: BlockBuilder<SVGFEMergeNodeElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEMergeNodeElement, M, Nothing, R>?): Block<SVGFEMergeNodeElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeMorphology<M, R>(builder: BlockBuilder<SVGFEMorphologyElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEMorphologyElement, M, Nothing, R>?): Block<SVGFEMorphologyElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeOffset<M, R>(builder: BlockBuilder<SVGFEOffsetElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEOffsetElement, M, Nothing, R>?): Block<SVGFEOffsetElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FePointLight<M, R>(builder: BlockBuilder<SVGFEPointLightElement, M, Nothing, R>?, basis: BlockBuilder<SVGFEPointLightElement, M, Nothing, R>?): Block<SVGFEPointLightElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeSpecularLighting<M, R>(builder: BlockBuilder<SVGFESpecularLightingElement, M, Nothing, R>?, basis: BlockBuilder<SVGFESpecularLightingElement, M, Nothing, R>?): Block<SVGFESpecularLightingElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeSpotLight<M, R>(builder: BlockBuilder<SVGFESpotLightElement, M, Nothing, R>?, basis: BlockBuilder<SVGFESpotLightElement, M, Nothing, R>?): Block<SVGFESpotLightElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeTile<M, R>(builder: BlockBuilder<SVGFETileElement, M, Nothing, R>?, basis: BlockBuilder<SVGFETileElement, M, Nothing, R>?): Block<SVGFETileElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation FeTurbulence<M, R>(builder: BlockBuilder<SVGFETurbulenceElement, M, Nothing, R>?, basis: BlockBuilder<SVGFETurbulenceElement, M, Nothing, R>?): Block<SVGFETurbulenceElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Filter<M, R>(builder: BlockBuilder<SVGFilterElement, M, Nothing, R>?, basis: BlockBuilder<SVGFilterElement, M, Nothing, R>?): Block<SVGFilterElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation ForeignObject<M, R>(builder: BlockBuilder<SVGForeignObjectElement, M, Nothing, R>?, basis: BlockBuilder<SVGForeignObjectElement, M, Nothing, R>?): Block<SVGForeignObjectElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation G<M, R>(builder: BlockBuilder<SVGGElement, M, Nothing, R>?, basis: BlockBuilder<SVGGElement, M, Nothing, R>?): Block<SVGGElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation SvgImage<M, R>(builder: BlockBuilder<SVGImageElement, M, Nothing, R>?, basis: BlockBuilder<SVGImageElement, M, Nothing, R>?): Block<SVGImageElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation SvgLine<M, R>(builder: BlockBuilder<SVGLineElement, M, Nothing, R>?, basis: BlockBuilder<SVGLineElement, M, Nothing, R>?): Block<SVGLineElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation LinearGradient<M, R>(builder: BlockBuilder<SVGLinearGradientElement, M, Nothing, R>?, basis: BlockBuilder<SVGLinearGradientElement, M, Nothing, R>?): Block<SVGLinearGradientElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Marker<M, R>(builder: BlockBuilder<SVGMarkerElement, M, Nothing, R>?, basis: BlockBuilder<SVGMarkerElement, M, Nothing, R>?): Block<SVGMarkerElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Mask<M, R>(builder: BlockBuilder<SVGMaskElement, M, Nothing, R>?, basis: BlockBuilder<SVGMaskElement, M, Nothing, R>?): Block<SVGMaskElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation MetaData<M, R>(builder: BlockBuilder<SVGMetadataElement, M, Nothing, R>?, basis: BlockBuilder<SVGMetadataElement, M, Nothing, R>?): Block<SVGMetadataElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation MPath<M, R>(builder: BlockBuilder<SVGElement, M, Nothing, R>?, basis: BlockBuilder<SVGElement, M, Nothing, R>?): Block<SVGElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Path<M, R>(builder: BlockBuilder<SVGPathElement, M, Nothing, R>?, basis: BlockBuilder<SVGPathElement, M, Nothing, R>?): Block<SVGPathElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Pattern<M, R>(builder: BlockBuilder<SVGPatternElement, M, Nothing, R>?, basis: BlockBuilder<SVGPatternElement, M, Nothing, R>?): Block<SVGPatternElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Polygon<M, R>(builder: BlockBuilder<SVGPolygonElement, M, Nothing, R>?, basis: BlockBuilder<SVGPolygonElement, M, Nothing, R>?): Block<SVGPolygonElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation PolyLine<M, R>(builder: BlockBuilder<SVGPolylineElement, M, Nothing, R>?, basis: BlockBuilder<SVGPolylineElement, M, Nothing, R>?): Block<SVGPolylineElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation RadialGradient<M, R>(builder: BlockBuilder<SVGRadialGradientElement, M, Nothing, R>?, basis: BlockBuilder<SVGRadialGradientElement, M, Nothing, R>?): Block<SVGRadialGradientElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Rect<M, R>(builder: BlockBuilder<SVGRectElement, M, Nothing, R>?, basis: BlockBuilder<SVGRectElement, M, Nothing, R>?): Block<SVGRectElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Stop<M, R>(builder: BlockBuilder<SVGStopElement, M, Nothing, R>?, basis: BlockBuilder<SVGStopElement, M, Nothing, R>?): Block<SVGStopElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation SvgSwitch<M, R>(builder: BlockBuilder<SVGSwitchElement, M, Nothing, R>?, basis: BlockBuilder<SVGSwitchElement, M, Nothing, R>?): Block<SVGSwitchElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Symbol<M, R>(builder: BlockBuilder<SVGSymbolElement, M, Nothing, R>?, basis: BlockBuilder<SVGSymbolElement, M, Nothing, R>?): Block<SVGSymbolElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Text<M, R>(builder: BlockBuilder<SVGTextElement, M, Nothing, R>?, basis: BlockBuilder<SVGTextElement, M, Nothing, R>?): Block<SVGTextElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TextPath<M, R>(builder: BlockBuilder<SVGTextPathElement, M, Nothing, R>?, basis: BlockBuilder<SVGTextPathElement, M, Nothing, R>?): Block<SVGTextPathElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation TSpan<M, R>(builder: BlockBuilder<SVGTSpanElement, M, Nothing, R>?, basis: BlockBuilder<SVGTSpanElement, M, Nothing, R>?): Block<SVGTSpanElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation Use<M, R>(builder: BlockBuilder<SVGUseElement, M, Nothing, R>?, basis: BlockBuilder<SVGUseElement, M, Nothing, R>?): Block<SVGUseElement, M, Nothing, R>
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation View<M, R>(builder: BlockBuilder<SVGViewElement, M, Nothing, R>?, basis: BlockBuilder<SVGViewElement, M, Nothing, R>?): Block<SVGViewElement, M, Nothing, R>
 }

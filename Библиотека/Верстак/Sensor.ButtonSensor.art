@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type ButtonState = variant
   {
     Pressed
@@ -12,7 +12,7 @@ external
     Released
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type ButtonSensor = object BasePointerSensor
   {
     state: ButtonState

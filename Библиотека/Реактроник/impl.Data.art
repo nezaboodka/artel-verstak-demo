@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type AbstractChangeset = aspect
   {
     protected
@@ -22,7 +22,7 @@ external
 
   // ObservableValue & Observer
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type ObservableValue = object
   {
     content: Object?
@@ -38,10 +38,10 @@ external
     originSnapshotId: Integer?
   }
 
-  // #ВнешняяРеализация(модуль = "reactronic")
+  // #js.ВнешняяРеализация(модуль = "reactronic")
   // type SeparationMode = YesNo | "isolated" | "disposal"
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Observer = aspect
   {
     protected
@@ -63,7 +63,7 @@ external
 
   type MemberName = Text // PropertyKey
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Subscription = aspect
   {
     protected
@@ -76,7 +76,7 @@ external
 
   //// ObjectSnapshot
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type ObjectSnapshot = object
   {
     protected
@@ -104,7 +104,7 @@ external
 
   // ObjectHandle
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type ObjectHandle = object
   {
     protected
@@ -132,10 +132,10 @@ external
 
   // PatchSet & ObjectPatch
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type PatchSet = Map<Object, Map<MemberName, ValuePatch>>
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type ValuePatch = aspect
   {
     memberName: MemberName

@@ -1,11 +1,11 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
   // BaseHtmlDriver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
   {
 
@@ -34,7 +34,7 @@ external
 
   // HtmlDriver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type HtmlDriver<T = HTMLElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, Nothing>, b: object { native: T?; controller: C?})
@@ -42,7 +42,7 @@ external
 
   // SvgDriver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type SvgDriver<T = SVGElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, Nothing>, b: object { native: T?; controller: C? })

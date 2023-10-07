@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type KeyboardModifiers = variant
   {
     None = 0
@@ -23,7 +23,7 @@ external
     AltMeta = 4 + 8
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type KeyboardSensor = object HtmlElementSensor
   {
     down: Text
@@ -55,6 +55,6 @@ external
     }
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   operation extractModifierKeys(e: Event /*(!)MouseEvent | KeyboardEvent | WheelEvent*/): KeyboardModifiers
 }

@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type ResizedElement = aspect
   {
     protected
@@ -18,7 +18,7 @@ external
     }
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type ResizeSensor = object Sensor
   {
     resizedElements: Array<ResizedElement>

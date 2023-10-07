@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type Verstak = object
   {
     global
@@ -36,7 +36,7 @@ external
 
   // BaseDriver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type BaseDriver<T, C> = object Driver<T, C>
   {
     global protected
@@ -85,7 +85,7 @@ external
 
   // Utils
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type StaticDriver<T> = object BaseDriver<T>
   {
     protected
@@ -98,7 +98,7 @@ external
 
   // CursorCommandDriver
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type CursorCommand = object
   {
     absolute: Text?
@@ -108,7 +108,7 @@ external
     rowShift: Целое?
   }
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type CursorCommandDriver = object BaseDriver<CursorCommand, Nothing>
   {
     on create()
@@ -118,7 +118,7 @@ external
 
   // SubTreeVariable
 
-  #ВнешняяРеализация(модуль = "verstak")
+  #js.ВнешняяРеализация(модуль = "verstak")
   type SubTreeVariable<T = Object> = object
   {
     protected

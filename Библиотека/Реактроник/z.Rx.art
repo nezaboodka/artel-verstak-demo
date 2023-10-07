@@ -1,9 +1,9 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Rx = object
   {
     global
@@ -50,15 +50,15 @@ external
 
   // Global Operations
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
   operation transaction<T>(func: F<T>, args: Array<Object?>): T
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
   operation nonreactive`<T>(func: F<T>, args: Array<Object?>): T
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
   operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: Array<Object?>): T
 }

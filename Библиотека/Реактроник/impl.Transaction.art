@@ -1,5 +1,5 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
@@ -7,7 +7,7 @@ external
 
   // Transaction
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Transaction = /*(!) abstract */ object Worker
   {
     /*(!) abstract */

@@ -1,5 +1,5 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
@@ -11,14 +11,14 @@ external
 
   // TransactionalObject
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type TransactionalObject = /*(!) abstract */ object MvccObject
   {
   }
 
   // ObservableObject
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type ObservableObject = /*(!) abstract */ object MvccObject
   {
   }

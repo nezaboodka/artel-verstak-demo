@@ -1,11 +1,11 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 external
 {
   // SnapshotOptions
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type SnapshotOptions = aspect
   {
     protected
@@ -26,7 +26,7 @@ external
 
   // MemberOptions
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type MemberOptions = aspect
   {
     protected
@@ -62,7 +62,7 @@ external
 
   // Kind
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Kind = variant
   {
     Plain = 0
@@ -73,7 +73,7 @@ external
 
   // Reentrance
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type Reentrance = variant
   {
     PreventWithError = 1

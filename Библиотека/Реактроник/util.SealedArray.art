@@ -1,5 +1,5 @@
-import artel
-import artel.js
+import Artel
+import js = Artel.JavaScript
 
 type Comparer = operation(a: T, b: T): Integer
 
@@ -7,7 +7,7 @@ external
 {
   // SealedArray
 
-  #ВнешняяРеализация(модуль = "reactronic")
+  #js.ВнешняяРеализация(модуль = "reactronic")
   type SealedArray<T> = /*(!) abstract */ object Array<T>, Sealed<Array<T>>
   {
   }

@@ -1,5 +1,5 @@
-import artel
-import js = artel.js
+import Artel
+import js = Artel.JavaScript
 
 type StyleSheet = aspect
 {
