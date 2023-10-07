@@ -7,10 +7,11 @@ external
   type HtmlElementSensor = object Sensor
   {
     guarded
-    focusSensor: Object?
+    {
+      focusSensor: Object?
 
-    guarded
-    windowSensor: WindowSensor?
+      windowSensor: WindowSensor?
+    }
 
     sourceElement: HTMLElement?
 

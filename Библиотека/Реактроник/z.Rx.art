@@ -42,10 +42,11 @@ external
     reactivityAutoStartDisabled: YesNo
 
     guarded
-    isLogging: YesNo
+    {
+      isLogging: YesNo
 
-    guarded
-    loggingOptions: LoggingOptions
+      loggingOptions: LoggingOptions
+    }
   }
 
   // Global Operations

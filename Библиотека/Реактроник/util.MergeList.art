@@ -19,19 +19,17 @@ external
   type MergeListReader<T> = aspect
   {
     guarded
-    isStrict: YesNo
+    {
+      isStrict: YesNo
 
-    guarded
-    count: Integer
+      count: Integer
 
-    guarded
-    addedCount: Integer
+      addedCount: Integer
 
-    guarded
-    removedCount: Integer
+      removedCount: Integer
 
-    guarded
-    isMergeInProgress: YesNo
+      isMergeInProgress: YesNo
+    }
 
     operation lookup(key: Text): MergeItem<T>?
 
@@ -73,10 +71,11 @@ external
   type MergeItem<T> = aspect
   {
     guarded
-    instance: T
+    {
+      instance: T
 
-    guarded
-    prev: MergeItem<T>
+      prev: MergeItem<T>
+    }
 
     aux: MergeItem<T>
   }
@@ -131,15 +130,14 @@ external
     isStrict: YesNo
 
     guarded
-    count: Integer
+    {
+      count: Integer
 
-    guarded
-    addedCount: Integer
+      addedCount: Integer
 
-    guarded
-    removedCount: Integer
+      removedCount: Integer
 
-    guarded
-    isMergeInProgress: YesNo
+      isMergeInProgress: YesNo
+    }
   }
 }

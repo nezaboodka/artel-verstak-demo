@@ -9,19 +9,17 @@ external
   type SnapshotOptions = aspect
   {
     guarded
-    hint: Text
+    {
+      hint: Text
 
-    guarded
-    separation: SeparationMode
+      separation: SeparationMode
 
-    guarded
-    journal: Journal
+      journal: Journal
 
-    guarded
-    logging: LoggingOptions
+      logging: LoggingOptions
 
-    guarded
-    token: Объект?
+      token: Объект?
+    }
   }
 
   // MemberOptions
@@ -30,34 +28,27 @@ external
   type MemberOptions = aspect
   {
     guarded
-    kind: Kind
+    {
+      kind: Kind
 
-    guarded
-    separation: SeparationMode
+      separation: SeparationMode
 
-    guarded
-    order: Integer
+      order: Integer
 
-    guarded
-    noSideEffects: YesNo
+      noSideEffects: YesNo
 
-    guarded
-    triggeringArgs: YesNo
+      triggeringArgs: YesNo
 
-    guarded
-    throttling: Integer
+      throttling: Integer
 
-    guarded
-    reentrance: Reentrance
+      reentrance: Reentrance
 
-    guarded
-    journal: Journal?
+      journal: Journal?
 
-    guarded
-    monitor: Monitor?
+      monitor: Monitor?
 
-    guarded
-    logging: LoggingOptions
+      logging: LoggingOptions
+    }
   }
 
   // Kind

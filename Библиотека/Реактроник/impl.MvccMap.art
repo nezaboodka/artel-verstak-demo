@@ -32,10 +32,11 @@ external
     // operation [Symbol.toStringTag](): Текст
 
     guarded
-    size: Integer
+    {
+      size: Integer
 
-    guarded
-    mutable: Map<K, V>
+      mutable: Map<K, V>
+    }
   }
 
   // TransactionalMap

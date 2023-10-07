@@ -9,16 +9,15 @@ external
   type Worker = aspect
   {
     guarded
-    id: Integer
+    {
+      id: Integer
 
-    guarded
-    hint: Text
+      hint: Text
 
-    guarded
-    isCanceled: YesNo
+      isCanceled: YesNo
 
-    guarded
-    isFinished: YesNo
+      isFinished: YesNo
+    }
 
     operation cancel(err: Error, restartAfter: Worker? = empty): Object?
 

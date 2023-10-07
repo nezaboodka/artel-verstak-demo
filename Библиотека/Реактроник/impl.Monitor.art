@@ -8,21 +8,16 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type Monitor = /*(!) abstract */ object ObservableObject
   {
-    /*(!) abstract */
-    guarded
-    isActive: YesNo
+    guarded /*(!) abstract */
+    {
+      isActive: YesNo
 
-    /*(!) abstract */
-    guarded
-    counter: Integer
+      counter: Integer
 
-    /*(!) abstract */
-    guarded
-    workers: Set<Worker>
+      workers: Set<Worker>
 
-    /*(!) abstract */
-    guarded
-    duration: Integer
+      duration: Integer
+    }
 
     global
     operation create(hint: Text, activationDelay: Integer, deactivationDelay: Integer, durationResolution: Integer): Monitor

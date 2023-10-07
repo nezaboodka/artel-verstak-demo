@@ -9,52 +9,39 @@ external
   type LoggingOptions = aspect
   {
     guarded
-    enabled: YesNo
+    {
+      enabled: YesNo
 
-    guarded
-    transaction`: YesNo
+      transaction`: YesNo
 
-    guarded
-    operation`: YesNo
+      operation`: YesNo
 
-    guarded
-    step: YesNo
+      step: YesNo
 
-    guarded
-    monitor: YesNo
+      monitor: YesNo
 
-    guarded
-    read: YesNo
+      read: YesNo
 
-    guarded
-    write: YesNo
+      write: YesNo
 
-    guarded
-    change: YesNo
+      change: YesNo
 
-    guarded
-    obsolete: YesNo
+      obsolete: YesNo
 
-    guarded
-    error`: YesNo
+      error`: YesNo
 
-    guarded
-    warning: YesNo
+      warning: YesNo
 
-    guarded
-    gc: YesNo
+      gc: YesNo
 
-    guarded
-    color: Integer
+      color: Integer
 
-    guarded
-    prefix: Текст
+      prefix: Текст
 
-    guarded
-    margin1: Integer
+      margin1: Integer
 
-    guarded
-    margin2: Integer
+      margin2: Integer
+    }
   }
 
   // ProfilingOptions

@@ -10,33 +10,22 @@ external
   #js.ВнешняяРеализация(модуль = "reactronic")
   type Transaction = /*(!) abstract */ object Worker
   {
-    /*(!) abstract */
-    guarded
-    id: Integer
+    guarded /*(!) abstract */
+    {
+      id: Integer
 
-    /*(!) abstract */
-    guarded
-    hint: Текст
+      hint: Текст
 
-    /*(!) abstract */
-    guarded
-    options: SnapshotOptions
+      options: SnapshotOptions
 
-    /*(!) abstract */
-    guarded
-    timestamp: Integer
+      timestamp: Integer
 
-    /*(!) abstract */
-    guarded
-    error`: Error?
+      error`: Error?
 
-    /*(!) abstract */
-    guarded
-    changeset: Changeset
+      changeset: Changeset
 
-    /*(!) abstract */
-    guarded
-    margin: Integer
+      margin: Integer
+    }
 
     // #js.МассивПараметров
     // /*(!) abstract */ 
@@ -58,13 +47,12 @@ external
     /*(!) abstract */ 
     operation cancel(error`: Error, retryAfterOrIgnore: Worker? = empty): Object?
 
-    /*(!) abstract */
-    guarded
-    isCanceled: YesNo
+    guarded /*(!) abstract */
+    {
+      isCanceled: YesNo
 
-    /*(!) abstract */
-    guarded
-    isFinished: YesNo
+      isFinished: YesNo
+    }
 
     parallel
     operation whenFinished(): Promise<Nothing>
@@ -91,9 +79,10 @@ external
     operation requestNextFrame(sleepTime: Integer = 0): Promise<Nothing>
 
     guarded
-    current: Transaction
+    {
+      current: Transaction
 
-    guarded
-    isCanceled: YesNo
+      isCanceled: YesNo
+    }
   }
 }

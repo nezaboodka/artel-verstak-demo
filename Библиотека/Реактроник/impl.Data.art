@@ -7,17 +7,15 @@ external
   type AbstractChangeset = aspect
   {
     guarded
-    id: Integer
+    {
+      id: Integer
 
-    guarded
-    hint: Text
+      hint: Text
 
-    guarded
-    timestamp: Integer
+      timestamp: Integer
 
-    guarded
-    sealed: YesNo
-
+      sealed: YesNo
+    }
   }
 
   // ObservableValue & Observer
@@ -32,10 +30,11 @@ external
     при создании(content: Object?)
 
     guarded
-    isOperation: YesNo
+    {
+      isOperation: YesNo
 
-    guarded
-    originSnapshotId: Integer?
+      originSnapshotId: Integer?
+    }
   }
 
   // #js.ВнешняяРеализация(модуль = "reactronic")
@@ -45,13 +44,13 @@ external
   type Observer = aspect
   {
     guarded
-    order: Integer
+    {
+      order: Integer
 
-    guarded
-    observables: Map<ObservableValue, Subscription>?
+      observables: Map<ObservableValue, Subscription>?
 
-    guarded
-    obsoleteSince: Integer
+      obsoleteSince: Integer
+    }
 
     операция hint(nop: YesNo? = empty): Text
 
@@ -67,11 +66,11 @@ external
   type Subscription = aspect
   {
     guarded
-    memberHint: Text
+    {
+      memberHint: Text
 
-    guarded
-    usageCount: Integer
-
+      usageCount: Integer
+    }
   }
 
   //// ObjectSnapshot
@@ -80,26 +79,23 @@ external
   type ObjectSnapshot = object
   {
     guarded
-    changeset: AbstractChangeset
+    {
+      changeset: AbstractChangeset
 
-    guarded
-    former: object { snapshot: ObjectSnapshot }
+      former: object { snapshot: ObjectSnapshot }
 
-    guarded
-    data: /*(!) any */ Object?
+      data: /*(!) any */ Object?
 
-    guarded
-    changes: Set<MemberName>
+      changes: Set<MemberName>
 
-    guarded
-    conflicts: Map<MemberName, ObjectSnapshot>
+      conflicts: Map<MemberName, ObjectSnapshot>
 
-    при создании(changeset: AbstractChangeset, former: ObjectSnapshot?, data: Object)
-
-    guarded
-    revision: Integer
+      revision: Integer
+    }
 
     disposed: YesNo
+
+    при создании(changeset: AbstractChangeset, former: ObjectSnapshot?, data: Object)
   }
 
   // ObjectHandle
@@ -108,13 +104,13 @@ external
   type ObjectHandle = object
   {
     guarded
-    id: Integer
+    {
+      id: Integer
 
-    guarded
-    data: Object?
+      data: Object?
 
-    guarded
-    proxy: Object?
+      proxy: Object?
+    }
 
     head: ObjectSnapshot
 
