@@ -11,7 +11,7 @@ external
   {
     on create(restyle: operation(): T)
 
-    защищено
+    guarded
     class: T
   }
 }

@@ -34,14 +34,17 @@ external
 
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  конст SymDataForSensor: unique /*(!) = Symbol("DataForSensor") */
+  конст
+  {
+    #js.ВнешняяРеализация(модуль = "verstak")
+    SymDataForSensor: unique /*(!) = Symbol("DataForSensor") */
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  конст SymResizeObserver: unique /*(!) = Symbol("ResizeObserver") */
+    #js.ВнешняяРеализация(модуль = "verstak")
+    SymResizeObserver: unique /*(!) = Symbol("ResizeObserver") */
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  конст EmptyDataArray: List<Object> /*(!) = [] */
+    #js.ВнешняяРеализация(модуль = "verstak")
+    EmptyDataArray: List<Object> /*(!) = [] */
+  }
 
   #js.ВнешняяРеализация(модуль = "verstak")
   операция findTargetElementData(targetPath: List<Object>, underPointer: List<Object>, sym: Symbol, anyOfPayloadKeys: Array</*(!) any */ Object>, ignoreWindow: YesNo = нет): object { data: DataForSensor?; window: Object? }
