@@ -18,7 +18,7 @@ external
     global
     operation configureCurrentOperation(options: Partial<MemberOptions>): MemberOptions
 
-    global
+    static
     operation getRevisionOf(obj: Object?): Integer
 
     global
@@ -57,7 +57,7 @@ external
 
   #js.ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
-  operation nonreactive`<T>(func: F<T>, args: Array<Object?>): T
+  operation unobs<T>(func: F<T>, args: Array<Object?>): T
 
   #js.ВнешняяРеализация(модуль = "reactronic")
   #js.МассивПараметров
