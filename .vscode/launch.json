@@ -12,7 +12,7 @@
       "webRoot": "${workspaceRoot}/.сборка",
       "sourceMaps": true,
       "smartStep": true,
-      "pauseForSourceMap": false,
+      "pauseForSourceMap": true,
       "skipFiles": [
         "<node_internals>/**",
       ],
