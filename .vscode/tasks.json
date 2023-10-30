@@ -2,10 +2,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Пуск (vite)",
+      "label": "Пуск сервера (vite)",
       "group": "build",
       "type": "shell",
-      "command": "npm run пуск",
+      "command": "npm run пуск-сервера",
       "options": {
         "cwd": "${workspaceFolder}/.сборка"
       },

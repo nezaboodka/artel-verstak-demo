@@ -6,31 +6,16 @@
   "configurations": [
     {
       "name": "Пуск",
-      "type": "node",
+      "type": "chrome",
       "request": "launch",
-      "cwd": "${workspaceFolder}/.сборка",
-      "program": "n-artel",
-      "runtimeArgs": [
-        // "--inspect"
-      ],
-      "args": [
-        "launch",
-        "..",
-        "${relativeFileDirname}"
-      ],
-      "console": "integratedTerminal",
-      "autoAttachChildProcesses": false,
+      "url": "http://localhost:1234",
+      "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "smartStep": true,
+      "pauseForSourceMap": false,
       "skipFiles": [
-        "<node_internals>/**/*.js"
+        "<node_internals>/**",
       ],
     },
-    {
-      "name": "Пуск (через VS Code Extension)",
-      "type": "artel",
-      "request": "launch",
-      "project": "${workspaceFolder}/${relativeFileDirname}"
-    }
   ]
 }
