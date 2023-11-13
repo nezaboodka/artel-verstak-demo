@@ -1,9 +1,9 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type Verstak = object
   {
     global
@@ -23,7 +23,7 @@ external
 
       operation claim<T, M, C, R>(driver: Driver<T>, builder: BlockBuilder<T, M, C, R>?, base: BlockBuilder<T, M, C, R>?): Block<T, M, C, R>
 
-      operation triggerRebuild(block: Block<Object, Object, Object, Nothing>, triggers: Object?)
+      operation triggerRebuild(block: Block<Object, Object, Object, Empty>, triggers: Object?)
 
       operation rebuildNestedTreesThenDo(action: operation(err: Object?))
 
@@ -36,7 +36,7 @@ external
 
   // BaseDriver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type BaseDriver<T, C> = object Driver<T, C>
   {
     global guarded
@@ -85,7 +85,7 @@ external
 
   // Utils
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type StaticDriver<T> = object BaseDriver<T>
   {
     guarded
@@ -93,12 +93,12 @@ external
 
     on create(element: T, name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
 
-    operation create(block: Block<T, Object?, Object?, Nothing>, b: object { native: T; controller: Object? })
+    operation create(block: Block<T, Object?, Object?, Empty>, b: object { native: T; controller: Object? })
   }
 
   // CursorCommandDriver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type CursorCommand = object
   {
     absolute: Text?
@@ -108,17 +108,17 @@ external
     rowShift: Целое?
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  type CursorCommandDriver = object BaseDriver<CursorCommand, Nothing>
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type CursorCommandDriver = object BaseDriver<CursorCommand, Empty>
   {
     on create()
 
-    operation create(block: Block<CursorCommand, Object?, Nothing, Nothing>, b: object { native: CursorCommand?; controller: Nothing? })
+    operation create(block: Block<CursorCommand, Object?, Empty, Empty>, b: object { native: CursorCommand?; controller: Empty? })
   }
 
   // SubTreeVariable
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type SubTreeVariable<T = Object> = object
   {
     guarded

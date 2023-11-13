@@ -1,42 +1,42 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Rx = object
   {
-    global
+    static
     operation why(brief: YesNo = no): Text
 
-    global
-    operation getController<T>(method: F<T>): Controller<T>
+    // static
+    // operation getController<T>(method: F<T>): Controller<T>
 
-    global
-    operation pullLastResult<T>(method: F<Promise<T>>, args: Array<Object?>? = empty): T?
+    static
+    operation pullLastResult<T>(method: F<JS.Promise<T>>, args: Array<Object?>? = empty): T?
 
-    global
-    operation configureCurrentOperation(options: Partial<MemberOptions>): MemberOptions
+    // static
+    // operation configureCurrentOperation(options: Partial<MemberOptions>): MemberOptions
 
     static
     operation getRevisionOf(obj: Object?): Integer
 
-    global
+    static
     operation takeSnapshot<T>(obj: T): T
 
-    global
+    static
     operation dispose`(obj: Object?)
 
-    global
+    static
     operation setLoggingMode(isOn: YesNo, options: LoggingOptions? = empty)
 
-    global
+    static
     operation setLoggingHint<T = Object>(obj: T, name: Text?)
 
-    global
+    static
     operation getLoggingHint<T = Object>(obj: T, full: YesNo = no): Text?
 
-    global
+    static
     operation setProfilingMode(isOn: YesNo, options: ProfilingOptions? = empty)
 
     reactivityAutoStartDisabled: YesNo
@@ -51,15 +51,15 @@ external
 
   // Global Operations
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
-  #js.МассивПараметров
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
   operation transaction<T>(func: F<T>, args: Array<Object?>): T
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
-  #js.МассивПараметров
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
   operation unobs<T>(func: F<T>, args: Array<Object?>): T
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
-  #js.МассивПараметров
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
   operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: Array<Object?>): T
 }

@@ -1,5 +1,5 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 type StyleSheet = aspect
 {
@@ -17,9 +17,9 @@ type HTMLElement = aspect
 
 type Callback<T> = operation(native: T)
 
-type Delegate<T, M = Nothing, C = Nothing, R = Nothing> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R
+type Delegate<T, M = Empty, C = Empty, R = Empty> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R
 
-type AsyncDelegate<T, M> = operation(block: Block<T, M, Promise<Nothing>>): Promise<Nothing>
+type AsyncDelegate<T, M> = operation(block: Block<T, M, JS.Promise<Empty>>): JS.Promise<Empty>
 
 type SimpleDelegate<T> = operation(block: Block<T, Object, Object, Object>)
 
@@ -63,7 +63,7 @@ type Align = вариант
 
 // BlockBuilder
 
-type BlockBuilder<T, M = Nothing, C = Nothing, R = Nothing> = object
+type BlockBuilder<T, M = Empty, C = Empty, R = Empty> = object
 {
   //base`: BlockBuilder<T, M, C, R>?
 
@@ -94,8 +94,8 @@ external
 {
   // Block
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  type Block<T, M = Nothing, C = Nothing, R = Nothing> = aspect
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type Block<T, M = Empty, C = Empty, R = Empty> = aspect
   {
     guarded
     {
@@ -146,13 +146,13 @@ external
 
     operation useStyle(styleName: Text, enabled: YesNo?)
 
-    operation configureReactronic(options: Partial<MemberOptions>): MemberOptions
+    // operation configureReactronic(options: Partial<MemberOptions>): MemberOptions
   }
 
   // BlockNode
 
-  #js.ВнешняяРеализация(модуль = "verstak")
-  type BlockNode<T, M = Nothing, C = Nothing, R = Nothing> = aspect
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type BlockNode<T, M = Empty, C = Empty, R = Empty> = aspect
   {
     guarded
     {
@@ -160,7 +160,7 @@ external
 
       driver: Driver<T>
 
-      builder: Readonly<BlockBuilder<T, M, C, R>>
+      builder: BlockBuilder<T, M, C, R>
 
       level: Number
 
@@ -168,9 +168,9 @@ external
 
       host: Block
 
-      children: CollectionReader<Block>
+      // children: CollectionReader<Block>
 
-      ties: Item<Block>?
+      // ties: Item<Block>?
 
       stamp: Number
 
@@ -182,7 +182,7 @@ external
 
   // BlockCtx
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type BlockCtx<T = Object> = aspect
   {
     value: T
@@ -190,7 +190,7 @@ external
 
   // Driver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type Driver<T, C> = aspect
   {
     guarded
@@ -243,7 +243,7 @@ external
 
   // Other
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type BlockCoords = aspect
   {
     x1: Number
@@ -255,7 +255,7 @@ external
     y2: Number
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type ElasticSize = aspect
   {
     cells: Number
@@ -267,12 +267,12 @@ external
     growth: Number
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type TrackSize = aspect
   {
     track: Object /*(!) Text | Number*/
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type BlockArea = Object? /*(!) empty | Text | object { cellsOverWidth: Number; cellsOverHeight: Number }*/
 }

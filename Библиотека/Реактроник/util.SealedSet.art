@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // SealedSet
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type SealedSet<T> = /*(!) abstract */ object
     Set<T>, Sealed<Set<T>>
   {

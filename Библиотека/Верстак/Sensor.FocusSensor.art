@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // FocusModel
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type FocusModel = aspect
   {
     isEditMode: YesNo
@@ -17,7 +17,7 @@ external
 
   // ContextModel
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type ContextModel = aspect
   {
     contextToggle: ToggleRef
@@ -29,7 +29,7 @@ external
 
   // FocusSensor
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type FocusSensor = object HtmlElementSensor
   {
     activeData: Object?

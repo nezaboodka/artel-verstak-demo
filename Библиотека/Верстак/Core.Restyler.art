@@ -1,12 +1,12 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation restyler<T>(restyle: operation(): T): ObservablesStyles<T>
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type ObservablesStyles<T> = object
   {
     on create(restyle: operation(): T)

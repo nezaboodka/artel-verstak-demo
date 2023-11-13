@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // MvccArray
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   hidden
   type MvccArray<T> = object MvccObject
   {
@@ -21,16 +21,16 @@ external
 
     operation pop(): T?
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation push(items: List<T>): Число
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation concat(items: List<T>): List<T>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation concat(items: List<ConcatArray<T>>): List<T>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation concat(items: List<ConcatArray<T>>): List<T>
 
     operation join(separator: Text? = empty): Text
@@ -45,13 +45,13 @@ external
 
     operation splice(start: Число, deleteCount: Число? = empty): List<T>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation unshift(items: List<T>): Число
 
     operation includes(searchElement: T, fromIndex: Число? = empty): YesNo
@@ -118,7 +118,7 @@ external
 
   // TransactionalArray
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type TransactionalArray<T> = object MvccArray<T>
   {
     on create()
@@ -127,7 +127,7 @@ external
 
     on create(arrayLength: Число? = empty)
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(items: List<T>)
 
     on create(args: Object? = empty)
@@ -135,7 +135,7 @@ external
 
   // ObservableArray
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type ObservableArray<T> = object MvccArray<T>
   {
     on create()
@@ -144,7 +144,7 @@ external
 
     on create(arrayLength: Число? = empty)
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(items: List<T>)
 
     on create(args: Object? = empty)

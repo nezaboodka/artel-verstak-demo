@@ -1,20 +1,20 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation parseBlockCoords(text: Text, buffer: BlockCoords): BlockCoords
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation emitBlockCoords(value: BlockCoords): Text
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation emitLetters(n: Integer): Text
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation emitCellPosition(x: Integer, y: Integer): Text
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   operation equalBlockCoords(a: BlockCoords, b: BlockCoords): YesNo
 }

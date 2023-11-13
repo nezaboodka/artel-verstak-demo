@@ -1,9 +1,9 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type DataForSensor = aspect
   {
     context: Object?
@@ -36,19 +36,19 @@ external
 
   конст
   {
-    #js.ВнешняяРеализация(модуль = "verstak")
+    #JS.ВнешняяРеализация(модуль = "verstak")
     SymDataForSensor: unique /*(!) = Symbol("DataForSensor") */
 
-    #js.ВнешняяРеализация(модуль = "verstak")
+    #JS.ВнешняяРеализация(модуль = "verstak")
     SymResizeObserver: unique /*(!) = Symbol("ResizeObserver") */
 
-    #js.ВнешняяРеализация(модуль = "verstak")
+    #JS.ВнешняяРеализация(модуль = "verstak")
     EmptyDataArray: List<Object> /*(!) = [] */
   }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   операция findTargetElementData(targetPath: List<Object>, underPointer: List<Object>, sym: Symbol, anyOfPayloadKeys: Array</*(!) any */ Object>, ignoreWindow: YesNo = нет): object { data: DataForSensor?; window: Object? }
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   операция grabElementDataList(targetPath: List<Object>, sym: Symbol, payloadKey: Object?, existing: Array<Object?>, ignoreWindow: YesNo = нет, predicate: операция(element: Object): YesNo = { return no } ): object { dataList: Array<Object?>; window: Object?; activeData: Object? }
 }

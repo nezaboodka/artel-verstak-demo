@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // Snapshot
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Changeset = object AbstractChangeset
   {
     global
@@ -106,7 +106,7 @@ external
 
   //// Dump
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Dump = object
   {
     global

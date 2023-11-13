@@ -1,5 +1,5 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
@@ -7,7 +7,7 @@ external
 
   // Transaction
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Transaction = /*(!) abstract */ object Worker
   {
     guarded /*(!) abstract */
@@ -31,7 +31,7 @@ external
     // /*(!) abstract */ 
     // operation run<T>(func: F<T>, args: Array<Object?>): T
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     /*(!) abstract */ 
     operation inspect<T>(func: F<T>, args: Array<Object?>): T
 
@@ -60,15 +60,15 @@ external
     global 
     operation create(options: SnapshotOptions?): Transaction
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     global 
     operation run<T>(options: SnapshotOptions?, func: operation (): T, args: Array<Object?>): T
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     global 
     operation separate<T>(func: F<T>, args: Array<Object?>): T
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     global 
     operation outside<T>(func: F<T>, args: Array<Object?>): T
 

@@ -1,17 +1,17 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // BaseHtmlDriver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
   {
 
-    operation create(block: Block<T, Object?, C, Nothing>, b: object { native: T?; controller: C? })
+    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C? })
 
-    operation initialize(block: Block<T, Object?, C, Nothing>)
+    operation initialize(block: Block<T, Object?, C, Empty>)
 
     operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
 
@@ -34,17 +34,17 @@ external
 
   // HtmlDriver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type HtmlDriver<T = HTMLElement, C> = object BaseHtmlDriver<T, C>
   {
-    operation create(block: Block<T, Object?, C, Nothing>, b: object { native: T?; controller: C?})
+    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C?})
   }
 
   // SvgDriver
 
-  #js.ВнешняяРеализация(модуль = "verstak")
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type SvgDriver<T = SVGElement, C> = object BaseHtmlDriver<T, C>
   {
-    operation create(block: Block<T, Object?, C, Nothing>, b: object { native: T?; controller: C? })
+    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C? })
   }
 }

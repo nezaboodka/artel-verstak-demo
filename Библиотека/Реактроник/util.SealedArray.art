@@ -1,7 +1,7 @@
-import Artel
+
 import js = Artel.JavaScript
 
-type Comparer = operation(a: T, b: T): Integer
+type Comparer<T> = operation(a: T, b: T): Integer
 
 external
 {

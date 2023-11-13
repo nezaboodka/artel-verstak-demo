@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // MvccMap
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   hidden
   type MvccMap<K, V> = object MvccObject
   {
@@ -41,7 +41,7 @@ external
 
   // TransactionalMap
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type TransactionalMap<K, V> = object MvccMap<K, V>
   {
     on create()

@@ -1,4 +1,3 @@
-подключить Артель
 
 операция Страница(
   перестроить: Обработчик<ВебЭлемент>? = пусто)
@@ -14,10 +13,10 @@
 
 операция Секция(
   режим: Режим? = пусто,
-  перестроить: Обработчик<ВебЭлемент, Nothing, Nothing, Nothing>? = пусто)
-  : Block<HTMLElement, Nothing, Nothing, Nothing>
+  перестроить: Обработчик<ВебЭлемент, Empty, Empty, Empty>? = пусто)
+  : Block<HTMLElement, Empty, Empty, Empty>
 {
-  результат = Section<Nothing, Nothing>([mode = режим, rebuild = перестроить])
+  результат = Section<Empty, Empty>([mode = режим, rebuild = перестроить])
 }
 
 псевдонимы(русский)

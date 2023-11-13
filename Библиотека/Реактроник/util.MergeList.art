@@ -1,5 +1,5 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 type MergeListResolution = aspect
 {
@@ -10,12 +10,12 @@ external
 {
   // GetMergeItemKey
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type GetMergeItemKey<T> = operation(item: T): Text?
 
   // MergeListReader
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeListReader<T> = aspect
   {
     guarded
@@ -67,7 +67,7 @@ external
 
   // MergeItem
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeItem<T> = aspect
   {
     guarded
@@ -82,7 +82,7 @@ external
 
   // MergeList
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeList<T> = object MergeListReader<T>
   {
     guarded

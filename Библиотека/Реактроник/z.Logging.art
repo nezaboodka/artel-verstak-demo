@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // LoggingOptions
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type LoggingOptions = aspect
   {
     guarded
@@ -46,7 +46,7 @@ external
 
   // ProfilingOptions
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type ProfilingOptions = aspect
   {
     repetitiveUsageWarningThreshold: Integer
@@ -60,7 +60,7 @@ external
 
   // LoggingLevel
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   конст LoggingLevel: aspect
   {
     guarded

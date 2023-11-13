@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // SealedMap
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type SealedMap<K, V> = /*(!) abstract */ object Map<K, V>, Sealed<Map<K, V>>
   {
   }

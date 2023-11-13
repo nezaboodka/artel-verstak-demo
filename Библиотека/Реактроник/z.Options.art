@@ -1,11 +1,11 @@
-import Artel
-import js = Artel.JavaScript
+
+import JS = Artel.JavaScript
 
 external
 {
   // SnapshotOptions
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type SnapshotOptions = aspect
   {
     guarded
@@ -14,7 +14,7 @@ external
 
       separation: SeparationMode
 
-      journal: Journal
+      //journal: Journal
 
       logging: LoggingOptions
 
@@ -24,7 +24,7 @@ external
 
   // MemberOptions
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MemberOptions = aspect
   {
     guarded
@@ -43,7 +43,7 @@ external
 
       reentrance: Reentrance
 
-      journal: Journal?
+      //journal: Journal?
 
       monitor: Monitor?
 
@@ -53,7 +53,7 @@ external
 
   // Kind
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Kind = variant
   {
     Plain = 0
@@ -64,7 +64,7 @@ external
 
   // Reentrance
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
+  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Reentrance = variant
   {
     PreventWithError = 1
