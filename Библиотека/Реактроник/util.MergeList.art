@@ -49,11 +49,11 @@ external
 
     operation lastClaimedItem(): MergeItem<T>?
 
-    operation items(): Generator<MergeItem<T>>
+    operation items(): Enumerable<MergeItem<T>>
 
-    operation addedItems(reset: YesNo? /*(!)= empty*/): Generator<MergeItem<T>>
+    operation addedItems(reset: YesNo? /*(!)= empty*/): Enumerable<MergeItem<T>>
 
-    operation removedItems(reset: YesNo? /*(!)= empty*/): Generator<MergeItem<T>>
+    operation removedItems(reset: YesNo? /*(!)= empty*/): Enumerable<MergeItem<T>>
 
     operation isAdded(item: MergeItem<T>): YesNo
 
@@ -86,9 +86,9 @@ external
   type MergeList<T> = object MergeListReader<T>
   {
     guarded
-    getKey: GetItemKey<T>
+    getKey: GetMergeItemKey<T>
 
-    on create(getKey: GetItemKey<T>, strict: YesNo = no)
+    on create(getKey: GetMergeItemKey<T>, strict: YesNo = no)
 
     operation lookup(key: Text?): MergeItem<T>?
 
@@ -108,11 +108,11 @@ external
 
     operation lastClaimedItem(): MergeItem<T>?
 
-    operation items(): Generator<MergeItem<T>>
+    operation items(): Enumerable<MergeItem<T>>
 
-    operation addedItems(reset: YesNo? = empty): Generator<MergeItem<T>>
+    operation addedItems(reset: YesNo? = empty): Enumerable<MergeItem<T>>
 
-    operation removedItems(reset: YesNo? = empty): Generator<MergeItem<T>>
+    operation removedItems(reset: YesNo? = empty): Enumerable<MergeItem<T>>
 
     operation isAdded(item: MergeItem<T>): YesNo
 

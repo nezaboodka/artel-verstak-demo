@@ -120,10 +120,10 @@ external
 
     hint: Text
 
-    при создании(data: Object?, proxy: Object?, handler: ProxyHandler<ObjectHandle>, head: ObjectSnapshot, hint: Text)
+    // при создании(data: Object?, proxy: Object?, handler: ProxyHandler<ObjectHandle>, head: ObjectSnapshot, hint: Text)
 
-    глобальный 
-    операция getHint(obj: Object, full: YesNo): Text?
+    static 
+    operation getHint(obj: Object, full: YesNo): Text?
   }
 
   // PatchSet & ObjectPatch

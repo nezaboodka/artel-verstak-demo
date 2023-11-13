@@ -27,9 +27,9 @@ external
 
       operation rebuildNestedTreesThenDo(action: operation(err: Object?))
 
-      operation getDefaultLoggingOptions(): LoggingOptions?
+      // operation getDefaultLoggingOptions(): LoggingOptions?
 
-      operation setDefaultLoggingOptions(logging: LoggingOptions?)
+      // operation setDefaultLoggingOptions(logging: LoggingOptions?)
     }
 
   }
