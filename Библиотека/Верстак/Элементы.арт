@@ -3,7 +3,7 @@
   перестроить: Обработчик<ВебЭлемент>? = пусто)
   : Block<HTMLElement>
 {
-  результат = HtmlBody([mode = пусто, rebuild = перестроить])
+  результат = HtmlBody([mode = пусто, update = перестроить])
 }
 
 операция Надпись(текст: Текст): Block<HTMLElement>
@@ -16,7 +16,7 @@
   перестроить: Обработчик<ВебЭлемент, Empty, Empty, Empty>? = пусто)
   : Block<HTMLElement, Empty, Empty, Empty>
 {
-  результат = Section<Empty, Empty>([mode = режим, rebuild = перестроить])
+  результат = Section<Empty, Empty>([mode = режим, update = перестроить])
 }
 
 псевдонимы(русский)
@@ -26,7 +26,7 @@
   тип Режим = Mode
   {
     Стандартный = Default
-    ТочечноеПерестроение = PinpointRebuild
+    ТочечноеОбновление = PinpointUpdate
     РучноеВстраивание = ManualMount
   }
 
@@ -65,7 +65,7 @@
 
     это-есть-таблица = isTable
 
-    начальное-перестроение = isInitialRebuild
+    начальное-перестроение = isInitialUpdate
 
     модель = model
 
@@ -95,7 +95,7 @@
 
     всплывающий-элемент = overlayVisible
 
-    приоритет-перестроения = rebuildPriority
+    приоритет-перестроения = updatePriority
 
     перетасовка-элементов = childrenShuffling
 

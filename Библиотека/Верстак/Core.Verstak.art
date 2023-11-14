@@ -17,15 +17,15 @@ external
         block: Block
       }
 
-      currentRebuildPriority: Integer
+      currentUpdatePriority: Integer
 
       frameDuration: Integer
 
       operation claim<T, M, C, R>(driver: Driver<T>, builder: BlockBuilder<T, M, C, R>?, base: BlockBuilder<T, M, C, R>?): Block<T, M, C, R>
 
-      operation triggerRebuild(block: Block<Object, Object, Object, Empty>, triggers: Object?)
+      operation triggerUpdate(block: Block<Object, Object, Object, Empty>, triggers: Object?)
 
-      operation rebuildNestedTreesThenDo(action: operation(err: Object?))
+      operation updateNestedTreesThenDo(action: operation(err: Object?))
 
       // operation getDefaultLoggingOptions(): LoggingOptions?
 
@@ -52,7 +52,7 @@ external
 
     operation mount(block: Block<T, Object?, C>)
 
-    operation rebuild(block: Block<T, Object?, C>)
+    operation update(block: Block<T, Object?, C>)
 
     operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
 

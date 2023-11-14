@@ -19,7 +19,7 @@ external
 
     operation relocate(block: Block<T, Object?, C>)
 
-    operation rebuild(block: Block<T, Object?, C>)
+    operation update(block: Block<T, Object?, C>)
 
     global
     {

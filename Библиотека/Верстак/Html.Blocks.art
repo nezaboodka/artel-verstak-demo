@@ -59,6 +59,6 @@ external
 
     operation applyStyle(block: Block<T, Object, Object>, secondary: YesNo, styleName: Text, enabled: YesNo?)
 
-    operation rebuild(block: Block<T>)
+    operation update(block: Block<T>)
   }
 }
