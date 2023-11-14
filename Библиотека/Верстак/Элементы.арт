@@ -59,7 +59,7 @@
   {
     узел = node
 
-    базис = native
+    html = native
 
     это-есть-секция = isSection
 
