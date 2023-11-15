@@ -4107,8 +4107,6 @@ external
     maxChannelCount: Number
 
     prototype: AudioDestinationNode
-    
-    on create()
   }
 
 
@@ -4121,8 +4119,6 @@ external
   type AudioListener = object
   {
     prototype: AudioListener
-    
-    on create()
   }
 
 
@@ -4305,7 +4301,7 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AuthenticatorAssertionResponse)
   */
 
-  type AuthenticatorAssertionResponse = aspect AuthenticatorResponse
+  type AuthenticatorAssertionResponse = object AuthenticatorResponse
   {
     guarded
     authenticatorData: ArrayBuffer
@@ -4315,20 +4311,23 @@ external
 
     guarded
     userHandle: ArrayBuffer?
+
+    prototype: AuthenticatorAssertionResponse
+
+    on create()
   }
-
-
-  /*(!) var */ AuthenticatorAssertionResponse: object { prototype: AuthenticatorAssertionResponse; on create(): AuthenticatorAssertionResponse }
 
 
   /**
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AuthenticatorAttestationResponse)
   */
 
-  type AuthenticatorAttestationResponse = aspect AuthenticatorResponse
+  type AuthenticatorAttestationResponse = object AuthenticatorResponse
   {
     guarded
     attestationObject: ArrayBuffer
+
+    prototype: AuthenticatorAttestationResponse
 
     operation getAuthenticatorData(): ArrayBuffer
 
@@ -4340,21 +4339,17 @@ external
   }
 
 
-  /*(!) var */ AuthenticatorAttestationResponse: object { prototype: AuthenticatorAttestationResponse; on create(): AuthenticatorAttestationResponse }
-
-
   /**
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AuthenticatorResponse)
   */
 
-  type AuthenticatorResponse = aspect
+  type AuthenticatorResponse = object
   {
     guarded
     clientDataJSON: ArrayBuffer
+
+    prototype: AuthenticatorResponse
   }
-
-
-  /*(!) var */ AuthenticatorResponse: object { prototype: AuthenticatorResponse; on create(): AuthenticatorResponse }
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/BarProp) */
@@ -4363,10 +4358,9 @@ external
   {
     guarded
     visible: YesNo
+
+    prototype: BarProp
   }
-
-
-  /*(!) var */ BarProp: object { prototype: BarProp; on create(): BarProp }
 
 
   type BaseAudioContextEventMap = aspect
@@ -4377,8 +4371,10 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/BaseAudioContext) */
 
-  type BaseAudioContext = aspect EventTarget
+  type BaseAudioContext = object EventTarget
   {
+    prototype: BaseAudioContext
+
     operation addEventListener<K = /*(!) keyof BaseAudioContextEventMap */ Object?>(type`: K, listener: operation(this: BaseAudioContext, ev: /*(!) BaseAudioContextEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)ДаНет | AddEventListenerOptions | пусто*/ = empty)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)ДаНет | AddEventListenerOptions | пусто*/ = empty)
@@ -4389,22 +4385,18 @@ external
   }
 
 
-  /*(!) var */ BaseAudioContext: object { prototype: BaseAudioContext; on create(): BaseAudioContext }
-
-
   /**
   * The beforeunload event is fired when the window, the document and its resources are about to be unloaded.
   *
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/BeforeUnloadEvent)
   */
 
-  type BeforeUnloadEvent = aspect Event
+  type BeforeUnloadEvent = object Event
   {
     returnValue: /*(!) any */ Object?
+
+    prototype: BeforeUnloadEvent
   }
-
-
-  /*(!) var */ BeforeUnloadEvent: object { prototype: BeforeUnloadEvent; on create(): BeforeUnloadEvent }
 
 
   /**
@@ -4413,7 +4405,7 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/BiquadFilterNode)
   */
 
-  type BiquadFilterNode = aspect AudioNode
+  type BiquadFilterNode = object AudioNode
   {
     guarded
     Q: AudioParam
@@ -4429,11 +4421,12 @@ external
 
     type`: BiquadFilterType
 
+    prototype: BiquadFilterNode
+
+    on create(context: BaseAudioContext, options: BiquadFilterOptions? = empty)
+
     operation getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array)
   }
-
-
-  /*(!) var */ BiquadFilterNode: object { prototype: BiquadFilterNode; on create(context: BaseAudioContext, options: BiquadFilterOptions? = empty): BiquadFilterNode }
 
 
   /**
@@ -4442,13 +4435,17 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Blob)
   */
 
-  type Blob = aspect
+  type Blob = object
   {
     guarded
     size: Number
 
     guarded
     type`: Text
+
+    prototype: Blob
+    
+    on create(blobParts: Список<BlobPart>? = empty, options: BlobPropertyBag? = empty)
 
     operation arrayBuffer(): Promise<ArrayBuffer>
 
@@ -4460,22 +4457,20 @@ external
   }
 
 
-  /*(!) var */ Blob: object { prototype: Blob; on create(blobParts: Список<BlobPart>? = empty, options: BlobPropertyBag? = empty): Blob }
-
-
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/BlobEvent) */
 
-  type BlobEvent = aspect Event
+  type BlobEvent = object Event
   {
     guarded
     data: Blob
 
     guarded
     timecode: DOMHighResTimeStamp
+
+    prototype: BlobEvent
+
+    on create(type`: Text, eventInitDict: BlobEventInit)
   }
-
-
-  /*(!) var */ BlobEvent: object { prototype: BlobEvent; on create(type`: Text, eventInitDict: BlobEventInit): BlobEvent }
 
 
   type Body = aspect
@@ -4508,7 +4503,7 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/BroadcastChannel) */
 
-  type BroadcastChannel = aspect EventTarget
+  type BroadcastChannel = object EventTarget
   {
     guarded
     name: Text
@@ -4516,6 +4511,10 @@ external
     onmessage: (operation(this: BroadcastChannel, ev: MessageEvent): /*(!) any */ Object?)?
 
     onmessageerror: (operation(this: BroadcastChannel, ev: MessageEvent): /*(!) any */ Object?)?
+
+    prototype: BroadcastChannel
+
+    on create(name: Text)
 
     operation close()
 
@@ -4531,26 +4530,24 @@ external
   }
 
 
-  /*(!) var */ BroadcastChannel: object { prototype: BroadcastChannel; on create(name: Text): BroadcastChannel }
-
-
   /**
   * This Streams API interface provides a built-in byte length queuing strategy that can be used when constructing streams.
   *
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/ByteLengthQueuingStrategy)
   */
 
-  type ByteLengthQueuingStrategy = aspect QueuingStrategy<ArrayBufferView>
+  type ByteLengthQueuingStrategy = object QueuingStrategy<ArrayBufferView>
   {
     guarded
     highWaterMark: Number
 
     guarded
     size: QueuingStrategySize<ArrayBufferView>
+
+    prototype: ByteLengthQueuingStrategy
+
+    on create(init: QueuingStrategyInit)
   }
-
-
-  /*(!) var */ ByteLengthQueuingStrategy: object { prototype: ByteLengthQueuingStrategy; on create(init: QueuingStrategyInit): ByteLengthQueuingStrategy }
 
 
   /**
@@ -4559,21 +4556,20 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/CDATASection)
   */
 
-  type CDATASection = aspect Text
+  type CDATASection = object Text
   {
-
+    prototype: CDATASection
   }
-
-
-  /*(!) var */ CDATASection: object { prototype: CDATASection; on create(): CDATASection }
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSAnimation) */
 
-  type CSSAnimation = aspect Animation
+  type CSSAnimation = object Animation
   {
     guarded
     animationName: Text
+
+    prototype: CSSAnimation
 
     operation addEventListener<K = /*(!) keyof AnimationEventMap */ Object?>(type`: K, listener: operation(this: CSSAnimation, ev: /*(!) AnimationEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)ДаНет | AddEventListenerOptions | пусто*/ = empty)
 
@@ -4583,9 +4579,6 @@ external
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)ДаНет | EventListenerOptions | пусто*/ = empty)
   }
-
-
-  /*(!) var */ CSSAnimation: object { prototype: CSSAnimation; on create(): CSSAnimation }
 
 
   /**
