@@ -6,7 +6,7 @@ external
   // SealedMap
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  type SealedMap<K, V> = /*(!) abstract */ object Map<K, V>, Sealed<Map<K, V>>
+  type SealedMap<K, V> = /*(!) abstract */ object Map<K, V> //, Sealed<Map<K, V>>
   {
   }
 }

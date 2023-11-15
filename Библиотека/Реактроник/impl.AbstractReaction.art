@@ -12,7 +12,7 @@ external
     {
       options: MemberOptions
 
-      args: ReadonlyArray<Object?>
+      args: Array<Object?>
 
       result`: T
 
@@ -24,7 +24,7 @@ external
     }
 
     /*(!) abstract */ 
-    operation configure(options: Partial<MemberOptions>): MemberOptions
+    operation configure(options: MemberOptions): MemberOptions
 
     /*(!) abstract */ 
     operation markObsolete()

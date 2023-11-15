@@ -25,9 +25,9 @@ external
 
     // operation entries(): IterableIterator<Object { _0: K, _1: V }>
 
-    operation keys(): IterableIterator<K>
+    // operation keys(): IterableIterator<K>
 
-    operation values(): IterableIterator<V>
+    // operation values(): IterableIterator<V>
 
     // operation [Symbol.toStringTag](): Текст
 

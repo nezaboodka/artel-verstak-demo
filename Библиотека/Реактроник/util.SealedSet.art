@@ -6,8 +6,7 @@ external
   // SealedSet
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  type SealedSet<T> = /*(!) abstract */ object
-    Set<T>, Sealed<Set<T>>
+  type SealedSet<T> = /*(!) abstract */ object Set<T> //, Sealed<Set<T>>
   {
   }
 }

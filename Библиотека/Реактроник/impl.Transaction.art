@@ -55,28 +55,29 @@ external
     }
 
     parallel
-    operation whenFinished(): Promise<Empty>
+    operation whenFinished()
 
-    global 
+    static
     operation create(options: SnapshotOptions?): Transaction
 
     #JS.МассивПараметров
-    global 
+    static
     operation run<T>(options: SnapshotOptions?, func: operation (): T, args: Array<Object?>): T
 
     #JS.МассивПараметров
-    global 
+    static
     operation separate<T>(func: F<T>, args: Array<Object?>): T
 
     #JS.МассивПараметров
-    global 
+    static
     operation outside<T>(func: F<T>, args: Array<Object?>): T
 
-    global 
+    static
     operation isFrameOver(everyN: Integer = 1, timeLimit: Integer = 10): YesNo
 
-    global 
-    operation requestNextFrame(sleepTime: Integer = 0): Promise<Nothing>
+    static
+    parallel
+    operation requestNextFrame(sleepTime: Integer = 0)
 
     guarded
     {

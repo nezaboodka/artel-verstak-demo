@@ -8,7 +8,7 @@ external
   // SealedArray
 
   #js.ВнешняяРеализация(модуль = "reactronic")
-  type SealedArray<T> = /*(!) abstract */ object Array<T>, Sealed<Array<T>>
+  type SealedArray<T> = /*(!) abstract */ object Array<T> //, Sealed<Array<T>>
   {
   }
 }

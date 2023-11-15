@@ -3,11 +3,11 @@ import JS = Artel.JavaScript
 
 external
 {
-  #JS.ВнешняяРеализация(модуль = "reactronic")
-  parallel
-  operation all(promises: Array<Promise<Object?>>): Promise<List<Object?>>
+  // #JS.ВнешняяРеализация(модуль = "reactronic")
+  // parallel
+  // operation all(promises: Array<JS.Promise<Object?>>): JS.Promise<List<Object?>>
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   parallel
-  operation pause<T>(timeout: Integer): Promise<T>
+  operation pause(timeout: Integer)
 }

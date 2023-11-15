@@ -27,11 +27,11 @@ external
     #JS.МассивПараметров
     operation concat(items: List<T>): List<T>
 
-    #JS.МассивПараметров
-    operation concat(items: List<ConcatArray<T>>): List<T>
+    // #JS.МассивПараметров
+    // operation concat(items: List<ConcatArray<T>>): List<T>
 
-    #JS.МассивПараметров
-    operation concat(items: List<ConcatArray<T>>): List<T>
+    // #JS.МассивПараметров
+    // operation concat(items: List<ConcatArray<T>>): List<T>
 
     operation join(separator: Text? = empty): Text
 
@@ -94,7 +94,7 @@ external
 
     operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
 
-    operation find<S = T>(predicate: operation(this: Ничего, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
+    operation find<S = T>(predicate: operation(this: Empty, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
 
     operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Число
 
@@ -106,9 +106,9 @@ external
 
     // operation entries(): IterableIterator<Object { _0: Число, _1: T }>
 
-    operation keys(): IterableIterator<Integer>
+    // operation keys(): IterableIterator<Integer>
 
-    operation values(): IterableIterator<T>
+    // operation values(): IterableIterator<T>
 
     length: Integer
 
