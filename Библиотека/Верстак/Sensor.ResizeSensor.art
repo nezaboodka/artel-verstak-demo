@@ -1,21 +1,22 @@
 
 import JS = Artel.JavaScript
+import Библиотека.HTML
 
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ResizedElement = aspect
   {
-    guarded
-    {
-      borderBoxSize: ReadonlyArray<ResizeObserverSize>
+    // guarded
+    // {
+    //   borderBoxSize: ReadonlyArray<ResizeObserverSize>
 
-      contentBoxSize: ReadonlyArray<ResizeObserverSize>
+    //   contentBoxSize: ReadonlyArray<ResizeObserverSize>
 
-      contentRect: DOMRectReadOnly
+    //   contentRect: DOMRectReadOnly
 
-      resizeData: Объект
-    }
+    //   resizeData: Объект
+    // }
   }
 
   #JS.ВнешняяРеализация(модуль = "verstak")
@@ -27,15 +28,15 @@ external
 
     operation reset()
 
-    operation observeResizing(block: Block<Объект, Объект, Объект>, value: YesNo, boxSizing: ResizeObserverBoxOptions /*(!)= "content-box"*/)
+    // operation observeResizing(block: Block<Объект, Объект, Объект>, value: YesNo, boxSizing: ResizeObserverBoxOptions /*(!)= "content-box"*/)
 
-    hidden by type
-    {
-      operation onResize(entries: List<ResizeObserverEntry>)
+    // hidden by type
+    // {
+    //   operation onResize(entries: List<ResizeObserverEntry>)
 
-      operation resize(entries: List<ResizeObserverEntry>)
+    //   operation resize(entries: List<ResizeObserverEntry>)
 
-      operation doReset()
-    }
+    //   operation doReset()
+    // }
   }
 }

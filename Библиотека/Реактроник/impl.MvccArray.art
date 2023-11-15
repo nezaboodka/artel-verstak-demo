@@ -68,7 +68,7 @@ external
 
     operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
 
-    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): Ничего, thisArg: /*(!) any */ Object? = empty)
+    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): Empty, thisArg: /*(!) any */ Object? = empty)
 
     operation map<U>(callbackfn: operation(value: T, index: Число, array: List<T>): U, thisArg: /*(!) any */ Object? = empty): List<U>
 

@@ -1,5 +1,6 @@
 
 import JS = Artel.JavaScript
+import Библиотека.HTML
 
 external
 {
@@ -20,7 +21,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ContextModel = aspect
   {
-    contextToggle: ToggleRef
+    // contextToggle: ToggleRef
 
     onContextIn: operation(focus: FocusSensor)
 

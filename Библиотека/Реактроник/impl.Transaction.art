@@ -55,7 +55,7 @@ external
     }
 
     parallel
-    operation whenFinished(): Promise<Nothing>
+    operation whenFinished(): Promise<Empty>
 
     global 
     operation create(options: SnapshotOptions?): Transaction

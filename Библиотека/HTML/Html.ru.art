@@ -1,0 +1,15 @@
+
+псевдонимы(русский)
+{
+  тип Стили = StyleSheet
+  {
+    цвет = color
+    цвет-фона = backgroundColor
+    размер-шрифта = fontSize
+  }
+
+  тип ВебЭлемент = HTMLElement
+  {
+    стили = style
+  }
+}

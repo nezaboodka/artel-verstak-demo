@@ -1,20 +1,6 @@
 
 import JS = Artel.JavaScript
 
-type StyleSheet = aspect
-{
-  color: Text
-
-  backgroundColor: Text
-
-  fontSize: Text
-}
-
-type HTMLElement = aspect
-{
-  style: StyleSheet
-}
-
 type Callback<T> = operation(native: T)
 
 type Delegate<T, M = Empty, C = Empty, R = Empty> = operation(блок: Block<T, M, C, R>, basis: operation(): R): R

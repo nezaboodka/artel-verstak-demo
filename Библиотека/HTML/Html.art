@@ -1,0 +1,235 @@
+
+type StyleSheet = aspect
+{
+  color: Text
+
+  backgroundColor: Text
+
+  fontSize: Text
+}
+
+type Element = aspect
+{
+}
+
+type HTMLElement = aspect Element
+{
+  style: StyleSheet
+}
+
+type HTMLAnchorElement = aspect HTMLElement
+{
+}
+
+type HTMLAreaElement = aspect HTMLElement
+{}
+
+
+type HTMLAudioElement = aspect HTMLElement
+{
+}
+
+type HTMLBaseElement = aspect HTMLElement
+{
+}
+
+type HTMLBodyElement = aspect HTMLElement
+{
+}
+
+type HTMLBRElement = aspect HTMLElement
+{
+}
+
+type HTMLButtonElement = aspect HTMLElement
+{
+}
+
+type HTMLCanvasElement = aspect HTMLElement
+{
+}
+
+type HTMLTableCaptionElement = aspect HTMLElement
+{
+}
+
+type HTMLTableColElement = aspect HTMLElement
+{
+}
+
+type HTMLDataElement = aspect HTMLElement
+{
+}
+
+type HTMLDataListElement = aspect HTMLElement
+{
+}
+
+type HTMLDivElement = aspect HTMLElement
+{
+}
+
+type HTMLDListElement = aspect HTMLElement
+{
+}
+
+type HTMLEmbedElement = aspect HTMLElement
+{
+}
+
+type HTMLFieldSetElement = aspect HTMLElement
+{
+}
+
+type HTMLFormElement = aspect HTMLElement
+{
+}
+
+type HTMLHeadingElement = aspect HTMLElement
+{
+}
+
+type HTMLHeadElement = aspect HTMLElement
+{
+}
+
+type HTMLHRElement = aspect HTMLElement
+{
+}
+
+type HTMLHtmlElement = aspect HTMLElement
+{
+}
+
+type HTMLIFrameElement = aspect HTMLElement
+{
+}
+
+type HTMLImageElement = aspect HTMLElement
+{
+}
+
+type HTMLInputElement = aspect HTMLElement
+{
+}
+
+type HTMLModElement = aspect HTMLElement
+{
+}
+
+type HTMLLabelElement = aspect HTMLElement
+{
+}
+
+type HTMLLegendElement = aspect HTMLElement
+{
+}
+
+type HTMLLIElement = aspect HTMLElement
+{
+}
+
+type HTMLLinkElement = aspect HTMLElement
+{
+}
+
+type HTMLMapElement = aspect HTMLElement
+{
+}
+
+type HTMLMetaElement = aspect HTMLElement
+{
+}
+
+type HTMLObjectElement = aspect HTMLElement
+{
+}
+
+type HTMLOListElement = aspect HTMLElement
+{
+}
+
+type HTMLOptGroupElement = aspect HTMLElement
+{
+}
+
+type HTMLOptionElement = aspect HTMLElement
+{
+}
+
+type HTMLParagraphElement = aspect HTMLElement
+{
+}
+
+type HTMLPreElement = aspect HTMLElement
+{
+}
+
+type HTMLProgressElement = aspect HTMLElement
+{
+}
+
+type HTMLQuoteElement = aspect HTMLElement
+{
+}
+
+type HTMLScriptElement = aspect HTMLElement
+{
+}
+
+type HTMLSelectElement = aspect HTMLElement
+{
+}
+
+type HTMLSourceElement = aspect HTMLElement
+{
+}
+
+type HTMLSpanElement = aspect HTMLElement
+{
+}
+
+type HTMLStyleElement = aspect HTMLElement
+{
+}
+
+type HTMLTableElement = aspect HTMLElement
+{
+}
+
+type HTMLTemplateElement = aspect HTMLElement
+{
+}
+
+type HTMLTableSectionElement = aspect HTMLElement
+{
+}
+
+type HTMLTableCellElement = aspect HTMLElement
+{
+}
+
+type HTMLTextAreaElement = aspect HTMLElement
+{
+}
+
+type HTMLTitleElement = aspect HTMLElement
+{
+}
+
+type HTMLTableRowElement = aspect HTMLElement
+{
+}
+
+type HTMLTrackElement = aspect HTMLElement
+{
+}
+
+type HTMLUListElement = aspect HTMLElement
+{
+}
+
+type HTMLVideoElement = aspect HTMLElement
+{
+}
+

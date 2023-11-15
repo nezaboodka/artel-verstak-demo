@@ -1,5 +1,6 @@
 
 import JS = Artel.JavaScript
+import Библиотека.HTML
 
 external
 {
@@ -8,5 +9,5 @@ external
     key: Text,
     target: HTMLElement,
     model: FocusModel,
-    switchEditMode: операция(model: FocusModel?): Nothing? /*(!)= empty*/)
+    switchEditMode: операция(model: FocusModel?): Empty? /*(!)= empty*/)
 }

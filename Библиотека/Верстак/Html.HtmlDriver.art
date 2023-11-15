@@ -1,5 +1,7 @@
 
 import JS = Artel.JavaScript
+import Библиотека.HTML
+import Библиотека.Реактроник
 
 external
 {
@@ -27,7 +29,7 @@ external
 
       operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<HTMLElement /*(!)| SVGElement*/>
 
-      operation findPrevSiblingHtmlBlock(ties: Item<Block<Object>>): Item<Block<HTMLElement /*(!)| SVGElement*/>>?
+      operation findPrevSiblingHtmlBlock(ties: MergeItem<Block<Object>>): MergeItem<Block<HTMLElement /*(!)| SVGElement*/>>?
     }
 
   }

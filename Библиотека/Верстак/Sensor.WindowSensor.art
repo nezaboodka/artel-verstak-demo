@@ -6,7 +6,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type WindowModel = aspect
   {
-    popupToggle: ToggleRef
+    // popupToggle: ToggleRef
   }
 
   #JS.ВнешняяРеализация(модуль = "verstak")
