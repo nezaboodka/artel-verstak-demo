@@ -3540,7 +3540,6 @@ external
 
   // type NodeFilter = Object? /*(!)operation(node: Node): Number | объект { operation acceptNode(node: Node): Number }*/
 
-  external
   NodeFilter: object
   {
     guarded FILTER_ACCEPT = 1
@@ -3669,7 +3668,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AbortController)
   */
 
-  external
   type AbortController = object
   {
     guarded
@@ -3695,7 +3693,6 @@ external
 
   type AbortSignalOnAbort = operation(this: AbortSignal, ev: Event): /*(!) any */ Object?
 
-  external
   type AbortSignal = object EventTarget
   {
     prototype: AbortSignal
@@ -3728,7 +3725,6 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AbstractRange) */
 
-  external
   type AbstractRange = object
   {
     guarded
@@ -3779,7 +3775,6 @@ external
   */
 
 
-  external
   type AnalyserNode = object AudioNode
   {
     prototype: AnalyserNode
@@ -3830,7 +3825,6 @@ external
   type AnimationOnCancelOrFinish = operation(this: Animation, ev: AnimationPlaybackEvent): /*(!) any */ Object?
   type AnimationOnRemove = operation(this: Animation, ev: Event): /*(!) any */ Object?
 
-  external
   type Animation = object EventTarget
   {
     prototype: Animation
@@ -3898,7 +3892,6 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationEffect) */
 
-  external
   type AnimationEffect = object
   {
     prototype: AnimationEffect
@@ -3919,7 +3912,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationEvent)
   */
 
-  external
   type AnimationEvent = object Event
   {
     guarded
@@ -3947,7 +3939,6 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationPlaybackEvent) */
 
-  external
   type AnimationPlaybackEvent = object Event
   {
     guarded
@@ -3964,7 +3955,6 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) */
 
-  external
   type AnimationTimeline = object
   {
     guarded
@@ -3982,7 +3972,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Attr)
   */
 
-  external
   type Attr = object Node
   {
     guarded
@@ -4000,7 +3989,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AudioBuffer)
   */
 
-  external
   type AudioBuffer = object
   {
     guarded
@@ -4033,7 +4021,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AudioBufferSourceNode)
   */
 
-  external
   type AudioBufferSourceNode = object AudioScheduledSourceNode
   {
     buffer: AudioBuffer?
@@ -4072,7 +4059,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AudioContext)
   */
 
-  external
   type AudioContext = object BaseAudioContext
   {
     guarded
@@ -4122,7 +4108,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioDestinationNode: object { prototype: AudioDestinationNode; on create(): AudioDestinationNode }
 
 
@@ -4138,7 +4123,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioListener: object { prototype: AudioListener; on create(): AudioListener }
 
 
@@ -4185,7 +4169,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioNode: object { prototype: AudioNode; on create(): AudioNode }
 
 
@@ -4226,7 +4209,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioParam: object { prototype: AudioParam; on create(): AudioParam }
 
 
@@ -4238,7 +4220,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioParamMap: object { prototype: AudioParamMap; on create(): AudioParamMap }
 
 
@@ -4268,7 +4249,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioScheduledSourceNode: object { prototype: AudioScheduledSourceNode; on create(): AudioScheduledSourceNode }
 
 
@@ -4284,7 +4264,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioWorklet: object { prototype: AudioWorklet; on create(): AudioWorklet }
 
 
@@ -4320,7 +4299,6 @@ external
   }
 
 
-  external
   /*(!) var */ AudioWorkletNode: object { prototype: AudioWorkletNode; on create(context: BaseAudioContext, name: Text, options: AudioWorkletNodeOptions? = empty): AudioWorkletNode }
 
 
@@ -4343,7 +4321,6 @@ external
   }
 
 
-  external
   /*(!) var */ AuthenticatorAssertionResponse: object { prototype: AuthenticatorAssertionResponse; on create(): AuthenticatorAssertionResponse }
 
 
@@ -4368,7 +4345,6 @@ external
   }
 
 
-  external
   /*(!) var */ AuthenticatorAttestationResponse: object { prototype: AuthenticatorAttestationResponse; on create(): AuthenticatorAttestationResponse }
 
 
@@ -4385,7 +4361,6 @@ external
   }
 
 
-  external
   /*(!) var */ AuthenticatorResponse: object { prototype: AuthenticatorResponse; on create(): AuthenticatorResponse }
 
 
@@ -4398,7 +4373,6 @@ external
   }
 
 
-  external
   /*(!) var */ BarProp: object { prototype: BarProp; on create(): BarProp }
 
 
@@ -4422,7 +4396,6 @@ external
   }
 
 
-  external
   /*(!) var */ BaseAudioContext: object { prototype: BaseAudioContext; on create(): BaseAudioContext }
 
 
@@ -4438,7 +4411,6 @@ external
   }
 
 
-  external
   /*(!) var */ BeforeUnloadEvent: object { prototype: BeforeUnloadEvent; on create(): BeforeUnloadEvent }
 
 
@@ -4468,7 +4440,6 @@ external
   }
 
 
-  external
   /*(!) var */ BiquadFilterNode: object { prototype: BiquadFilterNode; on create(context: BaseAudioContext, options: BiquadFilterOptions? = empty): BiquadFilterNode }
 
 
@@ -4496,7 +4467,6 @@ external
   }
 
 
-  external
   /*(!) var */ Blob: object { prototype: Blob; on create(blobParts: Список<BlobPart>? = empty, options: BlobPropertyBag? = empty): Blob }
 
 
@@ -4512,7 +4482,6 @@ external
   }
 
 
-  external
   /*(!) var */ BlobEvent: object { prototype: BlobEvent; on create(type`: Text, eventInitDict: BlobEventInit): BlobEvent }
 
 
@@ -4569,7 +4538,6 @@ external
   }
 
 
-  external
   /*(!) var */ BroadcastChannel: object { prototype: BroadcastChannel; on create(name: Text): BroadcastChannel }
 
 
@@ -4589,7 +4557,6 @@ external
   }
 
 
-  external
   /*(!) var */ ByteLengthQueuingStrategy: object { prototype: ByteLengthQueuingStrategy; on create(init: QueuingStrategyInit): ByteLengthQueuingStrategy }
 
 
@@ -4605,7 +4572,6 @@ external
   }
 
 
-  external
   /*(!) var */ CDATASection: object { prototype: CDATASection; on create(): CDATASection }
 
 
@@ -4626,7 +4592,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSAnimation: object { prototype: CSSAnimation; on create(): CSSAnimation }
 
 
@@ -4643,7 +4608,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSConditionRule: object { prototype: CSSConditionRule; on create(): CSSConditionRule }
 
 
@@ -4659,7 +4623,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSContainerRule: object { prototype: CSSContainerRule; on create(): CSSContainerRule }
 
 
@@ -4691,7 +4654,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSCounterStyleRule: object { prototype: CSSCounterStyleRule; on create(): CSSCounterStyleRule }
 
 
@@ -4704,7 +4666,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSFontFaceRule: object { prototype: CSSFontFaceRule; on create(): CSSFontFaceRule }
 
 
@@ -4716,7 +4677,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSFontFeatureValuesRule: object { prototype: CSSFontFeatureValuesRule; on create(): CSSFontFeatureValuesRule }
 
 
@@ -4738,7 +4698,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSFontPaletteValuesRule: object { prototype: CSSFontPaletteValuesRule; on create(): CSSFontPaletteValuesRule }
 
 
@@ -4759,7 +4718,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSGroupingRule: object { prototype: CSSGroupingRule; on create(): CSSGroupingRule }
 
 
@@ -4771,7 +4729,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSImageValue: object { prototype: CSSImageValue; on create(): CSSImageValue }
 
 
@@ -4793,7 +4750,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSImportRule: object { prototype: CSSImportRule; on create(): CSSImportRule }
 
 
@@ -4812,7 +4768,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSKeyframeRule: object { prototype: CSSKeyframeRule; on create(): CSSKeyframeRule }
 
 
@@ -4842,7 +4797,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSKeyframesRule: object { prototype: CSSKeyframesRule; on create(): CSSKeyframesRule }
 
 
@@ -4854,7 +4808,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSKeywordValue: object { prototype: CSSKeywordValue; on create(value: Text): CSSKeywordValue }
 
 
@@ -4867,7 +4820,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSLayerBlockRule: object { prototype: CSSLayerBlockRule; on create(): CSSLayerBlockRule }
 
 
@@ -4880,7 +4832,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSLayerStatementRule: object { prototype: CSSLayerStatementRule; on create(): CSSLayerStatementRule }
 
 
@@ -4897,7 +4848,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathClamp: object { prototype: CSSMathClamp; on create(lower: CSSNumberish, value: CSSNumberish, upper: CSSNumberish): CSSMathClamp }
 
 
@@ -4910,7 +4860,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathInvert: object { prototype: CSSMathInvert; on create(arg: CSSNumberish): CSSMathInvert }
 
 
@@ -4923,7 +4872,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathMax: object { prototype: CSSMathMax; #js.МассивПараметров on create(args: Список<CSSNumberish>): CSSMathMax }
 
 
@@ -4936,7 +4884,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathMin: object { prototype: CSSMathMin; #js.МассивПараметров on create(args: Список<CSSNumberish>): CSSMathMin }
 
 
@@ -4949,7 +4896,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathNegate: object { prototype: CSSMathNegate; on create(arg: CSSNumberish): CSSMathNegate }
 
 
@@ -4962,7 +4908,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathProduct: object { prototype: CSSMathProduct; #js.МассивПараметров on create(args: Список<CSSNumberish>): CSSMathProduct }
 
 
@@ -4975,7 +4920,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathSum: object { prototype: CSSMathSum; #js.МассивПараметров on create(args: Список<CSSNumberish>): CSSMathSum }
 
 
@@ -4988,7 +4932,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMathValue: object { prototype: CSSMathValue; on create(): CSSMathValue }
 
 
@@ -5000,7 +4943,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMatrixComponent: object { prototype: CSSMatrixComponent; on create(matrix: DOMMatrixReadOnly, options: CSSMatrixComponentOptions? = empty): CSSMatrixComponent }
 
 
@@ -5017,7 +4959,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSMediaRule: object { prototype: CSSMediaRule; on create(): CSSMediaRule }
 
 
@@ -5037,7 +4978,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSNamespaceRule: object { prototype: CSSNamespaceRule; on create(): CSSNamespaceRule }
 
 
@@ -5054,7 +4994,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSNumericArray: object { prototype: CSSNumericArray; on create(): CSSNumericArray }
 
 
@@ -5092,7 +5031,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSNumericValue: object { prototype: CSSNumericValue; on create(): CSSNumericValue; operation parse(cssText: Text): CSSNumericValue }
 
 
@@ -5111,7 +5049,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSPageRule: object { prototype: CSSPageRule; on create(): CSSPageRule }
 
 
@@ -5123,7 +5060,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSPerspective: object { prototype: CSSPerspective; on create(length: CSSPerspectiveValue): CSSPerspective }
 
 
@@ -5145,7 +5081,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSPropertyRule: object { prototype: CSSPropertyRule; on create(): CSSPropertyRule }
 
 
@@ -5163,7 +5098,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSRotate: object { prototype: CSSRotate; on create(angle: CSSNumericValue): CSSRotate; on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish, angle: CSSNumericValue): CSSRotate }
 
 
@@ -5207,7 +5141,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSRule: object { prototype: CSSRule; on create(): CSSRule; guarded STYLE_RULE: 1; guarded CHARSET_RULE: 2; guarded IMPORT_RULE: 3; guarded MEDIA_RULE: 4; guarded FONT_FACE_RULE: 5; guarded PAGE_RULE: 6; guarded NAMESPACE_RULE: 10; guarded KEYFRAMES_RULE: 7; guarded KEYFRAME_RULE: 8; guarded SUPPORTS_RULE: 12 }
 
 
@@ -5228,7 +5161,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSRuleList: object { prototype: CSSRuleList; on create(): CSSRuleList }
 
 
@@ -5244,7 +5176,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSScale: object { prototype: CSSScale; on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish? = empty): CSSScale }
 
 
@@ -5258,7 +5189,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSSkew: object { prototype: CSSSkew; on create(ax: CSSNumericValue, ay: CSSNumericValue): CSSSkew }
 
 
@@ -5270,7 +5200,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSSkewX: object { prototype: CSSSkewX; on create(ax: CSSNumericValue): CSSSkewX }
 
 
@@ -5282,7 +5211,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSSkewY: object { prototype: CSSSkewY; on create(ay: CSSNumericValue): CSSSkewY }
 
 
@@ -5354,7 +5282,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSStyleDeclaration: object { prototype: CSSStyleDeclaration; on create(): CSSStyleDeclaration }
 
 
@@ -5383,7 +5310,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSStyleRule: object { prototype: CSSStyleRule; on create(): CSSStyleRule }
 
 
@@ -5399,7 +5325,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSStyleSheet: object { prototype: CSSStyleSheet; on create(options: CSSStyleSheetInit? = empty): CSSStyleSheet }
 
 
@@ -5411,7 +5336,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSStyleValue: object { prototype: CSSStyleValue; on create(): CSSStyleValue; operation parse(property: Text, cssText: Text): CSSStyleValue; operation parseAll(property: Text, cssText: Text): Список<CSSStyleValue> }
 
 
@@ -5427,7 +5351,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSSupportsRule: object { prototype: CSSSupportsRule; on create(): CSSSupportsRule }
 
 
@@ -5443,7 +5366,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSTransformComponent: object { prototype: CSSTransformComponent; on create(): CSSTransformComponent }
 
 
@@ -5465,7 +5387,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSTransformValue: object { prototype: CSSTransformValue; on create(transforms: Список<CSSTransformComponent>): CSSTransformValue }
 
 
@@ -5486,7 +5407,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSTransition: object { prototype: CSSTransition; on create(): CSSTransition }
 
 
@@ -5502,7 +5422,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSTranslate: object { prototype: CSSTranslate; on create(x: CSSNumericValue, y: CSSNumericValue, z: CSSNumericValue? = empty): CSSTranslate }
 
 
@@ -5517,7 +5436,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSUnitValue: object { prototype: CSSUnitValue; on create(value: Number, unit: Text): CSSUnitValue }
 
 
@@ -5534,7 +5452,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSUnparsedValue: object { prototype: CSSUnparsedValue; on create(members: Список<CSSUnparsedSegment>): CSSUnparsedValue }
 
 
@@ -5549,7 +5466,6 @@ external
   }
 
 
-  external
   /*(!) var */ CSSVariableReferenceValue: object { prototype: CSSVariableReferenceValue; on create(variable: Text, fallback: CSSUnparsedValue? = empty): CSSVariableReferenceValue }
 
 
@@ -5578,7 +5494,6 @@ external
   }
 
 
-  external
   /*(!) var */ Cache: object { prototype: Cache; on create(): Cache }
 
 
@@ -5603,7 +5518,6 @@ external
   }
 
 
-  external
   /*(!) var */ CacheStorage: object { prototype: CacheStorage; on create(): CacheStorage }
 
 
@@ -5626,7 +5540,6 @@ external
   }
 
 
-  external
   /*(!) var */ CanvasCaptureMediaStreamTrack: object { prototype: CanvasCaptureMediaStreamTrack; on create(): CanvasCaptureMediaStreamTrack }
 
 
@@ -5708,7 +5621,6 @@ external
   }
 
 
-  external
   /*(!) var */ CanvasGradient: object { prototype: CanvasGradient; on create(): CanvasGradient }
 
 
@@ -5788,7 +5700,6 @@ external
   }
 
 
-  external
   /*(!) var */ CanvasPattern: object { prototype: CanvasPattern; on create(): CanvasPattern }
 
 
@@ -5817,7 +5728,6 @@ external
   }
 
 
-  external
   /*(!) var */ CanvasRenderingContext2D: object { prototype: CanvasRenderingContext2D; on create(): CanvasRenderingContext2D }
 
 
@@ -5907,7 +5817,6 @@ external
   }
 
 
-  external
   /*(!) var */ ChannelMergerNode: object { prototype: ChannelMergerNode; on create(context: BaseAudioContext, options: ChannelMergerOptions? = empty): ChannelMergerNode }
 
 
@@ -5923,7 +5832,6 @@ external
   }
 
 
-  external
   /*(!) var */ ChannelSplitterNode: object { prototype: ChannelSplitterNode; on create(context: BaseAudioContext, options: ChannelSplitterOptions? = empty): ChannelSplitterNode }
 
 
@@ -5955,7 +5863,6 @@ external
   }
 
 
-  external
   /*(!) var */ CharacterData: object { prototype: CharacterData; on create(): CharacterData }
 
 
@@ -5992,7 +5899,6 @@ external
   }
 
 
-  external
   /*(!) var */ Clipboard: object { prototype: Clipboard; on create(): Clipboard }
 
 
@@ -6009,7 +5915,6 @@ external
   }
 
 
-  external
   /*(!) var */ ClipboardEvent: object { prototype: ClipboardEvent; on create(type`: Text, eventInitDict: ClipboardEventInit? = empty): ClipboardEvent }
 
 
@@ -6028,7 +5933,6 @@ external
   }
 
 
-  external
   /*(!) var */ ClipboardItem: object { prototype: ClipboardItem; on create(items: Record<Текст, Object? /*(!)Текст | Blob | PromiseLike<Object? /*(!)Текст | Blob*/>*/>, options: ClipboardItemOptions? = empty): ClipboardItem }
 
 
@@ -6051,7 +5955,6 @@ external
   }
 
 
-  external
   /*(!) var */ CloseEvent: object { prototype: CloseEvent; on create(type`: Text, eventInitDict: CloseEventInit? = empty): CloseEvent }
 
 
@@ -6067,7 +5970,6 @@ external
   }
 
 
-  external
   /*(!) var */ Comment: object { prototype: Comment; on create(data: Text? = empty): Comment }
 
 
@@ -6083,7 +5985,6 @@ external
   }
 
 
-  external
   /*(!) var */ CompositionEvent: object { prototype: CompositionEvent; on create(type`: Text, eventInitDict: CompositionEventInit? = empty): CompositionEvent }
 
 
@@ -6095,7 +5996,6 @@ external
   }
 
 
-  external
   /*(!) var */ CompressionStream: object { prototype: CompressionStream; on create(format: CompressionFormat): CompressionStream }
 
 
@@ -6116,7 +6016,6 @@ external
   }
 
 
-  external
   /*(!) var */ ConstantSourceNode: object { prototype: ConstantSourceNode; on create(context: BaseAudioContext, options: ConstantSourceOptions? = empty): ConstantSourceNode }
 
 
@@ -6134,7 +6033,6 @@ external
   }
 
 
-  external
   /*(!) var */ ConvolverNode: object { prototype: ConvolverNode; on create(context: BaseAudioContext, options: ConvolverOptions? = empty): ConvolverNode }
 
 
@@ -6154,7 +6052,6 @@ external
   }
 
 
-  external
   /*(!) var */ CountQueuingStrategy: object { prototype: CountQueuingStrategy; on create(init: QueuingStrategyInit): CountQueuingStrategy }
 
 
@@ -6174,7 +6071,6 @@ external
   }
 
 
-  external
   /*(!) var */ Credential: object { prototype: Credential; on create(): Credential }
 
 
@@ -6196,7 +6092,6 @@ external
   }
 
 
-  external
   /*(!) var */ CredentialsContainer: object { prototype: CredentialsContainer; on create(): CredentialsContainer }
 
 
@@ -6217,7 +6112,6 @@ external
   }
 
 
-  external
   /*(!) var */ Crypto: object { prototype: Crypto; on create(): Crypto }
 
 
@@ -6244,7 +6138,6 @@ external
   }
 
 
-  external
   /*(!) var */ CryptoKey: object { prototype: CryptoKey; on create(): CryptoKey }
 
 
@@ -6262,7 +6155,6 @@ external
   }
 
 
-  external
   /*(!) var */ CustomElementRegistry: object { prototype: CustomElementRegistry; on create(): CustomElementRegistry }
 
 
@@ -6274,7 +6166,6 @@ external
   }
 
 
-  external
   /*(!) var */ CustomEvent: object { prototype: CustomEvent; on create(type`: Text, eventInitDict: CustomEventInit<T>? = empty): CustomEvent<T> }
 
 
@@ -6363,7 +6254,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMException: object { prototype: DOMException; on create(message: Text? = empty, name: Text? = empty): DOMException; guarded INDEX_SIZE_ERR: 1; guarded DOMSTRING_SIZE_ERR: 2; guarded HIERARCHY_REQUEST_ERR: 3; guarded WRONG_DOCUMENT_ERR: 4; guarded INVALID_CHARACTER_ERR: 5; guarded NO_DATA_ALLOWED_ERR: 6; guarded NO_MODIFICATION_ALLOWED_ERR: 7; guarded NOT_FOUND_ERR: 8; guarded NOT_SUPPORTED_ERR: 9; guarded INUSE_ATTRIBUTE_ERR: 10; guarded INVALID_STATE_ERR: 11; guarded SYNTAX_ERR: 12; guarded INVALID_MODIFICATION_ERR: 13; guarded NAMESPACE_ERR: 14; guarded INVALID_ACCESS_ERR: 15; guarded VALIDATION_ERR: 16; guarded TYPE_MISMATCH_ERR: 17; guarded SECURITY_ERR: 18; guarded NETWORK_ERR: 19; guarded ABORT_ERR: 20; guarded URL_MISMATCH_ERR: 21; guarded QUOTA_EXCEEDED_ERR: 22; guarded TIMEOUT_ERR: 23; guarded INVALID_NODE_TYPE_ERR: 24; guarded DATA_CLONE_ERR: 25 }
 
 
@@ -6379,7 +6269,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMImplementation: object { prototype: DOMImplementation; on create(): DOMImplementation }
 
 
@@ -6457,19 +6346,16 @@ external
   }
 
 
-  external
   /*(!) var */ DOMMatrix: object { prototype: DOMMatrix; on create(init: Object? /*(!)Текст | Список<Number> | пусто*/ = empty): DOMMatrix; operation fromFloat32Array(array32: Float32Array): DOMMatrix; operation fromFloat64Array(array64: Float64Array): DOMMatrix; operation fromMatrix(other: DOMMatrixInit? = empty): DOMMatrix }
 
 
   type SVGMatrix = DOMMatrix
 
-  external
   /*(!) var */ SVGMatrix: /*(!) typeof DOMMatrix */ Object?
 
 
   type WebKitCSSMatrix = DOMMatrix
 
-  external
   /*(!) var */ WebKitCSSMatrix: /*(!) typeof DOMMatrix */ Object?
 
 
@@ -6483,7 +6369,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMMatrixReadOnly: object { prototype: DOMMatrixReadOnly; on create(init: Object? /*(!)Текст | Список<Number> | пусто*/ = empty): DOMMatrixReadOnly; operation fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly; operation fromFloat64Array(array64: Float64Array): DOMMatrixReadOnly; operation fromMatrix(other: DOMMatrixInit? = empty): DOMMatrixReadOnly }
 
 
@@ -6499,7 +6384,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMParser: object { prototype: DOMParser; on create(): DOMParser }
 
 
@@ -6517,13 +6401,11 @@ external
   }
 
 
-  external
   /*(!) var */ DOMPoint: object { prototype: DOMPoint; on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty): DOMPoint; operation fromPoint(other: DOMPointInit? = empty): DOMPoint }
 
 
   type SVGPoint = DOMPoint
 
-  external
   /*(!) var */ SVGPoint: /*(!) typeof DOMPoint */ Object?
 
 
@@ -6549,7 +6431,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMPointReadOnly: object { prototype: DOMPointReadOnly; on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty): DOMPointReadOnly; operation fromPoint(other: DOMPointInit? = empty): DOMPointReadOnly }
 
 
@@ -6575,7 +6456,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMQuad: object { prototype: DOMQuad; on create(p1: DOMPointInit? = empty, p2: DOMPointInit? = empty, p3: DOMPointInit? = empty, p4: DOMPointInit? = empty): DOMQuad; operation fromQuad(other: DOMQuadInit? = empty): DOMQuad; operation fromRect(other: DOMRectInit? = empty): DOMQuad }
 
 
@@ -6593,13 +6473,11 @@ external
   }
 
 
-  external
   /*(!) var */ DOMRect: object { prototype: DOMRect; on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty): DOMRect; operation fromRect(other: DOMRectInit? = empty): DOMRect }
 
 
   type SVGRect = DOMRect
 
-  external
   /*(!) var */ SVGRect: /*(!) typeof DOMRect */ Object?
 
 
@@ -6614,7 +6492,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMRectList: object { prototype: DOMRectList; on create(): DOMRectList }
 
 
@@ -6650,7 +6527,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMRectReadOnly: object { prototype: DOMRectReadOnly; on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty): DOMRectReadOnly; operation fromRect(other: DOMRectInit? = empty): DOMRectReadOnly }
 
 
@@ -6673,7 +6549,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMStringList: object { prototype: DOMStringList; on create(): DOMStringList }
 
 
@@ -6689,7 +6564,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMStringMap: object { prototype: DOMStringMap; on create(): DOMStringMap }
 
 
@@ -6730,7 +6604,6 @@ external
   }
 
 
-  external
   /*(!) var */ DOMTokenList: object { prototype: DOMTokenList; on create(): DOMTokenList }
 
 
@@ -6765,7 +6638,6 @@ external
   }
 
 
-  external
   /*(!) var */ DataTransfer: object { prototype: DataTransfer; on create(): DataTransfer }
 
 
@@ -6791,7 +6663,6 @@ external
   }
 
 
-  external
   /*(!) var */ DataTransferItem: object { prototype: DataTransferItem; on create(): DataTransferItem }
 
 
@@ -6818,7 +6689,6 @@ external
   }
 
 
-  external
   /*(!) var */ DataTransferItemList: object { prototype: DataTransferItemList; on create(): DataTransferItemList }
 
 
@@ -6830,7 +6700,6 @@ external
   }
 
 
-  external
   /*(!) var */ DecompressionStream: object { prototype: DecompressionStream; on create(format: CompressionFormat): DecompressionStream }
 
 
@@ -6847,7 +6716,6 @@ external
   }
 
 
-  external
   /*(!) var */ DelayNode: object { prototype: DelayNode; on create(context: BaseAudioContext, options: DelayOptions? = empty): DelayNode }
 
 
@@ -6874,7 +6742,6 @@ external
   }
 
 
-  external
   /*(!) var */ DeviceMotionEvent: object { prototype: DeviceMotionEvent; on create(type`: Text, eventInitDict: DeviceMotionEventInit? = empty): DeviceMotionEvent }
 
 
@@ -6939,7 +6806,6 @@ external
   }
 
 
-  external
   /*(!) var */ DeviceOrientationEvent: object { prototype: DeviceOrientationEvent; on create(type`: Text, eventInitDict: DeviceOrientationEventInit? = empty): DeviceOrientationEvent }
 
 
@@ -7136,7 +7002,6 @@ external
   }
 
 
-  external
   /*(!) var */ Document: object { prototype: Document; on create(): Document }
 
 
@@ -7155,7 +7020,6 @@ external
   }
 
 
-  external
   /*(!) var */ DocumentFragment: object { prototype: DocumentFragment; on create(): DocumentFragment }
 
 
@@ -7194,7 +7058,6 @@ external
   }
 
 
-  external
   /*(!) var */ DocumentTimeline: object { prototype: DocumentTimeline; on create(options: DocumentTimelineOptions? = empty): DocumentTimeline }
 
 
@@ -7220,7 +7083,6 @@ external
   }
 
 
-  external
   /*(!) var */ DocumentType: object { prototype: DocumentType; on create(): DocumentType }
 
 
@@ -7237,7 +7099,6 @@ external
   }
 
 
-  external
   /*(!) var */ DragEvent: object { prototype: DragEvent; on create(type`: Text, eventInitDict: DragEventInit? = empty): DragEvent }
 
 
@@ -7269,7 +7130,6 @@ external
   }
 
 
-  external
   /*(!) var */ DynamicsCompressorNode: object { prototype: DynamicsCompressorNode; on create(context: BaseAudioContext, options: DynamicsCompressorOptions? = empty): DynamicsCompressorNode }
 
 
@@ -7494,7 +7354,6 @@ external
   }
 
 
-  external
   /*(!) var */ Element: object { prototype: Element; on create(): Element }
 
 
@@ -7553,7 +7412,6 @@ external
   }
 
 
-  external
   /*(!) var */ ElementInternals: object { prototype: ElementInternals; on create(): ElementInternals }
 
 
@@ -7577,7 +7435,6 @@ external
   }
 
 
-  external
   /*(!) var */ EncodedVideoChunk: object { prototype: EncodedVideoChunk; on create(init: EncodedVideoChunkInit): EncodedVideoChunk }
 
 
@@ -7606,7 +7463,6 @@ external
   }
 
 
-  external
   /*(!) var */ ErrorEvent: object { prototype: ErrorEvent; on create(type`: Text, eventInitDict: ErrorEventInit? = empty): ErrorEvent }
 
 
@@ -7632,7 +7488,6 @@ external
   }
 
 
-  external
   /*(!) var */ Event: object { prototype: Event; on create(type`: Text, eventInitDict: EventInit? = empty): Event; guarded NONE: 0; guarded CAPTURING_PHASE: 1; guarded AT_TARGET: 2; guarded BUBBLING_PHASE: 3 }
 
 
@@ -7644,7 +7499,6 @@ external
   }
 
 
-  external
   /*(!) var */ EventCounts: object { prototype: EventCounts; on create(): EventCounts }
 
 
@@ -7714,7 +7568,6 @@ external
   }
 
 
-  external
   /*(!) var */ EventSource: object { prototype: EventSource; on create(url: Object? /*(!)Текст | URL*/, eventSourceInitDict: EventSourceInit? = empty): EventSource; guarded CONNECTING: 0; guarded OPEN: 1; guarded CLOSED: 2 }
 
 
@@ -7734,7 +7587,6 @@ external
   }
 
 
-  external
   /*(!) var */ EventTarget: object { prototype: EventTarget; on create(): EventTarget }
 
 
@@ -7757,7 +7609,6 @@ external
   }
 
 
-  external
   /*(!) var */ File: object { prototype: File; on create(fileBits: Список<BlobPart>, fileName: Text, options: FilePropertyBag? = empty): File }
 
 
@@ -7778,7 +7629,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileList: object { prototype: FileList; on create(): FileList }
 
 
@@ -7856,7 +7706,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileReader: object { prototype: FileReader; on create(): FileReader; guarded EMPTY: 0; guarded LOADING: 1; guarded DONE: 2 }
 
 
@@ -7872,7 +7721,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystem: object { prototype: FileSystem; on create(): FileSystem }
 
 
@@ -7888,7 +7736,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemDirectoryEntry: object { prototype: FileSystemDirectoryEntry; on create(): FileSystemDirectoryEntry }
 
 
@@ -7913,7 +7760,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemDirectoryHandle: object { prototype: FileSystemDirectoryHandle; on create(): FileSystemDirectoryHandle }
 
 
@@ -7925,7 +7771,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemDirectoryReader: object { prototype: FileSystemDirectoryReader; on create(): FileSystemDirectoryReader }
 
 
@@ -7952,7 +7797,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemEntry: object { prototype: FileSystemEntry; on create(): FileSystemEntry }
 
 
@@ -7964,7 +7808,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemFileEntry: object { prototype: FileSystemFileEntry; on create(): FileSystemFileEntry }
 
 
@@ -7985,7 +7828,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemFileHandle: object { prototype: FileSystemFileHandle; on create(): FileSystemFileHandle }
 
 
@@ -8007,7 +7849,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemHandle: object { prototype: FileSystemHandle; on create(): FileSystemHandle }
 
 
@@ -8027,7 +7868,6 @@ external
   }
 
 
-  external
   /*(!) var */ FileSystemWritableFileStream: object { prototype: FileSystemWritableFileStream; on create(): FileSystemWritableFileStream }
 
 
@@ -8044,7 +7884,6 @@ external
   }
 
 
-  external
   /*(!) var */ FocusEvent: object { prototype: FocusEvent; on create(type`: Text, eventInitDict: FocusEventInit? = empty): FocusEvent }
 
 
@@ -8084,7 +7923,6 @@ external
   }
 
 
-  external
   /*(!) var */ FontFace: object { prototype: FontFace; on create(family: Text, source: Object? /*(!)Текст | BinaryData*/, descriptors: FontFaceDescriptors? = empty): FontFace }
 
 
@@ -8130,7 +7968,6 @@ external
   }
 
 
-  external
   /*(!) var */ FontFaceSet: object { prototype: FontFaceSet; on create(initialFaces: Список<FontFace>): FontFaceSet }
 
 
@@ -8143,7 +7980,6 @@ external
   }
 
 
-  external
   /*(!) var */ FontFaceSetLoadEvent: object { prototype: FontFaceSetLoadEvent; on create(type`: Text, eventInitDict: FontFaceSetLoadEventInit? = empty): FontFaceSetLoadEvent }
 
 
@@ -8186,7 +8022,6 @@ external
   }
 
 
-  external
   /*(!) var */ FormData: object { prototype: FormData; on create(form: HTMLFormElement? = empty, submitter: HTMLElement? = empty): FormData }
 
 
@@ -8199,7 +8034,6 @@ external
   }
 
 
-  external
   /*(!) var */ FormDataEvent: object { prototype: FormDataEvent; on create(type`: Text, eventInitDict: FormDataEventInit): FormDataEvent }
 
 
@@ -8216,7 +8050,6 @@ external
   }
 
 
-  external
   /*(!) var */ GainNode: object { prototype: GainNode; on create(context: BaseAudioContext, options: GainOptions? = empty): GainNode }
 
 
@@ -8258,7 +8091,6 @@ external
   }
 
 
-  external
   /*(!) var */ Gamepad: object { prototype: Gamepad; on create(): Gamepad }
 
 
@@ -8282,7 +8114,6 @@ external
   }
 
 
-  external
   /*(!) var */ GamepadButton: object { prototype: GamepadButton; on create(): GamepadButton }
 
 
@@ -8300,7 +8131,6 @@ external
   }
 
 
-  external
   /*(!) var */ GamepadEvent: object { prototype: GamepadEvent; on create(type`: Text, eventInitDict: GamepadEventInit): GamepadEvent }
 
 
@@ -8321,7 +8151,6 @@ external
   }
 
 
-  external
   /*(!) var */ GamepadHapticActuator: object { prototype: GamepadHapticActuator; on create(): GamepadHapticActuator }
 
 
@@ -8351,7 +8180,6 @@ external
   }
 
 
-  external
   /*(!) var */ Geolocation: object { prototype: Geolocation; on create(): Geolocation }
 
 
@@ -8386,7 +8214,6 @@ external
   }
 
 
-  external
   /*(!) var */ GeolocationCoordinates: object { prototype: GeolocationCoordinates; on create(): GeolocationCoordinates }
 
 
@@ -8406,7 +8233,6 @@ external
   }
 
 
-  external
   /*(!) var */ GeolocationPosition: object { prototype: GeolocationPosition; on create(): GeolocationPosition }
 
 
@@ -8431,7 +8257,6 @@ external
   }
 
 
-  external
   /*(!) var */ GeolocationPositionError: object { prototype: GeolocationPositionError; on create(): GeolocationPositionError; guarded PERMISSION_DENIED: 1; guarded POSITION_UNAVAILABLE: 2; guarded TIMEOUT: 3 }
 
 
@@ -8666,7 +8491,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLAllCollection: object { prototype: HTMLAllCollection; on create(): HTMLAllCollection }
 
 
@@ -8690,7 +8514,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLAnchorElement: object { prototype: HTMLAnchorElement; on create(): HTMLAnchorElement }
 
 
@@ -8714,7 +8537,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLAreaElement: object { prototype: HTMLAreaElement; on create(): HTMLAreaElement }
 
 
@@ -8736,7 +8558,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLAudioElement: object { prototype: HTMLAudioElement; on create(): HTMLAudioElement }
 
 
@@ -8758,7 +8579,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLBRElement: object { prototype: HTMLBRElement; on create(): HTMLBRElement }
 
 
@@ -8784,7 +8604,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLBaseElement: object { prototype: HTMLBaseElement; on create(): HTMLBaseElement }
 
 
@@ -8812,7 +8631,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLBodyElement: object { prototype: HTMLBodyElement; on create(): HTMLBodyElement }
 
 
@@ -8873,7 +8691,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLButtonElement: object { prototype: HTMLButtonElement; on create(): HTMLButtonElement }
 
 
@@ -8917,7 +8734,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLCanvasElement: object { prototype: HTMLCanvasElement; on create(): HTMLCanvasElement }
 
 
@@ -8944,7 +8760,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLCollection: object { prototype: HTMLCollection; on create(): HTMLCollection }
 
 
@@ -8976,7 +8791,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDListElement: object { prototype: HTMLDListElement; on create(): HTMLDListElement }
 
 
@@ -9000,7 +8814,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDataElement: object { prototype: HTMLDataElement; on create(): HTMLDataElement }
 
 
@@ -9025,7 +8838,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDataListElement: object { prototype: HTMLDataListElement; on create(): HTMLDataListElement }
 
 
@@ -9045,7 +8857,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDetailsElement: object { prototype: HTMLDetailsElement; on create(): HTMLDetailsElement }
 
 
@@ -9073,7 +8884,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDialogElement: object { prototype: HTMLDialogElement; on create(): HTMLDialogElement }
 
 
@@ -9095,7 +8905,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLDivElement: object { prototype: HTMLDivElement; on create(): HTMLDivElement }
 
 
@@ -9177,7 +8986,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLElement: object { prototype: HTMLElement; on create(): HTMLElement }
 
 
@@ -9203,7 +9011,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLEmbedElement: object { prototype: HTMLEmbedElement; on create(): HTMLEmbedElement }
 
 
@@ -9253,7 +9060,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLFieldSetElement: object { prototype: HTMLFieldSetElement; on create(): HTMLFieldSetElement }
 
 
@@ -9269,7 +9075,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLFormControlsCollection: object { prototype: HTMLFormControlsCollection; on create(): HTMLFormControlsCollection }
 
 
@@ -9334,7 +9139,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLFormElement: object { prototype: HTMLFormElement; on create(): HTMLFormElement }
 
 
@@ -9362,7 +9166,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLHRElement: object { prototype: HTMLHRElement; on create(): HTMLHRElement }
 
 
@@ -9384,7 +9187,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLHeadElement: object { prototype: HTMLHeadElement; on create(): HTMLHeadElement }
 
 
@@ -9406,7 +9208,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLHeadingElement: object { prototype: HTMLHeadingElement; on create(): HTMLHeadingElement }
 
 
@@ -9428,7 +9229,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLHtmlElement: object { prototype: HTMLHtmlElement; on create(): HTMLHtmlElement }
 
 
@@ -9490,7 +9290,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLIFrameElement: object { prototype: HTMLIFrameElement; on create(): HTMLIFrameElement }
 
 
@@ -9512,7 +9311,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLImageElement: object { prototype: HTMLImageElement; on create(): HTMLImageElement }
 
 
@@ -9548,7 +9346,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLInputElement: object { prototype: HTMLInputElement; on create(): HTMLInputElement }
 
 
@@ -9570,7 +9367,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLLIElement: object { prototype: HTMLLIElement; on create(): HTMLLIElement }
 
 
@@ -9600,7 +9396,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLLabelElement: object { prototype: HTMLLabelElement; on create(): HTMLLabelElement }
 
 
@@ -9622,7 +9417,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLLegendElement: object { prototype: HTMLLegendElement; on create(): HTMLLegendElement }
 
 
@@ -9652,7 +9446,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLLinkElement: object { prototype: HTMLLinkElement; on create(): HTMLLinkElement }
 
 
@@ -9679,7 +9472,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLMapElement: object { prototype: HTMLMapElement; on create(): HTMLMapElement }
 
 
@@ -9826,7 +9618,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLMediaElement: object { prototype: HTMLMediaElement; on create(): HTMLMediaElement; guarded NETWORK_EMPTY: 0; guarded NETWORK_IDLE: 1; guarded NETWORK_LOADING: 2; guarded NETWORK_NO_SOURCE: 3; guarded HAVE_NOTHING: 0; guarded HAVE_METADATA: 1; guarded HAVE_CURRENT_DATA: 2; guarded HAVE_FUTURE_DATA: 3; guarded HAVE_ENOUGH_DATA: 4 }
 
 
@@ -9844,7 +9635,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLMenuElement: object { prototype: HTMLMenuElement; on create(): HTMLMenuElement }
 
 
@@ -9868,7 +9658,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLMetaElement: object { prototype: HTMLMetaElement; on create(): HTMLMetaElement }
 
 
@@ -9905,7 +9694,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLMeterElement: object { prototype: HTMLMeterElement; on create(): HTMLMeterElement }
 
 
@@ -9931,7 +9719,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLModElement: object { prototype: HTMLModElement; on create(): HTMLModElement }
 
 
@@ -9953,7 +9740,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLOListElement: object { prototype: HTMLOListElement; on create(): HTMLOListElement }
 
 
@@ -9975,7 +9761,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLObjectElement: object { prototype: HTMLObjectElement; on create(): HTMLObjectElement }
 
 
@@ -10001,7 +9786,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLOptGroupElement: object { prototype: HTMLOptGroupElement; on create(): HTMLOptGroupElement }
 
 
@@ -10041,7 +9825,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLOptionElement: object { prototype: HTMLOptionElement; on create(): HTMLOptionElement }
 
 
@@ -10063,7 +9846,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLOptionsCollection: object { prototype: HTMLOptionsCollection; on create(): HTMLOptionsCollection }
 
 
@@ -10135,7 +9917,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLOutputElement: object { prototype: HTMLOutputElement; on create(): HTMLOutputElement }
 
 
@@ -10157,7 +9938,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLParagraphElement: object { prototype: HTMLParagraphElement; on create(): HTMLParagraphElement }
 
 
@@ -10179,7 +9959,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLPictureElement: object { prototype: HTMLPictureElement; on create(): HTMLPictureElement }
 
 
@@ -10201,7 +9980,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLPreElement: object { prototype: HTMLPreElement; on create(): HTMLPreElement }
 
 
@@ -10233,7 +10011,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLProgressElement: object { prototype: HTMLProgressElement; on create(): HTMLProgressElement }
 
 
@@ -10257,7 +10034,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLQuoteElement: object { prototype: HTMLQuoteElement; on create(): HTMLQuoteElement }
 
 
@@ -10287,7 +10063,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLScriptElement: object { prototype: HTMLScriptElement; on create(): HTMLScriptElement; operation supports(type`: Text): YesNo }
 
 
@@ -10369,7 +10144,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLSelectElement: object { prototype: HTMLSelectElement; on create(): HTMLSelectElement }
 
 
@@ -10396,7 +10170,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLSlotElement: object { prototype: HTMLSlotElement; on create(): HTMLSlotElement }
 
 
@@ -10432,7 +10205,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLSourceElement: object { prototype: HTMLSourceElement; on create(): HTMLSourceElement }
 
 
@@ -10454,7 +10226,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLSpanElement: object { prototype: HTMLSpanElement; on create(): HTMLSpanElement }
 
 
@@ -10476,7 +10247,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLStyleElement: object { prototype: HTMLStyleElement; on create(): HTMLStyleElement }
 
 
@@ -10498,7 +10268,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableCaptionElement: object { prototype: HTMLTableCaptionElement; on create(): HTMLTableCaptionElement }
 
 
@@ -10520,7 +10289,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableCellElement: object { prototype: HTMLTableCellElement; on create(): HTMLTableCellElement }
 
 
@@ -10542,7 +10310,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableColElement: object { prototype: HTMLTableColElement; on create(): HTMLTableColElement }
 
 
@@ -10564,7 +10331,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableElement: object { prototype: HTMLTableElement; on create(): HTMLTableElement }
 
 
@@ -10586,7 +10352,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableRowElement: object { prototype: HTMLTableRowElement; on create(): HTMLTableRowElement }
 
 
@@ -10608,7 +10373,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTableSectionElement: object { prototype: HTMLTableSectionElement; on create(): HTMLTableSectionElement }
 
 
@@ -10633,7 +10397,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTemplateElement: object { prototype: HTMLTemplateElement; on create(): HTMLTemplateElement }
 
 
@@ -10724,7 +10487,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTextAreaElement: object { prototype: HTMLTextAreaElement; on create(): HTMLTextAreaElement }
 
 
@@ -10748,7 +10510,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTimeElement: object { prototype: HTMLTimeElement; on create(): HTMLTimeElement }
 
 
@@ -10772,7 +10533,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTitleElement: object { prototype: HTMLTitleElement; on create(): HTMLTitleElement }
 
 
@@ -10822,7 +10582,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLTrackElement: object { prototype: HTMLTrackElement; on create(): HTMLTrackElement; guarded NONE: 0; guarded LOADING: 1; guarded LOADED: 2; guarded ERROR: 3 }
 
 
@@ -10844,7 +10603,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLUListElement: object { prototype: HTMLUListElement; on create(): HTMLUListElement }
 
 
@@ -10866,7 +10624,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLUnknownElement: object { prototype: HTMLUnknownElement; on create(): HTMLUnknownElement }
 
 
@@ -10924,7 +10681,6 @@ external
   }
 
 
-  external
   /*(!) var */ HTMLVideoElement: object { prototype: HTMLVideoElement; on create(): HTMLVideoElement }
 
 
@@ -10944,7 +10700,6 @@ external
   }
 
 
-  external
   /*(!) var */ HashChangeEvent: object { prototype: HashChangeEvent; on create(type`: Text, eventInitDict: HashChangeEventInit? = empty): HashChangeEvent }
 
 
@@ -10972,7 +10727,6 @@ external
   }
 
 
-  external
   /*(!) var */ Headers: object { prototype: Headers; on create(init: HeadersInit? = empty): Headers }
 
 
@@ -11004,7 +10758,6 @@ external
   }
 
 
-  external
   /*(!) var */ History: object { prototype: History; on create(): History }
 
 
@@ -11043,7 +10796,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBCursor: object { prototype: IDBCursor; on create(): IDBCursor }
 
 
@@ -11060,7 +10812,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBCursorWithValue: object { prototype: IDBCursorWithValue; on create(): IDBCursorWithValue }
 
 
@@ -11119,7 +10870,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBDatabase: object { prototype: IDBDatabase; on create(): IDBDatabase }
 
 
@@ -11141,7 +10891,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBFactory: object { prototype: IDBFactory; on create(): IDBFactory }
 
 
@@ -11183,7 +10932,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBIndex: object { prototype: IDBIndex; on create(): IDBIndex }
 
 
@@ -11211,7 +10959,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBKeyRange: object { prototype: IDBKeyRange; on create(): IDBKeyRange; operation bound(lower: /*(!) any */ Object?, upper: /*(!) any */ Object?, lowerOpen: YesNo? = empty, upperOpen: YesNo? = empty): IDBKeyRange; operation lowerBound(lower: /*(!) any */ Object?, open: YesNo? = empty): IDBKeyRange; operation only(value: /*(!) any */ Object?): IDBKeyRange; operation upperBound(upper: /*(!) any */ Object?, open: YesNo? = empty): IDBKeyRange }
 
 
@@ -11267,7 +11014,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBObjectStore: object { prototype: IDBObjectStore; on create(): IDBObjectStore }
 
 
@@ -11301,7 +11047,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBOpenDBRequest: object { prototype: IDBOpenDBRequest; on create(): IDBOpenDBRequest }
 
 
@@ -11350,7 +11095,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBRequest: object { prototype: IDBRequest; on create(): IDBRequest }
 
 
@@ -11405,7 +11149,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBTransaction: object { prototype: IDBTransaction; on create(): IDBTransaction }
 
 
@@ -11425,7 +11168,6 @@ external
   }
 
 
-  external
   /*(!) var */ IDBVersionChangeEvent: object { prototype: IDBVersionChangeEvent; on create(type`: Text, eventInitDict: IDBVersionChangeEventInit? = empty): IDBVersionChangeEvent }
 
 
@@ -11441,7 +11183,6 @@ external
   }
 
 
-  external
   /*(!) var */ IIRFilterNode: object { prototype: IIRFilterNode; on create(context: BaseAudioContext, options: IIRFilterOptions): IIRFilterNode }
 
 
@@ -11456,7 +11197,6 @@ external
   }
 
 
-  external
   /*(!) var */ IdleDeadline: object { prototype: IdleDeadline; on create(): IdleDeadline }
 
 
@@ -11474,7 +11214,6 @@ external
   }
 
 
-  external
   /*(!) var */ ImageBitmap: object { prototype: ImageBitmap; on create(): ImageBitmap }
 
 
@@ -11489,7 +11228,6 @@ external
   }
 
 
-  external
   /*(!) var */ ImageBitmapRenderingContext: object { prototype: ImageBitmapRenderingContext; on create(): ImageBitmapRenderingContext }
 
 
@@ -11515,7 +11253,6 @@ external
   }
 
 
-  external
   /*(!) var */ ImageData: object { prototype: ImageData; on create(sw: Number, sh: Number, settings: ImageDataSettings? = empty): ImageData; on create(data: Uint8ClampedArray, sw: Number, sh: Number? = empty, settings: ImageDataSettings? = empty): ImageData }
 
 
@@ -11537,7 +11274,6 @@ external
   }
 
 
-  external
   /*(!) var */ InputDeviceInfo: object { prototype: InputDeviceInfo; on create(): InputDeviceInfo }
 
 
@@ -11561,7 +11297,6 @@ external
   }
 
 
-  external
   /*(!) var */ InputEvent: object { prototype: InputEvent; on create(type`: Text, eventInitDict: InputEventInit? = empty): InputEvent }
 
 
@@ -11592,7 +11327,6 @@ external
   }
 
 
-  external
   /*(!) var */ IntersectionObserver: object { prototype: IntersectionObserver; on create(callback: IntersectionObserverCallback, options: IntersectionObserverInit? = empty): IntersectionObserver }
 
 
@@ -11627,7 +11361,6 @@ external
   }
 
 
-  external
   /*(!) var */ IntersectionObserverEntry: object { prototype: IntersectionObserverEntry; on create(intersectionObserverEntryInit: IntersectionObserverEntryInit): IntersectionObserverEntry }
 
 
@@ -11662,7 +11395,6 @@ external
   }
 
 
-  external
   /*(!) var */ KeyboardEvent: object { prototype: KeyboardEvent; on create(type`: Text, eventInitDict: KeyboardEventInit? = empty): KeyboardEvent; guarded DOM_KEY_LOCATION_STANDARD = 0x00; guarded DOM_KEY_LOCATION_LEFT = 0x01; guarded DOM_KEY_LOCATION_RIGHT = 0x02; guarded DOM_KEY_LOCATION_NUMPAD = 0x03 }
 
 
@@ -11684,7 +11416,6 @@ external
   }
 
 
-  external
   /*(!) var */ KeyframeEffect: object { prototype: KeyframeEffect; on create(target: Element?, keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = empty): KeyframeEffect; on create(source: KeyframeEffect): KeyframeEffect }
 
 
@@ -11735,7 +11466,6 @@ external
   }
 
 
-  external
   /*(!) var */ Location: object { prototype: Location; on create(): Location }
 
 
@@ -11755,7 +11485,6 @@ external
   }
 
 
-  external
   /*(!) var */ Lock: object { prototype: Lock; on create(): Lock }
 
 
@@ -11962,7 +11691,6 @@ external
   }
 
 
-  external
   /*(!) var */ MIDIOutputMap: object { prototype: MIDIOutputMap; on create(): MIDIOutputMap }
 
 
@@ -12017,7 +11745,6 @@ external
   }
 
 
-  external
   /*(!) var */ MIDIPort: object { prototype: MIDIPort; on create(): MIDIPort }
 
 
@@ -12041,7 +11768,6 @@ external
   }
 
 
-  external
   /*(!) var */ MathMLElement: object { prototype: MathMLElement; on create(): MathMLElement }
 
 
@@ -12055,7 +11781,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaCapabilities: object { prototype: MediaCapabilities; on create(): MediaCapabilities }
 
 
@@ -12084,7 +11809,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaDeviceInfo: object { prototype: MediaDeviceInfo; on create(): MediaDeviceInfo }
 
 
@@ -12123,7 +11847,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaDevices: object { prototype: MediaDevices; on create(): MediaDevices }
 
 
@@ -12140,7 +11863,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaElementAudioSourceNode: object { prototype: MediaElementAudioSourceNode; on create(context: AudioContext, options: MediaElementAudioSourceOptions): MediaElementAudioSourceNode }
 
 
@@ -12156,7 +11878,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaEncryptedEvent: object { prototype: MediaEncryptedEvent; on create(type`: Text, eventInitDict: MediaEncryptedEventInit? = empty): MediaEncryptedEvent }
 
 
@@ -12188,7 +11909,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaError: object { prototype: MediaError; on create(): MediaError; guarded MEDIA_ERR_ABORTED: 1; guarded MEDIA_ERR_NETWORK: 2; guarded MEDIA_ERR_DECODE: 3; guarded MEDIA_ERR_SRC_NOT_SUPPORTED: 4 }
 
 
@@ -12209,7 +11929,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaKeyMessageEvent: object { prototype: MediaKeyMessageEvent; on create(type`: Text, eventInitDict: MediaKeyMessageEventInit): MediaKeyMessageEvent }
 
 
@@ -12266,7 +11985,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaKeySession: object { prototype: MediaKeySession; on create(): MediaKeySession }
 
 
@@ -12290,7 +12008,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaKeyStatusMap: object { prototype: MediaKeyStatusMap; on create(): MediaKeyStatusMap }
 
 
@@ -12312,7 +12029,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaKeySystemAccess: object { prototype: MediaKeySystemAccess; on create(): MediaKeySystemAccess }
 
 
@@ -12331,7 +12047,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaKeys: object { prototype: MediaKeys; on create(): MediaKeys }
 
 
@@ -12356,7 +12071,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaList: object { prototype: MediaList; on create(): MediaList }
 
 
@@ -12374,7 +12088,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaMetadata: object { prototype: MediaMetadata; on create(init: MediaMetadataInit? = empty): MediaMetadata }
 
 
@@ -12402,7 +12115,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaQueryList: object { prototype: MediaQueryList; on create(): MediaQueryList }
 
 
@@ -12418,7 +12130,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaQueryListEvent: object { prototype: MediaQueryListEvent; on create(type`: Text, eventInitDict: MediaQueryListEventInit? = empty): MediaQueryListEvent }
 
 
@@ -12489,7 +12200,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaRecorder: object { prototype: MediaRecorder; on create(stream: MediaStream, options: MediaRecorderOptions? = empty): MediaRecorder; operation isTypeSupported(type`: Text): YesNo }
 
 
@@ -12507,7 +12217,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaSession: object { prototype: MediaSession; on create(): MediaSession }
 
 
@@ -12566,7 +12275,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaSource: object { prototype: MediaSource; on create(): MediaSource; operation isTypeSupported(type`: Text): YesNo }
 
 
@@ -12620,7 +12328,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaStream: object { prototype: MediaStream; on create(): MediaStream; on create(stream: MediaStream): MediaStream; on create(tracks: Список<MediaStreamTrack>): MediaStream }
 
 
@@ -12633,7 +12340,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaStreamAudioDestinationNode: object { prototype: MediaStreamAudioDestinationNode; on create(context: AudioContext, options: AudioNodeOptions? = empty): MediaStreamAudioDestinationNode }
 
 
@@ -12650,7 +12356,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaStreamAudioSourceNode: object { prototype: MediaStreamAudioSourceNode; on create(context: AudioContext, options: MediaStreamAudioSourceOptions): MediaStreamAudioSourceNode }
 
 
@@ -12719,7 +12424,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaStreamTrack: object { prototype: MediaStreamTrack; on create(): MediaStreamTrack }
 
 
@@ -12736,7 +12440,6 @@ external
   }
 
 
-  external
   /*(!) var */ MediaStreamTrackEvent: object { prototype: MediaStreamTrackEvent; on create(type`: Text, eventInitDict: MediaStreamTrackEventInit): MediaStreamTrackEvent }
 
 
@@ -12756,7 +12459,6 @@ external
   }
 
 
-  external
   /*(!) var */ MessageChannel: object { prototype: MessageChannel; on create(): MessageChannel }
 
 
@@ -12772,7 +12474,6 @@ external
   }
 
 
-  external
   /*(!) var */ MessageEvent: object { prototype: MessageEvent; on create(type`: Text, eventInitDict: MessageEventInit<T>? = empty): MessageEvent<T> }
 
 
@@ -12814,7 +12515,6 @@ external
   }
 
 
-  external
   /*(!) var */ MessagePort: object { prototype: MessagePort; on create(): MessagePort }
 
 
@@ -12830,7 +12530,6 @@ external
   }
 
 
-  external
   /*(!) var */ MouseEvent: object { prototype: MouseEvent; on create(type`: Text, eventInitDict: MouseEventInit? = empty): MouseEvent }
 
 
@@ -12850,7 +12549,6 @@ external
   }
 
 
-  external
   /*(!) var */ MutationObserver: object { prototype: MutationObserver; on create(callback: MutationCallback): MutationObserver }
 
 
@@ -12891,7 +12589,6 @@ external
   }
 
 
-  external
   /*(!) var */ MutationRecord: object { prototype: MutationRecord; on create(): MutationRecord }
 
 
@@ -12924,7 +12621,6 @@ external
   }
 
 
-  external
   /*(!) var */ NamedNodeMap: object { prototype: NamedNodeMap; on create(): NamedNodeMap }
 
 
@@ -12946,7 +12642,6 @@ external
   }
 
 
-  external
   /*(!) var */ NavigationPreloadManager: object { prototype: NavigationPreloadManager; on create(): NavigationPreloadManager }
 
 
@@ -13010,7 +12705,6 @@ external
   }
 
 
-  external
   /*(!) var */ Navigator: object { prototype: Navigator; on create(): Navigator }
 
 
@@ -13232,7 +12926,6 @@ external
   }
 
 
-  external
   /*(!) var */ Node: object { prototype: Node; on create(): Node; guarded ELEMENT_NODE: 1; guarded ATTRIBUTE_NODE: 2; guarded TEXT_NODE: 3; guarded CDATA_SECTION_NODE: 4; guarded ENTITY_REFERENCE_NODE: 5; guarded ENTITY_NODE: 6; guarded PROCESSING_INSTRUCTION_NODE: 7; guarded COMMENT_NODE: 8; guarded DOCUMENT_NODE: 9; guarded DOCUMENT_TYPE_NODE: 10; guarded DOCUMENT_FRAGMENT_NODE: 11; guarded NOTATION_NODE: 12; guarded DOCUMENT_POSITION_DISCONNECTED = 0x01; guarded DOCUMENT_POSITION_PRECEDING = 0x02; guarded DOCUMENT_POSITION_FOLLOWING = 0x04; guarded DOCUMENT_POSITION_CONTAINS = 0x08; guarded DOCUMENT_POSITION_CONTAINED_BY = 0x10; guarded DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 0x20 }
 
 
@@ -13248,7 +12941,6 @@ external
   }
 
 
-  external
   /*(!) var */ NodeIterator: object { prototype: NodeIterator; on create(): NodeIterator }
 
 
@@ -13271,7 +12963,6 @@ external
   }
 
 
-  external
   /*(!) var */ NodeList: object { prototype: NodeList; on create(): NodeList }
 
 
@@ -13365,7 +13056,6 @@ external
   }
 
 
-  external
   /*(!) var */ Notification: object { prototype: Notification; on create(title: Text, options: NotificationOptions? = empty): Notification; guarded permission: NotificationPermission; operation requestPermission(deprecatedCallback: NotificationPermissionCallback? = empty): Promise<NotificationPermission> }
 
 
@@ -13521,7 +13211,6 @@ external
   }
 
 
-  external
   /*(!) var */ OfflineAudioCompletionEvent: object { prototype: OfflineAudioCompletionEvent; on create(type`: Text, eventInitDict: OfflineAudioCompletionEventInit): OfflineAudioCompletionEvent }
 
 
@@ -13560,7 +13249,6 @@ external
   }
 
 
-  external
   /*(!) var */ OfflineAudioContext: object { prototype: OfflineAudioContext; on create(contextOptions: OfflineAudioContextOptions): OfflineAudioContext; on create(numberOfChannels: Number, length: Number, sampleRate: Number): OfflineAudioContext }
 
 
@@ -13610,7 +13298,6 @@ external
   }
 
 
-  external
   /*(!) var */ OffscreenCanvas: object { prototype: OffscreenCanvas; on create(width: Number, height: Number): OffscreenCanvas }
 
 
@@ -13625,7 +13312,6 @@ external
   }
 
 
-  external
   /*(!) var */ OffscreenCanvasRenderingContext2D: object { prototype: OffscreenCanvasRenderingContext2D; on create(): OffscreenCanvasRenderingContext2D }
 
 
@@ -13657,7 +13343,6 @@ external
   }
 
 
-  external
   /*(!) var */ OscillatorNode: object { prototype: OscillatorNode; on create(context: BaseAudioContext, options: OscillatorOptions? = empty): OscillatorNode }
 
 
@@ -13670,7 +13355,6 @@ external
   }
 
 
-  external
   /*(!) var */ OverconstrainedError: object { prototype: OverconstrainedError; on create(constraint: Text, message: Text? = empty): OverconstrainedError }
 
 
@@ -13687,7 +13371,6 @@ external
   }
 
 
-  external
   /*(!) var */ PageTransitionEvent: object { prototype: PageTransitionEvent; on create(type`: Text, eventInitDict: PageTransitionEventInit? = empty): PageTransitionEvent }
 
 
@@ -13703,7 +13386,6 @@ external
   }
 
 
-  external
   /*(!) var */ PannerNode: object { prototype: PannerNode; on create(context: BaseAudioContext, options: PannerOptions? = empty): PannerNode }
 
 
@@ -13735,7 +13417,6 @@ external
   }
 
 
-  external
   /*(!) var */ Path2D: object { prototype: Path2D; on create(path: Object? /*(!)Path2D | Текст | пусто*/ = empty): Path2D }
 
 
@@ -13755,7 +13436,6 @@ external
   }
 
 
-  external
   /*(!) var */ PaymentMethodChangeEvent: object { prototype: PaymentMethodChangeEvent; on create(type`: Text, eventInitDict: PaymentMethodChangeEventInit? = empty): PaymentMethodChangeEvent }
 
 
@@ -13795,7 +13475,6 @@ external
   }
 
 
-  external
   /*(!) var */ PaymentRequest: object { prototype: PaymentRequest; on create(methodData: Список<PaymentMethodData>, details: PaymentDetailsInit): PaymentRequest }
 
 
@@ -13812,7 +13491,6 @@ external
   }
 
 
-  external
   /*(!) var */ PaymentRequestUpdateEvent: object { prototype: PaymentRequestUpdateEvent; on create(type`: Text, eventInitDict: PaymentRequestUpdateEventInit? = empty): PaymentRequestUpdateEvent }
 
 
@@ -13842,7 +13520,6 @@ external
   }
 
 
-  external
   /*(!) var */ PaymentResponse: object { prototype: PaymentResponse; on create(): PaymentResponse }
 
 
@@ -13870,7 +13547,6 @@ external
   }
 
 
-  external
   /*(!) var */ Performance: object { prototype: Performance; on create(): Performance }
 
 
@@ -13898,7 +13574,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceEntry: object { prototype: PerformanceEntry; on create(): PerformanceEntry }
 
 
@@ -13922,7 +13597,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceEventTiming: object { prototype: PerformanceEventTiming; on create(): PerformanceEventTiming }
 
 
@@ -13939,7 +13613,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceMark: object { prototype: PerformanceMark; on create(markName: Text, markOptions: PerformanceMarkOptions? = empty): PerformanceMark }
 
 
@@ -13956,7 +13629,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceMeasure: object { prototype: PerformanceMeasure; on create(): PerformanceMeasure }
 
 
@@ -14002,7 +13674,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceNavigationTiming: object { prototype: PerformanceNavigationTiming; on create(): PerformanceNavigationTiming }
 
 
@@ -14018,7 +13689,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceObserver: object { prototype: PerformanceObserver; on create(callback: PerformanceObserverCallback): PerformanceObserver; guarded supportedEntryTypes: ReadonlyArray<Текст> }
 
 
@@ -14034,7 +13704,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceObserverEntryList: object { prototype: PerformanceObserverEntryList; on create(): PerformanceObserverEntryList }
 
 
@@ -14046,7 +13715,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformancePaintTiming: object { prototype: PerformancePaintTiming; on create(): PerformancePaintTiming }
 
 
@@ -14116,7 +13784,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceResourceTiming: object { prototype: PerformanceResourceTiming; on create(): PerformanceResourceTiming }
 
 
@@ -14137,7 +13804,6 @@ external
   }
 
 
-  external
   /*(!) var */ PerformanceServerTiming: object { prototype: PerformanceServerTiming; on create(): PerformanceServerTiming }
 
 
@@ -14153,7 +13819,6 @@ external
   }
 
 
-  external
   /*(!) var */ PeriodicWave: object { prototype: PeriodicWave; on create(context: BaseAudioContext, options: PeriodicWaveOptions? = empty): PeriodicWave }
 
 
@@ -14185,7 +13850,6 @@ external
   }
 
 
-  external
   /*(!) var */ PermissionStatus: object { prototype: PermissionStatus; on create(): PermissionStatus }
 
 
@@ -14197,7 +13861,6 @@ external
   }
 
 
-  external
   /*(!) var */ Permissions: object { prototype: Permissions; on create(): Permissions }
 
 
@@ -14210,7 +13873,6 @@ external
   }
 
 
-  external
   /*(!) var */ PictureInPictureEvent: object { prototype: PictureInPictureEvent; on create(type`: Text, eventInitDict: PictureInPictureEventInit): PictureInPictureEvent }
 
 
@@ -14242,7 +13904,6 @@ external
   }
 
 
-  external
   /*(!) var */ PictureInPictureWindow: object { prototype: PictureInPictureWindow; on create(): PictureInPictureWindow }
 
 
@@ -14290,7 +13951,6 @@ external
   }
 
 
-  external
   /*(!) var */ PointerEvent: object { prototype: PointerEvent; on create(type`: Text, eventInitDict: PointerEventInit? = empty): PointerEvent }
 
 
@@ -14307,7 +13967,6 @@ external
   }
 
 
-  external
   /*(!) var */ PopStateEvent: object { prototype: PopStateEvent; on create(type`: Text, eventInitDict: PopStateEventInit? = empty): PopStateEvent }
 
 
@@ -14335,7 +13994,6 @@ external
   }
 
 
-  external
   /*(!) var */ ProcessingInstruction: object { prototype: ProcessingInstruction; on create(): ProcessingInstruction }
 
 
@@ -14361,7 +14019,6 @@ external
   }
 
 
-  external
   /*(!) var */ ProgressEvent: object { prototype: ProgressEvent; on create(type`: Text, eventInitDict: ProgressEventInit? = empty): ProgressEvent }
 
 
@@ -14377,7 +14034,6 @@ external
   }
 
 
-  external
   /*(!) var */ PromiseRejectionEvent: object { prototype: PromiseRejectionEvent; on create(type`: Text, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent }
 
 
@@ -14402,7 +14058,6 @@ external
   }
 
 
-  external
   /*(!) var */ PublicKeyCredential: object { prototype: PublicKeyCredential; on create(): PublicKeyCredential; operation isConditionalMediationAvailable(): Promise<ДаНет>; operation isUserVerifyingPlatformAuthenticatorAvailable(): Promise<ДаНет> }
 
 
@@ -14423,7 +14078,6 @@ external
   }
 
 
-  external
   /*(!) var */ PushManager: object { prototype: PushManager; on create(): PushManager; guarded supportedContentEncodings: ReadonlyArray<Текст> }
 
 
@@ -14453,7 +14107,6 @@ external
   }
 
 
-  external
   /*(!) var */ PushSubscription: object { prototype: PushSubscription; on create(): PushSubscription }
 
 
@@ -14473,7 +14126,6 @@ external
   }
 
 
-  external
   /*(!) var */ PushSubscriptionOptions: object { prototype: PushSubscriptionOptions; on create(): PushSubscriptionOptions }
 
 
@@ -14488,7 +14140,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCCertificate: object { prototype: RTCCertificate; on create(): RTCCertificate }
 
 
@@ -14522,7 +14173,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCDTMFSender: object { prototype: RTCDTMFSender; on create(): RTCDTMFSender }
 
 
@@ -14539,7 +14189,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCDTMFToneChangeEvent: object { prototype: RTCDTMFToneChangeEvent; on create(type`: Text, eventInitDict: RTCDTMFToneChangeEventInit? = empty): RTCDTMFToneChangeEvent }
 
 
@@ -14626,7 +14275,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCDataChannel: object { prototype: RTCDataChannel; on create(): RTCDataChannel }
 
 
@@ -14639,7 +14287,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCDataChannelEvent: object { prototype: RTCDataChannelEvent; on create(type`: Text, eventInitDict: RTCDataChannelEventInit): RTCDataChannelEvent }
 
 
@@ -14677,7 +14324,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCDtlsTransport: object { prototype: RTCDtlsTransport; on create(): RTCDtlsTransport }
 
 
@@ -14692,7 +14338,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCEncodedAudioFrame: object { prototype: RTCEncodedAudioFrame; on create(): RTCEncodedAudioFrame }
 
 
@@ -14710,7 +14355,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCEncodedVideoFrame: object { prototype: RTCEncodedVideoFrame; on create(): RTCEncodedVideoFrame }
 
 
@@ -14735,7 +14379,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCError: object { prototype: RTCError; on create(init: RTCErrorInit, message: Text? = empty): RTCError }
 
 
@@ -14748,7 +14391,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCErrorEvent: object { prototype: RTCErrorEvent; on create(type`: Text, eventInitDict: RTCErrorEventInit): RTCErrorEvent }
 
 
@@ -14806,7 +14448,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCIceCandidate: object { prototype: RTCIceCandidate; on create(candidateInitDict: RTCIceCandidateInit? = empty): RTCIceCandidate }
 
 
@@ -14852,7 +14493,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCIceTransport: object { prototype: RTCIceTransport; on create(): RTCIceTransport }
 
 
@@ -14896,7 +14536,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCPeerConnection: object { prototype: RTCPeerConnection; on create(configuration: RTCConfiguration? = empty): RTCPeerConnection; operation generateCertificate(keygenAlgorithm: AlgorithmIdentifier): Promise<RTCCertificate> }
 
 
@@ -14921,7 +14560,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCPeerConnectionIceErrorEvent: object { prototype: RTCPeerConnectionIceErrorEvent; on create(type`: Text, eventInitDict: RTCPeerConnectionIceErrorEventInit): RTCPeerConnectionIceErrorEvent }
 
 
@@ -14938,7 +14576,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCPeerConnectionIceEvent: object { prototype: RTCPeerConnectionIceEvent; on create(type`: Text, eventInitDict: RTCPeerConnectionIceEventInit? = empty): RTCPeerConnectionIceEvent }
 
 
@@ -14966,7 +14603,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCRtpReceiver: object { prototype: RTCRtpReceiver; on create(): RTCRtpReceiver; operation getCapabilities(kind: Text): RTCRtpCapabilities? }
 
 
@@ -15000,7 +14636,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCRtpSender: object { prototype: RTCRtpSender; on create(): RTCRtpSender; operation getCapabilities(kind: Text): RTCRtpCapabilities? }
 
 
@@ -15028,7 +14663,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCRtpTransceiver: object { prototype: RTCRtpTransceiver; on create(): RTCRtpTransceiver }
 
 
@@ -15066,7 +14700,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCSctpTransport: object { prototype: RTCSctpTransport; on create(): RTCSctpTransport }
 
 
@@ -15088,7 +14721,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCSessionDescription: object { prototype: RTCSessionDescription; on create(descriptionInitDict: RTCSessionDescriptionInit): RTCSessionDescription }
 
 
@@ -15100,7 +14732,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCStatsReport: object { prototype: RTCStatsReport; on create(): RTCStatsReport }
 
 
@@ -15122,7 +14753,6 @@ external
   }
 
 
-  external
   /*(!) var */ RTCTrackEvent: object { prototype: RTCTrackEvent; on create(type`: Text, eventInitDict: RTCTrackEventInit): RTCTrackEvent }
 
 
@@ -15134,7 +14764,6 @@ external
   }
 
 
-  external
   /*(!) var */ RadioNodeList: object { prototype: RadioNodeList; on create(): RadioNodeList }
 
 
@@ -15211,7 +14840,6 @@ external
   }
 
 
-  external
   /*(!) var */ Range: object { prototype: Range; on create(): Range; guarded START_TO_START: 0; guarded START_TO_END: 1; guarded END_TO_END: 2; guarded END_TO_START: 3 }
 
 
@@ -15233,7 +14861,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableByteStreamController: object { prototype: ReadableByteStreamController; on create(): ReadableByteStreamController }
 
 
@@ -15264,7 +14891,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableStream: object { prototype: ReadableStream; on create(underlyingSource: UnderlyingByteSource, strategy: object { highWaterMark: Number }? = empty): ReadableStream<Uint8Array>; on create(underlyingSource: UnderlyingDefaultSource<R>, strategy: QueuingStrategy<R>? = empty): ReadableStream<R>; on create(underlyingSource: UnderlyingSource<R>? = empty, strategy: QueuingStrategy<R>? = empty): ReadableStream<R> }
 
 
@@ -15278,7 +14904,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableStreamBYOBReader: object { prototype: ReadableStreamBYOBReader; on create(stream: ReadableStream): ReadableStreamBYOBReader }
 
 
@@ -15295,7 +14920,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableStreamBYOBRequest: object { prototype: ReadableStreamBYOBRequest; on create(): ReadableStreamBYOBRequest }
 
 
@@ -15314,7 +14938,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableStreamDefaultController: object { prototype: ReadableStreamDefaultController; on create(): ReadableStreamDefaultController }
 
 
@@ -15328,7 +14951,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReadableStreamDefaultReader: object { prototype: ReadableStreamDefaultReader; on create(stream: ReadableStream<R>): ReadableStreamDefaultReader<R> }
 
 
@@ -15380,7 +15002,6 @@ external
   }
 
 
-  external
   /*(!) var */ RemotePlayback: object { prototype: RemotePlayback; on create(): RemotePlayback }
 
 
@@ -15401,7 +15022,6 @@ external
   }
 
 
-  external
   /*(!) var */ Report: object { prototype: Report; on create(): Report }
 
 
@@ -15413,7 +15033,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReportBody: object { prototype: ReportBody; on create(): ReportBody }
 
 
@@ -15429,7 +15048,6 @@ external
   }
 
 
-  external
   /*(!) var */ ReportingObserver: object { prototype: ReportingObserver; on create(callback: ReportingObserverCallback, options: ReportingObserverOptions? = empty): ReportingObserver }
 
 
@@ -15484,7 +15102,6 @@ external
   }
 
 
-  external
   /*(!) var */ Request: object { prototype: Request; on create(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): Request }
 
 
@@ -15500,7 +15117,6 @@ external
   }
 
 
-  external
   /*(!) var */ ResizeObserver: object { prototype: ResizeObserver; on create(callback: ResizeObserverCallback): ResizeObserver }
 
 
@@ -15525,7 +15141,6 @@ external
   }
 
 
-  external
   /*(!) var */ ResizeObserverEntry: object { prototype: ResizeObserverEntry; on create(): ResizeObserverEntry }
 
 
@@ -15541,7 +15156,6 @@ external
   }
 
 
-  external
   /*(!) var */ ResizeObserverSize: object { prototype: ResizeObserverSize; on create(): ResizeObserverSize }
 
 
@@ -15578,7 +15192,6 @@ external
   }
 
 
-  external
   /*(!) var */ Response: object { prototype: Response; on create(body: BodyInit? = empty, init: ResponseInit? = empty): Response; operation error`(): Response; operation json(data: /*(!) any */ Object?, init: ResponseInit? = empty): Response; operation redirect(url: Object? /*(!)Текст | URL*/, status: Number? = empty): Response }
 
 
@@ -15608,7 +15221,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAElement: object { prototype: SVGAElement; on create(): SVGAElement }
 
 
@@ -15650,7 +15262,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAngle: object { prototype: SVGAngle; on create(): SVGAngle; guarded SVG_ANGLETYPE_UNKNOWN: 0; guarded SVG_ANGLETYPE_UNSPECIFIED: 1; guarded SVG_ANGLETYPE_DEG: 2; guarded SVG_ANGLETYPE_RAD: 3; guarded SVG_ANGLETYPE_GRAD: 4 }
 
 
@@ -15668,7 +15279,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimateElement: object { prototype: SVGAnimateElement; on create(): SVGAnimateElement }
 
 
@@ -15686,7 +15296,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimateMotionElement: object { prototype: SVGAnimateMotionElement; on create(): SVGAnimateMotionElement }
 
 
@@ -15704,7 +15313,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimateTransformElement: object { prototype: SVGAnimateTransformElement; on create(): SVGAnimateTransformElement }
 
 
@@ -15724,7 +15332,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedAngle: object { prototype: SVGAnimatedAngle; on create(): SVGAnimatedAngle }
 
 
@@ -15743,7 +15350,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedBoolean: object { prototype: SVGAnimatedBoolean; on create(): SVGAnimatedBoolean }
 
 
@@ -15762,7 +15368,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedEnumeration: object { prototype: SVGAnimatedEnumeration; on create(): SVGAnimatedEnumeration }
 
 
@@ -15781,7 +15386,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedInteger: object { prototype: SVGAnimatedInteger; on create(): SVGAnimatedInteger }
 
 
@@ -15801,7 +15405,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedLength: object { prototype: SVGAnimatedLength; on create(): SVGAnimatedLength }
 
 
@@ -15821,7 +15424,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedLengthList: object { prototype: SVGAnimatedLengthList; on create(): SVGAnimatedLengthList }
 
 
@@ -15840,7 +15442,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedNumber: object { prototype: SVGAnimatedNumber; on create(): SVGAnimatedNumber }
 
 
@@ -15860,7 +15461,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedNumberList: object { prototype: SVGAnimatedNumberList; on create(): SVGAnimatedNumberList }
 
 
@@ -15890,7 +15490,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedPreserveAspectRatio: object { prototype: SVGAnimatedPreserveAspectRatio; on create(): SVGAnimatedPreserveAspectRatio }
 
 
@@ -15910,7 +15509,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedRect: object { prototype: SVGAnimatedRect; on create(): SVGAnimatedRect }
 
 
@@ -15929,7 +15527,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedString: object { prototype: SVGAnimatedString; on create(): SVGAnimatedString }
 
 
@@ -15949,7 +15546,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimatedTransformList: object { prototype: SVGAnimatedTransformList; on create(): SVGAnimatedTransformList }
 
 
@@ -15984,7 +15580,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGAnimationElement: object { prototype: SVGAnimationElement; on create(): SVGAnimationElement }
 
 
@@ -16015,7 +15610,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGCircleElement: object { prototype: SVGCircleElement; on create(): SVGCircleElement }
 
 
@@ -16043,7 +15637,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGClipPathElement: object { prototype: SVGClipPathElement; on create(): SVGClipPathElement }
 
 
@@ -16104,7 +15697,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGComponentTransferFunctionElement: object { prototype: SVGComponentTransferFunctionElement; on create(): SVGComponentTransferFunctionElement; guarded SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN: 0; guarded SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY: 1; guarded SVG_FECOMPONENTTRANSFER_TYPE_TABLE: 2; guarded SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE: 3; guarded SVG_FECOMPONENTTRANSFER_TYPE_LINEAR: 4; guarded SVG_FECOMPONENTTRANSFER_TYPE_GAMMA: 5 }
 
 
@@ -16126,7 +15718,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGDefsElement: object { prototype: SVGDefsElement; on create(): SVGDefsElement }
 
 
@@ -16148,7 +15739,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGDescElement: object { prototype: SVGDescElement; on create(): SVGDescElement }
 
 
@@ -16182,7 +15772,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGElement: object { prototype: SVGElement; on create(): SVGElement }
 
 
@@ -16216,7 +15805,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGEllipseElement: object { prototype: SVGEllipseElement; on create(): SVGEllipseElement }
 
 
@@ -16298,7 +15886,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEBlendElement: object { prototype: SVGFEBlendElement; on create(): SVGFEBlendElement; guarded SVG_FEBLEND_MODE_UNKNOWN: 0; guarded SVG_FEBLEND_MODE_NORMAL: 1; guarded SVG_FEBLEND_MODE_MULTIPLY: 2; guarded SVG_FEBLEND_MODE_SCREEN: 3; guarded SVG_FEBLEND_MODE_DARKEN: 4; guarded SVG_FEBLEND_MODE_LIGHTEN: 5; guarded SVG_FEBLEND_MODE_OVERLAY: 6; guarded SVG_FEBLEND_MODE_COLOR_DODGE: 7; guarded SVG_FEBLEND_MODE_COLOR_BURN: 8; guarded SVG_FEBLEND_MODE_HARD_LIGHT: 9; guarded SVG_FEBLEND_MODE_SOFT_LIGHT: 10; guarded SVG_FEBLEND_MODE_DIFFERENCE: 11; guarded SVG_FEBLEND_MODE_EXCLUSION: 12; guarded SVG_FEBLEND_MODE_HUE: 13; guarded SVG_FEBLEND_MODE_SATURATION: 14; guarded SVG_FEBLEND_MODE_COLOR: 15; guarded SVG_FEBLEND_MODE_LUMINOSITY: 16 }
 
 
@@ -16344,7 +15931,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEColorMatrixElement: object { prototype: SVGFEColorMatrixElement; on create(): SVGFEColorMatrixElement; guarded SVG_FECOLORMATRIX_TYPE_UNKNOWN: 0; guarded SVG_FECOLORMATRIX_TYPE_MATRIX: 1; guarded SVG_FECOLORMATRIX_TYPE_SATURATE: 2; guarded SVG_FECOLORMATRIX_TYPE_HUEROTATE: 3; guarded SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA: 4 }
 
 
@@ -16369,7 +15955,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEComponentTransferElement: object { prototype: SVGFEComponentTransferElement; on create(): SVGFEComponentTransferElement }
 
 
@@ -16433,7 +16018,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFECompositeElement: object { prototype: SVGFECompositeElement; on create(): SVGFECompositeElement; guarded SVG_FECOMPOSITE_OPERATOR_UNKNOWN: 0; guarded SVG_FECOMPOSITE_OPERATOR_OVER: 1; guarded SVG_FECOMPOSITE_OPERATOR_IN: 2; guarded SVG_FECOMPOSITE_OPERATOR_OUT: 3; guarded SVG_FECOMPOSITE_OPERATOR_ATOP: 4; guarded SVG_FECOMPOSITE_OPERATOR_XOR: 5; guarded SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: 6 }
 
 
@@ -16503,7 +16087,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEConvolveMatrixElement: object { prototype: SVGFEConvolveMatrixElement; on create(): SVGFEConvolveMatrixElement; guarded SVG_EDGEMODE_UNKNOWN: 0; guarded SVG_EDGEMODE_DUPLICATE: 1; guarded SVG_EDGEMODE_WRAP: 2; guarded SVG_EDGEMODE_NONE: 3 }
 
 
@@ -16540,7 +16123,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEDiffuseLightingElement: object { prototype: SVGFEDiffuseLightingElement; on create(): SVGFEDiffuseLightingElement }
 
 
@@ -16592,7 +16174,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEDisplacementMapElement: object { prototype: SVGFEDisplacementMapElement; on create(): SVGFEDisplacementMapElement; guarded SVG_CHANNEL_UNKNOWN: 0; guarded SVG_CHANNEL_R: 1; guarded SVG_CHANNEL_G: 2; guarded SVG_CHANNEL_B: 3; guarded SVG_CHANNEL_A: 4 }
 
 
@@ -16620,7 +16201,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEDistantLightElement: object { prototype: SVGFEDistantLightElement; on create(): SVGFEDistantLightElement }
 
 
@@ -16655,7 +16235,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEDropShadowElement: object { prototype: SVGFEDropShadowElement; on create(): SVGFEDropShadowElement }
 
 
@@ -16677,7 +16256,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEFloodElement: object { prototype: SVGFEFloodElement; on create(): SVGFEFloodElement }
 
 
@@ -16699,7 +16277,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEFuncAElement: object { prototype: SVGFEFuncAElement; on create(): SVGFEFuncAElement }
 
 
@@ -16721,7 +16298,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEFuncBElement: object { prototype: SVGFEFuncBElement; on create(): SVGFEFuncBElement }
 
 
@@ -16743,7 +16319,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEFuncGElement: object { prototype: SVGFEFuncGElement; on create(): SVGFEFuncGElement }
 
 
@@ -16765,7 +16340,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEFuncRElement: object { prototype: SVGFEFuncRElement; on create(): SVGFEFuncRElement }
 
 
@@ -16798,7 +16372,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEGaussianBlurElement: object { prototype: SVGFEGaussianBlurElement; on create(): SVGFEGaussianBlurElement }
 
 
@@ -16823,7 +16396,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEImageElement: object { prototype: SVGFEImageElement; on create(): SVGFEImageElement }
 
 
@@ -16845,7 +16417,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEMergeElement: object { prototype: SVGFEMergeElement; on create(): SVGFEMergeElement }
 
 
@@ -16870,7 +16441,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEMergeNodeElement: object { prototype: SVGFEMergeNodeElement; on create(): SVGFEMergeNodeElement }
 
 
@@ -16913,7 +16483,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEMorphologyElement: object { prototype: SVGFEMorphologyElement; on create(): SVGFEMorphologyElement; guarded SVG_MORPHOLOGY_OPERATOR_UNKNOWN: 0; guarded SVG_MORPHOLOGY_OPERATOR_ERODE: 1; guarded SVG_MORPHOLOGY_OPERATOR_DILATE: 2 }
 
 
@@ -16944,7 +16513,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEOffsetElement: object { prototype: SVGFEOffsetElement; on create(): SVGFEOffsetElement }
 
 
@@ -16975,7 +16543,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFEPointLightElement: object { prototype: SVGFEPointLightElement; on create(): SVGFEPointLightElement }
 
 
@@ -17015,7 +16582,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFESpecularLightingElement: object { prototype: SVGFESpecularLightingElement; on create(): SVGFESpecularLightingElement }
 
 
@@ -17061,7 +16627,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFESpotLightElement: object { prototype: SVGFESpotLightElement; on create(): SVGFESpotLightElement }
 
 
@@ -17086,7 +16651,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFETileElement: object { prototype: SVGFETileElement; on create(): SVGFETileElement }
 
 
@@ -17144,7 +16708,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFETurbulenceElement: object { prototype: SVGFETurbulenceElement; on create(): SVGFETurbulenceElement; guarded SVG_TURBULENCE_TYPE_UNKNOWN: 0; guarded SVG_TURBULENCE_TYPE_FRACTALNOISE: 1; guarded SVG_TURBULENCE_TYPE_TURBULENCE: 2; guarded SVG_STITCHTYPE_UNKNOWN: 0; guarded SVG_STITCHTYPE_STITCH: 1; guarded SVG_STITCHTYPE_NOSTITCH: 2 }
 
 
@@ -17184,7 +16747,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGFilterElement: object { prototype: SVGFilterElement; on create(): SVGFilterElement }
 
 
@@ -17247,7 +16809,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGForeignObjectElement: object { prototype: SVGForeignObjectElement; on create(): SVGForeignObjectElement }
 
 
@@ -17269,7 +16830,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGGElement: object { prototype: SVGGElement; on create(): SVGGElement }
 
 
@@ -17298,7 +16858,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGGeometryElement: object { prototype: SVGGeometryElement; on create(): SVGGeometryElement }
 
 
@@ -17341,7 +16900,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGGradientElement: object { prototype: SVGGradientElement; on create(): SVGGradientElement; guarded SVG_SPREADMETHOD_UNKNOWN: 0; guarded SVG_SPREADMETHOD_PAD: 1; guarded SVG_SPREADMETHOD_REFLECT: 2; guarded SVG_SPREADMETHOD_REPEAT: 3 }
 
 
@@ -17372,7 +16930,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGGraphicsElement: object { prototype: SVGGraphicsElement; on create(): SVGGraphicsElement }
 
 
@@ -17409,7 +16966,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGImageElement: object { prototype: SVGImageElement; on create(): SVGImageElement }
 
 
@@ -17469,7 +17025,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGLength: object { prototype: SVGLength; on create(): SVGLength; guarded SVG_LENGTHTYPE_UNKNOWN: 0; guarded SVG_LENGTHTYPE_NUMBER: 1; guarded SVG_LENGTHTYPE_PERCENTAGE: 2; guarded SVG_LENGTHTYPE_EMS: 3; guarded SVG_LENGTHTYPE_EXS: 4; guarded SVG_LENGTHTYPE_PX: 5; guarded SVG_LENGTHTYPE_CM: 6; guarded SVG_LENGTHTYPE_MM: 7; guarded SVG_LENGTHTYPE_IN: 8; guarded SVG_LENGTHTYPE_PT: 9; guarded SVG_LENGTHTYPE_PC: 10 }
 
 
@@ -17505,7 +17060,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGLengthList: object { prototype: SVGLengthList; on create(): SVGLengthList }
 
 
@@ -17539,7 +17093,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGLineElement: object { prototype: SVGLineElement; on create(): SVGLineElement }
 
 
@@ -17573,7 +17126,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGLinearGradientElement: object { prototype: SVGLinearGradientElement; on create(): SVGLinearGradientElement }
 
 
@@ -17591,7 +17143,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGMPathElement: object { prototype: SVGMPathElement; on create(): SVGMPathElement }
 
 
@@ -17652,7 +17203,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGMarkerElement: object { prototype: SVGMarkerElement; on create(): SVGMarkerElement; guarded SVG_MARKERUNITS_UNKNOWN: 0; guarded SVG_MARKERUNITS_USERSPACEONUSE: 1; guarded SVG_MARKERUNITS_STROKEWIDTH: 2; guarded SVG_MARKER_ORIENT_UNKNOWN: 0; guarded SVG_MARKER_ORIENT_AUTO: 1; guarded SVG_MARKER_ORIENT_ANGLE: 2 }
 
 
@@ -17692,7 +17242,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGMaskElement: object { prototype: SVGMaskElement; on create(): SVGMaskElement }
 
 
@@ -17714,7 +17263,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGMetadataElement: object { prototype: SVGMetadataElement; on create(): SVGMetadataElement }
 
 
@@ -17730,7 +17278,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGNumber: object { prototype: SVGNumber; on create(): SVGNumber }
 
 
@@ -17766,7 +17313,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGNumberList: object { prototype: SVGNumberList; on create(): SVGNumberList }
 
 
@@ -17788,7 +17334,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPathElement: object { prototype: SVGPathElement; on create(): SVGPathElement }
 
 
@@ -17831,7 +17376,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPatternElement: object { prototype: SVGPatternElement; on create(): SVGPatternElement }
 
 
@@ -17863,7 +17407,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPointList: object { prototype: SVGPointList; on create(): SVGPointList }
 
 
@@ -17885,7 +17428,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPolygonElement: object { prototype: SVGPolygonElement; on create(): SVGPolygonElement }
 
 
@@ -17907,7 +17449,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPolylineElement: object { prototype: SVGPolylineElement; on create(): SVGPolylineElement }
 
 
@@ -17967,7 +17508,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGPreserveAspectRatio: object { prototype: SVGPreserveAspectRatio; on create(): SVGPreserveAspectRatio; guarded SVG_PRESERVEASPECTRATIO_UNKNOWN: 0; guarded SVG_PRESERVEASPECTRATIO_NONE: 1; guarded SVG_PRESERVEASPECTRATIO_XMINYMIN: 2; guarded SVG_PRESERVEASPECTRATIO_XMIDYMIN: 3; guarded SVG_PRESERVEASPECTRATIO_XMAXYMIN: 4; guarded SVG_PRESERVEASPECTRATIO_XMINYMID: 5; guarded SVG_PRESERVEASPECTRATIO_XMIDYMID: 6; guarded SVG_PRESERVEASPECTRATIO_XMAXYMID: 7; guarded SVG_PRESERVEASPECTRATIO_XMINYMAX: 8; guarded SVG_PRESERVEASPECTRATIO_XMIDYMAX: 9; guarded SVG_PRESERVEASPECTRATIO_XMAXYMAX: 10; guarded SVG_MEETORSLICE_UNKNOWN: 0; guarded SVG_MEETORSLICE_MEET: 1; guarded SVG_MEETORSLICE_SLICE: 2 }
 
 
@@ -18007,7 +17547,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGRadialGradientElement: object { prototype: SVGRadialGradientElement; on create(): SVGRadialGradientElement }
 
 
@@ -18047,7 +17586,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGRectElement: object { prototype: SVGRectElement; on create(): SVGRectElement }
 
 
@@ -18130,7 +17668,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGSVGElement: object { prototype: SVGSVGElement; on create(): SVGSVGElement }
 
 
@@ -18154,7 +17691,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGScriptElement: object { prototype: SVGScriptElement; on create(): SVGScriptElement }
 
 
@@ -18172,7 +17708,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGSetElement: object { prototype: SVGSetElement; on create(): SVGSetElement }
 
 
@@ -18197,7 +17732,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGStopElement: object { prototype: SVGStopElement; on create(): SVGStopElement }
 
 
@@ -18233,7 +17767,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGStringList: object { prototype: SVGStringList; on create(): SVGStringList }
 
 
@@ -18257,7 +17790,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGStyleElement: object { prototype: SVGStyleElement; on create(): SVGStyleElement }
 
 
@@ -18279,7 +17811,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGSwitchElement: object { prototype: SVGSwitchElement; on create(): SVGSwitchElement }
 
 
@@ -18301,7 +17832,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGSymbolElement: object { prototype: SVGSymbolElement; on create(): SVGSymbolElement }
 
 
@@ -18323,7 +17853,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTSpanElement: object { prototype: SVGTSpanElement; on create(): SVGTSpanElement }
 
 
@@ -18386,7 +17915,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTextContentElement: object { prototype: SVGTextContentElement; on create(): SVGTextContentElement; guarded LENGTHADJUST_UNKNOWN: 0; guarded LENGTHADJUST_SPACING: 1; guarded LENGTHADJUST_SPACINGANDGLYPHS: 2 }
 
 
@@ -18408,7 +17936,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTextElement: object { prototype: SVGTextElement; on create(): SVGTextElement }
 
 
@@ -18457,7 +17984,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTextPathElement: object { prototype: SVGTextPathElement; on create(): SVGTextPathElement; guarded TEXTPATH_METHODTYPE_UNKNOWN: 0; guarded TEXTPATH_METHODTYPE_ALIGN: 1; guarded TEXTPATH_METHODTYPE_STRETCH: 2; guarded TEXTPATH_SPACINGTYPE_UNKNOWN: 0; guarded TEXTPATH_SPACINGTYPE_AUTO: 1; guarded TEXTPATH_SPACINGTYPE_EXACT: 2 }
 
 
@@ -18494,7 +18020,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTextPositioningElement: object { prototype: SVGTextPositioningElement; on create(): SVGTextPositioningElement }
 
 
@@ -18516,7 +18041,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTitleElement: object { prototype: SVGTitleElement; on create(): SVGTitleElement }
 
 
@@ -18572,7 +18096,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTransform: object { prototype: SVGTransform; on create(): SVGTransform; guarded SVG_TRANSFORM_UNKNOWN: 0; guarded SVG_TRANSFORM_MATRIX: 1; guarded SVG_TRANSFORM_TRANSLATE: 2; guarded SVG_TRANSFORM_SCALE: 3; guarded SVG_TRANSFORM_ROTATE: 4; guarded SVG_TRANSFORM_SKEWX: 5; guarded SVG_TRANSFORM_SKEWY: 6 }
 
 
@@ -18612,7 +18135,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGTransformList: object { prototype: SVGTransformList; on create(): SVGTransformList }
 
 
@@ -18642,7 +18164,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGUnitTypes: object { prototype: SVGUnitTypes; on create(): SVGUnitTypes; guarded SVG_UNIT_TYPE_UNKNOWN: 0; guarded SVG_UNIT_TYPE_USERSPACEONUSE: 1; guarded SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: 2 }
 
 
@@ -18676,7 +18197,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGUseElement: object { prototype: SVGUseElement; on create(): SVGUseElement }
 
 
@@ -18698,7 +18218,6 @@ external
   }
 
 
-  external
   /*(!) var */ SVGViewElement: object { prototype: SVGViewElement; on create(): SVGViewElement }
 
 
@@ -18733,7 +18252,6 @@ external
   }
 
 
-  external
   /*(!) var */ Screen: object { prototype: Screen; on create(): Screen }
 
 
@@ -18767,7 +18285,6 @@ external
   }
 
 
-  external
   /*(!) var */ ScreenOrientation: object { prototype: ScreenOrientation; on create(): ScreenOrientation }
 
 
@@ -18823,7 +18340,6 @@ external
   }
 
 
-  external
   /*(!) var */ SecurityPolicyViolationEvent: object { prototype: SecurityPolicyViolationEvent; on create(type`: Text, eventInitDict: SecurityPolicyViolationEventInit? = empty): SecurityPolicyViolationEvent }
 
 
@@ -18890,7 +18406,6 @@ external
   }
 
 
-  external
   /*(!) var */ Selection: object { prototype: Selection; on create(): Selection }
 
 
@@ -18931,7 +18446,6 @@ external
   }
 
 
-  external
   /*(!) var */ ServiceWorker: object { prototype: ServiceWorker; on create(): ServiceWorker }
 
 
@@ -18984,7 +18498,6 @@ external
   }
 
 
-  external
   /*(!) var */ ServiceWorkerContainer: object { prototype: ServiceWorkerContainer; on create(): ServiceWorkerContainer }
 
 
@@ -19044,7 +18557,6 @@ external
   }
 
 
-  external
   /*(!) var */ ServiceWorkerRegistration: object { prototype: ServiceWorkerRegistration; on create(): ServiceWorkerRegistration }
 
 
@@ -19082,7 +18594,6 @@ external
   }
 
 
-  external
   /*(!) var */ ShadowRoot: object { prototype: ShadowRoot; on create(): ShadowRoot }
 
 
@@ -19103,7 +18614,6 @@ external
   }
 
 
-  external
   /*(!) var */ SharedWorker: object { prototype: SharedWorker; on create(scriptURL: Object? /*(!)Текст | URL*/, options: Object? /*(!)Текст | WorkerOptions | пусто*/ = empty): SharedWorker }
 
 
@@ -19178,7 +18688,6 @@ external
   }
 
 
-  external
   /*(!) var */ SourceBuffer: object { prototype: SourceBuffer; on create(): SourceBuffer }
 
 
@@ -19217,7 +18726,6 @@ external
   }
 
 
-  external
   /*(!) var */ SourceBufferList: object { prototype: SourceBufferList; on create(): SourceBufferList }
 
 
@@ -19233,7 +18741,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechRecognitionAlternative: object { prototype: SpeechRecognitionAlternative; on create(): SpeechRecognitionAlternative }
 
 
@@ -19253,7 +18760,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechRecognitionResult: object { prototype: SpeechRecognitionResult; on create(): SpeechRecognitionResult }
 
 
@@ -19270,7 +18776,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechRecognitionResultList: object { prototype: SpeechRecognitionResultList; on create(): SpeechRecognitionResultList }
 
 
@@ -19319,7 +18824,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechSynthesis: object { prototype: SpeechSynthesis; on create(): SpeechSynthesis }
 
 
@@ -19332,7 +18836,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechSynthesisErrorEvent: object { prototype: SpeechSynthesisErrorEvent; on create(type`: Text, eventInitDict: SpeechSynthesisErrorEventInit): SpeechSynthesisErrorEvent }
 
 
@@ -19361,7 +18864,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechSynthesisEvent: object { prototype: SpeechSynthesisEvent; on create(type`: Text, eventInitDict: SpeechSynthesisEventInit): SpeechSynthesisEvent }
 
 
@@ -19427,7 +18929,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechSynthesisUtterance: object { prototype: SpeechSynthesisUtterance; on create(text: Text? = empty): SpeechSynthesisUtterance }
 
 
@@ -19456,7 +18957,6 @@ external
   }
 
 
-  external
   /*(!) var */ SpeechSynthesisVoice: object { prototype: SpeechSynthesisVoice; on create(): SpeechSynthesisVoice }
 
 
@@ -19468,7 +18968,6 @@ external
   }
 
 
-  external
   /*(!) var */ StaticRange: object { prototype: StaticRange; on create(init: StaticRangeInit): StaticRange }
 
 
@@ -19485,7 +18984,6 @@ external
   }
 
 
-  external
   /*(!) var */ StereoPannerNode: object { prototype: StereoPannerNode; on create(context: BaseAudioContext, options: StereoPannerOptions? = empty): StereoPannerNode }
 
 
@@ -19514,7 +19012,6 @@ external
   }
 
 
-  external
   /*(!) var */ Storage: object { prototype: Storage; on create(): Storage }
 
 
@@ -19530,7 +19027,6 @@ external
   }
 
 
-  external
   /*(!) var */ StorageEvent: object { prototype: StorageEvent; on create(type`: Text, eventInitDict: StorageEventInit? = empty): StorageEvent }
 
 
@@ -19552,7 +19048,6 @@ external
   }
 
 
-  external
   /*(!) var */ StorageManager: object { prototype: StorageManager; on create(): StorageManager }
 
 
@@ -19572,7 +19067,6 @@ external
   }
 
 
-  external
   /*(!) var */ StylePropertyMap: object { prototype: StylePropertyMap; on create(): StylePropertyMap }
 
 
@@ -19593,7 +19087,6 @@ external
   }
 
 
-  external
   /*(!) var */ StylePropertyMapReadOnly: object { prototype: StylePropertyMapReadOnly; on create(): StylePropertyMapReadOnly }
 
 
@@ -19627,7 +19120,6 @@ external
   }
 
 
-  external
   /*(!) var */ StyleSheet: object { prototype: StyleSheet; on create(): StyleSheet }
 
 
@@ -19648,7 +19140,6 @@ external
   }
 
 
-  external
   /*(!) var */ StyleSheetList: object { prototype: StyleSheetList; on create(): StyleSheetList }
 
 
@@ -19661,7 +19152,6 @@ external
   }
 
 
-  external
   /*(!) var */ SubmitEvent: object { prototype: SubmitEvent; on create(type`: Text, eventInitDict: SubmitEventInit? = empty): SubmitEvent }
 
 
@@ -19712,7 +19202,6 @@ external
   }
 
 
-  external
   /*(!) var */ SubtleCrypto: object { prototype: SubtleCrypto; on create(): SubtleCrypto }
 
 
@@ -19731,7 +19220,6 @@ external
   }
 
 
-  external
   /*(!) var */ Text: object { prototype: Text; on create(data: Text? = empty): Text }
 
 
@@ -19747,7 +19235,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextDecoder: object { prototype: TextDecoder; on create(label: Text? = empty, options: TextDecoderOptions? = empty): TextDecoder }
 
 
@@ -19776,7 +19263,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextDecoderStream: object { prototype: TextDecoderStream; on create(label: Text? = empty, options: TextDecoderOptions? = empty): TextDecoderStream }
 
 
@@ -19794,7 +19280,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextEncoder: object { prototype: TextEncoder; on create(): TextEncoder }
 
 
@@ -19817,7 +19302,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextEncoderStream: object { prototype: TextEncoderStream; on create(): TextEncoderStream }
 
 
@@ -19852,7 +19336,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextMetrics: object { prototype: TextMetrics; on create(): TextMetrics }
 
 
@@ -19909,7 +19392,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextTrack: object { prototype: TextTrack; on create(): TextTrack }
 
 
@@ -19954,7 +19436,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextTrackCue: object { prototype: TextTrackCue; on create(): TextTrackCue }
 
 
@@ -19971,7 +19452,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextTrackCueList: object { prototype: TextTrackCueList; on create(): TextTrackCueList }
 
 
@@ -20012,7 +19492,6 @@ external
   }
 
 
-  external
   /*(!) var */ TextTrackList: object { prototype: TextTrackList; on create(): TextTrackList }
 
 
@@ -20033,7 +19512,6 @@ external
   }
 
 
-  external
   /*(!) var */ TimeRanges: object { prototype: TimeRanges; on create(): TimeRanges }
 
 
@@ -20049,7 +19527,6 @@ external
   }
 
 
-  external
   /*(!) var */ ToggleEvent: object { prototype: ToggleEvent; on create(type`: Text, eventInitDict: ToggleEventInit? = empty): ToggleEvent }
 
 
@@ -20099,7 +19576,6 @@ external
   }
 
 
-  external
   /*(!) var */ Touch: object { prototype: Touch; on create(touchInitDict: TouchInit): Touch }
 
 
@@ -20134,7 +19610,6 @@ external
   }
 
 
-  external
   /*(!) var */ TouchEvent: object { prototype: TouchEvent; on create(type`: Text, eventInitDict: TouchEventInit? = empty): TouchEvent }
 
 
@@ -20155,7 +19630,6 @@ external
   }
 
 
-  external
   /*(!) var */ TouchList: object { prototype: TouchList; on create(): TouchList }
 
 
@@ -20172,7 +19646,6 @@ external
   }
 
 
-  external
   /*(!) var */ TrackEvent: object { prototype: TrackEvent; on create(type`: Text, eventInitDict: TrackEventInit? = empty): TrackEvent }
 
 
@@ -20188,7 +19661,6 @@ external
   }
 
 
-  external
   /*(!) var */ TransformStream: object { prototype: TransformStream; on create(transformer: Transformer<I, O>? = empty, writableStrategy: QueuingStrategy<I>? = empty, readableStrategy: QueuingStrategy<O>? = empty): TransformStream<I, O> }
 
 
@@ -20207,7 +19679,6 @@ external
   }
 
 
-  external
   /*(!) var */ TransformStreamDefaultController: object { prototype: TransformStreamDefaultController; on create(): TransformStreamDefaultController }
 
 
@@ -20230,7 +19701,6 @@ external
   }
 
 
-  external
   /*(!) var */ TransitionEvent: object { prototype: TransitionEvent; on create(type`: Text, transitionEventInitDict: TransitionEventInit? = empty): TransitionEvent }
 
 
@@ -20269,7 +19739,6 @@ external
   }
 
 
-  external
   /*(!) var */ TreeWalker: object { prototype: TreeWalker; on create(): TreeWalker }
 
 
@@ -20285,7 +19754,6 @@ external
   }
 
 
-  external
   /*(!) var */ UIEvent: object { prototype: UIEvent; on create(type`: Text, eventInitDict: UIEventInit? = empty): UIEvent }
 
 
@@ -20329,13 +19797,11 @@ external
   }
 
 
-  external
   /*(!) var */ URL: object { prototype: URL; on create(url: Object? /*(!)Текст | URL*/, base: Object? /*(!)Текст | URL | пусто*/ = empty): URL; operation canParse(url: Object? /*(!)Текст | URL*/, base: Text? = empty): YesNo; operation createObjectURL(obj: Object? /*(!)Blob | MediaSource*/): Text; operation revokeObjectURL(url: Text) }
 
 
   type webkitURL = URL
 
-  external
   /*(!) var */ webkitURL: /*(!) typeof URL */ Object?
 
 
@@ -20366,7 +19832,6 @@ external
   }
 
 
-  external
   /*(!) var */ URLSearchParams: object { prototype: URLSearchParams; on create(init: Object? /*(!)Список<Список<Текст>> | Record<Текст, Текст> | Текст | URLSearchParams | пусто*/ = empty): URLSearchParams }
 
 
@@ -20382,7 +19847,6 @@ external
   }
 
 
-  external
   /*(!) var */ UserActivation: object { prototype: UserActivation; on create(): UserActivation }
 
 
@@ -20422,7 +19886,6 @@ external
   }
 
 
-  external
   /*(!) var */ VTTCue: object { prototype: VTTCue; on create(startTime: Number, endTime: Number, text: Text): VTTCue }
 
 
@@ -20448,7 +19911,6 @@ external
   }
 
 
-  external
   /*(!) var */ VTTRegion: object { prototype: VTTRegion; on create(): VTTRegion }
 
 
@@ -20495,7 +19957,6 @@ external
   }
 
 
-  external
   /*(!) var */ ValidityState: object { prototype: ValidityState; on create(): ValidityState }
 
 
@@ -20519,7 +19980,6 @@ external
   }
 
 
-  external
   /*(!) var */ VideoColorSpace: object { prototype: VideoColorSpace; on create(init: VideoColorSpaceInit? = empty): VideoColorSpace }
 
 
@@ -20565,7 +20025,6 @@ external
   }
 
 
-  external
   /*(!) var */ VideoDecoder: object { prototype: VideoDecoder; on create(init: VideoDecoderInit): VideoDecoder; operation isConfigSupported(config: VideoDecoderConfig): Promise<VideoDecoderSupport> }
 
 
@@ -20611,7 +20070,6 @@ external
   }
 
 
-  external
   /*(!) var */ VideoEncoder: object { prototype: VideoEncoder; on create(init: VideoEncoderInit): VideoEncoder; operation isConfigSupported(config: VideoEncoderConfig): Promise<VideoEncoderSupport> }
 
 
@@ -20659,7 +20117,6 @@ external
   }
 
 
-  external
   /*(!) var */ VideoFrame: object { prototype: VideoFrame; on create(image: CanvasImageSource, init: VideoFrameInit? = empty): VideoFrame; on create(data: BufferSource, init: VideoFrameBufferInit): VideoFrame }
 
 
@@ -20675,7 +20132,6 @@ external
   }
 
 
-  external
   /*(!) var */ VideoPlaybackQuality: object { prototype: VideoPlaybackQuality; on create(): VideoPlaybackQuality }
 
 
@@ -20726,7 +20182,6 @@ external
   }
 
 
-  external
   /*(!) var */ VisualViewport: object { prototype: VisualViewport; on create(): VisualViewport }
 
 
@@ -21123,7 +20578,6 @@ external
   }
 
 
-  external
   /*(!) var */ WakeLock: object { prototype: WakeLock; on create(): WakeLock }
 
 
@@ -21161,7 +20615,6 @@ external
   }
 
 
-  external
   /*(!) var */ WakeLockSentinel: object { prototype: WakeLockSentinel; on create(): WakeLockSentinel }
 
 
@@ -21179,7 +20632,6 @@ external
   }
 
 
-  external
   /*(!) var */ WaveShaperNode: object { prototype: WaveShaperNode; on create(context: BaseAudioContext, options: WaveShaperOptions? = empty): WaveShaperNode }
 
 
@@ -21191,7 +20643,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGL2RenderingContext: object { prototype: WebGL2RenderingContext; on create(): WebGL2RenderingContext; guarded READ_BUFFER = 0x0C02; guarded UNPACK_ROW_LENGTH = 0x0CF2; guarded UNPACK_SKIP_ROWS = 0x0CF3; guarded UNPACK_SKIP_PIXELS = 0x0CF4; guarded PACK_ROW_LENGTH = 0x0D02; guarded PACK_SKIP_ROWS = 0x0D03; guarded PACK_SKIP_PIXELS = 0x0D04; guarded COLOR = 0x1800; guarded DEPTH = 0x1801; guarded STENCIL = 0x1802; guarded RED = 0x1903; guarded RGB8 = 0x8051; guarded RGBA8 = 0x8058; guarded RGB10_A2 = 0x8059; guarded TEXTURE_BINDING_3D = 0x806A; guarded UNPACK_SKIP_IMAGES = 0x806D; guarded UNPACK_IMAGE_HEIGHT = 0x806E; guarded TEXTURE_3D = 0x806F; guarded TEXTURE_WRAP_R = 0x8072; guarded MAX_3D_TEXTURE_SIZE = 0x8073; guarded UNSIGNED_INT_2_10_10_10_REV = 0x8368; guarded MAX_ELEMENTS_VERTICES = 0x80E8; guarded MAX_ELEMENTS_INDICES = 0x80E9; guarded TEXTURE_MIN_LOD = 0x813A; guarded TEXTURE_MAX_LOD = 0x813B; guarded TEXTURE_BASE_LEVEL = 0x813C; guarded TEXTURE_MAX_LEVEL = 0x813D; guarded MIN = 0x8007; guarded MAX = 0x8008; guarded DEPTH_COMPONENT24 = 0x81A6; guarded MAX_TEXTURE_LOD_BIAS = 0x84FD; guarded TEXTURE_COMPARE_MODE = 0x884C; guarded TEXTURE_COMPARE_FUNC = 0x884D; guarded CURRENT_QUERY = 0x8865; guarded QUERY_RESULT = 0x8866; guarded QUERY_RESULT_AVAILABLE = 0x8867; guarded STREAM_READ = 0x88E1; guarded STREAM_COPY = 0x88E2; guarded STATIC_READ = 0x88E5; guarded STATIC_COPY = 0x88E6; guarded DYNAMIC_READ = 0x88E9; guarded DYNAMIC_COPY = 0x88EA; guarded MAX_DRAW_BUFFERS = 0x8824; guarded DRAW_BUFFER0 = 0x8825; guarded DRAW_BUFFER1 = 0x8826; guarded DRAW_BUFFER2 = 0x8827; guarded DRAW_BUFFER3 = 0x8828; guarded DRAW_BUFFER4 = 0x8829; guarded DRAW_BUFFER5 = 0x882A; guarded DRAW_BUFFER6 = 0x882B; guarded DRAW_BUFFER7 = 0x882C; guarded DRAW_BUFFER8 = 0x882D; guarded DRAW_BUFFER9 = 0x882E; guarded DRAW_BUFFER10 = 0x882F; guarded DRAW_BUFFER11 = 0x8830; guarded DRAW_BUFFER12 = 0x8831; guarded DRAW_BUFFER13 = 0x8832; guarded DRAW_BUFFER14 = 0x8833; guarded DRAW_BUFFER15 = 0x8834; guarded MAX_FRAGMENT_UNIFORM_COMPONENTS = 0x8B49; guarded MAX_VERTEX_UNIFORM_COMPONENTS = 0x8B4A; guarded SAMPLER_3D = 0x8B5F; guarded SAMPLER_2D_SHADOW = 0x8B62; guarded FRAGMENT_SHADER_DERIVATIVE_HINT = 0x8B8B; guarded PIXEL_PACK_BUFFER = 0x88EB; guarded PIXEL_UNPACK_BUFFER = 0x88EC; guarded PIXEL_PACK_BUFFER_BINDING = 0x88ED; guarded PIXEL_UNPACK_BUFFER_BINDING = 0x88EF; guarded FLOAT_MAT2x3 = 0x8B65; guarded FLOAT_MAT2x4 = 0x8B66; guarded FLOAT_MAT3x2 = 0x8B67; guarded FLOAT_MAT3x4 = 0x8B68; guarded FLOAT_MAT4x2 = 0x8B69; guarded FLOAT_MAT4x3 = 0x8B6A; guarded SRGB = 0x8C40; guarded SRGB8 = 0x8C41; guarded SRGB8_ALPHA8 = 0x8C43; guarded COMPARE_REF_TO_TEXTURE = 0x884E; guarded RGBA32F = 0x8814; guarded RGB32F = 0x8815; guarded RGBA16F = 0x881A; guarded RGB16F = 0x881B; guarded VERTEX_ATTRIB_ARRAY_INTEGER = 0x88FD; guarded MAX_ARRAY_TEXTURE_LAYERS = 0x88FF; guarded MIN_PROGRAM_TEXEL_OFFSET = 0x8904; guarded MAX_PROGRAM_TEXEL_OFFSET = 0x8905; guarded MAX_VARYING_COMPONENTS = 0x8B4B; guarded TEXTURE_2D_ARRAY = 0x8C1A; guarded TEXTURE_BINDING_2D_ARRAY = 0x8C1D; guarded R11F_G11F_B10F = 0x8C3A; guarded UNSIGNED_INT_10F_11F_11F_REV = 0x8C3B; guarded RGB9_E5 = 0x8C3D; guarded UNSIGNED_INT_5_9_9_9_REV = 0x8C3E; guarded TRANSFORM_FEEDBACK_BUFFER_MODE = 0x8C7F; guarded MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS = 0x8C80; guarded TRANSFORM_FEEDBACK_VARYINGS = 0x8C83; guarded TRANSFORM_FEEDBACK_BUFFER_START = 0x8C84; guarded TRANSFORM_FEEDBACK_BUFFER_SIZE = 0x8C85; guarded TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN = 0x8C88; guarded RASTERIZER_DISCARD = 0x8C89; guarded MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS = 0x8C8A; guarded MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 0x8C8B; guarded INTERLEAVED_ATTRIBS = 0x8C8C; guarded SEPARATE_ATTRIBS = 0x8C8D; guarded TRANSFORM_FEEDBACK_BUFFER = 0x8C8E; guarded TRANSFORM_FEEDBACK_BUFFER_BINDING = 0x8C8F; guarded RGBA32UI = 0x8D70; guarded RGB32UI = 0x8D71; guarded RGBA16UI = 0x8D76; guarded RGB16UI = 0x8D77; guarded RGBA8UI = 0x8D7C; guarded RGB8UI = 0x8D7D; guarded RGBA32I = 0x8D82; guarded RGB32I = 0x8D83; guarded RGBA16I = 0x8D88; guarded RGB16I = 0x8D89; guarded RGBA8I = 0x8D8E; guarded RGB8I = 0x8D8F; guarded RED_INTEGER = 0x8D94; guarded RGB_INTEGER = 0x8D98; guarded RGBA_INTEGER = 0x8D99; guarded SAMPLER_2D_ARRAY = 0x8DC1; guarded SAMPLER_2D_ARRAY_SHADOW = 0x8DC4; guarded SAMPLER_CUBE_SHADOW = 0x8DC5; guarded UNSIGNED_INT_VEC2 = 0x8DC6; guarded UNSIGNED_INT_VEC3 = 0x8DC7; guarded UNSIGNED_INT_VEC4 = 0x8DC8; guarded INT_SAMPLER_2D = 0x8DCA; guarded INT_SAMPLER_3D = 0x8DCB; guarded INT_SAMPLER_CUBE = 0x8DCC; guarded INT_SAMPLER_2D_ARRAY = 0x8DCF; guarded UNSIGNED_INT_SAMPLER_2D = 0x8DD2; guarded UNSIGNED_INT_SAMPLER_3D = 0x8DD3; guarded UNSIGNED_INT_SAMPLER_CUBE = 0x8DD4; guarded UNSIGNED_INT_SAMPLER_2D_ARRAY = 0x8DD7; guarded DEPTH_COMPONENT32F = 0x8CAC; guarded DEPTH32F_STENCIL8 = 0x8CAD; guarded FLOAT_32_UNSIGNED_INT_24_8_REV = 0x8DAD; guarded FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING = 0x8210; guarded FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE = 0x8211; guarded FRAMEBUFFER_ATTACHMENT_RED_SIZE = 0x8212; guarded FRAMEBUFFER_ATTACHMENT_GREEN_SIZE = 0x8213; guarded FRAMEBUFFER_ATTACHMENT_BLUE_SIZE = 0x8214; guarded FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE = 0x8215; guarded FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE = 0x8216; guarded FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE = 0x8217; guarded FRAMEBUFFER_DEFAULT = 0x8218; guarded UNSIGNED_INT_24_8 = 0x84FA; guarded DEPTH24_STENCIL8 = 0x88F0; guarded UNSIGNED_NORMALIZED = 0x8C17; guarded DRAW_FRAMEBUFFER_BINDING = 0x8CA6; guarded READ_FRAMEBUFFER = 0x8CA8; guarded DRAW_FRAMEBUFFER = 0x8CA9; guarded READ_FRAMEBUFFER_BINDING = 0x8CAA; guarded RENDERBUFFER_SAMPLES = 0x8CAB; guarded FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER = 0x8CD4; guarded MAX_COLOR_ATTACHMENTS = 0x8CDF; guarded COLOR_ATTACHMENT1 = 0x8CE1; guarded COLOR_ATTACHMENT2 = 0x8CE2; guarded COLOR_ATTACHMENT3 = 0x8CE3; guarded COLOR_ATTACHMENT4 = 0x8CE4; guarded COLOR_ATTACHMENT5 = 0x8CE5; guarded COLOR_ATTACHMENT6 = 0x8CE6; guarded COLOR_ATTACHMENT7 = 0x8CE7; guarded COLOR_ATTACHMENT8 = 0x8CE8; guarded COLOR_ATTACHMENT9 = 0x8CE9; guarded COLOR_ATTACHMENT10 = 0x8CEA; guarded COLOR_ATTACHMENT11 = 0x8CEB; guarded COLOR_ATTACHMENT12 = 0x8CEC; guarded COLOR_ATTACHMENT13 = 0x8CED; guarded COLOR_ATTACHMENT14 = 0x8CEE; guarded COLOR_ATTACHMENT15 = 0x8CEF; guarded FRAMEBUFFER_INCOMPLETE_MULTISAMPLE = 0x8D56; guarded MAX_SAMPLES = 0x8D57; guarded HALF_FLOAT = 0x140B; guarded RG = 0x8227; guarded RG_INTEGER = 0x8228; guarded R8 = 0x8229; guarded RG8 = 0x822B; guarded R16F = 0x822D; guarded R32F = 0x822E; guarded RG16F = 0x822F; guarded RG32F = 0x8230; guarded R8I = 0x8231; guarded R8UI = 0x8232; guarded R16I = 0x8233; guarded R16UI = 0x8234; guarded R32I = 0x8235; guarded R32UI = 0x8236; guarded RG8I = 0x8237; guarded RG8UI = 0x8238; guarded RG16I = 0x8239; guarded RG16UI = 0x823A; guarded RG32I = 0x823B; guarded RG32UI = 0x823C; guarded VERTEX_ARRAY_BINDING = 0x85B5; guarded R8_SNORM = 0x8F94; guarded RG8_SNORM = 0x8F95; guarded RGB8_SNORM = 0x8F96; guarded RGBA8_SNORM = 0x8F97; guarded SIGNED_NORMALIZED = 0x8F9C; guarded COPY_READ_BUFFER = 0x8F36; guarded COPY_WRITE_BUFFER = 0x8F37; guarded COPY_READ_BUFFER_BINDING = 0x8F36; guarded COPY_WRITE_BUFFER_BINDING = 0x8F37; guarded UNIFORM_BUFFER = 0x8A11; guarded UNIFORM_BUFFER_BINDING = 0x8A28; guarded UNIFORM_BUFFER_START = 0x8A29; guarded UNIFORM_BUFFER_SIZE = 0x8A2A; guarded MAX_VERTEX_UNIFORM_BLOCKS = 0x8A2B; guarded MAX_FRAGMENT_UNIFORM_BLOCKS = 0x8A2D; guarded MAX_COMBINED_UNIFORM_BLOCKS = 0x8A2E; guarded MAX_UNIFORM_BUFFER_BINDINGS = 0x8A2F; guarded MAX_UNIFORM_BLOCK_SIZE = 0x8A30; guarded MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS = 0x8A31; guarded MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS = 0x8A33; guarded UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34; guarded ACTIVE_UNIFORM_BLOCKS = 0x8A36; guarded UNIFORM_TYPE = 0x8A37; guarded UNIFORM_SIZE = 0x8A38; guarded UNIFORM_BLOCK_INDEX = 0x8A3A; guarded UNIFORM_OFFSET = 0x8A3B; guarded UNIFORM_ARRAY_STRIDE = 0x8A3C; guarded UNIFORM_MATRIX_STRIDE = 0x8A3D; guarded UNIFORM_IS_ROW_MAJOR = 0x8A3E; guarded UNIFORM_BLOCK_BINDING = 0x8A3F; guarded UNIFORM_BLOCK_DATA_SIZE = 0x8A40; guarded UNIFORM_BLOCK_ACTIVE_UNIFORMS = 0x8A42; guarded UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES = 0x8A43; guarded UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER = 0x8A44; guarded UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER = 0x8A46; guarded INVALID_INDEX = 0xFFFFFFFF; guarded MAX_VERTEX_OUTPUT_COMPONENTS = 0x9122; guarded MAX_FRAGMENT_INPUT_COMPONENTS = 0x9125; guarded MAX_SERVER_WAIT_TIMEOUT = 0x9111; guarded OBJECT_TYPE = 0x9112; guarded SYNC_CONDITION = 0x9113; guarded SYNC_STATUS = 0x9114; guarded SYNC_FLAGS = 0x9115; guarded SYNC_FENCE = 0x9116; guarded SYNC_GPU_COMMANDS_COMPLETE = 0x9117; guarded UNSIGNALED = 0x9118; guarded SIGNALED = 0x9119; guarded ALREADY_SIGNALED = 0x911A; guarded TIMEOUT_EXPIRED = 0x911B; guarded CONDITION_SATISFIED = 0x911C; guarded WAIT_FAILED = 0x911D; guarded SYNC_FLUSH_COMMANDS_BIT = 0x00000001; guarded VERTEX_ATTRIB_ARRAY_DIVISOR = 0x88FE; guarded ANY_SAMPLES_PASSED = 0x8C2F; guarded ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A; guarded SAMPLER_BINDING = 0x8919; guarded RGB10_A2UI = 0x906F; guarded INT_2_10_10_10_REV = 0x8D9F; guarded TRANSFORM_FEEDBACK = 0x8E22; guarded TRANSFORM_FEEDBACK_PAUSED = 0x8E23; guarded TRANSFORM_FEEDBACK_ACTIVE = 0x8E24; guarded TRANSFORM_FEEDBACK_BINDING = 0x8E25; guarded TEXTURE_IMMUTABLE_FORMAT = 0x912F; guarded MAX_ELEMENT_INDEX = 0x8D6B; guarded TEXTURE_IMMUTABLE_LEVELS = 0x82DF; guarded TIMEOUT_IGNORED: -1; guarded MAX_CLIENT_WAIT_TIMEOUT_WEBGL = 0x9247; guarded DEPTH_BUFFER_BIT = 0x00000100; guarded STENCIL_BUFFER_BIT = 0x00000400; guarded COLOR_BUFFER_BIT = 0x00004000; guarded POINTS = 0x0000; guarded LINES = 0x0001; guarded LINE_LOOP = 0x0002; guarded LINE_STRIP = 0x0003; guarded TRIANGLES = 0x0004; guarded TRIANGLE_STRIP = 0x0005; guarded TRIANGLE_FAN = 0x0006; guarded ZERO: 0; guarded ONE: 1; guarded SRC_COLOR = 0x0300; guarded ONE_MINUS_SRC_COLOR = 0x0301; guarded SRC_ALPHA = 0x0302; guarded ONE_MINUS_SRC_ALPHA = 0x0303; guarded DST_ALPHA = 0x0304; guarded ONE_MINUS_DST_ALPHA = 0x0305; guarded DST_COLOR = 0x0306; guarded ONE_MINUS_DST_COLOR = 0x0307; guarded SRC_ALPHA_SATURATE = 0x0308; guarded FUNC_ADD = 0x8006; guarded BLEND_EQUATION = 0x8009; guarded BLEND_EQUATION_RGB = 0x8009; guarded BLEND_EQUATION_ALPHA = 0x883D; guarded FUNC_SUBTRACT = 0x800A; guarded FUNC_REVERSE_SUBTRACT = 0x800B; guarded BLEND_DST_RGB = 0x80C8; guarded BLEND_SRC_RGB = 0x80C9; guarded BLEND_DST_ALPHA = 0x80CA; guarded BLEND_SRC_ALPHA = 0x80CB; guarded CONSTANT_COLOR = 0x8001; guarded ONE_MINUS_CONSTANT_COLOR = 0x8002; guarded CONSTANT_ALPHA = 0x8003; guarded ONE_MINUS_CONSTANT_ALPHA = 0x8004; guarded BLEND_COLOR = 0x8005; guarded ARRAY_BUFFER = 0x8892; guarded ELEMENT_ARRAY_BUFFER = 0x8893; guarded ARRAY_BUFFER_BINDING = 0x8894; guarded ELEMENT_ARRAY_BUFFER_BINDING = 0x8895; guarded STREAM_DRAW = 0x88E0; guarded STATIC_DRAW = 0x88E4; guarded DYNAMIC_DRAW = 0x88E8; guarded BUFFER_SIZE = 0x8764; guarded BUFFER_USAGE = 0x8765; guarded CURRENT_VERTEX_ATTRIB = 0x8626; guarded FRONT = 0x0404; guarded BACK = 0x0405; guarded FRONT_AND_BACK = 0x0408; guarded CULL_FACE = 0x0B44; guarded BLEND = 0x0BE2; guarded DITHER = 0x0BD0; guarded STENCIL_TEST = 0x0B90; guarded DEPTH_TEST = 0x0B71; guarded SCISSOR_TEST = 0x0C11; guarded POLYGON_OFFSET_FILL = 0x8037; guarded SAMPLE_ALPHA_TO_COVERAGE = 0x809E; guarded SAMPLE_COVERAGE = 0x80A0; guarded NO_ERROR: 0; guarded INVALID_ENUM = 0x0500; guarded INVALID_VALUE = 0x0501; guarded INVALID_OPERATION = 0x0502; guarded OUT_OF_MEMORY = 0x0505; guarded CW = 0x0900; guarded CCW = 0x0901; guarded LINE_WIDTH = 0x0B21; guarded ALIASED_POINT_SIZE_RANGE = 0x846D; guarded ALIASED_LINE_WIDTH_RANGE = 0x846E; guarded CULL_FACE_MODE = 0x0B45; guarded FRONT_FACE = 0x0B46; guarded DEPTH_RANGE = 0x0B70; guarded DEPTH_WRITEMASK = 0x0B72; guarded DEPTH_CLEAR_VALUE = 0x0B73; guarded DEPTH_FUNC = 0x0B74; guarded STENCIL_CLEAR_VALUE = 0x0B91; guarded STENCIL_FUNC = 0x0B92; guarded STENCIL_FAIL = 0x0B94; guarded STENCIL_PASS_DEPTH_FAIL = 0x0B95; guarded STENCIL_PASS_DEPTH_PASS = 0x0B96; guarded STENCIL_REF = 0x0B97; guarded STENCIL_VALUE_MASK = 0x0B93; guarded STENCIL_WRITEMASK = 0x0B98; guarded STENCIL_BACK_FUNC = 0x8800; guarded STENCIL_BACK_FAIL = 0x8801; guarded STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802; guarded STENCIL_BACK_PASS_DEPTH_PASS = 0x8803; guarded STENCIL_BACK_REF = 0x8CA3; guarded STENCIL_BACK_VALUE_MASK = 0x8CA4; guarded STENCIL_BACK_WRITEMASK = 0x8CA5; guarded VIEWPORT = 0x0BA2; guarded SCISSOR_BOX = 0x0C10; guarded COLOR_CLEAR_VALUE = 0x0C22; guarded COLOR_WRITEMASK = 0x0C23; guarded UNPACK_ALIGNMENT = 0x0CF5; guarded PACK_ALIGNMENT = 0x0D05; guarded MAX_TEXTURE_SIZE = 0x0D33; guarded MAX_VIEWPORT_DIMS = 0x0D3A; guarded SUBPIXEL_BITS = 0x0D50; guarded RED_BITS = 0x0D52; guarded GREEN_BITS = 0x0D53; guarded BLUE_BITS = 0x0D54; guarded ALPHA_BITS = 0x0D55; guarded DEPTH_BITS = 0x0D56; guarded STENCIL_BITS = 0x0D57; guarded POLYGON_OFFSET_UNITS = 0x2A00; guarded POLYGON_OFFSET_FACTOR = 0x8038; guarded TEXTURE_BINDING_2D = 0x8069; guarded SAMPLE_BUFFERS = 0x80A8; guarded SAMPLES = 0x80A9; guarded SAMPLE_COVERAGE_VALUE = 0x80AA; guarded SAMPLE_COVERAGE_INVERT = 0x80AB; guarded COMPRESSED_TEXTURE_FORMATS = 0x86A3; guarded DONT_CARE = 0x1100; guarded FASTEST = 0x1101; guarded NICEST = 0x1102; guarded GENERATE_MIPMAP_HINT = 0x8192; guarded BYTE = 0x1400; guarded UNSIGNED_BYTE = 0x1401; guarded SHORT = 0x1402; guarded UNSIGNED_SHORT = 0x1403; guarded INT = 0x1404; guarded UNSIGNED_INT = 0x1405; guarded FLOAT = 0x1406; guarded DEPTH_COMPONENT = 0x1902; guarded ALPHA = 0x1906; guarded RGB = 0x1907; guarded RGBA = 0x1908; guarded LUMINANCE = 0x1909; guarded LUMINANCE_ALPHA = 0x190A; guarded UNSIGNED_SHORT_4_4_4_4 = 0x8033; guarded UNSIGNED_SHORT_5_5_5_1 = 0x8034; guarded UNSIGNED_SHORT_5_6_5 = 0x8363; guarded FRAGMENT_SHADER = 0x8B30; guarded VERTEX_SHADER = 0x8B31; guarded MAX_VERTEX_ATTRIBS = 0x8869; guarded MAX_VERTEX_UNIFORM_VECTORS = 0x8DFB; guarded MAX_VARYING_VECTORS = 0x8DFC; guarded MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D; guarded MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C; guarded MAX_TEXTURE_IMAGE_UNITS = 0x8872; guarded MAX_FRAGMENT_UNIFORM_VECTORS = 0x8DFD; guarded SHADER_TYPE = 0x8B4F; guarded DELETE_STATUS = 0x8B80; guarded LINK_STATUS = 0x8B82; guarded VALIDATE_STATUS = 0x8B83; guarded ATTACHED_SHADERS = 0x8B85; guarded ACTIVE_UNIFORMS = 0x8B86; guarded ACTIVE_ATTRIBUTES = 0x8B89; guarded SHADING_LANGUAGE_VERSION = 0x8B8C; guarded CURRENT_PROGRAM = 0x8B8D; guarded NEVER = 0x0200; guarded LESS = 0x0201; guarded EQUAL = 0x0202; guarded LEQUAL = 0x0203; guarded GREATER = 0x0204; guarded NOTEQUAL = 0x0205; guarded GEQUAL = 0x0206; guarded ALWAYS = 0x0207; guarded KEEP = 0x1E00; guarded REPLACE = 0x1E01; guarded INCR = 0x1E02; guarded DECR = 0x1E03; guarded INVERT = 0x150A; guarded INCR_WRAP = 0x8507; guarded DECR_WRAP = 0x8508; guarded VENDOR = 0x1F00; guarded RENDERER = 0x1F01; guarded VERSION = 0x1F02; guarded NEAREST = 0x2600; guarded LINEAR = 0x2601; guarded NEAREST_MIPMAP_NEAREST = 0x2700; guarded LINEAR_MIPMAP_NEAREST = 0x2701; guarded NEAREST_MIPMAP_LINEAR = 0x2702; guarded LINEAR_MIPMAP_LINEAR = 0x2703; guarded TEXTURE_MAG_FILTER = 0x2800; guarded TEXTURE_MIN_FILTER = 0x2801; guarded TEXTURE_WRAP_S = 0x2802; guarded TEXTURE_WRAP_T = 0x2803; guarded TEXTURE_2D = 0x0DE1; guarded TEXTURE = 0x1702; guarded TEXTURE_CUBE_MAP = 0x8513; guarded TEXTURE_BINDING_CUBE_MAP = 0x8514; guarded TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515; guarded TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516; guarded TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517; guarded TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518; guarded TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519; guarded TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A; guarded MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C; guarded TEXTURE0 = 0x84C0; guarded TEXTURE1 = 0x84C1; guarded TEXTURE2 = 0x84C2; guarded TEXTURE3 = 0x84C3; guarded TEXTURE4 = 0x84C4; guarded TEXTURE5 = 0x84C5; guarded TEXTURE6 = 0x84C6; guarded TEXTURE7 = 0x84C7; guarded TEXTURE8 = 0x84C8; guarded TEXTURE9 = 0x84C9; guarded TEXTURE10 = 0x84CA; guarded TEXTURE11 = 0x84CB; guarded TEXTURE12 = 0x84CC; guarded TEXTURE13 = 0x84CD; guarded TEXTURE14 = 0x84CE; guarded TEXTURE15 = 0x84CF; guarded TEXTURE16 = 0x84D0; guarded TEXTURE17 = 0x84D1; guarded TEXTURE18 = 0x84D2; guarded TEXTURE19 = 0x84D3; guarded TEXTURE20 = 0x84D4; guarded TEXTURE21 = 0x84D5; guarded TEXTURE22 = 0x84D6; guarded TEXTURE23 = 0x84D7; guarded TEXTURE24 = 0x84D8; guarded TEXTURE25 = 0x84D9; guarded TEXTURE26 = 0x84DA; guarded TEXTURE27 = 0x84DB; guarded TEXTURE28 = 0x84DC; guarded TEXTURE29 = 0x84DD; guarded TEXTURE30 = 0x84DE; guarded TEXTURE31 = 0x84DF; guarded ACTIVE_TEXTURE = 0x84E0; guarded REPEAT = 0x2901; guarded CLAMP_TO_EDGE = 0x812F; guarded MIRRORED_REPEAT = 0x8370; guarded FLOAT_VEC2 = 0x8B50; guarded FLOAT_VEC3 = 0x8B51; guarded FLOAT_VEC4 = 0x8B52; guarded INT_VEC2 = 0x8B53; guarded INT_VEC3 = 0x8B54; guarded INT_VEC4 = 0x8B55; guarded BOOL = 0x8B56; guarded BOOL_VEC2 = 0x8B57; guarded BOOL_VEC3 = 0x8B58; guarded BOOL_VEC4 = 0x8B59; guarded FLOAT_MAT2 = 0x8B5A; guarded FLOAT_MAT3 = 0x8B5B; guarded FLOAT_MAT4 = 0x8B5C; guarded SAMPLER_2D = 0x8B5E; guarded SAMPLER_CUBE = 0x8B60; guarded VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622; guarded VERTEX_ATTRIB_ARRAY_SIZE = 0x8623; guarded VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624; guarded VERTEX_ATTRIB_ARRAY_TYPE = 0x8625; guarded VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A; guarded VERTEX_ATTRIB_ARRAY_POINTER = 0x8645; guarded VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F; guarded IMPLEMENTATION_COLOR_READ_TYPE = 0x8B9A; guarded IMPLEMENTATION_COLOR_READ_FORMAT = 0x8B9B; guarded COMPILE_STATUS = 0x8B81; guarded LOW_FLOAT = 0x8DF0; guarded MEDIUM_FLOAT = 0x8DF1; guarded HIGH_FLOAT = 0x8DF2; guarded LOW_INT = 0x8DF3; guarded MEDIUM_INT = 0x8DF4; guarded HIGH_INT = 0x8DF5; guarded FRAMEBUFFER = 0x8D40; guarded RENDERBUFFER = 0x8D41; guarded RGBA4 = 0x8056; guarded RGB5_A1 = 0x8057; guarded RGB565 = 0x8D62; guarded DEPTH_COMPONENT16 = 0x81A5; guarded STENCIL_INDEX8 = 0x8D48; guarded DEPTH_STENCIL = 0x84F9; guarded RENDERBUFFER_WIDTH = 0x8D42; guarded RENDERBUFFER_HEIGHT = 0x8D43; guarded RENDERBUFFER_INTERNAL_FORMAT = 0x8D44; guarded RENDERBUFFER_RED_SIZE = 0x8D50; guarded RENDERBUFFER_GREEN_SIZE = 0x8D51; guarded RENDERBUFFER_BLUE_SIZE = 0x8D52; guarded RENDERBUFFER_ALPHA_SIZE = 0x8D53; guarded RENDERBUFFER_DEPTH_SIZE = 0x8D54; guarded RENDERBUFFER_STENCIL_SIZE = 0x8D55; guarded FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0; guarded FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1; guarded FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2; guarded FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3; guarded COLOR_ATTACHMENT0 = 0x8CE0; guarded DEPTH_ATTACHMENT = 0x8D00; guarded STENCIL_ATTACHMENT = 0x8D20; guarded DEPTH_STENCIL_ATTACHMENT = 0x821A; guarded NONE: 0; guarded FRAMEBUFFER_COMPLETE = 0x8CD5; guarded FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6; guarded FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7; guarded FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9; guarded FRAMEBUFFER_UNSUPPORTED = 0x8CDD; guarded FRAMEBUFFER_BINDING = 0x8CA6; guarded RENDERBUFFER_BINDING = 0x8CA7; guarded MAX_RENDERBUFFER_SIZE = 0x84E8; guarded INVALID_FRAMEBUFFER_OPERATION = 0x0506; guarded UNPACK_FLIP_Y_WEBGL = 0x9240; guarded UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241; guarded CONTEXT_LOST_WEBGL = 0x9242; guarded UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243; guarded BROWSER_DEFAULT_WEBGL = 0x9244 }
 
 
@@ -22267,7 +21718,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLActiveInfo: object { prototype: WebGLActiveInfo; on create(): WebGLActiveInfo }
 
 
@@ -22283,7 +21733,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLBuffer: object { prototype: WebGLBuffer; on create(): WebGLBuffer }
 
 
@@ -22300,7 +21749,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLContextEvent: object { prototype: WebGLContextEvent; on create(type`: Text, eventInit: WebGLContextEventInit? = empty): WebGLContextEvent }
 
 
@@ -22316,7 +21764,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLFramebuffer: object { prototype: WebGLFramebuffer; on create(): WebGLFramebuffer }
 
 
@@ -22332,7 +21779,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLProgram: object { prototype: WebGLProgram; on create(): WebGLProgram }
 
 
@@ -22344,7 +21790,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLQuery: object { prototype: WebGLQuery; on create(): WebGLQuery }
 
 
@@ -22360,7 +21805,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLRenderbuffer: object { prototype: WebGLRenderbuffer; on create(): WebGLRenderbuffer }
 
 
@@ -22376,7 +21820,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLRenderingContext: object { prototype: WebGLRenderingContext; on create(): WebGLRenderingContext; guarded DEPTH_BUFFER_BIT = 0x00000100; guarded STENCIL_BUFFER_BIT = 0x00000400; guarded COLOR_BUFFER_BIT = 0x00004000; guarded POINTS = 0x0000; guarded LINES = 0x0001; guarded LINE_LOOP = 0x0002; guarded LINE_STRIP = 0x0003; guarded TRIANGLES = 0x0004; guarded TRIANGLE_STRIP = 0x0005; guarded TRIANGLE_FAN = 0x0006; guarded ZERO: 0; guarded ONE: 1; guarded SRC_COLOR = 0x0300; guarded ONE_MINUS_SRC_COLOR = 0x0301; guarded SRC_ALPHA = 0x0302; guarded ONE_MINUS_SRC_ALPHA = 0x0303; guarded DST_ALPHA = 0x0304; guarded ONE_MINUS_DST_ALPHA = 0x0305; guarded DST_COLOR = 0x0306; guarded ONE_MINUS_DST_COLOR = 0x0307; guarded SRC_ALPHA_SATURATE = 0x0308; guarded FUNC_ADD = 0x8006; guarded BLEND_EQUATION = 0x8009; guarded BLEND_EQUATION_RGB = 0x8009; guarded BLEND_EQUATION_ALPHA = 0x883D; guarded FUNC_SUBTRACT = 0x800A; guarded FUNC_REVERSE_SUBTRACT = 0x800B; guarded BLEND_DST_RGB = 0x80C8; guarded BLEND_SRC_RGB = 0x80C9; guarded BLEND_DST_ALPHA = 0x80CA; guarded BLEND_SRC_ALPHA = 0x80CB; guarded CONSTANT_COLOR = 0x8001; guarded ONE_MINUS_CONSTANT_COLOR = 0x8002; guarded CONSTANT_ALPHA = 0x8003; guarded ONE_MINUS_CONSTANT_ALPHA = 0x8004; guarded BLEND_COLOR = 0x8005; guarded ARRAY_BUFFER = 0x8892; guarded ELEMENT_ARRAY_BUFFER = 0x8893; guarded ARRAY_BUFFER_BINDING = 0x8894; guarded ELEMENT_ARRAY_BUFFER_BINDING = 0x8895; guarded STREAM_DRAW = 0x88E0; guarded STATIC_DRAW = 0x88E4; guarded DYNAMIC_DRAW = 0x88E8; guarded BUFFER_SIZE = 0x8764; guarded BUFFER_USAGE = 0x8765; guarded CURRENT_VERTEX_ATTRIB = 0x8626; guarded FRONT = 0x0404; guarded BACK = 0x0405; guarded FRONT_AND_BACK = 0x0408; guarded CULL_FACE = 0x0B44; guarded BLEND = 0x0BE2; guarded DITHER = 0x0BD0; guarded STENCIL_TEST = 0x0B90; guarded DEPTH_TEST = 0x0B71; guarded SCISSOR_TEST = 0x0C11; guarded POLYGON_OFFSET_FILL = 0x8037; guarded SAMPLE_ALPHA_TO_COVERAGE = 0x809E; guarded SAMPLE_COVERAGE = 0x80A0; guarded NO_ERROR: 0; guarded INVALID_ENUM = 0x0500; guarded INVALID_VALUE = 0x0501; guarded INVALID_OPERATION = 0x0502; guarded OUT_OF_MEMORY = 0x0505; guarded CW = 0x0900; guarded CCW = 0x0901; guarded LINE_WIDTH = 0x0B21; guarded ALIASED_POINT_SIZE_RANGE = 0x846D; guarded ALIASED_LINE_WIDTH_RANGE = 0x846E; guarded CULL_FACE_MODE = 0x0B45; guarded FRONT_FACE = 0x0B46; guarded DEPTH_RANGE = 0x0B70; guarded DEPTH_WRITEMASK = 0x0B72; guarded DEPTH_CLEAR_VALUE = 0x0B73; guarded DEPTH_FUNC = 0x0B74; guarded STENCIL_CLEAR_VALUE = 0x0B91; guarded STENCIL_FUNC = 0x0B92; guarded STENCIL_FAIL = 0x0B94; guarded STENCIL_PASS_DEPTH_FAIL = 0x0B95; guarded STENCIL_PASS_DEPTH_PASS = 0x0B96; guarded STENCIL_REF = 0x0B97; guarded STENCIL_VALUE_MASK = 0x0B93; guarded STENCIL_WRITEMASK = 0x0B98; guarded STENCIL_BACK_FUNC = 0x8800; guarded STENCIL_BACK_FAIL = 0x8801; guarded STENCIL_BACK_PASS_DEPTH_FAIL = 0x8802; guarded STENCIL_BACK_PASS_DEPTH_PASS = 0x8803; guarded STENCIL_BACK_REF = 0x8CA3; guarded STENCIL_BACK_VALUE_MASK = 0x8CA4; guarded STENCIL_BACK_WRITEMASK = 0x8CA5; guarded VIEWPORT = 0x0BA2; guarded SCISSOR_BOX = 0x0C10; guarded COLOR_CLEAR_VALUE = 0x0C22; guarded COLOR_WRITEMASK = 0x0C23; guarded UNPACK_ALIGNMENT = 0x0CF5; guarded PACK_ALIGNMENT = 0x0D05; guarded MAX_TEXTURE_SIZE = 0x0D33; guarded MAX_VIEWPORT_DIMS = 0x0D3A; guarded SUBPIXEL_BITS = 0x0D50; guarded RED_BITS = 0x0D52; guarded GREEN_BITS = 0x0D53; guarded BLUE_BITS = 0x0D54; guarded ALPHA_BITS = 0x0D55; guarded DEPTH_BITS = 0x0D56; guarded STENCIL_BITS = 0x0D57; guarded POLYGON_OFFSET_UNITS = 0x2A00; guarded POLYGON_OFFSET_FACTOR = 0x8038; guarded TEXTURE_BINDING_2D = 0x8069; guarded SAMPLE_BUFFERS = 0x80A8; guarded SAMPLES = 0x80A9; guarded SAMPLE_COVERAGE_VALUE = 0x80AA; guarded SAMPLE_COVERAGE_INVERT = 0x80AB; guarded COMPRESSED_TEXTURE_FORMATS = 0x86A3; guarded DONT_CARE = 0x1100; guarded FASTEST = 0x1101; guarded NICEST = 0x1102; guarded GENERATE_MIPMAP_HINT = 0x8192; guarded BYTE = 0x1400; guarded UNSIGNED_BYTE = 0x1401; guarded SHORT = 0x1402; guarded UNSIGNED_SHORT = 0x1403; guarded INT = 0x1404; guarded UNSIGNED_INT = 0x1405; guarded FLOAT = 0x1406; guarded DEPTH_COMPONENT = 0x1902; guarded ALPHA = 0x1906; guarded RGB = 0x1907; guarded RGBA = 0x1908; guarded LUMINANCE = 0x1909; guarded LUMINANCE_ALPHA = 0x190A; guarded UNSIGNED_SHORT_4_4_4_4 = 0x8033; guarded UNSIGNED_SHORT_5_5_5_1 = 0x8034; guarded UNSIGNED_SHORT_5_6_5 = 0x8363; guarded FRAGMENT_SHADER = 0x8B30; guarded VERTEX_SHADER = 0x8B31; guarded MAX_VERTEX_ATTRIBS = 0x8869; guarded MAX_VERTEX_UNIFORM_VECTORS = 0x8DFB; guarded MAX_VARYING_VECTORS = 0x8DFC; guarded MAX_COMBINED_TEXTURE_IMAGE_UNITS = 0x8B4D; guarded MAX_VERTEX_TEXTURE_IMAGE_UNITS = 0x8B4C; guarded MAX_TEXTURE_IMAGE_UNITS = 0x8872; guarded MAX_FRAGMENT_UNIFORM_VECTORS = 0x8DFD; guarded SHADER_TYPE = 0x8B4F; guarded DELETE_STATUS = 0x8B80; guarded LINK_STATUS = 0x8B82; guarded VALIDATE_STATUS = 0x8B83; guarded ATTACHED_SHADERS = 0x8B85; guarded ACTIVE_UNIFORMS = 0x8B86; guarded ACTIVE_ATTRIBUTES = 0x8B89; guarded SHADING_LANGUAGE_VERSION = 0x8B8C; guarded CURRENT_PROGRAM = 0x8B8D; guarded NEVER = 0x0200; guarded LESS = 0x0201; guarded EQUAL = 0x0202; guarded LEQUAL = 0x0203; guarded GREATER = 0x0204; guarded NOTEQUAL = 0x0205; guarded GEQUAL = 0x0206; guarded ALWAYS = 0x0207; guarded KEEP = 0x1E00; guarded REPLACE = 0x1E01; guarded INCR = 0x1E02; guarded DECR = 0x1E03; guarded INVERT = 0x150A; guarded INCR_WRAP = 0x8507; guarded DECR_WRAP = 0x8508; guarded VENDOR = 0x1F00; guarded RENDERER = 0x1F01; guarded VERSION = 0x1F02; guarded NEAREST = 0x2600; guarded LINEAR = 0x2601; guarded NEAREST_MIPMAP_NEAREST = 0x2700; guarded LINEAR_MIPMAP_NEAREST = 0x2701; guarded NEAREST_MIPMAP_LINEAR = 0x2702; guarded LINEAR_MIPMAP_LINEAR = 0x2703; guarded TEXTURE_MAG_FILTER = 0x2800; guarded TEXTURE_MIN_FILTER = 0x2801; guarded TEXTURE_WRAP_S = 0x2802; guarded TEXTURE_WRAP_T = 0x2803; guarded TEXTURE_2D = 0x0DE1; guarded TEXTURE = 0x1702; guarded TEXTURE_CUBE_MAP = 0x8513; guarded TEXTURE_BINDING_CUBE_MAP = 0x8514; guarded TEXTURE_CUBE_MAP_POSITIVE_X = 0x8515; guarded TEXTURE_CUBE_MAP_NEGATIVE_X = 0x8516; guarded TEXTURE_CUBE_MAP_POSITIVE_Y = 0x8517; guarded TEXTURE_CUBE_MAP_NEGATIVE_Y = 0x8518; guarded TEXTURE_CUBE_MAP_POSITIVE_Z = 0x8519; guarded TEXTURE_CUBE_MAP_NEGATIVE_Z = 0x851A; guarded MAX_CUBE_MAP_TEXTURE_SIZE = 0x851C; guarded TEXTURE0 = 0x84C0; guarded TEXTURE1 = 0x84C1; guarded TEXTURE2 = 0x84C2; guarded TEXTURE3 = 0x84C3; guarded TEXTURE4 = 0x84C4; guarded TEXTURE5 = 0x84C5; guarded TEXTURE6 = 0x84C6; guarded TEXTURE7 = 0x84C7; guarded TEXTURE8 = 0x84C8; guarded TEXTURE9 = 0x84C9; guarded TEXTURE10 = 0x84CA; guarded TEXTURE11 = 0x84CB; guarded TEXTURE12 = 0x84CC; guarded TEXTURE13 = 0x84CD; guarded TEXTURE14 = 0x84CE; guarded TEXTURE15 = 0x84CF; guarded TEXTURE16 = 0x84D0; guarded TEXTURE17 = 0x84D1; guarded TEXTURE18 = 0x84D2; guarded TEXTURE19 = 0x84D3; guarded TEXTURE20 = 0x84D4; guarded TEXTURE21 = 0x84D5; guarded TEXTURE22 = 0x84D6; guarded TEXTURE23 = 0x84D7; guarded TEXTURE24 = 0x84D8; guarded TEXTURE25 = 0x84D9; guarded TEXTURE26 = 0x84DA; guarded TEXTURE27 = 0x84DB; guarded TEXTURE28 = 0x84DC; guarded TEXTURE29 = 0x84DD; guarded TEXTURE30 = 0x84DE; guarded TEXTURE31 = 0x84DF; guarded ACTIVE_TEXTURE = 0x84E0; guarded REPEAT = 0x2901; guarded CLAMP_TO_EDGE = 0x812F; guarded MIRRORED_REPEAT = 0x8370; guarded FLOAT_VEC2 = 0x8B50; guarded FLOAT_VEC3 = 0x8B51; guarded FLOAT_VEC4 = 0x8B52; guarded INT_VEC2 = 0x8B53; guarded INT_VEC3 = 0x8B54; guarded INT_VEC4 = 0x8B55; guarded BOOL = 0x8B56; guarded BOOL_VEC2 = 0x8B57; guarded BOOL_VEC3 = 0x8B58; guarded BOOL_VEC4 = 0x8B59; guarded FLOAT_MAT2 = 0x8B5A; guarded FLOAT_MAT3 = 0x8B5B; guarded FLOAT_MAT4 = 0x8B5C; guarded SAMPLER_2D = 0x8B5E; guarded SAMPLER_CUBE = 0x8B60; guarded VERTEX_ATTRIB_ARRAY_ENABLED = 0x8622; guarded VERTEX_ATTRIB_ARRAY_SIZE = 0x8623; guarded VERTEX_ATTRIB_ARRAY_STRIDE = 0x8624; guarded VERTEX_ATTRIB_ARRAY_TYPE = 0x8625; guarded VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A; guarded VERTEX_ATTRIB_ARRAY_POINTER = 0x8645; guarded VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F; guarded IMPLEMENTATION_COLOR_READ_TYPE = 0x8B9A; guarded IMPLEMENTATION_COLOR_READ_FORMAT = 0x8B9B; guarded COMPILE_STATUS = 0x8B81; guarded LOW_FLOAT = 0x8DF0; guarded MEDIUM_FLOAT = 0x8DF1; guarded HIGH_FLOAT = 0x8DF2; guarded LOW_INT = 0x8DF3; guarded MEDIUM_INT = 0x8DF4; guarded HIGH_INT = 0x8DF5; guarded FRAMEBUFFER = 0x8D40; guarded RENDERBUFFER = 0x8D41; guarded RGBA4 = 0x8056; guarded RGB5_A1 = 0x8057; guarded RGB565 = 0x8D62; guarded DEPTH_COMPONENT16 = 0x81A5; guarded STENCIL_INDEX8 = 0x8D48; guarded DEPTH_STENCIL = 0x84F9; guarded RENDERBUFFER_WIDTH = 0x8D42; guarded RENDERBUFFER_HEIGHT = 0x8D43; guarded RENDERBUFFER_INTERNAL_FORMAT = 0x8D44; guarded RENDERBUFFER_RED_SIZE = 0x8D50; guarded RENDERBUFFER_GREEN_SIZE = 0x8D51; guarded RENDERBUFFER_BLUE_SIZE = 0x8D52; guarded RENDERBUFFER_ALPHA_SIZE = 0x8D53; guarded RENDERBUFFER_DEPTH_SIZE = 0x8D54; guarded RENDERBUFFER_STENCIL_SIZE = 0x8D55; guarded FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0; guarded FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1; guarded FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2; guarded FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3; guarded COLOR_ATTACHMENT0 = 0x8CE0; guarded DEPTH_ATTACHMENT = 0x8D00; guarded STENCIL_ATTACHMENT = 0x8D20; guarded DEPTH_STENCIL_ATTACHMENT = 0x821A; guarded NONE: 0; guarded FRAMEBUFFER_COMPLETE = 0x8CD5; guarded FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6; guarded FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7; guarded FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9; guarded FRAMEBUFFER_UNSUPPORTED = 0x8CDD; guarded FRAMEBUFFER_BINDING = 0x8CA6; guarded RENDERBUFFER_BINDING = 0x8CA7; guarded MAX_RENDERBUFFER_SIZE = 0x84E8; guarded INVALID_FRAMEBUFFER_OPERATION = 0x0506; guarded UNPACK_FLIP_Y_WEBGL = 0x9240; guarded UNPACK_PREMULTIPLY_ALPHA_WEBGL = 0x9241; guarded CONTEXT_LOST_WEBGL = 0x9242; guarded UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243; guarded BROWSER_DEFAULT_WEBGL = 0x9244 }
 
 
@@ -23643,7 +23086,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLSampler: object { prototype: WebGLSampler; on create(): WebGLSampler }
 
 
@@ -23659,7 +23101,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLShader: object { prototype: WebGLShader; on create(): WebGLShader }
 
 
@@ -23682,7 +23123,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLShaderPrecisionFormat: object { prototype: WebGLShaderPrecisionFormat; on create(): WebGLShaderPrecisionFormat }
 
 
@@ -23694,7 +23134,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLSync: object { prototype: WebGLSync; on create(): WebGLSync }
 
 
@@ -23710,7 +23149,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLTexture: object { prototype: WebGLTexture; on create(): WebGLTexture }
 
 
@@ -23722,7 +23160,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLTransformFeedback: object { prototype: WebGLTransformFeedback; on create(): WebGLTransformFeedback }
 
 
@@ -23738,7 +23175,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLUniformLocation: object { prototype: WebGLUniformLocation; on create(): WebGLUniformLocation }
 
 
@@ -23750,7 +23186,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebGLVertexArrayObject: object { prototype: WebGLVertexArrayObject; on create(): WebGLVertexArrayObject }
 
 
@@ -23833,7 +23268,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebSocket: object { prototype: WebSocket; on create(url: Object? /*(!)Текст | URL*/, protocols: Object? /*(!)Текст | Список<Текст> | пусто*/ = empty): WebSocket; guarded CONNECTING: 0; guarded OPEN: 1; guarded CLOSING: 2; guarded CLOSED: 3 }
 
 
@@ -23868,7 +23302,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebTransport: object { prototype: WebTransport; on create(url: Object? /*(!)Текст | URL*/, options: WebTransportOptions? = empty): WebTransport }
 
 
@@ -23888,7 +23321,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebTransportBidirectionalStream: object { prototype: WebTransportBidirectionalStream; on create(): WebTransportBidirectionalStream }
 
 
@@ -23919,7 +23351,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebTransportDatagramDuplexStream: object { prototype: WebTransportDatagramDuplexStream; on create(): WebTransportDatagramDuplexStream }
 
 
@@ -23939,7 +23370,6 @@ external
   }
 
 
-  external
   /*(!) var */ WebTransportError: object { prototype: WebTransportError; on create(message: Text? = empty, options: WebTransportErrorOptions? = empty): WebTransportError }
 
 
@@ -23974,7 +23404,6 @@ external
   }
 
 
-  external
   /*(!) var */ WheelEvent: object { prototype: WheelEvent; on create(type`: Text, eventInitDict: WheelEventInit? = empty): WheelEvent; guarded DOM_DELTA_PIXEL = 0x00; guarded DOM_DELTA_LINE = 0x01; guarded DOM_DELTA_PAGE = 0x02 }
 
 
@@ -24024,7 +23453,6 @@ external
   }
 
 
-  external
   /*(!) var */ Window: object { prototype: Window; on create(): Window }
 
 
@@ -24217,7 +23645,6 @@ external
   }
 
 
-  external
   /*(!) var */ Worker: object { prototype: Worker; on create(scriptURL: Object? /*(!)Текст | URL*/, options: WorkerOptions? = empty): Worker }
 
 
@@ -24233,7 +23660,6 @@ external
   }
 
 
-  external
   /*(!) var */ Worklet: object { prototype: Worklet; on create(): Worklet }
 
 
@@ -24256,7 +23682,6 @@ external
   }
 
 
-  external
   /*(!) var */ WritableStream: object { prototype: WritableStream; on create(underlyingSink: UnderlyingSink<W>? = empty, strategy: QueuingStrategy<W>? = empty): WritableStream<W> }
 
 
@@ -24275,7 +23700,6 @@ external
   }
 
 
-  external
   /*(!) var */ WritableStreamDefaultController: object { prototype: WritableStreamDefaultController; on create(): WritableStreamDefaultController }
 
 
@@ -24306,7 +23730,6 @@ external
   }
 
 
-  external
   /*(!) var */ WritableStreamDefaultWriter: object { prototype: WritableStreamDefaultWriter; on create(stream: WritableStream<W>): WritableStreamDefaultWriter<W> }
 
 
@@ -24328,7 +23751,6 @@ external
   }
 
 
-  external
   /*(!) var */ XMLDocument: object { prototype: XMLDocument; on create(): XMLDocument }
 
 
@@ -24419,7 +23841,6 @@ external
   }
 
 
-  external
   /*(!) var */ XMLHttpRequest: object { prototype: XMLHttpRequest; on create(): XMLHttpRequest; guarded UNSENT: 0; guarded OPENED: 1; guarded HEADERS_RECEIVED: 2; guarded LOADING: 3; guarded DONE: 4 }
 
 
@@ -24469,7 +23890,6 @@ external
   }
 
 
-  external
   /*(!) var */ XMLHttpRequestEventTarget: object { prototype: XMLHttpRequestEventTarget; on create(): XMLHttpRequestEventTarget }
 
 
@@ -24487,7 +23907,6 @@ external
   }
 
 
-  external
   /*(!) var */ XMLHttpRequestUpload: object { prototype: XMLHttpRequestUpload; on create(): XMLHttpRequestUpload }
 
 
@@ -24503,7 +23922,6 @@ external
   }
 
 
-  external
   /*(!) var */ XMLSerializer: object { prototype: XMLSerializer; on create(): XMLSerializer }
 
 
@@ -24519,7 +23937,6 @@ external
   }
 
 
-  external
   /*(!) var */ XPathEvaluator: object { prototype: XPathEvaluator; on create(): XPathEvaluator }
 
 
@@ -24545,7 +23962,6 @@ external
   }
 
 
-  external
   /*(!) var */ XPathExpression: object { prototype: XPathExpression; on create(): XPathExpression }
 
 
@@ -24614,7 +24030,6 @@ external
   }
 
 
-  external
   /*(!) var */ XPathResult: object { prototype: XPathResult; on create(): XPathResult; guarded ANY_TYPE: 0; guarded NUMBER_TYPE: 1; guarded STRING_TYPE: 2; guarded BOOLEAN_TYPE: 3; guarded UNORDERED_NODE_ITERATOR_TYPE: 4; guarded ORDERED_NODE_ITERATOR_TYPE: 5; guarded UNORDERED_NODE_SNAPSHOT_TYPE: 6; guarded ORDERED_NODE_SNAPSHOT_TYPE: 7; guarded ANY_UNORDERED_NODE_TYPE: 8; guarded FIRST_ORDERED_NODE_TYPE: 9 }
 
 
@@ -24644,7 +24059,6 @@ external
   }
 
 
-  external
   /*(!) var */ XSLTProcessor: object { prototype: XSLTProcessor; on create(): XSLTProcessor }
 
 
@@ -24705,7 +24119,6 @@ external
   }
 
 
-  external
   /*(!) var */ console: Console
 
 
@@ -25887,15 +25300,12 @@ external
   }
 
 
-  external
   /*(!) var */ Audio: object { on create(src: Text? = empty): HTMLAudioElement }
 
 
-  external
   /*(!) var */ Image: object { on create(width: Number? = empty, height: Number? = empty): HTMLImageElement }
 
 
-  external
   /*(!) var */ Option: object { on create(text: Text? = empty, value: Text? = empty, defaultSelected: YesNo? = empty, selected: YesNo? = empty): HTMLOptionElement }
 
 
@@ -25905,7 +25315,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/closed)
   */
 
-  external
   /*(!) var */ closed: YesNo
 
 
@@ -25915,61 +25324,51 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/customElements)
   */
 
-  external
   /*(!) var */ customElements: CustomElementRegistry
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio) */
 
-  external
   /*(!) var */ devicePixelRatio: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/document) */
 
-  external
   /*(!) var */ document: Document
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frameElement) */
 
-  external
   /*(!) var */ frameElement: Element?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frames) */
 
-  external
   /*(!) var */ frames: WindowProxy
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/history) */
 
-  external
   /*(!) var */ history: History
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/innerHeight) */
 
-  external
   /*(!) var */ innerHeight: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/innerWidth) */
 
-  external
   /*(!) var */ innerWidth: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/length) */
 
-  external
   /*(!) var */ length: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/location) */
 
-  external
   /*(!) var */ location: Location
 
 
@@ -25979,7 +25378,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/locationbar)
   */
 
-  external
   /*(!) var */ locationbar: BarProp
 
 
@@ -25989,7 +25387,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/menubar)
   */
 
-  external
   /*(!) var */ menubar: BarProp
 
 
@@ -25997,7 +25394,6 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/navigator) */
 
-  external
   /*(!) var */ navigator: Navigator
 
 
@@ -26007,7 +25403,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/devicemotion_event)
   */
 
-  external
   /*(!) var */ ondevicemotion: (operation(this: Window, ev: DeviceMotionEvent): /*(!) any */ Object?)?
 
 
@@ -26017,25 +25412,21 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/deviceorientation_event)
   */
 
-  external
   /*(!) var */ ondeviceorientation: (operation(this: Window, ev: DeviceOrientationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/opener) */
 
-  external
   /*(!) var */ opener: /*(!) any */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/outerHeight) */
 
-  external
   /*(!) var */ outerHeight: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/outerWidth) */
 
-  external
   /*(!) var */ outerWidth: Number
 
 
@@ -26047,7 +25438,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/parent)
   */
 
-  external
   /*(!) var */ parent: WindowProxy
 
 
@@ -26057,49 +25447,41 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/personalbar)
   */
 
-  external
   /*(!) var */ personalbar: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screen) */
 
-  external
   /*(!) var */ screen: Screen
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenLeft) */
 
-  external
   /*(!) var */ screenLeft: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenTop) */
 
-  external
   /*(!) var */ screenTop: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenX) */
 
-  external
   /*(!) var */ screenX: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenY) */
 
-  external
   /*(!) var */ screenY: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollX) */
 
-  external
   /*(!) var */ scrollX: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollY) */
 
-  external
   /*(!) var */ scrollY: Number
 
 
@@ -26109,19 +25491,16 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollbars)
   */
 
-  external
   /*(!) var */ scrollbars: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/self) */
 
-  external
   /*(!) var */ self: /*(!) Window & typeof globalThis */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/speechSynthesis) */
 
-  external
   /*(!) var */ speechSynthesis: SpeechSynthesis
 
 
@@ -26131,7 +25510,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/statusbar)
   */
 
-  external
   /*(!) var */ statusbar: BarProp
 
 
@@ -26141,41 +25519,34 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/toolbar)
   */
 
-  external
   /*(!) var */ toolbar: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/top) */
 
-  external
   /*(!) var */ top: WindowProxy?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/visualViewport) */
 
-  external
   /*(!) var */ visualViewport: VisualViewport?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/window) */
 
-  external
   /*(!) var */ window: /*(!) Window & typeof globalThis */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/alert) */
 
-  external
   operation alert(message: /*(!) any */ Object? = empty)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/blur) */
 
-  external
   operation blur()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback) */
 
-  external
   operation cancelIdleCallback(handle: Number)
 
   /**
@@ -26184,12 +25555,10 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/close)
   */
 
-  external
   operation close()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/confirm) */
 
-  external
   operation confirm(message: Text? = empty): YesNo
 
   /**
@@ -26198,37 +25567,30 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/focus)
   */
 
-  external
   operation focus()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle) */
 
-  external
   operation getComputedStyle(elt: Element, pseudoElt: Text? = empty): CSSStyleDeclaration
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/getSelection) */
 
-  external
   operation getSelection(): Selection?
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) */
 
-  external
   operation matchMedia(query: Text): MediaQueryList
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/moveBy) */
 
-  external
   operation moveBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/moveTo) */
 
-  external
   operation moveTo(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/open) */
 
-  external
   operation open(url: Object? /*(!)Текст | URL | пусто*/ = empty, target: Text? = empty, features: Text? = empty): WindowProxy?
 
   /**
@@ -26245,59 +25607,46 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
   */
 
-  external
   operation postMessage(message: /*(!) any */ Object?, targetOrigin: Text, transfer: Список<Transferable>? = empty)
 
-  external
   operation postMessage(message: /*(!) any */ Object?, options: WindowPostMessageOptions? = empty)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/print) */
 
-  external
   operation print()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/prompt) */
 
-  external
   operation prompt(message: Text? = empty, _default: Text? = empty): Text?
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback) */
 
-  external
   operation requestIdleCallback(callback: IdleRequestCallback, options: IdleRequestOptions? = empty): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/resizeBy) */
 
-  external
   operation resizeBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/resizeTo) */
 
-  external
   operation resizeTo(width: Number, height: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scroll) */
 
-  external
   operation scroll(options: ScrollToOptions? = empty)
 
-  external
   operation scroll(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollBy) */
 
-  external
   operation scrollBy(options: ScrollToOptions? = empty)
 
-  external
   operation scrollBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollTo) */
 
-  external
   operation scrollTo(options: ScrollToOptions? = empty)
 
-  external
   operation scrollTo(x: Number, y: Number)
 
   /**
@@ -26306,10 +25655,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/stop)
   */
 
-  external
   operation stop()
 
-  external
   operation toString(): Text
 
   /**
@@ -26318,13 +25665,10 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent)
   */
 
-  external
   operation dispatchEvent(event: Event): YesNo
 
-  external
   operation cancelAnimationFrame(handle: Number)
 
-  external
   operation requestAnimationFrame(callback: FrameRequestCallback): Number
 
   /**
@@ -26334,43 +25678,36 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/abort_event)
   */
 
-  external
   /*(!) var */ onabort: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationcancel_event) */
 
-  external
   /*(!) var */ onanimationcancel: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationend_event) */
 
-  external
   /*(!) var */ onanimationend: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationiteration_event) */
 
-  external
   /*(!) var */ onanimationiteration: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationstart_event) */
 
-  external
   /*(!) var */ onanimationstart: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/auxclick_event) */
 
-  external
   /*(!) var */ onauxclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/beforeinput_event) */
 
-  external
   /*(!) var */ onbeforeinput: (operation(this: Window, ev: InputEvent): /*(!) any */ Object?)?
 
 
@@ -26381,13 +25718,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/blur_event)
   */
 
-  external
   /*(!) var */ onblur: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDialogElement/cancel_event) */
 
-  external
   /*(!) var */ oncancel: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26398,13 +25733,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/canplay_event)
   */
 
-  external
   /*(!) var */ oncanplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/canplaythrough_event) */
 
-  external
   /*(!) var */ oncanplaythrough: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26415,7 +25748,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/change_event)
   */
 
-  external
   /*(!) var */ onchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26426,13 +25758,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/click_event)
   */
 
-  external
   /*(!) var */ onclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDialogElement/close_event) */
 
-  external
   /*(!) var */ onclose: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26443,25 +25773,21 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event)
   */
 
-  external
   /*(!) var */ oncontextmenu: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/copy_event) */
 
-  external
   /*(!) var */ oncopy: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLTrackElement/cuechange_event) */
 
-  external
   /*(!) var */ oncuechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/cut_event) */
 
-  external
   /*(!) var */ oncut: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
@@ -26472,7 +25798,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/dblclick_event)
   */
 
-  external
   /*(!) var */ ondblclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
@@ -26483,7 +25808,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/drag_event)
   */
 
-  external
   /*(!) var */ ondrag: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26494,7 +25818,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragend_event)
   */
 
-  external
   /*(!) var */ ondragend: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26505,7 +25828,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragenter_event)
   */
 
-  external
   /*(!) var */ ondragenter: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26516,7 +25838,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragleave_event)
   */
 
-  external
   /*(!) var */ ondragleave: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26527,7 +25848,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragover_event)
   */
 
-  external
   /*(!) var */ ondragover: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26538,13 +25858,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragstart_event)
   */
 
-  external
   /*(!) var */ ondragstart: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/drop_event) */
 
-  external
   /*(!) var */ ondrop: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
@@ -26555,7 +25873,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/durationchange_event)
   */
 
-  external
   /*(!) var */ ondurationchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26566,7 +25883,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/emptied_event)
   */
 
-  external
   /*(!) var */ onemptied: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26577,7 +25893,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/ended_event)
   */
 
-  external
   /*(!) var */ onended: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26588,7 +25903,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/error_event)
   */
 
-  external
   /*(!) var */ onerror: OnErrorEventHandler
 
 
@@ -26599,31 +25913,26 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/focus_event)
   */
 
-  external
   /*(!) var */ onfocus: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/formdata_event) */
 
-  external
   /*(!) var */ onformdata: (operation(this: Window, ev: FormDataEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/gotpointercapture_event) */
 
-  external
   /*(!) var */ ongotpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/input_event) */
 
-  external
   /*(!) var */ oninput: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLInputElement/invalid_event) */
 
-  external
   /*(!) var */ oninvalid: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26634,7 +25943,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/keydown_event)
   */
 
-  external
   /*(!) var */ onkeydown: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
 
 
@@ -26645,7 +25953,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/keyup_event)
   */
 
-  external
   /*(!) var */ onkeyup: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
 
 
@@ -26656,7 +25963,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/SVGElement/load_event)
   */
 
-  external
   /*(!) var */ onload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26667,7 +25973,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadeddata_event)
   */
 
-  external
   /*(!) var */ onloadeddata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26678,7 +25983,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
   */
 
-  external
   /*(!) var */ onloadedmetadata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26689,13 +25993,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadstart_event)
   */
 
-  external
   /*(!) var */ onloadstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/lostpointercapture_event) */
 
-  external
   /*(!) var */ onlostpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
@@ -26706,19 +26008,16 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mousedown_event)
   */
 
-  external
   /*(!) var */ onmousedown: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseenter_event) */
 
-  external
   /*(!) var */ onmouseenter: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseleave_event) */
 
-  external
   /*(!) var */ onmouseleave: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
@@ -26729,7 +26028,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mousemove_event)
   */
 
-  external
   /*(!) var */ onmousemove: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
@@ -26740,7 +26038,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseout_event)
   */
 
-  external
   /*(!) var */ onmouseout: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
@@ -26751,7 +26048,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseover_event)
   */
 
-  external
   /*(!) var */ onmouseover: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
@@ -26762,13 +26058,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseup_event)
   */
 
-  external
   /*(!) var */ onmouseup: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/paste_event) */
 
-  external
   /*(!) var */ onpaste: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
@@ -26779,7 +26073,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/pause_event)
   */
 
-  external
   /*(!) var */ onpause: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26790,7 +26083,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/play_event)
   */
 
-  external
   /*(!) var */ onplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26801,55 +26093,46 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/playing_event)
   */
 
-  external
   /*(!) var */ onplaying: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointercancel_event) */
 
-  external
   /*(!) var */ onpointercancel: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerdown_event) */
 
-  external
   /*(!) var */ onpointerdown: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerenter_event) */
 
-  external
   /*(!) var */ onpointerenter: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerleave_event) */
 
-  external
   /*(!) var */ onpointerleave: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointermove_event) */
 
-  external
   /*(!) var */ onpointermove: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerout_event) */
 
-  external
   /*(!) var */ onpointerout: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerover_event) */
 
-  external
   /*(!) var */ onpointerover: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerup_event) */
 
-  external
   /*(!) var */ onpointerup: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
@@ -26860,7 +26143,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/progress_event)
   */
 
-  external
   /*(!) var */ onprogress: (operation(this: Window, ev: ProgressEvent): /*(!) any */ Object?)?
 
 
@@ -26871,7 +26153,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/ratechange_event)
   */
 
-  external
   /*(!) var */ onratechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26882,13 +26163,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/reset_event)
   */
 
-  external
   /*(!) var */ onreset: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/resize_event) */
 
-  external
   /*(!) var */ onresize: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
 
 
@@ -26899,19 +26178,16 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/scroll_event)
   */
 
-  external
   /*(!) var */ onscroll: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/scrollend_event) */
 
-  external
   /*(!) var */ onscrollend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/securitypolicyviolation_event) */
 
-  external
   /*(!) var */ onsecuritypolicyviolation: (operation(this: Window, ev: SecurityPolicyViolationEvent): /*(!) any */ Object?)?
 
 
@@ -26922,7 +26198,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/seeked_event)
   */
 
-  external
   /*(!) var */ onseeked: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26933,7 +26208,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/seeking_event)
   */
 
-  external
   /*(!) var */ onseeking: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26944,25 +26218,21 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLInputElement/select_event)
   */
 
-  external
   /*(!) var */ onselect: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/selectionchange_event) */
 
-  external
   /*(!) var */ onselectionchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Node/selectstart_event) */
 
-  external
   /*(!) var */ onselectstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/slotchange_event) */
 
-  external
   /*(!) var */ onslotchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -26973,13 +26243,11 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/stalled_event)
   */
 
-  external
   /*(!) var */ onstalled: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/submit_event) */
 
-  external
   /*(!) var */ onsubmit: (operation(this: Window, ev: SubmitEvent): /*(!) any */ Object?)?
 
 
@@ -26990,7 +26258,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/suspend_event)
   */
 
-  external
   /*(!) var */ onsuspend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -27001,61 +26268,51 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/timeupdate_event)
   */
 
-  external
   /*(!) var */ ontimeupdate: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDetailsElement/toggle_event) */
 
-  external
   /*(!) var */ ontoggle: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchcancel_event) */
 
-  external
   /*(!) var */ ontouchcancel: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchend_event) */
 
-  external
   /*(!) var */ ontouchend: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchmove_event) */
 
-  external
   /*(!) var */ ontouchmove: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchstart_event) */
 
-  external
   /*(!) var */ ontouchstart: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitioncancel_event) */
 
-  external
   /*(!) var */ ontransitioncancel: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionend_event) */
 
-  external
   /*(!) var */ ontransitionend: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionrun_event) */
 
-  external
   /*(!) var */ ontransitionrun: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionstart_event) */
 
-  external
   /*(!) var */ ontransitionstart: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
@@ -27066,7 +26323,6 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/volumechange_event)
   */
 
-  external
   /*(!) var */ onvolumechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
@@ -27077,127 +26333,106 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/waiting_event)
   */
 
-  external
   /*(!) var */ onwaiting: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/wheel_event) */
 
-  external
   /*(!) var */ onwheel: (operation(this: Window, ev: WheelEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/afterprint_event) */
 
-  external
   /*(!) var */ onafterprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/beforeprint_event) */
 
-  external
   /*(!) var */ onbeforeprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event) */
 
-  external
   /*(!) var */ onbeforeunload: (operation(this: Window, ev: BeforeUnloadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/gamepadconnected_event) */
 
-  external
   /*(!) var */ ongamepadconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/gamepaddisconnected_event) */
 
-  external
   /*(!) var */ ongamepaddisconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/hashchange_event) */
 
-  external
   /*(!) var */ onhashchange: (operation(this: Window, ev: HashChangeEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/languagechange_event) */
 
-  external
   /*(!) var */ onlanguagechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/message_event) */
 
-  external
   /*(!) var */ onmessage: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/messageerror_event) */
 
-  external
   /*(!) var */ onmessageerror: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/offline_event) */
 
-  external
   /*(!) var */ onoffline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/online_event) */
 
-  external
   /*(!) var */ ononline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/pagehide_event) */
 
-  external
   /*(!) var */ onpagehide: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/pageshow_event) */
 
-  external
   /*(!) var */ onpageshow: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) */
 
-  external
   /*(!) var */ onpopstate: (operation(this: Window, ev: PopStateEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/rejectionhandled_event) */
 
-  external
   /*(!) var */ onrejectionhandled: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/storage_event) */
 
-  external
   /*(!) var */ onstorage: (operation(this: Window, ev: StorageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/unhandledrejection_event) */
 
-  external
   /*(!) var */ onunhandledrejection: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/unload_event) */
 
-  external
   /*(!) var */ onunload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/localStorage) */
 
-  external
   /*(!) var */ localStorage: Storage
 
 
@@ -27207,122 +26442,98 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/caches)
   */
 
-  external
   /*(!) var */ caches: CacheStorage
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/crossOriginIsolated) */
 
-  external
   /*(!) var */ crossOriginIsolated: YesNo
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/crypto_property) */
 
-  external
   /*(!) var */ crypto: Crypto
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/indexedDB) */
 
-  external
   /*(!) var */ indexedDB: IDBFactory
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/isSecureContext) */
 
-  external
   /*(!) var */ isSecureContext: YesNo
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/origin) */
 
-  external
   /*(!) var */ origin: Text
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/performance_property) */
 
-  external
   /*(!) var */ performance: Performance
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/atob) */
 
-  external
   operation atob(data: Text): Text
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/btoa) */
 
-  external
   operation btoa(data: Text): Text
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/clearInterval) */
 
-  external
   operation clearInterval(id: Number?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/clearTimeout) */
 
-  external
   operation clearTimeout(id: Number?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/createImageBitmap) */
 
-  external
   operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
 
-  external
   operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/fetch) */
 
-  external
   operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): Promise<Response>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/queueMicrotask) */
 
-  external
   operation queueMicrotask(callback: VoidFunction)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/reportError) */
 
-  external
   operation reportError(e: /*(!) any */ Object?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setInterval) */
 
-  external
   #js.МассивПараметров
   operation setInterval(handler: TimerHandler, timeout: Number? = empty, arguments: Список</*(!) any */ Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setTimeout) */
 
-  external
   #js.МассивПараметров
   operation setTimeout(handler: TimerHandler, timeout: Number? = empty, arguments: Список</*(!) any */ Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/structuredClone) */
 
-  external
   operation structuredClone<T>(value: T, options: StructuredSerializeOptions? = empty): T
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) */
 
-  external
   /*(!) var */ sessionStorage: Storage
 
 
-  external
   operation addEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)ДаНет | AddEventListenerOptions | пусто*/ = empty)
 
-  external
   operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)ДаНет | AddEventListenerOptions | пусто*/ = empty)
 
-  external
   operation removeEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)ДаНет | EventListenerOptions | пусто*/ = empty)
 
-  external
   operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)ДаНет | EventListenerOptions | пусто*/ = empty)
 
   type AlgorithmIdentifier = Object? /*(!)Algorithm | Текст*/
