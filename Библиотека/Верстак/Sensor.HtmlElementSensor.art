@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Библиотека.HTML
+import Библиотека.Браузер
 
 external
 {
