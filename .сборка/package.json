@@ -3,7 +3,7 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "artel": "0.6.1",
+    "artel": "0.6.5",
     "reactronic": "0.23.111",
     "verstak": "0.23.121",
     "vite": "4.5.0"
