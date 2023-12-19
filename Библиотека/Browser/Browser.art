@@ -4874,7 +4874,7 @@ external
 
     prototype: CSSMathNegate
 
-    on create(arg: CSSNumberish): CSSMathNegate
+    on create(arg: CSSNumberish) // : CSSMathNegate
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathProduct) */
@@ -4923,7 +4923,7 @@ external
 
     prototype: CSSMatrixComponent
 
-    on create(matrix: DOMMatrixReadOnly, options: CSSMatrixComponentOptions? = empty): CSSMatrixComponent
+    on create(matrix: DOMMatrixReadOnly, options: CSSMatrixComponentOptions? = empty) // : CSSMatrixComponent
   }
 
   /**
@@ -5042,7 +5042,7 @@ external
 
     prototype: CSSPerspective
 
-    on create(length: CSSPerspectiveValue): CSSPerspective
+    on create(length: CSSPerspectiveValue) // : CSSPerspective
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSPropertyRule) */
@@ -5080,9 +5080,9 @@ external
 
     prototype: CSSRotate
 
-    on create(angle: CSSNumericValue): CSSRotate
+    on create(angle: CSSNumericValue) // : CSSRotate
 
-    on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish, angle: CSSNumericValue): CSSRotate
+    on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish, angle: CSSNumericValue) // : CSSRotate
   }
 
   /**
@@ -5190,7 +5190,7 @@ external
 
     prototype: CSSScale
 
-    on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish? = empty): CSSScale
+    on create(x: CSSNumberish, y: CSSNumberish, z: CSSNumberish? = empty) // : CSSScale
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSSkew) */
@@ -5203,7 +5203,7 @@ external
 
     prototype: CSSSkew
 
-    on create(ax: CSSNumericValue, ay: CSSNumericValue): CSSSkew
+    on create(ax: CSSNumericValue, ay: CSSNumericValue) // : CSSSkew
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSSkewX) */
@@ -5214,7 +5214,7 @@ external
 
     prototype: CSSSkewX
 
-    on create(ax: CSSNumericValue): CSSSkewX
+    on create(ax: CSSNumericValue) // : CSSSkewX
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSSkewY) */
@@ -5225,7 +5225,7 @@ external
 
     prototype: CSSSkewY
 
-    on create(ay: CSSNumericValue): CSSSkewY
+    on create(ay: CSSNumericValue) // : CSSSkewY
   }
 
   /**
@@ -5337,7 +5337,7 @@ external
   {
     prototype: CSSStyleSheet
 
-    on create(options: CSSStyleSheetInit? = empty): CSSStyleSheet
+    on create(options: CSSStyleSheetInit? = empty) // : CSSStyleSheet
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSStyleValue) */
@@ -5401,7 +5401,7 @@ external
 
     prototype: CSSTransformValue
 
-    on create(transforms: Список<CSSTransformComponent>): CSSTransformValue
+    on create(transforms: Список<CSSTransformComponent>) // : CSSTransformValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSTransition) */
@@ -5436,7 +5436,7 @@ external
 
     prototype: CSSTranslate
 
-    on create(x: CSSNumericValue, y: CSSNumericValue, z: CSSNumericValue? = empty): CSSTranslate
+    on create(x: CSSNumericValue, y: CSSNumericValue, z: CSSNumericValue? = empty) // : CSSTranslate
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSUnitValue) */
@@ -5450,7 +5450,7 @@ external
 
     prototype: CSSUnitValue
 
-    on create(value: Number, unit: Text): CSSUnitValue
+    on create(value: Number, unit: Text) // : CSSUnitValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSUnparsedValue) */
@@ -5466,7 +5466,7 @@ external
 
     prototype: CSSUnparsedValue
 
-    on create(members: Список<CSSUnparsedSegment>): CSSUnparsedValue
+    on create(members: Список<CSSUnparsedSegment>) // : CSSUnparsedValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSVariableReferenceValue) */
@@ -5480,7 +5480,7 @@ external
 
     prototype: CSSVariableReferenceValue
 
-    on create(variable: Text, fallback: CSSUnparsedValue? = empty): CSSVariableReferenceValue
+    on create(variable: Text, fallback: CSSUnparsedValue? = empty) // : CSSVariableReferenceValue
   }
 
   /**
@@ -5829,7 +5829,7 @@ external
   {
     prototype: ChannelMergerNode
 
-    on create(context: BaseAudioContext, options: ChannelMergerOptions? = empty): ChannelMergerNode
+    on create(context: BaseAudioContext, options: ChannelMergerOptions? = empty) // : ChannelMergerNode
   }
 
   /**
@@ -5925,7 +5925,7 @@ external
 
     prototype: ClipboardEvent
 
-    on create(type`: Text, eventInitDict: ClipboardEventInit? = empty): ClipboardEvent
+    on create(type`: Text, eventInitDict: ClipboardEventInit? = empty) // : ClipboardEvent
   }
 
   /**
@@ -5943,7 +5943,7 @@ external
 
     prototype: ClipboardItem
 
-    on create(items: Record<Text, Object? /*(!)Text | Blob | PromiseLike<Object? /*(!)Text | Blob*/>*/>, options: ClipboardItemOptions? = empty): ClipboardItem
+    on create(items: Record<Text, Object? /*(!)Text | Blob | PromiseLike<Object? /*(!)Text | Blob*/>*/>, options: ClipboardItemOptions? = empty) // : ClipboardItem
   }
 
   /**
@@ -5965,7 +5965,7 @@ external
 
     prototype: CloseEvent
 
-    on create(type`: Text, eventInitDict: CloseEventInit? = empty): CloseEvent
+    on create(type`: Text, eventInitDict: CloseEventInit? = empty) // : CloseEvent
   }
 
   /**
@@ -5978,7 +5978,7 @@ external
   {
     prototype: Comment
 
-    on create(data: Text? = empty): Comment
+    on create(data: Text? = empty) // : Comment
   }
 
   /**
@@ -5991,7 +5991,7 @@ external
   {
     prototype: CompositionEvent
 
-    on create(type`: Text, eventInitDict: CompositionEventInit? = empty): CompositionEvent
+    on create(type`: Text, eventInitDict: CompositionEventInit? = empty) // : CompositionEvent
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CompressionStream) */
@@ -6000,7 +6000,7 @@ external
   {
     prototype: CompressionStream
 
-    on create(format: CompressionFormat): CompressionStream
+    on create(format: CompressionFormat) // : CompressionStream
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ConstantSourceNode) */
@@ -6020,7 +6020,7 @@ external
 
     prototype: ConstantSourceNode
 
-    on create(context: BaseAudioContext, options: ConstantSourceOptions? = empty): ConstantSourceNode
+    on create(context: BaseAudioContext, options: ConstantSourceOptions? = empty) // : ConstantSourceNode
   }
 
   /**
@@ -6037,7 +6037,7 @@ external
 
     prototype: ConvolverNode
 
-    on create(context: BaseAudioContext, options: ConvolverOptions? = empty): ConvolverNode
+    on create(context: BaseAudioContext, options: ConvolverOptions? = empty) // : ConvolverNode
   }
 
   /**
@@ -6056,7 +6056,7 @@ external
 
     prototype: CountQueuingStrategy
 
-    on create(init: QueuingStrategyInit): CountQueuingStrategy
+    on create(init: QueuingStrategyInit) // : CountQueuingStrategy
   }
 
   /**
@@ -6168,7 +6168,7 @@ external
   {
     prototype: CustomEvent
 
-    on create(type`: Text, eventInitDict: CustomEventInit<T>? = empty): CustomEvent<T>
+    on create(type`: Text, eventInitDict: CustomEventInit<T>? = empty) // : CustomEvent<T>
   }
 
   /**
@@ -6256,7 +6256,7 @@ external
 
     prototype: DOMException
 
-    on create(message: Text? = empty, name: Text? = empty): DOMException
+    on create(message: Text? = empty, name: Text? = empty) // : DOMException
 
     guarded
     INDEX_SIZE_ERR: 1
@@ -6421,7 +6421,7 @@ external
 
     prototype: DOMMatrix
 
-    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = empty): DOMMatrix
+    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = empty) // : DOMMatrix
 
     operation fromFloat32Array(array32: Float32Array): DOMMatrix
 
@@ -6452,7 +6452,7 @@ external
 
     prototype: DOMMatrixReadOnly
 
-    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = empty): DOMMatrixReadOnly
+    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = empty) // : DOMMatrixReadOnly
 
     operation fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly
 
@@ -6490,7 +6490,7 @@ external
 
     prototype: DOMPoint
 
-    on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty): DOMPoint
+    on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty) // : DOMPoint
 
     operation fromPoint(other: DOMPointInit? = empty): DOMPoint
   }
@@ -6523,7 +6523,7 @@ external
 
     prototype: DOMPointReadOnly
 
-    on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty): DOMPointReadOnly
+    on create(x: Number? = empty, y: Number? = empty, z: Number? = empty, w: Number? = empty) // : DOMPointReadOnly
 
     operation fromPoint(other: DOMPointInit? = empty): DOMPointReadOnly
   }
@@ -6550,7 +6550,7 @@ external
 
     prototype: DOMQuad
 
-    on create(p1: DOMPointInit? = empty, p2: DOMPointInit? = empty, p3: DOMPointInit? = empty, p4: DOMPointInit? = empty): DOMQuad
+    on create(p1: DOMPointInit? = empty, p2: DOMPointInit? = empty, p3: DOMPointInit? = empty, p4: DOMPointInit? = empty) // : DOMQuad
 
     operation fromQuad(other: DOMQuadInit? = empty): DOMQuad
 
@@ -6571,7 +6571,7 @@ external
 
     prototype: DOMRect
 
-    on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty): DOMRect
+    on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty) // : DOMRect
 
     operation fromRect(other: DOMRectInit? = empty): DOMRect
   }
@@ -6628,7 +6628,7 @@ external
 
     prototype: DOMRectReadOnly
 
-    on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty): DOMRectReadOnly
+    on create(x: Number? = empty, y: Number? = empty, width: Number? = empty, height: Number? = empty) // : DOMRectReadOnly
 
     operation fromRect(other: DOMRectInit? = empty): DOMRectReadOnly
   }
@@ -6801,7 +6801,7 @@ external
   {
     prototype: DecompressionStream
 
-    on create(format: CompressionFormat): DecompressionStream
+    on create(format: CompressionFormat) // : DecompressionStream
   }
 
   /**
@@ -6817,7 +6817,7 @@ external
 
     prototype: DelayNode
 
-    on create(context: BaseAudioContext, options: DelayOptions? = empty): DelayNode
+    on create(context: BaseAudioContext, options: DelayOptions? = empty) // : DelayNode
   }
 
   /**
@@ -6843,7 +6843,7 @@ external
 
     prototype: DeviceMotionEvent
 
-    on create(type`: Text, eventInitDict: DeviceMotionEventInit? = empty): DeviceMotionEvent
+    on create(type`: Text, eventInitDict: DeviceMotionEventInit? = empty) // : DeviceMotionEvent
   }
 
   /**
@@ -6907,7 +6907,7 @@ external
 
     prototype: DeviceOrientationEvent
 
-    on create(type`: Text, eventInitDict: DeviceOrientationEventInit? = empty): DeviceOrientationEvent
+    on create(type`: Text, eventInitDict: DeviceOrientationEventInit? = empty) // : DeviceOrientationEvent
   }
 
   type DocumentEventMap = aspect GlobalEventHandlersEventMap
@@ -7157,7 +7157,7 @@ external
   {
     prototype: DocumentTimeline
 
-    on create(options: DocumentTimelineOptions? = empty): DocumentTimeline
+    on create(options: DocumentTimelineOptions? = empty) // : DocumentTimeline
   }
 
   /**
@@ -7198,7 +7198,7 @@ external
 
     prototype: DragEvent
 
-    on create(type`: Text, eventInitDict: DragEventInit? = empty): DragEvent
+    on create(type`: Text, eventInitDict: DragEventInit? = empty) // : DragEvent
   }
 
   /**
@@ -7229,7 +7229,7 @@ external
 
     prototype: DynamicsCompressorNode
 
-    on create(context: BaseAudioContext, options: DynamicsCompressorOptions? = empty): DynamicsCompressorNode
+    on create(context: BaseAudioContext, options: DynamicsCompressorOptions? = empty) // : DynamicsCompressorNode
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_blend_minmax) */
@@ -7534,7 +7534,7 @@ external
 
     prototype: EncodedVideoChunk
 
-    on create(init: EncodedVideoChunkInit): EncodedVideoChunk
+    on create(init: EncodedVideoChunkInit) // : EncodedVideoChunk
   }
 
   /**
@@ -7562,7 +7562,7 @@ external
 
     prototype: ErrorEvent
 
-    on create(type`: Text, eventInitDict: ErrorEventInit? = empty): ErrorEvent
+    on create(type`: Text, eventInitDict: ErrorEventInit? = empty) // : ErrorEvent
   }
 
   /**
@@ -7587,7 +7587,7 @@ external
 
     prototype: Event
 
-    on create(type`: Text, eventInitDict: EventInit? = empty): Event
+    on create(type`: Text, eventInitDict: EventInit? = empty) // : Event
 
     guarded
     NONE: 0
@@ -7679,7 +7679,7 @@ external
 
     prototype: EventSource
 
-    on create(url: Object? /*(!)Text | URL*/, eventSourceInitDict: EventSourceInit? = empty): EventSource
+    on create(url: Object? /*(!)Text | URL*/, eventSourceInitDict: EventSourceInit? = empty) // : EventSource
 
     guarded
     CONNECTING: 0
@@ -7729,7 +7729,7 @@ external
 
     prototype: File
 
-    on create(fileBits: Список<BlobPart>, fileName: Text, options: FilePropertyBag? = empty): File
+    on create(fileBits: Список<BlobPart>, fileName: Text, options: FilePropertyBag? = empty) // : File
   }
 
   /**
@@ -8013,7 +8013,7 @@ external
 
     prototype: FocusEvent
 
-    on create(type`: Text, eventInitDict: FocusEventInit? = empty): FocusEvent
+    on create(type`: Text, eventInitDict: FocusEventInit? = empty) // : FocusEvent
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/FontFace) */
@@ -8052,7 +8052,7 @@ external
 
     prototype: FontFace
 
-    on create(family: Text, source: Object? /*(!)Text | BinaryData*/, descriptors: FontFaceDescriptors? = empty): FontFace
+    on create(family: Text, source: Object? /*(!)Text | BinaryData*/, descriptors: FontFaceDescriptors? = empty) // : FontFace
   }
 
   type FontFaceSetEventMap = aspect
@@ -8097,7 +8097,7 @@ external
 
     prototype: FontFaceSet
 
-    on create(initialFaces: Список<FontFace>): FontFaceSet
+    on create(initialFaces: Список<FontFace>) // : FontFaceSet
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/FontFaceSetLoadEvent) */
@@ -8109,7 +8109,7 @@ external
 
     prototype: FontFaceSetLoadEvent
 
-    on create(type`: Text, eventInitDict: FontFaceSetLoadEventInit? = empty): FontFaceSetLoadEvent
+    on create(type`: Text, eventInitDict: FontFaceSetLoadEventInit? = empty) // : FontFaceSetLoadEvent
   }
 
   type FontFaceSource = aspect
@@ -8151,7 +8151,7 @@ external
 
     prototype: FormData
 
-    on create(form: HTMLFormElement? = empty, submitter: HTMLElement? = empty): FormData
+    on create(form: HTMLFormElement? = empty, submitter: HTMLElement? = empty) // : FormData
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/FormDataEvent) */
@@ -8163,7 +8163,7 @@ external
 
     prototype: FormDataEvent
 
-    on create(type`: Text, eventInitDict: FormDataEventInit): FormDataEvent
+    on create(type`: Text, eventInitDict: FormDataEventInit) // : FormDataEvent
   }
 
   /**
@@ -8179,7 +8179,7 @@ external
 
     prototype: GainNode
 
-    on create(context: BaseAudioContext, options: GainOptions? = empty): GainNode
+    on create(context: BaseAudioContext, options: GainOptions? = empty) // : GainNode
   }
 
   /**
@@ -8260,7 +8260,7 @@ external
 
     prototype: GamepadEvent
 
-    on create(type`: Text, eventInitDict: GamepadEventInit): GamepadEvent
+    on create(type`: Text, eventInitDict: GamepadEventInit) // : GamepadEvent
   }
 
   /**
@@ -10879,7 +10879,7 @@ external
 
     prototype: HashChangeEvent
 
-    on create(type`: Text, eventInitDict: HashChangeEventInit? = empty): HashChangeEvent
+    on create(type`: Text, eventInitDict: HashChangeEventInit? = empty) // : HashChangeEvent
   }
 
   /**
@@ -10906,7 +10906,7 @@ external
 
     prototype: Headers
 
-    on create(init: HeadersInit? = empty): Headers
+    on create(init: HeadersInit? = empty) // : Headers
   }
 
   /**
@@ -11355,7 +11355,7 @@ external
 
     prototype: IDBVersionChangeEvent
 
-    on create(type`: Text, eventInitDict: IDBVersionChangeEventInit? = empty): IDBVersionChangeEvent
+    on create(type`: Text, eventInitDict: IDBVersionChangeEventInit? = empty) // : IDBVersionChangeEvent
   }
 
   /**
@@ -11370,7 +11370,7 @@ external
 
     prototype: IIRFilterNode
 
-    on create(context: BaseAudioContext, options: IIRFilterOptions): IIRFilterNode
+    on create(context: BaseAudioContext, options: IIRFilterOptions) // : IIRFilterNode
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/IdleDeadline) */
@@ -11440,9 +11440,9 @@ external
 
     prototype: ImageData
 
-    on create(sw: Number, sh: Number, settings: ImageDataSettings? = empty): ImageData
+    on create(sw: Number, sh: Number, settings: ImageDataSettings? = empty) // : ImageData
 
-    on create(data: Uint8ClampedArray, sw: Number, sh: Number? = empty, settings: ImageDataSettings? = empty): ImageData
+    on create(data: Uint8ClampedArray, sw: Number, sh: Number? = empty, settings: ImageDataSettings? = empty) // : ImageData
   }
 
   type InnerHTML = aspect
@@ -11486,7 +11486,7 @@ external
 
     prototype: InputEvent
 
-    on create(type`: Text, eventInitDict: InputEventInit? = empty): InputEvent
+    on create(type`: Text, eventInitDict: InputEventInit? = empty) // : InputEvent
   }
 
   /**
@@ -11516,7 +11516,7 @@ external
 
     prototype: IntersectionObserver
 
-    on create(callback: IntersectionObserverCallback, options: IntersectionObserverInit? = empty): IntersectionObserver
+    on create(callback: IntersectionObserverCallback, options: IntersectionObserverInit? = empty) // : IntersectionObserver
   }
 
   /**
@@ -11550,7 +11550,7 @@ external
 
     prototype: IntersectionObserverEntry
 
-    on create(intersectionObserverEntryInit: IntersectionObserverEntryInit): IntersectionObserverEntry
+    on create(intersectionObserverEntryInit: IntersectionObserverEntryInit) // : IntersectionObserverEntry
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/KHR_parallel_shader_compile) */
@@ -11584,7 +11584,7 @@ external
 
     prototype: KeyboardEvent
 
-    on create(type`: Text, eventInitDict: KeyboardEventInit? = empty): KeyboardEvent
+    on create(type`: Text, eventInitDict: KeyboardEventInit? = empty) // : KeyboardEvent
 
     guarded
     DOM_KEY_LOCATION_STANDARD: 0x00
@@ -11617,9 +11617,9 @@ external
 
     prototype: KeyframeEffect
 
-    on create(target: Element?, keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = empty): KeyframeEffect
+    on create(target: Element?, keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = empty) // : KeyframeEffect
 
-    on create(source: KeyframeEffect): KeyframeEffect
+    on create(source: KeyframeEffect) // : KeyframeEffect
   }
 
   type LinkStyle = aspect
@@ -11761,7 +11761,7 @@ external
 
     prototype: MIDIConnectionEvent
 
-    on create(type`: Text, eventInitDict: MIDIConnectionEventInit? = empty): MIDIConnectionEvent
+    on create(type`: Text, eventInitDict: MIDIConnectionEventInit? = empty) // : MIDIConnectionEvent
   }
 
   type MIDIInputEventMap = aspect MIDIPortEventMap
@@ -11821,7 +11821,7 @@ external
 
     prototype: MIDIMessageEvent
 
-    on create(type`: Text, eventInitDict: MIDIMessageEventInit? = empty): MIDIMessageEvent
+    on create(type`: Text, eventInitDict: MIDIMessageEventInit? = empty) // : MIDIMessageEvent
   }
 
   /**
@@ -12031,7 +12031,7 @@ external
 
     prototype: MediaElementAudioSourceNode
 
-    on create(context: AudioContext, options: MediaElementAudioSourceOptions): MediaElementAudioSourceNode
+    on create(context: AudioContext, options: MediaElementAudioSourceOptions) // : MediaElementAudioSourceNode
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/MediaEncryptedEvent) */
@@ -12046,7 +12046,7 @@ external
 
     prototype: MediaEncryptedEvent
 
-    on create(type`: Text, eventInitDict: MediaEncryptedEventInit? = empty): MediaEncryptedEvent
+    on create(type`: Text, eventInitDict: MediaEncryptedEventInit? = empty) // : MediaEncryptedEvent
   }
 
   /**
@@ -12109,7 +12109,7 @@ external
 
     prototype: MediaKeyMessageEvent
 
-    on create(type`: Text, eventInitDict: MediaKeyMessageEventInit): MediaKeyMessageEvent
+    on create(type`: Text, eventInitDict: MediaKeyMessageEventInit) // : MediaKeyMessageEvent
   }
 
   type MediaKeySessionEventMap = aspect
@@ -12268,7 +12268,7 @@ external
 
     prototype: MediaMetadata
 
-    on create(init: MediaMetadataInit? = empty): MediaMetadata
+    on create(init: MediaMetadataInit? = empty) // : MediaMetadata
   }
 
   type MediaQueryListEventMap = aspect
@@ -12310,7 +12310,7 @@ external
 
     prototype: MediaQueryListEvent
 
-    on create(type`: Text, eventInitDict: MediaQueryListEventInit? = empty): MediaQueryListEvent
+    on create(type`: Text, eventInitDict: MediaQueryListEventInit? = empty) // : MediaQueryListEvent
   }
 
   type MediaRecorderEventMap = aspect
@@ -12380,7 +12380,7 @@ external
 
     prototype: MediaRecorder
 
-    on create(stream: MediaStream, options: MediaRecorderOptions? = empty): MediaRecorder
+    on create(stream: MediaStream, options: MediaRecorderOptions? = empty) // : MediaRecorder
 
     operation isTypeSupported(type`: Text): YesNo
   }
@@ -12514,9 +12514,9 @@ external
 
     on create() // : MediaStream
 
-    on create(stream: MediaStream): MediaStream
+    on create(stream: MediaStream) // : MediaStream
 
-    on create(tracks: Список<MediaStreamTrack>): MediaStream
+    on create(tracks: Список<MediaStreamTrack>) // : MediaStream
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/MediaStreamAudioDestinationNode) */
@@ -12528,7 +12528,7 @@ external
 
     prototype: MediaStreamAudioDestinationNode
 
-    on create(context: AudioContext, options: AudioNodeOptions? = empty): MediaStreamAudioDestinationNode
+    on create(context: AudioContext, options: AudioNodeOptions? = empty) // : MediaStreamAudioDestinationNode
   }
 
   /**
@@ -12544,7 +12544,7 @@ external
 
     prototype: MediaStreamAudioSourceNode
 
-    on create(context: AudioContext, options: MediaStreamAudioSourceOptions): MediaStreamAudioSourceNode
+    on create(context: AudioContext, options: MediaStreamAudioSourceOptions) // : MediaStreamAudioSourceNode
   }
 
   type MediaStreamTrackEventMap = aspect
@@ -12628,7 +12628,7 @@ external
 
     prototype: MediaStreamTrackEvent
 
-    on create(type`: Text, eventInitDict: MediaStreamTrackEventInit): MediaStreamTrackEvent
+    on create(type`: Text, eventInitDict: MediaStreamTrackEventInit) // : MediaStreamTrackEvent
   }
 
   /**
@@ -12660,7 +12660,7 @@ external
   {
     prototype: MessageEvent
 
-    on create(type`: Text, eventInitDict: MessageEventInit<T>? = empty): MessageEvent<T>
+    on create(type`: Text, eventInitDict: MessageEventInit<T>? = empty) // : MessageEvent<T>
   }
 
   type MessagePortEventMap = aspect
@@ -12714,7 +12714,7 @@ external
   {
     prototype: MouseEvent
 
-    on create(type`: Text, eventInitDict: MouseEventInit? = empty): MouseEvent
+    on create(type`: Text, eventInitDict: MouseEventInit? = empty) // : MouseEvent
   }
 
   /**
@@ -12733,7 +12733,7 @@ external
 
     prototype: MutationObserver
 
-    on create(callback: MutationCallback): MutationObserver
+    on create(callback: MutationCallback) // : MutationObserver
   }
 
   /**
@@ -13292,7 +13292,7 @@ external
 
     prototype: Notification
 
-    on create(title: Text, options: NotificationOptions? = empty): Notification
+    on create(title: Text, options: NotificationOptions? = empty) // : Notification
 
     guarded
     permission: NotificationPermission
@@ -13452,7 +13452,7 @@ external
 
     prototype: OfflineAudioCompletionEvent
 
-    on create(type`: Text, eventInitDict: OfflineAudioCompletionEventInit): OfflineAudioCompletionEvent
+    on create(type`: Text, eventInitDict: OfflineAudioCompletionEventInit) // : OfflineAudioCompletionEvent
   }
 
   type OfflineAudioContextEventMap = aspect BaseAudioContextEventMap
@@ -13490,9 +13490,9 @@ external
 
     prototype: OfflineAudioContext
 
-    on create(contextOptions: OfflineAudioContextOptions): OfflineAudioContext
+    on create(contextOptions: OfflineAudioContextOptions) // : OfflineAudioContext
 
-    on create(numberOfChannels: Number, length: Number, sampleRate: Number): OfflineAudioContext
+    on create(numberOfChannels: Number, length: Number, sampleRate: Number) // : OfflineAudioContext
   }
 
   type OffscreenCanvasEventMap = aspect
@@ -13539,7 +13539,7 @@ external
 
     prototype: OffscreenCanvas
 
-    on create(width: Number, height: Number): OffscreenCanvas
+    on create(width: Number, height: Number) // : OffscreenCanvas
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/OffscreenCanvasRenderingContext2D) */
@@ -13584,7 +13584,7 @@ external
 
     prototype: OscillatorNode
 
-    on create(context: BaseAudioContext, options: OscillatorOptions? = empty): OscillatorNode
+    on create(context: BaseAudioContext, options: OscillatorOptions? = empty) // : OscillatorNode
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/OverconstrainedError) */
@@ -13596,7 +13596,7 @@ external
 
     prototype: OverconstrainedError
 
-    on create(constraint: Text, message: Text? = empty): OverconstrainedError
+    on create(constraint: Text, message: Text? = empty) // : OverconstrainedError
   }
 
   /**
@@ -13612,7 +13612,7 @@ external
 
     prototype: PageTransitionEvent
 
-    on create(type`: Text, eventInitDict: PageTransitionEventInit? = empty): PageTransitionEvent
+    on create(type`: Text, eventInitDict: PageTransitionEventInit? = empty) // : PageTransitionEvent
   }
 
   /**
@@ -13625,7 +13625,7 @@ external
   {
     prototype: PannerNode
 
-    on create(context: BaseAudioContext, options: PannerOptions? = empty): PannerNode
+    on create(context: BaseAudioContext, options: PannerOptions? = empty) // : PannerNode
   }
 
   type ParentNode = aspect Node
@@ -13656,7 +13656,7 @@ external
 
     prototype: Path2D
 
-    on create(path: Object? /*(!)Path2D | Text | пусто*/ = empty): Path2D
+    on create(path: Object? /*(!)Path2D | Text | пусто*/ = empty) // : Path2D
   }
 
   /**
@@ -13675,7 +13675,7 @@ external
 
     prototype: PaymentMethodChangeEvent
 
-    on create(type`: Text, eventInitDict: PaymentMethodChangeEventInit? = empty): PaymentMethodChangeEvent
+    on create(type`: Text, eventInitDict: PaymentMethodChangeEventInit? = empty) // : PaymentMethodChangeEvent
   }
 
   type PaymentRequestEventMap = aspect
@@ -13714,7 +13714,7 @@ external
 
     prototype: PaymentRequest
 
-    on create(methodData: Список<PaymentMethodData>, details: PaymentDetailsInit): PaymentRequest
+    on create(methodData: Список<PaymentMethodData>, details: PaymentDetailsInit) // : PaymentRequest
   }
 
   /**
@@ -13730,7 +13730,7 @@ external
 
     prototype: PaymentRequestUpdateEvent
 
-    on create(type`: Text, eventInitDict: PaymentRequestUpdateEventInit? = empty): PaymentRequestUpdateEvent
+    on create(type`: Text, eventInitDict: PaymentRequestUpdateEventInit? = empty) // : PaymentRequestUpdateEvent
   }
 
   /**
@@ -13852,7 +13852,7 @@ external
 
     prototype: PerformanceMark
 
-    on create(markName: Text, markOptions: PerformanceMarkOptions? = empty): PerformanceMark
+    on create(markName: Text, markOptions: PerformanceMarkOptions? = empty) // : PerformanceMark
   }
 
   /**
@@ -13928,7 +13928,7 @@ external
 
     prototype: PerformanceObserver
 
-    on create(callback: PerformanceObserverCallback): PerformanceObserver
+    on create(callback: PerformanceObserverCallback) // : PerformanceObserver
 
     guarded
     supportedEntryTypes: ReadonlyArray<Text>
@@ -14057,7 +14057,7 @@ external
   {
     prototype: PeriodicWave
 
-    on create(context: BaseAudioContext, options: PeriodicWaveOptions? = empty): PeriodicWave
+    on create(context: BaseAudioContext, options: PeriodicWaveOptions? = empty) // : PeriodicWave
   }
 
   type PermissionStatusEventMap = aspect
@@ -14111,7 +14111,7 @@ external
 
     prototype: PictureInPictureEvent
 
-    on create(type`: Text, eventInitDict: PictureInPictureEventInit): PictureInPictureEvent
+    on create(type`: Text, eventInitDict: PictureInPictureEventInit) // : PictureInPictureEvent
   }
 
   type PictureInPictureWindowEventMap = aspect
@@ -14189,7 +14189,7 @@ external
 
     prototype: PointerEvent
 
-    on create(type`: Text, eventInitDict: PointerEventInit? = empty): PointerEvent
+    on create(type`: Text, eventInitDict: PointerEventInit? = empty) // : PointerEvent
   }
 
   /**
@@ -14205,7 +14205,7 @@ external
 
     prototype: PopStateEvent
 
-    on create(type`: Text, eventInitDict: PopStateEventInit? = empty): PopStateEvent
+    on create(type`: Text, eventInitDict: PopStateEventInit? = empty) // : PopStateEvent
   }
 
   type PopoverInvokerElement = aspect
@@ -14257,7 +14257,7 @@ external
 
     prototype: ProgressEvent
 
-    on create(type`: Text, eventInitDict: ProgressEventInit? = empty): ProgressEvent
+    on create(type`: Text, eventInitDict: ProgressEventInit? = empty) // : ProgressEvent
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PromiseRejectionEvent) */
@@ -14272,7 +14272,7 @@ external
 
     prototype: PromiseRejectionEvent
 
-    on create(type`: Text, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent
+    on create(type`: Text, eventInitDict: PromiseRejectionEventInit) // : PromiseRejectionEvent
   }
 
   /**
@@ -14434,7 +14434,7 @@ external
 
     prototype: RTCDTMFToneChangeEvent
 
-    on create(type`: Text, eventInitDict: RTCDTMFToneChangeEventInit? = empty): RTCDTMFToneChangeEvent
+    on create(type`: Text, eventInitDict: RTCDTMFToneChangeEventInit? = empty) // : RTCDTMFToneChangeEvent
   }
 
   type RTCDataChannelEventMap = aspect
@@ -14532,7 +14532,7 @@ external
 
     prototype: RTCDataChannelEvent
 
-    on create(type`: Text, eventInitDict: RTCDataChannelEventInit): RTCDataChannelEvent
+    on create(type`: Text, eventInitDict: RTCDataChannelEventInit) // : RTCDataChannelEvent
   }
 
   type RTCDtlsTransportEventMap = aspect
@@ -14624,7 +14624,7 @@ external
 
     prototype: RTCError
 
-    on create(init: RTCErrorInit, message: Text? = empty): RTCError
+    on create(init: RTCErrorInit, message: Text? = empty) // : RTCError
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCErrorEvent) */
@@ -14636,7 +14636,7 @@ external
 
     prototype: RTCErrorEvent
 
-    on create(type`: Text, eventInitDict: RTCErrorEventInit): RTCErrorEvent
+    on create(type`: Text, eventInitDict: RTCErrorEventInit) // : RTCErrorEvent
   }
 
   /**
@@ -14693,7 +14693,7 @@ external
 
     prototype: RTCIceCandidate
 
-    on create(candidateInitDict: RTCIceCandidateInit? = empty): RTCIceCandidate
+    on create(candidateInitDict: RTCIceCandidateInit? = empty) // : RTCIceCandidate
   }
 
   type RTCIceTransportEventMap = aspect
@@ -14781,7 +14781,7 @@ external
 
     prototype: RTCPeerConnection
 
-    on create(configuration: RTCConfiguration? = empty): RTCPeerConnection
+    on create(configuration: RTCConfiguration? = empty) // : RTCPeerConnection
 
     operation generateCertificate(keygenAlgorithm: AlgorithmIdentifier): Promise<RTCCertificate>
   }
@@ -14807,7 +14807,7 @@ external
 
     prototype: RTCPeerConnectionIceErrorEvent
 
-    on create(type`: Text, eventInitDict: RTCPeerConnectionIceErrorEventInit): RTCPeerConnectionIceErrorEvent
+    on create(type`: Text, eventInitDict: RTCPeerConnectionIceErrorEventInit) // : RTCPeerConnectionIceErrorEvent
   }
 
   /**
@@ -14823,7 +14823,7 @@ external
 
     prototype: RTCPeerConnectionIceEvent
 
-    on create(type`: Text, eventInitDict: RTCPeerConnectionIceEventInit? = empty): RTCPeerConnectionIceEvent
+    on create(type`: Text, eventInitDict: RTCPeerConnectionIceEventInit? = empty) // : RTCPeerConnectionIceEvent
   }
 
   /**
@@ -14972,7 +14972,7 @@ external
 
     prototype: RTCSessionDescription
 
-    on create(descriptionInitDict: RTCSessionDescriptionInit): RTCSessionDescription
+    on create(descriptionInitDict: RTCSessionDescriptionInit) // : RTCSessionDescription
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCStatsReport) */
@@ -15004,7 +15004,7 @@ external
 
     prototype: RTCTrackEvent
 
-    on create(type`: Text, eventInitDict: RTCTrackEventInit): RTCTrackEvent
+    on create(type`: Text, eventInitDict: RTCTrackEventInit) // : RTCTrackEvent
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RadioNodeList) */
@@ -15154,11 +15154,11 @@ external
 
     prototype: ReadableStream
 
-    on create(underlyingSource: UnderlyingByteSource, strategy: object { highWaterMark: Number }? = empty): ReadableStream<Uint8Array>
+    on create(underlyingSource: UnderlyingByteSource, strategy: object { highWaterMark: Number }? = empty) // : ReadableStream<Uint8Array>
 
-    on create(underlyingSource: UnderlyingDefaultSource<R>, strategy: QueuingStrategy<R>? = empty): ReadableStream<R>
+    on create(underlyingSource: UnderlyingDefaultSource<R>, strategy: QueuingStrategy<R>? = empty) // : ReadableStream<R>
 
-    on create(underlyingSource: UnderlyingSource<R>? = empty, strategy: QueuingStrategy<R>? = empty): ReadableStream<R>
+    on create(underlyingSource: UnderlyingSource<R>? = empty, strategy: QueuingStrategy<R>? = empty) // : ReadableStream<R>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader) */
@@ -15171,7 +15171,7 @@ external
 
     prototype: ReadableStreamBYOBReader
 
-    on create(stream: ReadableStream): ReadableStreamBYOBReader
+    on create(stream: ReadableStream) // : ReadableStreamBYOBReader
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBRequest) */
@@ -15218,7 +15218,7 @@ external
 
     prototype: ReadableStreamDefaultReader
 
-    on create(stream: ReadableStream<R>): ReadableStreamDefaultReader<R>
+    on create(stream: ReadableStream<R>) // : ReadableStreamDefaultReader<R>
   }
 
   type ReadableStreamGenericReader = aspect
@@ -15315,7 +15315,7 @@ external
 
     prototype: ReportingObserver
 
-    on create(callback: ReportingObserverCallback, options: ReportingObserverOptions? = empty): ReportingObserver
+    on create(callback: ReportingObserverCallback, options: ReportingObserverOptions? = empty) // : ReportingObserver
   }
 
   /**
@@ -15369,7 +15369,7 @@ external
 
     prototype: Request
 
-    on create(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): Request
+    on create(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty) // : Request
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ResizeObserver) */
@@ -15384,7 +15384,7 @@ external
 
     prototype: ResizeObserver
 
-    on create(callback: ResizeObserverCallback): ResizeObserver
+    on create(callback: ResizeObserverCallback) // : ResizeObserver
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ResizeObserverEntry) */
@@ -15459,7 +15459,7 @@ external
 
     prototype: Response
 
-    on create(body: BodyInit? = empty, init: ResponseInit? = empty): Response
+    on create(body: BodyInit? = empty, init: ResponseInit? = empty) // : Response
 
     operation error`(): Response
 
@@ -18949,7 +18949,7 @@ external
 
     prototype: SecurityPolicyViolationEvent
 
-    on create(type`: Text, eventInitDict: SecurityPolicyViolationEventInit? = empty): SecurityPolicyViolationEvent
+    on create(type`: Text, eventInitDict: SecurityPolicyViolationEventInit? = empty) // : SecurityPolicyViolationEvent
   }
 
   /**
@@ -19223,7 +19223,7 @@ external
 
     prototype: SharedWorker
 
-    on create(scriptURL: Object? /*(!)Text | URL*/, options: Object? /*(!)Text | WorkerOptions | пусто*/ = empty): SharedWorker
+    on create(scriptURL: Object? /*(!)Text | URL*/, options: Object? /*(!)Text | WorkerOptions | пусто*/ = empty) // : SharedWorker
   }
 
   type Slottable = aspect
@@ -19445,7 +19445,7 @@ external
 
     prototype: SpeechSynthesisErrorEvent
 
-    on create(type`: Text, eventInitDict: SpeechSynthesisErrorEventInit): SpeechSynthesisErrorEvent
+    on create(type`: Text, eventInitDict: SpeechSynthesisErrorEventInit) // : SpeechSynthesisErrorEvent
   }
 
   /**
@@ -19473,7 +19473,7 @@ external
 
     prototype: SpeechSynthesisEvent
 
-    on create(type`: Text, eventInitDict: SpeechSynthesisEventInit): SpeechSynthesisEvent
+    on create(type`: Text, eventInitDict: SpeechSynthesisEventInit) // : SpeechSynthesisEvent
   }
 
   type SpeechSynthesisUtteranceEventMap = aspect
@@ -19538,7 +19538,7 @@ external
 
     prototype: SpeechSynthesisUtterance
 
-    on create(text: Text? = empty): SpeechSynthesisUtterance
+    on create(text: Text? = empty) // : SpeechSynthesisUtterance
   }
 
   /**
@@ -19575,7 +19575,7 @@ external
   {
     prototype: StaticRange
 
-    on create(init: StaticRangeInit): StaticRange
+    on create(init: StaticRangeInit) // : StaticRange
   }
 
   /**
@@ -19591,7 +19591,7 @@ external
 
     prototype: StereoPannerNode
 
-    on create(context: BaseAudioContext, options: StereoPannerOptions? = empty): StereoPannerNode
+    on create(context: BaseAudioContext, options: StereoPannerOptions? = empty) // : StereoPannerNode
   }
 
   /**
@@ -19632,7 +19632,7 @@ external
   {
     prototype: StorageEvent
 
-    on create(type`: Text, eventInitDict: StorageEventInit? = empty): StorageEvent
+    on create(type`: Text, eventInitDict: StorageEventInit? = empty) // : StorageEvent
   }
 
   /**
@@ -19757,7 +19757,7 @@ external
 
     prototype: SubmitEvent
 
-    on create(type`: Text, eventInitDict: SubmitEventInit? = empty): SubmitEvent
+    on create(type`: Text, eventInitDict: SubmitEventInit? = empty) // : SubmitEvent
   }
 
   /**
@@ -19825,7 +19825,7 @@ external
 
     prototype: Text
 
-    on create(data: Text? = empty): Text
+    on create(data: Text? = empty) // : Text
   }
 
   /**
@@ -19840,7 +19840,7 @@ external
 
     prototype: TextDecoder
 
-    on create(label: Text? = empty, options: TextDecoderOptions? = empty): TextDecoder
+    on create(label: Text? = empty, options: TextDecoderOptions? = empty) // : TextDecoder
   }
 
   type TextDecoderCommon = aspect
@@ -19868,7 +19868,7 @@ external
 
     prototype: TextDecoderStream
 
-    on create(label: Text? = empty, options: TextDecoderOptions? = empty): TextDecoderStream
+    on create(label: Text? = empty, options: TextDecoderOptions? = empty) // : TextDecoderStream
   }
 
   /**
@@ -20132,7 +20132,7 @@ external
 
     prototype: ToggleEvent
 
-    on create(type`: Text, eventInitDict: ToggleEventInit? = empty): ToggleEvent
+    on create(type`: Text, eventInitDict: ToggleEventInit? = empty) // : ToggleEvent
   }
 
   /**
@@ -20181,7 +20181,7 @@ external
 
     prototype: Touch
 
-    on create(touchInitDict: TouchInit): Touch
+    on create(touchInitDict: TouchInit) // : Touch
   }
 
   /**
@@ -20215,7 +20215,7 @@ external
 
     prototype: TouchEvent
 
-    on create(type`: Text, eventInitDict: TouchEventInit? = empty): TouchEvent
+    on create(type`: Text, eventInitDict: TouchEventInit? = empty) // : TouchEvent
   }
 
   /**
@@ -20251,7 +20251,7 @@ external
 
     prototype: TrackEvent
 
-    on create(type`: Text, eventInitDict: TrackEventInit? = empty): TrackEvent
+    on create(type`: Text, eventInitDict: TrackEventInit? = empty) // : TrackEvent
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransformStream) */
@@ -20266,7 +20266,7 @@ external
 
     prototype: TransformStream
 
-    on create(transformer: Transformer<I, O>? = empty, writableStrategy: QueuingStrategy<I>? = empty, readableStrategy: QueuingStrategy<O>? = empty): TransformStream<I, O>
+    on create(transformer: Transformer<I, O>? = empty, writableStrategy: QueuingStrategy<I>? = empty, readableStrategy: QueuingStrategy<O>? = empty) // : TransformStream<I, O>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransformStreamDefaultController) */
@@ -20306,7 +20306,7 @@ external
 
     prototype: TransitionEvent
 
-    on create(type`: Text, transitionEventInitDict: TransitionEventInit? = empty): TransitionEvent
+    on create(type`: Text, transitionEventInitDict: TransitionEventInit? = empty) // : TransitionEvent
   }
 
   /**
@@ -20357,7 +20357,7 @@ external
   {
     prototype: UIEvent
 
-    on create(type`: Text, eventInitDict: UIEventInit? = empty): UIEvent
+    on create(type`: Text, eventInitDict: UIEventInit? = empty) // : UIEvent
   }
 
   /**
@@ -20400,7 +20400,7 @@ external
 
     prototype: URL
 
-    on create(url: Object? /*(!)Text | URL*/, base: Object? /*(!)Text | URL | пусто*/ = empty): URL
+    on create(url: Object? /*(!)Text | URL*/, base: Object? /*(!)Text | URL | пусто*/ = empty) // : URL
 
     operation canParse(url: Object? /*(!)Text | URL*/, base: Text? = empty): YesNo
 
@@ -20442,7 +20442,7 @@ external
 
     prototype: URLSearchParams
 
-    on create(init: Object? /*(!)Список<Список<Text>> | Record<Text, Text> | Text | URLSearchParams | пусто*/ = empty): URLSearchParams
+    on create(init: Object? /*(!)Список<Список<Text>> | Record<Text, Text> | Text | URLSearchParams | пусто*/ = empty) // : URLSearchParams
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/UserActivation) */
@@ -20496,7 +20496,7 @@ external
 
     prototype: VTTCue
 
-    on create(startTime: Number, endTime: Number, text: Text): VTTCue
+    on create(startTime: Number, endTime: Number, text: Text) // : VTTCue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/VTTRegion) */
@@ -20590,7 +20590,7 @@ external
 
     prototype: VideoColorSpace
 
-    on create(init: VideoColorSpaceInit? = empty): VideoColorSpace
+    on create(init: VideoColorSpaceInit? = empty) // : VideoColorSpace
   }
 
   type VideoDecoderEventMap = aspect
@@ -20635,7 +20635,7 @@ external
 
     prototype: VideoDecoder
 
-    on create(init: VideoDecoderInit): VideoDecoder
+    on create(init: VideoDecoderInit) // : VideoDecoder
 
     operation isConfigSupported(config: VideoDecoderConfig): Promise<VideoDecoderSupport>
   }
@@ -20682,7 +20682,7 @@ external
 
     prototype: VideoEncoder
 
-    on create(init: VideoEncoderInit): VideoEncoder
+    on create(init: VideoEncoderInit) // : VideoEncoder
 
     operation isConfigSupported(config: VideoEncoderConfig): Promise<VideoEncoderSupport>
   }
@@ -20731,9 +20731,9 @@ external
 
     prototype: VideoFrame
 
-    on create(image: CanvasImageSource, init: VideoFrameInit? = empty): VideoFrame
+    on create(image: CanvasImageSource, init: VideoFrameInit? = empty) // : VideoFrame
 
-    on create(data: BufferSource, init: VideoFrameBufferInit): VideoFrame
+    on create(data: BufferSource, init: VideoFrameBufferInit) // : VideoFrame
   }
 
   /**
@@ -21246,7 +21246,7 @@ external
 
     prototype: WaveShaperNode
 
-    on create(context: BaseAudioContext, options: WaveShaperOptions? = empty): WaveShaperNode
+    on create(context: BaseAudioContext, options: WaveShaperOptions? = empty) // : WaveShaperNode
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WebGL2RenderingContext) */
@@ -24036,7 +24036,7 @@ external
 
     prototype: WebGLContextEvent
 
-    on create(type`: Text, eventInit: WebGLContextEventInit? = empty): WebGLContextEvent
+    on create(type`: Text, eventInit: WebGLContextEventInit? = empty) // : WebGLContextEvent
   }
 
   /**
@@ -26417,7 +26417,7 @@ external
 
     prototype: WebSocket
 
-    on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | Список<Text> | пусто*/ = empty): WebSocket
+    on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | Список<Text> | пусто*/ = empty) // : WebSocket
 
     guarded
     CONNECTING: 0
@@ -26463,7 +26463,7 @@ external
 
     prototype: WebTransport
 
-    on create(url: Object? /*(!)Text | URL*/, options: WebTransportOptions? = empty): WebTransport
+    on create(url: Object? /*(!)Text | URL*/, options: WebTransportOptions? = empty) // : WebTransport
   }
 
   /**
@@ -26531,7 +26531,7 @@ external
 
     prototype: WebTransportError
 
-    on create(message: Text? = empty, options: WebTransportErrorOptions? = empty): WebTransportError
+    on create(message: Text? = empty, options: WebTransportErrorOptions? = empty) // : WebTransportError
   }
 
   /**
@@ -26565,7 +26565,7 @@ external
 
     prototype: WheelEvent
 
-    on create(type`: Text, eventInitDict: WheelEventInit? = empty): WheelEvent
+    on create(type`: Text, eventInitDict: WheelEventInit? = empty) // : WheelEvent
 
     guarded
     DOM_DELTA_PIXEL: 0x00
@@ -26815,7 +26815,7 @@ external
 
     prototype: Worker
 
-    on create(scriptURL: Object? /*(!)Text | URL*/, options: WorkerOptions? = empty): Worker
+    on create(scriptURL: Object? /*(!)Text | URL*/, options: WorkerOptions? = empty) // : Worker
   }
 
   /**
@@ -26852,7 +26852,7 @@ external
 
     prototype: WritableStream
 
-    on create(underlyingSink: UnderlyingSink<W>? = empty, strategy: QueuingStrategy<W>? = empty): WritableStream<W>
+    on create(underlyingSink: UnderlyingSink<W>? = empty, strategy: QueuingStrategy<W>? = empty) // : WritableStream<W>
   }
 
   /**
@@ -26900,7 +26900,7 @@ external
 
     prototype: WritableStreamDefaultWriter
 
-    on create(stream: WritableStream<W>): WritableStreamDefaultWriter<W>
+    on create(stream: WritableStream<W>) // : WritableStreamDefaultWriter<W>
   }
 
   /**
