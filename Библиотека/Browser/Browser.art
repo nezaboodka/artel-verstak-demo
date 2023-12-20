@@ -181,7 +181,7 @@ external
 
     numberOfOutputs: Number
 
-    outputChannelCount: Список<Number>
+    outputChannelCount: List<Number>
 
     parameterData: Object // Record<Text, Number>
 
@@ -417,9 +417,9 @@ external
 
   type ConstrainDOMStringParameters = aspect
   {
-    exact: Object? /*(!)Text | Список<Text>*/
+    exact: Object? /*(!)Text | List<Text>*/
 
-    ideal: Object? /*(!)Text | Список<Text>*/
+    ideal: Object? /*(!)Text | List<Text>*/
   }
 
 
@@ -895,7 +895,7 @@ external
 
   type FontFaceSetLoadEventInit = aspect EventInit
   {
-    fontfaces: Список<FontFace>
+    fontfaces: List<FontFace>
   }
 
 
@@ -1015,7 +1015,7 @@ external
   {
     autoIncrement: YesNo
 
-    keyPath: Object? /*(!)Text | Список<Text> | пусто*/
+    keyPath: Object? /*(!)Text | List<Text> | пусто*/
   }
 
 
@@ -1035,9 +1035,9 @@ external
 
   type IIRFilterOptions = aspect AudioNodeOptions
   {
-    feedback: Список<Number>
+    feedback: List<Number>
 
-    feedforward: Список<Number>
+    feedforward: List<Number>
   }
 
 
@@ -1099,7 +1099,7 @@ external
 
     isComposing: YesNo
 
-    targetRanges: Список<StaticRange>
+    targetRanges: List<StaticRange>
   }
 
 
@@ -1127,7 +1127,7 @@ external
 
     rootMargin: Text
 
-    threshold: Object? /*(!)Number | Список<Number>*/
+    threshold: Object? /*(!)Number | List<Number>*/
   }
 
 
@@ -1149,13 +1149,13 @@ external
 
     k: Text
 
-    key_ops: Список<Text>
+    key_ops: List<Text>
 
     kty: Text
 
     n: Text
 
-    oth: Список<RsaOtherPrimesInfo>
+    oth: List<RsaOtherPrimesInfo>
 
     p: Text
 
@@ -1233,9 +1233,9 @@ external
 
   type LockManagerSnapshot = aspect
   {
-    held: Список<LockInfo>
+    held: List<LockInfo>
 
-    pending: Список<LockInfo>
+    pending: List<LockInfo>
   }
 
 
@@ -1347,19 +1347,19 @@ external
 
   type MediaKeySystemConfiguration = aspect
   {
-    audioCapabilities: Список<MediaKeySystemMediaCapability>
+    audioCapabilities: List<MediaKeySystemMediaCapability>
 
     distinctiveIdentifier: MediaKeysRequirement
 
-    initDataTypes: Список<Text>
+    initDataTypes: List<Text>
 
     label: Text
 
     persistentState: MediaKeysRequirement
 
-    sessionTypes: Список<Text>
+    sessionTypes: List<Text>
 
-    videoCapabilities: Список<MediaKeySystemMediaCapability>
+    videoCapabilities: List<MediaKeySystemMediaCapability>
   }
 
 
@@ -1379,7 +1379,7 @@ external
 
     artist: Text
 
-    artwork: Список<MediaImage>
+    artwork: List<MediaImage>
 
     title: Text
   }
@@ -1455,7 +1455,7 @@ external
   {
     aspectRatio: DoubleRange
 
-    autoGainControl: Список<YesNo>
+    autoGainControl: List<YesNo>
 
     channelCount: ULongRange
 
@@ -1463,9 +1463,9 @@ external
 
     displaySurface: Text
 
-    echoCancellation: Список<YesNo>
+    echoCancellation: List<YesNo>
 
-    facingMode: Список<Text>
+    facingMode: List<Text>
 
     frameRate: DoubleRange
 
@@ -1473,7 +1473,7 @@ external
 
     height: ULongRange
 
-    noiseSuppression: Список<YesNo>
+    noiseSuppression: List<YesNo>
 
     sampleRate: ULongRange
 
@@ -1517,7 +1517,7 @@ external
 
   type MediaTrackConstraints = aspect MediaTrackConstraintSet
   {
-    advanced: Список<MediaTrackConstraintSet>
+    advanced: List<MediaTrackConstraintSet>
   }
 
 
@@ -1593,7 +1593,7 @@ external
 
     origin: Text
 
-    ports: Список<MessagePort>
+    ports: List<MessagePort>
 
     source: MessageEventSource?
   }
@@ -1629,7 +1629,7 @@ external
 
   type MutationObserverInit = aspect
   {
-    attributeFilter: Список<Text>
+    attributeFilter: List<Text>
 
     attributeOldValue: YesNo
 
@@ -1665,7 +1665,7 @@ external
 
   type NotificationOptions = aspect
   {
-    actions: Список<NotificationAction>
+    actions: List<NotificationAction>
 
     badge: Text
 
@@ -1793,9 +1793,9 @@ external
 
   type PaymentDetailsBase = aspect
   {
-    displayItems: Список<PaymentItem>
+    displayItems: List<PaymentItem>
 
-    modifiers: Список<PaymentDetailsModifier>
+    modifiers: List<PaymentDetailsModifier>
   }
 
 
@@ -1809,7 +1809,7 @@ external
 
   type PaymentDetailsModifier = aspect
   {
-    additionalDisplayItems: Список<PaymentItem>
+    additionalDisplayItems: List<PaymentItem>
 
     data: /*(!) any */ Object?
 
@@ -1901,7 +1901,7 @@ external
   {
     buffered: YesNo
 
-    entryTypes: Список<Text>
+    entryTypes: List<Text>
 
     type`: Text
   }
@@ -1915,9 +1915,9 @@ external
 
   type PeriodicWaveOptions = aspect PeriodicWaveConstraints
   {
-    imag: Object? /*(!)Список<Number> | Float32Array*/
+    imag: Object? /*(!)List<Number> | Float32Array*/
 
-    real: Object? /*(!)Список<Number> | Float32Array*/
+    real: Object? /*(!)List<Number> | Float32Array*/
   }
 
 
@@ -1943,7 +1943,7 @@ external
 
   type PointerEventInit = aspect MouseEventInit
   {
-    coalescedEvents: Список<PointerEvent>
+    coalescedEvents: List<PointerEvent>
 
     height: Number
 
@@ -1953,7 +1953,7 @@ external
 
     pointerType: Text
 
-    predictedEvents: Список<PointerEvent>
+    predictedEvents: List<PointerEvent>
 
     pressure: Number
 
@@ -2017,11 +2017,11 @@ external
 
   type PropertyIndexedKeyframes = aspect
   {
-    composite: Object? /*(!)CompositeOperationOrAuto | Список<CompositeOperationOrAuto>*/
+    composite: Object? /*(!)CompositeOperationOrAuto | List<CompositeOperationOrAuto>*/
 
-    easing: Object? /*(!)Text | Список<Text>*/
+    easing: Object? /*(!)Text | List<Text>*/
 
-    offset: Object? /*(!)Number | Список<Number?>*/
+    offset: Object? /*(!)Number | List<Number?>*/
 
     /*(!) [property: string]: string | string[] | number | null | (number | null)[] | undefined*/
   }
@@ -2035,11 +2035,11 @@ external
 
     challenge: BufferSource
 
-    excludeCredentials: Список<PublicKeyCredentialDescriptor>
+    excludeCredentials: List<PublicKeyCredentialDescriptor>
 
     extensions: AuthenticationExtensionsClientInputs
 
-    pubKeyCredParams: Список<PublicKeyCredentialParameters>
+    pubKeyCredParams: List<PublicKeyCredentialParameters>
 
     rp: PublicKeyCredentialRpEntity
 
@@ -2053,7 +2053,7 @@ external
   {
     id: BufferSource
 
-    transports: Список<AuthenticatorTransport>
+    transports: List<AuthenticatorTransport>
 
     type`: PublicKeyCredentialType
   }
@@ -2075,7 +2075,7 @@ external
 
   type PublicKeyCredentialRequestOptions = aspect
   {
-    allowCredentials: Список<PublicKeyCredentialDescriptor>
+    allowCredentials: List<PublicKeyCredentialDescriptor>
 
     challenge: BufferSource
 
@@ -2151,11 +2151,11 @@ external
   {
     bundlePolicy: RTCBundlePolicy
 
-    certificates: Список<RTCCertificate>
+    certificates: List<RTCCertificate>
 
     iceCandidatePoolSize: Number
 
-    iceServers: Список<RTCIceServer>
+    iceServers: List<RTCIceServer>
 
     iceTransportPolicy: RTCIceTransportPolicy
 
@@ -2201,7 +2201,7 @@ external
 
   type RTCEncodedAudioFrameMetadata = aspect
   {
-    contributingSources: Список<Number>
+    contributingSources: List<Number>
 
     synchronizationSource: Number
   }
@@ -2209,7 +2209,7 @@ external
 
   type RTCEncodedVideoFrameMetadata = aspect
   {
-    dependencies: Список<Number>
+    dependencies: List<Number>
 
     frameId: Number
 
@@ -2309,7 +2309,7 @@ external
   {
     credential: Text
 
-    urls: Object? /*(!)Text | Список<Text>*/
+    urls: Object? /*(!)Text | List<Text>*/
 
     username: Text
   }
@@ -2509,9 +2509,9 @@ external
 
   type RTCRtpCapabilities = aspect
   {
-    codecs: Список<RTCRtpCodecCapability>
+    codecs: List<RTCRtpCodecCapability>
 
-    headerExtensions: Список<RTCRtpHeaderExtensionCapability>
+    headerExtensions: List<RTCRtpHeaderExtensionCapability>
   }
 
 
@@ -2591,9 +2591,9 @@ external
 
   type RTCRtpParameters = aspect
   {
-    codecs: Список<RTCRtpCodecParameters>
+    codecs: List<RTCRtpCodecParameters>
 
-    headerExtensions: Список<RTCRtpHeaderExtensionParameters>
+    headerExtensions: List<RTCRtpHeaderExtensionParameters>
 
     rtcp: RTCRtcpParameters
   }
@@ -2609,7 +2609,7 @@ external
   {
     degradationPreference: RTCDegradationPreference
 
-    encodings: Список<RTCRtpEncodingParameters>
+    encodings: List<RTCRtpEncodingParameters>
 
     transactionId: Text
   }
@@ -2637,9 +2637,9 @@ external
   {
     direction: RTCRtpTransceiverDirection
 
-    sendEncodings: Список<RTCRtpEncodingParameters>
+    sendEncodings: List<RTCRtpEncodingParameters>
 
-    streams: Список<MediaStream>
+    streams: List<MediaStream>
   }
 
 
@@ -2673,7 +2673,7 @@ external
   {
     receiver: RTCRtpReceiver
 
-    streams: Список<MediaStream>
+    streams: List<MediaStream>
 
     track: MediaStreamTrack
 
@@ -2747,7 +2747,7 @@ external
   {
     buffered: YesNo
 
-    types: Список<Text>
+    types: List<Text>
   }
 
 
@@ -2927,7 +2927,7 @@ external
 
   type ShareData = aspect
   {
-    files: Список<File>
+    files: List<File>
 
     text: Text
 
@@ -3011,7 +3011,7 @@ external
 
   type StructuredSerializeOptions = aspect
   {
-    transfer: Список<Transferable>
+    transfer: List<Transferable>
   }
 
 
@@ -3053,11 +3053,11 @@ external
 
   type TouchEventInit = aspect EventModifierInit
   {
-    changedTouches: Список<Touch>
+    changedTouches: List<Touch>
 
-    targetTouches: Список<Touch>
+    targetTouches: List<Touch>
 
-    touches: Список<Touch>
+    touches: List<Touch>
   }
 
 
@@ -3359,7 +3359,7 @@ external
 
     format: VideoPixelFormat
 
-    layout: Список<PlaneLayout>
+    layout: List<PlaneLayout>
 
     timestamp: Number
 
@@ -3393,7 +3393,7 @@ external
 
   type VideoFrameCopyToOptions = aspect
   {
-    layout: Список<PlaneLayout>
+    layout: List<PlaneLayout>
 
     rect: DOMRectInit
   }
@@ -3417,7 +3417,7 @@ external
 
   type WaveShaperOptions = aspect AudioNodeOptions
   {
-    curve: Object? /*(!)Список<Number> | Float32Array*/
+    curve: Object? /*(!)List<Number> | Float32Array*/
 
     oversample: OverSampleType
   }
@@ -3483,7 +3483,7 @@ external
 
     requireUnreliable: YesNo
 
-    serverCertificateHashes: Список<WebTransportHash>
+    serverCertificateHashes: List<WebTransportHash>
   }
 
 
@@ -3801,9 +3801,9 @@ external
 
   type Animatable = aspect
   {
-    operation animate(keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeAnimationOptions | пусто*/ = none): Animation
+    operation animate(keyframes: Object? /*(!)List<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeAnimationOptions | пусто*/ = none): Animation
 
-    operation getAnimations(options: GetAnimationsOptions? = none): Список<Animation>
+    operation getAnimations(options: GetAnimationsOptions? = none): List<Animation>
   }
 
 
@@ -4188,7 +4188,7 @@ external
 
     operation setValueAtTime(value: Number, startTime: Number): AudioParam
 
-    operation setValueCurveAtTime(values: Object? /*(!)Список<Number> | Float32Array*/, startTime: Number, duration: Number): AudioParam
+    operation setValueCurveAtTime(values: Object? /*(!)List<Number> | Float32Array*/, startTime: Number, duration: Number): AudioParam
 
     prototype: AudioParam
 
@@ -4322,7 +4322,7 @@ external
 
     operation getPublicKeyAlgorithm(): COSEAlgorithmIdentifier
 
-    operation getTransports(): Список<Text>
+    operation getTransports(): List<Text>
 
     prototype: AuthenticatorAttestationResponse
 
@@ -4448,7 +4448,7 @@ external
 
     prototype: Blob
 
-    on create(blobParts: Список<BlobPart>? = none, options: BlobPropertyBag? = none) // : Blob
+    on create(blobParts: List<BlobPart>? = none, options: BlobPropertyBag? = none) // : Blob
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/BlobEvent) */
@@ -4850,7 +4850,7 @@ external
     prototype: CSSMathMax
 
     #JS.МассивПараметров
-    on create(args: Список<CSSNumberish>) // : CSSMathMax
+    on create(args: List<CSSNumberish>) // : CSSMathMax
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathMin) */
@@ -4863,7 +4863,7 @@ external
     prototype: CSSMathMin
 
     #JS.МассивПараметров
-    on create(args: Список<CSSNumberish>) // : CSSMathMin
+    on create(args: List<CSSNumberish>) // : CSSMathMin
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathNegate) */
@@ -4888,7 +4888,7 @@ external
     prototype: CSSMathProduct
 
     #JS.МассивПараметров
-    on create(args: Список<CSSNumberish>) // : CSSMathProduct
+    on create(args: List<CSSNumberish>) // : CSSMathProduct
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathSum) */
@@ -4901,7 +4901,7 @@ external
     prototype: CSSMathSum
 
     #JS.МассивПараметров
-    on create(args: Список<CSSNumberish>) // : CSSMathSum
+    on create(args: List<CSSNumberish>) // : CSSMathSum
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathValue) */
@@ -4983,30 +4983,30 @@ external
   type CSSNumericValue = object CSSStyleValue
   {
     #JS.МассивПараметров
-    operation add(values: Список<CSSNumberish>): CSSNumericValue
+    operation add(values: List<CSSNumberish>): CSSNumericValue
 
     #JS.МассивПараметров
-    operation div(values: Список<CSSNumberish>): CSSNumericValue
+    operation div(values: List<CSSNumberish>): CSSNumericValue
 
     #JS.МассивПараметров
-    operation equals(value: Список<CSSNumberish>): YesNo
+    operation equals(value: List<CSSNumberish>): YesNo
 
     #JS.МассивПараметров
-    operation max(values: Список<CSSNumberish>): CSSNumericValue
+    operation max(values: List<CSSNumberish>): CSSNumericValue
 
     #JS.МассивПараметров
-    operation min(values: Список<CSSNumberish>): CSSNumericValue
+    operation min(values: List<CSSNumberish>): CSSNumericValue
 
     #JS.МассивПараметров
-    operation mul(values: Список<CSSNumberish>): CSSNumericValue
+    operation mul(values: List<CSSNumberish>): CSSNumericValue
 
     #JS.МассивПараметров
-    operation sub(values: Список<CSSNumberish>): CSSNumericValue
+    operation sub(values: List<CSSNumberish>): CSSNumericValue
 
     operation to(unit: Text): CSSUnitValue
 
     #JS.МассивПараметров
-    operation toSum(units: Список<Text>): CSSMathSum
+    operation toSum(units: List<Text>): CSSMathSum
 
     operation type`(): CSSNumericType
 
@@ -5353,7 +5353,7 @@ external
 
     operation parse(property: Text, cssText: Text): CSSStyleValue
 
-    operation parseAll(property: Text, cssText: Text): Список<CSSStyleValue>
+    operation parseAll(property: Text, cssText: Text): List<CSSStyleValue>
   }
 
   /**
@@ -5402,7 +5402,7 @@ external
 
     prototype: CSSTransformValue
 
-    on create(transforms: Список<CSSTransformComponent>) // : CSSTransformValue
+    on create(transforms: List<CSSTransformComponent>) // : CSSTransformValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSTransition) */
@@ -5467,7 +5467,7 @@ external
 
     prototype: CSSUnparsedValue
 
-    on create(members: Список<CSSUnparsedSegment>) // : CSSUnparsedValue
+    on create(members: List<CSSUnparsedSegment>) // : CSSUnparsedValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSVariableReferenceValue) */
@@ -5495,7 +5495,7 @@ external
   {
     operation add(request: Object? /*(!)RequestInfo | URL*/): JS.Promise<None>
 
-    operation addAll(requests: Список<RequestInfo>): JS.Promise<None>
+    operation addAll(requests: List<RequestInfo>): JS.Promise<None>
 
     operation delete(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = none): JS.Promise<YesNo>
 
@@ -5525,7 +5525,7 @@ external
 
     operation has(cacheName: Text): JS.Promise<YesNo>
 
-    operation keys(): JS.Promise<Список<Text>>
+    operation keys(): JS.Promise<List<Text>>
 
     operation match(request: Object? /*(!)RequestInfo | URL*/, options: MultiCacheQueryOptions? = none): JS.Promise<Response?>
 
@@ -5681,7 +5681,7 @@ external
 
     operation rect(x: Number, y: Number, w: Number, h: Number)
 
-    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Object? /*(!)Number | DOMPointInit | Список<Object? /*(!)Number | DOMPointInit> | пусто*/ = none)
+    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Object? /*(!)Number | DOMPointInit | List<Object? /*(!)Number | DOMPointInit> | пусто*/ = none)
   }
 
 
@@ -5697,9 +5697,9 @@ external
 
     miterLimit: Number
 
-    operation getLineDash(): Список<Number>
+    operation getLineDash(): List<Number>
 
-    operation setLineDash(segments: Список<Number>)
+    operation setLineDash(segments: List<Number>)
   }
 
 
@@ -5880,15 +5880,15 @@ external
   type ChildNode = aspect Node
   {
     #JS.МассивПараметров
-    operation after(nodes: Список<Object? /*(!)Node | Text*/>)
+    operation after(nodes: List<Object? /*(!)Node | Text*/>)
 
     #JS.МассивПараметров
-    operation before(nodes: Список<Object? /*(!)Node | Text*/>)
+    operation before(nodes: List<Object? /*(!)Node | Text*/>)
 
     operation remove()
 
     #JS.МассивПараметров
-    operation replaceWith(nodes: Список<Object? /*(!)Node | Text*/>)
+    operation replaceWith(nodes: List<Object? /*(!)Node | Text*/>)
   }
 
 
@@ -6140,7 +6140,7 @@ external
     type`: KeyType
 
     guarded
-    usages: Список<KeyUsage>
+    usages: List<KeyUsage>
 
     prototype: CryptoKey
 
@@ -6423,11 +6423,11 @@ external
 
     prototype: DOMMatrix
 
-    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = none) // : DOMMatrix
+    on create(init: Object? /*(!)Text | List<Number> | пусто*/ = none) // : DOMMatrix
 
     operation fromFloat32Array(array32: JS.Float32Array): DOMMatrix
 
-    operation fromFloat64Array(array64: Float64Array): DOMMatrix
+    operation fromFloat64Array(array64: JS.Float64Array): DOMMatrix
 
     operation fromMatrix(other: DOMMatrixInit? = none): DOMMatrix
   }
@@ -6454,11 +6454,11 @@ external
 
     prototype: DOMMatrixReadOnly
 
-    on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = none) // : DOMMatrixReadOnly
+    on create(init: Object? /*(!)Text | List<Number> | пусто*/ = none) // : DOMMatrixReadOnly
 
     operation fromFloat32Array(array32: JS.Float32Array): DOMMatrixReadOnly
 
-    operation fromFloat64Array(array64: Float64Array): DOMMatrixReadOnly
+    operation fromFloat64Array(array64: JS.Float64Array): DOMMatrixReadOnly
 
     operation fromMatrix(other: DOMMatrixInit? = none): DOMMatrixReadOnly
   }
@@ -6688,14 +6688,14 @@ external
     operation toString(): Text
 
     #JS.МассивПараметров
-    operation add(tokens: Список<Text>)
+    operation add(tokens: List<Text>)
 
     operation contains(token: Text): YesNo
 
     operation item(index: Number): Text?
 
     #JS.МассивПараметров
-    operation remove(tokens: Список<Text>)
+    operation remove(tokens: List<Text>)
 
     operation replace(token: Text, newToken: Text): YesNo
 
@@ -7131,7 +7131,7 @@ external
     guarded 
     activeElement: Element?
 
-    adoptedStyleSheets: Список<CSSStyleSheet>
+    adoptedStyleSheets: List<CSSStyleSheet>
 
     guarded 
     fullscreenElement: Element?
@@ -7147,9 +7147,9 @@ external
 
     operation elementFromPoint(x: Number, y: Number): Element?
 
-    operation elementsFromPoint(x: Number, y: Number): Список<Element>
+    operation elementsFromPoint(x: Number, y: Number): List<Element>
 
-    operation getAnimations(): Список<Animation>
+    operation getAnimations(): List<Animation>
   }
 
 
@@ -7682,7 +7682,7 @@ external
 
     prototype: File
 
-    on create(fileBits: Список<BlobPart>, fileName: Text, options: FilePropertyBag? = none) // : File
+    on create(fileBits: List<BlobPart>, fileName: Text, options: FilePropertyBag? = none) // : File
   }
 
   /**
@@ -7838,7 +7838,7 @@ external
 
     operation removeEntry(name: Text, options: FileSystemRemoveOptions? = none): JS.Promise<None>
 
-    operation resolve(possibleDescendant: FileSystemHandle): JS.Promise<Список<Text>?>
+    operation resolve(possibleDescendant: FileSystemHandle): JS.Promise<List<Text>?>
 
     prototype: FileSystemDirectoryHandle
 
@@ -8036,7 +8036,7 @@ external
 
     operation check(font: Text, text: Text? = none): YesNo
 
-    operation load(font: Text, text: Text? = none): JS.Promise<Список<FontFace>>
+    operation load(font: Text, text: Text? = none): JS.Promise<List<FontFace>>
 
     operation forEach(callbackfn: operation(value: FontFace, key: FontFace, parent: FontFaceSet), thisArg: /*(!) any */ Object? = none)
 
@@ -8050,7 +8050,7 @@ external
 
     prototype: FontFaceSet
 
-    on create(initialFaces: Список<FontFace>) // : FontFaceSet
+    on create(initialFaces: List<FontFace>) // : FontFaceSet
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/FontFaceSetLoadEvent) */
@@ -8090,7 +8090,7 @@ external
 
     operation get(name: Text): FormDataEntryValue?
 
-    operation getAll(name: Text): Список<FormDataEntryValue>
+    operation getAll(name: Text): List<FormDataEntryValue>
 
     operation has(name: Text): YesNo
 
@@ -8224,7 +8224,7 @@ external
 
   type GamepadHapticActuator = object
   {
-    guarded
+    const
     type`: GamepadHapticActuatorType
 
     operation playEffect(type`: GamepadHapticEffectType, params: GamepadEffectParameters? = none): JS.Promise<GamepadHapticsResult>
@@ -10274,11 +10274,11 @@ external
     name: Text
 
     #JS.МассивПараметров
-    operation assign(nodes: Список<Object? /*(!)Element | Text*/>)
+    operation assign(nodes: List<Object? /*(!)Element | Text*/>)
 
-    operation assignedElements(options: AssignedNodesOptions? = none): Список<Element>
+    operation assignedElements(options: AssignedNodesOptions? = none): List<Element>
 
-    operation assignedNodes(options: AssignedNodesOptions? = none): Список<Node>
+    operation assignedNodes(options: AssignedNodesOptions? = none): List<Node>
 
     operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSlotElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -10849,7 +10849,7 @@ external
 
     operation get(name: Text): Text?
 
-    operation getSetCookie(): Список<Text>
+    operation getSetCookie(): List<Text>
 
     operation has(name: Text): YesNo
 
@@ -10990,7 +10990,7 @@ external
 
     operation deleteObjectStore(name: Text)
 
-    operation transaction(storeNames: Object? /*(!)Text | Список<Text>*/, mode: IDBTransactionMode? = none, options: IDBTransactionOptions? = none): IDBTransaction
+    operation transaction(storeNames: Object? /*(!)Text | List<Text>*/, mode: IDBTransactionMode? = none, options: IDBTransactionOptions? = none): IDBTransaction
 
     operation addEventListener<K = /*(!) keyof IDBDatabaseEventMap */ Object?>(type`: K, listener: operation(this: IDBDatabase, ev: /*(!) IDBDatabaseEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -11015,7 +11015,7 @@ external
   {
     operation cmp(first: /*(!) any */ Object?, second: /*(!) any */ Object?): Number
 
-    operation databases(): JS.Promise<Список<IDBDatabaseInfo>>
+    operation databases(): JS.Promise<List<IDBDatabaseInfo>>
 
     operation deleteDatabase(name: Text): IDBOpenDBRequest
 
@@ -11035,7 +11035,7 @@ external
   type IDBIndex = object
   {
     guarded
-    keyPath: Object? /*(!)Text | Список<Text>*/
+    keyPath: Object? /*(!)Text | List<Text>*/
 
     guarded
     multiEntry: YesNo
@@ -11052,9 +11052,9 @@ external
 
     operation get(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest</*(!) any */ Object?>
 
-    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<Список</*(!) any */ Object?>>
+    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List</*(!) any */ Object?>>
 
-    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<Список<IDBValidKey>>
+    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
 
     operation getKey(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<IDBValidKey?>
 
@@ -11117,7 +11117,7 @@ external
     indexNames: DOMStringList
 
     guarded
-    keyPath: Object? /*(!)Text | Список<Text>*/
+    keyPath: Object? /*(!)Text | List<Text>*/
 
     name: Text
 
@@ -11130,7 +11130,7 @@ external
 
     operation count(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто*/ = none): IDBRequest<Number>
 
-    operation createIndex(name: Text, keyPath: Object? /*(!)Text | Список<Text>*/, options: IDBIndexParameters? = none): IDBIndex
+    operation createIndex(name: Text, keyPath: Object? /*(!)Text | List<Text>*/, options: IDBIndexParameters? = none): IDBIndex
 
     operation delete(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<None>
 
@@ -11138,9 +11138,9 @@ external
 
     operation get(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest</*(!) any */ Object?>
 
-    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<Список</*(!) any */ Object?>>
+    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List</*(!) any */ Object?>>
 
-    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<Список<IDBValidKey>>
+    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
 
     operation getKey(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<IDBValidKey?>
 
@@ -11435,7 +11435,7 @@ external
     guarded
     isComposing: YesNo
 
-    operation getTargetRanges(): Список<StaticRange>
+    operation getTargetRanges(): List<StaticRange>
 
     prototype: InputEvent
 
@@ -11463,7 +11463,7 @@ external
 
     operation observe(target: Element)
 
-    operation takeRecords(): Список<IntersectionObserverEntry>
+    operation takeRecords(): List<IntersectionObserverEntry>
 
     operation unobserve(target: Element)
 
@@ -11511,7 +11511,7 @@ external
   type KHR_parallel_shader_compile = aspect
   {
     guarded 
-    COMPLETION_STATUS_KHR: 0x91B1
+    COMPLETION_STATUS_KHR // : 0x91B1
   }
 
 
@@ -11524,32 +11524,32 @@ external
   type KeyboardEvent = object UIEvent
   {
     guarded
-    DOM_KEY_LOCATION_STANDARD: 0x00
+    DOM_KEY_LOCATION_STANDARD // = 0x00
 
     guarded
-    DOM_KEY_LOCATION_LEFT: 0x01
+    DOM_KEY_LOCATION_LEFT // = 0x01
 
     guarded
-    DOM_KEY_LOCATION_RIGHT: 0x02
+    DOM_KEY_LOCATION_RIGHT // = 0x02
 
     guarded
-    DOM_KEY_LOCATION_NUMPAD: 0x03
+    DOM_KEY_LOCATION_NUMPAD // = 0x03
 
     prototype: KeyboardEvent
 
     on create(type`: Text, eventInitDict: KeyboardEventInit? = none) // : KeyboardEvent
 
     guarded
-    DOM_KEY_LOCATION_STANDARD: 0x00
+    DOM_KEY_LOCATION_STANDARD // = 0x00
 
     guarded
-    DOM_KEY_LOCATION_LEFT: 0x01
+    DOM_KEY_LOCATION_LEFT // = 0x01
 
     guarded
-    DOM_KEY_LOCATION_RIGHT: 0x02
+    DOM_KEY_LOCATION_RIGHT // = 0x02
 
     guarded
-    DOM_KEY_LOCATION_NUMPAD: 0x03
+    DOM_KEY_LOCATION_NUMPAD // = 0x03
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/KeyframeEffect) */
@@ -11564,13 +11564,13 @@ external
 
     target: Element?
 
-    operation getKeyframes(): Список<ComputedKeyframe>
+    operation getKeyframes(): List<ComputedKeyframe>
 
-    operation setKeyframes(keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/)
+    operation setKeyframes(keyframes: Object? /*(!)List<Keyframe> | PropertyIndexedKeyframes | пусто*/)
 
     prototype: KeyframeEffect
 
-    on create(target: Element?, keyframes: Object? /*(!)Список<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = none) // : KeyframeEffect
+    on create(target: Element?, keyframes: Object? /*(!)List<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = none) // : KeyframeEffect
 
     on create(source: KeyframeEffect) // : KeyframeEffect
   }
@@ -11785,7 +11785,7 @@ external
 
   type MIDIOutput = object MIDIPort
   {
-    operation send(data: Список<Number>, timestamp: DOMHighResTimeStamp? = none)
+    operation send(data: List<Number>, timestamp: DOMHighResTimeStamp? = none)
 
     operation addEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIOutput, ev: /*(!) MIDIPortEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -11950,7 +11950,7 @@ external
   {
     ondevicechange: (operation(this: MediaDevices, ev: Event): /*(!) any */ Object?)?
 
-    operation enumerateDevices(): JS.Promise<Список<MediaDeviceInfo>>
+    operation enumerateDevices(): JS.Promise<List<MediaDeviceInfo>>
 
     operation getDisplayMedia(options: DisplayMediaStreamOptions? = none): JS.Promise<MediaStream>
 
@@ -12017,32 +12017,32 @@ external
     message: Text
 
     guarded
-    MEDIA_ERR_ABORTED: 1
+    MEDIA_ERR_ABORTED // = 1
 
     guarded
-    MEDIA_ERR_NETWORK: 2
+    MEDIA_ERR_NETWORK // = 2
 
     guarded
-    MEDIA_ERR_DECODE: 3
+    MEDIA_ERR_DECODE // = 3
 
     guarded
-    MEDIA_ERR_SRC_NOT_SUPPORTED: 4
+    MEDIA_ERR_SRC_NOT_SUPPORTED // = 4
 
     prototype: MediaError
 
     on create() // : MediaError
 
     guarded
-    MEDIA_ERR_ABORTED: 1
+    MEDIA_ERR_ABORTED // = 1
 
     guarded
-    MEDIA_ERR_NETWORK: 2
+    MEDIA_ERR_NETWORK // = 2
 
     guarded
-    MEDIA_ERR_DECODE: 3
+    MEDIA_ERR_DECODE // = 3
 
     guarded
-    MEDIA_ERR_SRC_NOT_SUPPORTED: 4
+    MEDIA_ERR_SRC_NOT_SUPPORTED // = 4
   }
 
   /**
@@ -12445,13 +12445,13 @@ external
 
     operation clone(): MediaStream
 
-    operation getAudioTracks(): Список<MediaStreamTrack>
+    operation getAudioTracks(): List<MediaStreamTrack>
 
     operation getTrackById(trackId: Text): MediaStreamTrack?
 
-    operation getTracks(): Список<MediaStreamTrack>
+    operation getTracks(): List<MediaStreamTrack>
 
-    operation getVideoTracks(): Список<MediaStreamTrack>
+    operation getVideoTracks(): List<MediaStreamTrack>
 
     operation removeTrack(track: MediaStreamTrack)
 
@@ -12469,7 +12469,7 @@ external
 
     on create(stream: MediaStream) // : MediaStream
 
-    on create(tracks: Список<MediaStreamTrack>) // : MediaStream
+    on create(tracks: List<MediaStreamTrack>) // : MediaStream
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/MediaStreamAudioDestinationNode) */
@@ -12638,7 +12638,7 @@ external
 
     operation close()
 
-    operation postMessage(message: /*(!) any */ Object?, transfer: Список<Transferable>)
+    operation postMessage(message: /*(!) any */ Object?, transfer: List<Transferable>)
 
     operation postMessage(message: /*(!) any */ Object?, options: StructuredSerializeOptions? = none)
 
@@ -12682,7 +12682,7 @@ external
 
     operation observe(target: Node, options: MutationObserverInit? = none)
 
-    operation takeRecords(): Список<MutationRecord>
+    operation takeRecords(): List<MutationRecord>
 
     prototype: MutationObserver
 
@@ -12828,11 +12828,11 @@ external
 
     operation canShare(data: ShareData? = none): YesNo
 
-    operation getGamepads(): Список<Gamepad?>
+    operation getGamepads(): List<Gamepad?>
 
     operation requestMIDIAccess(options: MIDIOptions? = none): JS.Promise<MIDIAccess>
 
-    operation requestMediaKeySystemAccess(keySystem: Text, supportedConfigurations: Список<MediaKeySystemConfiguration>): JS.Promise<MediaKeySystemAccess>
+    operation requestMediaKeySystemAccess(keySystem: Text, supportedConfigurations: List<MediaKeySystemConfiguration>): JS.Promise<MediaKeySystemAccess>
 
     operation sendBeacon(url: Object? /*(!)Text | URL*/, data: BodyInit? = none): YesNo
 
@@ -13008,116 +13008,116 @@ external
     operation replaceChild<T = Node>(node: Node, child: T): T
 
     guarded
-    ELEMENT_NODE: 1
+    ELEMENT_NODE // = 1
 
     guarded
-    ATTRIBUTE_NODE: 2
+    ATTRIBUTE_NODE // = 2
 
     guarded
-    TEXT_NODE: 3
+    TEXT_NODE // = 3
 
     guarded
-    CDATA_SECTION_NODE: 4
+    CDATA_SECTION_NODE // = 4
 
     guarded
-    ENTITY_REFERENCE_NODE: 5
+    ENTITY_REFERENCE_NODE // = 5
 
     guarded
-    ENTITY_NODE: 6
+    ENTITY_NODE // = 6
 
     guarded
-    PROCESSING_INSTRUCTION_NODE: 7
+    PROCESSING_INSTRUCTION_NODE // = 7
 
     guarded
-    COMMENT_NODE: 8
+    COMMENT_NODE // = 8
 
     guarded
-    DOCUMENT_NODE: 9
+    DOCUMENT_NODE // = 9
 
     guarded
-    DOCUMENT_TYPE_NODE: 10
+    DOCUMENT_TYPE_NODE // = 10
 
     guarded
-    DOCUMENT_FRAGMENT_NODE: 11
+    DOCUMENT_FRAGMENT_NODE // = 11
 
     guarded
-    NOTATION_NODE: 12
+    NOTATION_NODE // = 12
 
     guarded
-    DOCUMENT_POSITION_DISCONNECTED: 0x01
+    DOCUMENT_POSITION_DISCONNECTED // = 0x01
 
     guarded
-    DOCUMENT_POSITION_PRECEDING: 0x02
+    DOCUMENT_POSITION_PRECEDING // = 0x02
 
     guarded
-    DOCUMENT_POSITION_FOLLOWING: 0x04
+    DOCUMENT_POSITION_FOLLOWING // = 0x04
 
     guarded
-    DOCUMENT_POSITION_CONTAINS: 0x08
+    DOCUMENT_POSITION_CONTAINS // = 0x08
 
     guarded
-    DOCUMENT_POSITION_CONTAINED_BY: 0x10
+    DOCUMENT_POSITION_CONTAINED_BY // = 0x10
 
     guarded
-    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: 0x20
+    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC // = 0x20
 
     prototype: Node
 
     on create() // : Node
 
     guarded
-    ELEMENT_NODE: 1
+    ELEMENT_NODE // = 1
 
     guarded
-    ATTRIBUTE_NODE: 2
+    ATTRIBUTE_NODE // = 2
 
     guarded
-    TEXT_NODE: 3
+    TEXT_NODE // = 3
 
     guarded
-    CDATA_SECTION_NODE: 4
+    CDATA_SECTION_NODE // = 4
 
     guarded
-    ENTITY_REFERENCE_NODE: 5
+    ENTITY_REFERENCE_NODE // = 5
 
     guarded
-    ENTITY_NODE: 6
+    ENTITY_NODE // = 6
 
     guarded
-    PROCESSING_INSTRUCTION_NODE: 7
+    PROCESSING_INSTRUCTION_NODE // = 7
 
     guarded
-    COMMENT_NODE: 8
+    COMMENT_NODE // = 8
 
     guarded
-    DOCUMENT_NODE: 9
+    DOCUMENT_NODE // = 9
 
     guarded
-    DOCUMENT_TYPE_NODE: 10
+    DOCUMENT_TYPE_NODE // = 10
 
     guarded
-    DOCUMENT_FRAGMENT_NODE: 11
+    DOCUMENT_FRAGMENT_NODE // = 11
 
     guarded
-    NOTATION_NODE: 12
+    NOTATION_NODE // = 12
 
     guarded
-    DOCUMENT_POSITION_DISCONNECTED: 0x01
+    DOCUMENT_POSITION_DISCONNECTED // = 0x01
 
     guarded
-    DOCUMENT_POSITION_PRECEDING: 0x02
+    DOCUMENT_POSITION_PRECEDING // = 0x02
 
     guarded
-    DOCUMENT_POSITION_FOLLOWING: 0x04
+    DOCUMENT_POSITION_FOLLOWING // = 0x04
 
     guarded
-    DOCUMENT_POSITION_CONTAINS: 0x08
+    DOCUMENT_POSITION_CONTAINS // = 0x08
 
     guarded
-    DOCUMENT_POSITION_CONTAINED_BY: 0x10
+    DOCUMENT_POSITION_CONTAINED_BY // = 0x10
 
     guarded
-    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC: 0x20
+    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC // = 0x20
   }
 
   /**
@@ -13302,7 +13302,7 @@ external
   type OES_standard_derivatives = aspect
   {
     guarded 
-    FRAGMENT_SHADER_DERIVATIVE_HINT_OES: 0x8B8B
+    FRAGMENT_SHADER_DERIVATIVE_HINT_OES // = 0x8B8B
   }
 
 
@@ -13339,7 +13339,7 @@ external
   type OES_texture_half_float = aspect
   {
     guarded 
-    HALF_FLOAT_OES: 0x8D61
+    HALF_FLOAT_OES // = 0x8D61
   }
 
 
@@ -13368,7 +13368,7 @@ external
     operation isVertexArrayOES(arrayObject: WebGLVertexArrayObjectOES?): GLboolean
 
     guarded 
-    VERTEX_ARRAY_BINDING_OES: 0x85B5
+    VERTEX_ARRAY_BINDING_OES // = 0x85B5
   }
 
 
@@ -13379,16 +13379,16 @@ external
     operation framebufferTextureMultiviewOVR(target: GLenum, attachment: GLenum, texture: WebGLTexture?, level: GLint, baseViewIndex: GLint, numViews: GLsizei)
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR: 0x9630
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR // = 0x9630
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR: 0x9632
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR // = 0x9632
 
     guarded 
-    MAX_VIEWS_OVR: 0x9631
+    MAX_VIEWS_OVR // = 0x9631
 
     guarded 
-    FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR: 0x9633
+    FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR // = 0x9633
   }
 
 
@@ -13667,7 +13667,7 @@ external
 
     prototype: PaymentRequest
 
-    on create(methodData: Список<PaymentMethodData>, details: PaymentDetailsInit) // : PaymentRequest
+    on create(methodData: List<PaymentMethodData>, details: PaymentDetailsInit) // : PaymentRequest
   }
 
   /**
@@ -14136,9 +14136,9 @@ external
     guarded
     width: Number
 
-    operation getCoalescedEvents(): Список<PointerEvent>
+    operation getCoalescedEvents(): List<PointerEvent>
 
-    operation getPredictedEvents(): Список<PointerEvent>
+    operation getPredictedEvents(): List<PointerEvent>
 
     prototype: PointerEvent
 
@@ -14334,7 +14334,7 @@ external
     guarded
     expires: EpochTimeStamp
 
-    operation getFingerprints(): Список<RTCDtlsFingerprint>
+    operation getFingerprints(): List<RTCDtlsFingerprint>
 
     prototype: RTCCertificate
 
@@ -14510,7 +14510,7 @@ external
     guarded
     state: RTCDtlsTransportState
 
-    operation getRemoteCertificates(): Список<JS.ArrayBuffer>
+    operation getRemoteCertificates(): List<JS.ArrayBuffer>
 
     operation addEventListener<K = /*(!) keyof RTCDtlsTransportEventMap */ Object?>(type`: K, listener: operation(this: RTCDtlsTransport, ev: /*(!) RTCDtlsTransportEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -14793,13 +14793,13 @@ external
     guarded
     transport: RTCDtlsTransport?
 
-    operation getContributingSources(): Список<RTCRtpContributingSource>
+    operation getContributingSources(): List<RTCRtpContributingSource>
 
     operation getParameters(): RTCRtpReceiveParameters
 
     operation getStats(): JS.Promise<RTCStatsReport>
 
-    operation getSynchronizationSources(): Список<RTCRtpSynchronizationSource>
+    operation getSynchronizationSources(): List<RTCRtpSynchronizationSource>
 
     prototype: RTCRtpReceiver
 
@@ -14834,7 +14834,7 @@ external
     operation setParameters(parameters: RTCRtpSendParameters): JS.Promise<None>
 
     #JS.МассивПараметров
-    operation setStreams(streams: Список<MediaStream>)
+    operation setStreams(streams: List<MediaStream>)
 
     prototype: RTCRtpSender
 
@@ -14861,7 +14861,7 @@ external
     guarded
     sender: RTCRtpSender
 
-    operation setCodecPreferences(codecs: Список<RTCRtpCodecCapability>)
+    operation setCodecPreferences(codecs: List<RTCRtpCodecCapability>)
 
     operation stop()
 
@@ -15031,32 +15031,32 @@ external
     operation toString(): Text
 
     guarded
-    START_TO_START: 0
+    START_TO_START // = 0
 
     guarded
-    START_TO_END: 1
+    START_TO_END // = 1
 
     guarded
-    END_TO_END: 2
+    END_TO_END // = 2
 
     guarded
-    END_TO_START: 3
+    END_TO_START // = 3
 
     prototype: Range
 
     on create() // : Range
 
     guarded
-    START_TO_START: 0
+    START_TO_START // = 0
 
     guarded
-    START_TO_END: 1
+    START_TO_END // = 1
 
     guarded
-    END_TO_END: 2
+    END_TO_END // = 2
 
     guarded
-    END_TO_START: 3
+    END_TO_START // = 3
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableByteStreamController) */
@@ -15103,11 +15103,11 @@ external
 
     operation pipeTo(destination: WritableStream<R>, options: StreamPipeOptions? = none): JS.Promise<None>
 
-    operation tee(): object { _0: ReadableStream<R>, _1: ReadableStream<R> }
+    operation tee(): object { _0: ReadableStream<R>; _1: ReadableStream<R> }
 
     prototype: ReadableStream
 
-    on create(underlyingSource: UnderlyingByteSource, strategy: object { highWaterMark: Number }? = none) // : ReadableStream<JS.Uint8Array>
+    on create(underlyingSource: UnderlyingByteSource, strategy: (object { highWaterMark: Number })? = none) // : ReadableStream<JS.Uint8Array>
 
     on create(underlyingSource: UnderlyingDefaultSource<R>, strategy: QueuingStrategy<R>? = none) // : ReadableStream<R>
 
@@ -15472,38 +15472,38 @@ external
     operation newValueSpecifiedUnits(unitType: Number, valueInSpecifiedUnits: Number)
 
     guarded
-    SVG_ANGLETYPE_UNKNOWN: 0
+    SVG_ANGLETYPE_UNKNOWN // = 0
 
     guarded
-    SVG_ANGLETYPE_UNSPECIFIED: 1
+    SVG_ANGLETYPE_UNSPECIFIED // = 1
 
     guarded
-    SVG_ANGLETYPE_DEG: 2
+    SVG_ANGLETYPE_DEG // = 2
 
     guarded
-    SVG_ANGLETYPE_RAD: 3
+    SVG_ANGLETYPE_RAD // = 3
 
     guarded
-    SVG_ANGLETYPE_GRAD: 4
+    SVG_ANGLETYPE_GRAD // = 4
 
     prototype: SVGAngle
 
     on create() // : SVGAngle
 
     guarded
-    SVG_ANGLETYPE_UNKNOWN: 0
+    SVG_ANGLETYPE_UNKNOWN // = 0
 
     guarded
-    SVG_ANGLETYPE_UNSPECIFIED: 1
+    SVG_ANGLETYPE_UNSPECIFIED // = 1
 
     guarded
-    SVG_ANGLETYPE_DEG: 2
+    SVG_ANGLETYPE_DEG // = 2
 
     guarded
-    SVG_ANGLETYPE_RAD: 3
+    SVG_ANGLETYPE_RAD // = 3
 
     guarded
-    SVG_ANGLETYPE_GRAD: 4
+    SVG_ANGLETYPE_GRAD // = 4
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/SVGAnimateElement) */
@@ -18994,7 +18994,7 @@ external
     guarded
     state: ServiceWorkerState
 
-    operation postMessage(message: /*(!) any */ Object?, transfer: Список<Transferable>)
+    operation postMessage(message: /*(!) any */ Object?, transfer: List<Transferable>)
 
     operation postMessage(message: /*(!) any */ Object?, options: StructuredSerializeOptions? = none)
 
@@ -19101,7 +19101,7 @@ external
     guarded
     waiting: ServiceWorker?
 
-    operation getNotifications(filter: GetNotificationOptions? = none): JS.Promise<Список<Notification>>
+    operation getNotifications(filter: GetNotificationOptions? = none): JS.Promise<List<Notification>>
 
     operation showNotification(title: Text, options: NotificationOptions? = none): JS.Promise<None>
 
@@ -19368,7 +19368,7 @@ external
 
     operation cancel()
 
-    operation getVoices(): Список<SpeechSynthesisVoice>
+    operation getVoices(): List<SpeechSynthesisVoice>
 
     operation pause()
 
@@ -19614,14 +19614,14 @@ external
   type StylePropertyMap = object StylePropertyMapReadOnly
   {
     #JS.МассивПараметров
-    operation append(property: Text, values: Список<Object? /*(!)CSSStyleValue | Text*/>)
+    operation append(property: Text, values: List<Object? /*(!)CSSStyleValue | Text*/>)
 
     operation clear()
 
     operation delete(property: Text)
 
     #JS.МассивПараметров
-    operation set(property: Text, values: Список<Object? /*(!)CSSStyleValue | Text*/>)
+    operation set(property: Text, values: List<Object? /*(!)CSSStyleValue | Text*/>)
 
     prototype: StylePropertyMap
 
@@ -19637,11 +19637,11 @@ external
 
     operation get(property: Text): CSSStyleValue?
 
-    operation getAll(property: Text): Список<CSSStyleValue>
+    operation getAll(property: Text): List<CSSStyleValue>
 
     operation has(property: Text): YesNo
 
-    operation forEach(callbackfn: operation(value: Список<CSSStyleValue>, key: Text, parent: StylePropertyMapReadOnly), thisArg: /*(!) any */ Object? = none)
+    operation forEach(callbackfn: operation(value: List<CSSStyleValue>, key: Text, parent: StylePropertyMapReadOnly), thisArg: /*(!) any */ Object? = none)
 
     prototype: StylePropertyMapReadOnly
 
@@ -19726,7 +19726,7 @@ external
 
     operation deriveBits(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, length: Number): JS.Promise<JS.ArrayBuffer>
 
-    operation deriveKey(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, derivedKeyType: Object? /*(!)AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
+    operation deriveKey(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, derivedKeyType: Object? /*(!)AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
     operation digest(algorithm: AlgorithmIdentifier, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
@@ -19734,9 +19734,9 @@ external
 
     operation exportKey(format: Text /*"jwk"*/, key: CryptoKey): JS.Promise<JsonWebKey>
 
-    operation exportKey(format: Exclude<KeyFormat, "jwk">, key: CryptoKey): JS.Promise<JS.ArrayBuffer>
+    operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<JS.ArrayBuffer>
 
-    operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<Object? /*(!)JS.ArrayBuffer | JsonWebKey*/>
+    // operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<Object? /*(!)JS.ArrayBuffer | JsonWebKey*/>
 
     operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
 
@@ -19744,15 +19744,15 @@ external
 
     operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
+    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
 
     operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation importKey(format: Exclude<KeyFormat, "jwk">, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
+    operation importKey(format: KeyFormat, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
     operation sign(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
-    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, unwrappedKeyAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
+    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, unwrappedKeyAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
     operation verify(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, signature: BufferSource, data: BufferSource): JS.Promise<YesNo>
 
@@ -20381,7 +20381,7 @@ external
 
     operation get(name: Text): Text?
 
-    operation getAll(name: Text): Список<Text>
+    operation getAll(name: Text): List<Text>
 
     operation has(name: Text, value: Text? = none): YesNo
 
@@ -20395,7 +20395,7 @@ external
 
     prototype: URLSearchParams
 
-    on create(init: Object? /*(!)Список<Список<Text>> | Record<Text, Text> | Text | URLSearchParams | пусто*/ = none) // : URLSearchParams
+    on create(init: Object? /*(!)List<List<Text>> | Record<Text, Text> | Text | URLSearchParams | пусто*/ = none) // : URLSearchParams
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/UserActivation) */
@@ -20680,7 +20680,7 @@ external
 
     operation close()
 
-    operation copyTo(destination: BufferSource, options: VideoFrameCopyToOptions? = none): JS.Promise<Список<PlaneLayout>>
+    operation copyTo(destination: BufferSource, options: VideoFrameCopyToOptions? = none): JS.Promise<List<PlaneLayout>>
 
     prototype: VideoFrame
 
@@ -20766,7 +20766,7 @@ external
 
   type WEBGL_compressed_texture_astc = aspect
   {
-    operation getSupportedProfiles(): Список<Text>
+    operation getSupportedProfiles(): List<Text>
 
     guarded 
     COMPRESSED_RGBA_ASTC_4x4_KHR // = 0x93B0
@@ -20990,7 +20990,7 @@ external
   type WEBGL_depth_texture = aspect
   {
     guarded 
-    UNSIGNED_INT_24_8_WEBGL: 0x84FA
+    UNSIGNED_INT_24_8_WEBGL // = 0x84FA
   }
 
 
@@ -20998,7 +20998,7 @@ external
 
   type WEBGL_draw_buffers = aspect
   {
-    operation drawBuffersWEBGL(buffers: Список<GLenum>)
+    operation drawBuffersWEBGL(buffers: List<GLenum>)
 
     guarded 
     COLOR_ATTACHMENT0_WEBGL // = 0x8CE0
@@ -21118,13 +21118,13 @@ external
 
   type WEBGL_multi_draw = aspect
   {
-    operation multiDrawArraysInstancedWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | Список<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | Список<GLsizei>*/, countsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | Список<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawArraysInstancedWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | List<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | List<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawArraysWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | Список<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | Список<GLsizei>*/, countsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawArraysWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | List<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawElementsInstancedWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | Список<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | Список<GLsizei>*/, offsetsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | Список<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawElementsInstancedWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | List<GLsizei>*/, offsetsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | List<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawElementsWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | Список<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | Список<GLsizei>*/, offsetsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawElementsWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | List<GLsizei>*/, offsetsOffset: GLuint, drawcount: GLsizei)
   }
 
 
@@ -22943,7 +22943,7 @@ external
 
     operation drawArraysInstanced(mode: GLenum, first: GLint, count: GLsizei, instanceCount: GLsizei)
 
-    operation drawBuffers(buffers: Список<GLenum>)
+    operation drawBuffers(buffers: List<GLenum>)
 
     operation drawElementsInstanced(mode: GLenum, count: GLsizei, type`: GLenum, offset: GLintptr, instanceCount: GLsizei)
 
@@ -22961,7 +22961,7 @@ external
 
     operation getActiveUniformBlockParameter(program: WebGLProgram, uniformBlockIndex: GLuint, pname: GLenum): /*(!) any */ Object?
 
-    operation getActiveUniforms(program: WebGLProgram, uniformIndices: Список<GLuint>, pname: GLenum): /*(!) any */ Object?
+    operation getActiveUniforms(program: WebGLProgram, uniformIndices: List<GLuint>, pname: GLenum): /*(!) any */ Object?
 
     operation getBufferSubData(target: GLenum, srcByteOffset: GLintptr, dstBuffer: JS.ArrayBufferView, dstOffset: GLuint? = none, length: GLuint? = none)
 
@@ -22983,11 +22983,11 @@ external
 
     operation getUniformBlockIndex(program: WebGLProgram, uniformBlockName: Text): GLuint
 
-    operation getUniformIndices(program: WebGLProgram, uniformNames: Список<Text>): Список<GLuint>?
+    operation getUniformIndices(program: WebGLProgram, uniformNames: List<Text>): List<GLuint>?
 
-    operation invalidateFramebuffer(target: GLenum, attachments: Список<GLenum>)
+    operation invalidateFramebuffer(target: GLenum, attachments: List<GLenum>)
 
-    operation invalidateSubFramebuffer(target: GLenum, attachments: Список<GLenum>, x: GLint, y: GLint, width: GLsizei, height: GLsizei)
+    operation invalidateSubFramebuffer(target: GLenum, attachments: List<GLenum>, x: GLint, y: GLint, width: GLsizei, height: GLsizei)
 
     operation isQuery(query: WebGLQuery?): GLboolean
 
@@ -23029,7 +23029,7 @@ external
 
     operation texSubImage3D(target: GLenum, level: GLint, xoffset: GLint, yoffset: GLint, zoffset: GLint, width: GLsizei, height: GLsizei, depth: GLsizei, format: GLenum, type`: GLenum, srcData: JS.ArrayBufferView?, srcOffset: GLuint? = none)
 
-    operation transformFeedbackVaryings(program: WebGLProgram, varyings: Список<Text>, bufferMode: GLenum)
+    operation transformFeedbackVaryings(program: WebGLProgram, varyings: List<Text>, bufferMode: GLenum)
 
     operation uniform1ui(location: WebGLUniformLocation?, v0: GLuint)
 
@@ -23859,7 +23859,7 @@ external
     TEXTURE_IMMUTABLE_LEVELS // = 0x82DF
 
     guarded 
-    TIMEOUT_IGNORED: -1
+    TIMEOUT_IGNORED // = -1
 
     guarded 
     MAX_CLIENT_WAIT_TIMEOUT_WEBGL // = 0x9247
@@ -24078,10 +24078,10 @@ external
     TRIANGLE_FAN // = 0x0006
 
     guarded
-    ZERO: 0
+    ZERO // = 0
 
     guarded
-    ONE: 1
+    ONE // = 1
 
     guarded
     SRC_COLOR // = 0x0300
@@ -24120,7 +24120,7 @@ external
     BLEND_EQUATION_RGB // = 0x8009
 
     guarded
-    BLEND_EQUATION_ALPHA: 0x883D
+    BLEND_EQUATION_ALPHA // = 0x883D
 
     guarded
     FUNC_SUBTRACT // = 0x800A
@@ -24222,7 +24222,7 @@ external
     SAMPLE_COVERAGE // = 0x80A0
 
     guarded
-    NO_ERROR: 0
+    NO_ERROR // = 0
 
     guarded
     INVALID_ENUM // = 0x0500
@@ -24891,7 +24891,7 @@ external
     DEPTH_STENCIL_ATTACHMENT // = 0x821A
 
     guarded
-    NONE: 0
+    NONE // = 0
 
     guarded
     FRAMEBUFFER_COMPLETE // = 0x8CD5
@@ -25053,7 +25053,7 @@ external
 
     operation getActiveUniform(program: WebGLProgram, index: GLuint): WebGLActiveInfo?
 
-    operation getAttachedShaders(program: WebGLProgram): Список<WebGLShader>?
+    operation getAttachedShaders(program: WebGLProgram): List<WebGLShader>?
 
     operation getAttribLocation(program: WebGLProgram, name: Text): GLint
 
@@ -25151,7 +25151,7 @@ external
 
     operation getShaderSource(shader: WebGLShader): Text?
 
-    operation getSupportedExtensions(): Список<Text>?
+    operation getSupportedExtensions(): List<Text>?
 
     operation getTexParameter(target: GLenum, pname: GLenum): /*(!) any */ Object?
 
@@ -25284,10 +25284,10 @@ external
     TRIANGLE_FAN // = 0x0006
 
     guarded 
-    ZERO: 0
+    ZERO // = 0
 
     guarded 
-    ONE: 1
+    ONE // = 1
 
     guarded 
     SRC_COLOR // = 0x0300
@@ -25428,7 +25428,7 @@ external
     SAMPLE_COVERAGE // = 0x80A0
 
     guarded 
-    NO_ERROR: 0
+    NO_ERROR // = 0
 
     guarded 
     INVALID_ENUM // = 0x0500
@@ -26097,7 +26097,7 @@ external
     DEPTH_STENCIL_ATTACHMENT // = 0x821A
 
     guarded 
-    NONE: 0
+    NONE // = 0
 
     guarded 
     FRAMEBUFFER_COMPLETE // = 0x8CD5
@@ -26365,7 +26365,7 @@ external
 
     prototype: WebSocket
 
-    on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | Список<Text> | пусто*/ = none) // : WebSocket
+    on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | List<Text> | пусто*/ = none) // : WebSocket
 
     guarded
     CONNECTING // = 0
@@ -26519,10 +26519,10 @@ external
     DOM_DELTA_PIXEL // = 0x00
 
     guarded
-    DOM_DELTA_LINE: 0x01
+    DOM_DELTA_LINE // = 0x01
 
     guarded
-    DOM_DELTA_PAGE: 0x02
+    DOM_DELTA_PAGE // = 0x02
   }
 
   type WindowEventMap = aspect GlobalEventHandlersEventMap, WindowEventHandlersEventMap
@@ -26710,11 +26710,11 @@ external
 
     operation reportError(e: /*(!) any */ Object?)
 
-    #js.МассивПараметров
-    operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: Список</*(!) any */ Object?>): Number
+    #JS.МассивПараметров
+    operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: List</*(!) any */ Object?>): Number
 
-    #js.МассивПараметров
-    operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: Список</*(!) any */ Object?>): Number
+    #JS.МассивПараметров
+    operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: List</*(!) any */ Object?>): Number
 
     operation structuredClone<T>(value: T, options: StructuredSerializeOptions? = none): T
   }
@@ -26747,7 +26747,7 @@ external
 
     onmessageerror: (operation(this: Worker, ev: MessageEvent): /*(!) any */ Object?)?
 
-    operation postMessage(message: /*(!) any */ Object?, transfer: Список<Transferable>)
+    operation postMessage(message: /*(!) any */ Object?, transfer: List<Transferable>)
 
     operation postMessage(message: /*(!) any */ Object?, options: StructuredSerializeOptions? = none)
 
@@ -26935,19 +26935,19 @@ external
     operation setRequestHeader(name: Text, value: Text)
 
     guarded
-    UNSENT: 0
+    UNSENT // = 0
 
     guarded
-    OPENED: 1
+    OPENED // = 1
 
     guarded
-    HEADERS_RECEIVED: 2
+    HEADERS_RECEIVED // = 2
 
     guarded
-    LOADING: 3
+    LOADING // = 3
 
     guarded
-    DONE: 4
+    DONE // = 4
 
     operation addEventListener<K = /*(!) keyof XMLHttpRequestEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequest, ev: /*(!) XMLHttpRequestEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -26962,19 +26962,19 @@ external
     on create() // : XMLHttpRequest
 
     guarded
-    UNSENT: 0
+    UNSENT // = 0
 
     guarded
-    OPENED: 1
+    OPENED // = 1
 
     guarded
-    HEADERS_RECEIVED: 2
+    HEADERS_RECEIVED // = 2
 
     guarded
-    LOADING: 3
+    LOADING // = 3
 
     guarded
-    DONE: 4
+    DONE // = 4
   }
 
   type XMLHttpRequestEventTargetEventMap = aspect
@@ -27227,8 +27227,8 @@ external
 
   type Console = aspect
   {
-    #js.МассивПараметров
-    operation assert(condition: YesNo? = none, data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation assert(condition: YesNo? = none, data: List</*(!) any */ Object?>)
 
     operation clear()
 
@@ -27236,47 +27236,47 @@ external
 
     operation countReset(label: Text? = none)
 
-    #js.МассивПараметров
-    operation debug(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation debug(data: List</*(!) any */ Object?>)
 
     operation dir(item: /*(!) any */ Object? = none, options: /*(!) any */ Object? = none)
 
-    #js.МассивПараметров
-    operation dirxml(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation dirxml(data: List</*(!) any */ Object?>)
 
-    #js.МассивПараметров
-    operation error`(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation error`(data: List</*(!) any */ Object?>)
 
-    #js.МассивПараметров
-    operation group(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation group(data: List</*(!) any */ Object?>)
 
-    #js.МассивПараметров
-    operation groupCollapsed(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation groupCollapsed(data: List</*(!) any */ Object?>)
 
     operation groupEnd()
 
-    #js.МассивПараметров
-    operation info(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation info(data: List</*(!) any */ Object?>)
 
-    #js.МассивПараметров
-    operation log(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation log(data: List</*(!) any */ Object?>)
 
-    operation table(tabularData: /*(!) any */ Object? = none, properties: Список<Text>? = none)
+    operation table(tabularData: /*(!) any */ Object? = none, properties: List<Text>? = none)
 
     operation time(label: Text? = none)
 
     operation timeEnd(label: Text? = none)
 
-    #js.МассивПараметров
-    operation timeLog(label: Text? = none, data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation timeLog(label: Text? = none, data: List</*(!) any */ Object?>)
 
     operation timeStamp(label: Text? = none)
 
-    #js.МассивПараметров
-    operation trace(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation trace(data: List</*(!) any */ Object?>)
 
-    #js.МассивПараметров
-    operation warn(data: Список</*(!) any */ Object?>)
+    #JS.МассивПараметров
+    operation warn(data: List</*(!) any */ Object?>)
   }
 
 
@@ -27526,7 +27526,16 @@ external
     }
 
 
-    /*(!) var */ CompileError: object { prototype: CompileError; on create(message: Text? = none): CompileError; /*(!) (message?: string): CompileError*/ }
+    /*(!) var */
+    CompileError: object
+    {
+      external
+      {
+        prototype: CompileError
+        on create(message: Text? = none) //: CompileError
+        /*(!) (message?: string): CompileError*/
+      }
+    }
 
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global) */
@@ -27539,7 +27548,15 @@ external
     }
 
 
-    /*(!) var */ Global: object { prototype: Global; on create(descriptor: GlobalDescriptor<T>, v: /*(!) ValueTypeMap[T] */ Object? = none): Global<T> }
+    /*(!) var */
+    Global: object
+    {
+      external
+      {
+        prototype: Global
+        on create(descriptor: GlobalDescriptor, v: /*(!) ValueTypeMap[T] */ Object? = none) // : Global<T>
+      }
+    }
 
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance) */
@@ -27551,7 +27568,15 @@ external
     }
 
 
-    /*(!) var */ Instance: object { prototype: Instance; on create(module: Module, importObject: Imports? = none): Instance }
+    /*(!) var */
+    Instance: object
+    {
+      external
+      {
+        prototype: Instance
+        on create(module: Module, importObject: Imports? = none) // : Instance
+      }
+    }
 
 
     type LinkError = aspect Error
@@ -27560,7 +27585,16 @@ external
     }
 
 
-    /*(!) var */ LinkError: object { prototype: LinkError; on create(message: Text? = none): LinkError; /*(!) (message?: string): LinkError*/ }
+    /*(!) var */
+    LinkError: object
+    {
+      external
+      {
+        prototype: LinkError
+        on create(message: Text? = none) // : LinkError
+        /*(!) (message?: string): LinkError*/
+      }
+    }
 
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) */
@@ -27574,7 +27608,15 @@ external
     }
 
 
-    /*(!) var */ Memory: object { prototype: Memory; on create(descriptor: MemoryDescriptor): Memory }
+    /*(!) var */
+    Memory: object
+    {
+      external
+      {
+        prototype: Memory
+        on create(descriptor: MemoryDescriptor) // : Memory
+      }
+    }
 
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) */
@@ -27585,7 +27627,18 @@ external
     }
 
 
-    /*(!) var */ Module: object { prototype: Module; on create(bytes: BufferSource): Module; operation customSections(moduleObject: Module, sectionName: Text): Список<JS.ArrayBuffer>; operation exports(moduleObject: Module): Список<ModuleExportDescriptor>; operation imports(moduleObject: Module): Список<ModuleImportDescriptor> }
+    /*(!) var */
+    Module: object
+    {
+      external
+      {
+        prototype: Module
+        on create(bytes: BufferSource) // : Module
+        operation customSections(moduleObject: Module, sectionName: Text): List<JS.ArrayBuffer>
+        operation exports(moduleObject: Module): List<ModuleExportDescriptor>
+        operation imports(moduleObject: Module): List<ModuleImportDescriptor>
+      }
+    }
 
 
     type RuntimeError = aspect Error
@@ -27594,7 +27647,16 @@ external
     }
 
 
-    /*(!) var */ RuntimeError: object { prototype: RuntimeError; on create(message: Text? = none): RuntimeError; /*(!) (message?: string): RuntimeError*/ }
+    /*(!) var */
+    RuntimeError: object
+    {
+      external
+      {
+        prototype: RuntimeError
+        on create(message: Text? = none) // : RuntimeError
+        /*(!) (message?: string): RuntimeError */
+      }
+    }
 
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) */
@@ -27612,7 +27674,15 @@ external
     }
 
 
-    /*(!) var */ Table: object { prototype: Table; on create(descriptor: TableDescriptor, value: /*(!) any */ Object? = none): Table }
+    /*(!) var */
+    Table: object
+    {
+      external
+      {
+        prototype: Table
+        on create(descriptor: TableDescriptor, value: /*(!) any */ Object? = none) // : Table
+      }
+    }
 
 
     type GlobalDescriptor<T = ValueType> = aspect
@@ -27733,8 +27803,8 @@ external
 
   type CustomElementConstructor = aspect
   {
-    #js.МассивПараметров
-    on create(params: Список</*(!) any */ Object?>): HTMLElement
+    #JS.МассивПараметров
+    on create(params: List</*(!) any */ Object?>) // : HTMLElement
   }
 
 
@@ -28462,16 +28532,25 @@ external
   }
 
 
-  внешнее
-  /*(!) var */ Audio: object { on create(src: Text? = none): HTMLAudioElement }
+  /*(!) var */
+  Audio: object
+  {
+    external on create(src: Text? = none) // : HTMLAudioElement
+  }
 
 
-  внешнее
-  /*(!) var */ Image: object { on create(width: Number? = none, height: Number? = none): HTMLImageElement }
+  /*(!) var */
+  Image: object
+  {
+    external on create(width: Number? = none, height: Number? = none) // : HTMLImageElement
+  }
 
 
-  внешнее
-  /*(!) var */ Option: object { on create(text: Text? = none, value: Text? = none, defaultSelected: YesNo? = none, selected: YesNo? = none): HTMLOptionElement }
+  /*(!) var */
+  Option: object
+  {
+    external on create(text: Text? = none, value: Text? = none, defaultSelected: YesNo? = none, selected: YesNo? = none) // : HTMLOptionElement
+  }
 
 
   /**
@@ -28480,8 +28559,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/closed)
   */
 
-  внешнее
-  /*(!) var */ closed: YesNo
+  /*(!) var */
+  closed: YesNo
 
 
   /**
@@ -28490,62 +28569,62 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/customElements)
   */
 
-  внешнее
-  /*(!) var */ customElements: CustomElementRegistry
+  /*(!) var */
+  customElements: CustomElementRegistry
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio) */
 
-  внешнее
-  /*(!) var */ devicePixelRatio: Number
+  /*(!) var */
+  devicePixelRatio: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/document) */
 
-  внешнее
-  /*(!) var */ document: Document
+  /*(!) var */
+  document: Document
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frameElement) */
 
-  внешнее
-  /*(!) var */ frameElement: Element?
+  /*(!) var */
+  frameElement: Element?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/frames) */
 
-  внешнее
-  /*(!) var */ frames: WindowProxy
+  /*(!) var */
+  frames: WindowProxy
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/history) */
 
-  внешнее
-  /*(!) var */ history: History
+  /*(!) var */
+  history: History
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/innerHeight) */
 
-  внешнее
-  /*(!) var */ innerHeight: Number
+  /*(!) var */
+  innerHeight: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/innerWidth) */
 
-  внешнее
-  /*(!) var */ innerWidth: Number
+  /*(!) var */
+  innerWidth: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/length) */
 
-  внешнее
-  /*(!) var */ length: Number
+  /*(!) var */
+  length: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/location) */
 
-  внешнее
-  /*(!) var */ location: Location
+  /*(!) var */
+  location: Location
 
 
   /**
@@ -28554,8 +28633,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/locationbar)
   */
 
-  внешнее
-  /*(!) var */ locationbar: BarProp
+  /*(!) var */
+  locationbar: BarProp
 
 
   /**
@@ -28564,16 +28643,16 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/menubar)
   */
 
-  внешнее
-  /*(!) var */ menubar: BarProp
+  /*(!) var */
+  menubar: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/name) */
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/navigator) */
 
-  внешнее
-  /*(!) var */ navigator: Navigator
+  /*(!) var */
+  navigator: Navigator
 
 
   /**
@@ -28582,8 +28661,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/devicemotion_event)
   */
 
-  внешнее
-  /*(!) var */ ondevicemotion: (operation(this: Window, ev: DeviceMotionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondevicemotion: (operation(this: Window, ev: DeviceMotionEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -28592,26 +28671,26 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/deviceorientation_event)
   */
 
-  внешнее
-  /*(!) var */ ondeviceorientation: (operation(this: Window, ev: DeviceOrientationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondeviceorientation: (operation(this: Window, ev: DeviceOrientationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/opener) */
 
-  внешнее
-  /*(!) var */ opener: /*(!) any */ Object?
+  /*(!) var */
+  opener: /*(!) any */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/outerHeight) */
 
-  внешнее
-  /*(!) var */ outerHeight: Number
+  /*(!) var */
+  outerHeight: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/outerWidth) */
 
-  внешнее
-  /*(!) var */ outerWidth: Number
+  /*(!) var */
+  outerWidth: Number
 
 
   /**
@@ -28622,8 +28701,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/parent)
   */
 
-  внешнее
-  /*(!) var */ parent: WindowProxy
+  /*(!) var */
+  parent: WindowProxy
 
 
   /**
@@ -28632,50 +28711,50 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/personalbar)
   */
 
-  внешнее
-  /*(!) var */ personalbar: BarProp
+  /*(!) var */
+  personalbar: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screen) */
 
-  внешнее
-  /*(!) var */ screen: Screen
+  /*(!) var */
+  screen: Screen
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenLeft) */
 
-  внешнее
-  /*(!) var */ screenLeft: Number
+  /*(!) var */
+  screenLeft: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenTop) */
 
-  внешнее
-  /*(!) var */ screenTop: Number
+  /*(!) var */
+  screenTop: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenX) */
 
-  внешнее
-  /*(!) var */ screenX: Number
+  /*(!) var */
+  screenX: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/screenY) */
 
-  внешнее
-  /*(!) var */ screenY: Number
+  /*(!) var */
+  screenY: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollX) */
 
-  внешнее
-  /*(!) var */ scrollX: Number
+  /*(!) var */
+  scrollX: Number
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollY) */
 
-  внешнее
-  /*(!) var */ scrollY: Number
+  /*(!) var */
+  scrollY: Number
 
 
   /**
@@ -28684,20 +28763,20 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollbars)
   */
 
-  внешнее
-  /*(!) var */ scrollbars: BarProp
+  /*(!) var */
+  scrollbars: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/self) */
 
-  внешнее
-  /*(!) var */ self: /*(!) Window & typeof globalThis */ Object?
+  /*(!) var */
+  self: /*(!) Window & typeof globalThis */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/speechSynthesis) */
 
-  внешнее
-  /*(!) var */ speechSynthesis: SpeechSynthesis
+  /*(!) var */
+  speechSynthesis: SpeechSynthesis
 
 
   /**
@@ -28706,8 +28785,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/statusbar)
   */
 
-  внешнее
-  /*(!) var */ statusbar: BarProp
+  /*(!) var */
+  statusbar: BarProp
 
 
   /**
@@ -28716,41 +28795,38 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/toolbar)
   */
 
-  внешнее
-  /*(!) var */ toolbar: BarProp
+  /*(!) var */
+  toolbar: BarProp
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/top) */
 
-  внешнее
-  /*(!) var */ top: WindowProxy?
+  /*(!) var */
+  top: WindowProxy?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/visualViewport) */
 
-  внешнее
-  /*(!) var */ visualViewport: VisualViewport?
+  /*(!) var */
+  visualViewport: VisualViewport?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/window) */
 
-  внешнее
-  /*(!) var */ window: /*(!) Window & typeof globalThis */ Object?
+  /*(!) var */
+  window: /*(!) Window & typeof globalThis */ Object?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/alert) */
 
-  внешнее
   operation alert(message: /*(!) any */ Object? = none)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/blur) */
 
-  внешнее
   operation blur()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback) */
 
-  внешнее
   operation cancelIdleCallback(handle: Number)
 
   /**
@@ -28759,12 +28835,10 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/close)
   */
 
-  внешнее
   operation close()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/confirm) */
 
-  внешнее
   operation confirm(message: Text? = none): YesNo
 
   /**
@@ -28773,37 +28847,30 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/focus)
   */
 
-  внешнее
   operation focus()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle) */
 
-  внешнее
   operation getComputedStyle(elt: Element, pseudoElt: Text? = none): CSSStyleDeclaration
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/getSelection) */
 
-  внешнее
   operation getSelection(): Selection?
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/matchMedia) */
 
-  внешнее
   operation matchMedia(query: Text): MediaQueryList
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/moveBy) */
 
-  внешнее
   operation moveBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/moveTo) */
 
-  внешнее
   operation moveTo(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/open) */
 
-  внешнее
   operation open(url: Object? /*(!)Text | URL | пусто*/ = none, target: Text? = none, features: Text? = none): WindowProxy?
 
   /**
@@ -28820,59 +28887,46 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
   */
 
-  внешнее
-  operation postMessage(message: /*(!) any */ Object?, targetOrigin: Text, transfer: Список<Transferable>? = none)
+  operation postMessage(message: /*(!) any */ Object?, targetOrigin: Text, transfer: List<Transferable>? = none)
 
-  внешнее
   operation postMessage(message: /*(!) any */ Object?, options: WindowPostMessageOptions? = none)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/print) */
 
-  внешнее
   operation print()
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/prompt) */
 
-  внешнее
   operation prompt(message: Text? = none, _default: Text? = none): Text?
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback) */
 
-  внешнее
   operation requestIdleCallback(callback: IdleRequestCallback, options: IdleRequestOptions? = none): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/resizeBy) */
 
-  внешнее
   operation resizeBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/resizeTo) */
 
-  внешнее
   operation resizeTo(width: Number, height: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scroll) */
 
-  внешнее
   operation scroll(options: ScrollToOptions? = none)
 
-  внешнее
   operation scroll(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollBy) */
 
-  внешнее
   operation scrollBy(options: ScrollToOptions? = none)
 
-  внешнее
   operation scrollBy(x: Number, y: Number)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/scrollTo) */
 
-  внешнее
   operation scrollTo(options: ScrollToOptions? = none)
 
-  внешнее
   operation scrollTo(x: Number, y: Number)
 
   /**
@@ -28881,10 +28935,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/stop)
   */
 
-  внешнее
   operation stop()
 
-  внешнее
   operation toString(): Text
 
   /**
@@ -28893,13 +28945,10 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent)
   */
 
-  внешнее
   operation dispatchEvent(event: Event): YesNo
 
-  внешнее
   operation cancelAnimationFrame(handle: Number)
 
-  внешнее
   operation requestAnimationFrame(callback: FrameRequestCallback): Number
 
   /**
@@ -28909,44 +28958,44 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/abort_event)
   */
 
-  внешнее
-  /*(!) var */ onabort: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onabort: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationcancel_event) */
 
-  внешнее
-  /*(!) var */ onanimationcancel: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onanimationcancel: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationend_event) */
 
-  внешнее
-  /*(!) var */ onanimationend: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onanimationend: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationiteration_event) */
 
-  внешнее
-  /*(!) var */ onanimationiteration: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onanimationiteration: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/animationstart_event) */
 
-  внешнее
-  /*(!) var */ onanimationstart: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onanimationstart: (operation(this: Window, ev: AnimationEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/auxclick_event) */
 
-  внешнее
-  /*(!) var */ onauxclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onauxclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/beforeinput_event) */
 
-  внешнее
-  /*(!) var */ onbeforeinput: (operation(this: Window, ev: InputEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onbeforeinput: (operation(this: Window, ev: InputEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -28956,14 +29005,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/blur_event)
   */
 
-  внешнее
-  /*(!) var */ onblur: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onblur: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDialogElement/cancel_event) */
 
-  внешнее
-  /*(!) var */ oncancel: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oncancel: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -28973,14 +29022,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/canplay_event)
   */
 
-  внешнее
-  /*(!) var */ oncanplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oncanplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/canplaythrough_event) */
 
-  внешнее
-  /*(!) var */ oncanplaythrough: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oncanplaythrough: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -28990,8 +29039,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/change_event)
   */
 
-  внешнее
-  /*(!) var */ onchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29001,14 +29050,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/click_event)
   */
 
-  внешнее
-  /*(!) var */ onclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDialogElement/close_event) */
 
-  внешнее
-  /*(!) var */ onclose: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onclose: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29018,26 +29067,26 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event)
   */
 
-  внешнее
-  /*(!) var */ oncontextmenu: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  oncontextmenu: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/copy_event) */
 
-  внешнее
-  /*(!) var */ oncopy: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  oncopy: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLTrackElement/cuechange_event) */
 
-  внешнее
-  /*(!) var */ oncuechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oncuechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/cut_event) */
 
-  внешнее
-  /*(!) var */ oncut: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  oncut: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29047,8 +29096,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/dblclick_event)
   */
 
-  внешнее
-  /*(!) var */ ondblclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondblclick: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29058,8 +29107,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/drag_event)
   */
 
-  внешнее
-  /*(!) var */ ondrag: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondrag: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29069,8 +29118,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragend_event)
   */
 
-  внешнее
-  /*(!) var */ ondragend: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondragend: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29080,8 +29129,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragenter_event)
   */
 
-  внешнее
-  /*(!) var */ ondragenter: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondragenter: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29091,8 +29140,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragleave_event)
   */
 
-  внешнее
-  /*(!) var */ ondragleave: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondragleave: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29102,8 +29151,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragover_event)
   */
 
-  внешнее
-  /*(!) var */ ondragover: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondragover: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29113,14 +29162,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/dragstart_event)
   */
 
-  внешнее
-  /*(!) var */ ondragstart: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondragstart: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/drop_event) */
 
-  внешнее
-  /*(!) var */ ondrop: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ondrop: (operation(this: Window, ev: DragEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29130,8 +29179,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/durationchange_event)
   */
 
-  внешнее
-  /*(!) var */ ondurationchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  ondurationchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29141,8 +29190,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/emptied_event)
   */
 
-  внешнее
-  /*(!) var */ onemptied: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onemptied: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29152,8 +29201,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/ended_event)
   */
 
-  внешнее
-  /*(!) var */ onended: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onended: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29163,8 +29212,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/error_event)
   */
 
-  внешнее
-  /*(!) var */ onerror: OnErrorEventHandler
+  /*(!) var */
+  onerror: OnErrorEventHandler
 
 
   /**
@@ -29174,32 +29223,32 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/focus_event)
   */
 
-  внешнее
-  /*(!) var */ onfocus: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onfocus: (operation(this: Window, ev: FocusEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/formdata_event) */
 
-  внешнее
-  /*(!) var */ onformdata: (operation(this: Window, ev: FormDataEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onformdata: (operation(this: Window, ev: FormDataEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/gotpointercapture_event) */
 
-  внешнее
-  /*(!) var */ ongotpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ongotpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLElement/input_event) */
 
-  внешнее
-  /*(!) var */ oninput: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oninput: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLInputElement/invalid_event) */
 
-  внешнее
-  /*(!) var */ oninvalid: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  oninvalid: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29209,8 +29258,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/keydown_event)
   */
 
-  внешнее
-  /*(!) var */ onkeydown: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onkeydown: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29220,8 +29269,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/keyup_event)
   */
 
-  внешнее
-  /*(!) var */ onkeyup: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onkeyup: (operation(this: Window, ev: KeyboardEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29231,8 +29280,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/SVGElement/load_event)
   */
 
-  внешнее
-  /*(!) var */ onload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29242,8 +29291,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadeddata_event)
   */
 
-  внешнее
-  /*(!) var */ onloadeddata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onloadeddata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29253,8 +29302,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
   */
 
-  внешнее
-  /*(!) var */ onloadedmetadata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onloadedmetadata: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29264,14 +29313,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/loadstart_event)
   */
 
-  внешнее
-  /*(!) var */ onloadstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onloadstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/lostpointercapture_event) */
 
-  внешнее
-  /*(!) var */ onlostpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onlostpointercapture: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29281,20 +29330,20 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mousedown_event)
   */
 
-  внешнее
-  /*(!) var */ onmousedown: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmousedown: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseenter_event) */
 
-  внешнее
-  /*(!) var */ onmouseenter: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmouseenter: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseleave_event) */
 
-  внешнее
-  /*(!) var */ onmouseleave: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmouseleave: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29304,8 +29353,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mousemove_event)
   */
 
-  внешнее
-  /*(!) var */ onmousemove: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmousemove: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29315,8 +29364,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseout_event)
   */
 
-  внешнее
-  /*(!) var */ onmouseout: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmouseout: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29326,8 +29375,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseover_event)
   */
 
-  внешнее
-  /*(!) var */ onmouseover: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmouseover: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29337,14 +29386,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/mouseup_event)
   */
 
-  внешнее
-  /*(!) var */ onmouseup: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmouseup: (operation(this: Window, ev: MouseEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/paste_event) */
 
-  внешнее
-  /*(!) var */ onpaste: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpaste: (operation(this: Window, ev: ClipboardEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29354,8 +29403,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/pause_event)
   */
 
-  внешнее
-  /*(!) var */ onpause: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onpause: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29365,8 +29414,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/play_event)
   */
 
-  внешнее
-  /*(!) var */ onplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onplay: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29376,56 +29425,56 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/playing_event)
   */
 
-  внешнее
-  /*(!) var */ onplaying: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onplaying: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointercancel_event) */
 
-  внешнее
-  /*(!) var */ onpointercancel: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointercancel: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerdown_event) */
 
-  внешнее
-  /*(!) var */ onpointerdown: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerdown: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerenter_event) */
 
-  внешнее
-  /*(!) var */ onpointerenter: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerenter: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerleave_event) */
 
-  внешнее
-  /*(!) var */ onpointerleave: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerleave: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointermove_event) */
 
-  внешнее
-  /*(!) var */ onpointermove: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointermove: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerout_event) */
 
-  внешнее
-  /*(!) var */ onpointerout: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerout: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerover_event) */
 
-  внешнее
-  /*(!) var */ onpointerover: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerover: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/pointerup_event) */
 
-  внешнее
-  /*(!) var */ onpointerup: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpointerup: (operation(this: Window, ev: PointerEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29435,8 +29484,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/progress_event)
   */
 
-  внешнее
-  /*(!) var */ onprogress: (operation(this: Window, ev: ProgressEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onprogress: (operation(this: Window, ev: ProgressEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29446,8 +29495,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/ratechange_event)
   */
 
-  внешнее
-  /*(!) var */ onratechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onratechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29457,14 +29506,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/reset_event)
   */
 
-  внешнее
-  /*(!) var */ onreset: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onreset: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLVideoElement/resize_event) */
 
-  внешнее
-  /*(!) var */ onresize: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onresize: (operation(this: Window, ev: UIEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29474,20 +29523,20 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/scroll_event)
   */
 
-  внешнее
-  /*(!) var */ onscroll: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onscroll: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/scrollend_event) */
 
-  внешнее
-  /*(!) var */ onscrollend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onscrollend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/securitypolicyviolation_event) */
 
-  внешнее
-  /*(!) var */ onsecuritypolicyviolation: (operation(this: Window, ev: SecurityPolicyViolationEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onsecuritypolicyviolation: (operation(this: Window, ev: SecurityPolicyViolationEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29497,8 +29546,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/seeked_event)
   */
 
-  внешнее
-  /*(!) var */ onseeked: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onseeked: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29508,8 +29557,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/seeking_event)
   */
 
-  внешнее
-  /*(!) var */ onseeking: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onseeking: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29519,26 +29568,26 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLInputElement/select_event)
   */
 
-  внешнее
-  /*(!) var */ onselect: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onselect: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Document/selectionchange_event) */
 
-  внешнее
-  /*(!) var */ onselectionchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onselectionchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Node/selectstart_event) */
 
-  внешнее
-  /*(!) var */ onselectstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onselectstart: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLSlotElement/slotchange_event) */
 
-  внешнее
-  /*(!) var */ onslotchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onslotchange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29548,14 +29597,14 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/stalled_event)
   */
 
-  внешнее
-  /*(!) var */ onstalled: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onstalled: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLFormElement/submit_event) */
 
-  внешнее
-  /*(!) var */ onsubmit: (operation(this: Window, ev: SubmitEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onsubmit: (operation(this: Window, ev: SubmitEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29565,8 +29614,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/suspend_event)
   */
 
-  внешнее
-  /*(!) var */ onsuspend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onsuspend: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29576,62 +29625,62 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/timeupdate_event)
   */
 
-  внешнее
-  /*(!) var */ ontimeupdate: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  ontimeupdate: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLDetailsElement/toggle_event) */
 
-  внешнее
-  /*(!) var */ ontoggle: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  ontoggle: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchcancel_event) */
 
-  внешнее
-  /*(!) var */ ontouchcancel: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontouchcancel: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchend_event) */
 
-  внешнее
-  /*(!) var */ ontouchend: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontouchend: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchmove_event) */
 
-  внешнее
-  /*(!) var */ ontouchmove: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontouchmove: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/touchstart_event) */
 
-  внешнее
-  /*(!) var */ ontouchstart: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontouchstart: (operation(this: Window, ev: TouchEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitioncancel_event) */
 
-  внешнее
-  /*(!) var */ ontransitioncancel: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontransitioncancel: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionend_event) */
 
-  внешнее
-  /*(!) var */ ontransitionend: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontransitionend: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionrun_event) */
 
-  внешнее
-  /*(!) var */ ontransitionrun: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontransitionrun: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/transitionstart_event) */
 
-  внешнее
-  /*(!) var */ ontransitionstart: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ontransitionstart: (operation(this: Window, ev: TransitionEvent): /*(!) any */ Object?)?
 
 
   /**
@@ -29641,8 +29690,8 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/volumechange_event)
   */
 
-  внешнее
-  /*(!) var */ onvolumechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onvolumechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /**
@@ -29652,128 +29701,128 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/waiting_event)
   */
 
-  внешнее
-  /*(!) var */ onwaiting: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onwaiting: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Element/wheel_event) */
 
-  внешнее
-  /*(!) var */ onwheel: (operation(this: Window, ev: WheelEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onwheel: (operation(this: Window, ev: WheelEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/afterprint_event) */
 
-  внешнее
-  /*(!) var */ onafterprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onafterprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/beforeprint_event) */
 
-  внешнее
-  /*(!) var */ onbeforeprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onbeforeprint: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event) */
 
-  внешнее
-  /*(!) var */ onbeforeunload: (operation(this: Window, ev: BeforeUnloadEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onbeforeunload: (operation(this: Window, ev: BeforeUnloadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/gamepadconnected_event) */
 
-  внешнее
-  /*(!) var */ ongamepadconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ongamepadconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/gamepaddisconnected_event) */
 
-  внешнее
-  /*(!) var */ ongamepaddisconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  ongamepaddisconnected: (operation(this: Window, ev: GamepadEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/hashchange_event) */
 
-  внешнее
-  /*(!) var */ onhashchange: (operation(this: Window, ev: HashChangeEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onhashchange: (operation(this: Window, ev: HashChangeEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/languagechange_event) */
 
-  внешнее
-  /*(!) var */ onlanguagechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onlanguagechange: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/message_event) */
 
-  внешнее
-  /*(!) var */ onmessage: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmessage: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/messageerror_event) */
 
-  внешнее
-  /*(!) var */ onmessageerror: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onmessageerror: (operation(this: Window, ev: MessageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/offline_event) */
 
-  внешнее
-  /*(!) var */ onoffline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onoffline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/online_event) */
 
-  внешнее
-  /*(!) var */ ononline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  ononline: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/pagehide_event) */
 
-  внешнее
-  /*(!) var */ onpagehide: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpagehide: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/pageshow_event) */
 
-  внешнее
-  /*(!) var */ onpageshow: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpageshow: (operation(this: Window, ev: PageTransitionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) */
 
-  внешнее
-  /*(!) var */ onpopstate: (operation(this: Window, ev: PopStateEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onpopstate: (operation(this: Window, ev: PopStateEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/rejectionhandled_event) */
 
-  внешнее
-  /*(!) var */ onrejectionhandled: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onrejectionhandled: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/storage_event) */
 
-  внешнее
-  /*(!) var */ onstorage: (operation(this: Window, ev: StorageEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onstorage: (operation(this: Window, ev: StorageEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/unhandledrejection_event) */
 
-  внешнее
-  /*(!) var */ onunhandledrejection: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
+  /*(!) var */
+  onunhandledrejection: (operation(this: Window, ev: PromiseRejectionEvent): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/unload_event) */
 
-  внешнее
-  /*(!) var */ onunload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
+  /*(!) var */
+  onunload: (operation(this: Window, ev: Event): /*(!) any */ Object?)?
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/localStorage) */
 
-  внешнее
-  /*(!) var */ localStorage: Storage
+  /*(!) var */
+  localStorage: Storage
 
 
   /**
@@ -29782,131 +29831,115 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/caches)
   */
 
-  внешнее
-  /*(!) var */ caches: CacheStorage
+  /*(!) var */
+  caches: CacheStorage
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/crossOriginIsolated) */
 
-  внешнее
-  /*(!) var */ crossOriginIsolated: YesNo
+  /*(!) var */
+  crossOriginIsolated: YesNo
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/crypto_property) */
 
-  внешнее
-  /*(!) var */ crypto: Crypto
+  /*(!) var */
+  crypto: Crypto
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/indexedDB) */
 
-  внешнее
-  /*(!) var */ indexedDB: IDBFactory
+  /*(!) var */
+  indexedDB: IDBFactory
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/isSecureContext) */
 
-  внешнее
-  /*(!) var */ isSecureContext: YesNo
+  /*(!) var */
+  isSecureContext: YesNo
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/origin) */
 
-  внешнее
-  /*(!) var */ origin: Text
+  /*(!) var */
+  origin: Text
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/performance_property) */
 
-  внешнее
-  /*(!) var */ performance: Performance
+  /*(!) var */
+  performance: Performance
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/atob) */
 
-  внешнее
   operation atob(data: Text): Text
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/btoa) */
 
-  внешнее
   operation btoa(data: Text): Text
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/clearInterval) */
 
-  внешнее
   operation clearInterval(id: Number?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/clearTimeout) */
 
-  внешнее
   operation clearTimeout(id: Number?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/createImageBitmap) */
 
-  внешнее
   operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = none): JS.Promise<ImageBitmap>
 
-  внешнее
   operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = none): JS.Promise<ImageBitmap>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/fetch) */
 
-  внешнее
   operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = none): JS.Promise<Response>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/queueMicrotask) */
 
-  внешнее
   operation queueMicrotask(callback: VoidFunction)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/reportError) */
 
-  внешнее
   operation reportError(e: /*(!) any */ Object?)
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setInterval) */
 
-  внешнее
-  #js.МассивПараметров
-  operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: Список</*(!) any */ Object?>): Number
+  #JS.МассивПараметров
+  operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: List</*(!) any */ Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setTimeout) */
 
-  внешнее
-  #js.МассивПараметров
-  operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: Список</*(!) any */ Object?>): Number
+  #JS.МассивПараметров
+  operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: List</*(!) any */ Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/structuredClone) */
 
-  внешнее
   operation structuredClone<T>(value: T, options: StructuredSerializeOptions? = none): T
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) */
 
-  внешнее
-  /*(!) var */ sessionStorage: Storage
+  /*(!) var */
+  sessionStorage: Storage
 
 
-  внешнее
   operation addEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
-  внешнее
   operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
-  внешнее
   operation removeEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | EventListenerOptions | пусто*/ = none)
 
-  внешнее
   operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: Object? /*(!)YesNo | EventListenerOptions | пусто*/ = none)
 
   type AlgorithmIdentifier = Object? /*(!)Algorithm | Text*/
 
   type AllowSharedBufferSource = Object? /*(!)JS.ArrayBuffer | JS.ArrayBufferView*/
 
-  type AutoFill = Object? /*(!)AutoFillBase | /*(!) `${OptionalPrefixToken<AutoFillSection>}${OptionalPrefixToken<AutoFillAddressKind>}${AutoFillField}${OptionalPostfixToken<AutoFillCredentialField>}` */ Object?*/
+  type AutoFill = Object? /*(!)AutoFillBase | /*(!) `${OptionalPrefixToken<AutoFillSection>}${OptionalPrefixToken<AutoFillAddressKind>}${AutoFillField}${OptionalPostfixToken<AutoFillCredentialField>}` Object?*/
 
-  type AutoFillField = Object? /*(!)AutoFillNormalField | /*(!) `${OptionalPrefixToken<AutoFillContactKind>}${AutoFillContactField}` */ Object?*/
+  type AutoFillField = Object? /*(!)AutoFillNormalField | /*(!) `${OptionalPrefixToken<AutoFillContactKind>}${AutoFillContactField}` Object?*/
 
   type AutoFillSection = /*(!) `section-${string}` */ Object?
 
@@ -29932,13 +29965,13 @@ external
 
   type CanvasImageSource = Object? /*(!)HTMLOrSVGImageElement | HTMLVideoElement | HTMLCanvasElement | ImageBitmap | OffscreenCanvas | VideoFrame*/
 
-  type ClipboardItemData = Promise<Object? /*(!)Text | Blob*/>
+  type ClipboardItemData = JS.Promise<Object? /*(!)Text | Blob*/>
 
-  type ClipboardItems = Список<ClipboardItem>
+  type ClipboardItems = List<ClipboardItem>
 
   type ConstrainBoolean = Object? /*(!)YesNo | ConstrainBooleanParameters*/
 
-  type ConstrainDOMString = Object? /*(!)Text | Список<Text> | ConstrainDOMStringParameters*/
+  type ConstrainDOMString = Object? /*(!)Text | List<Text> | ConstrainDOMStringParameters*/
 
   type ConstrainDouble = Object? /*(!)Number | ConstrainDoubleRange*/
 
@@ -29952,7 +29985,7 @@ external
 
   type FileSystemWriteChunkType = Object? /*(!)BufferSource | Blob | Text | WriteParams*/
 
-  type Float32List = Object? /*(!)Float32Array | Список<GLfloat>*/
+  type Float32List = Object? /*(!)Float32Array | List<GLfloat>*/
 
   type FormDataEntryValue = Object? /*(!)File | Text*/
 
@@ -29986,13 +30019,13 @@ external
 
   type HashAlgorithmIdentifier = AlgorithmIdentifier
 
-  type HeadersInit = Object? /*(!)Список<object { _0: Text, _1: Text }> | Record<Text, Text> | Headers*/
+  type HeadersInit = Object? /*(!)List<object { _0: Text, _1: Text }> | Record<Text, Text> | Headers*/
 
-  type IDBValidKey = Object? /*(!)Number | Text | Date | BufferSource | Список<IDBValidKey>*/
+  type IDBValidKey = Object? /*(!)Number | Text | Date | BufferSource | List<IDBValidKey>*/
 
   type ImageBitmapSource = Object? /*(!)CanvasImageSource | Blob | ImageData*/
 
-  type Int32List = Object? /*(!)Int32Array | Список<GLint>*/
+  type Int32List = Object? /*(!)Int32Array | List<GLint>*/
 
   type LineAndPositionSetting = Object? /*(!)Number | AutoKeyword*/
 
@@ -30010,11 +30043,11 @@ external
 
   type OnErrorEventHandler = OnErrorEventHandlerNonNull?
 
-  type OptionalPostfixToken<T = Text> = Object? /*(!)/*(!) ` ${T}` */ Object? | ""*/
+  type OptionalPostfixToken<T = Text> = Object? /*(!)/*(!) ` ${T}` Object? | ""*/
 
-  type OptionalPrefixToken<T = Text> = Object? /*(!)/*(!) `${T} ` */ Object? | ""*/
+  type OptionalPrefixToken<T = Text> = Object? /*(!)/*(!) `${T} ` Object? | ""*/
 
-  type PerformanceEntryList = Список<PerformanceEntry>
+  type PerformanceEntryList = List<PerformanceEntry>
 
   type ReadableStreamController<T> = Object? /*(!)ReadableStreamDefaultController<T> | ReadableByteStreamController*/
 
@@ -30024,7 +30057,7 @@ external
 
   type RenderingContext = Object? /*(!)CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext*/
 
-  type ReportList = Список<Report>
+  type ReportList = List<Report>
 
   type RequestInfo = Object? /*(!)Request | Text*/
 
@@ -30034,9 +30067,9 @@ external
 
   type Transferable = Object? /*(!)OffscreenCanvas | ImageBitmap | MessagePort | ReadableStream | WritableStream | TransformStream | VideoFrame | JS.ArrayBuffer*/
 
-  type Uint32List = Object? /*(!)Uint32Array | Список<GLuint>*/
+  type Uint32List = Object? /*(!)Uint32Array | List<GLuint>*/
 
-  type VibratePattern = Object? /*(!)Number | Список<Number>*/
+  type VibratePattern = Object? /*(!)Number | List<Number>*/
 
   type WindowProxy = Window
 
@@ -30070,11 +30103,11 @@ external
 
   type AutoFillContactKind = Object? /*(!)"home" | "mobile" | "work"*/
 
-  type AutoFillCredentialField = "webauthn"
+  // type AutoFillCredentialField = "webauthn"
 
   type AutoFillNormalField = Object? /*(!)"additional-name" | "address-level1" | "address-level2" | "address-level3" | "address-level4" | "address-line1" | "address-line2" | "address-line3" | "bday-day" | "bday-month" | "bday-year" | "cc-csc" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-family-name" | "cc-given-name" | "cc-name" | "cc-number" | "cc-type" | "country" | "country-name" | "current-password" | "family-name" | "given-name" | "honorific-prefix" | "honorific-suffix" | "name" | "new-password" | "one-time-code" | "organization" | "postal-code" | "street-address" | "transaction-amount" | "transaction-currency" | "username"*/
 
-  type AutoKeyword = "auto"
+  // type AutoKeyword = "auto"
 
   type AutomationRate = Object? /*(!)"a-rate" | "k-rate"*/
 
@@ -30160,9 +30193,9 @@ external
 
   type FullscreenNavigationUI = Object? /*(!)"auto" | "hide" | "show"*/
 
-  type GamepadHapticActuatorType = "vibration"
+  type GamepadHapticActuatorType = Text // "vibration"
 
-  type GamepadHapticEffectType = "dual-rumble"
+  type GamepadHapticEffectType = Text // "dual-rumble"
 
   type GamepadHapticsResult = Object? /*(!)"complete" | "preempted"*/
 
@@ -30262,7 +30295,7 @@ external
 
   type PresentationStyle = Object? /*(!)"attachment" | "inline" | "unspecified"*/
 
-  type PublicKeyCredentialType = "public-key"
+  type PublicKeyCredentialType = Text // "public-key"
 
   type PushEncryptionKeyName = Object? /*(!)"auth" | "p256dh"*/
 
@@ -30300,7 +30333,7 @@ external
 
   type RTCPriorityType = Object? /*(!)"high" | "low" | "medium" | "very-low"*/
 
-  type RTCRtcpMuxPolicy = "require"
+  type RTCRtcpMuxPolicy = Text // "require"
 
   type RTCRtpTransceiverDirection = Object? /*(!)"inactive" | "recvonly" | "sendonly" | "sendrecv" | "stopped"*/
 
@@ -30314,9 +30347,9 @@ external
 
   type RTCStatsType = Object? /*(!)"candidate-pair" | "certificate" | "codec" | "data-channel" | "inbound-rtp" | "local-candidate" | "media-source" | "outbound-rtp" | "peer-connection" | "remote-candidate" | "remote-inbound-rtp" | "remote-outbound-rtp" | "transport"*/
 
-  type ReadableStreamReaderMode = "byob"
+  type ReadableStreamReaderMode = Text // "byob"
 
-  type ReadableStreamType = "bytes"
+  type ReadableStreamType = Text // "bytes"
 
   type ReadyState = Object? /*(!)"closed" | "ended" | "open"*/
 
@@ -30388,7 +30421,7 @@ external
 
   type VideoTransferCharacteristics = Object? /*(!)"bt709" | "iec61966-2-1" | "smpte170m"*/
 
-  type WakeLockType = "screen"
+  type WakeLockType = Text // "screen"
 
   type WebGLPowerPreference = Object? /*(!)"default" | "high-performance" | "low-power"*/
 

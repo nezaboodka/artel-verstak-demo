@@ -27,7 +27,7 @@ external
       margin: Integer
     }
 
-    // #js.МассивПараметров
+    // #JS.МассивПараметров
     // /*(!) abstract */ 
     // operation run<T>(func: F<T>, args: Array<Object?>): T
 
