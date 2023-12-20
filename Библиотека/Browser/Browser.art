@@ -4438,7 +4438,7 @@ external
     guarded
     type`: Text
 
-    operation JS.arrayBuffer(): JS.Promise<JS.ArrayBuffer>
+    operation arrayBuffer(): JS.Promise<JS.ArrayBuffer>
 
     operation slice(start: Number? = none, end: Number? = none, contentType: Text? = none): Blob
 
@@ -7610,13 +7610,13 @@ external
     operation close()
 
     guarded
-    CONNECTING: 0
+    CONNECTING // = 0
 
     guarded
-    OPEN: 1
+    OPEN // = 1
 
     guarded
-    CLOSED: 2
+    CLOSED // = 2
 
     operation addEventListener<K = /*(!) keyof EventSourceEventMap */ Object?>(type`: K, listener: operation(this: EventSource, ev: /*(!) EventSourceEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -7635,13 +7635,13 @@ external
     on create(url: Object? /*(!)Text | URL*/, eventSourceInitDict: EventSourceInit? = none) // : EventSource
 
     guarded
-    CONNECTING: 0
+    CONNECTING // = 0
 
     guarded
-    OPEN: 1
+    OPEN // = 1
 
     guarded
-    CLOSED: 2
+    CLOSED // = 2
   }
 
   /**
@@ -7761,13 +7761,13 @@ external
     operation readAsText(blob: Blob, encoding: Text? = none)
 
     guarded
-    EMPTY: 0
+    EMPTY // = 0
 
     guarded
-    LOADING: 1
+    LOADING // = 1
 
     guarded
-    DONE: 2
+    DONE // = 2
 
     operation addEventListener<K = /*(!) keyof FileReaderEventMap */ Object?>(type`: K, listener: operation(this: FileReader, ev: /*(!) FileReaderEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -7782,13 +7782,13 @@ external
     on create() // : FileReader
 
     guarded
-    EMPTY: 0
+    EMPTY // = 0
 
     guarded
-    LOADING: 1
+    LOADING // = 1
 
     guarded
-    DONE: 2
+    DONE // = 2
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/FileSystem) */
