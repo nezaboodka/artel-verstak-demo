@@ -23,7 +23,7 @@ external
 
       operation claim<T, M, C, R>(driver: Driver<T>, builder: BlockBuilder<T, M, C, R>?, base: BlockBuilder<T, M, C, R>?): Block<T, M, C, R>
 
-      operation triggerUpdate(block: Block<Object, Object, Object, Empty>, triggers: Object?)
+      operation triggerUpdate(block: Block<Object, Object, Object, None>, triggers: Object?)
 
       operation updateNestedTreesThenDo(action: operation(err: Object?))
 
@@ -93,7 +93,7 @@ external
 
     on create(element: T, name: Text, isRow: YesNo, preset: SimpleDelegate<T>?)
 
-    operation create(block: Block<T, Object?, Object?, Empty>, b: object { native: T; controller: Object? })
+    operation create(block: Block<T, Object?, Object?, None>, b: object { native: T; controller: Object? })
   }
 
   // CursorCommandDriver
@@ -109,11 +109,11 @@ external
   }
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type CursorCommandDriver = object BaseDriver<CursorCommand, Empty>
+  type CursorCommandDriver = object BaseDriver<CursorCommand, None>
   {
     on create()
 
-    operation create(block: Block<CursorCommand, Object?, Empty, Empty>, b: object { native: CursorCommand?; controller: None? })
+    operation create(block: Block<CursorCommand, Object?, None, None>, b: object { native: CursorCommand?; controller: None? })
   }
 
   // SubTreeVariable

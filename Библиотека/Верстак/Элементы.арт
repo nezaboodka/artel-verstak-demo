@@ -14,10 +14,10 @@
 
 операция Секция(
   режим: Режим? = пусто,
-  перестроить: Обработчик<ВебЭлемент, Empty, Empty, Empty>? = пусто)
-  : Block<HTMLElement, Empty, Empty, Empty>
+  перестроить: Обработчик<ВебЭлемент, None, None, None>? = пусто)
+  : Block<HTMLElement, None, None, None>
 {
-  результат = Section<Empty, Empty>([mode = режим, update = перестроить])
+  результат = Section<None, None>([mode = режим, update = перестроить])
 }
 
 псевдонимы(русский)

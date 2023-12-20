@@ -11,9 +11,9 @@ external
   type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
   {
 
-    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C? })
+    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
 
-    operation initialize(block: Block<T, Object?, C, Empty>)
+    operation initialize(block: Block<T, Object?, C, None>)
 
     operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
 
@@ -39,7 +39,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type HtmlDriver<T = HTMLElement, C> = object BaseHtmlDriver<T, C>
   {
-    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C?})
+    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C?})
   }
 
   // SvgDriver
@@ -47,6 +47,6 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type SvgDriver<T = SVGElement, C> = object BaseHtmlDriver<T, C>
   {
-    operation create(block: Block<T, Object?, C, Empty>, b: object { native: T?; controller: C? })
+    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
   }
 }

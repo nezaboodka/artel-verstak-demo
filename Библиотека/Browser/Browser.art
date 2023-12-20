@@ -10929,7 +10929,7 @@ external
 
     operation continuePrimaryKey(key: IDBValidKey, primaryKey: IDBValidKey)
 
-    operation delete(): IDBRequest<Empty>
+    operation delete(): IDBRequest<None>
 
     operation update(value: /*(!) any */ Object?): IDBRequest<IDBValidKey>
 
@@ -11133,13 +11133,13 @@ external
 
     operation add(value: /*(!) any */ Object?, key: IDBValidKey? = empty): IDBRequest<IDBValidKey>
 
-    operation clear(): IDBRequest<Empty>
+    operation clear(): IDBRequest<None>
 
     operation count(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто*/ = empty): IDBRequest<Number>
 
     operation createIndex(name: Text, keyPath: Object? /*(!)Text | Список<Text>*/, options: IDBIndexParameters? = empty): IDBIndex
 
-    operation delete(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<Empty>
+    operation delete(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<None>
 
     operation deleteIndex(name: Text)
 
@@ -15184,7 +15184,7 @@ external
   type ReadableStreamGenericReader = aspect
   {
     guarded 
-    closed: JS.Promise<Empty>
+    closed: JS.Promise<None>
 
     operation cancel(reason: /*(!) any */ Object? = empty): JS.Promise<None>
   }
@@ -26408,7 +26408,7 @@ external
     incomingUnidirectionalStreams: ReadableStream
 
     guarded
-    ready: JS.Promise<Empty>
+    ready: JS.Promise<None>
 
     operation close(closeInfo: WebTransportCloseInfo? = empty)
 
@@ -26837,13 +26837,13 @@ external
   type WritableStreamDefaultWriter<W> = object
   {
     guarded
-    closed: JS.Promise<Empty>
+    closed: JS.Promise<None>
 
     guarded
     desiredSize: Number?
 
     guarded
-    ready: JS.Promise<Empty>
+    ready: JS.Promise<None>
 
     operation abort(reason: /*(!) any */ Object? = empty): JS.Promise<None>
 
