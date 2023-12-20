@@ -3579,7 +3579,7 @@ external
     operation vertexAttribDivisorANGLE(index: GLuint, divisor: GLuint)
 
     const 
-    VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE = 0x88FE
+    VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE // = 0x88FE
   }
 
 
@@ -4784,7 +4784,7 @@ external
 
     prototype: CSSKeywordValue
 
-    on create(value: Text): CSSKeywordValue
+    on create(value: Text) // : CSSKeywordValue
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSLayerBlockRule) */
@@ -4824,7 +4824,7 @@ external
 
     prototype: CSSMathClamp
 
-    on create(lower: CSSNumberish, value: CSSNumberish, upper: CSSNumberish): CSSMathClamp
+    on create(lower: CSSNumberish, value: CSSNumberish, upper: CSSNumberish) // : CSSMathClamp
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathInvert) */
@@ -4836,7 +4836,7 @@ external
 
     prototype: CSSMathInvert
 
-    on create(arg: CSSNumberish): CSSMathInvert
+    on create(arg: CSSNumberish) // : CSSMathInvert
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathMax) */
@@ -4849,7 +4849,7 @@ external
     prototype: CSSMathMax
 
     #js.МассивПараметров
-    on create(args: Список<CSSNumberish>): CSSMathMax
+    on create(args: Список<CSSNumberish>) // : CSSMathMax
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathMin) */
@@ -4862,7 +4862,7 @@ external
     prototype: CSSMathMin
 
     #js.МассивПараметров
-    on create(args: Список<CSSNumberish>): CSSMathMin
+    on create(args: Список<CSSNumberish>) // : CSSMathMin
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathNegate) */
@@ -4887,7 +4887,7 @@ external
     prototype: CSSMathProduct
 
     #js.МассивПараметров
-    on create(args: Список<CSSNumberish>): CSSMathProduct
+    on create(args: Список<CSSNumberish>) // : CSSMathProduct
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathSum) */
@@ -4900,7 +4900,7 @@ external
     prototype: CSSMathSum
 
     #js.МассивПараметров
-    on create(args: Список<CSSNumberish>): CSSMathSum
+    on create(args: Список<CSSNumberish>) // : CSSMathSum
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathValue) */
@@ -5094,68 +5094,68 @@ external
   type CSSRule = object
   {
     const
-    STYLE_RULE = 1
+    STYLE_RULE // = 1
 
     const
-    CHARSET_RULE = 2
+    CHARSET_RULE // = 2
 
     const
-    IMPORT_RULE = 3
+    IMPORT_RULE // = 3
 
     const
-    MEDIA_RULE = 4
+    MEDIA_RULE // = 4
 
     const
-    FONT_FACE_RULE = 5
+    FONT_FACE_RULE // = 5
 
     const
-    PAGE_RULE = 6
+    PAGE_RULE // = 6
 
     const
-    NAMESPACE_RULE = 10
+    NAMESPACE_RULE // = 10
 
     const
-    KEYFRAMES_RULE = 7
+    KEYFRAMES_RULE // = 7
 
     const
-    KEYFRAME_RULE = 8
+    KEYFRAME_RULE // = 8
 
     const
-    SUPPORTS_RULE = 12
+    SUPPORTS_RULE // = 12
 
     prototype: CSSRule
 
     on create() // : CSSRule
 
     const
-    STYLE_RULE = 1
+    STYLE_RULE // = 1
 
     const
-    CHARSET_RULE = 2
+    CHARSET_RULE // = 2
 
     const
-    IMPORT_RULE = 3
+    IMPORT_RULE // = 3
 
     const
-    MEDIA_RULE = 4
+    MEDIA_RULE // = 4
 
     const
-    FONT_FACE_RULE = 5
+    FONT_FACE_RULE // = 5
 
     const
-    PAGE_RULE = 6
+    PAGE_RULE // = 6
 
     const
-    NAMESPACE_RULE = 10
+    NAMESPACE_RULE // = 10
 
     const
-    KEYFRAMES_RULE = 7
+    KEYFRAMES_RULE // = 7
 
     const
-    KEYFRAME_RULE = 8
+    KEYFRAME_RULE // = 8
 
     const
-    SUPPORTS_RULE = 12
+    SUPPORTS_RULE // = 12
   }
 
   /**
@@ -6179,159 +6179,159 @@ external
 
   type DOMException = object Error
   {
-    guarded
-    INDEX_SIZE_ERR: 1
+    const
+    INDEX_SIZE_ERR = 1
 
-    guarded
-    DOMSTRING_SIZE_ERR: 2
+    const
+    DOMSTRING_SIZE_ERR = 2
 
-    guarded
-    HIERARCHY_REQUEST_ERR: 3
+    const
+    HIERARCHY_REQUEST_ERR = 3
 
-    guarded
-    WRONG_DOCUMENT_ERR: 4
+    const
+    WRONG_DOCUMENT_ERR = 4
 
-    guarded
-    INVALID_CHARACTER_ERR: 5
+    const
+    INVALID_CHARACTER_ERR = 5
 
-    guarded
-    NO_DATA_ALLOWED_ERR: 6
+    const
+    NO_DATA_ALLOWED_ERR = 6
 
-    guarded
-    NO_MODIFICATION_ALLOWED_ERR: 7
+    const
+    NO_MODIFICATION_ALLOWED_ERR = 7
 
-    guarded
-    NOT_FOUND_ERR: 8
+    const
+    NOT_FOUND_ERR = 8
 
-    guarded
-    NOT_SUPPORTED_ERR: 9
+    const
+    NOT_SUPPORTED_ERR = 9
 
-    guarded
-    INUSE_ATTRIBUTE_ERR: 10
+    const
+    INUSE_ATTRIBUTE_ERR = 10
 
-    guarded
-    INVALID_STATE_ERR: 11
+    const
+    INVALID_STATE_ERR = 11
 
-    guarded
-    SYNTAX_ERR: 12
+    const
+    SYNTAX_ERR = 12
 
-    guarded
-    INVALID_MODIFICATION_ERR: 13
+    const
+    INVALID_MODIFICATION_ERR = 13
 
-    guarded
-    NAMESPACE_ERR: 14
+    const
+    NAMESPACE_ERR = 14
 
-    guarded
-    INVALID_ACCESS_ERR: 15
+    const
+    INVALID_ACCESS_ERR = 15
 
-    guarded
-    VALIDATION_ERR: 16
+    const
+    VALIDATION_ERR = 16
 
-    guarded
-    TYPE_MISMATCH_ERR: 17
+    const
+    TYPE_MISMATCH_ERR = 17
 
-    guarded
-    SECURITY_ERR: 18
+    const
+    SECURITY_ERR = 18
 
-    guarded
-    NETWORK_ERR: 19
+    const
+    NETWORK_ERR = 19
 
-    guarded
-    ABORT_ERR: 20
+    const
+    ABORT_ERR = 20
 
-    guarded
-    URL_MISMATCH_ERR: 21
+    const
+    URL_MISMATCH_ERR = 21
 
-    guarded
-    QUOTA_EXCEEDED_ERR: 22
+    const
+    QUOTA_EXCEEDED_ERR = 22
 
-    guarded
-    TIMEOUT_ERR: 23
+    const
+    TIMEOUT_ERR = 23
 
-    guarded
-    INVALID_NODE_TYPE_ERR: 24
+    const
+    INVALID_NODE_TYPE_ERR = 24
 
-    guarded
-    DATA_CLONE_ERR: 25
+    const
+    DATA_CLONE_ERR = 25
 
     prototype: DOMException
 
     on create(message: Text? = empty, name: Text? = empty) // : DOMException
 
-    guarded
-    INDEX_SIZE_ERR: 1
+    const
+    INDEX_SIZE_ERR = 1
 
-    guarded
-    DOMSTRING_SIZE_ERR: 2
+    const
+    DOMSTRING_SIZE_ERR = 2
 
-    guarded
-    HIERARCHY_REQUEST_ERR: 3
+    const
+    HIERARCHY_REQUEST_ERR = 3
 
-    guarded
-    WRONG_DOCUMENT_ERR: 4
+    const
+    WRONG_DOCUMENT_ERR = 4
 
-    guarded
-    INVALID_CHARACTER_ERR: 5
+    const
+    INVALID_CHARACTER_ERR = 5
 
-    guarded
-    NO_DATA_ALLOWED_ERR: 6
+    const
+    NO_DATA_ALLOWED_ERR = 6
 
-    guarded
-    NO_MODIFICATION_ALLOWED_ERR: 7
+    const
+    NO_MODIFICATION_ALLOWED_ERR = 7
 
-    guarded
-    NOT_FOUND_ERR: 8
+    const
+    NOT_FOUND_ERR = 8
 
-    guarded
-    NOT_SUPPORTED_ERR: 9
+    const
+    NOT_SUPPORTED_ERR = 9
 
-    guarded
-    INUSE_ATTRIBUTE_ERR: 10
+    const
+    INUSE_ATTRIBUTE_ERR = 10
 
-    guarded
-    INVALID_STATE_ERR: 11
+    const
+    INVALID_STATE_ERR = 11
 
-    guarded
-    SYNTAX_ERR: 12
+    const
+    SYNTAX_ERR = 12
 
-    guarded
-    INVALID_MODIFICATION_ERR: 13
+    const
+    INVALID_MODIFICATION_ERR = 13
 
-    guarded
-    NAMESPACE_ERR: 14
+    const
+    NAMESPACE_ERR = 14
 
-    guarded
-    INVALID_ACCESS_ERR: 15
+    const
+    INVALID_ACCESS_ERR = 15
 
-    guarded
-    VALIDATION_ERR: 16
+    const
+    VALIDATION_ERR = 16
 
-    guarded
-    TYPE_MISMATCH_ERR: 17
+    const
+    TYPE_MISMATCH_ERR = 17
 
-    guarded
-    SECURITY_ERR: 18
+    const
+    SECURITY_ERR = 18
 
-    guarded
-    NETWORK_ERR: 19
+    const
+    NETWORK_ERR = 19
 
-    guarded
-    ABORT_ERR: 20
+    const
+    ABORT_ERR = 20
 
-    guarded
-    URL_MISMATCH_ERR: 21
+    const
+    URL_MISMATCH_ERR = 21
 
-    guarded
-    QUOTA_EXCEEDED_ERR: 22
+    const
+    QUOTA_EXCEEDED_ERR = 22
 
-    guarded
-    TIMEOUT_ERR: 23
+    const
+    TIMEOUT_ERR = 23
 
-    guarded
-    INVALID_NODE_TYPE_ERR: 24
+    const
+    INVALID_NODE_TYPE_ERR = 24
 
-    guarded
-    DATA_CLONE_ERR: 25
+    const
+    DATA_CLONE_ERR = 25
   }
 
   /**
@@ -6955,127 +6955,127 @@ external
 
     operation createElementNS(namespace: Text?, qualifiedName: Text, options: Object? /*(!)Text | ElementCreationOptions | пусто*/ = empty): Element
 
-    operation createEvent(eventInterface: "AnimationPlaybackEvent"): AnimationPlaybackEvent
+    // operation createEvent(eventInterface: "AnimationPlaybackEvent"): AnimationPlaybackEvent
 
-    operation createEvent(eventInterface: "AudioProcessingEvent"): AudioProcessingEvent
+    // operation createEvent(eventInterface: "AudioProcessingEvent"): AudioProcessingEvent
 
-    operation createEvent(eventInterface: "BeforeUnloadEvent"): BeforeUnloadEvent
+    // operation createEvent(eventInterface: "BeforeUnloadEvent"): BeforeUnloadEvent
 
-    operation createEvent(eventInterface: "BlobEvent"): BlobEvent
+    // operation createEvent(eventInterface: "BlobEvent"): BlobEvent
 
-    operation createEvent(eventInterface: "ClipboardEvent"): ClipboardEvent
+    // operation createEvent(eventInterface: "ClipboardEvent"): ClipboardEvent
 
-    operation createEvent(eventInterface: "CloseEvent"): CloseEvent
+    // operation createEvent(eventInterface: "CloseEvent"): CloseEvent
 
-    operation createEvent(eventInterface: "CompositionEvent"): CompositionEvent
+    // operation createEvent(eventInterface: "CompositionEvent"): CompositionEvent
 
-    operation createEvent(eventInterface: "CustomEvent"): CustomEvent
+    // operation createEvent(eventInterface: "CustomEvent"): CustomEvent
 
-    operation createEvent(eventInterface: "DeviceMotionEvent"): DeviceMotionEvent
+    // operation createEvent(eventInterface: "DeviceMotionEvent"): DeviceMotionEvent
 
-    operation createEvent(eventInterface: "DeviceOrientationEvent"): DeviceOrientationEvent
+    // operation createEvent(eventInterface: "DeviceOrientationEvent"): DeviceOrientationEvent
 
-    operation createEvent(eventInterface: "DragEvent"): DragEvent
+    // operation createEvent(eventInterface: "DragEvent"): DragEvent
 
-    operation createEvent(eventInterface: "ErrorEvent"): ErrorEvent
+    // operation createEvent(eventInterface: "ErrorEvent"): ErrorEvent
 
-    operation createEvent(eventInterface: "Event"): Event
+    // operation createEvent(eventInterface: "Event"): Event
 
-    operation createEvent(eventInterface: "Events"): Event
+    // operation createEvent(eventInterface: "Events"): Event
 
-    operation createEvent(eventInterface: "FocusEvent"): FocusEvent
+    // operation createEvent(eventInterface: "FocusEvent"): FocusEvent
 
-    operation createEvent(eventInterface: "FontFaceSetLoadEvent"): FontFaceSetLoadEvent
+    // operation createEvent(eventInterface: "FontFaceSetLoadEvent"): FontFaceSetLoadEvent
 
-    operation createEvent(eventInterface: "FormDataEvent"): FormDataEvent
+    // operation createEvent(eventInterface: "FormDataEvent"): FormDataEvent
 
-    operation createEvent(eventInterface: "GamepadEvent"): GamepadEvent
+    // operation createEvent(eventInterface: "GamepadEvent"): GamepadEvent
 
-    operation createEvent(eventInterface: "HashChangeEvent"): HashChangeEvent
+    // operation createEvent(eventInterface: "HashChangeEvent"): HashChangeEvent
 
-    operation createEvent(eventInterface: "IDBVersionChangeEvent"): IDBVersionChangeEvent
+    // operation createEvent(eventInterface: "IDBVersionChangeEvent"): IDBVersionChangeEvent
 
-    operation createEvent(eventInterface: "InputEvent"): InputEvent
+    // operation createEvent(eventInterface: "InputEvent"): InputEvent
 
-    operation createEvent(eventInterface: "KeyboardEvent"): KeyboardEvent
+    // operation createEvent(eventInterface: "KeyboardEvent"): KeyboardEvent
 
-    operation createEvent(eventInterface: "MIDIConnectionEvent"): MIDIConnectionEvent
+    // operation createEvent(eventInterface: "MIDIConnectionEvent"): MIDIConnectionEvent
 
-    operation createEvent(eventInterface: "MIDIMessageEvent"): MIDIMessageEvent
+    // operation createEvent(eventInterface: "MIDIMessageEvent"): MIDIMessageEvent
 
-    operation createEvent(eventInterface: "MediaEncryptedEvent"): MediaEncryptedEvent
+    // operation createEvent(eventInterface: "MediaEncryptedEvent"): MediaEncryptedEvent
 
-    operation createEvent(eventInterface: "MediaKeyMessageEvent"): MediaKeyMessageEvent
+    // operation createEvent(eventInterface: "MediaKeyMessageEvent"): MediaKeyMessageEvent
 
-    operation createEvent(eventInterface: "MediaQueryListEvent"): MediaQueryListEvent
+    // operation createEvent(eventInterface: "MediaQueryListEvent"): MediaQueryListEvent
 
-    operation createEvent(eventInterface: "MediaStreamTrackEvent"): MediaStreamTrackEvent
+    // operation createEvent(eventInterface: "MediaStreamTrackEvent"): MediaStreamTrackEvent
 
-    operation createEvent(eventInterface: "MessageEvent"): MessageEvent
+    // operation createEvent(eventInterface: "MessageEvent"): MessageEvent
 
-    operation createEvent(eventInterface: "MouseEvent"): MouseEvent
+    // operation createEvent(eventInterface: "MouseEvent"): MouseEvent
 
-    operation createEvent(eventInterface: "MouseEvents"): MouseEvent
+    // operation createEvent(eventInterface: "MouseEvents"): MouseEvent
 
-    operation createEvent(eventInterface: "MutationEvent"): MutationEvent
+    // operation createEvent(eventInterface: "MutationEvent"): MutationEvent
 
-    operation createEvent(eventInterface: "MutationEvents"): MutationEvent
+    // operation createEvent(eventInterface: "MutationEvents"): MutationEvent
 
-    operation createEvent(eventInterface: "OfflineAudioCompletionEvent"): OfflineAudioCompletionEvent
+    // operation createEvent(eventInterface: "OfflineAudioCompletionEvent"): OfflineAudioCompletionEvent
 
-    operation createEvent(eventInterface: "PageTransitionEvent"): PageTransitionEvent
+    // operation createEvent(eventInterface: "PageTransitionEvent"): PageTransitionEvent
 
-    operation createEvent(eventInterface: "PaymentMethodChangeEvent"): PaymentMethodChangeEvent
+    // operation createEvent(eventInterface: "PaymentMethodChangeEvent"): PaymentMethodChangeEvent
 
-    operation createEvent(eventInterface: "PaymentRequestUpdateEvent"): PaymentRequestUpdateEvent
+    // operation createEvent(eventInterface: "PaymentRequestUpdateEvent"): PaymentRequestUpdateEvent
 
-    operation createEvent(eventInterface: "PictureInPictureEvent"): PictureInPictureEvent
+    // operation createEvent(eventInterface: "PictureInPictureEvent"): PictureInPictureEvent
 
-    operation createEvent(eventInterface: "PointerEvent"): PointerEvent
+    // operation createEvent(eventInterface: "PointerEvent"): PointerEvent
 
-    operation createEvent(eventInterface: "PopStateEvent"): PopStateEvent
+    // operation createEvent(eventInterface: "PopStateEvent"): PopStateEvent
 
-    operation createEvent(eventInterface: "ProgressEvent"): ProgressEvent
+    // operation createEvent(eventInterface: "ProgressEvent"): ProgressEvent
 
-    operation createEvent(eventInterface: "PromiseRejectionEvent"): PromiseRejectionEvent
+    // operation createEvent(eventInterface: "PromiseRejectionEvent"): PromiseRejectionEvent
 
-    operation createEvent(eventInterface: "RTCDTMFToneChangeEvent"): RTCDTMFToneChangeEvent
+    // operation createEvent(eventInterface: "RTCDTMFToneChangeEvent"): RTCDTMFToneChangeEvent
 
-    operation createEvent(eventInterface: "RTCDataChannelEvent"): RTCDataChannelEvent
+    // operation createEvent(eventInterface: "RTCDataChannelEvent"): RTCDataChannelEvent
 
-    operation createEvent(eventInterface: "RTCErrorEvent"): RTCErrorEvent
+    // operation createEvent(eventInterface: "RTCErrorEvent"): RTCErrorEvent
 
-    operation createEvent(eventInterface: "RTCPeerConnectionIceErrorEvent"): RTCPeerConnectionIceErrorEvent
+    // operation createEvent(eventInterface: "RTCPeerConnectionIceErrorEvent"): RTCPeerConnectionIceErrorEvent
 
-    operation createEvent(eventInterface: "RTCPeerConnectionIceEvent"): RTCPeerConnectionIceEvent
+    // operation createEvent(eventInterface: "RTCPeerConnectionIceEvent"): RTCPeerConnectionIceEvent
 
-    operation createEvent(eventInterface: "RTCTrackEvent"): RTCTrackEvent
+    // operation createEvent(eventInterface: "RTCTrackEvent"): RTCTrackEvent
 
-    operation createEvent(eventInterface: "SecurityPolicyViolationEvent"): SecurityPolicyViolationEvent
+    // operation createEvent(eventInterface: "SecurityPolicyViolationEvent"): SecurityPolicyViolationEvent
 
-    operation createEvent(eventInterface: "SpeechSynthesisErrorEvent"): SpeechSynthesisErrorEvent
+    // operation createEvent(eventInterface: "SpeechSynthesisErrorEvent"): SpeechSynthesisErrorEvent
 
-    operation createEvent(eventInterface: "SpeechSynthesisEvent"): SpeechSynthesisEvent
+    // operation createEvent(eventInterface: "SpeechSynthesisEvent"): SpeechSynthesisEvent
 
-    operation createEvent(eventInterface: "StorageEvent"): StorageEvent
+    // operation createEvent(eventInterface: "StorageEvent"): StorageEvent
 
-    operation createEvent(eventInterface: "SubmitEvent"): SubmitEvent
+    // operation createEvent(eventInterface: "SubmitEvent"): SubmitEvent
 
-    operation createEvent(eventInterface: "ToggleEvent"): ToggleEvent
+    // operation createEvent(eventInterface: "ToggleEvent"): ToggleEvent
 
-    operation createEvent(eventInterface: "TouchEvent"): TouchEvent
+    // operation createEvent(eventInterface: "TouchEvent"): TouchEvent
 
-    operation createEvent(eventInterface: "TrackEvent"): TrackEvent
+    // operation createEvent(eventInterface: "TrackEvent"): TrackEvent
 
-    operation createEvent(eventInterface: "TransitionEvent"): TransitionEvent
+    // operation createEvent(eventInterface: "TransitionEvent"): TransitionEvent
 
-    operation createEvent(eventInterface: "UIEvent"): UIEvent
+    // operation createEvent(eventInterface: "UIEvent"): UIEvent
 
-    operation createEvent(eventInterface: "UIEvents"): UIEvent
+    // operation createEvent(eventInterface: "UIEvents"): UIEvent
 
-    operation createEvent(eventInterface: "WebGLContextEvent"): WebGLContextEvent
+    // operation createEvent(eventInterface: "WebGLContextEvent"): WebGLContextEvent
 
-    operation createEvent(eventInterface: "WheelEvent"): WheelEvent
+    // operation createEvent(eventInterface: "WheelEvent"): WheelEvent
 
     operation createEvent(eventInterface: Text): Event
 
@@ -7234,13 +7234,10 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_blend_minmax) */
 
-  type EXT_blend_minmax = aspect
+  type EXT_blend_minmax = variant
   {
-    guarded 
-    MIN_EXT: 0x8007
-
-    guarded 
-    MAX_EXT: 0x8008
+    MIN_EXT = 0x8007
+    MAX_EXT = 0x8008
   }
 
 
@@ -7254,19 +7251,12 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_color_buffer_half_float) */
 
-  type EXT_color_buffer_half_float = aspect
+  type EXT_color_buffer_half_float = variant
   {
-    guarded 
-    RGBA16F_EXT: 0x881A
-
-    guarded 
-    RGB16F_EXT: 0x881B
-
-    guarded 
-    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT: 0x8211
-
-    guarded 
-    UNSIGNED_NORMALIZED_EXT: 0x8C17
+    RGBA16F_EXT = 0x881A
+    RGB16F_EXT = 0x881B
+    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT = 0x8211
+    UNSIGNED_NORMALIZED_EXT = 0x8C17
   }
 
 
@@ -7292,19 +7282,12 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_sRGB) */
 
-  type EXT_sRGB = aspect
+  type EXT_sRGB = variant
   {
-    guarded 
-    SRGB_EXT: 0x8C40
-
-    guarded 
-    SRGB_ALPHA_EXT: 0x8C42
-
-    guarded 
-    SRGB8_ALPHA8_EXT: 0x8C43
-
-    guarded 
-    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT: 0x8210
+    SRGB_EXT = 0x8C40
+    SRGB_ALPHA_EXT = 0x8C42
+    SRGB8_ALPHA8_EXT = 0x8C43
+    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT = 0x8210
   }
 
 
@@ -7318,37 +7301,23 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_texture_compression_bptc) */
 
-  type EXT_texture_compression_bptc = aspect
+  type EXT_texture_compression_bptc = variant
   {
-    guarded 
-    COMPRESSED_RGBA_BPTC_UNORM_EXT: 0x8E8C
-
-    guarded 
-    COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT: 0x8E8D
-
-    guarded 
-    COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT: 0x8E8E
-
-    guarded 
-    COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT: 0x8E8F
+    COMPRESSED_RGBA_BPTC_UNORM_EXT = 0x8E8C
+    COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT = 0x8E8D
+    COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT = 0x8E8E
+    COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT = 0x8E8F
   }
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_texture_compression_rgtc) */
 
-  type EXT_texture_compression_rgtc = aspect
+  type EXT_texture_compression_rgtc = variant
   {
-    guarded 
-    COMPRESSED_RED_RGTC1_EXT: 0x8DBB
-
-    guarded 
-    COMPRESSED_SIGNED_RED_RGTC1_EXT: 0x8DBC
-
-    guarded 
-    COMPRESSED_RED_GREEN_RGTC2_EXT: 0x8DBD
-
-    guarded 
-    COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT: 0x8DBE
+    COMPRESSED_RED_RGTC1_EXT = 0x8DBB
+    COMPRESSED_SIGNED_RED_RGTC1_EXT = 0x8DBC
+    COMPRESSED_RED_GREEN_RGTC2_EXT = 0x8DBD
+    COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT = 0x8DBE
   }
 
 
@@ -7358,43 +7327,25 @@ external
   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_texture_filter_anisotropic)
   */
 
-  type EXT_texture_filter_anisotropic = aspect
+  type EXT_texture_filter_anisotropic = variant
   {
-    guarded 
-    TEXTURE_MAX_ANISOTROPY_EXT: 0x84FE
-
-    guarded 
-    MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0x84FF
+    TEXTURE_MAX_ANISOTROPY_EXT = 0x84FE
+    MAX_TEXTURE_MAX_ANISOTROPY_EXT = 0x84FF
   }
 
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EXT_texture_norm16) */
 
-  type EXT_texture_norm16 = aspect
+  type EXT_texture_norm16 = variant
   {
-    guarded 
-    R16_EXT: 0x822A
-
-    guarded 
-    RG16_EXT: 0x822C
-
-    guarded 
-    RGB16_EXT: 0x8054
-
-    guarded 
-    RGBA16_EXT: 0x805B
-
-    guarded 
-    R16_SNORM_EXT: 0x8F98
-
-    guarded 
-    RG16_SNORM_EXT: 0x8F99
-
-    guarded 
-    RGB16_SNORM_EXT: 0x8F9A
-
-    guarded 
-    RGBA16_SNORM_EXT: 0x8F9B
+    R16_EXT = 0x822A
+    RG16_EXT = 0x822C
+    RGB16_EXT = 0x8054
+    RGBA16_EXT = 0x805B
+    R16_SNORM_EXT = 0x8F98
+    RG16_SNORM_EXT = 0x8F99
+    RGB16_SNORM_EXT = 0x8F9A
+    RGBA16_SNORM_EXT = 0x8F9B
   }
 
 
@@ -15958,22 +15909,22 @@ external
     type`: SVGAnimatedEnumeration
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN: 0
+    SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY: 1
+    SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY // = 1
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_TABLE: 2
+    SVG_FECOMPONENTTRANSFER_TYPE_TABLE // = 2
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE: 3
+    SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE // = 3
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_LINEAR: 4
+    SVG_FECOMPONENTTRANSFER_TYPE_LINEAR // = 4
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_GAMMA: 5
+    SVG_FECOMPONENTTRANSFER_TYPE_GAMMA // = 5
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGComponentTransferFunctionElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -15988,22 +15939,22 @@ external
     on create() // : SVGComponentTransferFunctionElement
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN: 0
+    SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY: 1
+    SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY // = 1
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_TABLE: 2
+    SVG_FECOMPONENTTRANSFER_TYPE_TABLE // = 2
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE: 3
+    SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE // = 3
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_LINEAR: 4
+    SVG_FECOMPONENTTRANSFER_TYPE_LINEAR // = 4
 
     guarded
-    SVG_FECOMPONENTTRANSFER_TYPE_GAMMA: 5
+    SVG_FECOMPONENTTRANSFER_TYPE_GAMMA // = 5
   }
 
   /**
@@ -16132,55 +16083,55 @@ external
     mode: SVGAnimatedEnumeration
 
     guarded
-    SVG_FEBLEND_MODE_UNKNOWN: 0
+    SVG_FEBLEND_MODE_UNKNOWN // = 0
 
     guarded
-    SVG_FEBLEND_MODE_NORMAL: 1
+    SVG_FEBLEND_MODE_NORMAL // = 1
 
     guarded
-    SVG_FEBLEND_MODE_MULTIPLY: 2
+    SVG_FEBLEND_MODE_MULTIPLY // = 2
 
     guarded
-    SVG_FEBLEND_MODE_SCREEN: 3
+    SVG_FEBLEND_MODE_SCREEN // = 3
 
     guarded
-    SVG_FEBLEND_MODE_DARKEN: 4
+    SVG_FEBLEND_MODE_DARKEN // = 4
 
     guarded
-    SVG_FEBLEND_MODE_LIGHTEN: 5
+    SVG_FEBLEND_MODE_LIGHTEN // = 5
 
     guarded
-    SVG_FEBLEND_MODE_OVERLAY: 6
+    SVG_FEBLEND_MODE_OVERLAY // = 6
 
     guarded
-    SVG_FEBLEND_MODE_COLOR_DODGE: 7
+    SVG_FEBLEND_MODE_COLOR_DODGE // = 7
 
     guarded
-    SVG_FEBLEND_MODE_COLOR_BURN: 8
+    SVG_FEBLEND_MODE_COLOR_BURN // = 8
 
     guarded
-    SVG_FEBLEND_MODE_HARD_LIGHT: 9
+    SVG_FEBLEND_MODE_HARD_LIGHT // = 9
 
     guarded
-    SVG_FEBLEND_MODE_SOFT_LIGHT: 10
+    SVG_FEBLEND_MODE_SOFT_LIGHT // = 10
 
     guarded
-    SVG_FEBLEND_MODE_DIFFERENCE: 11
+    SVG_FEBLEND_MODE_DIFFERENCE // = 11
 
     guarded
-    SVG_FEBLEND_MODE_EXCLUSION: 12
+    SVG_FEBLEND_MODE_EXCLUSION // = 12
 
     guarded
-    SVG_FEBLEND_MODE_HUE: 13
+    SVG_FEBLEND_MODE_HUE // = 13
 
     guarded
-    SVG_FEBLEND_MODE_SATURATION: 14
+    SVG_FEBLEND_MODE_SATURATION // = 14
 
     guarded
-    SVG_FEBLEND_MODE_COLOR: 15
+    SVG_FEBLEND_MODE_COLOR // = 15
 
     guarded
-    SVG_FEBLEND_MODE_LUMINOSITY: 16
+    SVG_FEBLEND_MODE_LUMINOSITY // = 16
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEBlendElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16195,55 +16146,55 @@ external
     on create() // : SVGFEBlendElement
 
     guarded
-    SVG_FEBLEND_MODE_UNKNOWN: 0
+    SVG_FEBLEND_MODE_UNKNOWN // = 0
 
     guarded
-    SVG_FEBLEND_MODE_NORMAL: 1
+    SVG_FEBLEND_MODE_NORMAL // = 1
 
     guarded
-    SVG_FEBLEND_MODE_MULTIPLY: 2
+    SVG_FEBLEND_MODE_MULTIPLY // = 2
 
     guarded
-    SVG_FEBLEND_MODE_SCREEN: 3
+    SVG_FEBLEND_MODE_SCREEN // = 3
 
     guarded
-    SVG_FEBLEND_MODE_DARKEN: 4
+    SVG_FEBLEND_MODE_DARKEN // = 4
 
     guarded
-    SVG_FEBLEND_MODE_LIGHTEN: 5
+    SVG_FEBLEND_MODE_LIGHTEN // = 5
 
     guarded
-    SVG_FEBLEND_MODE_OVERLAY: 6
+    SVG_FEBLEND_MODE_OVERLAY // = 6
 
     guarded
-    SVG_FEBLEND_MODE_COLOR_DODGE: 7
+    SVG_FEBLEND_MODE_COLOR_DODGE // = 7
 
     guarded
-    SVG_FEBLEND_MODE_COLOR_BURN: 8
+    SVG_FEBLEND_MODE_COLOR_BURN // = 8
 
     guarded
-    SVG_FEBLEND_MODE_HARD_LIGHT: 9
+    SVG_FEBLEND_MODE_HARD_LIGHT // = 9
 
     guarded
-    SVG_FEBLEND_MODE_SOFT_LIGHT: 10
+    SVG_FEBLEND_MODE_SOFT_LIGHT // = 10
 
     guarded
-    SVG_FEBLEND_MODE_DIFFERENCE: 11
+    SVG_FEBLEND_MODE_DIFFERENCE // = 11
 
     guarded
-    SVG_FEBLEND_MODE_EXCLUSION: 12
+    SVG_FEBLEND_MODE_EXCLUSION // = 12
 
     guarded
-    SVG_FEBLEND_MODE_HUE: 13
+    SVG_FEBLEND_MODE_HUE // = 13
 
     guarded
-    SVG_FEBLEND_MODE_SATURATION: 14
+    SVG_FEBLEND_MODE_SATURATION // = 14
 
     guarded
-    SVG_FEBLEND_MODE_COLOR: 15
+    SVG_FEBLEND_MODE_COLOR // = 15
 
     guarded
-    SVG_FEBLEND_MODE_LUMINOSITY: 16
+    SVG_FEBLEND_MODE_LUMINOSITY // = 16
   }
 
   /**
@@ -16264,19 +16215,19 @@ external
     values: SVGAnimatedNumberList
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_UNKNOWN: 0
+    SVG_FECOLORMATRIX_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_MATRIX: 1
+    SVG_FECOLORMATRIX_TYPE_MATRIX // = 1
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_SATURATE: 2
+    SVG_FECOLORMATRIX_TYPE_SATURATE // = 2
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_HUEROTATE: 3
+    SVG_FECOLORMATRIX_TYPE_HUEROTATE // = 3
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA: 4
+    SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA // = 4
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEColorMatrixElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16291,19 +16242,19 @@ external
     on create() // : SVGFEColorMatrixElement
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_UNKNOWN: 0
+    SVG_FECOLORMATRIX_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_MATRIX: 1
+    SVG_FECOLORMATRIX_TYPE_MATRIX // = 1
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_SATURATE: 2
+    SVG_FECOLORMATRIX_TYPE_SATURATE // = 2
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_HUEROTATE: 3
+    SVG_FECOLORMATRIX_TYPE_HUEROTATE // = 3
 
     guarded
-    SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA: 4
+    SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA // = 4
   }
 
   /**
@@ -16360,25 +16311,25 @@ external
     operator: SVGAnimatedEnumeration
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_UNKNOWN: 0
+    SVG_FECOMPOSITE_OPERATOR_UNKNOWN // = 0
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_OVER: 1
+    SVG_FECOMPOSITE_OPERATOR_OVER // = 1
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_IN: 2
+    SVG_FECOMPOSITE_OPERATOR_IN // = 2
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_OUT: 3
+    SVG_FECOMPOSITE_OPERATOR_OUT // = 3
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_ATOP: 4
+    SVG_FECOMPOSITE_OPERATOR_ATOP // = 4
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_XOR: 5
+    SVG_FECOMPOSITE_OPERATOR_XOR // = 5
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: 6
+    SVG_FECOMPOSITE_OPERATOR_ARITHMETIC // = 6
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFECompositeElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16393,25 +16344,25 @@ external
     on create() // : SVGFECompositeElement
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_UNKNOWN: 0
+    SVG_FECOMPOSITE_OPERATOR_UNKNOWN // = 0
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_OVER: 1
+    SVG_FECOMPOSITE_OPERATOR_OVER // = 1
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_IN: 2
+    SVG_FECOMPOSITE_OPERATOR_IN // = 2
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_OUT: 3
+    SVG_FECOMPOSITE_OPERATOR_OUT // = 3
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_ATOP: 4
+    SVG_FECOMPOSITE_OPERATOR_ATOP // = 4
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_XOR: 5
+    SVG_FECOMPOSITE_OPERATOR_XOR // = 5
 
     guarded
-    SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: 6
+    SVG_FECOMPOSITE_OPERATOR_ARITHMETIC // = 6
   }
 
   /**
@@ -16459,16 +16410,16 @@ external
     targetY: SVGAnimatedInteger
 
     guarded
-    SVG_EDGEMODE_UNKNOWN: 0
+    SVG_EDGEMODE_UNKNOWN // = 0
 
     guarded
-    SVG_EDGEMODE_DUPLICATE: 1
+    SVG_EDGEMODE_DUPLICATE // = 1
 
     guarded
-    SVG_EDGEMODE_WRAP: 2
+    SVG_EDGEMODE_WRAP // = 2
 
     guarded
-    SVG_EDGEMODE_NONE: 3
+    SVG_EDGEMODE_NONE // = 3
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEConvolveMatrixElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16483,16 +16434,16 @@ external
     on create() // : SVGFEConvolveMatrixElement
 
     guarded
-    SVG_EDGEMODE_UNKNOWN: 0
+    SVG_EDGEMODE_UNKNOWN // = 0
 
     guarded
-    SVG_EDGEMODE_DUPLICATE: 1
+    SVG_EDGEMODE_DUPLICATE // = 1
 
     guarded
-    SVG_EDGEMODE_WRAP: 2
+    SVG_EDGEMODE_WRAP // = 2
 
     guarded
-    SVG_EDGEMODE_NONE: 3
+    SVG_EDGEMODE_NONE // = 3
   }
 
   /**
@@ -16555,19 +16506,19 @@ external
     yChannelSelector: SVGAnimatedEnumeration
 
     guarded
-    SVG_CHANNEL_UNKNOWN: 0
+    SVG_CHANNEL_UNKNOWN // = 0
 
     guarded
-    SVG_CHANNEL_R: 1
+    SVG_CHANNEL_R // = 1
 
     guarded
-    SVG_CHANNEL_G: 2
+    SVG_CHANNEL_G // = 2
 
     guarded
-    SVG_CHANNEL_B: 3
+    SVG_CHANNEL_B // = 3
 
     guarded
-    SVG_CHANNEL_A: 4
+    SVG_CHANNEL_A // = 4
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEDisplacementMapElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16582,19 +16533,19 @@ external
     on create() // : SVGFEDisplacementMapElement
 
     guarded
-    SVG_CHANNEL_UNKNOWN: 0
+    SVG_CHANNEL_UNKNOWN // = 0
 
     guarded
-    SVG_CHANNEL_R: 1
+    SVG_CHANNEL_R // = 1
 
     guarded
-    SVG_CHANNEL_G: 2
+    SVG_CHANNEL_G // = 2
 
     guarded
-    SVG_CHANNEL_B: 3
+    SVG_CHANNEL_B // = 3
 
     guarded
-    SVG_CHANNEL_A: 4
+    SVG_CHANNEL_A // = 4
   }
 
   /**
@@ -16885,13 +16836,13 @@ external
     radiusY: SVGAnimatedNumber
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_UNKNOWN: 0
+    SVG_MORPHOLOGY_OPERATOR_UNKNOWN // = 0
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_ERODE: 1
+    SVG_MORPHOLOGY_OPERATOR_ERODE // = 1
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_DILATE: 2
+    SVG_MORPHOLOGY_OPERATOR_DILATE // = 2
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEMorphologyElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -16906,13 +16857,13 @@ external
     on create() // : SVGFEMorphologyElement
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_UNKNOWN: 0
+    SVG_MORPHOLOGY_OPERATOR_UNKNOWN // = 0
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_ERODE: 1
+    SVG_MORPHOLOGY_OPERATOR_ERODE // = 1
 
     guarded
-    SVG_MORPHOLOGY_OPERATOR_DILATE: 2
+    SVG_MORPHOLOGY_OPERATOR_DILATE // = 2
   }
 
   /**
@@ -17110,22 +17061,22 @@ external
     type`: SVGAnimatedEnumeration
 
     guarded
-    SVG_TURBULENCE_TYPE_UNKNOWN: 0
+    SVG_TURBULENCE_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_TURBULENCE_TYPE_FRACTALNOISE: 1
+    SVG_TURBULENCE_TYPE_FRACTALNOISE // = 1
 
     guarded
-    SVG_TURBULENCE_TYPE_TURBULENCE: 2
+    SVG_TURBULENCE_TYPE_TURBULENCE // = 2
 
     guarded
-    SVG_STITCHTYPE_UNKNOWN: 0
+    SVG_STITCHTYPE_UNKNOWN // = 0
 
     guarded
-    SVG_STITCHTYPE_STITCH: 1
+    SVG_STITCHTYPE_STITCH // = 1
 
     guarded
-    SVG_STITCHTYPE_NOSTITCH: 2
+    SVG_STITCHTYPE_NOSTITCH // = 2
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFETurbulenceElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -17140,22 +17091,22 @@ external
     on create() // : SVGFETurbulenceElement
 
     guarded
-    SVG_TURBULENCE_TYPE_UNKNOWN: 0
+    SVG_TURBULENCE_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_TURBULENCE_TYPE_FRACTALNOISE: 1
+    SVG_TURBULENCE_TYPE_FRACTALNOISE // = 1
 
     guarded
-    SVG_TURBULENCE_TYPE_TURBULENCE: 2
+    SVG_TURBULENCE_TYPE_TURBULENCE // = 2
 
     guarded
-    SVG_STITCHTYPE_UNKNOWN: 0
+    SVG_STITCHTYPE_UNKNOWN // = 0
 
     guarded
-    SVG_STITCHTYPE_STITCH: 1
+    SVG_STITCHTYPE_STITCH // = 1
 
     guarded
-    SVG_STITCHTYPE_NOSTITCH: 2
+    SVG_STITCHTYPE_NOSTITCH // = 2
   }
 
   /**
@@ -17326,16 +17277,16 @@ external
     spreadMethod: SVGAnimatedEnumeration
 
     guarded
-    SVG_SPREADMETHOD_UNKNOWN: 0
+    SVG_SPREADMETHOD_UNKNOWN // = 0
 
     guarded
-    SVG_SPREADMETHOD_PAD: 1
+    SVG_SPREADMETHOD_PAD // = 1
 
     guarded
-    SVG_SPREADMETHOD_REFLECT: 2
+    SVG_SPREADMETHOD_REFLECT // = 2
 
     guarded
-    SVG_SPREADMETHOD_REPEAT: 3
+    SVG_SPREADMETHOD_REPEAT // = 3
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGGradientElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -17350,16 +17301,16 @@ external
     on create() // : SVGGradientElement
 
     guarded
-    SVG_SPREADMETHOD_UNKNOWN: 0
+    SVG_SPREADMETHOD_UNKNOWN // = 0
 
     guarded
-    SVG_SPREADMETHOD_PAD: 1
+    SVG_SPREADMETHOD_PAD // = 1
 
     guarded
-    SVG_SPREADMETHOD_REFLECT: 2
+    SVG_SPREADMETHOD_REFLECT // = 2
 
     guarded
-    SVG_SPREADMETHOD_REPEAT: 3
+    SVG_SPREADMETHOD_REPEAT // = 3
   }
 
   /**
@@ -17450,74 +17401,74 @@ external
     operation newValueSpecifiedUnits(unitType: Number, valueInSpecifiedUnits: Number)
 
     guarded
-    SVG_LENGTHTYPE_UNKNOWN: 0
+    SVG_LENGTHTYPE_UNKNOWN // = 0
 
     guarded
-    SVG_LENGTHTYPE_NUMBER: 1
+    SVG_LENGTHTYPE_NUMBER // = 1
 
     guarded
-    SVG_LENGTHTYPE_PERCENTAGE: 2
+    SVG_LENGTHTYPE_PERCENTAGE // = 2
 
     guarded
-    SVG_LENGTHTYPE_EMS: 3
+    SVG_LENGTHTYPE_EMS // = 3
 
     guarded
-    SVG_LENGTHTYPE_EXS: 4
+    SVG_LENGTHTYPE_EXS // = 4
 
     guarded
-    SVG_LENGTHTYPE_PX: 5
+    SVG_LENGTHTYPE_PX // = 5
 
     guarded
-    SVG_LENGTHTYPE_CM: 6
+    SVG_LENGTHTYPE_CM // = 6
 
     guarded
-    SVG_LENGTHTYPE_MM: 7
+    SVG_LENGTHTYPE_MM // = 7
 
     guarded
-    SVG_LENGTHTYPE_IN: 8
+    SVG_LENGTHTYPE_IN // = 8
 
     guarded
-    SVG_LENGTHTYPE_PT: 9
+    SVG_LENGTHTYPE_PT // = 9
 
     guarded
-    SVG_LENGTHTYPE_PC: 10
+    SVG_LENGTHTYPE_PC // = 10
 
     prototype: SVGLength
 
     on create() // : SVGLength
 
     guarded
-    SVG_LENGTHTYPE_UNKNOWN: 0
+    SVG_LENGTHTYPE_UNKNOWN // = 0
 
     guarded
-    SVG_LENGTHTYPE_NUMBER: 1
+    SVG_LENGTHTYPE_NUMBER // = 1
 
     guarded
-    SVG_LENGTHTYPE_PERCENTAGE: 2
+    SVG_LENGTHTYPE_PERCENTAGE // = 2
 
     guarded
-    SVG_LENGTHTYPE_EMS: 3
+    SVG_LENGTHTYPE_EMS // = 3
 
     guarded
-    SVG_LENGTHTYPE_EXS: 4
+    SVG_LENGTHTYPE_EXS // = 4
 
     guarded
-    SVG_LENGTHTYPE_PX: 5
+    SVG_LENGTHTYPE_PX // = 5
 
     guarded
-    SVG_LENGTHTYPE_CM: 6
+    SVG_LENGTHTYPE_CM // = 6
 
     guarded
-    SVG_LENGTHTYPE_MM: 7
+    SVG_LENGTHTYPE_MM // = 7
 
     guarded
-    SVG_LENGTHTYPE_IN: 8
+    SVG_LENGTHTYPE_IN // = 8
 
     guarded
-    SVG_LENGTHTYPE_PT: 9
+    SVG_LENGTHTYPE_PT // = 9
 
     guarded
-    SVG_LENGTHTYPE_PC: 10
+    SVG_LENGTHTYPE_PC // = 10
   }
 
   /**
@@ -17668,22 +17619,22 @@ external
     operation setOrientToAuto()
 
     guarded
-    SVG_MARKERUNITS_UNKNOWN: 0
+    SVG_MARKERUNITS_UNKNOWN // = 0
 
     guarded
-    SVG_MARKERUNITS_USERSPACEONUSE: 1
+    SVG_MARKERUNITS_USERSPACEONUSE // = 1
 
     guarded
-    SVG_MARKERUNITS_STROKEWIDTH: 2
+    SVG_MARKERUNITS_STROKEWIDTH // = 2
 
     guarded
-    SVG_MARKER_ORIENT_UNKNOWN: 0
+    SVG_MARKER_ORIENT_UNKNOWN // = 0
 
     guarded
-    SVG_MARKER_ORIENT_AUTO: 1
+    SVG_MARKER_ORIENT_AUTO // = 1
 
     guarded
-    SVG_MARKER_ORIENT_ANGLE: 2
+    SVG_MARKER_ORIENT_ANGLE // = 2
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGMarkerElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -17698,22 +17649,22 @@ external
     on create() // : SVGMarkerElement
 
     guarded
-    SVG_MARKERUNITS_UNKNOWN: 0
+    SVG_MARKERUNITS_UNKNOWN // = 0
 
     guarded
-    SVG_MARKERUNITS_USERSPACEONUSE: 1
+    SVG_MARKERUNITS_USERSPACEONUSE // = 1
 
     guarded
-    SVG_MARKERUNITS_STROKEWIDTH: 2
+    SVG_MARKERUNITS_STROKEWIDTH // = 2
 
     guarded
-    SVG_MARKER_ORIENT_UNKNOWN: 0
+    SVG_MARKER_ORIENT_UNKNOWN // = 0
 
     guarded
-    SVG_MARKER_ORIENT_AUTO: 1
+    SVG_MARKER_ORIENT_AUTO // = 1
 
     guarded
-    SVG_MARKER_ORIENT_ANGLE: 2
+    SVG_MARKER_ORIENT_ANGLE // = 2
   }
 
   /**
@@ -17975,92 +17926,92 @@ external
     meetOrSlice: Number
 
     guarded
-    SVG_PRESERVEASPECTRATIO_UNKNOWN: 0
+    SVG_PRESERVEASPECTRATIO_UNKNOWN // = 0
 
     guarded
-    SVG_PRESERVEASPECTRATIO_NONE: 1
+    SVG_PRESERVEASPECTRATIO_NONE // = 1
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMIN: 2
+    SVG_PRESERVEASPECTRATIO_XMINYMIN // = 2
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMIN: 3
+    SVG_PRESERVEASPECTRATIO_XMIDYMIN // = 3
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMIN: 4
+    SVG_PRESERVEASPECTRATIO_XMAXYMIN // = 4
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMID: 5
+    SVG_PRESERVEASPECTRATIO_XMINYMID // = 5
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMID: 6
+    SVG_PRESERVEASPECTRATIO_XMIDYMID // = 6
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMID: 7
+    SVG_PRESERVEASPECTRATIO_XMAXYMID // = 7
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMAX: 8
+    SVG_PRESERVEASPECTRATIO_XMINYMAX // = 8
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMAX: 9
+    SVG_PRESERVEASPECTRATIO_XMIDYMAX // = 9
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMAX: 10
+    SVG_PRESERVEASPECTRATIO_XMAXYMAX // = 10
 
     guarded
-    SVG_MEETORSLICE_UNKNOWN: 0
+    SVG_MEETORSLICE_UNKNOWN // = 0
 
     guarded
-    SVG_MEETORSLICE_MEET: 1
+    SVG_MEETORSLICE_MEET // = 1
 
     guarded
-    SVG_MEETORSLICE_SLICE: 2
+    SVG_MEETORSLICE_SLICE // = 2
 
     prototype: SVGPreserveAspectRatio
 
     on create() // : SVGPreserveAspectRatio
 
     guarded
-    SVG_PRESERVEASPECTRATIO_UNKNOWN: 0
+    SVG_PRESERVEASPECTRATIO_UNKNOWN // = 0
 
     guarded
-    SVG_PRESERVEASPECTRATIO_NONE: 1
+    SVG_PRESERVEASPECTRATIO_NONE // = 1
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMIN: 2
+    SVG_PRESERVEASPECTRATIO_XMINYMIN // = 2
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMIN: 3
+    SVG_PRESERVEASPECTRATIO_XMIDYMIN // = 3
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMIN: 4
+    SVG_PRESERVEASPECTRATIO_XMAXYMIN // = 4
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMID: 5
+    SVG_PRESERVEASPECTRATIO_XMINYMID // = 5
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMID: 6
+    SVG_PRESERVEASPECTRATIO_XMIDYMID // = 6
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMID: 7
+    SVG_PRESERVEASPECTRATIO_XMAXYMID // = 7
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMINYMAX: 8
+    SVG_PRESERVEASPECTRATIO_XMINYMAX // = 8
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMIDYMAX: 9
+    SVG_PRESERVEASPECTRATIO_XMIDYMAX // = 9
 
     guarded
-    SVG_PRESERVEASPECTRATIO_XMAXYMAX: 10
+    SVG_PRESERVEASPECTRATIO_XMAXYMAX // = 10
 
     guarded
-    SVG_MEETORSLICE_UNKNOWN: 0
+    SVG_MEETORSLICE_UNKNOWN // = 0
 
     guarded
-    SVG_MEETORSLICE_MEET: 1
+    SVG_MEETORSLICE_MEET // = 1
 
     guarded
-    SVG_MEETORSLICE_SLICE: 2
+    SVG_MEETORSLICE_SLICE // = 2
   }
 
   /**
@@ -18449,13 +18400,13 @@ external
     operation getSubStringLength(charnum: Number, nchars: Number): Number
 
     guarded
-    LENGTHADJUST_UNKNOWN: 0
+    LENGTHADJUST_UNKNOWN // = 0
 
     guarded
-    LENGTHADJUST_SPACING: 1
+    LENGTHADJUST_SPACING // = 1
 
     guarded
-    LENGTHADJUST_SPACINGANDGLYPHS: 2
+    LENGTHADJUST_SPACINGANDGLYPHS // = 2
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextContentElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -18470,13 +18421,13 @@ external
     on create() // : SVGTextContentElement
 
     guarded
-    LENGTHADJUST_UNKNOWN: 0
+    LENGTHADJUST_UNKNOWN // = 0
 
     guarded
-    LENGTHADJUST_SPACING: 1
+    LENGTHADJUST_SPACING // = 1
 
     guarded
-    LENGTHADJUST_SPACINGANDGLYPHS: 2
+    LENGTHADJUST_SPACINGANDGLYPHS // = 2
   }
 
   /**
@@ -18518,22 +18469,22 @@ external
     startOffset: SVGAnimatedLength
 
     guarded
-    TEXTPATH_METHODTYPE_UNKNOWN: 0
+    TEXTPATH_METHODTYPE_UNKNOWN // = 0
 
     guarded
-    TEXTPATH_METHODTYPE_ALIGN: 1
+    TEXTPATH_METHODTYPE_ALIGN // = 1
 
     guarded
-    TEXTPATH_METHODTYPE_STRETCH: 2
+    TEXTPATH_METHODTYPE_STRETCH // = 2
 
     guarded
-    TEXTPATH_SPACINGTYPE_UNKNOWN: 0
+    TEXTPATH_SPACINGTYPE_UNKNOWN // = 0
 
     guarded
-    TEXTPATH_SPACINGTYPE_AUTO: 1
+    TEXTPATH_SPACINGTYPE_AUTO // = 1
 
     guarded
-    TEXTPATH_SPACINGTYPE_EXACT: 2
+    TEXTPATH_SPACINGTYPE_EXACT // = 2
 
     operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextPathElement, ev: /*(!) SVGElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -18548,22 +18499,22 @@ external
     on create() // : SVGTextPathElement
 
     guarded
-    TEXTPATH_METHODTYPE_UNKNOWN: 0
+    TEXTPATH_METHODTYPE_UNKNOWN // = 0
 
     guarded
-    TEXTPATH_METHODTYPE_ALIGN: 1
+    TEXTPATH_METHODTYPE_ALIGN // = 1
 
     guarded
-    TEXTPATH_METHODTYPE_STRETCH: 2
+    TEXTPATH_METHODTYPE_STRETCH // = 2
 
     guarded
-    TEXTPATH_SPACINGTYPE_UNKNOWN: 0
+    TEXTPATH_SPACINGTYPE_UNKNOWN // = 0
 
     guarded
-    TEXTPATH_SPACINGTYPE_AUTO: 1
+    TEXTPATH_SPACINGTYPE_AUTO // = 1
 
     guarded
-    TEXTPATH_SPACINGTYPE_EXACT: 2
+    TEXTPATH_SPACINGTYPE_EXACT // = 2
   }
 
   /**
@@ -18653,50 +18604,50 @@ external
     operation setTranslate(tx: Number, ty: Number)
 
     guarded
-    SVG_TRANSFORM_UNKNOWN: 0
+    SVG_TRANSFORM_UNKNOWN // = 0
 
     guarded
-    SVG_TRANSFORM_MATRIX: 1
+    SVG_TRANSFORM_MATRIX // = 1
 
     guarded
-    SVG_TRANSFORM_TRANSLATE: 2
+    SVG_TRANSFORM_TRANSLATE // = 2
 
     guarded
-    SVG_TRANSFORM_SCALE: 3
+    SVG_TRANSFORM_SCALE // = 3
 
     guarded
-    SVG_TRANSFORM_ROTATE: 4
+    SVG_TRANSFORM_ROTATE // = 4
 
     guarded
-    SVG_TRANSFORM_SKEWX: 5
+    SVG_TRANSFORM_SKEWX // = 5
 
     guarded
-    SVG_TRANSFORM_SKEWY: 6
+    SVG_TRANSFORM_SKEWY // = 6
 
     prototype: SVGTransform
 
     on create() // : SVGTransform
 
     guarded
-    SVG_TRANSFORM_UNKNOWN: 0
+    SVG_TRANSFORM_UNKNOWN // = 0
 
     guarded
-    SVG_TRANSFORM_MATRIX: 1
+    SVG_TRANSFORM_MATRIX // = 1
 
     guarded
-    SVG_TRANSFORM_TRANSLATE: 2
+    SVG_TRANSFORM_TRANSLATE // = 2
 
     guarded
-    SVG_TRANSFORM_SCALE: 3
+    SVG_TRANSFORM_SCALE // = 3
 
     guarded
-    SVG_TRANSFORM_ROTATE: 4
+    SVG_TRANSFORM_ROTATE // = 4
 
     guarded
-    SVG_TRANSFORM_SKEWX: 5
+    SVG_TRANSFORM_SKEWX // = 5
 
     guarded
-    SVG_TRANSFORM_SKEWY: 6
+    SVG_TRANSFORM_SKEWY // = 6
   }
 
   /**
@@ -18754,26 +18705,26 @@ external
   type SVGUnitTypes = object
   {
     guarded
-    SVG_UNIT_TYPE_UNKNOWN: 0
+    SVG_UNIT_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_UNIT_TYPE_USERSPACEONUSE: 1
+    SVG_UNIT_TYPE_USERSPACEONUSE // = 1
 
     guarded
-    SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: 2
+    SVG_UNIT_TYPE_OBJECTBOUNDINGBOX // = 2
 
     prototype: SVGUnitTypes
 
     on create() // : SVGUnitTypes
 
     guarded
-    SVG_UNIT_TYPE_UNKNOWN: 0
+    SVG_UNIT_TYPE_UNKNOWN // = 0
 
     guarded
-    SVG_UNIT_TYPE_USERSPACEONUSE: 1
+    SVG_UNIT_TYPE_USERSPACEONUSE // = 1
 
     guarded
-    SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: 2
+    SVG_UNIT_TYPE_OBJECTBOUNDINGBOX // = 2
   }
 
   /**
@@ -20801,16 +20752,11 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/WEBGL_color_buffer_float) */
 
-  type WEBGL_color_buffer_float = aspect
+  type WEBGL_color_buffer_float = variant
   {
-    guarded 
-    RGBA32F_EXT: 0x8814
-
-    guarded 
-    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT: 0x8211
-
-    guarded 
-    UNSIGNED_NORMALIZED_EXT: 0x8C17
+    RGBA32F_EXT = 0x8814
+    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT = 0x8211
+    UNSIGNED_NORMALIZED_EXT = 0x8C17
   }
 
 
@@ -20821,88 +20767,88 @@ external
     operation getSupportedProfiles(): Список<Text>
 
     guarded 
-    COMPRESSED_RGBA_ASTC_4x4_KHR: 0x93B0
+    COMPRESSED_RGBA_ASTC_4x4_KHR // = 0x93B0
 
     guarded 
-    COMPRESSED_RGBA_ASTC_5x4_KHR: 0x93B1
+    COMPRESSED_RGBA_ASTC_5x4_KHR // = 0x93B1
 
     guarded 
-    COMPRESSED_RGBA_ASTC_5x5_KHR: 0x93B2
+    COMPRESSED_RGBA_ASTC_5x5_KHR // = 0x93B2
 
     guarded 
-    COMPRESSED_RGBA_ASTC_6x5_KHR: 0x93B3
+    COMPRESSED_RGBA_ASTC_6x5_KHR // = 0x93B3
 
     guarded 
-    COMPRESSED_RGBA_ASTC_6x6_KHR: 0x93B4
+    COMPRESSED_RGBA_ASTC_6x6_KHR // = 0x93B4
 
     guarded 
-    COMPRESSED_RGBA_ASTC_8x5_KHR: 0x93B5
+    COMPRESSED_RGBA_ASTC_8x5_KHR // = 0x93B5
 
     guarded 
-    COMPRESSED_RGBA_ASTC_8x6_KHR: 0x93B6
+    COMPRESSED_RGBA_ASTC_8x6_KHR // = 0x93B6
 
     guarded 
-    COMPRESSED_RGBA_ASTC_8x8_KHR: 0x93B7
+    COMPRESSED_RGBA_ASTC_8x8_KHR // = 0x93B7
 
     guarded 
-    COMPRESSED_RGBA_ASTC_10x5_KHR: 0x93B8
+    COMPRESSED_RGBA_ASTC_10x5_KHR // = 0x93B8
 
     guarded 
-    COMPRESSED_RGBA_ASTC_10x6_KHR: 0x93B9
+    COMPRESSED_RGBA_ASTC_10x6_KHR // = 0x93B9
 
     guarded 
-    COMPRESSED_RGBA_ASTC_10x8_KHR: 0x93BA
+    COMPRESSED_RGBA_ASTC_10x8_KHR // = 0x93BA
 
     guarded 
-    COMPRESSED_RGBA_ASTC_10x10_KHR: 0x93BB
+    COMPRESSED_RGBA_ASTC_10x10_KHR // = 0x93BB
 
     guarded 
-    COMPRESSED_RGBA_ASTC_12x10_KHR: 0x93BC
+    COMPRESSED_RGBA_ASTC_12x10_KHR // = 0x93BC
 
     guarded 
-    COMPRESSED_RGBA_ASTC_12x12_KHR: 0x93BD
+    COMPRESSED_RGBA_ASTC_12x12_KHR // = 0x93BD
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR: 0x93D0
+    COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR // = 0x93D0
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR: 0x93D1
+    COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR // = 0x93D1
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR: 0x93D2
+    COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR // = 0x93D2
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR: 0x93D3
+    COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR // = 0x93D3
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR: 0x93D4
+    COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR // = 0x93D4
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR: 0x93D5
+    COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR // = 0x93D5
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR: 0x93D6
+    COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR // = 0x93D6
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR: 0x93D7
+    COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR // = 0x93D7
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR: 0x93D8
+    COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR // = 0x93D8
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR: 0x93D9
+    COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR // = 0x93D9
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR: 0x93DA
+    COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR // = 0x93DA
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR: 0x93DB
+    COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR // = 0x93DB
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR: 0x93DC
+    COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR // = 0x93DC
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR: 0x93DD
+    COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR // = 0x93DD
   }
 
 
@@ -20911,34 +20857,34 @@ external
   type WEBGL_compressed_texture_etc = aspect
   {
     guarded 
-    COMPRESSED_R11_EAC: 0x9270
+    COMPRESSED_R11_EAC // = 0x9270
 
     guarded 
-    COMPRESSED_SIGNED_R11_EAC: 0x9271
+    COMPRESSED_SIGNED_R11_EAC // = 0x9271
 
     guarded 
-    COMPRESSED_RG11_EAC: 0x9272
+    COMPRESSED_RG11_EAC // = 0x9272
 
     guarded 
-    COMPRESSED_SIGNED_RG11_EAC: 0x9273
+    COMPRESSED_SIGNED_RG11_EAC // = 0x9273
 
     guarded 
-    COMPRESSED_RGB8_ETC2: 0x9274
+    COMPRESSED_RGB8_ETC2 // = 0x9274
 
     guarded 
-    COMPRESSED_SRGB8_ETC2: 0x9275
+    COMPRESSED_SRGB8_ETC2 // = 0x9275
 
     guarded 
-    COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2: 0x9276
+    COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 // = 0x9276
 
     guarded 
-    COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2: 0x9277
+    COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 // = 0x9277
 
     guarded 
-    COMPRESSED_RGBA8_ETC2_EAC: 0x9278
+    COMPRESSED_RGBA8_ETC2_EAC // = 0x9278
 
     guarded 
-    COMPRESSED_SRGB8_ALPHA8_ETC2_EAC: 0x9279
+    COMPRESSED_SRGB8_ALPHA8_ETC2_EAC // = 0x9279
   }
 
 
@@ -20947,7 +20893,7 @@ external
   type WEBGL_compressed_texture_etc1 = aspect
   {
     guarded 
-    COMPRESSED_RGB_ETC1_WEBGL: 0x8D64
+    COMPRESSED_RGB_ETC1_WEBGL // = 0x8D64
   }
 
 
@@ -20956,16 +20902,16 @@ external
   type WEBGL_compressed_texture_pvrtc = aspect
   {
     guarded 
-    COMPRESSED_RGB_PVRTC_4BPPV1_IMG: 0x8C00
+    COMPRESSED_RGB_PVRTC_4BPPV1_IMG // = 0x8C00
 
     guarded 
-    COMPRESSED_RGB_PVRTC_2BPPV1_IMG: 0x8C01
+    COMPRESSED_RGB_PVRTC_2BPPV1_IMG // = 0x8C01
 
     guarded 
-    COMPRESSED_RGBA_PVRTC_4BPPV1_IMG: 0x8C02
+    COMPRESSED_RGBA_PVRTC_4BPPV1_IMG // = 0x8C02
 
     guarded 
-    COMPRESSED_RGBA_PVRTC_2BPPV1_IMG: 0x8C03
+    COMPRESSED_RGBA_PVRTC_2BPPV1_IMG // = 0x8C03
   }
 
 
@@ -20978,16 +20924,16 @@ external
   type WEBGL_compressed_texture_s3tc = aspect
   {
     guarded 
-    COMPRESSED_RGB_S3TC_DXT1_EXT: 0x83F0
+    COMPRESSED_RGB_S3TC_DXT1_EXT // = 0x83F0
 
     guarded 
-    COMPRESSED_RGBA_S3TC_DXT1_EXT: 0x83F1
+    COMPRESSED_RGBA_S3TC_DXT1_EXT // = 0x83F1
 
     guarded 
-    COMPRESSED_RGBA_S3TC_DXT3_EXT: 0x83F2
+    COMPRESSED_RGBA_S3TC_DXT3_EXT // = 0x83F2
 
     guarded 
-    COMPRESSED_RGBA_S3TC_DXT5_EXT: 0x83F3
+    COMPRESSED_RGBA_S3TC_DXT5_EXT // = 0x83F3
   }
 
 
@@ -20996,16 +20942,16 @@ external
   type WEBGL_compressed_texture_s3tc_srgb = aspect
   {
     guarded 
-    COMPRESSED_SRGB_S3TC_DXT1_EXT: 0x8C4C
+    COMPRESSED_SRGB_S3TC_DXT1_EXT // = 0x8C4C
 
     guarded 
-    COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT: 0x8C4D
+    COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT // = 0x8C4D
 
     guarded 
-    COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT: 0x8C4E
+    COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT // = 0x8C4E
 
     guarded 
-    COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT: 0x8C4F
+    COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT // = 0x8C4F
   }
 
 
@@ -21018,10 +20964,10 @@ external
   type WEBGL_debug_renderer_info = aspect
   {
     guarded 
-    UNMASKED_VENDOR_WEBGL: 0x9245
+    UNMASKED_VENDOR_WEBGL // = 0x9245
 
     guarded 
-    UNMASKED_RENDERER_WEBGL: 0x9246
+    UNMASKED_RENDERER_WEBGL // = 0x9246
   }
 
 
@@ -21053,106 +20999,106 @@ external
     operation drawBuffersWEBGL(buffers: Список<GLenum>)
 
     guarded 
-    COLOR_ATTACHMENT0_WEBGL: 0x8CE0
+    COLOR_ATTACHMENT0_WEBGL // = 0x8CE0
 
     guarded 
-    COLOR_ATTACHMENT1_WEBGL: 0x8CE1
+    COLOR_ATTACHMENT1_WEBGL // = 0x8CE1
 
     guarded 
-    COLOR_ATTACHMENT2_WEBGL: 0x8CE2
+    COLOR_ATTACHMENT2_WEBGL // = 0x8CE2
 
     guarded 
-    COLOR_ATTACHMENT3_WEBGL: 0x8CE3
+    COLOR_ATTACHMENT3_WEBGL // = 0x8CE3
 
     guarded 
-    COLOR_ATTACHMENT4_WEBGL: 0x8CE4
+    COLOR_ATTACHMENT4_WEBGL // = 0x8CE4
 
     guarded 
-    COLOR_ATTACHMENT5_WEBGL: 0x8CE5
+    COLOR_ATTACHMENT5_WEBGL // = 0x8CE5
 
     guarded 
-    COLOR_ATTACHMENT6_WEBGL: 0x8CE6
+    COLOR_ATTACHMENT6_WEBGL // = 0x8CE6
 
     guarded 
-    COLOR_ATTACHMENT7_WEBGL: 0x8CE7
+    COLOR_ATTACHMENT7_WEBGL // = 0x8CE7
 
     guarded 
-    COLOR_ATTACHMENT8_WEBGL: 0x8CE8
+    COLOR_ATTACHMENT8_WEBGL // = 0x8CE8
 
     guarded 
-    COLOR_ATTACHMENT9_WEBGL: 0x8CE9
+    COLOR_ATTACHMENT9_WEBGL // = 0x8CE9
 
     guarded 
-    COLOR_ATTACHMENT10_WEBGL: 0x8CEA
+    COLOR_ATTACHMENT10_WEBGL // = 0x8CEA
 
     guarded 
-    COLOR_ATTACHMENT11_WEBGL: 0x8CEB
+    COLOR_ATTACHMENT11_WEBGL // = 0x8CEB
 
     guarded 
-    COLOR_ATTACHMENT12_WEBGL: 0x8CEC
+    COLOR_ATTACHMENT12_WEBGL // = 0x8CEC
 
     guarded 
-    COLOR_ATTACHMENT13_WEBGL: 0x8CED
+    COLOR_ATTACHMENT13_WEBGL // = 0x8CED
 
     guarded 
-    COLOR_ATTACHMENT14_WEBGL: 0x8CEE
+    COLOR_ATTACHMENT14_WEBGL // = 0x8CEE
 
     guarded 
-    COLOR_ATTACHMENT15_WEBGL: 0x8CEF
+    COLOR_ATTACHMENT15_WEBGL // = 0x8CEF
 
     guarded 
-    DRAW_BUFFER0_WEBGL: 0x8825
+    DRAW_BUFFER0_WEBGL // = 0x8825
 
     guarded 
-    DRAW_BUFFER1_WEBGL: 0x8826
+    DRAW_BUFFER1_WEBGL // = 0x8826
 
     guarded 
-    DRAW_BUFFER2_WEBGL: 0x8827
+    DRAW_BUFFER2_WEBGL // = 0x8827
 
     guarded 
-    DRAW_BUFFER3_WEBGL: 0x8828
+    DRAW_BUFFER3_WEBGL // = 0x8828
 
     guarded 
-    DRAW_BUFFER4_WEBGL: 0x8829
+    DRAW_BUFFER4_WEBGL // = 0x8829
 
     guarded 
-    DRAW_BUFFER5_WEBGL: 0x882A
+    DRAW_BUFFER5_WEBGL // = 0x882A
 
     guarded 
-    DRAW_BUFFER6_WEBGL: 0x882B
+    DRAW_BUFFER6_WEBGL // = 0x882B
 
     guarded 
-    DRAW_BUFFER7_WEBGL: 0x882C
+    DRAW_BUFFER7_WEBGL // = 0x882C
 
     guarded 
-    DRAW_BUFFER8_WEBGL: 0x882D
+    DRAW_BUFFER8_WEBGL // = 0x882D
 
     guarded 
-    DRAW_BUFFER9_WEBGL: 0x882E
+    DRAW_BUFFER9_WEBGL // = 0x882E
 
     guarded 
-    DRAW_BUFFER10_WEBGL: 0x882F
+    DRAW_BUFFER10_WEBGL // = 0x882F
 
     guarded 
-    DRAW_BUFFER11_WEBGL: 0x8830
+    DRAW_BUFFER11_WEBGL // = 0x8830
 
     guarded 
-    DRAW_BUFFER12_WEBGL: 0x8831
+    DRAW_BUFFER12_WEBGL // = 0x8831
 
     guarded 
-    DRAW_BUFFER13_WEBGL: 0x8832
+    DRAW_BUFFER13_WEBGL // = 0x8832
 
     guarded 
-    DRAW_BUFFER14_WEBGL: 0x8833
+    DRAW_BUFFER14_WEBGL // = 0x8833
 
     guarded 
-    DRAW_BUFFER15_WEBGL: 0x8834
+    DRAW_BUFFER15_WEBGL // = 0x8834
 
     guarded 
-    MAX_COLOR_ATTACHMENTS_WEBGL: 0x8CDF
+    MAX_COLOR_ATTACHMENTS_WEBGL // = 0x8CDF
 
     guarded 
-    MAX_DRAW_BUFFERS_WEBGL: 0x8824
+    MAX_DRAW_BUFFERS_WEBGL // = 0x8824
   }
 
 
@@ -21258,1681 +21204,1681 @@ external
     on create() // : WebGL2RenderingContext
 
     guarded
-    READ_BUFFER: 0x0C02
+    READ_BUFFER // = 0x0C02
 
     guarded
-    UNPACK_ROW_LENGTH: 0x0CF2
+    UNPACK_ROW_LENGTH // = 0x0CF2
 
     guarded
-    UNPACK_SKIP_ROWS: 0x0CF3
+    UNPACK_SKIP_ROWS // = 0x0CF3
 
     guarded
-    UNPACK_SKIP_PIXELS: 0x0CF4
+    UNPACK_SKIP_PIXELS // = 0x0CF4
 
     guarded
-    PACK_ROW_LENGTH: 0x0D02
+    PACK_ROW_LENGTH // = 0x0D02
 
     guarded
-    PACK_SKIP_ROWS: 0x0D03
+    PACK_SKIP_ROWS // = 0x0D03
 
     guarded
-    PACK_SKIP_PIXELS: 0x0D04
+    PACK_SKIP_PIXELS // = 0x0D04
 
     guarded
-    COLOR: 0x1800
+    COLOR // = 0x1800
 
     guarded
-    DEPTH: 0x1801
+    DEPTH // = 0x1801
 
     guarded
-    STENCIL: 0x1802
+    STENCIL // = 0x1802
 
     guarded
-    RED: 0x1903
+    RED // = 0x1903
 
     guarded
-    RGB8: 0x8051
+    RGB8 // = 0x8051
 
     guarded
-    RGBA8: 0x8058
+    RGBA8 // = 0x8058
 
     guarded
-    RGB10_A2: 0x8059
+    RGB10_A2 // = 0x8059
 
     guarded
-    TEXTURE_BINDING_3D: 0x806A
+    TEXTURE_BINDING_3D // = 0x806A
 
     guarded
-    UNPACK_SKIP_IMAGES: 0x806D
+    UNPACK_SKIP_IMAGES // = 0x806D
 
     guarded
-    UNPACK_IMAGE_HEIGHT: 0x806E
+    UNPACK_IMAGE_HEIGHT // = 0x806E
 
     guarded
-    TEXTURE_3D: 0x806F
+    TEXTURE_3D // = 0x806F
 
     guarded
-    TEXTURE_WRAP_R: 0x8072
+    TEXTURE_WRAP_R // = 0x8072
 
     guarded
-    MAX_3D_TEXTURE_SIZE: 0x8073
+    MAX_3D_TEXTURE_SIZE // = 0x8073
 
     guarded
-    UNSIGNED_INT_2_10_10_10_REV: 0x8368
+    UNSIGNED_INT_2_10_10_10_REV // = 0x8368
 
     guarded
-    MAX_ELEMENTS_VERTICES: 0x80E8
+    MAX_ELEMENTS_VERTICES // = 0x80E8
 
     guarded
-    MAX_ELEMENTS_INDICES: 0x80E9
+    MAX_ELEMENTS_INDICES // = 0x80E9
 
     guarded
-    TEXTURE_MIN_LOD: 0x813A
+    TEXTURE_MIN_LOD // = 0x813A
 
     guarded
-    TEXTURE_MAX_LOD: 0x813B
+    TEXTURE_MAX_LOD // = 0x813B
 
     guarded
-    TEXTURE_BASE_LEVEL: 0x813C
+    TEXTURE_BASE_LEVEL // = 0x813C
 
     guarded
-    TEXTURE_MAX_LEVEL: 0x813D
+    TEXTURE_MAX_LEVEL // = 0x813D
 
     guarded
-    MIN: 0x8007
+    MIN // = 0x8007
 
     guarded
-    MAX: 0x8008
+    MAX // = 0x8008
 
     guarded
-    DEPTH_COMPONENT24: 0x81A6
+    DEPTH_COMPONENT24 // = 0x81A6
 
     guarded
-    MAX_TEXTURE_LOD_BIAS: 0x84FD
+    MAX_TEXTURE_LOD_BIAS // = 0x84FD
 
     guarded
-    TEXTURE_COMPARE_MODE: 0x884C
+    TEXTURE_COMPARE_MODE // = 0x884C
 
     guarded
-    TEXTURE_COMPARE_FUNC: 0x884D
+    TEXTURE_COMPARE_FUNC // = 0x884D
 
     guarded
-    CURRENT_QUERY: 0x8865
+    CURRENT_QUERY // = 0x8865
 
     guarded
-    QUERY_RESULT: 0x8866
+    QUERY_RESULT // = 0x8866
 
     guarded
-    QUERY_RESULT_AVAILABLE: 0x8867
+    QUERY_RESULT_AVAILABLE // = 0x8867
 
     guarded
-    STREAM_READ: 0x88E1
+    STREAM_READ // = 0x88E1
 
     guarded
-    STREAM_COPY: 0x88E2
+    STREAM_COPY // = 0x88E2
 
     guarded
-    STATIC_READ: 0x88E5
+    STATIC_READ // = 0x88E5
 
     guarded
-    STATIC_COPY: 0x88E6
+    STATIC_COPY // = 0x88E6
 
     guarded
-    DYNAMIC_READ: 0x88E9
+    DYNAMIC_READ // = 0x88E9
 
     guarded
-    DYNAMIC_COPY: 0x88EA
+    DYNAMIC_COPY // = 0x88EA
 
     guarded
-    MAX_DRAW_BUFFERS: 0x8824
+    MAX_DRAW_BUFFERS // = 0x8824
 
     guarded
-    DRAW_BUFFER0: 0x8825
+    DRAW_BUFFER0 // = 0x8825
 
     guarded
-    DRAW_BUFFER1: 0x8826
+    DRAW_BUFFER1 // = 0x8826
 
     guarded
-    DRAW_BUFFER2: 0x8827
+    DRAW_BUFFER2 // = 0x8827
 
     guarded
-    DRAW_BUFFER3: 0x8828
+    DRAW_BUFFER3 // = 0x8828
 
     guarded
-    DRAW_BUFFER4: 0x8829
+    DRAW_BUFFER4 // = 0x8829
 
     guarded
-    DRAW_BUFFER5: 0x882A
+    DRAW_BUFFER5 // = 0x882A
 
     guarded
-    DRAW_BUFFER6: 0x882B
+    DRAW_BUFFER6 // = 0x882B
 
     guarded
-    DRAW_BUFFER7: 0x882C
+    DRAW_BUFFER7 // = 0x882C
 
     guarded
-    DRAW_BUFFER8: 0x882D
+    DRAW_BUFFER8 // = 0x882D
 
     guarded
-    DRAW_BUFFER9: 0x882E
+    DRAW_BUFFER9 // = 0x882E
 
     guarded
-    DRAW_BUFFER10: 0x882F
+    DRAW_BUFFER10 // = 0x882F
 
     guarded
-    DRAW_BUFFER11: 0x8830
+    DRAW_BUFFER11 // = 0x8830
 
     guarded
-    DRAW_BUFFER12: 0x8831
+    DRAW_BUFFER12 // = 0x8831
 
     guarded
-    DRAW_BUFFER13: 0x8832
+    DRAW_BUFFER13 // = 0x8832
 
     guarded
-    DRAW_BUFFER14: 0x8833
+    DRAW_BUFFER14 // = 0x8833
 
     guarded
-    DRAW_BUFFER15: 0x8834
+    DRAW_BUFFER15 // = 0x8834
 
     guarded
-    MAX_FRAGMENT_UNIFORM_COMPONENTS: 0x8B49
+    MAX_FRAGMENT_UNIFORM_COMPONENTS // = 0x8B49
 
     guarded
-    MAX_VERTEX_UNIFORM_COMPONENTS: 0x8B4A
+    MAX_VERTEX_UNIFORM_COMPONENTS // = 0x8B4A
 
     guarded
-    SAMPLER_3D: 0x8B5F
+    SAMPLER_3D // = 0x8B5F
 
     guarded
-    SAMPLER_2D_SHADOW: 0x8B62
+    SAMPLER_2D_SHADOW // = 0x8B62
 
     guarded
-    FRAGMENT_SHADER_DERIVATIVE_HINT: 0x8B8B
+    FRAGMENT_SHADER_DERIVATIVE_HINT // = 0x8B8B
 
     guarded
-    PIXEL_PACK_BUFFER: 0x88EB
+    PIXEL_PACK_BUFFER // = 0x88EB
 
     guarded
-    PIXEL_UNPACK_BUFFER: 0x88EC
+    PIXEL_UNPACK_BUFFER // = 0x88EC
 
     guarded
-    PIXEL_PACK_BUFFER_BINDING: 0x88ED
+    PIXEL_PACK_BUFFER_BINDING // = 0x88ED
 
     guarded
-    PIXEL_UNPACK_BUFFER_BINDING: 0x88EF
+    PIXEL_UNPACK_BUFFER_BINDING // = 0x88EF
 
     guarded
-    FLOAT_MAT2x3: 0x8B65
+    FLOAT_MAT2x3 // = 0x8B65
 
     guarded
-    FLOAT_MAT2x4: 0x8B66
+    FLOAT_MAT2x4 // = 0x8B66
 
     guarded
-    FLOAT_MAT3x2: 0x8B67
+    FLOAT_MAT3x2 // = 0x8B67
 
     guarded
-    FLOAT_MAT3x4: 0x8B68
+    FLOAT_MAT3x4 // = 0x8B68
 
     guarded
-    FLOAT_MAT4x2: 0x8B69
+    FLOAT_MAT4x2 // = 0x8B69
 
     guarded
-    FLOAT_MAT4x3: 0x8B6A
+    FLOAT_MAT4x3 // = 0x8B6A
 
     guarded
-    SRGB: 0x8C40
+    SRGB // = 0x8C40
 
     guarded
-    SRGB8: 0x8C41
+    SRGB8 // = 0x8C41
 
     guarded
-    SRGB8_ALPHA8: 0x8C43
+    SRGB8_ALPHA8 // = 0x8C43
 
     guarded
-    COMPARE_REF_TO_TEXTURE: 0x884E
+    COMPARE_REF_TO_TEXTURE // = 0x884E
 
     guarded
-    RGBA32F: 0x8814
+    RGBA32F // = 0x8814
 
     guarded
-    RGB32F: 0x8815
+    RGB32F // = 0x8815
 
     guarded
-    RGBA16F: 0x881A
+    RGBA16F // = 0x881A
 
     guarded
-    RGB16F: 0x881B
+    RGB16F // = 0x881B
 
     guarded
-    VERTEX_ATTRIB_ARRAY_INTEGER: 0x88FD
+    VERTEX_ATTRIB_ARRAY_INTEGER // = 0x88FD
 
     guarded
-    MAX_ARRAY_TEXTURE_LAYERS: 0x88FF
+    MAX_ARRAY_TEXTURE_LAYERS // = 0x88FF
 
     guarded
-    MIN_PROGRAM_TEXEL_OFFSET: 0x8904
+    MIN_PROGRAM_TEXEL_OFFSET // = 0x8904
 
     guarded
-    MAX_PROGRAM_TEXEL_OFFSET: 0x8905
+    MAX_PROGRAM_TEXEL_OFFSET // = 0x8905
 
     guarded
-    MAX_VARYING_COMPONENTS: 0x8B4B
+    MAX_VARYING_COMPONENTS // = 0x8B4B
 
     guarded
-    TEXTURE_2D_ARRAY: 0x8C1A
+    TEXTURE_2D_ARRAY // = 0x8C1A
 
     guarded
-    TEXTURE_BINDING_2D_ARRAY: 0x8C1D
+    TEXTURE_BINDING_2D_ARRAY // = 0x8C1D
 
     guarded
-    R11F_G11F_B10F: 0x8C3A
+    R11F_G11F_B10F // = 0x8C3A
 
     guarded
-    UNSIGNED_INT_10F_11F_11F_REV: 0x8C3B
+    UNSIGNED_INT_10F_11F_11F_REV // = 0x8C3B
 
     guarded
-    RGB9_E5: 0x8C3D
+    RGB9_E5 // = 0x8C3D
 
     guarded
-    UNSIGNED_INT_5_9_9_9_REV: 0x8C3E
+    UNSIGNED_INT_5_9_9_9_REV // = 0x8C3E
 
     guarded
-    TRANSFORM_FEEDBACK_BUFFER_MODE: 0x8C7F
+    TRANSFORM_FEEDBACK_BUFFER_MODE // = 0x8C7F
 
     guarded
-    MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: 0x8C80
+    MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS // = 0x8C80
 
     guarded
-    TRANSFORM_FEEDBACK_VARYINGS: 0x8C83
+    TRANSFORM_FEEDBACK_VARYINGS // = 0x8C83
 
     guarded
-    TRANSFORM_FEEDBACK_BUFFER_START: 0x8C84
+    TRANSFORM_FEEDBACK_BUFFER_START // = 0x8C84
 
     guarded
-    TRANSFORM_FEEDBACK_BUFFER_SIZE: 0x8C85
+    TRANSFORM_FEEDBACK_BUFFER_SIZE // = 0x8C85
 
     guarded
-    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN: 0x8C88
+    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN // = 0x8C88
 
     guarded
-    RASTERIZER_DISCARD: 0x8C89
+    RASTERIZER_DISCARD // = 0x8C89
 
     guarded
-    MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: 0x8C8A
+    MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS // = 0x8C8A
 
     guarded
-    MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS: 0x8C8B
+    MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS // = 0x8C8B
 
     guarded
-    INTERLEAVED_ATTRIBS: 0x8C8C
+    INTERLEAVED_ATTRIBS // = 0x8C8C
 
     guarded
-    SEPARATE_ATTRIBS: 0x8C8D
+    SEPARATE_ATTRIBS // = 0x8C8D
 
     guarded
-    TRANSFORM_FEEDBACK_BUFFER: 0x8C8E
+    TRANSFORM_FEEDBACK_BUFFER // = 0x8C8E
 
     guarded
-    TRANSFORM_FEEDBACK_BUFFER_BINDING: 0x8C8F
+    TRANSFORM_FEEDBACK_BUFFER_BINDING // = 0x8C8F
 
     guarded
-    RGBA32UI: 0x8D70
+    RGBA32UI // = 0x8D70
 
     guarded
-    RGB32UI: 0x8D71
+    RGB32UI // = 0x8D71
 
     guarded
-    RGBA16UI: 0x8D76
+    RGBA16UI // = 0x8D76
 
     guarded
-    RGB16UI: 0x8D77
+    RGB16UI // = 0x8D77
 
     guarded
-    RGBA8UI: 0x8D7C
+    RGBA8UI // = 0x8D7C
 
     guarded
-    RGB8UI: 0x8D7D
+    RGB8UI // = 0x8D7D
 
     guarded
-    RGBA32I: 0x8D82
+    RGBA32I // = 0x8D82
 
     guarded
-    RGB32I: 0x8D83
+    RGB32I // = 0x8D83
 
     guarded
-    RGBA16I: 0x8D88
+    RGBA16I // = 0x8D88
 
     guarded
-    RGB16I: 0x8D89
+    RGB16I // = 0x8D89
 
     guarded
-    RGBA8I: 0x8D8E
+    RGBA8I // = 0x8D8E
 
     guarded
-    RGB8I: 0x8D8F
+    RGB8I // = 0x8D8F
 
     guarded
-    RED_INTEGER: 0x8D94
+    RED_INTEGER // = 0x8D94
 
     guarded
-    RGB_INTEGER: 0x8D98
+    RGB_INTEGER // = 0x8D98
 
     guarded
-    RGBA_INTEGER: 0x8D99
+    RGBA_INTEGER // = 0x8D99
 
     guarded
-    SAMPLER_2D_ARRAY: 0x8DC1
+    SAMPLER_2D_ARRAY // = 0x8DC1
 
     guarded
-    SAMPLER_2D_ARRAY_SHADOW: 0x8DC4
+    SAMPLER_2D_ARRAY_SHADOW // = 0x8DC4
 
     guarded
-    SAMPLER_CUBE_SHADOW: 0x8DC5
+    SAMPLER_CUBE_SHADOW // = 0x8DC5
 
     guarded
-    UNSIGNED_INT_VEC2: 0x8DC6
+    UNSIGNED_INT_VEC2 // = 0x8DC6
 
     guarded
-    UNSIGNED_INT_VEC3: 0x8DC7
+    UNSIGNED_INT_VEC3 // = 0x8DC7
 
     guarded
-    UNSIGNED_INT_VEC4: 0x8DC8
+    UNSIGNED_INT_VEC4 // = 0x8DC8
 
     guarded
-    INT_SAMPLER_2D: 0x8DCA
+    INT_SAMPLER_2D // = 0x8DCA
 
     guarded
-    INT_SAMPLER_3D: 0x8DCB
+    INT_SAMPLER_3D // = 0x8DCB
 
     guarded
-    INT_SAMPLER_CUBE: 0x8DCC
+    INT_SAMPLER_CUBE // = 0x8DCC
 
     guarded
-    INT_SAMPLER_2D_ARRAY: 0x8DCF
+    INT_SAMPLER_2D_ARRAY // = 0x8DCF
 
     guarded
-    UNSIGNED_INT_SAMPLER_2D: 0x8DD2
+    UNSIGNED_INT_SAMPLER_2D // = 0x8DD2
 
     guarded
-    UNSIGNED_INT_SAMPLER_3D: 0x8DD3
+    UNSIGNED_INT_SAMPLER_3D // = 0x8DD3
 
     guarded
-    UNSIGNED_INT_SAMPLER_CUBE: 0x8DD4
+    UNSIGNED_INT_SAMPLER_CUBE // = 0x8DD4
 
     guarded
-    UNSIGNED_INT_SAMPLER_2D_ARRAY: 0x8DD7
+    UNSIGNED_INT_SAMPLER_2D_ARRAY // = 0x8DD7
 
     guarded
-    DEPTH_COMPONENT32F: 0x8CAC
+    DEPTH_COMPONENT32F // = 0x8CAC
 
     guarded
-    DEPTH32F_STENCIL8: 0x8CAD
+    DEPTH32F_STENCIL8 // = 0x8CAD
 
     guarded
-    FLOAT_32_UNSIGNED_INT_24_8_REV: 0x8DAD
+    FLOAT_32_UNSIGNED_INT_24_8_REV // = 0x8DAD
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: 0x8210
+    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING // = 0x8210
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE: 0x8211
+    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE // = 0x8211
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_RED_SIZE: 0x8212
+    FRAMEBUFFER_ATTACHMENT_RED_SIZE // = 0x8212
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_GREEN_SIZE: 0x8213
+    FRAMEBUFFER_ATTACHMENT_GREEN_SIZE // = 0x8213
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_BLUE_SIZE: 0x8214
+    FRAMEBUFFER_ATTACHMENT_BLUE_SIZE // = 0x8214
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: 0x8215
+    FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE // = 0x8215
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: 0x8216
+    FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE // = 0x8216
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE: 0x8217
+    FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE // = 0x8217
 
     guarded
-    FRAMEBUFFER_DEFAULT: 0x8218
+    FRAMEBUFFER_DEFAULT // = 0x8218
 
     guarded
-    UNSIGNED_INT_24_8: 0x84FA
+    UNSIGNED_INT_24_8 // = 0x84FA
 
     guarded
-    DEPTH24_STENCIL8: 0x88F0
+    DEPTH24_STENCIL8 // = 0x88F0
 
     guarded
-    UNSIGNED_NORMALIZED: 0x8C17
+    UNSIGNED_NORMALIZED // = 0x8C17
 
     guarded
-    DRAW_FRAMEBUFFER_BINDING: 0x8CA6
+    DRAW_FRAMEBUFFER_BINDING // = 0x8CA6
 
     guarded
-    READ_FRAMEBUFFER: 0x8CA8
+    READ_FRAMEBUFFER // = 0x8CA8
 
     guarded
-    DRAW_FRAMEBUFFER: 0x8CA9
+    DRAW_FRAMEBUFFER // = 0x8CA9
 
     guarded
-    READ_FRAMEBUFFER_BINDING: 0x8CAA
+    READ_FRAMEBUFFER_BINDING // = 0x8CAA
 
     guarded
-    RENDERBUFFER_SAMPLES: 0x8CAB
+    RENDERBUFFER_SAMPLES // = 0x8CAB
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: 0x8CD4
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER // = 0x8CD4
 
     guarded
-    MAX_COLOR_ATTACHMENTS: 0x8CDF
+    MAX_COLOR_ATTACHMENTS // = 0x8CDF
 
     guarded
-    COLOR_ATTACHMENT1: 0x8CE1
+    COLOR_ATTACHMENT1 // = 0x8CE1
 
     guarded
-    COLOR_ATTACHMENT2: 0x8CE2
+    COLOR_ATTACHMENT2 // = 0x8CE2
 
     guarded
-    COLOR_ATTACHMENT3: 0x8CE3
+    COLOR_ATTACHMENT3 // = 0x8CE3
 
     guarded
-    COLOR_ATTACHMENT4: 0x8CE4
+    COLOR_ATTACHMENT4 // = 0x8CE4
 
     guarded
-    COLOR_ATTACHMENT5: 0x8CE5
+    COLOR_ATTACHMENT5 // = 0x8CE5
 
     guarded
-    COLOR_ATTACHMENT6: 0x8CE6
+    COLOR_ATTACHMENT6 // = 0x8CE6
 
     guarded
-    COLOR_ATTACHMENT7: 0x8CE7
+    COLOR_ATTACHMENT7 // = 0x8CE7
 
     guarded
-    COLOR_ATTACHMENT8: 0x8CE8
+    COLOR_ATTACHMENT8 // = 0x8CE8
 
     guarded
-    COLOR_ATTACHMENT9: 0x8CE9
+    COLOR_ATTACHMENT9 // = 0x8CE9
 
     guarded
-    COLOR_ATTACHMENT10: 0x8CEA
+    COLOR_ATTACHMENT10 // = 0x8CEA
 
     guarded
-    COLOR_ATTACHMENT11: 0x8CEB
+    COLOR_ATTACHMENT11 // = 0x8CEB
 
     guarded
-    COLOR_ATTACHMENT12: 0x8CEC
+    COLOR_ATTACHMENT12 // = 0x8CEC
 
     guarded
-    COLOR_ATTACHMENT13: 0x8CED
+    COLOR_ATTACHMENT13 // = 0x8CED
 
     guarded
-    COLOR_ATTACHMENT14: 0x8CEE
+    COLOR_ATTACHMENT14 // = 0x8CEE
 
     guarded
-    COLOR_ATTACHMENT15: 0x8CEF
+    COLOR_ATTACHMENT15 // = 0x8CEF
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: 0x8D56
+    FRAMEBUFFER_INCOMPLETE_MULTISAMPLE // = 0x8D56
 
     guarded
-    MAX_SAMPLES: 0x8D57
+    MAX_SAMPLES // = 0x8D57
 
     guarded
-    HALF_FLOAT: 0x140B
+    HALF_FLOAT // = 0x140B
 
     guarded
-    RG: 0x8227
+    RG // = 0x8227
 
     guarded
-    RG_INTEGER: 0x8228
+    RG_INTEGER // = 0x8228
 
     guarded
-    R8: 0x8229
+    R8 // = 0x8229
 
     guarded
-    RG8: 0x822B
+    RG8 // = 0x822B
 
     guarded
-    R16F: 0x822D
+    R16F // = 0x822D
 
     guarded
-    R32F: 0x822E
+    R32F // = 0x822E
 
     guarded
-    RG16F: 0x822F
+    RG16F // = 0x822F
 
     guarded
-    RG32F: 0x8230
+    RG32F // = 0x8230
 
     guarded
-    R8I: 0x8231
+    R8I // = 0x8231
 
     guarded
-    R8UI: 0x8232
+    R8UI // = 0x8232
 
     guarded
-    R16I: 0x8233
+    R16I // = 0x8233
 
     guarded
-    R16UI: 0x8234
+    R16UI // = 0x8234
 
     guarded
-    R32I: 0x8235
+    R32I // = 0x8235
 
     guarded
-    R32UI: 0x8236
+    R32UI // = 0x8236
 
     guarded
-    RG8I: 0x8237
+    RG8I // = 0x8237
 
     guarded
-    RG8UI: 0x8238
+    RG8UI // = 0x8238
 
     guarded
-    RG16I: 0x8239
+    RG16I // = 0x8239
 
     guarded
-    RG16UI: 0x823A
+    RG16UI // = 0x823A
 
     guarded
-    RG32I: 0x823B
+    RG32I // = 0x823B
 
     guarded
-    RG32UI: 0x823C
+    RG32UI // = 0x823C
 
     guarded
-    VERTEX_ARRAY_BINDING: 0x85B5
+    VERTEX_ARRAY_BINDING // = 0x85B5
 
     guarded
-    R8_SNORM: 0x8F94
+    R8_SNORM // = 0x8F94
 
     guarded
-    RG8_SNORM: 0x8F95
+    RG8_SNORM // = 0x8F95
 
     guarded
-    RGB8_SNORM: 0x8F96
+    RGB8_SNORM // = 0x8F96
 
     guarded
-    RGBA8_SNORM: 0x8F97
+    RGBA8_SNORM // = 0x8F97
 
     guarded
-    SIGNED_NORMALIZED: 0x8F9C
+    SIGNED_NORMALIZED // = 0x8F9C
 
     guarded
-    COPY_READ_BUFFER: 0x8F36
+    COPY_READ_BUFFER // = 0x8F36
 
     guarded
-    COPY_WRITE_BUFFER: 0x8F37
+    COPY_WRITE_BUFFER // = 0x8F37
 
     guarded
-    COPY_READ_BUFFER_BINDING: 0x8F36
+    COPY_READ_BUFFER_BINDING // = 0x8F36
 
     guarded
-    COPY_WRITE_BUFFER_BINDING: 0x8F37
+    COPY_WRITE_BUFFER_BINDING // = 0x8F37
 
     guarded
-    UNIFORM_BUFFER: 0x8A11
+    UNIFORM_BUFFER // = 0x8A11
 
     guarded
-    UNIFORM_BUFFER_BINDING: 0x8A28
+    UNIFORM_BUFFER_BINDING // = 0x8A28
 
     guarded
-    UNIFORM_BUFFER_START: 0x8A29
+    UNIFORM_BUFFER_START // = 0x8A29
 
     guarded
-    UNIFORM_BUFFER_SIZE: 0x8A2A
+    UNIFORM_BUFFER_SIZE // = 0x8A2A
 
     guarded
-    MAX_VERTEX_UNIFORM_BLOCKS: 0x8A2B
+    MAX_VERTEX_UNIFORM_BLOCKS // = 0x8A2B
 
     guarded
-    MAX_FRAGMENT_UNIFORM_BLOCKS: 0x8A2D
+    MAX_FRAGMENT_UNIFORM_BLOCKS // = 0x8A2D
 
     guarded
-    MAX_COMBINED_UNIFORM_BLOCKS: 0x8A2E
+    MAX_COMBINED_UNIFORM_BLOCKS // = 0x8A2E
 
     guarded
-    MAX_UNIFORM_BUFFER_BINDINGS: 0x8A2F
+    MAX_UNIFORM_BUFFER_BINDINGS // = 0x8A2F
 
     guarded
-    MAX_UNIFORM_BLOCK_SIZE: 0x8A30
+    MAX_UNIFORM_BLOCK_SIZE // = 0x8A30
 
     guarded
-    MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: 0x8A31
+    MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS // = 0x8A31
 
     guarded
-    MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: 0x8A33
+    MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS // = 0x8A33
 
     guarded
-    UNIFORM_BUFFER_OFFSET_ALIGNMENT: 0x8A34
+    UNIFORM_BUFFER_OFFSET_ALIGNMENT // = 0x8A34
 
     guarded
-    ACTIVE_UNIFORM_BLOCKS: 0x8A36
+    ACTIVE_UNIFORM_BLOCKS // = 0x8A36
 
     guarded
-    UNIFORM_TYPE: 0x8A37
+    UNIFORM_TYPE // = 0x8A37
 
     guarded
-    UNIFORM_SIZE: 0x8A38
+    UNIFORM_SIZE // = 0x8A38
 
     guarded
-    UNIFORM_BLOCK_INDEX: 0x8A3A
+    UNIFORM_BLOCK_INDEX // = 0x8A3A
 
     guarded
-    UNIFORM_OFFSET: 0x8A3B
+    UNIFORM_OFFSET // = 0x8A3B
 
     guarded
-    UNIFORM_ARRAY_STRIDE: 0x8A3C
+    UNIFORM_ARRAY_STRIDE // = 0x8A3C
 
     guarded
-    UNIFORM_MATRIX_STRIDE: 0x8A3D
+    UNIFORM_MATRIX_STRIDE // = 0x8A3D
 
     guarded
-    UNIFORM_IS_ROW_MAJOR: 0x8A3E
+    UNIFORM_IS_ROW_MAJOR // = 0x8A3E
 
     guarded
-    UNIFORM_BLOCK_BINDING: 0x8A3F
+    UNIFORM_BLOCK_BINDING // = 0x8A3F
 
     guarded
-    UNIFORM_BLOCK_DATA_SIZE: 0x8A40
+    UNIFORM_BLOCK_DATA_SIZE // = 0x8A40
 
     guarded
-    UNIFORM_BLOCK_ACTIVE_UNIFORMS: 0x8A42
+    UNIFORM_BLOCK_ACTIVE_UNIFORMS // = 0x8A42
 
     guarded
-    UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: 0x8A43
+    UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES // = 0x8A43
 
     guarded
-    UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: 0x8A44
+    UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER // = 0x8A44
 
     guarded
-    UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER: 0x8A46
+    UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER // = 0x8A46
 
     guarded
-    INVALID_INDEX: 0xFFFFFFFF
+    INVALID_INDEX // = 0xFFFFFFFF
 
     guarded
-    MAX_VERTEX_OUTPUT_COMPONENTS: 0x9122
+    MAX_VERTEX_OUTPUT_COMPONENTS // = 0x9122
 
     guarded
-    MAX_FRAGMENT_INPUT_COMPONENTS: 0x9125
+    MAX_FRAGMENT_INPUT_COMPONENTS // = 0x9125
 
     guarded
-    MAX_SERVER_WAIT_TIMEOUT: 0x9111
+    MAX_SERVER_WAIT_TIMEOUT // = 0x9111
 
     guarded
-    OBJECT_TYPE: 0x9112
+    OBJECT_TYPE // = 0x9112
 
     guarded
-    SYNC_CONDITION: 0x9113
+    SYNC_CONDITION // = 0x9113
 
     guarded
-    SYNC_STATUS: 0x9114
+    SYNC_STATUS // = 0x9114
 
     guarded
-    SYNC_FLAGS: 0x9115
+    SYNC_FLAGS // = 0x9115
 
     guarded
-    SYNC_FENCE: 0x9116
+    SYNC_FENCE // = 0x9116
 
     guarded
-    SYNC_GPU_COMMANDS_COMPLETE: 0x9117
+    SYNC_GPU_COMMANDS_COMPLETE // = 0x9117
 
     guarded
-    UNSIGNALED: 0x9118
+    UNSIGNALED // = 0x9118
 
     guarded
-    SIGNALED: 0x9119
+    SIGNALED // = 0x9119
 
     guarded
-    ALREADY_SIGNALED: 0x911A
+    ALREADY_SIGNALED // = 0x911A
 
     guarded
-    TIMEOUT_EXPIRED: 0x911B
+    TIMEOUT_EXPIRED // = 0x911B
 
     guarded
-    CONDITION_SATISFIED: 0x911C
+    CONDITION_SATISFIED // = 0x911C
 
     guarded
-    WAIT_FAILED: 0x911D
+    WAIT_FAILED // = 0x911D
 
     guarded
-    SYNC_FLUSH_COMMANDS_BIT: 0x00000001
+    SYNC_FLUSH_COMMANDS_BIT // = 0x00000001
 
     guarded
-    VERTEX_ATTRIB_ARRAY_DIVISOR: 0x88FE
+    VERTEX_ATTRIB_ARRAY_DIVISOR // = 0x88FE
 
     guarded
-    ANY_SAMPLES_PASSED: 0x8C2F
+    ANY_SAMPLES_PASSED // = 0x8C2F
 
     guarded
-    ANY_SAMPLES_PASSED_CONSERVATIVE: 0x8D6A
+    ANY_SAMPLES_PASSED_CONSERVATIVE // = 0x8D6A
 
     guarded
-    SAMPLER_BINDING: 0x8919
+    SAMPLER_BINDING // = 0x8919
 
     guarded
-    RGB10_A2UI: 0x906F
+    RGB10_A2UI // = 0x906F
 
     guarded
-    INT_2_10_10_10_REV: 0x8D9F
+    INT_2_10_10_10_REV // = 0x8D9F
 
     guarded
-    TRANSFORM_FEEDBACK: 0x8E22
+    TRANSFORM_FEEDBACK // = 0x8E22
 
     guarded
-    TRANSFORM_FEEDBACK_PAUSED: 0x8E23
+    TRANSFORM_FEEDBACK_PAUSED // = 0x8E23
 
     guarded
-    TRANSFORM_FEEDBACK_ACTIVE: 0x8E24
+    TRANSFORM_FEEDBACK_ACTIVE // = 0x8E24
 
     guarded
-    TRANSFORM_FEEDBACK_BINDING: 0x8E25
+    TRANSFORM_FEEDBACK_BINDING // = 0x8E25
 
     guarded
-    TEXTURE_IMMUTABLE_FORMAT: 0x912F
+    TEXTURE_IMMUTABLE_FORMAT // = 0x912F
 
     guarded
-    MAX_ELEMENT_INDEX: 0x8D6B
+    MAX_ELEMENT_INDEX // = 0x8D6B
 
     guarded
-    TEXTURE_IMMUTABLE_LEVELS: 0x82DF
+    TEXTURE_IMMUTABLE_LEVELS // = 0x82DF
 
     guarded
-    TIMEOUT_IGNORED: -1
+    TIMEOUT_IGNORED // = -1
 
     guarded
-    MAX_CLIENT_WAIT_TIMEOUT_WEBGL: 0x9247
+    MAX_CLIENT_WAIT_TIMEOUT_WEBGL // = 0x9247
 
     guarded
-    DEPTH_BUFFER_BIT: 0x00000100
+    DEPTH_BUFFER_BIT // = 0x00000100
 
     guarded
-    STENCIL_BUFFER_BIT: 0x00000400
+    STENCIL_BUFFER_BIT // = 0x00000400
 
     guarded
-    COLOR_BUFFER_BIT: 0x00004000
+    COLOR_BUFFER_BIT // = 0x00004000
 
     guarded
-    POINTS: 0x0000
+    POINTS // = 0x0000
 
     guarded
-    LINES: 0x0001
+    LINES // = 0x0001
 
     guarded
-    LINE_LOOP: 0x0002
+    LINE_LOOP // = 0x0002
 
     guarded
-    LINE_STRIP: 0x0003
+    LINE_STRIP // = 0x0003
 
     guarded
-    TRIANGLES: 0x0004
+    TRIANGLES // = 0x0004
 
     guarded
-    TRIANGLE_STRIP: 0x0005
+    TRIANGLE_STRIP // = 0x0005
 
     guarded
-    TRIANGLE_FAN: 0x0006
+    TRIANGLE_FAN // = 0x0006
 
     guarded
-    ZERO: 0
+    ZERO // = 0
 
     guarded
-    ONE: 1
+    ONE // = 1
 
     guarded
-    SRC_COLOR: 0x0300
+    SRC_COLOR // = 0x0300
 
     guarded
-    ONE_MINUS_SRC_COLOR: 0x0301
+    ONE_MINUS_SRC_COLOR // = 0x0301
 
     guarded
-    SRC_ALPHA: 0x0302
+    SRC_ALPHA // = 0x0302
 
     guarded
-    ONE_MINUS_SRC_ALPHA: 0x0303
+    ONE_MINUS_SRC_ALPHA // = 0x0303
 
     guarded
-    DST_ALPHA: 0x0304
+    DST_ALPHA // = 0x0304
 
     guarded
-    ONE_MINUS_DST_ALPHA: 0x0305
+    ONE_MINUS_DST_ALPHA // = 0x0305
 
     guarded
-    DST_COLOR: 0x0306
+    DST_COLOR // = 0x0306
 
     guarded
-    ONE_MINUS_DST_COLOR: 0x0307
+    ONE_MINUS_DST_COLOR // = 0x0307
 
     guarded
-    SRC_ALPHA_SATURATE: 0x0308
+    SRC_ALPHA_SATURATE // = 0x0308
 
     guarded
-    FUNC_ADD: 0x8006
+    FUNC_ADD // = 0x8006
 
     guarded
-    BLEND_EQUATION: 0x8009
+    BLEND_EQUATION // = 0x8009
 
     guarded
-    BLEND_EQUATION_RGB: 0x8009
+    BLEND_EQUATION_RGB // = 0x8009
 
     guarded
-    BLEND_EQUATION_ALPHA: 0x883D
+    BLEND_EQUATION_ALPHA // = 0x883D
 
     guarded
-    FUNC_SUBTRACT: 0x800A
+    FUNC_SUBTRACT // = 0x800A
 
     guarded
-    FUNC_REVERSE_SUBTRACT: 0x800B
+    FUNC_REVERSE_SUBTRACT // = 0x800B
 
     guarded
-    BLEND_DST_RGB: 0x80C8
+    BLEND_DST_RGB // = 0x80C8
 
     guarded
-    BLEND_SRC_RGB: 0x80C9
+    BLEND_SRC_RGB // = 0x80C9
 
     guarded
-    BLEND_DST_ALPHA: 0x80CA
+    BLEND_DST_ALPHA // = 0x80CA
 
     guarded
-    BLEND_SRC_ALPHA: 0x80CB
+    BLEND_SRC_ALPHA // = 0x80CB
 
     guarded
-    CONSTANT_COLOR: 0x8001
+    CONSTANT_COLOR // = 0x8001
 
     guarded
-    ONE_MINUS_CONSTANT_COLOR: 0x8002
+    ONE_MINUS_CONSTANT_COLOR // = 0x8002
 
     guarded
-    CONSTANT_ALPHA: 0x8003
+    CONSTANT_ALPHA // = 0x8003
 
     guarded
-    ONE_MINUS_CONSTANT_ALPHA: 0x8004
+    ONE_MINUS_CONSTANT_ALPHA // = 0x8004
 
     guarded
-    BLEND_COLOR: 0x8005
+    BLEND_COLOR // = 0x8005
 
     guarded
-    ARRAY_BUFFER: 0x8892
+    ARRAY_BUFFER // = 0x8892
 
     guarded
-    ELEMENT_ARRAY_BUFFER: 0x8893
+    ELEMENT_ARRAY_BUFFER // = 0x8893
 
     guarded
-    ARRAY_BUFFER_BINDING: 0x8894
+    ARRAY_BUFFER_BINDING // = 0x8894
 
     guarded
-    ELEMENT_ARRAY_BUFFER_BINDING: 0x8895
+    ELEMENT_ARRAY_BUFFER_BINDING // = 0x8895
 
     guarded
-    STREAM_DRAW: 0x88E0
+    STREAM_DRAW // = 0x88E0
 
     guarded
-    STATIC_DRAW: 0x88E4
+    STATIC_DRAW // = 0x88E4
 
     guarded
-    DYNAMIC_DRAW: 0x88E8
+    DYNAMIC_DRAW // = 0x88E8
 
     guarded
-    BUFFER_SIZE: 0x8764
+    BUFFER_SIZE // = 0x8764
 
     guarded
-    BUFFER_USAGE: 0x8765
+    BUFFER_USAGE // = 0x8765
 
     guarded
-    CURRENT_VERTEX_ATTRIB: 0x8626
+    CURRENT_VERTEX_ATTRIB // = 0x8626
 
     guarded
-    FRONT: 0x0404
+    FRONT // = 0x0404
 
     guarded
-    BACK: 0x0405
+    BACK // = 0x0405
 
     guarded
-    FRONT_AND_BACK: 0x0408
+    FRONT_AND_BACK // = 0x0408
 
     guarded
-    CULL_FACE: 0x0B44
+    CULL_FACE // = 0x0B44
 
     guarded
-    BLEND: 0x0BE2
+    BLEND // = 0x0BE2
 
     guarded
-    DITHER: 0x0BD0
+    DITHER // = 0x0BD0
 
     guarded
-    STENCIL_TEST: 0x0B90
+    STENCIL_TEST // = 0x0B90
 
     guarded
-    DEPTH_TEST: 0x0B71
+    DEPTH_TEST // = 0x0B71
 
     guarded
-    SCISSOR_TEST: 0x0C11
+    SCISSOR_TEST // = 0x0C11
 
     guarded
-    POLYGON_OFFSET_FILL: 0x8037
+    POLYGON_OFFSET_FILL // = 0x8037
 
     guarded
-    SAMPLE_ALPHA_TO_COVERAGE: 0x809E
+    SAMPLE_ALPHA_TO_COVERAGE // = 0x809E
 
     guarded
-    SAMPLE_COVERAGE: 0x80A0
+    SAMPLE_COVERAGE // = 0x80A0
 
     guarded
-    NO_ERROR: 0
+    NO_ERROR // = 0
 
     guarded
-    INVALID_ENUM: 0x0500
+    INVALID_ENUM // = 0x0500
 
     guarded
-    INVALID_VALUE: 0x0501
+    INVALID_VALUE // = 0x0501
 
     guarded
-    INVALID_OPERATION: 0x0502
+    INVALID_OPERATION // = 0x0502
 
     guarded
-    OUT_OF_MEMORY: 0x0505
+    OUT_OF_MEMORY // = 0x0505
 
     guarded
-    CW: 0x0900
+    CW // = 0x0900
 
     guarded
-    CCW: 0x0901
+    CCW // = 0x0901
 
     guarded
-    LINE_WIDTH: 0x0B21
+    LINE_WIDTH // = 0x0B21
 
     guarded
-    ALIASED_POINT_SIZE_RANGE: 0x846D
+    ALIASED_POINT_SIZE_RANGE // = 0x846D
 
     guarded
-    ALIASED_LINE_WIDTH_RANGE: 0x846E
+    ALIASED_LINE_WIDTH_RANGE // = 0x846E
 
     guarded
-    CULL_FACE_MODE: 0x0B45
+    CULL_FACE_MODE // = 0x0B45
 
     guarded
-    FRONT_FACE: 0x0B46
+    FRONT_FACE // = 0x0B46
 
     guarded
-    DEPTH_RANGE: 0x0B70
+    DEPTH_RANGE // = 0x0B70
 
     guarded
-    DEPTH_WRITEMASK: 0x0B72
+    DEPTH_WRITEMASK // = 0x0B72
 
     guarded
-    DEPTH_CLEAR_VALUE: 0x0B73
+    DEPTH_CLEAR_VALUE // = 0x0B73
 
     guarded
-    DEPTH_FUNC: 0x0B74
+    DEPTH_FUNC // = 0x0B74
 
     guarded
-    STENCIL_CLEAR_VALUE: 0x0B91
+    STENCIL_CLEAR_VALUE // = 0x0B91
 
     guarded
-    STENCIL_FUNC: 0x0B92
+    STENCIL_FUNC // = 0x0B92
 
     guarded
-    STENCIL_FAIL: 0x0B94
+    STENCIL_FAIL // = 0x0B94
 
     guarded
-    STENCIL_PASS_DEPTH_FAIL: 0x0B95
+    STENCIL_PASS_DEPTH_FAIL // = 0x0B95
 
     guarded
-    STENCIL_PASS_DEPTH_PASS: 0x0B96
+    STENCIL_PASS_DEPTH_PASS // = 0x0B96
 
     guarded
-    STENCIL_REF: 0x0B97
+    STENCIL_REF // = 0x0B97
 
     guarded
-    STENCIL_VALUE_MASK: 0x0B93
+    STENCIL_VALUE_MASK // = 0x0B93
 
     guarded
-    STENCIL_WRITEMASK: 0x0B98
+    STENCIL_WRITEMASK // = 0x0B98
 
     guarded
-    STENCIL_BACK_FUNC: 0x8800
+    STENCIL_BACK_FUNC // = 0x8800
 
     guarded
-    STENCIL_BACK_FAIL: 0x8801
+    STENCIL_BACK_FAIL // = 0x8801
 
     guarded
-    STENCIL_BACK_PASS_DEPTH_FAIL: 0x8802
+    STENCIL_BACK_PASS_DEPTH_FAIL // = 0x8802
 
     guarded
-    STENCIL_BACK_PASS_DEPTH_PASS: 0x8803
+    STENCIL_BACK_PASS_DEPTH_PASS // = 0x8803
 
     guarded
-    STENCIL_BACK_REF: 0x8CA3
+    STENCIL_BACK_REF // = 0x8CA3
 
     guarded
-    STENCIL_BACK_VALUE_MASK: 0x8CA4
+    STENCIL_BACK_VALUE_MASK // = 0x8CA4
 
     guarded
-    STENCIL_BACK_WRITEMASK: 0x8CA5
+    STENCIL_BACK_WRITEMASK // = 0x8CA5
 
     guarded
-    VIEWPORT: 0x0BA2
+    VIEWPORT // = 0x0BA2
 
     guarded
-    SCISSOR_BOX: 0x0C10
+    SCISSOR_BOX // = 0x0C10
 
     guarded
-    COLOR_CLEAR_VALUE: 0x0C22
+    COLOR_CLEAR_VALUE // = 0x0C22
 
     guarded
-    COLOR_WRITEMASK: 0x0C23
+    COLOR_WRITEMASK // = 0x0C23
 
     guarded
-    UNPACK_ALIGNMENT: 0x0CF5
+    UNPACK_ALIGNMENT // = 0x0CF5
 
     guarded
-    PACK_ALIGNMENT: 0x0D05
+    PACK_ALIGNMENT // = 0x0D05
 
     guarded
-    MAX_TEXTURE_SIZE: 0x0D33
+    MAX_TEXTURE_SIZE // = 0x0D33
 
     guarded
-    MAX_VIEWPORT_DIMS: 0x0D3A
+    MAX_VIEWPORT_DIMS // = 0x0D3A
 
     guarded
-    SUBPIXEL_BITS: 0x0D50
+    SUBPIXEL_BITS // = 0x0D50
 
     guarded
-    RED_BITS: 0x0D52
+    RED_BITS // = 0x0D52
 
     guarded
-    GREEN_BITS: 0x0D53
+    GREEN_BITS // = 0x0D53
 
     guarded
-    BLUE_BITS: 0x0D54
+    BLUE_BITS // = 0x0D54
 
     guarded
-    ALPHA_BITS: 0x0D55
+    ALPHA_BITS // = 0x0D55
 
     guarded
-    DEPTH_BITS: 0x0D56
+    DEPTH_BITS // = 0x0D56
 
     guarded
-    STENCIL_BITS: 0x0D57
+    STENCIL_BITS // = 0x0D57
 
     guarded
-    POLYGON_OFFSET_UNITS: 0x2A00
+    POLYGON_OFFSET_UNITS // = 0x2A00
 
     guarded
-    POLYGON_OFFSET_FACTOR: 0x8038
+    POLYGON_OFFSET_FACTOR // = 0x8038
 
     guarded
-    TEXTURE_BINDING_2D: 0x8069
+    TEXTURE_BINDING_2D // = 0x8069
 
     guarded
-    SAMPLE_BUFFERS: 0x80A8
+    SAMPLE_BUFFERS // = 0x80A8
 
     guarded
-    SAMPLES: 0x80A9
+    SAMPLES // = 0x80A9
 
     guarded
-    SAMPLE_COVERAGE_VALUE: 0x80AA
+    SAMPLE_COVERAGE_VALUE // = 0x80AA
 
     guarded
-    SAMPLE_COVERAGE_INVERT: 0x80AB
+    SAMPLE_COVERAGE_INVERT // = 0x80AB
 
     guarded
-    COMPRESSED_TEXTURE_FORMATS: 0x86A3
+    COMPRESSED_TEXTURE_FORMATS // = 0x86A3
 
     guarded
-    DONT_CARE: 0x1100
+    DONT_CARE // = 0x1100
 
     guarded
-    FASTEST: 0x1101
+    FASTEST // = 0x1101
 
     guarded
-    NICEST: 0x1102
+    NICEST // = 0x1102
 
     guarded
-    GENERATE_MIPMAP_HINT: 0x8192
+    GENERATE_MIPMAP_HINT // = 0x8192
 
     guarded
-    BYTE: 0x1400
+    BYTE // = 0x1400
 
     guarded
-    UNSIGNED_BYTE: 0x1401
+    UNSIGNED_BYTE // = 0x1401
 
     guarded
-    SHORT: 0x1402
+    SHORT // = 0x1402
 
     guarded
-    UNSIGNED_SHORT: 0x1403
+    UNSIGNED_SHORT // = 0x1403
 
     guarded
-    INT: 0x1404
+    INT // = 0x1404
 
     guarded
-    UNSIGNED_INT: 0x1405
+    UNSIGNED_INT // = 0x1405
 
     guarded
-    FLOAT: 0x1406
+    FLOAT // = 0x1406
 
     guarded
-    DEPTH_COMPONENT: 0x1902
+    DEPTH_COMPONENT // = 0x1902
 
     guarded
-    ALPHA: 0x1906
+    ALPHA // = 0x1906
 
     guarded
-    RGB: 0x1907
+    RGB // = 0x1907
 
     guarded
-    RGBA: 0x1908
+    RGBA // = 0x1908
 
     guarded
-    LUMINANCE: 0x1909
+    LUMINANCE // = 0x1909
 
     guarded
-    LUMINANCE_ALPHA: 0x190A
+    LUMINANCE_ALPHA // = 0x190A
 
     guarded
-    UNSIGNED_SHORT_4_4_4_4: 0x8033
+    UNSIGNED_SHORT_4_4_4_4 // = 0x8033
 
     guarded
-    UNSIGNED_SHORT_5_5_5_1: 0x8034
+    UNSIGNED_SHORT_5_5_5_1 // = 0x8034
 
     guarded
-    UNSIGNED_SHORT_5_6_5: 0x8363
+    UNSIGNED_SHORT_5_6_5 // = 0x8363
 
     guarded
-    FRAGMENT_SHADER: 0x8B30
+    FRAGMENT_SHADER // = 0x8B30
 
     guarded
-    VERTEX_SHADER: 0x8B31
+    VERTEX_SHADER // = 0x8B31
 
     guarded
-    MAX_VERTEX_ATTRIBS: 0x8869
+    MAX_VERTEX_ATTRIBS // = 0x8869
 
     guarded
-    MAX_VERTEX_UNIFORM_VECTORS: 0x8DFB
+    MAX_VERTEX_UNIFORM_VECTORS // = 0x8DFB
 
     guarded
-    MAX_VARYING_VECTORS: 0x8DFC
+    MAX_VARYING_VECTORS // = 0x8DFC
 
     guarded
-    MAX_COMBINED_TEXTURE_IMAGE_UNITS: 0x8B4D
+    MAX_COMBINED_TEXTURE_IMAGE_UNITS // = 0x8B4D
 
     guarded
-    MAX_VERTEX_TEXTURE_IMAGE_UNITS: 0x8B4C
+    MAX_VERTEX_TEXTURE_IMAGE_UNITS // = 0x8B4C
 
     guarded
-    MAX_TEXTURE_IMAGE_UNITS: 0x8872
+    MAX_TEXTURE_IMAGE_UNITS // = 0x8872
 
     guarded
-    MAX_FRAGMENT_UNIFORM_VECTORS: 0x8DFD
+    MAX_FRAGMENT_UNIFORM_VECTORS // = 0x8DFD
 
     guarded
-    SHADER_TYPE: 0x8B4F
+    SHADER_TYPE // = 0x8B4F
 
     guarded
-    DELETE_STATUS: 0x8B80
+    DELETE_STATUS // = 0x8B80
 
     guarded
-    LINK_STATUS: 0x8B82
+    LINK_STATUS // = 0x8B82
 
     guarded
-    VALIDATE_STATUS: 0x8B83
+    VALIDATE_STATUS // = 0x8B83
 
     guarded
-    ATTACHED_SHADERS: 0x8B85
+    ATTACHED_SHADERS // = 0x8B85
 
     guarded
-    ACTIVE_UNIFORMS: 0x8B86
+    ACTIVE_UNIFORMS // = 0x8B86
 
     guarded
-    ACTIVE_ATTRIBUTES: 0x8B89
+    ACTIVE_ATTRIBUTES // = 0x8B89
 
     guarded
-    SHADING_LANGUAGE_VERSION: 0x8B8C
+    SHADING_LANGUAGE_VERSION // = 0x8B8C
 
     guarded
-    CURRENT_PROGRAM: 0x8B8D
+    CURRENT_PROGRAM // = 0x8B8D
 
     guarded
-    NEVER: 0x0200
+    NEVER // = 0x0200
 
     guarded
-    LESS: 0x0201
+    LESS // = 0x0201
 
     guarded
-    EQUAL: 0x0202
+    EQUAL // = 0x0202
 
     guarded
-    LEQUAL: 0x0203
+    LEQUAL // = 0x0203
 
     guarded
-    GREATER: 0x0204
+    GREATER // = 0x0204
 
     guarded
-    NOTEQUAL: 0x0205
+    NOTEQUAL // = 0x0205
 
     guarded
-    GEQUAL: 0x0206
+    GEQUAL // = 0x0206
 
     guarded
-    ALWAYS: 0x0207
+    ALWAYS // = 0x0207
 
     guarded
-    KEEP: 0x1E00
+    KEEP // = 0x1E00
 
     guarded
-    REPLACE: 0x1E01
+    REPLACE // = 0x1E01
 
     guarded
-    INCR: 0x1E02
+    INCR // = 0x1E02
 
     guarded
-    DECR: 0x1E03
+    DECR // = 0x1E03
 
     guarded
-    INVERT: 0x150A
+    INVERT // = 0x150A
 
     guarded
-    INCR_WRAP: 0x8507
+    INCR_WRAP // = 0x8507
 
     guarded
-    DECR_WRAP: 0x8508
+    DECR_WRAP // = 0x8508
 
     guarded
-    VENDOR: 0x1F00
+    VENDOR // = 0x1F00
 
     guarded
-    RENDERER: 0x1F01
+    RENDERER // = 0x1F01
 
     guarded
-    VERSION: 0x1F02
+    VERSION // = 0x1F02
 
     guarded
-    NEAREST: 0x2600
+    NEAREST // = 0x2600
 
     guarded
-    LINEAR: 0x2601
+    LINEAR // = 0x2601
 
     guarded
-    NEAREST_MIPMAP_NEAREST: 0x2700
+    NEAREST_MIPMAP_NEAREST // = 0x2700
 
     guarded
-    LINEAR_MIPMAP_NEAREST: 0x2701
+    LINEAR_MIPMAP_NEAREST // = 0x2701
 
     guarded
-    NEAREST_MIPMAP_LINEAR: 0x2702
+    NEAREST_MIPMAP_LINEAR // = 0x2702
 
     guarded
-    LINEAR_MIPMAP_LINEAR: 0x2703
+    LINEAR_MIPMAP_LINEAR // = 0x2703
 
     guarded
-    TEXTURE_MAG_FILTER: 0x2800
+    TEXTURE_MAG_FILTER // = 0x2800
 
     guarded
-    TEXTURE_MIN_FILTER: 0x2801
+    TEXTURE_MIN_FILTER // = 0x2801
 
     guarded
-    TEXTURE_WRAP_S: 0x2802
+    TEXTURE_WRAP_S // = 0x2802
 
     guarded
-    TEXTURE_WRAP_T: 0x2803
+    TEXTURE_WRAP_T // = 0x2803
 
     guarded
-    TEXTURE_2D: 0x0DE1
+    TEXTURE_2D // = 0x0DE1
 
     guarded
-    TEXTURE: 0x1702
+    TEXTURE // = 0x1702
 
     guarded
-    TEXTURE_CUBE_MAP: 0x8513
+    TEXTURE_CUBE_MAP // = 0x8513
 
     guarded
-    TEXTURE_BINDING_CUBE_MAP: 0x8514
+    TEXTURE_BINDING_CUBE_MAP // = 0x8514
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_X: 0x8515
+    TEXTURE_CUBE_MAP_POSITIVE_X // = 0x8515
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_X: 0x8516
+    TEXTURE_CUBE_MAP_NEGATIVE_X // = 0x8516
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_Y: 0x8517
+    TEXTURE_CUBE_MAP_POSITIVE_Y // = 0x8517
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_Y: 0x8518
+    TEXTURE_CUBE_MAP_NEGATIVE_Y // = 0x8518
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_Z: 0x8519
+    TEXTURE_CUBE_MAP_POSITIVE_Z // = 0x8519
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_Z: 0x851A
+    TEXTURE_CUBE_MAP_NEGATIVE_Z // = 0x851A
 
     guarded
-    MAX_CUBE_MAP_TEXTURE_SIZE: 0x851C
+    MAX_CUBE_MAP_TEXTURE_SIZE // = 0x851C
 
     guarded
-    TEXTURE0: 0x84C0
+    TEXTURE0 // = 0x84C0
 
     guarded
-    TEXTURE1: 0x84C1
+    TEXTURE1 // = 0x84C1
 
     guarded
-    TEXTURE2: 0x84C2
+    TEXTURE2 // = 0x84C2
 
     guarded
-    TEXTURE3: 0x84C3
+    TEXTURE3 // = 0x84C3
 
     guarded
-    TEXTURE4: 0x84C4
+    TEXTURE4 // = 0x84C4
 
     guarded
-    TEXTURE5: 0x84C5
+    TEXTURE5 // = 0x84C5
 
     guarded
-    TEXTURE6: 0x84C6
+    TEXTURE6 // = 0x84C6
 
     guarded
-    TEXTURE7: 0x84C7
+    TEXTURE7 // = 0x84C7
 
     guarded
-    TEXTURE8: 0x84C8
+    TEXTURE8 // = 0x84C8
 
     guarded
-    TEXTURE9: 0x84C9
+    TEXTURE9 // = 0x84C9
 
     guarded
-    TEXTURE10: 0x84CA
+    TEXTURE10 // = 0x84CA
 
     guarded
-    TEXTURE11: 0x84CB
+    TEXTURE11 // = 0x84CB
 
     guarded
-    TEXTURE12: 0x84CC
+    TEXTURE12 // = 0x84CC
 
     guarded
-    TEXTURE13: 0x84CD
+    TEXTURE13 // = 0x84CD
 
     guarded
-    TEXTURE14: 0x84CE
+    TEXTURE14 // = 0x84CE
 
     guarded
-    TEXTURE15: 0x84CF
+    TEXTURE15 // = 0x84CF
 
     guarded
-    TEXTURE16: 0x84D0
+    TEXTURE16 // = 0x84D0
 
     guarded
-    TEXTURE17: 0x84D1
+    TEXTURE17 // = 0x84D1
 
     guarded
-    TEXTURE18: 0x84D2
+    TEXTURE18 // = 0x84D2
 
     guarded
-    TEXTURE19: 0x84D3
+    TEXTURE19 // = 0x84D3
 
     guarded
-    TEXTURE20: 0x84D4
+    TEXTURE20 // = 0x84D4
 
     guarded
-    TEXTURE21: 0x84D5
+    TEXTURE21 // = 0x84D5
 
     guarded
-    TEXTURE22: 0x84D6
+    TEXTURE22 // = 0x84D6
 
     guarded
-    TEXTURE23: 0x84D7
+    TEXTURE23 // = 0x84D7
 
     guarded
-    TEXTURE24: 0x84D8
+    TEXTURE24 // = 0x84D8
 
     guarded
-    TEXTURE25: 0x84D9
+    TEXTURE25 // = 0x84D9
 
     guarded
-    TEXTURE26: 0x84DA
+    TEXTURE26 // = 0x84DA
 
     guarded
-    TEXTURE27: 0x84DB
+    TEXTURE27 // = 0x84DB
 
     guarded
-    TEXTURE28: 0x84DC
+    TEXTURE28 // = 0x84DC
 
     guarded
-    TEXTURE29: 0x84DD
+    TEXTURE29 // = 0x84DD
 
     guarded
-    TEXTURE30: 0x84DE
+    TEXTURE30 // = 0x84DE
 
     guarded
-    TEXTURE31: 0x84DF
+    TEXTURE31 // = 0x84DF
 
     guarded
-    ACTIVE_TEXTURE: 0x84E0
+    ACTIVE_TEXTURE // = 0x84E0
 
     guarded
-    REPEAT: 0x2901
+    REPEAT // = 0x2901
 
     guarded
-    CLAMP_TO_EDGE: 0x812F
+    CLAMP_TO_EDGE // = 0x812F
 
     guarded
-    MIRRORED_REPEAT: 0x8370
+    MIRRORED_REPEAT // = 0x8370
 
     guarded
-    FLOAT_VEC2: 0x8B50
+    FLOAT_VEC2 // = 0x8B50
 
     guarded
-    FLOAT_VEC3: 0x8B51
+    FLOAT_VEC3 // = 0x8B51
 
     guarded
-    FLOAT_VEC4: 0x8B52
+    FLOAT_VEC4 // = 0x8B52
 
     guarded
-    INT_VEC2: 0x8B53
+    INT_VEC2 // = 0x8B53
 
     guarded
-    INT_VEC3: 0x8B54
+    INT_VEC3 // = 0x8B54
 
     guarded
-    INT_VEC4: 0x8B55
+    INT_VEC4 // = 0x8B55
 
     guarded
-    BOOL: 0x8B56
+    BOOL // = 0x8B56
 
     guarded
-    BOOL_VEC2: 0x8B57
+    BOOL_VEC2 // = 0x8B57
 
     guarded
-    BOOL_VEC3: 0x8B58
+    BOOL_VEC3 // = 0x8B58
 
     guarded
-    BOOL_VEC4: 0x8B59
+    BOOL_VEC4 // = 0x8B59
 
     guarded
-    FLOAT_MAT2: 0x8B5A
+    FLOAT_MAT2 // = 0x8B5A
 
     guarded
-    FLOAT_MAT3: 0x8B5B
+    FLOAT_MAT3 // = 0x8B5B
 
     guarded
-    FLOAT_MAT4: 0x8B5C
+    FLOAT_MAT4 // = 0x8B5C
 
     guarded
-    SAMPLER_2D: 0x8B5E
+    SAMPLER_2D // = 0x8B5E
 
     guarded
-    SAMPLER_CUBE: 0x8B60
+    SAMPLER_CUBE // = 0x8B60
 
     guarded
-    VERTEX_ATTRIB_ARRAY_ENABLED: 0x8622
+    VERTEX_ATTRIB_ARRAY_ENABLED // = 0x8622
 
     guarded
-    VERTEX_ATTRIB_ARRAY_SIZE: 0x8623
+    VERTEX_ATTRIB_ARRAY_SIZE // = 0x8623
 
     guarded
-    VERTEX_ATTRIB_ARRAY_STRIDE: 0x8624
+    VERTEX_ATTRIB_ARRAY_STRIDE // = 0x8624
 
     guarded
-    VERTEX_ATTRIB_ARRAY_TYPE: 0x8625
+    VERTEX_ATTRIB_ARRAY_TYPE // = 0x8625
 
     guarded
-    VERTEX_ATTRIB_ARRAY_NORMALIZED: 0x886A
+    VERTEX_ATTRIB_ARRAY_NORMALIZED // = 0x886A
 
     guarded
-    VERTEX_ATTRIB_ARRAY_POINTER: 0x8645
+    VERTEX_ATTRIB_ARRAY_POINTER // = 0x8645
 
     guarded
-    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: 0x889F
+    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING // = 0x889F
 
     guarded
-    IMPLEMENTATION_COLOR_READ_TYPE: 0x8B9A
+    IMPLEMENTATION_COLOR_READ_TYPE // = 0x8B9A
 
     guarded
-    IMPLEMENTATION_COLOR_READ_FORMAT: 0x8B9B
+    IMPLEMENTATION_COLOR_READ_FORMAT // = 0x8B9B
 
     guarded
-    COMPILE_STATUS: 0x8B81
+    COMPILE_STATUS // = 0x8B81
 
     guarded
-    LOW_FLOAT: 0x8DF0
+    LOW_FLOAT // = 0x8DF0
 
     guarded
-    MEDIUM_FLOAT: 0x8DF1
+    MEDIUM_FLOAT // = 0x8DF1
 
     guarded
-    HIGH_FLOAT: 0x8DF2
+    HIGH_FLOAT // = 0x8DF2
 
     guarded
-    LOW_INT: 0x8DF3
+    LOW_INT // = 0x8DF3
 
     guarded
-    MEDIUM_INT: 0x8DF4
+    MEDIUM_INT // = 0x8DF4
 
     guarded
-    HIGH_INT: 0x8DF5
+    HIGH_INT // = 0x8DF5
 
     guarded
-    FRAMEBUFFER: 0x8D40
+    FRAMEBUFFER // = 0x8D40
 
     guarded
-    RENDERBUFFER: 0x8D41
+    RENDERBUFFER // = 0x8D41
 
     guarded
-    RGBA4: 0x8056
+    RGBA4 // = 0x8056
 
     guarded
-    RGB5_A1: 0x8057
+    RGB5_A1 // = 0x8057
 
     guarded
-    RGB565: 0x8D62
+    RGB565 // = 0x8D62
 
     guarded
-    DEPTH_COMPONENT16: 0x81A5
+    DEPTH_COMPONENT16 // = 0x81A5
 
     guarded
-    STENCIL_INDEX8: 0x8D48
+    STENCIL_INDEX8 // = 0x8D48
 
     guarded
-    DEPTH_STENCIL: 0x84F9
+    DEPTH_STENCIL // = 0x84F9
 
     guarded
-    RENDERBUFFER_WIDTH: 0x8D42
+    RENDERBUFFER_WIDTH // = 0x8D42
 
     guarded
-    RENDERBUFFER_HEIGHT: 0x8D43
+    RENDERBUFFER_HEIGHT // = 0x8D43
 
     guarded
-    RENDERBUFFER_INTERNAL_FORMAT: 0x8D44
+    RENDERBUFFER_INTERNAL_FORMAT // = 0x8D44
 
     guarded
-    RENDERBUFFER_RED_SIZE: 0x8D50
+    RENDERBUFFER_RED_SIZE // = 0x8D50
 
     guarded
-    RENDERBUFFER_GREEN_SIZE: 0x8D51
+    RENDERBUFFER_GREEN_SIZE // = 0x8D51
 
     guarded
-    RENDERBUFFER_BLUE_SIZE: 0x8D52
+    RENDERBUFFER_BLUE_SIZE // = 0x8D52
 
     guarded
-    RENDERBUFFER_ALPHA_SIZE: 0x8D53
+    RENDERBUFFER_ALPHA_SIZE // = 0x8D53
 
     guarded
-    RENDERBUFFER_DEPTH_SIZE: 0x8D54
+    RENDERBUFFER_DEPTH_SIZE // = 0x8D54
 
     guarded
-    RENDERBUFFER_STENCIL_SIZE: 0x8D55
+    RENDERBUFFER_STENCIL_SIZE // = 0x8D55
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: 0x8CD0
+    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE // = 0x8CD0
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: 0x8CD1
+    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME // = 0x8CD1
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: 0x8CD2
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL // = 0x8CD2
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: 0x8CD3
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE // = 0x8CD3
 
     guarded
-    COLOR_ATTACHMENT0: 0x8CE0
+    COLOR_ATTACHMENT0 // = 0x8CE0
 
     guarded
-    DEPTH_ATTACHMENT: 0x8D00
+    DEPTH_ATTACHMENT // = 0x8D00
 
     guarded
-    STENCIL_ATTACHMENT: 0x8D20
+    STENCIL_ATTACHMENT // = 0x8D20
 
     guarded
-    DEPTH_STENCIL_ATTACHMENT: 0x821A
+    DEPTH_STENCIL_ATTACHMENT // = 0x821A
 
     guarded
-    NONE: 0
+    NONE // = 0
 
     guarded
-    FRAMEBUFFER_COMPLETE: 0x8CD5
+    FRAMEBUFFER_COMPLETE // = 0x8CD5
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_ATTACHMENT: 0x8CD6
+    FRAMEBUFFER_INCOMPLETE_ATTACHMENT // = 0x8CD6
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: 0x8CD7
+    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT // = 0x8CD7
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_DIMENSIONS: 0x8CD9
+    FRAMEBUFFER_INCOMPLETE_DIMENSIONS // = 0x8CD9
 
     guarded
-    FRAMEBUFFER_UNSUPPORTED: 0x8CDD
+    FRAMEBUFFER_UNSUPPORTED // = 0x8CDD
 
     guarded
-    FRAMEBUFFER_BINDING: 0x8CA6
+    FRAMEBUFFER_BINDING // = 0x8CA6
 
     guarded
-    RENDERBUFFER_BINDING: 0x8CA7
+    RENDERBUFFER_BINDING // = 0x8CA7
 
     guarded
-    MAX_RENDERBUFFER_SIZE: 0x84E8
+    MAX_RENDERBUFFER_SIZE // = 0x84E8
 
     guarded
-    INVALID_FRAMEBUFFER_OPERATION: 0x0506
+    INVALID_FRAMEBUFFER_OPERATION // = 0x0506
 
     guarded
-    UNPACK_FLIP_Y_WEBGL: 0x9240
+    UNPACK_FLIP_Y_WEBGL // = 0x9240
 
     guarded
-    UNPACK_PREMULTIPLY_ALPHA_WEBGL: 0x9241
+    UNPACK_PREMULTIPLY_ALPHA_WEBGL // = 0x9241
 
     guarded
-    CONTEXT_LOST_WEBGL: 0x9242
+    CONTEXT_LOST_WEBGL // = 0x9242
 
     guarded
-    UNPACK_COLORSPACE_CONVERSION_WEBGL: 0x9243
+    UNPACK_COLORSPACE_CONVERSION_WEBGL // = 0x9243
 
     guarded
-    BROWSER_DEFAULT_WEBGL: 0x9244
+    BROWSER_DEFAULT_WEBGL // = 0x9244
   }
 
   type WebGL2RenderingContextBase = aspect
@@ -23128,793 +23074,793 @@ external
     operation waitSync(sync: WebGLSync, flags: GLbitfield, timeout: GLint64)
 
     guarded 
-    READ_BUFFER: 0x0C02
+    READ_BUFFER // = 0x0C02
 
     guarded 
-    UNPACK_ROW_LENGTH: 0x0CF2
+    UNPACK_ROW_LENGTH // = 0x0CF2
 
     guarded 
-    UNPACK_SKIP_ROWS: 0x0CF3
+    UNPACK_SKIP_ROWS // = 0x0CF3
 
     guarded 
-    UNPACK_SKIP_PIXELS: 0x0CF4
+    UNPACK_SKIP_PIXELS // = 0x0CF4
 
     guarded 
-    PACK_ROW_LENGTH: 0x0D02
+    PACK_ROW_LENGTH // = 0x0D02
 
     guarded 
-    PACK_SKIP_ROWS: 0x0D03
+    PACK_SKIP_ROWS // = 0x0D03
 
     guarded 
-    PACK_SKIP_PIXELS: 0x0D04
+    PACK_SKIP_PIXELS // = 0x0D04
 
     guarded 
-    COLOR: 0x1800
+    COLOR // = 0x1800
 
     guarded 
-    DEPTH: 0x1801
+    DEPTH // = 0x1801
 
     guarded 
-    STENCIL: 0x1802
+    STENCIL // = 0x1802
 
     guarded 
-    RED: 0x1903
+    RED // = 0x1903
 
     guarded 
-    RGB8: 0x8051
+    RGB8 // = 0x8051
 
     guarded 
-    RGBA8: 0x8058
+    RGBA8 // = 0x8058
 
     guarded 
-    RGB10_A2: 0x8059
+    RGB10_A2 // = 0x8059
 
     guarded 
-    TEXTURE_BINDING_3D: 0x806A
+    TEXTURE_BINDING_3D // = 0x806A
 
     guarded 
-    UNPACK_SKIP_IMAGES: 0x806D
+    UNPACK_SKIP_IMAGES // = 0x806D
 
     guarded 
-    UNPACK_IMAGE_HEIGHT: 0x806E
+    UNPACK_IMAGE_HEIGHT // = 0x806E
 
     guarded 
-    TEXTURE_3D: 0x806F
+    TEXTURE_3D // = 0x806F
 
     guarded 
-    TEXTURE_WRAP_R: 0x8072
+    TEXTURE_WRAP_R // = 0x8072
 
     guarded 
-    MAX_3D_TEXTURE_SIZE: 0x8073
+    MAX_3D_TEXTURE_SIZE // = 0x8073
 
     guarded 
-    UNSIGNED_INT_2_10_10_10_REV: 0x8368
+    UNSIGNED_INT_2_10_10_10_REV // = 0x8368
 
     guarded 
-    MAX_ELEMENTS_VERTICES: 0x80E8
+    MAX_ELEMENTS_VERTICES // = 0x80E8
 
     guarded 
-    MAX_ELEMENTS_INDICES: 0x80E9
+    MAX_ELEMENTS_INDICES // = 0x80E9
 
     guarded 
-    TEXTURE_MIN_LOD: 0x813A
+    TEXTURE_MIN_LOD // = 0x813A
 
     guarded 
-    TEXTURE_MAX_LOD: 0x813B
+    TEXTURE_MAX_LOD // = 0x813B
 
     guarded 
-    TEXTURE_BASE_LEVEL: 0x813C
+    TEXTURE_BASE_LEVEL // = 0x813C
 
     guarded 
-    TEXTURE_MAX_LEVEL: 0x813D
+    TEXTURE_MAX_LEVEL // = 0x813D
 
     guarded 
-    MIN: 0x8007
+    MIN // = 0x8007
 
     guarded 
-    MAX: 0x8008
+    MAX // = 0x8008
 
     guarded 
-    DEPTH_COMPONENT24: 0x81A6
+    DEPTH_COMPONENT24 // = 0x81A6
 
     guarded 
-    MAX_TEXTURE_LOD_BIAS: 0x84FD
+    MAX_TEXTURE_LOD_BIAS // = 0x84FD
 
     guarded 
-    TEXTURE_COMPARE_MODE: 0x884C
+    TEXTURE_COMPARE_MODE // = 0x884C
 
     guarded 
-    TEXTURE_COMPARE_FUNC: 0x884D
+    TEXTURE_COMPARE_FUNC // = 0x884D
 
     guarded 
-    CURRENT_QUERY: 0x8865
+    CURRENT_QUERY // = 0x8865
 
     guarded 
-    QUERY_RESULT: 0x8866
+    QUERY_RESULT // = 0x8866
 
     guarded 
-    QUERY_RESULT_AVAILABLE: 0x8867
+    QUERY_RESULT_AVAILABLE // = 0x8867
 
     guarded 
-    STREAM_READ: 0x88E1
+    STREAM_READ // = 0x88E1
 
     guarded 
-    STREAM_COPY: 0x88E2
+    STREAM_COPY // = 0x88E2
 
     guarded 
-    STATIC_READ: 0x88E5
+    STATIC_READ // = 0x88E5
 
     guarded 
-    STATIC_COPY: 0x88E6
+    STATIC_COPY // = 0x88E6
 
     guarded 
-    DYNAMIC_READ: 0x88E9
+    DYNAMIC_READ // = 0x88E9
 
     guarded 
-    DYNAMIC_COPY: 0x88EA
+    DYNAMIC_COPY // = 0x88EA
 
     guarded 
-    MAX_DRAW_BUFFERS: 0x8824
+    MAX_DRAW_BUFFERS // = 0x8824
 
     guarded 
-    DRAW_BUFFER0: 0x8825
+    DRAW_BUFFER0 // = 0x8825
 
     guarded 
-    DRAW_BUFFER1: 0x8826
+    DRAW_BUFFER1 // = 0x8826
 
     guarded 
-    DRAW_BUFFER2: 0x8827
+    DRAW_BUFFER2 // = 0x8827
 
     guarded 
-    DRAW_BUFFER3: 0x8828
+    DRAW_BUFFER3 // = 0x8828
 
     guarded 
-    DRAW_BUFFER4: 0x8829
+    DRAW_BUFFER4 // = 0x8829
 
     guarded 
-    DRAW_BUFFER5: 0x882A
+    DRAW_BUFFER5 // = 0x882A
 
     guarded 
-    DRAW_BUFFER6: 0x882B
+    DRAW_BUFFER6 // = 0x882B
 
     guarded 
-    DRAW_BUFFER7: 0x882C
+    DRAW_BUFFER7 // = 0x882C
 
     guarded 
-    DRAW_BUFFER8: 0x882D
+    DRAW_BUFFER8 // = 0x882D
 
     guarded 
-    DRAW_BUFFER9: 0x882E
+    DRAW_BUFFER9 // = 0x882E
 
     guarded 
-    DRAW_BUFFER10: 0x882F
+    DRAW_BUFFER10 // = 0x882F
 
     guarded 
-    DRAW_BUFFER11: 0x8830
+    DRAW_BUFFER11 // = 0x8830
 
     guarded 
-    DRAW_BUFFER12: 0x8831
+    DRAW_BUFFER12 // = 0x8831
 
     guarded 
-    DRAW_BUFFER13: 0x8832
+    DRAW_BUFFER13 // = 0x8832
 
     guarded 
-    DRAW_BUFFER14: 0x8833
+    DRAW_BUFFER14 // = 0x8833
 
     guarded 
-    DRAW_BUFFER15: 0x8834
+    DRAW_BUFFER15 // = 0x8834
 
     guarded 
-    MAX_FRAGMENT_UNIFORM_COMPONENTS: 0x8B49
+    MAX_FRAGMENT_UNIFORM_COMPONENTS // = 0x8B49
 
     guarded 
-    MAX_VERTEX_UNIFORM_COMPONENTS: 0x8B4A
+    MAX_VERTEX_UNIFORM_COMPONENTS // = 0x8B4A
 
     guarded 
-    SAMPLER_3D: 0x8B5F
+    SAMPLER_3D // = 0x8B5F
 
     guarded 
-    SAMPLER_2D_SHADOW: 0x8B62
+    SAMPLER_2D_SHADOW // = 0x8B62
 
     guarded 
-    FRAGMENT_SHADER_DERIVATIVE_HINT: 0x8B8B
+    FRAGMENT_SHADER_DERIVATIVE_HINT // = 0x8B8B
 
     guarded 
-    PIXEL_PACK_BUFFER: 0x88EB
+    PIXEL_PACK_BUFFER // = 0x88EB
 
     guarded 
-    PIXEL_UNPACK_BUFFER: 0x88EC
+    PIXEL_UNPACK_BUFFER // = 0x88EC
 
     guarded 
-    PIXEL_PACK_BUFFER_BINDING: 0x88ED
+    PIXEL_PACK_BUFFER_BINDING // = 0x88ED
 
     guarded 
-    PIXEL_UNPACK_BUFFER_BINDING: 0x88EF
+    PIXEL_UNPACK_BUFFER_BINDING // = 0x88EF
 
     guarded 
-    FLOAT_MAT2x3: 0x8B65
+    FLOAT_MAT2x3 // = 0x8B65
 
     guarded 
-    FLOAT_MAT2x4: 0x8B66
+    FLOAT_MAT2x4 // = 0x8B66
 
     guarded 
-    FLOAT_MAT3x2: 0x8B67
+    FLOAT_MAT3x2 // = 0x8B67
 
     guarded 
-    FLOAT_MAT3x4: 0x8B68
+    FLOAT_MAT3x4 // = 0x8B68
 
     guarded 
-    FLOAT_MAT4x2: 0x8B69
+    FLOAT_MAT4x2 // = 0x8B69
 
     guarded 
-    FLOAT_MAT4x3: 0x8B6A
+    FLOAT_MAT4x3 // = 0x8B6A
 
     guarded 
-    SRGB: 0x8C40
+    SRGB // = 0x8C40
 
     guarded 
-    SRGB8: 0x8C41
+    SRGB8 // = 0x8C41
 
     guarded 
-    SRGB8_ALPHA8: 0x8C43
+    SRGB8_ALPHA8 // = 0x8C43
 
     guarded 
-    COMPARE_REF_TO_TEXTURE: 0x884E
+    COMPARE_REF_TO_TEXTURE // = 0x884E
 
     guarded 
-    RGBA32F: 0x8814
+    RGBA32F // = 0x8814
 
     guarded 
-    RGB32F: 0x8815
+    RGB32F // = 0x8815
 
     guarded 
-    RGBA16F: 0x881A
+    RGBA16F // = 0x881A
 
     guarded 
-    RGB16F: 0x881B
+    RGB16F // = 0x881B
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_INTEGER: 0x88FD
+    VERTEX_ATTRIB_ARRAY_INTEGER // = 0x88FD
 
     guarded 
-    MAX_ARRAY_TEXTURE_LAYERS: 0x88FF
+    MAX_ARRAY_TEXTURE_LAYERS // = 0x88FF
 
     guarded 
-    MIN_PROGRAM_TEXEL_OFFSET: 0x8904
+    MIN_PROGRAM_TEXEL_OFFSET // = 0x8904
 
     guarded 
-    MAX_PROGRAM_TEXEL_OFFSET: 0x8905
+    MAX_PROGRAM_TEXEL_OFFSET // = 0x8905
 
     guarded 
-    MAX_VARYING_COMPONENTS: 0x8B4B
+    MAX_VARYING_COMPONENTS // = 0x8B4B
 
     guarded 
-    TEXTURE_2D_ARRAY: 0x8C1A
+    TEXTURE_2D_ARRAY // = 0x8C1A
 
     guarded 
-    TEXTURE_BINDING_2D_ARRAY: 0x8C1D
+    TEXTURE_BINDING_2D_ARRAY // = 0x8C1D
 
     guarded 
-    R11F_G11F_B10F: 0x8C3A
+    R11F_G11F_B10F // = 0x8C3A
 
     guarded 
-    UNSIGNED_INT_10F_11F_11F_REV: 0x8C3B
+    UNSIGNED_INT_10F_11F_11F_REV // = 0x8C3B
 
     guarded 
-    RGB9_E5: 0x8C3D
+    RGB9_E5 // = 0x8C3D
 
     guarded 
-    UNSIGNED_INT_5_9_9_9_REV: 0x8C3E
+    UNSIGNED_INT_5_9_9_9_REV // = 0x8C3E
 
     guarded 
-    TRANSFORM_FEEDBACK_BUFFER_MODE: 0x8C7F
+    TRANSFORM_FEEDBACK_BUFFER_MODE // = 0x8C7F
 
     guarded 
-    MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: 0x8C80
+    MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS // = 0x8C80
 
     guarded 
-    TRANSFORM_FEEDBACK_VARYINGS: 0x8C83
+    TRANSFORM_FEEDBACK_VARYINGS // = 0x8C83
 
     guarded 
-    TRANSFORM_FEEDBACK_BUFFER_START: 0x8C84
+    TRANSFORM_FEEDBACK_BUFFER_START // = 0x8C84
 
     guarded 
-    TRANSFORM_FEEDBACK_BUFFER_SIZE: 0x8C85
+    TRANSFORM_FEEDBACK_BUFFER_SIZE // = 0x8C85
 
     guarded 
-    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN: 0x8C88
+    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN // = 0x8C88
 
     guarded 
-    RASTERIZER_DISCARD: 0x8C89
+    RASTERIZER_DISCARD // = 0x8C89
 
     guarded 
-    MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: 0x8C8A
+    MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS // = 0x8C8A
 
     guarded 
-    MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS: 0x8C8B
+    MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS // = 0x8C8B
 
     guarded 
-    INTERLEAVED_ATTRIBS: 0x8C8C
+    INTERLEAVED_ATTRIBS // = 0x8C8C
 
     guarded 
-    SEPARATE_ATTRIBS: 0x8C8D
+    SEPARATE_ATTRIBS // = 0x8C8D
 
     guarded 
-    TRANSFORM_FEEDBACK_BUFFER: 0x8C8E
+    TRANSFORM_FEEDBACK_BUFFER // = 0x8C8E
 
     guarded 
-    TRANSFORM_FEEDBACK_BUFFER_BINDING: 0x8C8F
+    TRANSFORM_FEEDBACK_BUFFER_BINDING // = 0x8C8F
 
     guarded 
-    RGBA32UI: 0x8D70
+    RGBA32UI // = 0x8D70
 
     guarded 
-    RGB32UI: 0x8D71
+    RGB32UI // = 0x8D71
 
     guarded 
-    RGBA16UI: 0x8D76
+    RGBA16UI // = 0x8D76
 
     guarded 
-    RGB16UI: 0x8D77
+    RGB16UI // = 0x8D77
 
     guarded 
-    RGBA8UI: 0x8D7C
+    RGBA8UI // = 0x8D7C
 
     guarded 
-    RGB8UI: 0x8D7D
+    RGB8UI // = 0x8D7D
 
     guarded 
-    RGBA32I: 0x8D82
+    RGBA32I // = 0x8D82
 
     guarded 
-    RGB32I: 0x8D83
+    RGB32I // = 0x8D83
 
     guarded 
-    RGBA16I: 0x8D88
+    RGBA16I // = 0x8D88
 
     guarded 
-    RGB16I: 0x8D89
+    RGB16I // = 0x8D89
 
     guarded 
-    RGBA8I: 0x8D8E
+    RGBA8I // = 0x8D8E
 
     guarded 
-    RGB8I: 0x8D8F
+    RGB8I // = 0x8D8F
 
     guarded 
-    RED_INTEGER: 0x8D94
+    RED_INTEGER // = 0x8D94
 
     guarded 
-    RGB_INTEGER: 0x8D98
+    RGB_INTEGER // = 0x8D98
 
     guarded 
-    RGBA_INTEGER: 0x8D99
+    RGBA_INTEGER // = 0x8D99
 
     guarded 
-    SAMPLER_2D_ARRAY: 0x8DC1
+    SAMPLER_2D_ARRAY // = 0x8DC1
 
     guarded 
-    SAMPLER_2D_ARRAY_SHADOW: 0x8DC4
+    SAMPLER_2D_ARRAY_SHADOW // = 0x8DC4
 
     guarded 
-    SAMPLER_CUBE_SHADOW: 0x8DC5
+    SAMPLER_CUBE_SHADOW // = 0x8DC5
 
     guarded 
-    UNSIGNED_INT_VEC2: 0x8DC6
+    UNSIGNED_INT_VEC2 // = 0x8DC6
 
     guarded 
-    UNSIGNED_INT_VEC3: 0x8DC7
+    UNSIGNED_INT_VEC3 // = 0x8DC7
 
     guarded 
-    UNSIGNED_INT_VEC4: 0x8DC8
+    UNSIGNED_INT_VEC4 // = 0x8DC8
 
     guarded 
-    INT_SAMPLER_2D: 0x8DCA
+    INT_SAMPLER_2D // = 0x8DCA
 
     guarded 
-    INT_SAMPLER_3D: 0x8DCB
+    INT_SAMPLER_3D // = 0x8DCB
 
     guarded 
-    INT_SAMPLER_CUBE: 0x8DCC
+    INT_SAMPLER_CUBE // = 0x8DCC
 
     guarded 
-    INT_SAMPLER_2D_ARRAY: 0x8DCF
+    INT_SAMPLER_2D_ARRAY // = 0x8DCF
 
     guarded 
-    UNSIGNED_INT_SAMPLER_2D: 0x8DD2
+    UNSIGNED_INT_SAMPLER_2D // = 0x8DD2
 
     guarded 
-    UNSIGNED_INT_SAMPLER_3D: 0x8DD3
+    UNSIGNED_INT_SAMPLER_3D // = 0x8DD3
 
     guarded 
-    UNSIGNED_INT_SAMPLER_CUBE: 0x8DD4
+    UNSIGNED_INT_SAMPLER_CUBE // = 0x8DD4
 
     guarded 
-    UNSIGNED_INT_SAMPLER_2D_ARRAY: 0x8DD7
+    UNSIGNED_INT_SAMPLER_2D_ARRAY // = 0x8DD7
 
     guarded 
-    DEPTH_COMPONENT32F: 0x8CAC
+    DEPTH_COMPONENT32F // = 0x8CAC
 
     guarded 
-    DEPTH32F_STENCIL8: 0x8CAD
+    DEPTH32F_STENCIL8 // = 0x8CAD
 
     guarded 
-    FLOAT_32_UNSIGNED_INT_24_8_REV: 0x8DAD
+    FLOAT_32_UNSIGNED_INT_24_8_REV // = 0x8DAD
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: 0x8210
+    FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING // = 0x8210
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE: 0x8211
+    FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE // = 0x8211
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_RED_SIZE: 0x8212
+    FRAMEBUFFER_ATTACHMENT_RED_SIZE // = 0x8212
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_GREEN_SIZE: 0x8213
+    FRAMEBUFFER_ATTACHMENT_GREEN_SIZE // = 0x8213
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_BLUE_SIZE: 0x8214
+    FRAMEBUFFER_ATTACHMENT_BLUE_SIZE // = 0x8214
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: 0x8215
+    FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE // = 0x8215
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: 0x8216
+    FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE // = 0x8216
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE: 0x8217
+    FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE // = 0x8217
 
     guarded 
-    FRAMEBUFFER_DEFAULT: 0x8218
+    FRAMEBUFFER_DEFAULT // = 0x8218
 
     guarded 
-    UNSIGNED_INT_24_8: 0x84FA
+    UNSIGNED_INT_24_8 // = 0x84FA
 
     guarded 
-    DEPTH24_STENCIL8: 0x88F0
+    DEPTH24_STENCIL8 // = 0x88F0
 
     guarded 
-    UNSIGNED_NORMALIZED: 0x8C17
+    UNSIGNED_NORMALIZED // = 0x8C17
 
     guarded 
-    DRAW_FRAMEBUFFER_BINDING: 0x8CA6
+    DRAW_FRAMEBUFFER_BINDING // = 0x8CA6
 
     guarded 
-    READ_FRAMEBUFFER: 0x8CA8
+    READ_FRAMEBUFFER // = 0x8CA8
 
     guarded 
-    DRAW_FRAMEBUFFER: 0x8CA9
+    DRAW_FRAMEBUFFER // = 0x8CA9
 
     guarded 
-    READ_FRAMEBUFFER_BINDING: 0x8CAA
+    READ_FRAMEBUFFER_BINDING // = 0x8CAA
 
     guarded 
-    RENDERBUFFER_SAMPLES: 0x8CAB
+    RENDERBUFFER_SAMPLES // = 0x8CAB
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: 0x8CD4
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER // = 0x8CD4
 
     guarded 
-    MAX_COLOR_ATTACHMENTS: 0x8CDF
+    MAX_COLOR_ATTACHMENTS // = 0x8CDF
 
     guarded 
-    COLOR_ATTACHMENT1: 0x8CE1
+    COLOR_ATTACHMENT1 // = 0x8CE1
 
     guarded 
-    COLOR_ATTACHMENT2: 0x8CE2
+    COLOR_ATTACHMENT2 // = 0x8CE2
 
     guarded 
-    COLOR_ATTACHMENT3: 0x8CE3
+    COLOR_ATTACHMENT3 // = 0x8CE3
 
     guarded 
-    COLOR_ATTACHMENT4: 0x8CE4
+    COLOR_ATTACHMENT4 // = 0x8CE4
 
     guarded 
-    COLOR_ATTACHMENT5: 0x8CE5
+    COLOR_ATTACHMENT5 // = 0x8CE5
 
     guarded 
-    COLOR_ATTACHMENT6: 0x8CE6
+    COLOR_ATTACHMENT6 // = 0x8CE6
 
     guarded 
-    COLOR_ATTACHMENT7: 0x8CE7
+    COLOR_ATTACHMENT7 // = 0x8CE7
 
     guarded 
-    COLOR_ATTACHMENT8: 0x8CE8
+    COLOR_ATTACHMENT8 // = 0x8CE8
 
     guarded 
-    COLOR_ATTACHMENT9: 0x8CE9
+    COLOR_ATTACHMENT9 // = 0x8CE9
 
     guarded 
-    COLOR_ATTACHMENT10: 0x8CEA
+    COLOR_ATTACHMENT10 // = 0x8CEA
 
     guarded 
-    COLOR_ATTACHMENT11: 0x8CEB
+    COLOR_ATTACHMENT11 // = 0x8CEB
 
     guarded 
-    COLOR_ATTACHMENT12: 0x8CEC
+    COLOR_ATTACHMENT12 // = 0x8CEC
 
     guarded 
-    COLOR_ATTACHMENT13: 0x8CED
+    COLOR_ATTACHMENT13 // = 0x8CED
 
     guarded 
-    COLOR_ATTACHMENT14: 0x8CEE
+    COLOR_ATTACHMENT14 // = 0x8CEE
 
     guarded 
-    COLOR_ATTACHMENT15: 0x8CEF
+    COLOR_ATTACHMENT15 // = 0x8CEF
 
     guarded 
-    FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: 0x8D56
+    FRAMEBUFFER_INCOMPLETE_MULTISAMPLE // = 0x8D56
 
     guarded 
-    MAX_SAMPLES: 0x8D57
+    MAX_SAMPLES // = 0x8D57
 
     guarded 
-    HALF_FLOAT: 0x140B
+    HALF_FLOAT // = 0x140B
 
     guarded 
-    RG: 0x8227
+    RG // = 0x8227
 
     guarded 
-    RG_INTEGER: 0x8228
+    RG_INTEGER // = 0x8228
 
     guarded 
-    R8: 0x8229
+    R8 // = 0x8229
 
     guarded 
-    RG8: 0x822B
+    RG8 // = 0x822B
 
     guarded 
-    R16F: 0x822D
+    R16F // = 0x822D
 
     guarded 
-    R32F: 0x822E
+    R32F // = 0x822E
 
     guarded 
-    RG16F: 0x822F
+    RG16F // = 0x822F
 
     guarded 
-    RG32F: 0x8230
+    RG32F // = 0x8230
 
     guarded 
-    R8I: 0x8231
+    R8I // = 0x8231
 
     guarded 
-    R8UI: 0x8232
+    R8UI // = 0x8232
 
     guarded 
-    R16I: 0x8233
+    R16I // = 0x8233
 
     guarded 
-    R16UI: 0x8234
+    R16UI // = 0x8234
 
     guarded 
-    R32I: 0x8235
+    R32I // = 0x8235
 
     guarded 
-    R32UI: 0x8236
+    R32UI // = 0x8236
 
     guarded 
-    RG8I: 0x8237
+    RG8I // = 0x8237
 
     guarded 
-    RG8UI: 0x8238
+    RG8UI // = 0x8238
 
     guarded 
-    RG16I: 0x8239
+    RG16I // = 0x8239
 
     guarded 
-    RG16UI: 0x823A
+    RG16UI // = 0x823A
 
     guarded 
-    RG32I: 0x823B
+    RG32I // = 0x823B
 
     guarded 
-    RG32UI: 0x823C
+    RG32UI // = 0x823C
 
     guarded 
-    VERTEX_ARRAY_BINDING: 0x85B5
+    VERTEX_ARRAY_BINDING // = 0x85B5
 
     guarded 
-    R8_SNORM: 0x8F94
+    R8_SNORM // = 0x8F94
 
     guarded 
-    RG8_SNORM: 0x8F95
+    RG8_SNORM // = 0x8F95
 
     guarded 
-    RGB8_SNORM: 0x8F96
+    RGB8_SNORM // = 0x8F96
 
     guarded 
-    RGBA8_SNORM: 0x8F97
+    RGBA8_SNORM // = 0x8F97
 
     guarded 
-    SIGNED_NORMALIZED: 0x8F9C
+    SIGNED_NORMALIZED // = 0x8F9C
 
     guarded 
-    COPY_READ_BUFFER: 0x8F36
+    COPY_READ_BUFFER // = 0x8F36
 
     guarded 
-    COPY_WRITE_BUFFER: 0x8F37
+    COPY_WRITE_BUFFER // = 0x8F37
 
     guarded 
-    COPY_READ_BUFFER_BINDING: 0x8F36
+    COPY_READ_BUFFER_BINDING // = 0x8F36
 
     guarded 
-    COPY_WRITE_BUFFER_BINDING: 0x8F37
+    COPY_WRITE_BUFFER_BINDING // = 0x8F37
 
     guarded 
-    UNIFORM_BUFFER: 0x8A11
+    UNIFORM_BUFFER // = 0x8A11
 
     guarded 
-    UNIFORM_BUFFER_BINDING: 0x8A28
+    UNIFORM_BUFFER_BINDING // = 0x8A28
 
     guarded 
-    UNIFORM_BUFFER_START: 0x8A29
+    UNIFORM_BUFFER_START // = 0x8A29
 
     guarded 
-    UNIFORM_BUFFER_SIZE: 0x8A2A
+    UNIFORM_BUFFER_SIZE // = 0x8A2A
 
     guarded 
-    MAX_VERTEX_UNIFORM_BLOCKS: 0x8A2B
+    MAX_VERTEX_UNIFORM_BLOCKS // = 0x8A2B
 
     guarded 
-    MAX_FRAGMENT_UNIFORM_BLOCKS: 0x8A2D
+    MAX_FRAGMENT_UNIFORM_BLOCKS // = 0x8A2D
 
     guarded 
-    MAX_COMBINED_UNIFORM_BLOCKS: 0x8A2E
+    MAX_COMBINED_UNIFORM_BLOCKS // = 0x8A2E
 
     guarded 
-    MAX_UNIFORM_BUFFER_BINDINGS: 0x8A2F
+    MAX_UNIFORM_BUFFER_BINDINGS // = 0x8A2F
 
     guarded 
-    MAX_UNIFORM_BLOCK_SIZE: 0x8A30
+    MAX_UNIFORM_BLOCK_SIZE // = 0x8A30
 
     guarded 
-    MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: 0x8A31
+    MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS // = 0x8A31
 
     guarded 
-    MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: 0x8A33
+    MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS // = 0x8A33
 
     guarded 
-    UNIFORM_BUFFER_OFFSET_ALIGNMENT: 0x8A34
+    UNIFORM_BUFFER_OFFSET_ALIGNMENT // = 0x8A34
 
     guarded 
-    ACTIVE_UNIFORM_BLOCKS: 0x8A36
+    ACTIVE_UNIFORM_BLOCKS // = 0x8A36
 
     guarded 
-    UNIFORM_TYPE: 0x8A37
+    UNIFORM_TYPE // = 0x8A37
 
     guarded 
-    UNIFORM_SIZE: 0x8A38
+    UNIFORM_SIZE // = 0x8A38
 
     guarded 
-    UNIFORM_BLOCK_INDEX: 0x8A3A
+    UNIFORM_BLOCK_INDEX // = 0x8A3A
 
     guarded 
-    UNIFORM_OFFSET: 0x8A3B
+    UNIFORM_OFFSET // = 0x8A3B
 
     guarded 
-    UNIFORM_ARRAY_STRIDE: 0x8A3C
+    UNIFORM_ARRAY_STRIDE // = 0x8A3C
 
     guarded 
-    UNIFORM_MATRIX_STRIDE: 0x8A3D
+    UNIFORM_MATRIX_STRIDE // = 0x8A3D
 
     guarded 
-    UNIFORM_IS_ROW_MAJOR: 0x8A3E
+    UNIFORM_IS_ROW_MAJOR // = 0x8A3E
 
     guarded 
-    UNIFORM_BLOCK_BINDING: 0x8A3F
+    UNIFORM_BLOCK_BINDING // = 0x8A3F
 
     guarded 
-    UNIFORM_BLOCK_DATA_SIZE: 0x8A40
+    UNIFORM_BLOCK_DATA_SIZE // = 0x8A40
 
     guarded 
-    UNIFORM_BLOCK_ACTIVE_UNIFORMS: 0x8A42
+    UNIFORM_BLOCK_ACTIVE_UNIFORMS // = 0x8A42
 
     guarded 
-    UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: 0x8A43
+    UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES // = 0x8A43
 
     guarded 
-    UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: 0x8A44
+    UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER // = 0x8A44
 
     guarded 
-    UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER: 0x8A46
+    UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER // = 0x8A46
 
     guarded 
-    INVALID_INDEX: 0xFFFFFFFF
+    INVALID_INDEX // = 0xFFFFFFFF
 
     guarded 
-    MAX_VERTEX_OUTPUT_COMPONENTS: 0x9122
+    MAX_VERTEX_OUTPUT_COMPONENTS // = 0x9122
 
     guarded 
-    MAX_FRAGMENT_INPUT_COMPONENTS: 0x9125
+    MAX_FRAGMENT_INPUT_COMPONENTS // = 0x9125
 
     guarded 
-    MAX_SERVER_WAIT_TIMEOUT: 0x9111
+    MAX_SERVER_WAIT_TIMEOUT // = 0x9111
 
     guarded 
-    OBJECT_TYPE: 0x9112
+    OBJECT_TYPE // = 0x9112
 
     guarded 
-    SYNC_CONDITION: 0x9113
+    SYNC_CONDITION // = 0x9113
 
     guarded 
-    SYNC_STATUS: 0x9114
+    SYNC_STATUS // = 0x9114
 
     guarded 
-    SYNC_FLAGS: 0x9115
+    SYNC_FLAGS // = 0x9115
 
     guarded 
-    SYNC_FENCE: 0x9116
+    SYNC_FENCE // = 0x9116
 
     guarded 
-    SYNC_GPU_COMMANDS_COMPLETE: 0x9117
+    SYNC_GPU_COMMANDS_COMPLETE // = 0x9117
 
     guarded 
-    UNSIGNALED: 0x9118
+    UNSIGNALED // = 0x9118
 
     guarded 
-    SIGNALED: 0x9119
+    SIGNALED // = 0x9119
 
     guarded 
-    ALREADY_SIGNALED: 0x911A
+    ALREADY_SIGNALED // = 0x911A
 
     guarded 
-    TIMEOUT_EXPIRED: 0x911B
+    TIMEOUT_EXPIRED // = 0x911B
 
     guarded 
-    CONDITION_SATISFIED: 0x911C
+    CONDITION_SATISFIED // = 0x911C
 
     guarded 
-    WAIT_FAILED: 0x911D
+    WAIT_FAILED // = 0x911D
 
     guarded 
-    SYNC_FLUSH_COMMANDS_BIT: 0x00000001
+    SYNC_FLUSH_COMMANDS_BIT // = 0x00000001
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_DIVISOR: 0x88FE
+    VERTEX_ATTRIB_ARRAY_DIVISOR // = 0x88FE
 
     guarded 
-    ANY_SAMPLES_PASSED: 0x8C2F
+    ANY_SAMPLES_PASSED // = 0x8C2F
 
     guarded 
-    ANY_SAMPLES_PASSED_CONSERVATIVE: 0x8D6A
+    ANY_SAMPLES_PASSED_CONSERVATIVE // = 0x8D6A
 
     guarded 
-    SAMPLER_BINDING: 0x8919
+    SAMPLER_BINDING // = 0x8919
 
     guarded 
-    RGB10_A2UI: 0x906F
+    RGB10_A2UI // = 0x906F
 
     guarded 
-    INT_2_10_10_10_REV: 0x8D9F
+    INT_2_10_10_10_REV // = 0x8D9F
 
     guarded 
-    TRANSFORM_FEEDBACK: 0x8E22
+    TRANSFORM_FEEDBACK // = 0x8E22
 
     guarded 
-    TRANSFORM_FEEDBACK_PAUSED: 0x8E23
+    TRANSFORM_FEEDBACK_PAUSED // = 0x8E23
 
     guarded 
-    TRANSFORM_FEEDBACK_ACTIVE: 0x8E24
+    TRANSFORM_FEEDBACK_ACTIVE // = 0x8E24
 
     guarded 
-    TRANSFORM_FEEDBACK_BINDING: 0x8E25
+    TRANSFORM_FEEDBACK_BINDING // = 0x8E25
 
     guarded 
-    TEXTURE_IMMUTABLE_FORMAT: 0x912F
+    TEXTURE_IMMUTABLE_FORMAT // = 0x912F
 
     guarded 
-    MAX_ELEMENT_INDEX: 0x8D6B
+    MAX_ELEMENT_INDEX // = 0x8D6B
 
     guarded 
-    TEXTURE_IMMUTABLE_LEVELS: 0x82DF
+    TEXTURE_IMMUTABLE_LEVELS // = 0x82DF
 
     guarded 
     TIMEOUT_IGNORED: -1
 
     guarded 
-    MAX_CLIENT_WAIT_TIMEOUT_WEBGL: 0x9247
+    MAX_CLIENT_WAIT_TIMEOUT_WEBGL // = 0x9247
   }
 
 
@@ -24100,34 +24046,34 @@ external
     on create() // : WebGLRenderingContext
 
     guarded
-    DEPTH_BUFFER_BIT: 0x00000100
+    DEPTH_BUFFER_BIT // = 0x00000100
 
     guarded
-    STENCIL_BUFFER_BIT: 0x00000400
+    STENCIL_BUFFER_BIT // = 0x00000400
 
     guarded
-    COLOR_BUFFER_BIT: 0x00004000
+    COLOR_BUFFER_BIT // = 0x00004000
 
     guarded
-    POINTS: 0x0000
+    POINTS // = 0x0000
 
     guarded
-    LINES: 0x0001
+    LINES // = 0x0001
 
     guarded
-    LINE_LOOP: 0x0002
+    LINE_LOOP // = 0x0002
 
     guarded
-    LINE_STRIP: 0x0003
+    LINE_STRIP // = 0x0003
 
     guarded
-    TRIANGLES: 0x0004
+    TRIANGLES // = 0x0004
 
     guarded
-    TRIANGLE_STRIP: 0x0005
+    TRIANGLE_STRIP // = 0x0005
 
     guarded
-    TRIANGLE_FAN: 0x0006
+    TRIANGLE_FAN // = 0x0006
 
     guarded
     ZERO: 0
@@ -24136,856 +24082,856 @@ external
     ONE: 1
 
     guarded
-    SRC_COLOR: 0x0300
+    SRC_COLOR // = 0x0300
 
     guarded
-    ONE_MINUS_SRC_COLOR: 0x0301
+    ONE_MINUS_SRC_COLOR // = 0x0301
 
     guarded
-    SRC_ALPHA: 0x0302
+    SRC_ALPHA // = 0x0302
 
     guarded
-    ONE_MINUS_SRC_ALPHA: 0x0303
+    ONE_MINUS_SRC_ALPHA // = 0x0303
 
     guarded
-    DST_ALPHA: 0x0304
+    DST_ALPHA // = 0x0304
 
     guarded
-    ONE_MINUS_DST_ALPHA: 0x0305
+    ONE_MINUS_DST_ALPHA // = 0x0305
 
     guarded
-    DST_COLOR: 0x0306
+    DST_COLOR // = 0x0306
 
     guarded
-    ONE_MINUS_DST_COLOR: 0x0307
+    ONE_MINUS_DST_COLOR // = 0x0307
 
     guarded
-    SRC_ALPHA_SATURATE: 0x0308
+    SRC_ALPHA_SATURATE // = 0x0308
 
     guarded
-    FUNC_ADD: 0x8006
+    FUNC_ADD // = 0x8006
 
     guarded
-    BLEND_EQUATION: 0x8009
+    BLEND_EQUATION // = 0x8009
 
     guarded
-    BLEND_EQUATION_RGB: 0x8009
+    BLEND_EQUATION_RGB // = 0x8009
 
     guarded
     BLEND_EQUATION_ALPHA: 0x883D
 
     guarded
-    FUNC_SUBTRACT: 0x800A
+    FUNC_SUBTRACT // = 0x800A
 
     guarded
-    FUNC_REVERSE_SUBTRACT: 0x800B
+    FUNC_REVERSE_SUBTRACT // = 0x800B
 
     guarded
-    BLEND_DST_RGB: 0x80C8
+    BLEND_DST_RGB // = 0x80C8
 
     guarded
-    BLEND_SRC_RGB: 0x80C9
+    BLEND_SRC_RGB // = 0x80C9
 
     guarded
-    BLEND_DST_ALPHA: 0x80CA
+    BLEND_DST_ALPHA // = 0x80CA
 
     guarded
-    BLEND_SRC_ALPHA: 0x80CB
+    BLEND_SRC_ALPHA // = 0x80CB
 
     guarded
-    CONSTANT_COLOR: 0x8001
+    CONSTANT_COLOR // = 0x8001
 
     guarded
-    ONE_MINUS_CONSTANT_COLOR: 0x8002
+    ONE_MINUS_CONSTANT_COLOR // = 0x8002
 
     guarded
-    CONSTANT_ALPHA: 0x8003
+    CONSTANT_ALPHA // = 0x8003
 
     guarded
-    ONE_MINUS_CONSTANT_ALPHA: 0x8004
+    ONE_MINUS_CONSTANT_ALPHA // = 0x8004
 
     guarded
-    BLEND_COLOR: 0x8005
+    BLEND_COLOR // = 0x8005
 
     guarded
-    ARRAY_BUFFER: 0x8892
+    ARRAY_BUFFER // = 0x8892
 
     guarded
-    ELEMENT_ARRAY_BUFFER: 0x8893
+    ELEMENT_ARRAY_BUFFER // = 0x8893
 
     guarded
-    ARRAY_BUFFER_BINDING: 0x8894
+    ARRAY_BUFFER_BINDING // = 0x8894
 
     guarded
-    ELEMENT_ARRAY_BUFFER_BINDING: 0x8895
+    ELEMENT_ARRAY_BUFFER_BINDING // = 0x8895
 
     guarded
-    STREAM_DRAW: 0x88E0
+    STREAM_DRAW // = 0x88E0
 
     guarded
-    STATIC_DRAW: 0x88E4
+    STATIC_DRAW // = 0x88E4
 
     guarded
-    DYNAMIC_DRAW: 0x88E8
+    DYNAMIC_DRAW // = 0x88E8
 
     guarded
-    BUFFER_SIZE: 0x8764
+    BUFFER_SIZE // = 0x8764
 
     guarded
-    BUFFER_USAGE: 0x8765
+    BUFFER_USAGE // = 0x8765
 
     guarded
-    CURRENT_VERTEX_ATTRIB: 0x8626
+    CURRENT_VERTEX_ATTRIB // = 0x8626
 
     guarded
-    FRONT: 0x0404
+    FRONT // = 0x0404
 
     guarded
-    BACK: 0x0405
+    BACK // = 0x0405
 
     guarded
-    FRONT_AND_BACK: 0x0408
+    FRONT_AND_BACK // = 0x0408
 
     guarded
-    CULL_FACE: 0x0B44
+    CULL_FACE // = 0x0B44
 
     guarded
-    BLEND: 0x0BE2
+    BLEND // = 0x0BE2
 
     guarded
-    DITHER: 0x0BD0
+    DITHER // = 0x0BD0
 
     guarded
-    STENCIL_TEST: 0x0B90
+    STENCIL_TEST // = 0x0B90
 
     guarded
-    DEPTH_TEST: 0x0B71
+    DEPTH_TEST // = 0x0B71
 
     guarded
-    SCISSOR_TEST: 0x0C11
+    SCISSOR_TEST // = 0x0C11
 
     guarded
-    POLYGON_OFFSET_FILL: 0x8037
+    POLYGON_OFFSET_FILL // = 0x8037
 
     guarded
-    SAMPLE_ALPHA_TO_COVERAGE: 0x809E
+    SAMPLE_ALPHA_TO_COVERAGE // = 0x809E
 
     guarded
-    SAMPLE_COVERAGE: 0x80A0
+    SAMPLE_COVERAGE // = 0x80A0
 
     guarded
     NO_ERROR: 0
 
     guarded
-    INVALID_ENUM: 0x0500
+    INVALID_ENUM // = 0x0500
 
     guarded
-    INVALID_VALUE: 0x0501
+    INVALID_VALUE // = 0x0501
 
     guarded
-    INVALID_OPERATION: 0x0502
+    INVALID_OPERATION // = 0x0502
 
     guarded
-    OUT_OF_MEMORY: 0x0505
+    OUT_OF_MEMORY // = 0x0505
 
     guarded
-    CW: 0x0900
+    CW // = 0x0900
 
     guarded
-    CCW: 0x0901
+    CCW // = 0x0901
 
     guarded
-    LINE_WIDTH: 0x0B21
+    LINE_WIDTH // = 0x0B21
 
     guarded
-    ALIASED_POINT_SIZE_RANGE: 0x846D
+    ALIASED_POINT_SIZE_RANGE // = 0x846D
 
     guarded
-    ALIASED_LINE_WIDTH_RANGE: 0x846E
+    ALIASED_LINE_WIDTH_RANGE // = 0x846E
 
     guarded
-    CULL_FACE_MODE: 0x0B45
+    CULL_FACE_MODE // = 0x0B45
 
     guarded
-    FRONT_FACE: 0x0B46
+    FRONT_FACE // = 0x0B46
 
     guarded
-    DEPTH_RANGE: 0x0B70
+    DEPTH_RANGE // = 0x0B70
 
     guarded
-    DEPTH_WRITEMASK: 0x0B72
+    DEPTH_WRITEMASK // = 0x0B72
 
     guarded
-    DEPTH_CLEAR_VALUE: 0x0B73
+    DEPTH_CLEAR_VALUE // = 0x0B73
 
     guarded
-    DEPTH_FUNC: 0x0B74
+    DEPTH_FUNC // = 0x0B74
 
     guarded
-    STENCIL_CLEAR_VALUE: 0x0B91
+    STENCIL_CLEAR_VALUE // = 0x0B91
 
     guarded
-    STENCIL_FUNC: 0x0B92
+    STENCIL_FUNC // = 0x0B92
 
     guarded
-    STENCIL_FAIL: 0x0B94
+    STENCIL_FAIL // = 0x0B94
 
     guarded
-    STENCIL_PASS_DEPTH_FAIL: 0x0B95
+    STENCIL_PASS_DEPTH_FAIL // = 0x0B95
 
     guarded
-    STENCIL_PASS_DEPTH_PASS: 0x0B96
+    STENCIL_PASS_DEPTH_PASS // = 0x0B96
 
     guarded
-    STENCIL_REF: 0x0B97
+    STENCIL_REF // = 0x0B97
 
     guarded
-    STENCIL_VALUE_MASK: 0x0B93
+    STENCIL_VALUE_MASK // = 0x0B93
 
     guarded
-    STENCIL_WRITEMASK: 0x0B98
+    STENCIL_WRITEMASK // = 0x0B98
 
     guarded
-    STENCIL_BACK_FUNC: 0x8800
+    STENCIL_BACK_FUNC // = 0x8800
 
     guarded
-    STENCIL_BACK_FAIL: 0x8801
+    STENCIL_BACK_FAIL // = 0x8801
 
     guarded
-    STENCIL_BACK_PASS_DEPTH_FAIL: 0x8802
+    STENCIL_BACK_PASS_DEPTH_FAIL // = 0x8802
 
     guarded
-    STENCIL_BACK_PASS_DEPTH_PASS: 0x8803
+    STENCIL_BACK_PASS_DEPTH_PASS // = 0x8803
 
     guarded
-    STENCIL_BACK_REF: 0x8CA3
+    STENCIL_BACK_REF // = 0x8CA3
 
     guarded
-    STENCIL_BACK_VALUE_MASK: 0x8CA4
+    STENCIL_BACK_VALUE_MASK // = 0x8CA4
 
     guarded
-    STENCIL_BACK_WRITEMASK: 0x8CA5
+    STENCIL_BACK_WRITEMASK // = 0x8CA5
 
     guarded
-    VIEWPORT: 0x0BA2
+    VIEWPORT // = 0x0BA2
 
     guarded
-    SCISSOR_BOX: 0x0C10
+    SCISSOR_BOX // = 0x0C10
 
     guarded
-    COLOR_CLEAR_VALUE: 0x0C22
+    COLOR_CLEAR_VALUE // = 0x0C22
 
     guarded
-    COLOR_WRITEMASK: 0x0C23
+    COLOR_WRITEMASK // = 0x0C23
 
     guarded
-    UNPACK_ALIGNMENT: 0x0CF5
+    UNPACK_ALIGNMENT // = 0x0CF5
 
     guarded
-    PACK_ALIGNMENT: 0x0D05
+    PACK_ALIGNMENT // = 0x0D05
 
     guarded
-    MAX_TEXTURE_SIZE: 0x0D33
+    MAX_TEXTURE_SIZE // = 0x0D33
 
     guarded
-    MAX_VIEWPORT_DIMS: 0x0D3A
+    MAX_VIEWPORT_DIMS // = 0x0D3A
 
     guarded
-    SUBPIXEL_BITS: 0x0D50
+    SUBPIXEL_BITS // = 0x0D50
 
     guarded
-    RED_BITS: 0x0D52
+    RED_BITS // = 0x0D52
 
     guarded
-    GREEN_BITS: 0x0D53
+    GREEN_BITS // = 0x0D53
 
     guarded
-    BLUE_BITS: 0x0D54
+    BLUE_BITS // = 0x0D54
 
     guarded
-    ALPHA_BITS: 0x0D55
+    ALPHA_BITS // = 0x0D55
 
     guarded
-    DEPTH_BITS: 0x0D56
+    DEPTH_BITS // = 0x0D56
 
     guarded
-    STENCIL_BITS: 0x0D57
+    STENCIL_BITS // = 0x0D57
 
     guarded
-    POLYGON_OFFSET_UNITS: 0x2A00
+    POLYGON_OFFSET_UNITS // = 0x2A00
 
     guarded
-    POLYGON_OFFSET_FACTOR: 0x8038
+    POLYGON_OFFSET_FACTOR // = 0x8038
 
     guarded
-    TEXTURE_BINDING_2D: 0x8069
+    TEXTURE_BINDING_2D // = 0x8069
 
     guarded
-    SAMPLE_BUFFERS: 0x80A8
+    SAMPLE_BUFFERS // = 0x80A8
 
     guarded
-    SAMPLES: 0x80A9
+    SAMPLES // = 0x80A9
 
     guarded
-    SAMPLE_COVERAGE_VALUE: 0x80AA
+    SAMPLE_COVERAGE_VALUE // = 0x80AA
 
     guarded
-    SAMPLE_COVERAGE_INVERT: 0x80AB
+    SAMPLE_COVERAGE_INVERT // = 0x80AB
 
     guarded
-    COMPRESSED_TEXTURE_FORMATS: 0x86A3
+    COMPRESSED_TEXTURE_FORMATS // = 0x86A3
 
     guarded
-    DONT_CARE: 0x1100
+    DONT_CARE // = 0x1100
 
     guarded
-    FASTEST: 0x1101
+    FASTEST // = 0x1101
 
     guarded
-    NICEST: 0x1102
+    NICEST // = 0x1102
 
     guarded
-    GENERATE_MIPMAP_HINT: 0x8192
+    GENERATE_MIPMAP_HINT // = 0x8192
 
     guarded
-    BYTE: 0x1400
+    BYTE // = 0x1400
 
     guarded
-    UNSIGNED_BYTE: 0x1401
+    UNSIGNED_BYTE // = 0x1401
 
     guarded
-    SHORT: 0x1402
+    SHORT // = 0x1402
 
     guarded
-    UNSIGNED_SHORT: 0x1403
+    UNSIGNED_SHORT // = 0x1403
 
     guarded
-    INT: 0x1404
+    INT // = 0x1404
 
     guarded
-    UNSIGNED_INT: 0x1405
+    UNSIGNED_INT // = 0x1405
 
     guarded
-    FLOAT: 0x1406
+    FLOAT // = 0x1406
 
     guarded
-    DEPTH_COMPONENT: 0x1902
+    DEPTH_COMPONENT // = 0x1902
 
     guarded
-    ALPHA: 0x1906
+    ALPHA // = 0x1906
 
     guarded
-    RGB: 0x1907
+    RGB // = 0x1907
 
     guarded
-    RGBA: 0x1908
+    RGBA // = 0x1908
 
     guarded
-    LUMINANCE: 0x1909
+    LUMINANCE // = 0x1909
 
     guarded
-    LUMINANCE_ALPHA: 0x190A
+    LUMINANCE_ALPHA // = 0x190A
 
     guarded
-    UNSIGNED_SHORT_4_4_4_4: 0x8033
+    UNSIGNED_SHORT_4_4_4_4 // = 0x8033
 
     guarded
-    UNSIGNED_SHORT_5_5_5_1: 0x8034
+    UNSIGNED_SHORT_5_5_5_1 // = 0x8034
 
     guarded
-    UNSIGNED_SHORT_5_6_5: 0x8363
+    UNSIGNED_SHORT_5_6_5 // = 0x8363
 
     guarded
-    FRAGMENT_SHADER: 0x8B30
+    FRAGMENT_SHADER // = 0x8B30
 
     guarded
-    VERTEX_SHADER: 0x8B31
+    VERTEX_SHADER // = 0x8B31
 
     guarded
-    MAX_VERTEX_ATTRIBS: 0x8869
+    MAX_VERTEX_ATTRIBS // = 0x8869
 
     guarded
-    MAX_VERTEX_UNIFORM_VECTORS: 0x8DFB
+    MAX_VERTEX_UNIFORM_VECTORS // = 0x8DFB
 
     guarded
-    MAX_VARYING_VECTORS: 0x8DFC
+    MAX_VARYING_VECTORS // = 0x8DFC
 
     guarded
-    MAX_COMBINED_TEXTURE_IMAGE_UNITS: 0x8B4D
+    MAX_COMBINED_TEXTURE_IMAGE_UNITS // = 0x8B4D
 
     guarded
-    MAX_VERTEX_TEXTURE_IMAGE_UNITS: 0x8B4C
+    MAX_VERTEX_TEXTURE_IMAGE_UNITS // = 0x8B4C
 
     guarded
-    MAX_TEXTURE_IMAGE_UNITS: 0x8872
+    MAX_TEXTURE_IMAGE_UNITS // = 0x8872
 
     guarded
-    MAX_FRAGMENT_UNIFORM_VECTORS: 0x8DFD
+    MAX_FRAGMENT_UNIFORM_VECTORS // = 0x8DFD
 
     guarded
-    SHADER_TYPE: 0x8B4F
+    SHADER_TYPE // = 0x8B4F
 
     guarded
-    DELETE_STATUS: 0x8B80
+    DELETE_STATUS // = 0x8B80
 
     guarded
-    LINK_STATUS: 0x8B82
+    LINK_STATUS // = 0x8B82
 
     guarded
-    VALIDATE_STATUS: 0x8B83
+    VALIDATE_STATUS // = 0x8B83
 
     guarded
-    ATTACHED_SHADERS: 0x8B85
+    ATTACHED_SHADERS // = 0x8B85
 
     guarded
-    ACTIVE_UNIFORMS: 0x8B86
+    ACTIVE_UNIFORMS // = 0x8B86
 
     guarded
-    ACTIVE_ATTRIBUTES: 0x8B89
+    ACTIVE_ATTRIBUTES // = 0x8B89
 
     guarded
-    SHADING_LANGUAGE_VERSION: 0x8B8C
+    SHADING_LANGUAGE_VERSION // = 0x8B8C
 
     guarded
-    CURRENT_PROGRAM: 0x8B8D
+    CURRENT_PROGRAM // = 0x8B8D
 
     guarded
-    NEVER: 0x0200
+    NEVER // = 0x0200
 
     guarded
-    LESS: 0x0201
+    LESS // = 0x0201
 
     guarded
-    EQUAL: 0x0202
+    EQUAL // = 0x0202
 
     guarded
-    LEQUAL: 0x0203
+    LEQUAL // = 0x0203
 
     guarded
-    GREATER: 0x0204
+    GREATER // = 0x0204
 
     guarded
-    NOTEQUAL: 0x0205
+    NOTEQUAL // = 0x0205
 
     guarded
-    GEQUAL: 0x0206
+    GEQUAL // = 0x0206
 
     guarded
-    ALWAYS: 0x0207
+    ALWAYS // = 0x0207
 
     guarded
-    KEEP: 0x1E00
+    KEEP // = 0x1E00
 
     guarded
-    REPLACE: 0x1E01
+    REPLACE // = 0x1E01
 
     guarded
-    INCR: 0x1E02
+    INCR // = 0x1E02
 
     guarded
-    DECR: 0x1E03
+    DECR // = 0x1E03
 
     guarded
-    INVERT: 0x150A
+    INVERT // = 0x150A
 
     guarded
-    INCR_WRAP: 0x8507
+    INCR_WRAP // = 0x8507
 
     guarded
-    DECR_WRAP: 0x8508
+    DECR_WRAP // = 0x8508
 
     guarded
-    VENDOR: 0x1F00
+    VENDOR // = 0x1F00
 
     guarded
-    RENDERER: 0x1F01
+    RENDERER // = 0x1F01
 
     guarded
-    VERSION: 0x1F02
+    VERSION // = 0x1F02
 
     guarded
-    NEAREST: 0x2600
+    NEAREST // = 0x2600
 
     guarded
-    LINEAR: 0x2601
+    LINEAR // = 0x2601
 
     guarded
-    NEAREST_MIPMAP_NEAREST: 0x2700
+    NEAREST_MIPMAP_NEAREST // = 0x2700
 
     guarded
-    LINEAR_MIPMAP_NEAREST: 0x2701
+    LINEAR_MIPMAP_NEAREST // = 0x2701
 
     guarded
-    NEAREST_MIPMAP_LINEAR: 0x2702
+    NEAREST_MIPMAP_LINEAR // = 0x2702
 
     guarded
-    LINEAR_MIPMAP_LINEAR: 0x2703
+    LINEAR_MIPMAP_LINEAR // = 0x2703
 
     guarded
-    TEXTURE_MAG_FILTER: 0x2800
+    TEXTURE_MAG_FILTER // = 0x2800
 
     guarded
-    TEXTURE_MIN_FILTER: 0x2801
+    TEXTURE_MIN_FILTER // = 0x2801
 
     guarded
-    TEXTURE_WRAP_S: 0x2802
+    TEXTURE_WRAP_S // = 0x2802
 
     guarded
-    TEXTURE_WRAP_T: 0x2803
+    TEXTURE_WRAP_T // = 0x2803
 
     guarded
-    TEXTURE_2D: 0x0DE1
+    TEXTURE_2D // = 0x0DE1
 
     guarded
-    TEXTURE: 0x1702
+    TEXTURE // = 0x1702
 
     guarded
-    TEXTURE_CUBE_MAP: 0x8513
+    TEXTURE_CUBE_MAP // = 0x8513
 
     guarded
-    TEXTURE_BINDING_CUBE_MAP: 0x8514
+    TEXTURE_BINDING_CUBE_MAP // = 0x8514
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_X: 0x8515
+    TEXTURE_CUBE_MAP_POSITIVE_X // = 0x8515
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_X: 0x8516
+    TEXTURE_CUBE_MAP_NEGATIVE_X // = 0x8516
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_Y: 0x8517
+    TEXTURE_CUBE_MAP_POSITIVE_Y // = 0x8517
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_Y: 0x8518
+    TEXTURE_CUBE_MAP_NEGATIVE_Y // = 0x8518
 
     guarded
-    TEXTURE_CUBE_MAP_POSITIVE_Z: 0x8519
+    TEXTURE_CUBE_MAP_POSITIVE_Z // = 0x8519
 
     guarded
-    TEXTURE_CUBE_MAP_NEGATIVE_Z: 0x851A
+    TEXTURE_CUBE_MAP_NEGATIVE_Z // = 0x851A
 
     guarded
-    MAX_CUBE_MAP_TEXTURE_SIZE: 0x851C
+    MAX_CUBE_MAP_TEXTURE_SIZE // = 0x851C
 
     guarded
-    TEXTURE0: 0x84C0
+    TEXTURE0 // = 0x84C0
 
     guarded
-    TEXTURE1: 0x84C1
+    TEXTURE1 // = 0x84C1
 
     guarded
-    TEXTURE2: 0x84C2
+    TEXTURE2 // = 0x84C2
 
     guarded
-    TEXTURE3: 0x84C3
+    TEXTURE3 // = 0x84C3
 
     guarded
-    TEXTURE4: 0x84C4
+    TEXTURE4 // = 0x84C4
 
     guarded
-    TEXTURE5: 0x84C5
+    TEXTURE5 // = 0x84C5
 
     guarded
-    TEXTURE6: 0x84C6
+    TEXTURE6 // = 0x84C6
 
     guarded
-    TEXTURE7: 0x84C7
+    TEXTURE7 // = 0x84C7
 
     guarded
-    TEXTURE8: 0x84C8
+    TEXTURE8 // = 0x84C8
 
     guarded
-    TEXTURE9: 0x84C9
+    TEXTURE9 // = 0x84C9
 
     guarded
-    TEXTURE10: 0x84CA
+    TEXTURE10 // = 0x84CA
 
     guarded
-    TEXTURE11: 0x84CB
+    TEXTURE11 // = 0x84CB
 
     guarded
-    TEXTURE12: 0x84CC
+    TEXTURE12 // = 0x84CC
 
     guarded
-    TEXTURE13: 0x84CD
+    TEXTURE13 // = 0x84CD
 
     guarded
-    TEXTURE14: 0x84CE
+    TEXTURE14 // = 0x84CE
 
     guarded
-    TEXTURE15: 0x84CF
+    TEXTURE15 // = 0x84CF
 
     guarded
-    TEXTURE16: 0x84D0
+    TEXTURE16 // = 0x84D0
 
     guarded
-    TEXTURE17: 0x84D1
+    TEXTURE17 // = 0x84D1
 
     guarded
-    TEXTURE18: 0x84D2
+    TEXTURE18 // = 0x84D2
 
     guarded
-    TEXTURE19: 0x84D3
+    TEXTURE19 // = 0x84D3
 
     guarded
-    TEXTURE20: 0x84D4
+    TEXTURE20 // = 0x84D4
 
     guarded
-    TEXTURE21: 0x84D5
+    TEXTURE21 // = 0x84D5
 
     guarded
-    TEXTURE22: 0x84D6
+    TEXTURE22 // = 0x84D6
 
     guarded
-    TEXTURE23: 0x84D7
+    TEXTURE23 // = 0x84D7
 
     guarded
-    TEXTURE24: 0x84D8
+    TEXTURE24 // = 0x84D8
 
     guarded
-    TEXTURE25: 0x84D9
+    TEXTURE25 // = 0x84D9
 
     guarded
-    TEXTURE26: 0x84DA
+    TEXTURE26 // = 0x84DA
 
     guarded
-    TEXTURE27: 0x84DB
+    TEXTURE27 // = 0x84DB
 
     guarded
-    TEXTURE28: 0x84DC
+    TEXTURE28 // = 0x84DC
 
     guarded
-    TEXTURE29: 0x84DD
+    TEXTURE29 // = 0x84DD
 
     guarded
-    TEXTURE30: 0x84DE
+    TEXTURE30 // = 0x84DE
 
     guarded
-    TEXTURE31: 0x84DF
+    TEXTURE31 // = 0x84DF
 
     guarded
-    ACTIVE_TEXTURE: 0x84E0
+    ACTIVE_TEXTURE // = 0x84E0
 
     guarded
-    REPEAT: 0x2901
+    REPEAT // = 0x2901
 
     guarded
-    CLAMP_TO_EDGE: 0x812F
+    CLAMP_TO_EDGE // = 0x812F
 
     guarded
-    MIRRORED_REPEAT: 0x8370
+    MIRRORED_REPEAT // = 0x8370
 
     guarded
-    FLOAT_VEC2: 0x8B50
+    FLOAT_VEC2 // = 0x8B50
 
     guarded
-    FLOAT_VEC3: 0x8B51
+    FLOAT_VEC3 // = 0x8B51
 
     guarded
-    FLOAT_VEC4: 0x8B52
+    FLOAT_VEC4 // = 0x8B52
 
     guarded
-    INT_VEC2: 0x8B53
+    INT_VEC2 // = 0x8B53
 
     guarded
-    INT_VEC3: 0x8B54
+    INT_VEC3 // = 0x8B54
 
     guarded
-    INT_VEC4: 0x8B55
+    INT_VEC4 // = 0x8B55
 
     guarded
-    BOOL: 0x8B56
+    BOOL // = 0x8B56
 
     guarded
-    BOOL_VEC2: 0x8B57
+    BOOL_VEC2 // = 0x8B57
 
     guarded
-    BOOL_VEC3: 0x8B58
+    BOOL_VEC3 // = 0x8B58
 
     guarded
-    BOOL_VEC4: 0x8B59
+    BOOL_VEC4 // = 0x8B59
 
     guarded
-    FLOAT_MAT2: 0x8B5A
+    FLOAT_MAT2 // = 0x8B5A
 
     guarded
-    FLOAT_MAT3: 0x8B5B
+    FLOAT_MAT3 // = 0x8B5B
 
     guarded
-    FLOAT_MAT4: 0x8B5C
+    FLOAT_MAT4 // = 0x8B5C
 
     guarded
-    SAMPLER_2D: 0x8B5E
+    SAMPLER_2D // = 0x8B5E
 
     guarded
-    SAMPLER_CUBE: 0x8B60
+    SAMPLER_CUBE // = 0x8B60
 
     guarded
-    VERTEX_ATTRIB_ARRAY_ENABLED: 0x8622
+    VERTEX_ATTRIB_ARRAY_ENABLED // = 0x8622
 
     guarded
-    VERTEX_ATTRIB_ARRAY_SIZE: 0x8623
+    VERTEX_ATTRIB_ARRAY_SIZE // = 0x8623
 
     guarded
-    VERTEX_ATTRIB_ARRAY_STRIDE: 0x8624
+    VERTEX_ATTRIB_ARRAY_STRIDE // = 0x8624
 
     guarded
-    VERTEX_ATTRIB_ARRAY_TYPE: 0x8625
+    VERTEX_ATTRIB_ARRAY_TYPE // = 0x8625
 
     guarded
-    VERTEX_ATTRIB_ARRAY_NORMALIZED: 0x886A
+    VERTEX_ATTRIB_ARRAY_NORMALIZED // = 0x886A
 
     guarded
-    VERTEX_ATTRIB_ARRAY_POINTER: 0x8645
+    VERTEX_ATTRIB_ARRAY_POINTER // = 0x8645
 
     guarded
-    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: 0x889F
+    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING // = 0x889F
 
     guarded
-    IMPLEMENTATION_COLOR_READ_TYPE: 0x8B9A
+    IMPLEMENTATION_COLOR_READ_TYPE // = 0x8B9A
 
     guarded
-    IMPLEMENTATION_COLOR_READ_FORMAT: 0x8B9B
+    IMPLEMENTATION_COLOR_READ_FORMAT // = 0x8B9B
 
     guarded
-    COMPILE_STATUS: 0x8B81
+    COMPILE_STATUS // = 0x8B81
 
     guarded
-    LOW_FLOAT: 0x8DF0
+    LOW_FLOAT // = 0x8DF0
 
     guarded
-    MEDIUM_FLOAT: 0x8DF1
+    MEDIUM_FLOAT // = 0x8DF1
 
     guarded
-    HIGH_FLOAT: 0x8DF2
+    HIGH_FLOAT // = 0x8DF2
 
     guarded
-    LOW_INT: 0x8DF3
+    LOW_INT // = 0x8DF3
 
     guarded
-    MEDIUM_INT: 0x8DF4
+    MEDIUM_INT // = 0x8DF4
 
     guarded
-    HIGH_INT: 0x8DF5
+    HIGH_INT // = 0x8DF5
 
     guarded
-    FRAMEBUFFER: 0x8D40
+    FRAMEBUFFER // = 0x8D40
 
     guarded
-    RENDERBUFFER: 0x8D41
+    RENDERBUFFER // = 0x8D41
 
     guarded
-    RGBA4: 0x8056
+    RGBA4 // = 0x8056
 
     guarded
-    RGB5_A1: 0x8057
+    RGB5_A1 // = 0x8057
 
     guarded
-    RGB565: 0x8D62
+    RGB565 // = 0x8D62
 
     guarded
-    DEPTH_COMPONENT16: 0x81A5
+    DEPTH_COMPONENT16 // = 0x81A5
 
     guarded
-    STENCIL_INDEX8: 0x8D48
+    STENCIL_INDEX8 // = 0x8D48
 
     guarded
-    DEPTH_STENCIL: 0x84F9
+    DEPTH_STENCIL // = 0x84F9
 
     guarded
-    RENDERBUFFER_WIDTH: 0x8D42
+    RENDERBUFFER_WIDTH // = 0x8D42
 
     guarded
-    RENDERBUFFER_HEIGHT: 0x8D43
+    RENDERBUFFER_HEIGHT // = 0x8D43
 
     guarded
-    RENDERBUFFER_INTERNAL_FORMAT: 0x8D44
+    RENDERBUFFER_INTERNAL_FORMAT // = 0x8D44
 
     guarded
-    RENDERBUFFER_RED_SIZE: 0x8D50
+    RENDERBUFFER_RED_SIZE // = 0x8D50
 
     guarded
-    RENDERBUFFER_GREEN_SIZE: 0x8D51
+    RENDERBUFFER_GREEN_SIZE // = 0x8D51
 
     guarded
-    RENDERBUFFER_BLUE_SIZE: 0x8D52
+    RENDERBUFFER_BLUE_SIZE // = 0x8D52
 
     guarded
-    RENDERBUFFER_ALPHA_SIZE: 0x8D53
+    RENDERBUFFER_ALPHA_SIZE // = 0x8D53
 
     guarded
-    RENDERBUFFER_DEPTH_SIZE: 0x8D54
+    RENDERBUFFER_DEPTH_SIZE // = 0x8D54
 
     guarded
-    RENDERBUFFER_STENCIL_SIZE: 0x8D55
+    RENDERBUFFER_STENCIL_SIZE // = 0x8D55
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: 0x8CD0
+    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE // = 0x8CD0
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: 0x8CD1
+    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME // = 0x8CD1
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: 0x8CD2
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL // = 0x8CD2
 
     guarded
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: 0x8CD3
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE // = 0x8CD3
 
     guarded
-    COLOR_ATTACHMENT0: 0x8CE0
+    COLOR_ATTACHMENT0 // = 0x8CE0
 
     guarded
-    DEPTH_ATTACHMENT: 0x8D00
+    DEPTH_ATTACHMENT // = 0x8D00
 
     guarded
-    STENCIL_ATTACHMENT: 0x8D20
+    STENCIL_ATTACHMENT // = 0x8D20
 
     guarded
-    DEPTH_STENCIL_ATTACHMENT: 0x821A
+    DEPTH_STENCIL_ATTACHMENT // = 0x821A
 
     guarded
     NONE: 0
 
     guarded
-    FRAMEBUFFER_COMPLETE: 0x8CD5
+    FRAMEBUFFER_COMPLETE // = 0x8CD5
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_ATTACHMENT: 0x8CD6
+    FRAMEBUFFER_INCOMPLETE_ATTACHMENT // = 0x8CD6
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: 0x8CD7
+    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT // = 0x8CD7
 
     guarded
-    FRAMEBUFFER_INCOMPLETE_DIMENSIONS: 0x8CD9
+    FRAMEBUFFER_INCOMPLETE_DIMENSIONS // = 0x8CD9
 
     guarded
-    FRAMEBUFFER_UNSUPPORTED: 0x8CDD
+    FRAMEBUFFER_UNSUPPORTED // = 0x8CDD
 
     guarded
-    FRAMEBUFFER_BINDING: 0x8CA6
+    FRAMEBUFFER_BINDING // = 0x8CA6
 
     guarded
-    RENDERBUFFER_BINDING: 0x8CA7
+    RENDERBUFFER_BINDING // = 0x8CA7
 
     guarded
-    MAX_RENDERBUFFER_SIZE: 0x84E8
+    MAX_RENDERBUFFER_SIZE // = 0x84E8
 
     guarded
-    INVALID_FRAMEBUFFER_OPERATION: 0x0506
+    INVALID_FRAMEBUFFER_OPERATION // = 0x0506
 
     guarded
-    UNPACK_FLIP_Y_WEBGL: 0x9240
+    UNPACK_FLIP_Y_WEBGL // = 0x9240
 
     guarded
-    UNPACK_PREMULTIPLY_ALPHA_WEBGL: 0x9241
+    UNPACK_PREMULTIPLY_ALPHA_WEBGL // = 0x9241
 
     guarded
-    CONTEXT_LOST_WEBGL: 0x9242
+    CONTEXT_LOST_WEBGL // = 0x9242
 
     guarded
-    UNPACK_COLORSPACE_CONVERSION_WEBGL: 0x9243
+    UNPACK_COLORSPACE_CONVERSION_WEBGL // = 0x9243
 
     guarded
-    BROWSER_DEFAULT_WEBGL: 0x9244
+    BROWSER_DEFAULT_WEBGL // = 0x9244
   }
 
   type WebGLRenderingContextBase = aspect
@@ -25306,34 +25252,34 @@ external
     operation viewport(x: GLint, y: GLint, width: GLsizei, height: GLsizei)
 
     guarded 
-    DEPTH_BUFFER_BIT: 0x00000100
+    DEPTH_BUFFER_BIT // = 0x00000100
 
     guarded 
-    STENCIL_BUFFER_BIT: 0x00000400
+    STENCIL_BUFFER_BIT // = 0x00000400
 
     guarded 
-    COLOR_BUFFER_BIT: 0x00004000
+    COLOR_BUFFER_BIT // = 0x00004000
 
     guarded 
-    POINTS: 0x0000
+    POINTS // = 0x0000
 
     guarded 
-    LINES: 0x0001
+    LINES // = 0x0001
 
     guarded 
-    LINE_LOOP: 0x0002
+    LINE_LOOP // = 0x0002
 
     guarded 
-    LINE_STRIP: 0x0003
+    LINE_STRIP // = 0x0003
 
     guarded 
-    TRIANGLES: 0x0004
+    TRIANGLES // = 0x0004
 
     guarded 
-    TRIANGLE_STRIP: 0x0005
+    TRIANGLE_STRIP // = 0x0005
 
     guarded 
-    TRIANGLE_FAN: 0x0006
+    TRIANGLE_FAN // = 0x0006
 
     guarded 
     ZERO: 0
@@ -25342,856 +25288,856 @@ external
     ONE: 1
 
     guarded 
-    SRC_COLOR: 0x0300
+    SRC_COLOR // = 0x0300
 
     guarded 
-    ONE_MINUS_SRC_COLOR: 0x0301
+    ONE_MINUS_SRC_COLOR // = 0x0301
 
     guarded 
-    SRC_ALPHA: 0x0302
+    SRC_ALPHA // = 0x0302
 
     guarded 
-    ONE_MINUS_SRC_ALPHA: 0x0303
+    ONE_MINUS_SRC_ALPHA // = 0x0303
 
     guarded 
-    DST_ALPHA: 0x0304
+    DST_ALPHA // = 0x0304
 
     guarded 
-    ONE_MINUS_DST_ALPHA: 0x0305
+    ONE_MINUS_DST_ALPHA // = 0x0305
 
     guarded 
-    DST_COLOR: 0x0306
+    DST_COLOR // = 0x0306
 
     guarded 
-    ONE_MINUS_DST_COLOR: 0x0307
+    ONE_MINUS_DST_COLOR // = 0x0307
 
     guarded 
-    SRC_ALPHA_SATURATE: 0x0308
+    SRC_ALPHA_SATURATE // = 0x0308
 
     guarded 
-    FUNC_ADD: 0x8006
+    FUNC_ADD // = 0x8006
 
     guarded 
-    BLEND_EQUATION: 0x8009
+    BLEND_EQUATION // = 0x8009
 
     guarded 
-    BLEND_EQUATION_RGB: 0x8009
+    BLEND_EQUATION_RGB // = 0x8009
 
     guarded 
-    BLEND_EQUATION_ALPHA: 0x883D
+    BLEND_EQUATION_ALPHA // = 0x883D
 
     guarded 
-    FUNC_SUBTRACT: 0x800A
+    FUNC_SUBTRACT // = 0x800A
 
     guarded 
-    FUNC_REVERSE_SUBTRACT: 0x800B
+    FUNC_REVERSE_SUBTRACT // = 0x800B
 
     guarded 
-    BLEND_DST_RGB: 0x80C8
+    BLEND_DST_RGB // = 0x80C8
 
     guarded 
-    BLEND_SRC_RGB: 0x80C9
+    BLEND_SRC_RGB // = 0x80C9
 
     guarded 
-    BLEND_DST_ALPHA: 0x80CA
+    BLEND_DST_ALPHA // = 0x80CA
 
     guarded 
-    BLEND_SRC_ALPHA: 0x80CB
+    BLEND_SRC_ALPHA // = 0x80CB
 
     guarded 
-    CONSTANT_COLOR: 0x8001
+    CONSTANT_COLOR // = 0x8001
 
     guarded 
-    ONE_MINUS_CONSTANT_COLOR: 0x8002
+    ONE_MINUS_CONSTANT_COLOR // = 0x8002
 
     guarded 
-    CONSTANT_ALPHA: 0x8003
+    CONSTANT_ALPHA // = 0x8003
 
     guarded 
-    ONE_MINUS_CONSTANT_ALPHA: 0x8004
+    ONE_MINUS_CONSTANT_ALPHA // = 0x8004
 
     guarded 
-    BLEND_COLOR: 0x8005
+    BLEND_COLOR // = 0x8005
 
     guarded 
-    ARRAY_BUFFER: 0x8892
+    ARRAY_BUFFER // = 0x8892
 
     guarded 
-    ELEMENT_ARRAY_BUFFER: 0x8893
+    ELEMENT_ARRAY_BUFFER // = 0x8893
 
     guarded 
-    ARRAY_BUFFER_BINDING: 0x8894
+    ARRAY_BUFFER_BINDING // = 0x8894
 
     guarded 
-    ELEMENT_ARRAY_BUFFER_BINDING: 0x8895
+    ELEMENT_ARRAY_BUFFER_BINDING // = 0x8895
 
     guarded 
-    STREAM_DRAW: 0x88E0
+    STREAM_DRAW // = 0x88E0
 
     guarded 
-    STATIC_DRAW: 0x88E4
+    STATIC_DRAW // = 0x88E4
 
     guarded 
-    DYNAMIC_DRAW: 0x88E8
+    DYNAMIC_DRAW // = 0x88E8
 
     guarded 
-    BUFFER_SIZE: 0x8764
+    BUFFER_SIZE // = 0x8764
 
     guarded 
-    BUFFER_USAGE: 0x8765
+    BUFFER_USAGE // = 0x8765
 
     guarded 
-    CURRENT_VERTEX_ATTRIB: 0x8626
+    CURRENT_VERTEX_ATTRIB // = 0x8626
 
     guarded 
-    FRONT: 0x0404
+    FRONT // = 0x0404
 
     guarded 
-    BACK: 0x0405
+    BACK // = 0x0405
 
     guarded 
-    FRONT_AND_BACK: 0x0408
+    FRONT_AND_BACK // = 0x0408
 
     guarded 
-    CULL_FACE: 0x0B44
+    CULL_FACE // = 0x0B44
 
     guarded 
-    BLEND: 0x0BE2
+    BLEND // = 0x0BE2
 
     guarded 
-    DITHER: 0x0BD0
+    DITHER // = 0x0BD0
 
     guarded 
-    STENCIL_TEST: 0x0B90
+    STENCIL_TEST // = 0x0B90
 
     guarded 
-    DEPTH_TEST: 0x0B71
+    DEPTH_TEST // = 0x0B71
 
     guarded 
-    SCISSOR_TEST: 0x0C11
+    SCISSOR_TEST // = 0x0C11
 
     guarded 
-    POLYGON_OFFSET_FILL: 0x8037
+    POLYGON_OFFSET_FILL // = 0x8037
 
     guarded 
-    SAMPLE_ALPHA_TO_COVERAGE: 0x809E
+    SAMPLE_ALPHA_TO_COVERAGE // = 0x809E
 
     guarded 
-    SAMPLE_COVERAGE: 0x80A0
+    SAMPLE_COVERAGE // = 0x80A0
 
     guarded 
     NO_ERROR: 0
 
     guarded 
-    INVALID_ENUM: 0x0500
+    INVALID_ENUM // = 0x0500
 
     guarded 
-    INVALID_VALUE: 0x0501
+    INVALID_VALUE // = 0x0501
 
     guarded 
-    INVALID_OPERATION: 0x0502
+    INVALID_OPERATION // = 0x0502
 
     guarded 
-    OUT_OF_MEMORY: 0x0505
+    OUT_OF_MEMORY // = 0x0505
 
     guarded 
-    CW: 0x0900
+    CW // = 0x0900
 
     guarded 
-    CCW: 0x0901
+    CCW // = 0x0901
 
     guarded 
-    LINE_WIDTH: 0x0B21
+    LINE_WIDTH // = 0x0B21
 
     guarded 
-    ALIASED_POINT_SIZE_RANGE: 0x846D
+    ALIASED_POINT_SIZE_RANGE // = 0x846D
 
     guarded 
-    ALIASED_LINE_WIDTH_RANGE: 0x846E
+    ALIASED_LINE_WIDTH_RANGE // = 0x846E
 
     guarded 
-    CULL_FACE_MODE: 0x0B45
+    CULL_FACE_MODE // = 0x0B45
 
     guarded 
-    FRONT_FACE: 0x0B46
+    FRONT_FACE // = 0x0B46
 
     guarded 
-    DEPTH_RANGE: 0x0B70
+    DEPTH_RANGE // = 0x0B70
 
     guarded 
-    DEPTH_WRITEMASK: 0x0B72
+    DEPTH_WRITEMASK // = 0x0B72
 
     guarded 
-    DEPTH_CLEAR_VALUE: 0x0B73
+    DEPTH_CLEAR_VALUE // = 0x0B73
 
     guarded 
-    DEPTH_FUNC: 0x0B74
+    DEPTH_FUNC // = 0x0B74
 
     guarded 
-    STENCIL_CLEAR_VALUE: 0x0B91
+    STENCIL_CLEAR_VALUE // = 0x0B91
 
     guarded 
-    STENCIL_FUNC: 0x0B92
+    STENCIL_FUNC // = 0x0B92
 
     guarded 
-    STENCIL_FAIL: 0x0B94
+    STENCIL_FAIL // = 0x0B94
 
     guarded 
-    STENCIL_PASS_DEPTH_FAIL: 0x0B95
+    STENCIL_PASS_DEPTH_FAIL // = 0x0B95
 
     guarded 
-    STENCIL_PASS_DEPTH_PASS: 0x0B96
+    STENCIL_PASS_DEPTH_PASS // = 0x0B96
 
     guarded 
-    STENCIL_REF: 0x0B97
+    STENCIL_REF // = 0x0B97
 
     guarded 
-    STENCIL_VALUE_MASK: 0x0B93
+    STENCIL_VALUE_MASK // = 0x0B93
 
     guarded 
-    STENCIL_WRITEMASK: 0x0B98
+    STENCIL_WRITEMASK // = 0x0B98
 
     guarded 
-    STENCIL_BACK_FUNC: 0x8800
+    STENCIL_BACK_FUNC // = 0x8800
 
     guarded 
-    STENCIL_BACK_FAIL: 0x8801
+    STENCIL_BACK_FAIL // = 0x8801
 
     guarded 
-    STENCIL_BACK_PASS_DEPTH_FAIL: 0x8802
+    STENCIL_BACK_PASS_DEPTH_FAIL // = 0x8802
 
     guarded 
-    STENCIL_BACK_PASS_DEPTH_PASS: 0x8803
+    STENCIL_BACK_PASS_DEPTH_PASS // = 0x8803
 
     guarded 
-    STENCIL_BACK_REF: 0x8CA3
+    STENCIL_BACK_REF // = 0x8CA3
 
     guarded 
-    STENCIL_BACK_VALUE_MASK: 0x8CA4
+    STENCIL_BACK_VALUE_MASK // = 0x8CA4
 
     guarded 
-    STENCIL_BACK_WRITEMASK: 0x8CA5
+    STENCIL_BACK_WRITEMASK // = 0x8CA5
 
     guarded 
-    VIEWPORT: 0x0BA2
+    VIEWPORT // = 0x0BA2
 
     guarded 
-    SCISSOR_BOX: 0x0C10
+    SCISSOR_BOX // = 0x0C10
 
     guarded 
-    COLOR_CLEAR_VALUE: 0x0C22
+    COLOR_CLEAR_VALUE // = 0x0C22
 
     guarded 
-    COLOR_WRITEMASK: 0x0C23
+    COLOR_WRITEMASK // = 0x0C23
 
     guarded 
-    UNPACK_ALIGNMENT: 0x0CF5
+    UNPACK_ALIGNMENT // = 0x0CF5
 
     guarded 
-    PACK_ALIGNMENT: 0x0D05
+    PACK_ALIGNMENT // = 0x0D05
 
     guarded 
-    MAX_TEXTURE_SIZE: 0x0D33
+    MAX_TEXTURE_SIZE // = 0x0D33
 
     guarded 
-    MAX_VIEWPORT_DIMS: 0x0D3A
+    MAX_VIEWPORT_DIMS // = 0x0D3A
 
     guarded 
-    SUBPIXEL_BITS: 0x0D50
+    SUBPIXEL_BITS // = 0x0D50
 
     guarded 
-    RED_BITS: 0x0D52
+    RED_BITS // = 0x0D52
 
     guarded 
-    GREEN_BITS: 0x0D53
+    GREEN_BITS // = 0x0D53
 
     guarded 
-    BLUE_BITS: 0x0D54
+    BLUE_BITS // = 0x0D54
 
     guarded 
-    ALPHA_BITS: 0x0D55
+    ALPHA_BITS // = 0x0D55
 
     guarded 
-    DEPTH_BITS: 0x0D56
+    DEPTH_BITS // = 0x0D56
 
     guarded 
-    STENCIL_BITS: 0x0D57
+    STENCIL_BITS // = 0x0D57
 
     guarded 
-    POLYGON_OFFSET_UNITS: 0x2A00
+    POLYGON_OFFSET_UNITS // = 0x2A00
 
     guarded 
-    POLYGON_OFFSET_FACTOR: 0x8038
+    POLYGON_OFFSET_FACTOR // = 0x8038
 
     guarded 
-    TEXTURE_BINDING_2D: 0x8069
+    TEXTURE_BINDING_2D // = 0x8069
 
     guarded 
-    SAMPLE_BUFFERS: 0x80A8
+    SAMPLE_BUFFERS // = 0x80A8
 
     guarded 
-    SAMPLES: 0x80A9
+    SAMPLES // = 0x80A9
 
     guarded 
-    SAMPLE_COVERAGE_VALUE: 0x80AA
+    SAMPLE_COVERAGE_VALUE // = 0x80AA
 
     guarded 
-    SAMPLE_COVERAGE_INVERT: 0x80AB
+    SAMPLE_COVERAGE_INVERT // = 0x80AB
 
     guarded 
-    COMPRESSED_TEXTURE_FORMATS: 0x86A3
+    COMPRESSED_TEXTURE_FORMATS // = 0x86A3
 
     guarded 
-    DONT_CARE: 0x1100
+    DONT_CARE // = 0x1100
 
     guarded 
-    FASTEST: 0x1101
+    FASTEST // = 0x1101
 
     guarded 
-    NICEST: 0x1102
+    NICEST // = 0x1102
 
     guarded 
-    GENERATE_MIPMAP_HINT: 0x8192
+    GENERATE_MIPMAP_HINT // = 0x8192
 
     guarded 
-    BYTE: 0x1400
+    BYTE // = 0x1400
 
     guarded 
-    UNSIGNED_BYTE: 0x1401
+    UNSIGNED_BYTE // = 0x1401
 
     guarded 
-    SHORT: 0x1402
+    SHORT // = 0x1402
 
     guarded 
-    UNSIGNED_SHORT: 0x1403
+    UNSIGNED_SHORT // = 0x1403
 
     guarded 
-    INT: 0x1404
+    INT // = 0x1404
 
     guarded 
-    UNSIGNED_INT: 0x1405
+    UNSIGNED_INT // = 0x1405
 
     guarded 
-    FLOAT: 0x1406
+    FLOAT // = 0x1406
 
     guarded 
-    DEPTH_COMPONENT: 0x1902
+    DEPTH_COMPONENT // = 0x1902
 
     guarded 
-    ALPHA: 0x1906
+    ALPHA // = 0x1906
 
     guarded 
-    RGB: 0x1907
+    RGB // = 0x1907
 
     guarded 
-    RGBA: 0x1908
+    RGBA // = 0x1908
 
     guarded 
-    LUMINANCE: 0x1909
+    LUMINANCE // = 0x1909
 
     guarded 
-    LUMINANCE_ALPHA: 0x190A
+    LUMINANCE_ALPHA // = 0x190A
 
     guarded 
-    UNSIGNED_SHORT_4_4_4_4: 0x8033
+    UNSIGNED_SHORT_4_4_4_4 // = 0x8033
 
     guarded 
-    UNSIGNED_SHORT_5_5_5_1: 0x8034
+    UNSIGNED_SHORT_5_5_5_1 // = 0x8034
 
     guarded 
-    UNSIGNED_SHORT_5_6_5: 0x8363
+    UNSIGNED_SHORT_5_6_5 // = 0x8363
 
     guarded 
-    FRAGMENT_SHADER: 0x8B30
+    FRAGMENT_SHADER // = 0x8B30
 
     guarded 
-    VERTEX_SHADER: 0x8B31
+    VERTEX_SHADER // = 0x8B31
 
     guarded 
-    MAX_VERTEX_ATTRIBS: 0x8869
+    MAX_VERTEX_ATTRIBS // = 0x8869
 
     guarded 
-    MAX_VERTEX_UNIFORM_VECTORS: 0x8DFB
+    MAX_VERTEX_UNIFORM_VECTORS // = 0x8DFB
 
     guarded 
-    MAX_VARYING_VECTORS: 0x8DFC
+    MAX_VARYING_VECTORS // = 0x8DFC
 
     guarded 
-    MAX_COMBINED_TEXTURE_IMAGE_UNITS: 0x8B4D
+    MAX_COMBINED_TEXTURE_IMAGE_UNITS // = 0x8B4D
 
     guarded 
-    MAX_VERTEX_TEXTURE_IMAGE_UNITS: 0x8B4C
+    MAX_VERTEX_TEXTURE_IMAGE_UNITS // = 0x8B4C
 
     guarded 
-    MAX_TEXTURE_IMAGE_UNITS: 0x8872
+    MAX_TEXTURE_IMAGE_UNITS // = 0x8872
 
     guarded 
-    MAX_FRAGMENT_UNIFORM_VECTORS: 0x8DFD
+    MAX_FRAGMENT_UNIFORM_VECTORS // = 0x8DFD
 
     guarded 
-    SHADER_TYPE: 0x8B4F
+    SHADER_TYPE // = 0x8B4F
 
     guarded 
-    DELETE_STATUS: 0x8B80
+    DELETE_STATUS // = 0x8B80
 
     guarded 
-    LINK_STATUS: 0x8B82
+    LINK_STATUS // = 0x8B82
 
     guarded 
-    VALIDATE_STATUS: 0x8B83
+    VALIDATE_STATUS // = 0x8B83
 
     guarded 
-    ATTACHED_SHADERS: 0x8B85
+    ATTACHED_SHADERS // = 0x8B85
 
     guarded 
-    ACTIVE_UNIFORMS: 0x8B86
+    ACTIVE_UNIFORMS // = 0x8B86
 
     guarded 
-    ACTIVE_ATTRIBUTES: 0x8B89
+    ACTIVE_ATTRIBUTES // = 0x8B89
 
     guarded 
-    SHADING_LANGUAGE_VERSION: 0x8B8C
+    SHADING_LANGUAGE_VERSION // = 0x8B8C
 
     guarded 
-    CURRENT_PROGRAM: 0x8B8D
+    CURRENT_PROGRAM // = 0x8B8D
 
     guarded 
-    NEVER: 0x0200
+    NEVER // = 0x0200
 
     guarded 
-    LESS: 0x0201
+    LESS // = 0x0201
 
     guarded 
-    EQUAL: 0x0202
+    EQUAL // = 0x0202
 
     guarded 
-    LEQUAL: 0x0203
+    LEQUAL // = 0x0203
 
     guarded 
-    GREATER: 0x0204
+    GREATER // = 0x0204
 
     guarded 
-    NOTEQUAL: 0x0205
+    NOTEQUAL // = 0x0205
 
     guarded 
-    GEQUAL: 0x0206
+    GEQUAL // = 0x0206
 
     guarded 
-    ALWAYS: 0x0207
+    ALWAYS // = 0x0207
 
     guarded 
-    KEEP: 0x1E00
+    KEEP // = 0x1E00
 
     guarded 
-    REPLACE: 0x1E01
+    REPLACE // = 0x1E01
 
     guarded 
-    INCR: 0x1E02
+    INCR // = 0x1E02
 
     guarded 
-    DECR: 0x1E03
+    DECR // = 0x1E03
 
     guarded 
-    INVERT: 0x150A
+    INVERT // = 0x150A
 
     guarded 
-    INCR_WRAP: 0x8507
+    INCR_WRAP // = 0x8507
 
     guarded 
-    DECR_WRAP: 0x8508
+    DECR_WRAP // = 0x8508
 
     guarded 
-    VENDOR: 0x1F00
+    VENDOR // = 0x1F00
 
     guarded 
-    RENDERER: 0x1F01
+    RENDERER // = 0x1F01
 
     guarded 
-    VERSION: 0x1F02
+    VERSION // = 0x1F02
 
     guarded 
-    NEAREST: 0x2600
+    NEAREST // = 0x2600
 
     guarded 
-    LINEAR: 0x2601
+    LINEAR // = 0x2601
 
     guarded 
-    NEAREST_MIPMAP_NEAREST: 0x2700
+    NEAREST_MIPMAP_NEAREST // = 0x2700
 
     guarded 
-    LINEAR_MIPMAP_NEAREST: 0x2701
+    LINEAR_MIPMAP_NEAREST // = 0x2701
 
     guarded 
-    NEAREST_MIPMAP_LINEAR: 0x2702
+    NEAREST_MIPMAP_LINEAR // = 0x2702
 
     guarded 
-    LINEAR_MIPMAP_LINEAR: 0x2703
+    LINEAR_MIPMAP_LINEAR // = 0x2703
 
     guarded 
-    TEXTURE_MAG_FILTER: 0x2800
+    TEXTURE_MAG_FILTER // = 0x2800
 
     guarded 
-    TEXTURE_MIN_FILTER: 0x2801
+    TEXTURE_MIN_FILTER // = 0x2801
 
     guarded 
-    TEXTURE_WRAP_S: 0x2802
+    TEXTURE_WRAP_S // = 0x2802
 
     guarded 
-    TEXTURE_WRAP_T: 0x2803
+    TEXTURE_WRAP_T // = 0x2803
 
     guarded 
-    TEXTURE_2D: 0x0DE1
+    TEXTURE_2D // = 0x0DE1
 
     guarded 
-    TEXTURE: 0x1702
+    TEXTURE // = 0x1702
 
     guarded 
-    TEXTURE_CUBE_MAP: 0x8513
+    TEXTURE_CUBE_MAP // = 0x8513
 
     guarded 
-    TEXTURE_BINDING_CUBE_MAP: 0x8514
+    TEXTURE_BINDING_CUBE_MAP // = 0x8514
 
     guarded 
-    TEXTURE_CUBE_MAP_POSITIVE_X: 0x8515
+    TEXTURE_CUBE_MAP_POSITIVE_X // = 0x8515
 
     guarded 
-    TEXTURE_CUBE_MAP_NEGATIVE_X: 0x8516
+    TEXTURE_CUBE_MAP_NEGATIVE_X // = 0x8516
 
     guarded 
-    TEXTURE_CUBE_MAP_POSITIVE_Y: 0x8517
+    TEXTURE_CUBE_MAP_POSITIVE_Y // = 0x8517
 
     guarded 
-    TEXTURE_CUBE_MAP_NEGATIVE_Y: 0x8518
+    TEXTURE_CUBE_MAP_NEGATIVE_Y // = 0x8518
 
     guarded 
-    TEXTURE_CUBE_MAP_POSITIVE_Z: 0x8519
+    TEXTURE_CUBE_MAP_POSITIVE_Z // = 0x8519
 
     guarded 
-    TEXTURE_CUBE_MAP_NEGATIVE_Z: 0x851A
+    TEXTURE_CUBE_MAP_NEGATIVE_Z // = 0x851A
 
     guarded 
-    MAX_CUBE_MAP_TEXTURE_SIZE: 0x851C
+    MAX_CUBE_MAP_TEXTURE_SIZE // = 0x851C
 
     guarded 
-    TEXTURE0: 0x84C0
+    TEXTURE0 // = 0x84C0
 
     guarded 
-    TEXTURE1: 0x84C1
+    TEXTURE1 // = 0x84C1
 
     guarded 
-    TEXTURE2: 0x84C2
+    TEXTURE2 // = 0x84C2
 
     guarded 
-    TEXTURE3: 0x84C3
+    TEXTURE3 // = 0x84C3
 
     guarded 
-    TEXTURE4: 0x84C4
+    TEXTURE4 // = 0x84C4
 
     guarded 
-    TEXTURE5: 0x84C5
+    TEXTURE5 // = 0x84C5
 
     guarded 
-    TEXTURE6: 0x84C6
+    TEXTURE6 // = 0x84C6
 
     guarded 
-    TEXTURE7: 0x84C7
+    TEXTURE7 // = 0x84C7
 
     guarded 
-    TEXTURE8: 0x84C8
+    TEXTURE8 // = 0x84C8
 
     guarded 
-    TEXTURE9: 0x84C9
+    TEXTURE9 // = 0x84C9
 
     guarded 
-    TEXTURE10: 0x84CA
+    TEXTURE10 // = 0x84CA
 
     guarded 
-    TEXTURE11: 0x84CB
+    TEXTURE11 // = 0x84CB
 
     guarded 
-    TEXTURE12: 0x84CC
+    TEXTURE12 // = 0x84CC
 
     guarded 
-    TEXTURE13: 0x84CD
+    TEXTURE13 // = 0x84CD
 
     guarded 
-    TEXTURE14: 0x84CE
+    TEXTURE14 // = 0x84CE
 
     guarded 
-    TEXTURE15: 0x84CF
+    TEXTURE15 // = 0x84CF
 
     guarded 
-    TEXTURE16: 0x84D0
+    TEXTURE16 // = 0x84D0
 
     guarded 
-    TEXTURE17: 0x84D1
+    TEXTURE17 // = 0x84D1
 
     guarded 
-    TEXTURE18: 0x84D2
+    TEXTURE18 // = 0x84D2
 
     guarded 
-    TEXTURE19: 0x84D3
+    TEXTURE19 // = 0x84D3
 
     guarded 
-    TEXTURE20: 0x84D4
+    TEXTURE20 // = 0x84D4
 
     guarded 
-    TEXTURE21: 0x84D5
+    TEXTURE21 // = 0x84D5
 
     guarded 
-    TEXTURE22: 0x84D6
+    TEXTURE22 // = 0x84D6
 
     guarded 
-    TEXTURE23: 0x84D7
+    TEXTURE23 // = 0x84D7
 
     guarded 
-    TEXTURE24: 0x84D8
+    TEXTURE24 // = 0x84D8
 
     guarded 
-    TEXTURE25: 0x84D9
+    TEXTURE25 // = 0x84D9
 
     guarded 
-    TEXTURE26: 0x84DA
+    TEXTURE26 // = 0x84DA
 
     guarded 
-    TEXTURE27: 0x84DB
+    TEXTURE27 // = 0x84DB
 
     guarded 
-    TEXTURE28: 0x84DC
+    TEXTURE28 // = 0x84DC
 
     guarded 
-    TEXTURE29: 0x84DD
+    TEXTURE29 // = 0x84DD
 
     guarded 
-    TEXTURE30: 0x84DE
+    TEXTURE30 // = 0x84DE
 
     guarded 
-    TEXTURE31: 0x84DF
+    TEXTURE31 // = 0x84DF
 
     guarded 
-    ACTIVE_TEXTURE: 0x84E0
+    ACTIVE_TEXTURE // = 0x84E0
 
     guarded 
-    REPEAT: 0x2901
+    REPEAT // = 0x2901
 
     guarded 
-    CLAMP_TO_EDGE: 0x812F
+    CLAMP_TO_EDGE // = 0x812F
 
     guarded 
-    MIRRORED_REPEAT: 0x8370
+    MIRRORED_REPEAT // = 0x8370
 
     guarded 
-    FLOAT_VEC2: 0x8B50
+    FLOAT_VEC2 // = 0x8B50
 
     guarded 
-    FLOAT_VEC3: 0x8B51
+    FLOAT_VEC3 // = 0x8B51
 
     guarded 
-    FLOAT_VEC4: 0x8B52
+    FLOAT_VEC4 // = 0x8B52
 
     guarded 
-    INT_VEC2: 0x8B53
+    INT_VEC2 // = 0x8B53
 
     guarded 
-    INT_VEC3: 0x8B54
+    INT_VEC3 // = 0x8B54
 
     guarded 
-    INT_VEC4: 0x8B55
+    INT_VEC4 // = 0x8B55
 
     guarded 
-    BOOL: 0x8B56
+    BOOL // = 0x8B56
 
     guarded 
-    BOOL_VEC2: 0x8B57
+    BOOL_VEC2 // = 0x8B57
 
     guarded 
-    BOOL_VEC3: 0x8B58
+    BOOL_VEC3 // = 0x8B58
 
     guarded 
-    BOOL_VEC4: 0x8B59
+    BOOL_VEC4 // = 0x8B59
 
     guarded 
-    FLOAT_MAT2: 0x8B5A
+    FLOAT_MAT2 // = 0x8B5A
 
     guarded 
-    FLOAT_MAT3: 0x8B5B
+    FLOAT_MAT3 // = 0x8B5B
 
     guarded 
-    FLOAT_MAT4: 0x8B5C
+    FLOAT_MAT4 // = 0x8B5C
 
     guarded 
-    SAMPLER_2D: 0x8B5E
+    SAMPLER_2D // = 0x8B5E
 
     guarded 
-    SAMPLER_CUBE: 0x8B60
+    SAMPLER_CUBE // = 0x8B60
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_ENABLED: 0x8622
+    VERTEX_ATTRIB_ARRAY_ENABLED // = 0x8622
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_SIZE: 0x8623
+    VERTEX_ATTRIB_ARRAY_SIZE // = 0x8623
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_STRIDE: 0x8624
+    VERTEX_ATTRIB_ARRAY_STRIDE // = 0x8624
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_TYPE: 0x8625
+    VERTEX_ATTRIB_ARRAY_TYPE // = 0x8625
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_NORMALIZED: 0x886A
+    VERTEX_ATTRIB_ARRAY_NORMALIZED // = 0x886A
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_POINTER: 0x8645
+    VERTEX_ATTRIB_ARRAY_POINTER // = 0x8645
 
     guarded 
-    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: 0x889F
+    VERTEX_ATTRIB_ARRAY_BUFFER_BINDING // = 0x889F
 
     guarded 
-    IMPLEMENTATION_COLOR_READ_TYPE: 0x8B9A
+    IMPLEMENTATION_COLOR_READ_TYPE // = 0x8B9A
 
     guarded 
-    IMPLEMENTATION_COLOR_READ_FORMAT: 0x8B9B
+    IMPLEMENTATION_COLOR_READ_FORMAT // = 0x8B9B
 
     guarded 
-    COMPILE_STATUS: 0x8B81
+    COMPILE_STATUS // = 0x8B81
 
     guarded 
-    LOW_FLOAT: 0x8DF0
+    LOW_FLOAT // = 0x8DF0
 
     guarded 
-    MEDIUM_FLOAT: 0x8DF1
+    MEDIUM_FLOAT // = 0x8DF1
 
     guarded 
-    HIGH_FLOAT: 0x8DF2
+    HIGH_FLOAT // = 0x8DF2
 
     guarded 
-    LOW_INT: 0x8DF3
+    LOW_INT // = 0x8DF3
 
     guarded 
-    MEDIUM_INT: 0x8DF4
+    MEDIUM_INT // = 0x8DF4
 
     guarded 
-    HIGH_INT: 0x8DF5
+    HIGH_INT // = 0x8DF5
 
     guarded 
-    FRAMEBUFFER: 0x8D40
+    FRAMEBUFFER // = 0x8D40
 
     guarded 
-    RENDERBUFFER: 0x8D41
+    RENDERBUFFER // = 0x8D41
 
     guarded 
-    RGBA4: 0x8056
+    RGBA4 // = 0x8056
 
     guarded 
-    RGB5_A1: 0x8057
+    RGB5_A1 // = 0x8057
 
     guarded 
-    RGB565: 0x8D62
+    RGB565 // = 0x8D62
 
     guarded 
-    DEPTH_COMPONENT16: 0x81A5
+    DEPTH_COMPONENT16 // = 0x81A5
 
     guarded 
-    STENCIL_INDEX8: 0x8D48
+    STENCIL_INDEX8 // = 0x8D48
 
     guarded 
-    DEPTH_STENCIL: 0x84F9
+    DEPTH_STENCIL // = 0x84F9
 
     guarded 
-    RENDERBUFFER_WIDTH: 0x8D42
+    RENDERBUFFER_WIDTH // = 0x8D42
 
     guarded 
-    RENDERBUFFER_HEIGHT: 0x8D43
+    RENDERBUFFER_HEIGHT // = 0x8D43
 
     guarded 
-    RENDERBUFFER_INTERNAL_FORMAT: 0x8D44
+    RENDERBUFFER_INTERNAL_FORMAT // = 0x8D44
 
     guarded 
-    RENDERBUFFER_RED_SIZE: 0x8D50
+    RENDERBUFFER_RED_SIZE // = 0x8D50
 
     guarded 
-    RENDERBUFFER_GREEN_SIZE: 0x8D51
+    RENDERBUFFER_GREEN_SIZE // = 0x8D51
 
     guarded 
-    RENDERBUFFER_BLUE_SIZE: 0x8D52
+    RENDERBUFFER_BLUE_SIZE // = 0x8D52
 
     guarded 
-    RENDERBUFFER_ALPHA_SIZE: 0x8D53
+    RENDERBUFFER_ALPHA_SIZE // = 0x8D53
 
     guarded 
-    RENDERBUFFER_DEPTH_SIZE: 0x8D54
+    RENDERBUFFER_DEPTH_SIZE // = 0x8D54
 
     guarded 
-    RENDERBUFFER_STENCIL_SIZE: 0x8D55
+    RENDERBUFFER_STENCIL_SIZE // = 0x8D55
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: 0x8CD0
+    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE // = 0x8CD0
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: 0x8CD1
+    FRAMEBUFFER_ATTACHMENT_OBJECT_NAME // = 0x8CD1
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: 0x8CD2
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL // = 0x8CD2
 
     guarded 
-    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: 0x8CD3
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE // = 0x8CD3
 
     guarded 
-    COLOR_ATTACHMENT0: 0x8CE0
+    COLOR_ATTACHMENT0 // = 0x8CE0
 
     guarded 
-    DEPTH_ATTACHMENT: 0x8D00
+    DEPTH_ATTACHMENT // = 0x8D00
 
     guarded 
-    STENCIL_ATTACHMENT: 0x8D20
+    STENCIL_ATTACHMENT // = 0x8D20
 
     guarded 
-    DEPTH_STENCIL_ATTACHMENT: 0x821A
+    DEPTH_STENCIL_ATTACHMENT // = 0x821A
 
     guarded 
     NONE: 0
 
     guarded 
-    FRAMEBUFFER_COMPLETE: 0x8CD5
+    FRAMEBUFFER_COMPLETE // = 0x8CD5
 
     guarded 
-    FRAMEBUFFER_INCOMPLETE_ATTACHMENT: 0x8CD6
+    FRAMEBUFFER_INCOMPLETE_ATTACHMENT // = 0x8CD6
 
     guarded 
-    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: 0x8CD7
+    FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT // = 0x8CD7
 
     guarded 
-    FRAMEBUFFER_INCOMPLETE_DIMENSIONS: 0x8CD9
+    FRAMEBUFFER_INCOMPLETE_DIMENSIONS // = 0x8CD9
 
     guarded 
-    FRAMEBUFFER_UNSUPPORTED: 0x8CDD
+    FRAMEBUFFER_UNSUPPORTED // = 0x8CDD
 
     guarded 
-    FRAMEBUFFER_BINDING: 0x8CA6
+    FRAMEBUFFER_BINDING // = 0x8CA6
 
     guarded 
-    RENDERBUFFER_BINDING: 0x8CA7
+    RENDERBUFFER_BINDING // = 0x8CA7
 
     guarded 
-    MAX_RENDERBUFFER_SIZE: 0x84E8
+    MAX_RENDERBUFFER_SIZE // = 0x84E8
 
     guarded 
-    INVALID_FRAMEBUFFER_OPERATION: 0x0506
+    INVALID_FRAMEBUFFER_OPERATION // = 0x0506
 
     guarded 
-    UNPACK_FLIP_Y_WEBGL: 0x9240
+    UNPACK_FLIP_Y_WEBGL // = 0x9240
 
     guarded 
-    UNPACK_PREMULTIPLY_ALPHA_WEBGL: 0x9241
+    UNPACK_PREMULTIPLY_ALPHA_WEBGL // = 0x9241
 
     guarded 
-    CONTEXT_LOST_WEBGL: 0x9242
+    CONTEXT_LOST_WEBGL // = 0x9242
 
     guarded 
-    UNPACK_COLORSPACE_CONVERSION_WEBGL: 0x9243
+    UNPACK_COLORSPACE_CONVERSION_WEBGL // = 0x9243
 
     guarded 
-    BROWSER_DEFAULT_WEBGL: 0x9244
+    BROWSER_DEFAULT_WEBGL // = 0x9244
   }
 
 
@@ -26396,16 +26342,16 @@ external
     operation send(data: Object? /*(!)Text | ArrayBufferLike | Blob | ArrayBufferView*/)
 
     guarded
-    CONNECTING: 0
+    CONNECTING // = 0
 
     guarded
-    OPEN: 1
+    OPEN // = 1
 
     guarded
-    CLOSING: 2
+    CLOSING // = 2
 
     guarded
-    CLOSED: 3
+    CLOSED // = 3
 
     operation addEventListener<K = /*(!) keyof WebSocketEventMap */ Object?>(type`: K, listener: operation(this: WebSocket, ev: /*(!) WebSocketEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -26420,16 +26366,16 @@ external
     on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | Список<Text> | пусто*/ = empty) // : WebSocket
 
     guarded
-    CONNECTING: 0
+    CONNECTING // = 0
 
     guarded
-    OPEN: 1
+    OPEN // = 1
 
     guarded
-    CLOSING: 2
+    CLOSING // = 2
 
     guarded
-    CLOSED: 3
+    CLOSED // = 3
   }
 
   /**
@@ -26555,20 +26501,20 @@ external
     deltaZ: Number
 
     guarded
-    DOM_DELTA_PIXEL: 0x00
+    DOM_DELTA_PIXEL // = 0x00
 
     guarded
-    DOM_DELTA_LINE: 0x01
+    DOM_DELTA_LINE // = 0x01
 
     guarded
-    DOM_DELTA_PAGE: 0x02
+    DOM_DELTA_PAGE // = 0x02
 
     prototype: WheelEvent
 
     on create(type`: Text, eventInitDict: WheelEventInit? = empty) // : WheelEvent
 
     guarded
-    DOM_DELTA_PIXEL: 0x00
+    DOM_DELTA_PIXEL // = 0x00
 
     guarded
     DOM_DELTA_LINE: 0x01
@@ -27182,68 +27128,68 @@ external
     operation snapshotItem(index: Number): Node?
 
     guarded
-    ANY_TYPE: 0
+    ANY_TYPE // = 0
 
     guarded
-    NUMBER_TYPE: 1
+    NUMBER_TYPE // = 1
 
     guarded
-    STRING_TYPE: 2
+    STRING_TYPE // = 2
 
     guarded
-    BOOLEAN_TYPE: 3
+    BOOLEAN_TYPE // = 3
 
     guarded
-    UNORDERED_NODE_ITERATOR_TYPE: 4
+    UNORDERED_NODE_ITERATOR_TYPE // = 4
 
     guarded
-    ORDERED_NODE_ITERATOR_TYPE: 5
+    ORDERED_NODE_ITERATOR_TYPE // = 5
 
     guarded
-    UNORDERED_NODE_SNAPSHOT_TYPE: 6
+    UNORDERED_NODE_SNAPSHOT_TYPE // = 6
 
     guarded
-    ORDERED_NODE_SNAPSHOT_TYPE: 7
+    ORDERED_NODE_SNAPSHOT_TYPE // = 7
 
     guarded
-    ANY_UNORDERED_NODE_TYPE: 8
+    ANY_UNORDERED_NODE_TYPE // = 8
 
     guarded
-    FIRST_ORDERED_NODE_TYPE: 9
+    FIRST_ORDERED_NODE_TYPE // = 9
 
     prototype: XPathResult
 
     on create() // : XPathResult
 
     guarded
-    ANY_TYPE: 0
+    ANY_TYPE // = 0
 
     guarded
-    NUMBER_TYPE: 1
+    NUMBER_TYPE // = 1
 
     guarded
-    STRING_TYPE: 2
+    STRING_TYPE // = 2
 
     guarded
-    BOOLEAN_TYPE: 3
+    BOOLEAN_TYPE // = 3
 
     guarded
-    UNORDERED_NODE_ITERATOR_TYPE: 4
+    UNORDERED_NODE_ITERATOR_TYPE // = 4
 
     guarded
-    ORDERED_NODE_ITERATOR_TYPE: 5
+    ORDERED_NODE_ITERATOR_TYPE // = 5
 
     guarded
-    UNORDERED_NODE_SNAPSHOT_TYPE: 6
+    UNORDERED_NODE_SNAPSHOT_TYPE // = 6
 
     guarded
-    ORDERED_NODE_SNAPSHOT_TYPE: 7
+    ORDERED_NODE_SNAPSHOT_TYPE // = 7
 
     guarded
-    ANY_UNORDERED_NODE_TYPE: 8
+    ANY_UNORDERED_NODE_TYPE // = 8
 
     guarded
-    FIRST_ORDERED_NODE_TYPE: 9
+    FIRST_ORDERED_NODE_TYPE // = 9
   }
 
   /**
