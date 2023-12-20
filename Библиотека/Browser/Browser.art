@@ -4856,7 +4856,7 @@ external
 
     prototype: CSSMathMax
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(args: Список<CSSNumberish>) // : CSSMathMax
   }
 
@@ -4869,7 +4869,7 @@ external
 
     prototype: CSSMathMin
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(args: Список<CSSNumberish>) // : CSSMathMin
   }
 
@@ -4894,7 +4894,7 @@ external
 
     prototype: CSSMathProduct
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(args: Список<CSSNumberish>) // : CSSMathProduct
   }
 
@@ -4907,7 +4907,7 @@ external
 
     prototype: CSSMathSum
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     on create(args: Список<CSSNumberish>) // : CSSMathSum
   }
 
@@ -4989,30 +4989,30 @@ external
 
   type CSSNumericValue = object CSSStyleValue
   {
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation add(values: Список<CSSNumberish>): CSSNumericValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation div(values: Список<CSSNumberish>): CSSNumericValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation equals(value: Список<CSSNumberish>): YesNo
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation max(values: Список<CSSNumberish>): CSSNumericValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation min(values: Список<CSSNumberish>): CSSNumericValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation mul(values: Список<CSSNumberish>): CSSNumericValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation sub(values: Список<CSSNumberish>): CSSNumericValue
 
     operation to(unit: Text): CSSUnitValue
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation toSum(units: Список<Text>): CSSMathSum
 
     operation type`(): CSSNumericType
@@ -5886,15 +5886,15 @@ external
 
   type ChildNode = aspect Node
   {
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation after(nodes: Список<Object? /*(!)Node | Text*/>)
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation before(nodes: Список<Object? /*(!)Node | Text*/>)
 
     operation remove()
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation replaceWith(nodes: Список<Object? /*(!)Node | Text*/>)
   }
 
@@ -6694,14 +6694,14 @@ external
 
     operation toString(): Text
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation add(tokens: Список<Text>)
 
     operation contains(token: Text): YesNo
 
     operation item(index: Number): Text?
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation remove(tokens: Список<Text>)
 
     operation replace(token: Text, newToken: Text): YesNo
@@ -10280,7 +10280,7 @@ external
   {
     name: Text
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation assign(nodes: Список<Object? /*(!)Element | Text*/>)
 
     operation assignedElements(options: AssignedNodesOptions? = empty): Список<Element>
@@ -14840,7 +14840,7 @@ external
 
     operation setParameters(parameters: RTCRtpSendParameters): JS.Promise<None>
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation setStreams(streams: Список<MediaStream>)
 
     prototype: RTCRtpSender
@@ -19620,14 +19620,14 @@ external
 
   type StylePropertyMap = object StylePropertyMapReadOnly
   {
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation append(property: Text, values: Список<Object? /*(!)CSSStyleValue | Text*/>)
 
     operation clear()
 
     operation delete(property: Text)
 
-    #js.МассивПараметров
+    #JS.МассивПараметров
     operation set(property: Text, values: Список<Object? /*(!)CSSStyleValue | Text*/>)
 
     prototype: StylePropertyMap
