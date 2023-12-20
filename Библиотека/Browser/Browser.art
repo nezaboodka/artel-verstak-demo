@@ -3790,9 +3790,9 @@ external
 
     operation getByteTimeDomainData(array: JS.Uint8Array)
 
-    operation getFloatFrequencyData(array: Float32Array)
+    operation getFloatFrequencyData(array: JS.Float32Array)
 
-    operation getFloatTimeDomainData(array: Float32Array)
+    operation getFloatTimeDomainData(array: JS.Float32Array)
 
     prototype: AnalyserNode
 
@@ -3991,11 +3991,11 @@ external
     guarded
     sampleRate: Number
 
-    operation copyFromChannel(destination: Float32Array, channelNumber: Number, bufferOffset: Number? = none)
+    operation copyFromChannel(destination: JS.Float32Array, channelNumber: Number, bufferOffset: Number? = none)
 
-    operation copyToChannel(source: Float32Array, channelNumber: Number, bufferOffset: Number? = none)
+    operation copyToChannel(source: JS.Float32Array, channelNumber: Number, bufferOffset: Number? = none)
 
-    operation getChannelData(channel: Number): Float32Array
+    operation getChannelData(channel: Number): JS.Float32Array
 
     prototype: AudioBuffer
 
@@ -4417,7 +4417,7 @@ external
 
     type`: BiquadFilterType
 
-    operation getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array)
+    operation getFrequencyResponse(frequencyHz: JS.Float32Array, magResponse: JS.Float32Array, phaseResponse: JS.Float32Array)
 
     prototype: BiquadFilterNode
 
@@ -4474,7 +4474,7 @@ external
     guarded 
     bodyUsed: YesNo
 
-    operation JS.arrayBuffer(): JS.Promise<JS.ArrayBuffer>
+    operation arrayBuffer(): JS.Promise<JS.ArrayBuffer>
 
     operation blob(): JS.Promise<Blob>
 
@@ -4805,7 +4805,7 @@ external
   type CSSLayerStatementRule = object CSSRule
   {
     guarded
-    nameList: ReadonlyArray<Text>
+    nameList: JS.ReadonlyArray<Text>
 
     prototype: CSSLayerStatementRule
 
@@ -5499,11 +5499,11 @@ external
 
     operation delete(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = none): JS.Promise<YesNo>
 
-    operation keys(request: Object? /*(!)RequestInfo | URL | пусто*/ = none, options: CacheQueryOptions? = none): JS.Promise<ReadonlyArray<Request>>
+    operation keys(request: Object? /*(!)RequestInfo | URL | пусто*/ = none, options: CacheQueryOptions? = none): JS.Promise<JS.ReadonlyArray<Request>>
 
     operation match(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = none): JS.Promise<Response?>
 
-    operation matchAll(request: Object? /*(!)RequestInfo | URL | пусто*/ = none, options: CacheQueryOptions? = none): JS.Promise<ReadonlyArray<Response>>
+    operation matchAll(request: Object? /*(!)RequestInfo | URL | пусто*/ = none, options: CacheQueryOptions? = none): JS.Promise<JS.ReadonlyArray<Response>>
 
     operation put(request: Object? /*(!)RequestInfo | URL*/, response: Response): JS.Promise<None>
 
@@ -5681,7 +5681,7 @@ external
 
     operation rect(x: Number, y: Number, w: Number, h: Number)
 
-    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Object? /*(!)Number | DOMPointInit | Список<Object? /*(!)Number | DOMPointInit*/> | пусто*/ = none)
+    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Object? /*(!)Number | DOMPointInit | Список<Object? /*(!)Number | DOMPointInit> | пусто*/ = none)
   }
 
 
@@ -5843,7 +5843,7 @@ external
   {
     prototype: ChannelSplitterNode
 
-    on create(context: BaseAudioContext, options: ChannelSplitterOptions? = none): ChannelSplitterNode
+    on create(context: BaseAudioContext, options: ChannelSplitterOptions? = none) // : ChannelSplitterNode
   }
 
   /**
@@ -5938,7 +5938,7 @@ external
   type ClipboardItem = object
   {
     guarded
-    types: ReadonlyArray<Text>
+    types: JS.ReadonlyArray<Text>
 
     operation getType(type`: Text): JS.Promise<Blob>
 
@@ -6425,7 +6425,7 @@ external
 
     on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = none) // : DOMMatrix
 
-    operation fromFloat32Array(array32: Float32Array): DOMMatrix
+    operation fromFloat32Array(array32: JS.Float32Array): DOMMatrix
 
     operation fromFloat64Array(array64: Float64Array): DOMMatrix
 
@@ -6456,7 +6456,7 @@ external
 
     on create(init: Object? /*(!)Text | Список<Number> | пусто*/ = none) // : DOMMatrixReadOnly
 
-    operation fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly
+    operation fromFloat32Array(array32: JS.Float32Array): DOMMatrixReadOnly
 
     operation fromFloat64Array(array64: Float64Array): DOMMatrixReadOnly
 
@@ -6731,7 +6731,7 @@ external
     items: DataTransferItemList
 
     guarded
-    types: ReadonlyArray<Text>
+    types: JS.ReadonlyArray<Text>
 
     operation clearData(format: Text? = none)
 
@@ -7527,32 +7527,32 @@ external
   type Event = object
   {
     guarded
-    NONE: 0
+    NONE // = 0
 
     guarded
-    CAPTURING_PHASE: 1
+    CAPTURING_PHASE // = 1
 
     guarded
-    AT_TARGET: 2
+    AT_TARGET // = 2
 
     guarded
-    BUBBLING_PHASE: 3
+    BUBBLING_PHASE // = 3
 
     prototype: Event
 
     on create(type`: Text, eventInitDict: EventInit? = none) // : Event
 
     guarded
-    NONE: 0
+    NONE // = 0
 
     guarded
-    CAPTURING_PHASE: 1
+    CAPTURING_PHASE // = 1
 
     guarded
-    AT_TARGET: 2
+    AT_TARGET // = 2
 
     guarded
-    BUBBLING_PHASE: 3
+    BUBBLING_PHASE // = 3
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/EventCounts) */
@@ -7745,14 +7745,14 @@ external
     onprogress: (operation(this: FileReader, ev: ProgressEvent<FileReader>): /*(!) any */ Object?)?
 
     guarded
-    readyState: Object? /*(!)/*(!) typeof FileReader.EMPTY */ Object? | /*(!) typeof FileReader.LOADING */ Object? | /*(!) typeof FileReader.DONE */ Object?*/
+    readyState: Object? /*(!) typeof FileReader.EMPTY | typeof FileReader.LOADING | typeof FileReader.DONE */
 
     guarded
     result: Object? /*(!)Text | JS.ArrayBuffer | пусто*/
 
     operation abort()
 
-    operation readAsJS.ArrayBuffer(blob: Blob)
+    operation readAsArrayBuffer(blob: Blob)
 
     operation readAsBinaryString(blob: Blob)
 
@@ -8058,7 +8058,7 @@ external
   type FontFaceSetLoadEvent = object Event
   {
     guarded
-    fontfaces: ReadonlyArray<FontFace>
+    fontfaces: JS.ReadonlyArray<FontFace>
 
     prototype: FontFaceSetLoadEvent
 
@@ -8145,16 +8145,16 @@ external
   type Gamepad = object
   {
     guarded
-    axes: ReadonlyArray<Number>
+    axes: JS.ReadonlyArray<Number>
 
     guarded
-    buttons: ReadonlyArray<GamepadButton>
+    buttons: JS.ReadonlyArray<GamepadButton>
 
     guarded
     connected: YesNo
 
     guarded
-    hapticActuators: ReadonlyArray<GamepadHapticActuator>
+    hapticActuators: JS.ReadonlyArray<GamepadHapticActuator>
 
     guarded
     id: Text
@@ -8329,26 +8329,26 @@ external
     message: Text
 
     guarded
-    PERMISSION_DENIED: 1
+    PERMISSION_DENIED // = 1
 
     guarded
-    POSITION_UNAVAILABLE: 2
+    POSITION_UNAVAILABLE // =  2
 
     guarded
-    TIMEOUT: 3
+    TIMEOUT // =  3
 
     prototype: GeolocationPositionError
 
     on create() // : GeolocationPositionError
 
     guarded
-    PERMISSION_DENIED: 1
+    PERMISSION_DENIED // =  1
 
     guarded
-    POSITION_UNAVAILABLE: 2
+    POSITION_UNAVAILABLE // =  2
 
     guarded
-    TIMEOUT: 3
+    TIMEOUT // =  3
   }
 
   type GlobalEventHandlersEventMap = aspect
@@ -9673,31 +9673,31 @@ external
     operation setMediaKeys(mediaKeys: MediaKeys?): JS.Promise<None>
 
     guarded
-    NETWORK_EMPTY: 0
+    NETWORK_EMPTY // = 0
 
     guarded
-    NETWORK_IDLE: 1
+    NETWORK_IDLE // = 1
 
     guarded
-    NETWORK_LOADING: 2
+    NETWORK_LOADING // = 2
 
     guarded
-    NETWORK_NO_SOURCE: 3
+    NETWORK_NO_SOURCE // = 3
 
     guarded
-    HAVE_NOTHING: 0
+    HAVE_NOTHING // = 0
 
     guarded
-    HAVE_METADATA: 1
+    HAVE_METADATA // = 1
 
     guarded
-    HAVE_CURRENT_DATA: 2
+    HAVE_CURRENT_DATA // = 2
 
     guarded
-    HAVE_FUTURE_DATA: 3
+    HAVE_FUTURE_DATA // = 3
 
     guarded
-    HAVE_ENOUGH_DATA: 4
+    HAVE_ENOUGH_DATA // = 4
 
     operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -10681,16 +10681,16 @@ external
     track: TextTrack
 
     const
-    NONE = 0
+    NONE // = 0
 
     const
-    LOADING = 1
+    LOADING // = 1
 
     const
-    LOADED = 2
+    LOADED // = 2
 
     const
-    ERROR = 3
+    ERROR // = 3
 
     operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTrackElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = none)
 
@@ -10705,16 +10705,16 @@ external
     on create() // : HTMLTrackElement
 
     const
-    NONE = 0
+    NONE // = 0
 
     const
-    LOADING = 1
+    LOADING // = 1
 
     const
-    LOADED = 2
+    LOADED // = 2
 
     const
-    ERROR = 3
+    ERROR // = 3
   }
 
   /**
@@ -11319,7 +11319,7 @@ external
 
   type IIRFilterNode = object AudioNode
   {
-    operation getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array)
+    operation getFrequencyResponse(frequencyHz: JS.Float32Array, magResponse: JS.Float32Array, phaseResponse: JS.Float32Array)
 
     prototype: IIRFilterNode
 
@@ -11457,7 +11457,7 @@ external
     rootMargin: Text
 
     guarded
-    thresholds: ReadonlyArray<Number>
+    thresholds: JS.ReadonlyArray<Number>
 
     operation disconnect()
 
@@ -12215,7 +12215,7 @@ external
 
     artist: Text
 
-    artwork: ReadonlyArray<MediaImage>
+    artwork: JS.ReadonlyArray<MediaImage>
 
     title: Text
 
@@ -12894,7 +12894,7 @@ external
     language: Text
 
     guarded 
-    languages: ReadonlyArray<Text>
+    languages: JS.ReadonlyArray<Text>
   }
 
 
@@ -13884,7 +13884,7 @@ external
     on create(callback: PerformanceObserverCallback) // : PerformanceObserver
 
     guarded
-    supportedEntryTypes: ReadonlyArray<Text>
+    supportedEntryTypes: JS.ReadonlyArray<Text>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PerformanceObserverEntryList) */
@@ -13965,7 +13965,7 @@ external
     secureConnectionStart: DOMHighResTimeStamp
 
     guarded
-    serverTiming: ReadonlyArray<PerformanceServerTiming>
+    serverTiming: JS.ReadonlyArray<PerformanceServerTiming>
 
     guarded
     transferSize: Number
@@ -14276,7 +14276,7 @@ external
     on create() // : PushManager
 
     guarded
-    supportedContentEncodings: ReadonlyArray<Text>
+    supportedContentEncodings: JS.ReadonlyArray<Text>
   }
 
   /**
@@ -14947,7 +14947,7 @@ external
     receiver: RTCRtpReceiver
 
     guarded
-    streams: ReadonlyArray<MediaStream>
+    streams: JS.ReadonlyArray<MediaStream>
 
     guarded
     track: MediaStreamTrack
@@ -15345,16 +15345,16 @@ external
   type ResizeObserverEntry = object
   {
     guarded
-    borderBoxSize: ReadonlyArray<ResizeObserverSize>
+    borderBoxSize: JS.ReadonlyArray<ResizeObserverSize>
 
     guarded
-    contentBoxSize: ReadonlyArray<ResizeObserverSize>
+    contentBoxSize: JS.ReadonlyArray<ResizeObserverSize>
 
     guarded
     contentRect: DOMRectReadOnly
 
     guarded
-    devicePixelContentBoxSize: ReadonlyArray<ResizeObserverSize>
+    devicePixelContentBoxSize: JS.ReadonlyArray<ResizeObserverSize>
 
     guarded
     target: Element
@@ -19044,7 +19044,7 @@ external
 
     operation getRegistration(clientURL: Object? /*(!)Text | URL | пусто*/ = none): JS.Promise<ServiceWorkerRegistration?>
 
-    operation getRegistrations(): JS.Promise<ReadonlyArray<ServiceWorkerRegistration>>
+    operation getRegistrations(): JS.Promise<JS.ReadonlyArray<ServiceWorkerRegistration>>
 
     operation register(scriptURL: Object? /*(!)Text | URL*/, options: RegistrationOptions? = none): JS.Promise<ServiceWorkerRegistration>
 
@@ -19738,15 +19738,15 @@ external
 
     operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<Object? /*(!)JS.ArrayBuffer | JsonWebKey*/>
 
-    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
+    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)RsaHashedKeyGenParams | EcKeyGenParams*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
+    operation generateKey(algorithm: Object? /*(!)RsaHashedKeyGenParams | EcKeyGenParams*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
     operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
 
-    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
     operation importKey(format: Exclude<KeyFormat, "jwk">, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
 
@@ -21188,7 +21188,7 @@ external
 
   type WaveShaperNode = object AudioNode
   {
-    curve: Float32Array?
+    curve: JS.Float32Array?
 
     oversample: OverSampleType
 
