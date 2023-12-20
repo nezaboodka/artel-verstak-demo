@@ -1,9 +1,17 @@
 /////////////////////////////
 /// Window APIs
 /////////////////////////////
+import JS = Artel.JavaScript
+
+type ReadonlyArray<T> = JS.Array<T> // TBD
+type Uint8Array = object { } // TBD
 
 external
 {
+  type ArrayBuffer = aspect
+  {
+  }
+
   type AddEventListenerOptions = aspect EventListenerOptions
   {
     once: YesNo
@@ -182,7 +190,7 @@ external
 
     outputChannelCount: Список<Number>
 
-    parameterData: Record<Text, Number>
+    parameterData: Object // Record<Text, Number>
 
     processorOptions: /*(!) any */ Object?
   }
@@ -1996,7 +2004,7 @@ external
 
   type PromiseRejectionEventInit = aspect EventInit
   {
-    promise: Promise</*(!) any */ Object?>
+    promise: JS.Promise</*(!) any */ Object?>
 
     reason: /*(!) any */ Object?
   }
@@ -2108,7 +2116,7 @@ external
 
     expirationTime: EpochTimeStamp?
 
-    keys: Record<Text, Text>
+    keys: Object // Record<Text, Text>
   }
 
 
@@ -2776,7 +2784,7 @@ external
 
     signal: AbortSignal?
 
-    window: Empty
+    window: None
   }
 
 
@@ -3104,13 +3112,13 @@ external
   {
     flush: TransformerFlushCallback<O>
 
-    readableType: Empty
+    readableType: None
 
     start: TransformerStartCallback<O>
 
     transform: TransformerTransformCallback<I, O>
 
-    writableType: Empty
+    writableType: None
   }
 
 
@@ -3146,7 +3154,7 @@ external
 
     cancel: UnderlyingSourceCancelCallback
 
-    pull: operation(controller: ReadableByteStreamController): PromiseLike<Ничего>?
+    pull: operation(controller: ReadableByteStreamController): JS.PromiseLike<None>?
 
     start: operation(controller: ReadableByteStreamController): /*(!) any */ Object?
 
@@ -3158,11 +3166,11 @@ external
   {
     cancel: UnderlyingSourceCancelCallback
 
-    pull: operation(controller: ReadableStreamDefaultController<R>): PromiseLike<Ничего>?
+    pull: operation(controller: ReadableStreamDefaultController<R>): JS.PromiseLike<None>?
 
     start: operation(controller: ReadableStreamDefaultController<R>): /*(!) any */ Object?
 
-    type`: Empty
+    type`: None
   }
 
 
@@ -3174,7 +3182,7 @@ external
 
     start: UnderlyingSinkStartCallback
 
-    type`: Empty
+    type`: None
 
     write: UnderlyingSinkWriteCallback<W>
   }
@@ -3825,7 +3833,7 @@ external
     effect: AnimationEffect?
 
     guarded
-    finished: Promise<Animation>
+    finished: JS.Promise<Animation>
 
     id: Text
 
@@ -3844,7 +3852,7 @@ external
     playbackRate: Number
 
     guarded
-    ready: Promise<Animation>
+    ready: JS.Promise<Animation>
 
     guarded
     replaceState: AnimationReplaceState
@@ -4052,7 +4060,7 @@ external
     guarded
     outputLatency: Number
 
-    operation close(): Promise<Ничего>
+    operation close(): JS.Promise<None>
 
     operation createMediaElementSource(mediaElement: HTMLMediaElement): MediaElementAudioSourceNode
 
@@ -4062,9 +4070,9 @@ external
 
     operation getOutputTimestamp(): AudioTimestamp
 
-    operation resume(): Promise<Ничего>
+    operation resume(): JS.Promise<None>
 
-    operation suspend(): Promise<Ничего>
+    operation suspend(): JS.Promise<None>
 
     operation addEventListener<K = /*(!) keyof BaseAudioContextEventMap */ Object?>(type`: K, listener: operation(this: AudioContext, ev: /*(!) BaseAudioContextEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -4437,13 +4445,13 @@ external
     guarded
     type`: Text
 
-    operation arrayBuffer(): Promise<ArrayBuffer>
+    operation arrayBuffer(): JS.Promise<ArrayBuffer>
 
     operation slice(start: Number? = empty, end: Number? = empty, contentType: Text? = empty): Blob
 
     operation stream(): ReadableStream<Uint8Array>
 
-    operation text(): Promise<Text>
+    operation text(): JS.Promise<Text>
 
     prototype: Blob
 
@@ -4473,15 +4481,15 @@ external
     guarded 
     bodyUsed: YesNo
 
-    operation arrayBuffer(): Promise<ArrayBuffer>
+    operation arrayBuffer(): JS.Promise<ArrayBuffer>
 
-    operation blob(): Promise<Blob>
+    operation blob(): JS.Promise<Blob>
 
-    operation formData(): Promise<FormData>
+    operation formData(): JS.Promise<FormData>
 
-    operation json(): Promise</*(!) any */ Object?>
+    operation json(): JS.Promise</*(!) any */ Object?>
 
-    operation text(): Promise<Text>
+    operation text(): JS.Promise<Text>
   }
 
 
@@ -5492,19 +5500,19 @@ external
 
   type Cache = object
   {
-    operation add(request: Object? /*(!)RequestInfo | URL*/): Promise<Ничего>
+    operation add(request: Object? /*(!)RequestInfo | URL*/): JS.Promise<None>
 
-    operation addAll(requests: Список<RequestInfo>): Promise<Ничего>
+    operation addAll(requests: Список<RequestInfo>): JS.Promise<None>
 
-    operation delete(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = empty): Promise<YesNo>
+    operation delete(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = empty): JS.Promise<YesNo>
 
-    operation keys(request: Object? /*(!)RequestInfo | URL | пусто*/ = empty, options: CacheQueryOptions? = empty): Promise<ReadonlyArray<Request>>
+    operation keys(request: Object? /*(!)RequestInfo | URL | пусто*/ = empty, options: CacheQueryOptions? = empty): JS.Promise<ReadonlyArray<Request>>
 
-    operation match(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = empty): Promise<Response?>
+    operation match(request: Object? /*(!)RequestInfo | URL*/, options: CacheQueryOptions? = empty): JS.Promise<Response?>
 
-    operation matchAll(request: Object? /*(!)RequestInfo | URL | пусто*/ = empty, options: CacheQueryOptions? = empty): Promise<ReadonlyArray<Response>>
+    operation matchAll(request: Object? /*(!)RequestInfo | URL | пусто*/ = empty, options: CacheQueryOptions? = empty): JS.Promise<ReadonlyArray<Response>>
 
-    operation put(request: Object? /*(!)RequestInfo | URL*/, response: Response): Promise<Ничего>
+    operation put(request: Object? /*(!)RequestInfo | URL*/, response: Response): JS.Promise<None>
 
     prototype: Cache
 
@@ -5520,15 +5528,15 @@ external
 
   type CacheStorage = object
   {
-    operation delete(cacheName: Text): Promise<YesNo>
+    operation delete(cacheName: Text): JS.Promise<YesNo>
 
-    operation has(cacheName: Text): Promise<YesNo>
+    operation has(cacheName: Text): JS.Promise<YesNo>
 
-    operation keys(): Promise<Список<Text>>
+    operation keys(): JS.Promise<Список<Text>>
 
-    operation match(request: Object? /*(!)RequestInfo | URL*/, options: MultiCacheQueryOptions? = empty): Promise<Response?>
+    operation match(request: Object? /*(!)RequestInfo | URL*/, options: MultiCacheQueryOptions? = empty): JS.Promise<Response?>
 
-    operation open(cacheName: Text): Promise<Cache>
+    operation open(cacheName: Text): JS.Promise<Cache>
 
     prototype: CacheStorage
 
@@ -5899,13 +5907,13 @@ external
 
   type Clipboard = object EventTarget
   {
-    operation read(): Promise<ClipboardItems>
+    operation read(): JS.Promise<ClipboardItems>
 
-    operation readText(): Promise<Text>
+    operation readText(): JS.Promise<Text>
 
-    operation write(data: ClipboardItems): Promise<Ничего>
+    operation write(data: ClipboardItems): JS.Promise<None>
 
-    operation writeText(data: Text): Promise<Ничего>
+    operation writeText(data: Text): JS.Promise<None>
 
     prototype: Clipboard
 
@@ -5939,11 +5947,12 @@ external
     guarded
     types: ReadonlyArray<Text>
 
-    operation getType(type`: Text): Promise<Blob>
+    operation getType(type`: Text): JS.Promise<Blob>
 
     prototype: ClipboardItem
 
-    on create(items: Record<Text, Object? /*(!)Text | Blob | PromiseLike<Object? /*(!)Text | Blob*/>*/>, options: ClipboardItemOptions? = empty) // : ClipboardItem
+    // on create(items: Record<Text, Object? /*(!)Text | Blob | PromiseLike<Object? /*(!)Text | Blob>*/>, options: ClipboardItemOptions? = empty) // : ClipboardItem
+    on create(items: Object, options: ClipboardItemOptions? = empty) // : ClipboardItem
   }
 
   /**
@@ -6086,13 +6095,13 @@ external
 
   type CredentialsContainer = object
   {
-    operation create(options: CredentialCreationOptions? = empty): Promise<Credential?>
+    operation create(options: CredentialCreationOptions? = empty): JS.Promise<Credential?>
 
-    operation get(options: CredentialRequestOptions? = empty): Promise<Credential?>
+    operation get(options: CredentialRequestOptions? = empty): JS.Promise<Credential?>
 
-    operation preventSilentAccess(): Promise<Ничего>
+    operation preventSilentAccess(): JS.Promise<None>
 
-    operation store(credential: Credential): Promise<Credential>
+    operation store(credential: Credential): JS.Promise<Credential>
 
     prototype: CredentialsContainer
 
@@ -6155,7 +6164,7 @@ external
 
     operation upgrade(root: Node)
 
-    operation whenDefined(name: Text): Promise<CustomElementConstructor>
+    operation whenDefined(name: Text): JS.Promise<CustomElementConstructor>
 
     prototype: CustomElementRegistry
 
@@ -6180,158 +6189,158 @@ external
   type DOMException = object Error
   {
     const
-    INDEX_SIZE_ERR = 1
+    INDEX_SIZE_ERR // = 1
 
     const
-    DOMSTRING_SIZE_ERR = 2
+    DOMSTRING_SIZE_ERR // = 2
 
     const
-    HIERARCHY_REQUEST_ERR = 3
+    HIERARCHY_REQUEST_ERR // = 3
 
     const
-    WRONG_DOCUMENT_ERR = 4
+    WRONG_DOCUMENT_ERR // = 4
 
     const
-    INVALID_CHARACTER_ERR = 5
+    INVALID_CHARACTER_ERR // = 5
 
     const
-    NO_DATA_ALLOWED_ERR = 6
+    NO_DATA_ALLOWED_ERR // = 6
 
     const
-    NO_MODIFICATION_ALLOWED_ERR = 7
+    NO_MODIFICATION_ALLOWED_ERR // = 7
 
     const
-    NOT_FOUND_ERR = 8
+    NOT_FOUND_ERR // = 8
 
     const
-    NOT_SUPPORTED_ERR = 9
+    NOT_SUPPORTED_ERR // = 9
 
     const
-    INUSE_ATTRIBUTE_ERR = 10
+    INUSE_ATTRIBUTE_ERR // = 10
 
     const
-    INVALID_STATE_ERR = 11
+    INVALID_STATE_ERR // = 11
 
     const
-    SYNTAX_ERR = 12
+    SYNTAX_ERR // = 12
 
     const
-    INVALID_MODIFICATION_ERR = 13
+    INVALID_MODIFICATION_ERR // = 13
 
     const
-    NAMESPACE_ERR = 14
+    NAMESPACE_ERR // = 14
 
     const
-    INVALID_ACCESS_ERR = 15
+    INVALID_ACCESS_ERR // = 15
 
     const
-    VALIDATION_ERR = 16
+    VALIDATION_ERR // = 16
 
     const
-    TYPE_MISMATCH_ERR = 17
+    TYPE_MISMATCH_ERR // = 17
 
     const
-    SECURITY_ERR = 18
+    SECURITY_ERR // = 18
 
     const
-    NETWORK_ERR = 19
+    NETWORK_ERR // = 19
 
     const
-    ABORT_ERR = 20
+    ABORT_ERR // = 20
 
     const
-    URL_MISMATCH_ERR = 21
+    URL_MISMATCH_ERR // = 21
 
     const
-    QUOTA_EXCEEDED_ERR = 22
+    QUOTA_EXCEEDED_ERR // = 22
 
     const
-    TIMEOUT_ERR = 23
+    TIMEOUT_ERR // = 23
 
     const
-    INVALID_NODE_TYPE_ERR = 24
+    INVALID_NODE_TYPE_ERR // = 24
 
     const
-    DATA_CLONE_ERR = 25
+    DATA_CLONE_ERR // = 25
 
     prototype: DOMException
 
     on create(message: Text? = empty, name: Text? = empty) // : DOMException
 
     const
-    INDEX_SIZE_ERR = 1
+    INDEX_SIZE_ERR // = 1
 
     const
-    DOMSTRING_SIZE_ERR = 2
+    DOMSTRING_SIZE_ERR // = 2
 
     const
-    HIERARCHY_REQUEST_ERR = 3
+    HIERARCHY_REQUEST_ERR // = 3
 
     const
-    WRONG_DOCUMENT_ERR = 4
+    WRONG_DOCUMENT_ERR // = 4
 
     const
-    INVALID_CHARACTER_ERR = 5
+    INVALID_CHARACTER_ERR // = 5
 
     const
-    NO_DATA_ALLOWED_ERR = 6
+    NO_DATA_ALLOWED_ERR // = 6
 
     const
-    NO_MODIFICATION_ALLOWED_ERR = 7
+    NO_MODIFICATION_ALLOWED_ERR // = 7
 
     const
-    NOT_FOUND_ERR = 8
+    NOT_FOUND_ERR // = 8
 
     const
-    NOT_SUPPORTED_ERR = 9
+    NOT_SUPPORTED_ERR // = 9
 
     const
-    INUSE_ATTRIBUTE_ERR = 10
+    INUSE_ATTRIBUTE_ERR // = 10
 
     const
-    INVALID_STATE_ERR = 11
+    INVALID_STATE_ERR // = 11
 
     const
-    SYNTAX_ERR = 12
+    SYNTAX_ERR // = 12
 
     const
-    INVALID_MODIFICATION_ERR = 13
+    INVALID_MODIFICATION_ERR // = 13
 
     const
-    NAMESPACE_ERR = 14
+    NAMESPACE_ERR // = 14
 
     const
-    INVALID_ACCESS_ERR = 15
+    INVALID_ACCESS_ERR // = 15
 
     const
-    VALIDATION_ERR = 16
+    VALIDATION_ERR // = 16
 
     const
-    TYPE_MISMATCH_ERR = 17
+    TYPE_MISMATCH_ERR // = 17
 
     const
-    SECURITY_ERR = 18
+    SECURITY_ERR // = 18
 
     const
-    NETWORK_ERR = 19
+    NETWORK_ERR // = 19
 
     const
-    ABORT_ERR = 20
+    ABORT_ERR // = 20
 
     const
-    URL_MISMATCH_ERR = 21
+    URL_MISMATCH_ERR // = 21
 
     const
-    QUOTA_EXCEEDED_ERR = 22
+    QUOTA_EXCEEDED_ERR // = 22
 
     const
-    TIMEOUT_ERR = 23
+    TIMEOUT_ERR // = 23
 
     const
-    INVALID_NODE_TYPE_ERR = 24
+    INVALID_NODE_TYPE_ERR // = 24
 
     const
-    DATA_CLONE_ERR = 25
+    DATA_CLONE_ERR // = 25
   }
 
   /**
@@ -6939,7 +6948,7 @@ external
     operation location(href: Object? /*(!)Text | Location*/): /*(!) no_type */ Object?
 
     guarded
-    ownerDocument: Empty
+    ownerDocument: None
 
     operation createElement(tagName: Text, options: ElementCreationOptions? = empty): HTMLElement
 
@@ -7830,13 +7839,13 @@ external
     guarded
     kind: Text // "directory"
 
-    operation getDirectoryHandle(name: Text, options: FileSystemGetDirectoryOptions? = empty): Promise<FileSystemDirectoryHandle>
+    operation getDirectoryHandle(name: Text, options: FileSystemGetDirectoryOptions? = empty): JS.Promise<FileSystemDirectoryHandle>
 
-    operation getFileHandle(name: Text, options: FileSystemGetFileOptions? = empty): Promise<FileSystemFileHandle>
+    operation getFileHandle(name: Text, options: FileSystemGetFileOptions? = empty): JS.Promise<FileSystemFileHandle>
 
-    operation removeEntry(name: Text, options: FileSystemRemoveOptions? = empty): Promise<Ничего>
+    operation removeEntry(name: Text, options: FileSystemRemoveOptions? = empty): JS.Promise<None>
 
-    operation resolve(possibleDescendant: FileSystemHandle): Promise<Список<Text>?>
+    operation resolve(possibleDescendant: FileSystemHandle): JS.Promise<Список<Text>?>
 
     prototype: FileSystemDirectoryHandle
 
@@ -7902,9 +7911,9 @@ external
     guarded
     kind: Text // "file"
 
-    operation createWritable(options: FileSystemCreateWritableOptions? = empty): Promise<FileSystemWritableFileStream>
+    operation createWritable(options: FileSystemCreateWritableOptions? = empty): JS.Promise<FileSystemWritableFileStream>
 
-    operation getFile(): Promise<File>
+    operation getFile(): JS.Promise<File>
 
     prototype: FileSystemFileHandle
 
@@ -7925,7 +7934,7 @@ external
     guarded
     name: Text
 
-    operation isSameEntry(other: FileSystemHandle): Promise<YesNo>
+    operation isSameEntry(other: FileSystemHandle): JS.Promise<YesNo>
 
     prototype: FileSystemHandle
 
@@ -7940,11 +7949,11 @@ external
 
   type FileSystemWritableFileStream = object WritableStream
   {
-    operation seek(position: Number): Promise<Ничего>
+    operation seek(position: Number): JS.Promise<None>
 
-    operation truncate(size: Number): Promise<Ничего>
+    operation truncate(size: Number): JS.Promise<None>
 
-    operation write(data: FileSystemWriteChunkType): Promise<Ничего>
+    operation write(data: FileSystemWriteChunkType): JS.Promise<None>
 
     prototype: FileSystemWritableFileStream
 
@@ -7984,7 +7993,7 @@ external
     lineGapOverride: Text
 
     guarded
-    loaded: Promise<FontFace>
+    loaded: JS.Promise<FontFace>
 
     guarded
     status: FontFaceLoadStatus
@@ -7999,7 +8008,7 @@ external
 
     weight: Text
 
-    operation load(): Promise<FontFace>
+    operation load(): JS.Promise<FontFace>
 
     prototype: FontFace
 
@@ -8027,14 +8036,14 @@ external
     onloadingerror: (operation(this: FontFaceSet, ev: Event): /*(!) any */ Object?)?
 
     guarded
-    ready: Promise<FontFaceSet>
+    ready: JS.Promise<FontFaceSet>
 
     guarded
     status: FontFaceSetLoadStatus
 
     operation check(font: Text, text: Text? = empty): YesNo
 
-    operation load(font: Text, text: Text? = empty): Promise<Список<FontFace>>
+    operation load(font: Text, text: Text? = empty): JS.Promise<Список<FontFace>>
 
     operation forEach(callbackfn: operation(value: FontFace, key: FontFace, parent: FontFaceSet), thisArg: /*(!) any */ Object? = empty)
 
@@ -8225,9 +8234,9 @@ external
     guarded
     type`: GamepadHapticActuatorType
 
-    operation playEffect(type`: GamepadHapticEffectType, params: GamepadEffectParameters? = empty): Promise<GamepadHapticsResult>
+    operation playEffect(type`: GamepadHapticEffectType, params: GamepadEffectParameters? = empty): JS.Promise<GamepadHapticsResult>
 
-    operation reset(): Promise<GamepadHapticsResult>
+    operation reset(): JS.Promise<GamepadHapticsResult>
 
     prototype: GamepadHapticActuator
 
@@ -9666,9 +9675,9 @@ external
 
     operation pause()
 
-    operation play(): Promise<Ничего>
+    operation play(): JS.Promise<None>
 
-    operation setMediaKeys(mediaKeys: MediaKeys?): Promise<Ничего>
+    operation setMediaKeys(mediaKeys: MediaKeys?): JS.Promise<None>
 
     guarded
     NETWORK_EMPTY: 0
@@ -9710,31 +9719,31 @@ external
     on create() // : HTMLMediaElement
 
     const
-    NETWORK_EMPTY = 0
+    NETWORK_EMPTY // = 0
 
     const
-    NETWORK_IDLE = 1
+    NETWORK_IDLE // = 1
 
     const
-    NETWORK_LOADING = 2
+    NETWORK_LOADING // = 2
 
     const
-    NETWORK_NO_SOURCE = 3
+    NETWORK_NO_SOURCE // = 3
 
     const
-    HAVE_NOTHING = 0
+    HAVE_NOTHING // = 0
 
     const
-    HAVE_METADATA = 1
+    HAVE_METADATA // = 1
 
     const
-    HAVE_CURRENT_DATA = 2
+    HAVE_CURRENT_DATA // = 2
 
     const
-    HAVE_FUTURE_DATA = 3
+    HAVE_FUTURE_DATA // = 3
 
     const
-    HAVE_ENOUGH_DATA = 4
+    HAVE_ENOUGH_DATA // = 4
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/HTMLMenuElement) */
@@ -10797,7 +10806,7 @@ external
 
     operation getVideoPlaybackQuality(): VideoPlaybackQuality
 
-    operation requestPictureInPicture(): Promise<PictureInPictureWindow>
+    operation requestPictureInPicture(): JS.Promise<PictureInPictureWindow>
 
     operation requestVideoFrameCallback(callback: VideoFrameRequestCallback): Number
 
@@ -11013,7 +11022,7 @@ external
   {
     operation cmp(first: /*(!) any */ Object?, second: /*(!) any */ Object?): Number
 
-    operation databases(): Promise<Список<IDBDatabaseInfo>>
+    operation databases(): JS.Promise<Список<IDBDatabaseInfo>>
 
     operation deleteDatabase(name: Text): IDBOpenDBRequest
 
@@ -11650,11 +11659,11 @@ external
 
   type LockManager = object
   {
-    operation query(): Promise<LockManagerSnapshot>
+    operation query(): JS.Promise<LockManagerSnapshot>
 
-    operation request(name: Text, callback: LockGrantedCallback): Promise</*(!) any */ Object?>
+    operation request(name: Text, callback: LockGrantedCallback): JS.Promise</*(!) any */ Object?>
 
-    operation request(name: Text, options: LockOptions, callback: LockGrantedCallback): Promise</*(!) any */ Object?>
+    operation request(name: Text, options: LockOptions, callback: LockGrantedCallback): JS.Promise</*(!) any */ Object?>
 
     prototype: LockManager
 
@@ -11850,9 +11859,9 @@ external
     guarded
     version: Text?
 
-    operation close(): Promise<MIDIPort>
+    operation close(): JS.Promise<MIDIPort>
 
-    operation open(): Promise<MIDIPort>
+    operation open(): JS.Promise<MIDIPort>
 
     operation addEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIPort, ev: /*(!) MIDIPortEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -11894,9 +11903,9 @@ external
 
   type MediaCapabilities = object
   {
-    operation decodingInfo(configuration: MediaDecodingConfiguration): Promise<MediaCapabilitiesDecodingInfo>
+    operation decodingInfo(configuration: MediaDecodingConfiguration): JS.Promise<MediaCapabilitiesDecodingInfo>
 
-    operation encodingInfo(configuration: MediaEncodingConfiguration): Promise<MediaCapabilitiesEncodingInfo>
+    operation encodingInfo(configuration: MediaEncodingConfiguration): JS.Promise<MediaCapabilitiesEncodingInfo>
 
     prototype: MediaCapabilities
 
@@ -11948,13 +11957,13 @@ external
   {
     ondevicechange: (operation(this: MediaDevices, ev: Event): /*(!) any */ Object?)?
 
-    operation enumerateDevices(): Promise<Список<MediaDeviceInfo>>
+    operation enumerateDevices(): JS.Promise<Список<MediaDeviceInfo>>
 
-    operation getDisplayMedia(options: DisplayMediaStreamOptions? = empty): Promise<MediaStream>
+    operation getDisplayMedia(options: DisplayMediaStreamOptions? = empty): JS.Promise<MediaStream>
 
     operation getSupportedConstraints(): MediaTrackSupportedConstraints
 
-    operation getUserMedia(constraints: MediaStreamConstraints? = empty): Promise<MediaStream>
+    operation getUserMedia(constraints: MediaStreamConstraints? = empty): JS.Promise<MediaStream>
 
     operation addEventListener<K = /*(!) keyof MediaDevicesEventMap */ Object?>(type`: K, listener: operation(this: MediaDevices, ev: /*(!) MediaDevicesEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -12081,7 +12090,7 @@ external
   type MediaKeySession = object EventTarget
   {
     guarded
-    closed: Promise<MediaKeySessionClosedReason>
+    closed: JS.Promise<MediaKeySessionClosedReason>
 
     guarded
     expiration: Number
@@ -12096,15 +12105,15 @@ external
     guarded
     sessionId: Text
 
-    operation close(): Promise<Ничего>
+    operation close(): JS.Promise<None>
 
-    operation generateRequest(initDataType: Text, initData: BufferSource): Promise<Ничего>
+    operation generateRequest(initDataType: Text, initData: BufferSource): JS.Promise<None>
 
-    operation load(sessionId: Text): Promise<YesNo>
+    operation load(sessionId: Text): JS.Promise<YesNo>
 
-    operation remove(): Promise<Ничего>
+    operation remove(): JS.Promise<None>
 
-    operation update(response: BufferSource): Promise<Ничего>
+    operation update(response: BufferSource): JS.Promise<None>
 
     operation addEventListener<K = /*(!) keyof MediaKeySessionEventMap */ Object?>(type`: K, listener: operation(this: MediaKeySession, ev: /*(!) MediaKeySessionEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -12154,7 +12163,7 @@ external
     guarded
     keySystem: Text
 
-    operation createMediaKeys(): Promise<MediaKeys>
+    operation createMediaKeys(): JS.Promise<MediaKeys>
 
     operation getConfiguration(): MediaKeySystemConfiguration
 
@@ -12174,7 +12183,7 @@ external
   {
     operation createSession(sessionType: MediaKeySessionType? = empty): MediaKeySession
 
-    operation setServerCertificate(serverCertificate: BufferSource): Promise<YesNo>
+    operation setServerCertificate(serverCertificate: BufferSource): JS.Promise<YesNo>
 
     prototype: MediaKeys
 
@@ -12541,7 +12550,7 @@ external
     guarded
     readyState: MediaStreamTrackState
 
-    operation applyConstraints(constraints: MediaTrackConstraints? = empty): Promise<Ничего>
+    operation applyConstraints(constraints: MediaTrackConstraints? = empty): JS.Promise<None>
 
     operation clone(): MediaStreamTrack
 
@@ -12767,13 +12776,13 @@ external
 
   type NavigationPreloadManager = object
   {
-    operation disable(): Promise<Ничего>
+    operation disable(): JS.Promise<None>
 
-    operation enable(): Promise<Ничего>
+    operation enable(): JS.Promise<None>
 
-    operation getState(): Promise<NavigationPreloadState>
+    operation getState(): JS.Promise<NavigationPreloadState>
 
-    operation setHeaderValue(value: Text): Promise<Ничего>
+    operation setHeaderValue(value: Text): JS.Promise<None>
 
     prototype: NavigationPreloadManager
 
@@ -12828,13 +12837,13 @@ external
 
     operation getGamepads(): Список<Gamepad?>
 
-    operation requestMIDIAccess(options: MIDIOptions? = empty): Promise<MIDIAccess>
+    operation requestMIDIAccess(options: MIDIOptions? = empty): JS.Promise<MIDIAccess>
 
-    operation requestMediaKeySystemAccess(keySystem: Text, supportedConfigurations: Список<MediaKeySystemConfiguration>): Promise<MediaKeySystemAccess>
+    operation requestMediaKeySystemAccess(keySystem: Text, supportedConfigurations: Список<MediaKeySystemConfiguration>): JS.Promise<MediaKeySystemAccess>
 
     operation sendBeacon(url: Object? /*(!)Text | URL*/, data: BodyInit? = empty): YesNo
 
-    operation share(data: ShareData? = empty): Promise<Ничего>
+    operation share(data: ShareData? = empty): JS.Promise<None>
 
     operation vibrate(pattern: VibratePattern): YesNo
 
@@ -12854,9 +12863,9 @@ external
 
   type NavigatorBadge = aspect
   {
-    operation clearAppBadge(): Promise<Ничего>
+    operation clearAppBadge(): JS.Promise<None>
 
-    operation setAppBadge(contents: Number? = empty): Promise<Ничего>
+    operation setAppBadge(contents: Number? = empty): JS.Promise<None>
   }
 
 
@@ -13248,7 +13257,7 @@ external
     guarded
     permission: NotificationPermission
 
-    operation requestPermission(deprecatedCallback: NotificationPermissionCallback? = empty): Promise<NotificationPermission>
+    operation requestPermission(deprecatedCallback: NotificationPermissionCallback? = empty): JS.Promise<NotificationPermission>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/OES_draw_buffers_indexed) */
@@ -13425,11 +13434,11 @@ external
 
     oncomplete: (operation(this: OfflineAudioContext, ev: OfflineAudioCompletionEvent): /*(!) any */ Object?)?
 
-    operation resume(): Promise<Ничего>
+    operation resume(): JS.Promise<None>
 
-    operation startRendering(): Promise<AudioBuffer>
+    operation startRendering(): JS.Promise<AudioBuffer>
 
-    operation suspend(suspendTime: Number): Promise<Ничего>
+    operation suspend(suspendTime: Number): JS.Promise<None>
 
     operation addEventListener<K = /*(!) keyof OfflineAudioContextEventMap */ Object?>(type`: K, listener: operation(this: OfflineAudioContext, ev: /*(!) OfflineAudioContextEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -13466,7 +13475,7 @@ external
 
     width: Number
 
-    operation convertToBlob(options: ImageEncodeOptions? = empty): Promise<Blob>
+    operation convertToBlob(options: ImageEncodeOptions? = empty): JS.Promise<Blob>
 
     operation getContext(contextId: Text /*"2d"*/, options: /*(!) any */ Object? = empty): OffscreenCanvasRenderingContext2D?
 
@@ -13649,11 +13658,11 @@ external
 
     onpaymentmethodchange: (operation(this: PaymentRequest, ev: Event): /*(!) any */ Object?)?
 
-    operation abort(): Promise<Ничего>
+    operation abort(): JS.Promise<None>
 
-    operation canMakePayment(): Promise<YesNo>
+    operation canMakePayment(): JS.Promise<YesNo>
 
-    operation show(detailsPromise: Object? /*(!)PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate> | пусто*/ = empty): Promise<PaymentResponse>
+    operation show(detailsPromise: Object? /*(!)PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate> | пусто*/ = empty): JS.Promise<PaymentResponse>
 
     operation addEventListener<K = /*(!) keyof PaymentRequestEventMap */ Object?>(type`: K, listener: operation(this: PaymentRequest, ev: /*(!) PaymentRequestEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -13702,9 +13711,9 @@ external
     guarded
     requestId: Text
 
-    operation complete(result: PaymentComplete? = empty): Promise<Ничего>
+    operation complete(result: PaymentComplete? = empty): JS.Promise<None>
 
-    operation retry(errorFields: PaymentValidationErrors? = empty): Promise<Ничего>
+    operation retry(errorFields: PaymentValidationErrors? = empty): JS.Promise<None>
 
     operation toJSON(): /*(!) any */ Object?
 
@@ -14046,7 +14055,7 @@ external
 
   type Permissions = object
   {
-    operation query(permissionDesc: PermissionDescriptor): Promise<PermissionStatus>
+    operation query(permissionDesc: PermissionDescriptor): JS.Promise<PermissionStatus>
 
     prototype: Permissions
 
@@ -14216,7 +14225,7 @@ external
   type PromiseRejectionEvent = object Event
   {
     guarded
-    promise: Promise</*(!) any */ Object?>
+    promise: JS.Promise</*(!) any */ Object?>
 
     guarded
     reason: /*(!) any */ Object?
@@ -14249,9 +14258,9 @@ external
 
     on create() // : PublicKeyCredential
 
-    operation isConditionalMediationAvailable(): Promise<YesNo>
+    operation isConditionalMediationAvailable(): JS.Promise<YesNo>
 
-    operation isUserVerifyingPlatformAuthenticatorAvailable(): Promise<YesNo>
+    operation isUserVerifyingPlatformAuthenticatorAvailable(): JS.Promise<YesNo>
   }
 
   /**
@@ -14263,11 +14272,11 @@ external
 
   type PushManager = object
   {
-    operation getSubscription(): Promise<PushSubscription?>
+    operation getSubscription(): JS.Promise<PushSubscription?>
 
-    operation permissionState(options: PushSubscriptionOptionsInit? = empty): Promise<PermissionState>
+    operation permissionState(options: PushSubscriptionOptionsInit? = empty): JS.Promise<PermissionState>
 
-    operation subscribe(options: PushSubscriptionOptionsInit? = empty): Promise<PushSubscription>
+    operation subscribe(options: PushSubscriptionOptionsInit? = empty): JS.Promise<PushSubscription>
 
     prototype: PushManager
 
@@ -14299,7 +14308,7 @@ external
 
     operation toJSON(): PushSubscriptionJSON
 
-    operation unsubscribe(): Promise<YesNo>
+    operation unsubscribe(): JS.Promise<YesNo>
 
     prototype: PushSubscription
 
@@ -14734,7 +14743,7 @@ external
 
     on create(configuration: RTCConfiguration? = empty) // : RTCPeerConnection
 
-    operation generateCertificate(keygenAlgorithm: AlgorithmIdentifier): Promise<RTCCertificate>
+    operation generateCertificate(keygenAlgorithm: AlgorithmIdentifier): JS.Promise<RTCCertificate>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/RTCPeerConnectionIceErrorEvent) */
@@ -14795,7 +14804,7 @@ external
 
     operation getParameters(): RTCRtpReceiveParameters
 
-    operation getStats(): Promise<RTCStatsReport>
+    operation getStats(): JS.Promise<RTCStatsReport>
 
     operation getSynchronizationSources(): Список<RTCRtpSynchronizationSource>
 
@@ -14825,11 +14834,11 @@ external
 
     operation getParameters(): RTCRtpSendParameters
 
-    operation getStats(): Promise<RTCStatsReport>
+    operation getStats(): JS.Promise<RTCStatsReport>
 
-    operation replaceTrack(withTrack: MediaStreamTrack?): Promise<Ничего>
+    operation replaceTrack(withTrack: MediaStreamTrack?): JS.Promise<None>
 
-    operation setParameters(parameters: RTCRtpSendParameters): Promise<Ничего>
+    operation setParameters(parameters: RTCRtpSendParameters): JS.Promise<None>
 
     #js.МассивПараметров
     operation setStreams(streams: Список<MediaStream>)
@@ -15089,7 +15098,7 @@ external
     guarded
     locked: YesNo
 
-    operation cancel(reason: /*(!) any */ Object? = empty): Promise<Ничего>
+    operation cancel(reason: /*(!) any */ Object? = empty): JS.Promise<None>
 
     operation getReader(options: object { mode: Text /*"byob"*/ }): ReadableStreamBYOBReader
 
@@ -15099,7 +15108,7 @@ external
 
     operation pipeThrough<T>(transform: ReadableWritablePair<T, R>, options: StreamPipeOptions? = empty): ReadableStream<T>
 
-    operation pipeTo(destination: WritableStream<R>, options: StreamPipeOptions? = empty): Promise<Ничего>
+    operation pipeTo(destination: WritableStream<R>, options: StreamPipeOptions? = empty): JS.Promise<None>
 
     operation tee(): object { _0: ReadableStream<R>, _1: ReadableStream<R> }
 
@@ -15116,7 +15125,7 @@ external
 
   type ReadableStreamBYOBReader = object ReadableStreamGenericReader
   {
-    operation read<T = ArrayBufferView>(view: T): Promise<ReadableStreamReadResult<T>>
+    operation read<T = ArrayBufferView>(view: T): JS.Promise<ReadableStreamReadResult<T>>
 
     operation releaseLock()
 
@@ -15163,7 +15172,7 @@ external
 
   type ReadableStreamDefaultReader<R> = object ReadableStreamGenericReader
   {
-    operation read(): Promise<ReadableStreamReadResult<R>>
+    operation read(): JS.Promise<ReadableStreamReadResult<R>>
 
     operation releaseLock()
 
@@ -15175,9 +15184,9 @@ external
   type ReadableStreamGenericReader = aspect
   {
     guarded 
-    closed: Promise<Empty>
+    closed: JS.Promise<Empty>
 
-    operation cancel(reason: /*(!) any */ Object? = empty): Promise<Ничего>
+    operation cancel(reason: /*(!) any */ Object? = empty): JS.Promise<None>
   }
 
 
@@ -15204,11 +15213,11 @@ external
     guarded
     state: RemotePlaybackState
 
-    operation cancelWatchAvailability(id: Number? = empty): Promise<Ничего>
+    operation cancelWatchAvailability(id: Number? = empty): JS.Promise<None>
 
-    operation prompt(): Promise<Ничего>
+    operation prompt(): JS.Promise<None>
 
-    operation watchAvailability(callback: RemotePlaybackAvailabilityCallback): Promise<Number>
+    operation watchAvailability(callback: RemotePlaybackAvailabilityCallback): JS.Promise<Number>
 
     operation addEventListener<K = /*(!) keyof RemotePlaybackEventMap */ Object?>(type`: K, listener: operation(this: RemotePlayback, ev: /*(!) RemotePlaybackEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -19038,13 +19047,13 @@ external
     onmessageerror: (operation(this: ServiceWorkerContainer, ev: MessageEvent): /*(!) any */ Object?)?
 
     guarded
-    ready: Promise<ServiceWorkerRegistration>
+    ready: JS.Promise<ServiceWorkerRegistration>
 
-    operation getRegistration(clientURL: Object? /*(!)Text | URL | пусто*/ = empty): Promise<ServiceWorkerRegistration?>
+    operation getRegistration(clientURL: Object? /*(!)Text | URL | пусто*/ = empty): JS.Promise<ServiceWorkerRegistration?>
 
-    operation getRegistrations(): Promise<ReadonlyArray<ServiceWorkerRegistration>>
+    operation getRegistrations(): JS.Promise<ReadonlyArray<ServiceWorkerRegistration>>
 
-    operation register(scriptURL: Object? /*(!)Text | URL*/, options: RegistrationOptions? = empty): Promise<ServiceWorkerRegistration>
+    operation register(scriptURL: Object? /*(!)Text | URL*/, options: RegistrationOptions? = empty): JS.Promise<ServiceWorkerRegistration>
 
     operation startMessages()
 
@@ -19099,13 +19108,13 @@ external
     guarded
     waiting: ServiceWorker?
 
-    operation getNotifications(filter: GetNotificationOptions? = empty): Promise<Список<Notification>>
+    operation getNotifications(filter: GetNotificationOptions? = empty): JS.Promise<Список<Notification>>
 
-    operation showNotification(title: Text, options: NotificationOptions? = empty): Promise<Ничего>
+    operation showNotification(title: Text, options: NotificationOptions? = empty): JS.Promise<None>
 
-    operation unregister(): Promise<YesNo>
+    operation unregister(): JS.Promise<YesNo>
 
-    operation update(): Promise<Ничего>
+    operation update(): JS.Promise<None>
 
     operation addEventListener<K = /*(!) keyof ServiceWorkerRegistrationEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorkerRegistration, ev: /*(!) ServiceWorkerRegistrationEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -19594,13 +19603,13 @@ external
 
   type StorageManager = object
   {
-    operation estimate(): Promise<StorageEstimate>
+    operation estimate(): JS.Promise<StorageEstimate>
 
-    operation getDirectory(): Promise<FileSystemDirectoryHandle>
+    operation getDirectory(): JS.Promise<FileSystemDirectoryHandle>
 
-    operation persist(): Promise<YesNo>
+    operation persist(): JS.Promise<YesNo>
 
-    operation persisted(): Promise<YesNo>
+    operation persisted(): JS.Promise<YesNo>
 
     prototype: StorageManager
 
@@ -19720,41 +19729,41 @@ external
 
   type SubtleCrypto = object
   {
-    operation decrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): Promise<ArrayBuffer>
+    operation decrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): JS.Promise<ArrayBuffer>
 
-    operation deriveBits(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, length: Number): Promise<ArrayBuffer>
+    operation deriveBits(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, length: Number): JS.Promise<ArrayBuffer>
 
-    operation deriveKey(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, derivedKeyType: Object? /*(!)AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: Список<KeyUsage>): Promise<CryptoKey>
+    operation deriveKey(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, derivedKeyType: Object? /*(!)AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation digest(algorithm: AlgorithmIdentifier, data: BufferSource): Promise<ArrayBuffer>
+    operation digest(algorithm: AlgorithmIdentifier, data: BufferSource): JS.Promise<ArrayBuffer>
 
-    operation encrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): Promise<ArrayBuffer>
+    operation encrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): JS.Promise<ArrayBuffer>
 
-    operation exportKey(format: Text /*"jwk"*/, key: CryptoKey): Promise<JsonWebKey>
+    operation exportKey(format: Text /*"jwk"*/, key: CryptoKey): JS.Promise<JsonWebKey>
 
-    operation exportKey(format: Exclude<KeyFormat, "jwk">, key: CryptoKey): Promise<ArrayBuffer>
+    operation exportKey(format: Exclude<KeyFormat, "jwk">, key: CryptoKey): JS.Promise<ArrayBuffer>
 
-    operation exportKey(format: KeyFormat, key: CryptoKey): Promise<Object? /*(!)ArrayBuffer | JsonWebKey*/>
+    operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<Object? /*(!)ArrayBuffer | JsonWebKey*/>
 
-    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): Promise<CryptoKeyPair>
+    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)RsaHashedKeyGenParams | EcKeyGenParams*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): Promise<CryptoKeyPair>
+    operation generateKey(algorithm: Object? /*(!)RsaHashedKeyGenParams | EcKeyGenParams*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): Promise<CryptoKey>
+    operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: Список<KeyUsage>): Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
+    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
 
-    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): Promise<CryptoKey>
+    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation importKey(format: Exclude<KeyFormat, "jwk">, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): Promise<CryptoKey>
+    operation importKey(format: Exclude<KeyFormat, "jwk">, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation sign(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, data: BufferSource): Promise<ArrayBuffer>
+    operation sign(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, data: BufferSource): JS.Promise<ArrayBuffer>
 
-    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, unwrappedKeyAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): Promise<CryptoKey>
+    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, unwrappedKeyAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: Список<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation verify(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, signature: BufferSource, data: BufferSource): Promise<YesNo>
+    operation verify(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, signature: BufferSource, data: BufferSource): JS.Promise<YesNo>
 
-    operation wrapKey(format: KeyFormat, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/): Promise<ArrayBuffer>
+    operation wrapKey(format: KeyFormat, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/): JS.Promise<ArrayBuffer>
 
     prototype: SubtleCrypto
 
@@ -20572,7 +20581,7 @@ external
 
     operation decode(chunk: EncodedVideoChunk)
 
-    operation flush(): Promise<Ничего>
+    operation flush(): JS.Promise<None>
 
     operation reset()
 
@@ -20588,7 +20597,7 @@ external
 
     on create(init: VideoDecoderInit) // : VideoDecoder
 
-    operation isConfigSupported(config: VideoDecoderConfig): Promise<VideoDecoderSupport>
+    operation isConfigSupported(config: VideoDecoderConfig): JS.Promise<VideoDecoderSupport>
   }
 
   type VideoEncoderEventMap = aspect
@@ -20619,7 +20628,7 @@ external
 
     operation encode(frame: VideoFrame, options: VideoEncoderEncodeOptions? = empty)
 
-    operation flush(): Promise<Ничего>
+    operation flush(): JS.Promise<None>
 
     operation reset()
 
@@ -20635,7 +20644,7 @@ external
 
     on create(init: VideoEncoderInit) // : VideoEncoder
 
-    operation isConfigSupported(config: VideoEncoderConfig): Promise<VideoEncoderSupport>
+    operation isConfigSupported(config: VideoEncoderConfig): JS.Promise<VideoEncoderSupport>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/VideoFrame) */
@@ -20678,7 +20687,7 @@ external
 
     operation close()
 
-    operation copyTo(destination: BufferSource, options: VideoFrameCopyToOptions? = empty): Promise<Список<PlaneLayout>>
+    operation copyTo(destination: BufferSource, options: VideoFrameCopyToOptions? = empty): JS.Promise<Список<PlaneLayout>>
 
     prototype: VideoFrame
 
@@ -21134,7 +21143,7 @@ external
 
   type WakeLock = object
   {
-    operation request(type`: WakeLockType? = empty): Promise<WakeLockSentinel>
+    operation request(type`: WakeLockType? = empty): JS.Promise<WakeLockSentinel>
 
     prototype: WakeLock
 
@@ -21163,7 +21172,7 @@ external
     guarded
     type`: WakeLockType
 
-    operation release(): Promise<Ничего>
+    operation release(): JS.Promise<None>
 
     operation addEventListener<K = /*(!) keyof WakeLockSentinelEventMap */ Object?>(type`: K, listener: operation(this: WakeLockSentinel, ev: /*(!) WakeLockSentinelEventMap[K] */ Object?): /*(!) any */ Object?, options: Object? /*(!)YesNo | AddEventListenerOptions | пусто*/ = empty)
 
@@ -26387,7 +26396,7 @@ external
   type WebTransport = object
   {
     guarded
-    closed: Promise<WebTransportCloseInfo>
+    closed: JS.Promise<WebTransportCloseInfo>
 
     guarded
     datagrams: WebTransportDatagramDuplexStream
@@ -26399,13 +26408,13 @@ external
     incomingUnidirectionalStreams: ReadableStream
 
     guarded
-    ready: Promise<Empty>
+    ready: JS.Promise<Empty>
 
     operation close(closeInfo: WebTransportCloseInfo? = empty)
 
-    operation createBidirectionalStream(options: WebTransportSendStreamOptions? = empty): Promise<WebTransportBidirectionalStream>
+    operation createBidirectionalStream(options: WebTransportSendStreamOptions? = empty): JS.Promise<WebTransportBidirectionalStream>
 
-    operation createUnidirectionalStream(options: WebTransportSendStreamOptions? = empty): Promise<WritableStream>
+    operation createUnidirectionalStream(options: WebTransportSendStreamOptions? = empty): JS.Promise<WritableStream>
 
     prototype: WebTransport
 
@@ -26698,11 +26707,11 @@ external
 
     operation clearTimeout(id: Number?)
 
-    operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
+    operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = empty): JS.Promise<ImageBitmap>
 
-    operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
+    operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = empty): JS.Promise<ImageBitmap>
 
-    operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): Promise<Response>
+    operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): JS.Promise<Response>
 
     operation queueMicrotask(callback: VoidFunction)
 
@@ -26772,7 +26781,7 @@ external
 
   type Worklet = object
   {
-    operation addModule(moduleURL: Object? /*(!)Text | URL*/, options: WorkletOptions? = empty): Promise<Ничего>
+    operation addModule(moduleURL: Object? /*(!)Text | URL*/, options: WorkletOptions? = empty): JS.Promise<None>
 
     prototype: Worklet
 
@@ -26790,9 +26799,9 @@ external
     guarded
     locked: YesNo
 
-    operation abort(reason: /*(!) any */ Object? = empty): Promise<Ничего>
+    operation abort(reason: /*(!) any */ Object? = empty): JS.Promise<None>
 
-    operation close(): Promise<Ничего>
+    operation close(): JS.Promise<None>
 
     operation getWriter(): WritableStreamDefaultWriter<W>
 
@@ -26828,21 +26837,21 @@ external
   type WritableStreamDefaultWriter<W> = object
   {
     guarded
-    closed: Promise<Empty>
+    closed: JS.Promise<Empty>
 
     guarded
     desiredSize: Number?
 
     guarded
-    ready: Promise<Empty>
+    ready: JS.Promise<Empty>
 
-    operation abort(reason: /*(!) any */ Object? = empty): Promise<Ничего>
+    operation abort(reason: /*(!) any */ Object? = empty): JS.Promise<None>
 
-    operation close(): Promise<Ничего>
+    operation close(): JS.Promise<None>
 
     operation releaseLock()
 
-    operation write(chunk: W? = empty): Promise<Ничего>
+    operation write(chunk: W? = empty): JS.Promise<None>
 
     prototype: WritableStreamDefaultWriter
 
@@ -27703,21 +27712,21 @@ external
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile) */
 
-    operation compile(bytes: BufferSource): Promise<Module>
+    operation compile(bytes: BufferSource): JS.Promise<Module>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming) */
 
-    operation compileStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/): Promise<Module>
+    operation compileStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/): JS.Promise<Module>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) */
 
-    operation instantiate(bytes: BufferSource, importObject: Imports? = empty): Promise<WebAssemblyInstantiatedSource>
+    operation instantiate(bytes: BufferSource, importObject: Imports? = empty): JS.Promise<WebAssemblyInstantiatedSource>
 
-    operation instantiate(moduleObject: Module, importObject: Imports? = empty): Promise<Instance>
+    operation instantiate(moduleObject: Module, importObject: Imports? = empty): JS.Promise<Instance>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) */
 
-    operation instantiateStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/, importObject: Imports? = empty): Promise<WebAssemblyInstantiatedSource>
+    operation instantiateStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/, importObject: Imports? = empty): JS.Promise<WebAssemblyInstantiatedSource>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate) */
 
@@ -29843,15 +29852,15 @@ external
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/createImageBitmap) */
 
   внешнее
-  operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
+  operation createImageBitmap(image: ImageBitmapSource, options: ImageBitmapOptions? = empty): JS.Promise<ImageBitmap>
 
   внешнее
-  operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = empty): Promise<ImageBitmap>
+  operation createImageBitmap(image: ImageBitmapSource, sx: Number, sy: Number, sw: Number, sh: Number, options: ImageBitmapOptions? = empty): JS.Promise<ImageBitmap>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/fetch) */
 
   внешнее
-  operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): Promise<Response>
+  operation fetch(input: Object? /*(!)RequestInfo | URL*/, init: RequestInit? = empty): JS.Promise<Response>
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/queueMicrotask) */
 

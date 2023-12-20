@@ -48,7 +48,7 @@ external
     markUsed: operation(observable`: ObservableValue, os: ObjectSnapshot, m: MemberName, h: ObjectHandle, kind: Kind, weak: YesNo)
 
     static
-    markEdited: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?, edited: YesNo, os: ObjectSnapshot, m: MemberName, h: ObjectHandle): Empty
+    markEdited: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?, edited: YesNo, os: ObjectSnapshot, m: MemberName, h: ObjectHandle): None
 
     static
     isConflicting: operation(oldValue: /*(!) any */ Object?, newValue: /*(!) any */ Object?): YesNo

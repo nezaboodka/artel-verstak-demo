@@ -68,7 +68,7 @@ external
 
     operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
 
-    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): Empty, thisArg: /*(!) any */ Object? = empty)
+    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): None, thisArg: /*(!) any */ Object? = empty)
 
     operation map<U>(callbackfn: operation(value: T, index: Число, array: List<T>): U, thisArg: /*(!) any */ Object? = empty): List<U>
 
@@ -94,7 +94,7 @@ external
 
     operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
 
-    operation find<S = T>(predicate: operation(this: Empty, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
+    operation find<S = T>(predicate: operation(this: None, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
 
     operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Число
 

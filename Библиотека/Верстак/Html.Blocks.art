@@ -11,7 +11,7 @@ external
   operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation row<T>(builder: operation(block: Empty): T?, shiftCursorDown: Integer?)
+  operation row<T>(builder: operation(block: None): T?, shiftCursorDown: Integer?)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation startNewRow(shiftCursorDown: Integer? = empty)

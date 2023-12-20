@@ -113,7 +113,7 @@ external
   {
     on create()
 
-    operation create(block: Block<CursorCommand, Object?, Empty, Empty>, b: object { native: CursorCommand?; controller: Empty? })
+    operation create(block: Block<CursorCommand, Object?, Empty, Empty>, b: object { native: CursorCommand?; controller: None? })
   }
 
   // SubTreeVariable
