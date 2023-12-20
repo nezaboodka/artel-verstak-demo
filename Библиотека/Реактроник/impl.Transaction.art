@@ -45,7 +45,7 @@ external
     operation wrap<T>(func: F<T>, secondary: YesNo): F<T>
 
     /*(!) abstract */ 
-    operation cancel(error`: Error, retryAfterOrIgnore: Worker? = empty): Object?
+    operation cancel(error`: Error, retryAfterOrIgnore: Worker? = none): Object?
 
     guarded /*(!) abstract */
     {

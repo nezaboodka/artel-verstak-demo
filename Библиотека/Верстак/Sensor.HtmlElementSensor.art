@@ -20,7 +20,7 @@ external
 
     stopPropagation: YesNo
 
-    on create(focusSensor: Object? = empty, windowSensor: WindowSensor? = empty)
+    on create(focusSensor: Object? = none, windowSensor: WindowSensor? = none)
 
     hidden by type
     {

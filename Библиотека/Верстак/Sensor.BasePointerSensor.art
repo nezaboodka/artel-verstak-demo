@@ -22,7 +22,7 @@ external
 
     modifiers: KeyboardModifiers
 
-    on create(focusSensor: FocusSensor? = empty, windowSensor: WindowSensor? = empty)
+    on create(focusSensor: FocusSensor? = none, windowSensor: WindowSensor? = none)
   }
 
   #JS.ВнешняяРеализация(модуль = "verstak")

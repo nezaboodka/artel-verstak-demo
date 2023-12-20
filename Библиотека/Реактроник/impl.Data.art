@@ -52,7 +52,7 @@ external
       obsoleteSince: Integer
     }
 
-    операция hint(nop: YesNo? = empty): Text
+    операция hint(nop: YesNo? = none): Text
 
     операция markObsoleteDueTo(observable`: ObservableValue, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Integer, reactive`: Array<Observer>)
 

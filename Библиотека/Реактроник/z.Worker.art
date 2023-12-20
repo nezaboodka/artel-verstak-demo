@@ -19,7 +19,7 @@ external
       isFinished: YesNo
     }
 
-    operation cancel(err: Error, restartAfter: Worker? = empty): Object?
+    operation cancel(err: Error, restartAfter: Worker? = none): Object?
 
     parallel
     operation whenFinished()

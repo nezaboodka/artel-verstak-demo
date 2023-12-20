@@ -67,7 +67,7 @@ external
 
     operation setData(format: Text, value: Object?)
 
-    operation clearData(format: Text? /*(!)= empty*/)
+    operation clearData(format: Text? /*(!)= none*/)
 
     operation setDragImage(value: HTMLElement, x: Number, y: Number)
 

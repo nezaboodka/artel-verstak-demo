@@ -9,5 +9,5 @@ external
     key: Text,
     target: HTMLElement,
     model: FocusModel,
-    switchEditMode: операция(model: FocusModel?): None? /*(!)= empty*/)
+    switchEditMode: операция(model: FocusModel?): None? /*(!)= none*/)
 }

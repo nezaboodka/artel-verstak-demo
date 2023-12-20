@@ -5,7 +5,7 @@ import Библиотека.Браузер
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Section<M = None, R = None>(builder: BlockBuilder<HTMLElement, M, None, R>?, basis: BlockBuilder<HTMLElement, M, None, R>? = empty): Block<HTMLElement, M, None, R>
+  operation Section<M = None, R = None>(builder: BlockBuilder<HTMLElement, M, None, R>?, basis: BlockBuilder<HTMLElement, M, None, R>? = none): Block<HTMLElement, M, None, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
@@ -14,13 +14,13 @@ external
   operation row<T>(builder: operation(block: None): T?, shiftCursorDown: Integer?)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation startNewRow(shiftCursorDown: Integer? = empty)
+  operation startNewRow(shiftCursorDown: Integer? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation cursor(areaParams: BlockArea)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Text, builder: BlockBuilder<HTMLElement, None, None>? = empty): Block<HTMLElement>
+  operation Note(content: Text, builder: BlockBuilder<HTMLElement, None, None>? = none): Block<HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, None, None>?): Block<HTMLElement>

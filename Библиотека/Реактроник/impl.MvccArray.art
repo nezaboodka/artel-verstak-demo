@@ -33,17 +33,17 @@ external
     // #JS.МассивПараметров
     // operation concat(items: List<ConcatArray<T>>): List<T>
 
-    operation join(separator: Text? = empty): Text
+    operation join(separator: Text? = none): Text
 
     operation reverse(): List<T>
 
     operation shift(): T?
 
-    operation slice(start: Число? = empty, end: Число? = empty): List<T>
+    operation slice(start: Число? = none, end: Число? = none): List<T>
 
     operation sort(compareFn: operation(a: T, b: T): Число?)
 
-    operation splice(start: Число, deleteCount: Число? = empty): List<T>
+    operation splice(start: Число, deleteCount: Число? = none): List<T>
 
     #JS.МассивПараметров
     operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
@@ -54,29 +54,29 @@ external
     #JS.МассивПараметров
     operation unshift(items: List<T>): Число
 
-    operation includes(searchElement: T, fromIndex: Число? = empty): YesNo
+    operation includes(searchElement: T, fromIndex: Число? = none): YesNo
 
-    operation indexOf(searchElement: T, fromIndex: Число? = empty): Число
+    operation indexOf(searchElement: T, fromIndex: Число? = none): Число
 
-    operation lastIndexOf(searchElement: T, fromIndex: Число? = empty): Число
+    operation lastIndexOf(searchElement: T, fromIndex: Число? = none): Число
 
-    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
+    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): YesNo
 
-    operation every<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): /*(!) this is */ List<S>
+    operation every<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = none): /*(!) this is */ List<S>
 
-    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = empty): /*(!) any */ Object?
+    operation every(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = none): /*(!) any */ Object?
 
-    operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): YesNo
+    operation some(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): YesNo
 
-    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): None, thisArg: /*(!) any */ Object? = empty)
+    operation forEach(callbackfn: operation(value: T, index: Число, array: List<T>): None, thisArg: /*(!) any */ Object? = none)
 
-    operation map<U>(callbackfn: operation(value: T, index: Число, array: List<T>): U, thisArg: /*(!) any */ Object? = empty): List<U>
+    operation map<U>(callbackfn: operation(value: T, index: Число, array: List<T>): U, thisArg: /*(!) any */ Object? = none): List<U>
 
-    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): List<T>
+    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): List<T>
 
-    operation filter<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): List<S>
+    operation filter<S = T>(predicate: operation(value: T, index: Число, array: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = none): List<S>
 
-    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = empty): List</*(!) any */ Object?>
+    operation filter(predicate: operation(value: T, index: Число, array: List<T>): /*(!) any */ Object?, thisArg: /*(!) any */ Object? = none): List</*(!) any */ Object?>
 
     operation reduce(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T): T
 
@@ -84,7 +84,7 @@ external
 
     operation reduce<U>(callbackfn: operation(previousValue: U, currentValue: T, currentIndex: Число, array: List<T>): U, initialValue: U): U
 
-    operation reduce(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
+    operation reduce(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = none): /*(!) any */ Object?
 
     operation reduceRight(callbackfn: operation(previousValue: T, currentValue: T, currentIndex: Число, array: List<T>): T): T
 
@@ -92,15 +92,15 @@ external
 
     operation reduceRight<U>(callbackfn: operation(previousValue: U, currentValue: T, currentIndex: Число, array: List<T>): U, initialValue: U): U
 
-    operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = empty): /*(!) any */ Object?
+    operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = none): /*(!) any */ Object?
 
-    operation find<S = T>(predicate: operation(this: None, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = empty): S?
+    operation find<S = T>(predicate: operation(this: None, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = none): S?
 
-    operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = empty): Число
+    operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): Число
 
-    operation fill(value: T, start: Integer? = empty, end: Integer? = empty): /*(!) any */ Object?
+    operation fill(value: T, start: Integer? = none, end: Integer? = none): /*(!) any */ Object?
 
-    operation copyWithin(target: Integer, start: Integer, end: Integer? = empty): /*(!) any */ Object?
+    operation copyWithin(target: Integer, start: Integer, end: Integer? = none): /*(!) any */ Object?
 
     // operation [Symbol.iterator](): IterableIterator<T>
 
@@ -125,12 +125,12 @@ external
 
     on create(arrayLength: Число)
 
-    on create(arrayLength: Число? = empty)
+    on create(arrayLength: Число? = none)
 
     #JS.МассивПараметров
     on create(items: List<T>)
 
-    on create(args: Object? = empty)
+    on create(args: Object? = none)
   }
 
   // ObservableArray
@@ -142,11 +142,11 @@ external
 
     on create(arrayLength: Число)
 
-    on create(arrayLength: Число? = empty)
+    on create(arrayLength: Число? = none)
 
     #JS.МассивПараметров
     on create(items: List<T>)
 
-    on create(args: Object? = empty)
+    on create(args: Object? = none)
   }
 }

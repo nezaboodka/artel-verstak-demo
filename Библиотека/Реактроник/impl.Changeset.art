@@ -66,7 +66,7 @@ external
 
     operation getObjectSnapshot(h: ObjectHandle, m: MemberName): ObjectSnapshot
 
-    operation getEditableObjectSnapshot(h: ObjectHandle, m: MemberName, value: /*(!) any */ Object?, token: Object? = empty): ObjectSnapshot
+    operation getEditableObjectSnapshot(h: ObjectHandle, m: MemberName, value: /*(!) any */ Object?, token: Object? = none): ObjectSnapshot
 
     static
     operation takeSnapshot<T>(obj: T): T
@@ -83,7 +83,7 @@ external
 
     operation rebase(): List<ObjectSnapshot>?
 
-    operation applyOrDiscard(err: Object? = empty): Array<Observer>
+    operation applyOrDiscard(err: Object? = none): Array<Observer>
 
     static
     operation sealObjectSnapshot(h: ObjectHandle, os: ObjectSnapshot)
@@ -113,13 +113,13 @@ external
     valueHint: Object?
 
     static
-    operation obj(h: ObjectHandle?, m: MemberName? = empty, stamp: Integer? = empty, snapshotId: Integer? = empty, originSnapshotId: Integer? = empty, value: Object? = empty): Text
+    operation obj(h: ObjectHandle?, m: MemberName? = none, stamp: Integer? = none, snapshotId: Integer? = none, originSnapshotId: Integer? = none, value: Object? = none): Text
 
     static
-    operation snapshot2(h: ObjectHandle, s: AbstractChangeset, m: MemberName? = empty, o: ObservableValue? = empty): Text
+    operation snapshot2(h: ObjectHandle, s: AbstractChangeset, m: MemberName? = none, o: ObservableValue? = none): Text
 
     static
-    operation snapshot(os: ObjectSnapshot, m: MemberName? = empty): Text
+    operation snapshot(os: ObjectSnapshot, m: MemberName? = none): Text
 
     static
     operation conflicts(conflicts: List<ObjectSnapshot>): Text

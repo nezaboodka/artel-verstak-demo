@@ -30,6 +30,6 @@ external
     operation markObsolete()
 
     /*(!) abstract */ 
-    operation pullLastResult(args: Array<Object?>? = empty): T?
+    operation pullLastResult(args: Array<Object?>? = none): T?
   }
 }

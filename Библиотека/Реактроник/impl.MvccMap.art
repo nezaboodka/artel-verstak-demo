@@ -15,7 +15,7 @@ external
 
     operation delete(key: K): YesNo
 
-    operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = empty)
+    operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = none)
 
     operation get`(key: K): V?
 
@@ -46,9 +46,9 @@ external
   {
     on create()
 
-    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = empty)/*(!) any */ Object?
+    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = none)/*(!) any */ Object?
 
-    on create(args: Object? = empty)
+    on create(args: Object? = none)
   }
 
   // ObservableMap
@@ -57,8 +57,8 @@ external
   {
     on create()
 
-    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = empty)
+    // on create(iterable: Iterable</*(!) защищено */ Object { _0: K, _1: V }>? = none)
 
-    on create(args: Object? = empty)
+    on create(args: Object? = none)
   }
 }

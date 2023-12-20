@@ -43,7 +43,7 @@ external
 
     operation beginMerge()
 
-    operation endMerge(err`: Object? = empty)
+    operation endMerge(err`: Object? = none)
 
     operation resetAddedAndRemovedLists()
 
@@ -51,9 +51,9 @@ external
 
     operation items(): Enumerable<MergeItem<T>>
 
-    operation addedItems(reset: YesNo? /*(!)= empty*/): Enumerable<MergeItem<T>>
+    operation addedItems(reset: YesNo? /*(!)= none*/): Enumerable<MergeItem<T>>
 
-    operation removedItems(reset: YesNo? /*(!)= empty*/): Enumerable<MergeItem<T>>
+    operation removedItems(reset: YesNo? /*(!)= none*/): Enumerable<MergeItem<T>>
 
     operation isAdded(item: MergeItem<T>): YesNo
 
@@ -92,7 +92,7 @@ external
 
     operation lookup(key: Text?): MergeItem<T>?
 
-    operation claim(key: Text, resolution: MergeListResolution? = empty, err: Text? = empty): MergeItem<T>?
+    operation claim(key: Text, resolution: MergeListResolution? = none, err: Text? = none): MergeItem<T>?
 
     operation add(instance: T): MergeItem<T>
 
@@ -102,7 +102,7 @@ external
 
     operation beginMerge()
 
-    operation endMerge(err: Object? = empty)
+    operation endMerge(err: Object? = none)
 
     operation resetAddedAndRemovedLists()
 
@@ -110,9 +110,9 @@ external
 
     operation items(): Enumerable<MergeItem<T>>
 
-    operation addedItems(reset: YesNo? = empty): Enumerable<MergeItem<T>>
+    operation addedItems(reset: YesNo? = none): Enumerable<MergeItem<T>>
 
-    operation removedItems(reset: YesNo? = empty): Enumerable<MergeItem<T>>
+    operation removedItems(reset: YesNo? = none): Enumerable<MergeItem<T>>
 
     operation isAdded(item: MergeItem<T>): YesNo
 

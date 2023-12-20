@@ -5,7 +5,7 @@ import Библиотека.Браузер
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>? = empty): Block<HTMLElement>
+  operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>? = none): Block<HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation A<M, R>(builder: BlockBuilder<HTMLAnchorElement, M, None, R>?, basis: BlockBuilder<HTMLAnchorElement, M, None): Block<HTMLAnchorElement, M, None, R>
