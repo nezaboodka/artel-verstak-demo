@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import Browser
 
 external
 {
@@ -20,7 +20,7 @@ external
   operation cursor(areaParams: BlockArea)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Text, builder: BlockBuilder<HTMLElement, None, None>? = none): Block<HTMLElement>
+  operation Note(content: Artel.Text, builder: BlockBuilder<HTMLElement, None, None>? = none): Block<HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, None, None>?): Block<HTMLElement>
