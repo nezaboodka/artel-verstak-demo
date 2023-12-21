@@ -4206,6 +4206,27 @@ external
     on create() // : AudioParamMap
   }
 
+
+  /**
+  * The Web Audio API events that occur when a ScriptProcessorNode input buffer is ready to be processed.
+  * @deprecated As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by AudioWorklet.
+  *
+  * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AudioProcessingEvent)
+  */
+  type AudioProcessingEvent = object Event
+  {
+      guarded inputBuffer: AudioBuffer;
+
+      guarded outputBuffer: AudioBuffer;
+
+      guarded playbackTime: Number;
+
+      prototype: AudioProcessingEvent;
+
+      on create(type`: Text, eventInitDict: AudioProcessingEventInit) // : AudioProcessingEvent
+  }
+
+
   type AudioScheduledSourceNodeEventMap = aspect
   {
     ended: Event
@@ -11383,7 +11404,7 @@ external
     colorSpace: PredefinedColorSpace
 
     guarded
-    data: Uint8ClampedArray
+    data: JS.Uint8ClampedArray
 
     guarded
     height: Number
@@ -11395,7 +11416,7 @@ external
 
     on create(sw: Number, sh: Number, settings: ImageDataSettings? = none) // : ImageData
 
-    on create(data: Uint8ClampedArray, sw: Number, sh: Number? = none, settings: ImageDataSettings? = none) // : ImageData
+    on create(data: JS.Uint8ClampedArray, sw: Number, sh: Number? = none, settings: ImageDataSettings? = none) // : ImageData
   }
 
   type InnerHTML = aspect
@@ -27733,7 +27754,7 @@ external
 
     type ValueTypeMap = aspect
     {
-      anyfunc: Function
+      anyfunc: JS.Function
 
       externref: /*(!) any */ Object?
 
@@ -27743,9 +27764,9 @@ external
 
       i32: Number
 
-      i64: bigint
+      i64: JS.BigInt
 
-      v128: Никогда
+      // v128: Никогда
     }
 
 
@@ -27763,13 +27784,13 @@ external
 
     type ExportValue = Object? /*(!)Function | Global | Memory | Table*/
 
-    type Exports = Record<Text, ExportValue>
+    type Exports = Object? // Record<Text, ExportValue>
 
     type ImportValue = Object? /*(!)ExportValue | Number*/
 
-    type Imports = Record<Text, ModuleImports>
+    type Imports = Object? // Record<Text, ModuleImports>
 
-    type ModuleImports = Record<Text, ImportValue>
+    type ModuleImports = Object? // Record<Text, ImportValue>
 
     type ValueType = /*(!) keyof ValueTypeMap */ Object?
 
@@ -28292,13 +28313,13 @@ external
 
     center: HTMLElement
 
-    dir: HTMLDirectoryElement
+    // dir: HTMLDirectoryElement
 
-    font: HTMLFontElement
+    // font: HTMLFontElement
 
-    frame: HTMLFrameElement
+    // frame: HTMLFrameElement
 
-    frameset: HTMLFrameSetElement
+    // frameset: HTMLFrameSetElement
 
     isindex: HTMLUnknownElement
 
@@ -28306,7 +28327,7 @@ external
 
     listing: HTMLPreElement
 
-    marquee: HTMLMarqueeElement
+    // marquee: HTMLMarqueeElement
 
     menuitem: HTMLElement
 
@@ -28320,7 +28341,7 @@ external
 
     noframes: HTMLElement
 
-    param: HTMLParamElement
+    // param: HTMLParamElement
 
     plaintext: HTMLElement
 
