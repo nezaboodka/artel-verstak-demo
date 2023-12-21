@@ -1,7 +1,7 @@
 
 import JS = Artel.JavaScript
-import Библиотека.Браузер
-import Библиотека.Реактроник
+import Браузер
+import Реактроник
 
 external
 {

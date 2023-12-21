@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Библиотека.Браузер
+import Браузер
 
 external
 {
@@ -8,7 +8,7 @@ external
   operation HtmlBody(builder: BlockBuilder<HTMLElement>?, basis: BlockBuilder<HTMLElement>? = none): Block<HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation A<M, R>(builder: BlockBuilder<HTMLAnchorElement, M, None, R>?, basis: BlockBuilder<HTMLAnchorElement, M, None): Block<HTMLAnchorElement, M, None, R>
+  operation A<M, R>(builder: BlockBuilder<HTMLAnchorElement, M, None, R>?, basis: BlockBuilder<HTMLAnchorElement, M, None>): Block<HTMLAnchorElement, M, None, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation Abbr<M, R>(builder: BlockBuilder<HTMLElement, M, None, R>?, basis: BlockBuilder<HTMLElement, M, None, R>?): Block<HTMLElement, M, None, R>
