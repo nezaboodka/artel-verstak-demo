@@ -26,22 +26,22 @@
 
   тип Режим = Mode
   {
-    Стандартный = Default
-    ТочечноеОбновление = PinpointUpdate
-    РучноеВстраивание = ManualMount
+    стандартный = Default
+    точечное-обновление = PinpointUpdate
+    ручное-встраивание = ManualMount
   }
 
   тип Выравнивание = Align
   {
-    Стандартно = Default
-    ПоГраницам = ToBounds
-    ПоЛевомуКраю = ToLeft
-    ПоЦентруШирины = ToCenterX
-    ПоПравомуКраю = ToRight
-    ПоВерхнемуКраю = ToTop
-    ПоЦентруВысоты = ToCenterY
-    ПоНижнемуКраю = ToBottom
-    ПоЦентру = ToCenter
+    стандартно = Default
+    по-границам = ToBounds
+    по-левому-краю = ToLeft
+    по-центру-ширины = ToCenterX
+    по-правому-краю = ToRight
+    по-верхнему-краю = ToTop
+    по-центру-высоты = ToCenterY
+    по-нижнему-краю = ToBottom
+    по-центру = ToCenter
   }
 
   тип Блок = Block
