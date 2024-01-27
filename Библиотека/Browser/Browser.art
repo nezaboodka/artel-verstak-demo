@@ -12129,11 +12129,11 @@ external
 
     operation update(response: BufferSource): JS.Promise<None>
 
-    operation addEventListener<K = /*(!) keyof MediaKeySessionEventMap */ Object?>(type`: K, listener: operation(this: MediaKeySession, ev: /*(!) MediaKeySessionEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaKeySession, ev: /*(!) MediaKeySessionEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaKeySessionEventMap */ Object?>(type`: K, listener: operation(this: MediaKeySession, ev: /*(!) MediaKeySessionEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaKeySession, ev: /*(!) MediaKeySessionEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12259,11 +12259,11 @@ external
 
   type MediaQueryList = object EventTarget
   {
-    operation addEventListener<K = /*(!) keyof MediaQueryListEventMap */ Object?>(type`: K, listener: operation(this: MediaQueryList, ev: /*(!) MediaQueryListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaQueryList, ev: /*(!) MediaQueryListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaQueryListEventMap */ Object?>(type`: K, listener: operation(this: MediaQueryList, ev: /*(!) MediaQueryListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaQueryList, ev: /*(!) MediaQueryListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12344,11 +12344,11 @@ external
 
     operation stop()
 
-    operation addEventListener<K = /*(!) keyof MediaRecorderEventMap */ Object?>(type`: K, listener: operation(this: MediaRecorder, ev: /*(!) MediaRecorderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaRecorder, ev: /*(!) MediaRecorderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaRecorderEventMap */ Object?>(type`: K, listener: operation(this: MediaRecorder, ev: /*(!) MediaRecorderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaRecorder, ev: /*(!) MediaRecorderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12421,11 +12421,11 @@ external
 
     operation setLiveSeekableRange(start: Number, end: Number)
 
-    operation addEventListener<K = /*(!) keyof MediaSourceEventMap */ Object?>(type`: K, listener: operation(this: MediaSource, ev: /*(!) MediaSourceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaSource, ev: /*(!) MediaSourceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaSourceEventMap */ Object?>(type`: K, listener: operation(this: MediaSource, ev: /*(!) MediaSourceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaSource, ev: /*(!) MediaSourceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12476,11 +12476,11 @@ external
 
     operation removeTrack(track: MediaStreamTrack)
 
-    operation addEventListener<K = /*(!) keyof MediaStreamEventMap */ Object?>(type`: K, listener: operation(this: MediaStream, ev: /*(!) MediaStreamEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaStream, ev: /*(!) MediaStreamEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaStreamEventMap */ Object?>(type`: K, listener: operation(this: MediaStream, ev: /*(!) MediaStreamEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaStream, ev: /*(!) MediaStreamEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12576,11 +12576,11 @@ external
 
     operation stop()
 
-    operation addEventListener<K = /*(!) keyof MediaStreamTrackEventMap */ Object?>(type`: K, listener: operation(this: MediaStreamTrack, ev: /*(!) MediaStreamTrackEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaStreamTrack, ev: /*(!) MediaStreamTrackEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaStreamTrackEventMap */ Object?>(type`: K, listener: operation(this: MediaStreamTrack, ev: /*(!) MediaStreamTrackEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaStreamTrack, ev: /*(!) MediaStreamTrackEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12665,11 +12665,11 @@ external
 
     operation start()
 
-    operation addEventListener<K = /*(!) keyof MessagePortEventMap */ Object?>(type`: K, listener: operation(this: MessagePort, ev: /*(!) MessagePortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MessagePort, ev: /*(!) MessagePortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MessagePortEventMap */ Object?>(type`: K, listener: operation(this: MessagePort, ev: /*(!) MessagePortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MessagePort, ev: /*(!) MessagePortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -12855,7 +12855,7 @@ external
 
     operation requestMediaKeySystemAccess(keySystem: Text, supportedConfigurations: List<MediaKeySystemConfiguration>): JS.Promise<MediaKeySystemAccess>
 
-    operation sendBeacon(url: Object? /*(!)Text | URL*/, data: BodyInit? = none): YesNo
+    operation sendBeacon(url: Text | URL, data: BodyInit? = none): YesNo
 
     operation share(data: ShareData? = none): JS.Promise<None>
 
@@ -12892,7 +12892,7 @@ external
 
   type NavigatorContentUtils = aspect
   {
-    operation registerProtocolHandler(scheme: Text, url: Object? /*(!)Text | URL*/)
+    operation registerProtocolHandler(scheme: Text, url: Text | URL)
   }
 
 
@@ -13256,11 +13256,11 @@ external
 
     operation close()
 
-    operation addEventListener<K = /*(!) keyof NotificationEventMap */ Object?>(type`: K, listener: operation(this: Notification, ev: /*(!) NotificationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: Notification, ev: /*(!) NotificationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof NotificationEventMap */ Object?>(type`: K, listener: operation(this: Notification, ev: /*(!) NotificationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: Notification, ev: /*(!) NotificationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -13454,11 +13454,11 @@ external
 
     operation suspend(suspendTime: Number): JS.Promise<None>
 
-    operation addEventListener<K = /*(!) keyof OfflineAudioContextEventMap */ Object?>(type`: K, listener: operation(this: OfflineAudioContext, ev: /*(!) OfflineAudioContextEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: OfflineAudioContext, ev: /*(!) OfflineAudioContextEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof OfflineAudioContextEventMap */ Object?>(type`: K, listener: operation(this: OfflineAudioContext, ev: /*(!) OfflineAudioContextEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: OfflineAudioContext, ev: /*(!) OfflineAudioContextEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -13503,11 +13503,11 @@ external
 
     operation transferToImageBitmap(): ImageBitmap
 
-    operation addEventListener<K = /*(!) keyof OffscreenCanvasEventMap */ Object?>(type`: K, listener: operation(this: OffscreenCanvas, ev: /*(!) OffscreenCanvasEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: OffscreenCanvas, ev: /*(!) OffscreenCanvasEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof OffscreenCanvasEventMap */ Object?>(type`: K, listener: operation(this: OffscreenCanvas, ev: /*(!) OffscreenCanvasEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: OffscreenCanvas, ev: /*(!) OffscreenCanvasEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -13548,11 +13548,11 @@ external
 
     operation setPeriodicWave(periodicWave: PeriodicWave)
 
-    operation addEventListener<K = /*(!) keyof AudioScheduledSourceNodeEventMap */ Object?>(type`: K, listener: operation(this: OscillatorNode, ev: /*(!) AudioScheduledSourceNodeEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: OscillatorNode, ev: /*(!) AudioScheduledSourceNodeEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof AudioScheduledSourceNodeEventMap */ Object?>(type`: K, listener: operation(this: OscillatorNode, ev: /*(!) AudioScheduledSourceNodeEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: OscillatorNode, ev: /*(!) AudioScheduledSourceNodeEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -13604,15 +13604,15 @@ external
 
   type ParentNode = aspect Node
   {
-    operation querySelector<K = /*(!) keyof SVGElementTagNameMap */ Object?>(selectors: K): /*(!) SVGElementTagNameMap[K] */ Object?
+    operation querySelector<K = Text>(selectors: K): /*(!) SVGElementTagNameMap[K] */ Object?
 
-    operation querySelector<K = /*(!) keyof MathMLElementTagNameMap */ Object?>(selectors: K): /*(!) MathMLElementTagNameMap[K] */ Object?
+    operation querySelector<K = Text>(selectors: K): /*(!) MathMLElementTagNameMap[K] */ Object?
 
     operation querySelector<E = Element>(selectors: Text): E?
 
-    operation querySelectorAll<K = /*(!) keyof SVGElementTagNameMap */ Object?>(selectors: K): NodeListOf</*(!) SVGElementTagNameMap[K] */ Object?>
+    operation querySelectorAll<K = Text>(selectors: K): NodeListOf</*(!) SVGElementTagNameMap[K] */ Object?>
 
-    operation querySelectorAll<K = /*(!) keyof MathMLElementTagNameMap */ Object?>(selectors: K): NodeListOf</*(!) MathMLElementTagNameMap[K] */ Object?>
+    operation querySelectorAll<K = Text>(selectors: K): NodeListOf</*(!) MathMLElementTagNameMap[K] */ Object?>
 
     operation querySelectorAll<E = Element>(selectors: Text): NodeListOf<E>
   }
@@ -13630,7 +13630,7 @@ external
 
     prototype: Path2D
 
-    on create(path: Object? /*(!)Path2D | Text | пусто*/ = none) // : Path2D
+    on create(path: Path2D | Text | None = none) // : Path2D
   }
 
   /**
@@ -13676,13 +13676,13 @@ external
 
     operation canMakePayment(): JS.Promise<YesNo>
 
-    operation show(detailsPromise: Object? /*(!)PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate> | пусто*/ = none): JS.Promise<PaymentResponse>
+    operation show(detailsPromise: PaymentDetailsUpdate | JS.PromiseLike<PaymentDetailsUpdate> | None = none): JS.Promise<PaymentResponse>
 
-    operation addEventListener<K = /*(!) keyof PaymentRequestEventMap */ Object?>(type`: K, listener: operation(this: PaymentRequest, ev: /*(!) PaymentRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: PaymentRequest, ev: /*(!) PaymentRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof PaymentRequestEventMap */ Object?>(type`: K, listener: operation(this: PaymentRequest, ev: /*(!) PaymentRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: PaymentRequest, ev: /*(!) PaymentRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -13700,7 +13700,7 @@ external
 
   type PaymentRequestUpdateEvent = object Event
   {
-    operation updateWith(detailsPromise: Object? /*(!)PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate>*/)
+    operation updateWith(detailsPromise: PaymentDetailsUpdate | PromiseLike<PaymentDetailsUpdate>)
 
     prototype: PaymentRequestUpdateEvent
 
@@ -13750,11 +13750,11 @@ external
 
   type Performance = object EventTarget
   {
-    operation addEventListener<K = /*(!) keyof PerformanceEventMap */ Object?>(type`: K, listener: operation(this: Performance, ev: /*(!) PerformanceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: Performance, ev: /*(!) PerformanceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof PerformanceEventMap */ Object?>(type`: K, listener: operation(this: Performance, ev: /*(!) PerformanceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: Performance, ev: /*(!) PerformanceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -14052,11 +14052,11 @@ external
     guarded
     state: PermissionState
 
-    operation addEventListener<K = /*(!) keyof PermissionStatusEventMap */ Object?>(type`: K, listener: operation(this: PermissionStatus, ev: /*(!) PermissionStatusEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: PermissionStatus, ev: /*(!) PermissionStatusEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof PermissionStatusEventMap */ Object?>(type`: K, listener: operation(this: PermissionStatus, ev: /*(!) PermissionStatusEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: PermissionStatus, ev: /*(!) PermissionStatusEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -14106,11 +14106,11 @@ external
     guarded
     width: Number
 
-    operation addEventListener<K = /*(!) keyof PictureInPictureWindowEventMap */ Object?>(type`: K, listener: operation(this: PictureInPictureWindow, ev: /*(!) PictureInPictureWindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: PictureInPictureWindow, ev: /*(!) PictureInPictureWindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof PictureInPictureWindowEventMap */ Object?>(type`: K, listener: operation(this: PictureInPictureWindow, ev: /*(!) PictureInPictureWindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: PictureInPictureWindow, ev: /*(!) PictureInPictureWindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -14382,11 +14382,11 @@ external
 
     operation insertDTMF(tones: Text, duration: Number? = none, interToneGap: Number? = none)
 
-    operation addEventListener<K = /*(!) keyof RTCDTMFSenderEventMap */ Object?>(type`: K, listener: operation(this: RTCDTMFSender, ev: /*(!) RTCDTMFSenderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: RTCDTMFSender, ev: /*(!) RTCDTMFSenderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof RTCDTMFSenderEventMap */ Object?>(type`: K, listener: operation(this: RTCDTMFSender, ev: /*(!) RTCDTMFSenderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: RTCDTMFSender, ev: /*(!) RTCDTMFSenderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -14484,11 +14484,11 @@ external
 
     operation send(data: JS.ArrayBufferView)
 
-    operation addEventListener<K = /*(!) keyof RTCDataChannelEventMap */ Object?>(type`: K, listener: operation(this: RTCDataChannel, ev: /*(!) RTCDataChannelEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: RTCDataChannel, ev: /*(!) RTCDataChannelEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof RTCDataChannelEventMap */ Object?>(type`: K, listener: operation(this: RTCDataChannel, ev: /*(!) RTCDataChannelEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: RTCDataChannel, ev: /*(!) RTCDataChannelEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -14533,11 +14533,11 @@ external
 
     operation getRemoteCertificates(): List<JS.ArrayBuffer>
 
-    operation addEventListener<K = /*(!) keyof RTCDtlsTransportEventMap */ Object?>(type`: K, listener: operation(this: RTCDtlsTransport, ev: /*(!) RTCDtlsTransportEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: RTCDtlsTransport, ev: /*(!) RTCDtlsTransportEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof RTCDtlsTransportEventMap */ Object?>(type`: K, listener: operation(this: RTCDtlsTransport, ev: /*(!) RTCDtlsTransportEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: RTCDtlsTransport, ev: /*(!) RTCDtlsTransportEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
