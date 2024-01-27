@@ -5625,9 +5625,9 @@ external
 
   type CanvasFillStrokeStyles = aspect
   {
-    fillStyle: Object? /*(!)Text | CanvasGradient | CanvasPattern*/
+    fillStyle: Text | CanvasGradient | CanvasPattern
 
-    strokeStyle: Object? /*(!)Text | CanvasGradient | CanvasPattern*/
+    strokeStyle: Text | CanvasGradient | CanvasPattern
 
     operation createConicGradient(startAngle: Number, x: Number, y: Number): CanvasGradient
 
@@ -5702,7 +5702,7 @@ external
 
     operation rect(x: Number, y: Number, w: Number, h: Number)
 
-    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Object? /*(!)Number | DOMPointInit | List<Object? /*(!)Number | DOMPointInit> | пусто*/ = none)
+    operation roundRect(x: Number, y: Number, w: Number, h: Number, radii: Number | DOMPointInit | List<Number | DOMPointInit> | None = none)
   }
 
 
@@ -5901,15 +5901,15 @@ external
   type ChildNode = aspect Node
   {
     #JS.МассивПараметров
-    operation after(nodes: List<Object? /*(!)Node | Text*/>)
+    operation after(nodes: List<Node | Text>)
 
     #JS.МассивПараметров
-    operation before(nodes: List<Object? /*(!)Node | Text*/>)
+    operation before(nodes: List<Node | Text>)
 
     operation remove()
 
     #JS.МассивПараметров
-    operation replaceWith(nodes: List<Object? /*(!)Node | Text*/>)
+    operation replaceWith(nodes: List<Node | Text>)
   }
 
 
@@ -6959,7 +6959,7 @@ external
 
   type Document = object Node, DocumentOrShadowRoot, FontFaceSource, GlobalEventHandlers, NonElementParentNode, ParentNode, XPathEvaluatorBase
   {
-    operation location(href: Object? /*(!)Text | Location*/): /*(!) no_type */ Object?
+    operation location(href: Text | Location): /*(!) no_type */ Object?
 
     guarded
     ownerDocument: None
@@ -6976,7 +6976,7 @@ external
 
     operation createElementNS(namespaceURI: Text?, qualifiedName: Text, options: ElementCreationOptions? = none): Element
 
-    operation createElementNS(namespace: Text?, qualifiedName: Text, options: Object? /*(!)Text | ElementCreationOptions | пусто*/ = none): Element
+    operation createElementNS(namespace: Text?, qualifiedName: Text, options: Text | ElementCreationOptions | None = none): Element
 
     // operation createEvent(eventInterface: "AnimationPlaybackEvent"): AnimationPlaybackEvent
 
@@ -7114,7 +7114,7 @@ external
 
     operation getElementsByTagNameNS(namespace: Text?, localName: Text): HTMLCollectionOf<Element>
 
-    operation open(url: Object? /*(!)Text | URL*/, name: Text, features: Text): WindowProxy?
+    operation open(url: Text | URL, name: Text, features: Text): WindowProxy?
 
     operation addEventListener<K = /*(!) keyof DocumentEventMap */ Object?>(type`: K, listener: operation(this: Document, ev: /*(!) DocumentEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
@@ -7479,7 +7479,7 @@ external
 
     operation reportValidity(): YesNo
 
-    operation setFormValue(value: Object? /*(!)File | Text | FormData | пусто*/, state: Object? /*(!)File | Text | FormData | пусто | пусто*/ = none)
+    operation setFormValue(value: File | Text | FormData | None, state: File | Text | FormData | None = none)
 
     operation setValidity(flags: ValidityStateFlags? = none, message: Text? = none, anchor: HTMLElement? = none)
 
@@ -7653,7 +7653,7 @@ external
 
     prototype: EventSource
 
-    on create(url: Object? /*(!)Text | URL*/, eventSourceInitDict: EventSourceInit? = none) // : EventSource
+    on create(url: Text | URL, eventSourceInitDict: EventSourceInit? = none) // : EventSource
 
     guarded
     CONNECTING // = 0
@@ -7673,11 +7673,11 @@ external
 
   type EventTarget = object
   {
-    operation addEventListener(type`: Text, callback: EventListenerOrEventListenerObject?, options: Object? /*(!)AddEventListenerOptions | YesNo | пусто*/ = none)
+    operation addEventListener(type`: Text, callback: EventListenerOrEventListenerObject?, options: AddEventListenerOptions | YesNo | None = none)
 
     operation dispatchEvent(event: Event): YesNo
 
-    operation removeEventListener(type`: Text, callback: EventListenerOrEventListenerObject?, options: Object? /*(!)EventListenerOptions | YesNo | пусто*/ = none)
+    operation removeEventListener(type`: Text, callback: EventListenerOrEventListenerObject?, options: EventListenerOptions | YesNo | None = none)
 
     prototype: EventTarget
 
@@ -7769,7 +7769,7 @@ external
     readyState: Object? /*(!) typeof FileReader.EMPTY | typeof FileReader.LOADING | typeof FileReader.DONE */
 
     guarded
-    result: Object? /*(!)Text | JS.ArrayBuffer | пусто*/
+    result: Text | JS.ArrayBuffer | None
 
     operation abort()
 
@@ -8026,7 +8026,7 @@ external
 
     prototype: FontFace
 
-    on create(family: Text, source: Object? /*(!)Text | BinaryData*/, descriptors: FontFaceDescriptors? = none) // : FontFace
+    on create(family: Text, source: Text | BinaryData, descriptors: FontFaceDescriptors? = none) // : FontFace
   }
 
   type FontFaceSetEventMap = aspect
@@ -8101,7 +8101,7 @@ external
 
   type FormData = object
   {
-    operation append(name: Text, value: Object? /*(!)Text | Blob*/)
+    operation append(name: Text, value: Text | Blob)
 
     operation append(name: Text, value: Text)
 
@@ -8115,7 +8115,7 @@ external
 
     operation has(name: Text): YesNo
 
-    operation set(name: Text, value: Object? /*(!)Text | Blob*/)
+    operation set(name: Text, value: Text | Blob)
 
     operation set(name: Text, value: Text)
 
@@ -8595,9 +8595,9 @@ external
     guarded
     length: Number
 
-    operation item(nameOrIndex: Text? = none): Object? /*(!)HTMLCollection | Element | пусто*/
+    operation item(nameOrIndex: Text? = none): HTMLCollection | Element | None
 
-    operation namedItem(name: Text): Object? /*(!)HTMLCollection | Element | пусто*/
+    operation namedItem(name: Text): HTMLCollection | Element | None
 
     // (!) [index: number]: Element
 
@@ -8616,11 +8616,11 @@ external
   {
     ping: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAnchorElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLAnchorElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAnchorElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLAnchorElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8639,11 +8639,11 @@ external
   {
     ping: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8660,11 +8660,11 @@ external
 
   type HTMLAudioElement = object HTMLMediaElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAudioElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLAudioElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLAudioElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLAudioElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8681,11 +8681,11 @@ external
 
   type HTMLBRElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLBRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLBRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLBRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLBRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8706,11 +8706,11 @@ external
 
     target: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLBaseElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLBaseElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLBaseElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLBaseElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8793,11 +8793,11 @@ external
 
     operation setCustomValidity(error`: Text)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLButtonElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLButtonElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLButtonElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLButtonElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8836,11 +8836,11 @@ external
 
     operation transferControlToOffscreen(): OffscreenCanvas
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLCanvasElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLCanvasElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLCanvasElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLCanvasElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8893,11 +8893,11 @@ external
 
   type HTMLDListElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8916,11 +8916,11 @@ external
   {
     value: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDataElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDataElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDataElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDataElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8940,11 +8940,11 @@ external
     guarded
     options: HTMLCollectionOf<HTMLOptionElement>
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDataListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDataListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDataListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDataListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8959,11 +8959,11 @@ external
   {
     open: YesNo
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDetailsElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDetailsElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDetailsElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDetailsElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -8986,11 +8986,11 @@ external
 
     operation showModal()
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDialogElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDialogElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDialogElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDialogElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9007,11 +9007,11 @@ external
 
   type HTMLDivElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDivElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLDivElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLDivElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLDivElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9088,11 +9088,11 @@ external
 
     operation togglePopover(force: YesNo? = none)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9113,11 +9113,11 @@ external
 
     operation getSVGDocument(): Document?
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLEmbedElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLEmbedElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLEmbedElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLEmbedElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9162,11 +9162,11 @@ external
 
     operation setCustomValidity(error`: Text)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLFieldSetElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLFieldSetElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLFieldSetElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLFieldSetElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9183,7 +9183,7 @@ external
 
   type HTMLFormControlsCollection = object HTMLCollectionBase
   {
-    operation namedItem(name: Text): Object? /*(!)RadioNodeList | Element | пусто*/
+    operation namedItem(name: Text): RadioNodeList | Element | None
 
     prototype: HTMLFormControlsCollection
 
@@ -9237,11 +9237,11 @@ external
 
     operation submit()
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLFormElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLFormElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLFormElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLFormElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9268,11 +9268,11 @@ external
 
   type HTMLHRElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLHRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLHRElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9289,11 +9289,11 @@ external
 
   type HTMLHeadElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHeadElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLHeadElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHeadElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLHeadElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9310,11 +9310,11 @@ external
 
   type HTMLHeadingElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHeadingElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLHeadingElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHeadingElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLHeadingElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9331,11 +9331,11 @@ external
 
   type HTMLHtmlElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHtmlElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLHtmlElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLHtmlElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLHtmlElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9392,11 +9392,11 @@ external
 
     operation getSVGDocument(): Document?
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLIFrameElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLIFrameElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLIFrameElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLIFrameElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9413,11 +9413,11 @@ external
 
   type HTMLImageElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLImageElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLImageElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLImageElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLImageElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9448,11 +9448,11 @@ external
 
     operation setRangeText(replacement: Text, start: Number, end: Number, selectionMode: SelectionMode? = none)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLInputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLInputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLInputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLInputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9469,11 +9469,11 @@ external
 
   type HTMLLIElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLIElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLLIElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLIElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLLIElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9498,11 +9498,11 @@ external
 
     htmlFor: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLabelElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLLabelElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLabelElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLLabelElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9519,11 +9519,11 @@ external
 
   type HTMLLegendElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLegendElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLLegendElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLegendElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLLegendElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9548,11 +9548,11 @@ external
 
     integrity: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLinkElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLLinkElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLLinkElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLLinkElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9574,11 +9574,11 @@ external
 
     name: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMapElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLMapElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMapElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLMapElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9720,11 +9720,11 @@ external
     guarded
     HAVE_ENOUGH_DATA // = 4
 
-    operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9764,11 +9764,11 @@ external
 
   type HTMLMenuElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMenuElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLMenuElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMenuElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLMenuElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9787,11 +9787,11 @@ external
   {
     media: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMetaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLMetaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMetaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLMetaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9823,11 +9823,11 @@ external
 
     value: Number
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMeterElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLMeterElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLMeterElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLMeterElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9848,11 +9848,11 @@ external
 
     dateTime: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLModElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLModElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLModElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLModElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9869,11 +9869,11 @@ external
 
   type HTMLOListElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLOListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLOListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9890,11 +9890,11 @@ external
 
   type HTMLObjectElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLObjectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLObjectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLObjectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLObjectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9915,11 +9915,11 @@ external
 
     label: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOptGroupElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLOptGroupElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOptGroupElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLOptGroupElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9954,11 +9954,11 @@ external
 
     value: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLOptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLOptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10046,11 +10046,11 @@ external
 
     operation setCustomValidity(error`: Text)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOutputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLOutputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLOutputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLOutputElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10067,11 +10067,11 @@ external
 
   type HTMLParagraphElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLParagraphElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLParagraphElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLParagraphElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLParagraphElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10088,11 +10088,11 @@ external
 
   type HTMLPictureElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLPictureElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLPictureElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLPictureElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLPictureElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10109,11 +10109,11 @@ external
 
   type HTMLPreElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLPreElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLPreElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLPreElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLPreElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10140,11 +10140,11 @@ external
 
     value: Number
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLProgressElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLProgressElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLProgressElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLProgressElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10163,11 +10163,11 @@ external
   {
     cite: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLQuoteElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLQuoteElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLQuoteElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLQuoteElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10192,11 +10192,11 @@ external
 
     noModule: YesNo
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLScriptElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLScriptElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLScriptElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLScriptElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10273,11 +10273,11 @@ external
 
     operation setCustomValidity(error`: Text)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSelectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLSelectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSelectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLSelectElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10301,11 +10301,11 @@ external
 
     operation assignedNodes(options: AssignedNodesOptions? = none): List<Node>
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSlotElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLSlotElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSlotElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLSlotElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10336,11 +10336,11 @@ external
 
     width: Number
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSourceElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLSourceElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSourceElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLSourceElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10357,11 +10357,11 @@ external
 
   type HTMLSpanElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSpanElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLSpanElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLSpanElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLSpanElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10378,11 +10378,11 @@ external
 
   type HTMLStyleElement = object HTMLElement, LinkStyle
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLStyleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLStyleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLStyleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLStyleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10399,11 +10399,11 @@ external
 
   type HTMLTableCaptionElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableCaptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableCaptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableCaptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableCaptionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10420,11 +10420,11 @@ external
 
   type HTMLTableCellElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableCellElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableCellElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableCellElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableCellElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10441,11 +10441,11 @@ external
 
   type HTMLTableColElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableColElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableColElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableColElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableColElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10462,11 +10462,11 @@ external
 
   type HTMLTableElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10483,11 +10483,11 @@ external
 
   type HTMLTableRowElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableRowElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableRowElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableRowElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableRowElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10504,11 +10504,11 @@ external
 
   type HTMLTableSectionElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableSectionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableSectionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTableSectionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTableSectionElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10528,11 +10528,11 @@ external
     guarded
     content: DocumentFragment
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTemplateElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTemplateElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTemplateElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTemplateElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10618,11 +10618,11 @@ external
 
     operation setSelectionRange(start: Number?, end: Number?, direction: Object? /*(!)"forward" | "backward" | "none" | пусто*/ = none)
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTextAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTextAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTextAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTextAreaElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10641,11 +10641,11 @@ external
   {
     dateTime: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTimeElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTimeElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTimeElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTimeElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10664,11 +10664,11 @@ external
   {
     text: Text
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTitleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTitleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTitleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTitleElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10713,11 +10713,11 @@ external
     const
     ERROR // = 3
 
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTrackElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLTrackElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLTrackElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLTrackElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10746,11 +10746,11 @@ external
 
   type HTMLUListElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLUListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLUListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLUListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLUListElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10767,11 +10767,11 @@ external
 
   type HTMLUnknownElement = object HTMLElement
   {
-    operation addEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLUnknownElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLUnknownElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLUnknownElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLUnknownElement, ev: /*(!) HTMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
