@@ -16585,11 +16585,11 @@ external
     guarded
     elevation: SVGAnimatedNumber
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEDistantLightElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEDistantLightElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEDistantLightElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEDistantLightElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16619,11 +16619,11 @@ external
 
     operation setStdDeviation(stdDeviationX: Number, stdDeviationY: Number)
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEDropShadowElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEDropShadowElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEDropShadowElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEDropShadowElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16640,11 +16640,11 @@ external
 
   type SVGFEFloodElement = object SVGElement, SVGFilterPrimitiveStandardAttributes
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFloodElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFloodElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFloodElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFloodElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16661,11 +16661,11 @@ external
 
   type SVGFEFuncAElement = object SVGComponentTransferFunctionElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncAElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncAElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncAElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncAElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16682,11 +16682,11 @@ external
 
   type SVGFEFuncBElement = object SVGComponentTransferFunctionElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncBElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncBElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncBElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncBElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16703,11 +16703,11 @@ external
 
   type SVGFEFuncGElement = object SVGComponentTransferFunctionElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncGElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncGElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncGElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncGElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16724,11 +16724,11 @@ external
 
   type SVGFEFuncRElement = object SVGComponentTransferFunctionElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncRElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncRElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEFuncRElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEFuncRElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16756,11 +16756,11 @@ external
 
     operation setStdDeviation(stdDeviationX: Number, stdDeviationY: Number)
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEGaussianBlurElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEGaussianBlurElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEGaussianBlurElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEGaussianBlurElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -16780,11 +16780,11 @@ external
     guarded
     preserveAspectRatio: SVGAnimatedPreserveAspectRatio
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEImageElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGFEImageElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGFEImageElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGFEImageElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
