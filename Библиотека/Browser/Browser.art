@@ -18063,11 +18063,11 @@ external
     guarded
     r: SVGAnimatedLength
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGRadialGradientElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGRadialGradientElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGRadialGradientElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGRadialGradientElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18102,11 +18102,11 @@ external
     guarded
     y: SVGAnimatedLength
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGRectElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGRectElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGRectElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGRectElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18174,9 +18174,9 @@ external
 
     operation getElementById(elementId: Text): Element
 
-    operation getEnclosureList(rect: DOMRectReadOnly, referenceElement: SVGElement?): NodeListOf<Object? /*(!)SVGCircleElement | SVGEllipseElement | SVGImageElement | SVGLineElement | SVGPathElement | SVGPolygonElement | SVGPolylineElement | SVGRectElement | SVGTextElement | SVGUseElement*/>
+    operation getEnclosureList(rect: DOMRectReadOnly, referenceElement: SVGElement?): NodeListOf<SVGCircleElement | SVGEllipseElement | SVGImageElement | SVGLineElement | SVGPathElement | SVGPolygonElement | SVGPolylineElement | SVGRectElement | SVGTextElement | SVGUseElement>
 
-    operation getIntersectionList(rect: DOMRectReadOnly, referenceElement: SVGElement?): NodeListOf<Object? /*(!)SVGCircleElement | SVGEllipseElement | SVGImageElement | SVGLineElement | SVGPathElement | SVGPolygonElement | SVGPolylineElement | SVGRectElement | SVGTextElement | SVGUseElement*/>
+    operation getIntersectionList(rect: DOMRectReadOnly, referenceElement: SVGElement?): NodeListOf<SVGCircleElement | SVGEllipseElement | SVGImageElement | SVGLineElement | SVGPathElement | SVGPolygonElement | SVGPolylineElement | SVGRectElement | SVGTextElement | SVGUseElement>
 
     operation pauseAnimations()
 
@@ -18184,11 +18184,11 @@ external
 
     operation unpauseAnimations()
 
-    operation addEventListener<K = /*(!) keyof SVGSVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSVGElement, ev: /*(!) SVGSVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGSVGElement, ev: /*(!) SVGSVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGSVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSVGElement, ev: /*(!) SVGSVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGSVGElement, ev: /*(!) SVGSVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18207,11 +18207,11 @@ external
   {
     type`: Text
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGScriptElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGScriptElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGScriptElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGScriptElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18224,11 +18224,11 @@ external
 
   type SVGSetElement = object SVGAnimationElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSetElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGSetElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSetElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGSetElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18248,11 +18248,11 @@ external
     guarded
     offset: SVGAnimatedNumber
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGStopElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGStopElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGStopElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGStopElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18306,11 +18306,11 @@ external
   {
     disabled: YesNo
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGStyleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGStyleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGStyleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGStyleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18327,11 +18327,11 @@ external
 
   type SVGSwitchElement = object SVGGraphicsElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSwitchElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGSwitchElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSwitchElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGSwitchElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18348,11 +18348,11 @@ external
 
   type SVGSymbolElement = object SVGElement, SVGFitToViewBox
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSymbolElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGSymbolElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGSymbolElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGSymbolElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18369,11 +18369,11 @@ external
 
   type SVGTSpanElement = object SVGTextPositioningElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTSpanElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTSpanElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTSpanElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTSpanElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18431,11 +18431,11 @@ external
     guarded
     LENGTHADJUST_SPACINGANDGLYPHS // = 2
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextContentElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTextContentElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextContentElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTextContentElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18461,11 +18461,11 @@ external
 
   type SVGTextElement = object SVGTextPositioningElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTextElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTextElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18509,11 +18509,11 @@ external
     guarded
     TEXTPATH_SPACINGTYPE_EXACT // = 2
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextPathElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTextPathElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextPathElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTextPathElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18563,11 +18563,11 @@ external
     guarded
     y: SVGAnimatedLengthList
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextPositioningElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTextPositioningElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTextPositioningElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTextPositioningElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18584,11 +18584,11 @@ external
 
   type SVGTitleElement = object SVGElement
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTitleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGTitleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGTitleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGTitleElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18770,11 +18770,11 @@ external
     guarded
     y: SVGAnimatedLength
 
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGUseElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGUseElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGUseElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGUseElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18791,11 +18791,11 @@ external
 
   type SVGViewElement = object SVGElement, SVGFitToViewBox
   {
-    operation addEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGViewElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SVGViewElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SVGElementEventMap */ Object?>(type`: K, listener: operation(this: SVGViewElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SVGViewElement, ev: /*(!) SVGElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -18858,11 +18858,11 @@ external
 
     operation unlock()
 
-    operation addEventListener<K = /*(!) keyof ScreenOrientationEventMap */ Object?>(type`: K, listener: operation(this: ScreenOrientation, ev: /*(!) ScreenOrientationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: ScreenOrientation, ev: /*(!) ScreenOrientationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ScreenOrientationEventMap */ Object?>(type`: K, listener: operation(this: ScreenOrientation, ev: /*(!) ScreenOrientationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: ScreenOrientation, ev: /*(!) ScreenOrientationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19019,11 +19019,11 @@ external
 
     operation postMessage(message: Object?, options: StructuredSerializeOptions? = none)
 
-    operation addEventListener<K = /*(!) keyof ServiceWorkerEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorker, ev: /*(!) ServiceWorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorker, ev: /*(!) ServiceWorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ServiceWorkerEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorker, ev: /*(!) ServiceWorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorker, ev: /*(!) ServiceWorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19063,19 +19063,19 @@ external
     guarded
     ready: JS.Promise<ServiceWorkerRegistration>
 
-    operation getRegistration(clientURL: Object? /*(!)Text | URL | пусто*/ = none): JS.Promise<ServiceWorkerRegistration?>
+    operation getRegistration(clientURL: Text | URL | None = none): JS.Promise<ServiceWorkerRegistration?>
 
     operation getRegistrations(): JS.Promise<JS.ReadonlyArray<ServiceWorkerRegistration>>
 
-    operation register(scriptURL: Object? /*(!)Text | URL*/, options: RegistrationOptions? = none): JS.Promise<ServiceWorkerRegistration>
+    operation register(scriptURL: Text | URL, options: RegistrationOptions? = none): JS.Promise<ServiceWorkerRegistration>
 
     operation startMessages()
 
-    operation addEventListener<K = /*(!) keyof ServiceWorkerContainerEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorkerContainer, ev: /*(!) ServiceWorkerContainerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorkerContainer, ev: /*(!) ServiceWorkerContainerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ServiceWorkerContainerEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorkerContainer, ev: /*(!) ServiceWorkerContainerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorkerContainer, ev: /*(!) ServiceWorkerContainerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19130,11 +19130,11 @@ external
 
     operation update(): JS.Promise<None>
 
-    operation addEventListener<K = /*(!) keyof ServiceWorkerRegistrationEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorkerRegistration, ev: /*(!) ServiceWorkerRegistrationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorkerRegistration, ev: /*(!) ServiceWorkerRegistrationEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ServiceWorkerRegistrationEventMap */ Object?>(type`: K, listener: operation(this: ServiceWorkerRegistration, ev: /*(!) ServiceWorkerRegistrationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: ServiceWorkerRegistration, ev: /*(!) ServiceWorkerRegistrationEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19167,11 +19167,11 @@ external
     guarded
     slotAssignment: SlotAssignmentMode
 
-    operation addEventListener<K = /*(!) keyof ShadowRootEventMap */ Object?>(type`: K, listener: operation(this: ShadowRoot, ev: /*(!) ShadowRootEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: ShadowRoot, ev: /*(!) ShadowRootEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ShadowRootEventMap */ Object?>(type`: K, listener: operation(this: ShadowRoot, ev: /*(!) ShadowRootEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: ShadowRoot, ev: /*(!) ShadowRootEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19187,17 +19187,17 @@ external
     guarded
     port: MessagePort
 
-    operation addEventListener<K = /*(!) keyof AbstractWorkerEventMap */ Object?>(type`: K, listener: operation(this: SharedWorker, ev: /*(!) AbstractWorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SharedWorker, ev: /*(!) AbstractWorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof AbstractWorkerEventMap */ Object?>(type`: K, listener: operation(this: SharedWorker, ev: /*(!) AbstractWorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SharedWorker, ev: /*(!) AbstractWorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
     prototype: SharedWorker
 
-    on create(scriptURL: Object? /*(!)Text | URL*/, options: Object? /*(!)Text | WorkerOptions | пусто*/ = none) // : SharedWorker
+    on create(scriptURL: Text | URL, options: Object? /*(!)Text | WorkerOptions | пусто*/ = none) // : SharedWorker
   }
 
   type Slottable = aspect
@@ -19261,11 +19261,11 @@ external
 
     operation remove(start: Number, end: Number)
 
-    operation addEventListener<K = /*(!) keyof SourceBufferEventMap */ Object?>(type`: K, listener: operation(this: SourceBuffer, ev: /*(!) SourceBufferEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SourceBuffer, ev: /*(!) SourceBufferEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SourceBufferEventMap */ Object?>(type`: K, listener: operation(this: SourceBuffer, ev: /*(!) SourceBufferEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SourceBuffer, ev: /*(!) SourceBufferEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19297,11 +19297,11 @@ external
 
     onremovesourcebuffer: (operation(this: SourceBufferList, ev: Event): Object?)?
 
-    operation addEventListener<K = /*(!) keyof SourceBufferListEventMap */ Object?>(type`: K, listener: operation(this: SourceBufferList, ev: /*(!) SourceBufferListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SourceBufferList, ev: /*(!) SourceBufferListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SourceBufferListEventMap */ Object?>(type`: K, listener: operation(this: SourceBufferList, ev: /*(!) SourceBufferListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SourceBufferList, ev: /*(!) SourceBufferListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19397,11 +19397,11 @@ external
 
     operation speak(utterance: SpeechSynthesisUtterance)
 
-    operation addEventListener<K = /*(!) keyof SpeechSynthesisEventMap */ Object?>(type`: K, listener: operation(this: SpeechSynthesis, ev: /*(!) SpeechSynthesisEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SpeechSynthesis, ev: /*(!) SpeechSynthesisEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SpeechSynthesisEventMap */ Object?>(type`: K, listener: operation(this: SpeechSynthesis, ev: /*(!) SpeechSynthesisEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SpeechSynthesis, ev: /*(!) SpeechSynthesisEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19502,11 +19502,11 @@ external
 
     volume: Number
 
-    operation addEventListener<K = /*(!) keyof SpeechSynthesisUtteranceEventMap */ Object?>(type`: K, listener: operation(this: SpeechSynthesisUtterance, ev: /*(!) SpeechSynthesisUtteranceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: SpeechSynthesisUtterance, ev: /*(!) SpeechSynthesisUtteranceEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof SpeechSynthesisUtteranceEventMap */ Object?>(type`: K, listener: operation(this: SpeechSynthesisUtterance, ev: /*(!) SpeechSynthesisUtteranceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: SpeechSynthesisUtterance, ev: /*(!) SpeechSynthesisUtteranceEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -19635,14 +19635,14 @@ external
   type StylePropertyMap = object StylePropertyMapReadOnly
   {
     #JS.МассивПараметров
-    operation append(property: Text, values: List<Object? /*(!)CSSStyleValue | Text*/>)
+    operation append(property: Text, values: List<CSSStyleValue | Text>)
 
     operation clear()
 
     operation delete(property: Text)
 
     #JS.МассивПараметров
-    operation set(property: Text, values: List<Object? /*(!)CSSStyleValue | Text*/>)
+    operation set(property: Text, values: List<CSSStyleValue | Text>)
 
     prototype: StylePropertyMap
 
@@ -19686,7 +19686,7 @@ external
     media: MediaList
 
     guarded
-    ownerNode: Object? /*(!)Element | ProcessingInstruction | пусто*/
+    ownerNode: Element | ProcessingInstruction | None
 
     guarded
     parentStyleSheet: CSSStyleSheet?
@@ -19743,15 +19743,15 @@ external
 
   type SubtleCrypto = object
   {
-    operation decrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
+    operation decrypt(algorithm: AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
-    operation deriveBits(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, length: Number): JS.Promise<JS.ArrayBuffer>
+    operation deriveBits(algorithm: AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params, baseKey: CryptoKey, length: Number): JS.Promise<JS.ArrayBuffer>
 
-    operation deriveKey(algorithm: Object? /*(!)AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params*/, baseKey: CryptoKey, derivedKeyType: Object? /*(!)AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
+    operation deriveKey(algorithm: AlgorithmIdentifier | EcdhKeyDeriveParams | HkdfParams | Pbkdf2Params, baseKey: CryptoKey, derivedKeyType: AlgorithmIdentifier | AesDerivedKeyParams | HmacImportParams | HkdfParams | Pbkdf2Params, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
     operation digest(algorithm: AlgorithmIdentifier, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
-    operation encrypt(algorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
+    operation encrypt(algorithm: AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
     operation exportKey(format: Text /*"jwk"*/, key: CryptoKey): JS.Promise<JsonWebKey>
 
@@ -19761,23 +19761,23 @@ external
 
     operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)RsaHashedKeyGenParams | EcKeyGenParams*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
+    operation generateKey(algorithm: RsaHashedKeyGenParams | EcKeyGenParams, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: Object? /*(!)AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation generateKey(algorithm: AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<Object? /*(!)CryptoKeyPair | CryptoKey*/>
+    operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKeyPair | CryptoKey>
 
-    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation importKey(format: KeyFormat, keyData: BufferSource, algorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
+    operation importKey(format: KeyFormat, keyData: BufferSource, algorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation sign(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
+    operation sign(algorithm: AlgorithmIdentifier | RsaPssParams | EcdsaParams, key: CryptoKey, data: BufferSource): JS.Promise<JS.ArrayBuffer>
 
-    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/, unwrappedKeyAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm*/, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
+    operation unwrapKey(format: KeyFormat, wrappedKey: BufferSource, unwrappingKey: CryptoKey, unwrapAlgorithm: AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams, unwrappedKeyAlgorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
-    operation verify(algorithm: Object? /*(!)AlgorithmIdentifier | RsaPssParams | EcdsaParams*/, key: CryptoKey, signature: BufferSource, data: BufferSource): JS.Promise<YesNo>
+    operation verify(algorithm: AlgorithmIdentifier | RsaPssParams | EcdsaParams, key: CryptoKey, signature: BufferSource, data: BufferSource): JS.Promise<YesNo>
 
-    operation wrapKey(format: KeyFormat, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: Object? /*(!)AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams*/): JS.Promise<JS.ArrayBuffer>
+    operation wrapKey(format: KeyFormat, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: AlgorithmIdentifier | RsaOaepParams | AesCtrParams | AesCbcParams | AesGcmParams): JS.Promise<JS.ArrayBuffer>
 
     prototype: SubtleCrypto
 
@@ -19961,11 +19961,11 @@ external
 
     operation removeCue(cue: TextTrackCue)
 
-    operation addEventListener<K = /*(!) keyof TextTrackEventMap */ Object?>(type`: K, listener: operation(this: TextTrack, ev: /*(!) TextTrackEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: TextTrack, ev: /*(!) TextTrackEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof TextTrackEventMap */ Object?>(type`: K, listener: operation(this: TextTrack, ev: /*(!) TextTrackEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: TextTrack, ev: /*(!) TextTrackEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
