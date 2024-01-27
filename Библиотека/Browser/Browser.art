@@ -20005,11 +20005,11 @@ external
     guarded
     track: TextTrack?
 
-    operation addEventListener<K = /*(!) keyof TextTrackCueEventMap */ Object?>(type`: K, listener: operation(this: TextTrackCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: TextTrackCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof TextTrackCueEventMap */ Object?>(type`: K, listener: operation(this: TextTrackCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: TextTrackCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -20059,11 +20059,11 @@ external
 
     operation getTrackById(id: Text): TextTrack?
 
-    operation addEventListener<K = /*(!) keyof TextTrackListEventMap */ Object?>(type`: K, listener: operation(this: TextTrackList, ev: /*(!) TextTrackListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: TextTrackList, ev: /*(!) TextTrackListEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof TextTrackListEventMap */ Object?>(type`: K, listener: operation(this: TextTrackList, ev: /*(!) TextTrackListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: TextTrackList, ev: /*(!) TextTrackListEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -20374,11 +20374,11 @@ external
 
     prototype: URL
 
-    on create(url: Object? /*(!)Text | URL*/, base: Object? /*(!)Text | URL | пусто*/ = none) // : URL
+    on create(url: Text | URL, base: Text | URL | None = none) // : URL
 
-    operation canParse(url: Object? /*(!)Text | URL*/, base: Text? = none): YesNo
+    operation canParse(url: Text | URL, base: Text? = none): YesNo
 
-    operation createObjectURL(obj: Object? /*(!)Blob | MediaSource*/): Text
+    operation createObjectURL(obj: Blob | MediaSource): Text
 
     operation revokeObjectURL(url: Text)
   }
@@ -20416,7 +20416,7 @@ external
 
     prototype: URLSearchParams
 
-    on create(init: Object? /*(!)List<List<Text>> | Record<Text, Text> | Text | URLSearchParams | пусто*/ = none) // : URLSearchParams
+    on create(init: List<List<Text>> | /*(!)Record<Text, Text> |*/ Text | URLSearchParams | None = none) // : URLSearchParams
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/UserActivation) */
@@ -20460,11 +20460,11 @@ external
 
     operation getCueAsHTML(): DocumentFragment
 
-    operation addEventListener<K = /*(!) keyof TextTrackCueEventMap */ Object?>(type`: K, listener: operation(this: VTTCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: VTTCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof TextTrackCueEventMap */ Object?>(type`: K, listener: operation(this: VTTCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: VTTCue, ev: /*(!) TextTrackCueEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -20599,11 +20599,11 @@ external
 
     operation reset()
 
-    operation addEventListener<K = /*(!) keyof VideoDecoderEventMap */ Object?>(type`: K, listener: operation(this: VideoDecoder, ev: /*(!) VideoDecoderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: VideoDecoder, ev: /*(!) VideoDecoderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof VideoDecoderEventMap */ Object?>(type`: K, listener: operation(this: VideoDecoder, ev: /*(!) VideoDecoderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: VideoDecoder, ev: /*(!) VideoDecoderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -20646,11 +20646,11 @@ external
 
     operation reset()
 
-    operation addEventListener<K = /*(!) keyof VideoEncoderEventMap */ Object?>(type`: K, listener: operation(this: VideoEncoder, ev: /*(!) VideoEncoderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: VideoEncoder, ev: /*(!) VideoEncoderEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof VideoEncoderEventMap */ Object?>(type`: K, listener: operation(this: VideoEncoder, ev: /*(!) VideoEncoderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: VideoEncoder, ev: /*(!) VideoEncoderEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -20760,11 +20760,11 @@ external
     guarded
     width: Number
 
-    operation addEventListener<K = /*(!) keyof VisualViewportEventMap */ Object?>(type`: K, listener: operation(this: VisualViewport, ev: /*(!) VisualViewportEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: VisualViewport, ev: /*(!) VisualViewportEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof VisualViewportEventMap */ Object?>(type`: K, listener: operation(this: VisualViewport, ev: /*(!) VisualViewportEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: VisualViewport, ev: /*(!) VisualViewportEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -21139,13 +21139,13 @@ external
 
   type WEBGL_multi_draw = aspect
   {
-    operation multiDrawArraysInstancedWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | List<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | List<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawArraysInstancedWEBGL(mode: GLenum, firstsList: JS.Int32Array | List<GLint>, firstsOffset: GLuint, countsList: JS.Int32Array | List<GLsizei>, countsOffset: GLuint, instanceCountsList: JS.Int32Array | List<GLsizei>, instanceCountsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawArraysWEBGL(mode: GLenum, firstsList: Object? /*(!)Int32Array | List<GLint>*/, firstsOffset: GLuint, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawArraysWEBGL(mode: GLenum, firstsList: JS.Int32Array | List<GLint>, firstsOffset: GLuint, countsList: JS.Int32Array | List<GLsizei>, countsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawElementsInstancedWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | List<GLsizei>*/, offsetsOffset: GLuint, instanceCountsList: Object? /*(!)Int32Array | List<GLsizei>*/, instanceCountsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawElementsInstancedWEBGL(mode: GLenum, countsList: JS.Int32Array | List<GLsizei>, countsOffset: GLuint, type`: GLenum, offsetsList: JS.Int32Array | List<GLsizei>, offsetsOffset: GLuint, instanceCountsList: JS.Int32Array | List<GLsizei>, instanceCountsOffset: GLuint, drawcount: GLsizei)
 
-    operation multiDrawElementsWEBGL(mode: GLenum, countsList: Object? /*(!)Int32Array | List<GLsizei>*/, countsOffset: GLuint, type`: GLenum, offsetsList: Object? /*(!)Int32Array | List<GLsizei>*/, offsetsOffset: GLuint, drawcount: GLsizei)
+    operation multiDrawElementsWEBGL(mode: GLenum, countsList: JS.Int32Array | List<GLsizei>, countsOffset: GLuint, type`: GLenum, offsetsList: JS.Int32Array | List<GLsizei>, offsetsOffset: GLuint, drawcount: GLsizei)
   }
 
 
@@ -21188,11 +21188,11 @@ external
 
     operation release(): JS.Promise<None>
 
-    operation addEventListener<K = /*(!) keyof WakeLockSentinelEventMap */ Object?>(type`: K, listener: operation(this: WakeLockSentinel, ev: /*(!) WakeLockSentinelEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: WakeLockSentinel, ev: /*(!) WakeLockSentinelEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof WakeLockSentinelEventMap */ Object?>(type`: K, listener: operation(this: WakeLockSentinel, ev: /*(!) WakeLockSentinelEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: WakeLockSentinel, ev: /*(!) WakeLockSentinelEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -24960,7 +24960,7 @@ external
   type WebGLRenderingContextBase = aspect
   {
     guarded 
-    canvas: Object? /*(!)HTMLCanvasElement | OffscreenCanvas*/
+    canvas: HTMLCanvasElement | OffscreenCanvas
 
     drawingBufferColorSpace: PredefinedColorSpace
 
@@ -25206,7 +25206,7 @@ external
 
     operation linkProgram(program: WebGLProgram)
 
-    operation pixelStorei(pname: GLenum, param: Object? /*(!)GLint | GLboolean*/)
+    operation pixelStorei(pname: GLenum, param: GLint | GLboolean)
 
     operation polygonOffset(factor: GLfloat, units: GLfloat)
 
@@ -26362,7 +26362,7 @@ external
 
     operation close(code: Number? = none, reason: Text? = none)
 
-    operation send(data: Object? /*(!)Text | JS.ArrayBufferLike | Blob | JS.ArrayBufferView*/)
+    operation send(data: Text | JS.ArrayBufferLike | Blob | JS.ArrayBufferView)
 
     guarded
     CONNECTING // = 0
@@ -26376,17 +26376,17 @@ external
     guarded
     CLOSED // = 3
 
-    operation addEventListener<K = /*(!) keyof WebSocketEventMap */ Object?>(type`: K, listener: operation(this: WebSocket, ev: /*(!) WebSocketEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: WebSocket, ev: /*(!) WebSocketEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof WebSocketEventMap */ Object?>(type`: K, listener: operation(this: WebSocket, ev: /*(!) WebSocketEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: WebSocket, ev: /*(!) WebSocketEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
     prototype: WebSocket
 
-    on create(url: Object? /*(!)Text | URL*/, protocols: Object? /*(!)Text | List<Text> | пусто*/ = none) // : WebSocket
+    on create(url: Text | URL, protocols: Text | List<Text> | None = none) // : WebSocket
 
     guarded
     CONNECTING // = 0
@@ -26432,7 +26432,7 @@ external
 
     prototype: WebTransport
 
-    on create(url: Object? /*(!)Text | URL*/, options: WebTransportOptions? = none) // : WebTransport
+    on create(url: Text | URL, options: WebTransportOptions? = none) // : WebTransport
   }
 
   /**
@@ -26570,7 +26570,7 @@ external
 
   type Window = object EventTarget, AnimationFrameProvider, GlobalEventHandlers, WindowEventHandlers, WindowLocalStorage, WindowOrWorkerGlobalScope, WindowSessionStorage
   {
-    operation location(href: Object? /*(!)Text | Location*/): /*(!) no_type */ Object?
+    operation location(href: Text | Location): /*(!) no_type */ Object?
 
     operation postMessage(message: Object?, options: WindowPostMessageOptions? = none)
 
@@ -26580,11 +26580,11 @@ external
 
     operation scrollTo(x: Number, y: Number)
 
-    operation addEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -26673,11 +26673,11 @@ external
 
     onunload: (operation(this: WindowEventHandlers, ev: Event): Object?)?
 
-    operation addEventListener<K = /*(!) keyof WindowEventHandlersEventMap */ Object?>(type`: K, listener: operation(this: WindowEventHandlers, ev: /*(!) WindowEventHandlersEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: WindowEventHandlers, ev: /*(!) WindowEventHandlersEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof WindowEventHandlersEventMap */ Object?>(type`: K, listener: operation(this: WindowEventHandlers, ev: /*(!) WindowEventHandlersEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: WindowEventHandlers, ev: /*(!) WindowEventHandlersEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
   }
@@ -26774,17 +26774,17 @@ external
 
     operation terminate()
 
-    operation addEventListener<K = /*(!) keyof WorkerEventMap */ Object?>(type`: K, listener: operation(this: Worker, ev: /*(!) WorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: Worker, ev: /*(!) WorkerEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof WorkerEventMap */ Object?>(type`: K, listener: operation(this: Worker, ev: /*(!) WorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: Worker, ev: /*(!) WorkerEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
     prototype: Worker
 
-    on create(scriptURL: Object? /*(!)Text | URL*/, options: WorkerOptions? = none) // : Worker
+    on create(scriptURL: Text | URL, options: WorkerOptions? = none) // : Worker
   }
 
   /**
@@ -26795,7 +26795,7 @@ external
 
   type Worklet = object
   {
-    operation addModule(moduleURL: Object? /*(!)Text | URL*/, options: WorkletOptions? = none): JS.Promise<None>
+    operation addModule(moduleURL: Text | URL, options: WorkletOptions? = none): JS.Promise<None>
 
     prototype: Worklet
 
@@ -26880,11 +26880,11 @@ external
 
   type XMLDocument = object Document
   {
-    operation addEventListener<K = /*(!) keyof DocumentEventMap */ Object?>(type`: K, listener: operation(this: XMLDocument, ev: /*(!) DocumentEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: XMLDocument, ev: /*(!) DocumentEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof DocumentEventMap */ Object?>(type`: K, listener: operation(this: XMLDocument, ev: /*(!) DocumentEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: XMLDocument, ev: /*(!) DocumentEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -26945,13 +26945,13 @@ external
 
     operation getResponseHeader(name: Text): Text?
 
-    operation open(method: Text, url: Object? /*(!)Text | URL*/)
+    operation open(method: Text, url: Text | URL)
 
-    operation open(method: Text, url: Object? /*(!)Text | URL*/, async: YesNo, username: Text? = none, password: Text? = none)
+    operation open(method: Text, url: Text | URL, async: YesNo, username: Text? = none, password: Text? = none)
 
     operation overrideMimeType(mime: Text)
 
-    operation send(body: Object? /*(!)Document | XMLHttpRequestBodyInit | пусто | пусто*/ = none)
+    operation send(body: Document | XMLHttpRequestBodyInit | None = none)
 
     operation setRequestHeader(name: Text, value: Text)
 
@@ -26970,11 +26970,11 @@ external
     guarded
     DONE // = 4
 
-    operation addEventListener<K = /*(!) keyof XMLHttpRequestEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequest, ev: /*(!) XMLHttpRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequest, ev: /*(!) XMLHttpRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof XMLHttpRequestEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequest, ev: /*(!) XMLHttpRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequest, ev: /*(!) XMLHttpRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -27034,11 +27034,11 @@ external
 
     ontimeout: (operation(this: XMLHttpRequest, ev: ProgressEvent): Object?)?
 
-    operation addEventListener<K = /*(!) keyof XMLHttpRequestEventTargetEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequestEventTarget, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequestEventTarget, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof XMLHttpRequestEventTargetEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequestEventTarget, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequestEventTarget, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -27051,11 +27051,11 @@ external
 
   type XMLHttpRequestUpload = object XMLHttpRequestEventTarget
   {
-    operation addEventListener<K = /*(!) keyof XMLHttpRequestEventTargetEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequestUpload, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequestUpload, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof XMLHttpRequestEventTargetEventMap */ Object?>(type`: K, listener: operation(this: XMLHttpRequestUpload, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: XMLHttpRequestUpload, ev: /*(!) XMLHttpRequestEventTargetEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -27782,11 +27782,11 @@ external
 
     type TableKind = Object? /*(!)"anyfunc" | "externref"*/
 
-    type ExportValue = Object? /*(!)Function | Global | Memory | Table*/
+    type ExportValue = JS.Function | Global | Memory | Table
 
     type Exports = Object? // Record<Text, ExportValue>
 
-    type ImportValue = Object? /*(!)ExportValue | Number*/
+    type ImportValue = ExportValue | Number
 
     type Imports = Object? // Record<Text, ModuleImports>
 
@@ -27800,7 +27800,7 @@ external
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming) */
 
-    operation compileStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/): JS.Promise<Module>
+    operation compileStreaming(source: Response | JS.PromiseLike<Response>): JS.Promise<Module>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) */
 
@@ -27810,7 +27810,7 @@ external
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) */
 
-    operation instantiateStreaming(source: Object? /*(!)Response | PromiseLike<Response>*/, importObject: Imports? = none): JS.Promise<WebAssemblyInstantiatedSource>
+    operation instantiateStreaming(source: Response | JS.PromiseLike<Response>, importObject: Imports? = none): JS.Promise<WebAssemblyInstantiatedSource>
 
     /** [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate) */
 
@@ -28892,7 +28892,7 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/Window/open) */
 
-  operation open(url: Object? /*(!)Text | URL | пусто*/ = none, target: Text? = none, features: Text? = none): WindowProxy?
+  operation open(url: Text | URL | None = none, target: Text? = none, features: Text? = none): WindowProxy?
 
   /**
   * Posts a message to the given window. Messages can be structured objects, e.g. nested objects and arrays, can contain JavaScript values (strings, numbers, Date objects, etc), and can contain certain data objects such as File Blob, FileList, and JS.ArrayBuffer objects.
@@ -29946,17 +29946,17 @@ external
   sessionStorage: Storage
 
 
-  operation addEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+  operation addEventListener<K = Text>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
   operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-  operation removeEventListener<K = /*(!) keyof WindowEventMap */ Object?>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+  operation removeEventListener<K = Text>(type`: K, listener: operation(this: Window, ev: /*(!) WindowEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
   operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
-  type AlgorithmIdentifier = Object? /*(!)Algorithm | Text*/
+  type AlgorithmIdentifier = Algorithm | Text
 
-  type AllowSharedBufferSource = Object? /*(!)JS.ArrayBuffer | JS.ArrayBufferView*/
+  type AllowSharedBufferSource = JS.ArrayBuffer | JS.ArrayBufferView
 
   type AutoFill = Object? /*(!)AutoFillBase | /*(!) `${OptionalPrefixToken<AutoFillSection>}${OptionalPrefixToken<AutoFillAddressKind>}${AutoFillField}${OptionalPostfixToken<AutoFillCredentialField>}` Object?*/
 
@@ -29966,49 +29966,49 @@ external
 
   type BigInteger = JS.Uint8Array
 
-  type BinaryData = Object? /*(!)JS.ArrayBuffer | JS.ArrayBufferView*/
+  type BinaryData = JS.ArrayBuffer | JS.ArrayBufferView
 
-  type BlobPart = Object? /*(!)BufferSource | Blob | Text*/
+  type BlobPart = BufferSource | Blob | Text
 
-  type BodyInit = Object? /*(!)ReadableStream | XMLHttpRequestBodyInit*/
+  type BodyInit = ReadableStream | XMLHttpRequestBodyInit
 
-  type BufferSource = Object? /*(!)JS.ArrayBufferView | JS.ArrayBuffer*/
+  type BufferSource = JS.ArrayBufferView | JS.ArrayBuffer
 
   type COSEAlgorithmIdentifier = Number
 
-  type CSSKeywordish = Object? /*(!)Text | CSSKeywordValue*/
+  type CSSKeywordish = Text | CSSKeywordValue
 
-  type CSSNumberish = Object? /*(!)Number | CSSNumericValue*/
+  type CSSNumberish = Number | CSSNumericValue
 
-  type CSSPerspectiveValue = Object? /*(!)CSSNumericValue | CSSKeywordish*/
+  type CSSPerspectiveValue = CSSNumericValue | CSSKeywordish
 
-  type CSSUnparsedSegment = Object? /*(!)Text | CSSVariableReferenceValue*/
+  type CSSUnparsedSegment = Text | CSSVariableReferenceValue
 
-  type CanvasImageSource = Object? /*(!)HTMLOrSVGImageElement | HTMLVideoElement | HTMLCanvasElement | ImageBitmap | OffscreenCanvas | VideoFrame*/
+  type CanvasImageSource = HTMLOrSVGImageElement | HTMLVideoElement | HTMLCanvasElement | ImageBitmap | OffscreenCanvas | VideoFrame
 
-  type ClipboardItemData = JS.Promise<Object? /*(!)Text | Blob*/>
+  type ClipboardItemData = JS.Promise<Text | Blob>
 
   type ClipboardItems = List<ClipboardItem>
 
-  type ConstrainBoolean = Object? /*(!)YesNo | ConstrainBooleanParameters*/
+  type ConstrainBoolean = YesNo | ConstrainBooleanParameters
 
-  type ConstrainDOMString = Object? /*(!)Text | List<Text> | ConstrainDOMStringParameters*/
+  type ConstrainDOMString = Text | List<Text> | ConstrainDOMStringParameters
 
-  type ConstrainDouble = Object? /*(!)Number | ConstrainDoubleRange*/
+  type ConstrainDouble = Number | ConstrainDoubleRange
 
-  type ConstrainULong = Object? /*(!)Number | ConstrainULongRange*/
+  type ConstrainULong = Number | ConstrainULongRange
 
   type DOMHighResTimeStamp = Number
 
   type EpochTimeStamp = Number
 
-  type EventListenerOrEventListenerObject = Object? /*(!)EventListener | EventListenerObject*/
+  type EventListenerOrEventListenerObject = EventListener | EventListenerObject
 
-  type FileSystemWriteChunkType = Object? /*(!)BufferSource | Blob | Text | WriteParams*/
+  type FileSystemWriteChunkType = BufferSource | Blob | Text | WriteParams
 
-  type Float32List = Object? /*(!)Float32Array | List<GLfloat>*/
+  type Float32List = JS.Float32Array | List<GLfloat>
 
-  type FormDataEntryValue = Object? /*(!)File | Text*/
+  type FormDataEntryValue = JS.File | Text
 
   type GLbitfield = Number
 
@@ -30034,31 +30034,31 @@ external
 
   type GLuint64 = Number
 
-  type HTMLOrSVGImageElement = Object? /*(!)HTMLImageElement | SVGImageElement*/
+  type HTMLOrSVGImageElement = HTMLImageElement | SVGImageElement
 
-  type HTMLOrSVGScriptElement = Object? /*(!)HTMLScriptElement | SVGScriptElement*/
+  type HTMLOrSVGScriptElement = HTMLScriptElement | SVGScriptElement
 
   type HashAlgorithmIdentifier = AlgorithmIdentifier
 
   type HeadersInit = Object? /*(!)List<object { _0: Text, _1: Text }> | Record<Text, Text> | Headers*/
 
-  type IDBValidKey = Object? /*(!)Number | Text | Date | BufferSource | List<IDBValidKey>*/
+  type IDBValidKey = Number | Text | Date | BufferSource | List<IDBValidKey>
 
-  type ImageBitmapSource = Object? /*(!)CanvasImageSource | Blob | ImageData*/
+  type ImageBitmapSource = CanvasImageSource | Blob | ImageData
 
-  type Int32List = Object? /*(!)Int32Array | List<GLint>*/
+  type Int32List = JS.Int32Array | List<GLint>
 
-  type LineAndPositionSetting = Object? /*(!)Number | AutoKeyword*/
+  type LineAndPositionSetting = Number | AutoKeyword
 
-  type MediaProvider = Object? /*(!)MediaStream | MediaSource | Blob*/
+  type MediaProvider = MediaStream | MediaSource | Blob
 
-  type MessageEventSource = Object? /*(!)WindowProxy | MessagePort | ServiceWorker*/
+  type MessageEventSource = WindowProxy | MessagePort | ServiceWorker
 
   type MutationRecordType = Object? /*(!)"attributes" | "characterData" | "childList"*/
 
   type NamedCurve = Text
 
-  type OffscreenRenderingContext = Object? /*(!)OffscreenCanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext*/
+  type OffscreenRenderingContext = OffscreenCanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext
 
   type OnBeforeUnloadEventHandler = OnBeforeUnloadEventHandlerNonNull?
 
@@ -30070,31 +30070,31 @@ external
 
   type PerformanceEntryList = List<PerformanceEntry>
 
-  type ReadableStreamController<T> = Object? /*(!)ReadableStreamDefaultController<T> | ReadableByteStreamController*/
+  type ReadableStreamController<T> = ReadableStreamDefaultController<T> | ReadableByteStreamController
 
-  type ReadableStreamReadResult<T> = Object? /*(!)ReadableStreamReadValueResult<T> | ReadableStreamReadDoneResult<T>*/
+  type ReadableStreamReadResult<T> = ReadableStreamReadValueResult<T> | ReadableStreamReadDoneResult<T>
 
-  type ReadableStreamReader<T> = Object? /*(!)ReadableStreamDefaultReader<T> | ReadableStreamBYOBReader*/
+  type ReadableStreamReader<T> = ReadableStreamDefaultReader<T> | ReadableStreamBYOBReader
 
-  type RenderingContext = Object? /*(!)CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext*/
+  type RenderingContext = CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext
 
   type ReportList = List<Report>
 
-  type RequestInfo = Object? /*(!)Request | Text*/
+  type RequestInfo = Request | Text
 
-  type TexImageSource = Object? /*(!)ImageBitmap | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | OffscreenCanvas | VideoFrame*/
+  type TexImageSource = ImageBitmap | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | OffscreenCanvas | VideoFrame
 
-  type TimerHandler = Object? /*(!)Text | Function*/
+  type TimerHandler = Text | JS.Function
 
-  type Transferable = Object? /*(!)OffscreenCanvas | ImageBitmap | MessagePort | ReadableStream | WritableStream | TransformStream | VideoFrame | JS.ArrayBuffer*/
+  type Transferable = OffscreenCanvas | ImageBitmap | MessagePort | ReadableStream | WritableStream | TransformStream | VideoFrame | JS.ArrayBuffer
 
-  type Uint32List = Object? /*(!)Uint32Array | List<GLuint>*/
+  type Uint32List = JS.Uint32Array | List<GLuint>
 
-  type VibratePattern = Object? /*(!)Number | List<Number>*/
+  type VibratePattern = Number | List<Number>
 
   type WindowProxy = Window
 
-  type XMLHttpRequestBodyInit = Object? /*(!)Blob | BufferSource | FormData | URLSearchParams | Text*/
+  type XMLHttpRequestBodyInit = Blob | BufferSource | FormData | URLSearchParams | Text
 
   type AlignSetting = Object? /*(!)"center" | "end" | "left" | "right" | "start"*/
 
