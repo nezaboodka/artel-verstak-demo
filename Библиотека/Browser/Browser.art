@@ -9720,11 +9720,11 @@ external
     guarded
     HAVE_ENOUGH_DATA // = 4
 
-    operation addEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLMediaElementEventMap */ Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLMediaElement, ev: /*(!) HTMLMediaElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -9979,7 +9979,7 @@ external
 
     selectedIndex: Number
 
-    operation add(element: Object? /*(!)HTMLOptionElement | HTMLOptGroupElement*/, before: Object? /*(!)HTMLElement | Number | пусто | пусто*/ = none)
+    operation add(element: HTMLOptionElement | HTMLOptGroupElement, before: HTMLElement | Number | None = none)
 
     operation remove(index: Number)
 
@@ -10257,7 +10257,7 @@ external
     guarded
     willValidate: YesNo
 
-    operation add(element: Object? /*(!)HTMLOptionElement | HTMLOptGroupElement*/, before: Object? /*(!)HTMLElement | Number | пусто | пусто*/ = none)
+    operation add(element: HTMLOptionElement | HTMLOptGroupElement, before: HTMLElement | Number | None = none)
 
     operation checkValidity(): YesNo
 
@@ -10295,7 +10295,7 @@ external
     name: Text
 
     #JS.МассивПараметров
-    operation assign(nodes: List<Object? /*(!)Element | Text*/>)
+    operation assign(nodes: List<Element | Text>)
 
     operation assignedElements(options: AssignedNodesOptions? = none): List<Element>
 
@@ -10824,11 +10824,11 @@ external
 
     operation requestVideoFrameCallback(callback: VideoFrameRequestCallback): Number
 
-    operation addEventListener<K = /*(!) keyof HTMLVideoElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLVideoElement, ev: /*(!) HTMLVideoElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: HTMLVideoElement, ev: /*(!) HTMLVideoElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof HTMLVideoElementEventMap */ Object?>(type`: K, listener: operation(this: HTMLVideoElement, ev: /*(!) HTMLVideoElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: HTMLVideoElement, ev: /*(!) HTMLVideoElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -10905,9 +10905,9 @@ external
 
     operation go(delta: Number? = none)
 
-    operation pushState(data: Object?, unused: Text, url: Object? /*(!)Text | URL | пусто | пусто*/ = none)
+    operation pushState(data: Object?, unused: Text, url: Text | URL | None = none)
 
-    operation replaceState(data: Object?, unused: Text, url: Object? /*(!)Text | URL | пусто | пусто*/ = none)
+    operation replaceState(data: Object?, unused: Text, url: Text | URL | None = none)
 
     prototype: History
 
@@ -10935,7 +10935,7 @@ external
     request: IDBRequest
 
     guarded
-    source: Object? /*(!)IDBObjectStore | IDBIndex*/
+    source: IDBObjectStore | IDBIndex
 
     operation advance(count: Number)
 
@@ -11011,13 +11011,13 @@ external
 
     operation deleteObjectStore(name: Text)
 
-    operation transaction(storeNames: Object? /*(!)Text | List<Text>*/, mode: IDBTransactionMode? = none, options: IDBTransactionOptions? = none): IDBTransaction
+    operation transaction(storeNames: Text | List<Text>, mode: IDBTransactionMode? = none, options: IDBTransactionOptions? = none): IDBTransaction
 
-    operation addEventListener<K = /*(!) keyof IDBDatabaseEventMap */ Object?>(type`: K, listener: operation(this: IDBDatabase, ev: /*(!) IDBDatabaseEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: IDBDatabase, ev: /*(!) IDBDatabaseEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof IDBDatabaseEventMap */ Object?>(type`: K, listener: operation(this: IDBDatabase, ev: /*(!) IDBDatabaseEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: IDBDatabase, ev: /*(!) IDBDatabaseEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11056,7 +11056,7 @@ external
   type IDBIndex = object
   {
     guarded
-    keyPath: Object? /*(!)Text | List<Text>*/
+    keyPath: Text | List<Text>
 
     guarded
     multiEntry: YesNo
@@ -11069,19 +11069,19 @@ external
     guarded
     unique: YesNo
 
-    operation count(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто*/ = none): IDBRequest<Number>
+    operation count(query: IDBValidKey | IDBKeyRange | None = none): IDBRequest<Number>
 
-    operation get(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<Object?>
+    operation get(query: IDBValidKey | IDBKeyRange): IDBRequest<Object?>
 
-    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<Object?>>
+    operation getAll(query: IDBValidKey | IDBKeyRange | None = none, count: Number? = none): IDBRequest<List<Object?>>
 
-    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
+    operation getAllKeys(query: IDBValidKey | IDBKeyRange | None = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
 
-    operation getKey(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<IDBValidKey?>
+    operation getKey(query: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey?>
 
-    operation openCursor(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursorWithValue?>
+    operation openCursor(query: IDBValidKey | IDBKeyRange | None = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursorWithValue?>
 
-    operation openKeyCursor(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursor?>
+    operation openKeyCursor(query: IDBValidKey | IDBKeyRange | None = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursor?>
 
     prototype: IDBIndex
 
@@ -11138,7 +11138,7 @@ external
     indexNames: DOMStringList
 
     guarded
-    keyPath: Object? /*(!)Text | List<Text>*/
+    keyPath: Text | List<Text>
 
     name: Text
 
@@ -11149,27 +11149,27 @@ external
 
     operation clear(): IDBRequest<None>
 
-    operation count(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто*/ = none): IDBRequest<Number>
+    operation count(query: IDBValidKey | IDBKeyRange | None = none): IDBRequest<Number>
 
-    operation createIndex(name: Text, keyPath: Object? /*(!)Text | List<Text>*/, options: IDBIndexParameters? = none): IDBIndex
+    operation createIndex(name: Text, keyPath: Text | List<Text>, options: IDBIndexParameters? = none): IDBIndex
 
-    operation delete(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<None>
+    operation delete(query: IDBValidKey | IDBKeyRange): IDBRequest<None>
 
     operation deleteIndex(name: Text)
 
-    operation get(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<Object?>
+    operation get(query: IDBValidKey | IDBKeyRange): IDBRequest<Object?>
 
-    operation getAll(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<Object?>>
+    operation getAll(query: IDBValidKey | IDBKeyRange | None = none, count: Number? = none): IDBRequest<List<Object?>>
 
-    operation getAllKeys(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
+    operation getAllKeys(query: IDBValidKey | IDBKeyRange | None = none, count: Number? = none): IDBRequest<List<IDBValidKey>>
 
-    operation getKey(query: Object? /*(!)IDBValidKey | IDBKeyRange*/): IDBRequest<IDBValidKey?>
+    operation getKey(query: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey?>
 
     operation index(name: Text): IDBIndex
 
-    operation openCursor(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursorWithValue?>
+    operation openCursor(query: IDBValidKey | IDBKeyRange | None = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursorWithValue?>
 
-    operation openKeyCursor(query: Object? /*(!)IDBValidKey | IDBKeyRange | пусто | пусто*/ = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursor?>
+    operation openKeyCursor(query: IDBValidKey | IDBKeyRange | None = none, direction: IDBCursorDirection? = none): IDBRequest<IDBCursor?>
 
     operation put(value: Object?, key: IDBValidKey? = none): IDBRequest<IDBValidKey>
 
@@ -11198,11 +11198,11 @@ external
 
     onupgradeneeded: (operation(this: IDBOpenDBRequest, ev: IDBVersionChangeEvent): Object?)?
 
-    operation addEventListener<K = /*(!) keyof IDBOpenDBRequestEventMap */ Object?>(type`: K, listener: operation(this: IDBOpenDBRequest, ev: /*(!) IDBOpenDBRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: IDBOpenDBRequest, ev: /*(!) IDBOpenDBRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof IDBOpenDBRequestEventMap */ Object?>(type`: K, listener: operation(this: IDBOpenDBRequest, ev: /*(!) IDBOpenDBRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: IDBOpenDBRequest, ev: /*(!) IDBOpenDBRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11241,16 +11241,16 @@ external
     result: T
 
     guarded
-    source: Object? /*(!)IDBObjectStore | IDBIndex | IDBCursor*/
+    source: IDBObjectStore | IDBIndex | IDBCursor
 
     guarded
     transaction: IDBTransaction?
 
-    operation addEventListener<K = /*(!) keyof IDBRequestEventMap */ Object?>(type`: K, listener: operation(this: IDBRequest<T>, ev: /*(!) IDBRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: IDBRequest<T>, ev: /*(!) IDBRequestEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof IDBRequestEventMap */ Object?>(type`: K, listener: operation(this: IDBRequest<T>, ev: /*(!) IDBRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: IDBRequest<T>, ev: /*(!) IDBRequestEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11300,11 +11300,11 @@ external
 
     operation objectStore(name: Text): IDBObjectStore
 
-    operation addEventListener<K = /*(!) keyof IDBTransactionEventMap */ Object?>(type`: K, listener: operation(this: IDBTransaction, ev: /*(!) IDBTransactionEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: IDBTransaction, ev: /*(!) IDBTransactionEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof IDBTransactionEventMap */ Object?>(type`: K, listener: operation(this: IDBTransaction, ev: /*(!) IDBTransactionEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: IDBTransaction, ev: /*(!) IDBTransactionEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11383,7 +11383,7 @@ external
   type ImageBitmapRenderingContext = object
   {
     guarded
-    canvas: Object? /*(!)HTMLCanvasElement | OffscreenCanvas*/
+    canvas: HTMLCanvasElement | OffscreenCanvas
 
     operation transferFromImageBitmap(bitmap: ImageBitmap?)
 
@@ -11472,7 +11472,7 @@ external
   type IntersectionObserver = object
   {
     guarded
-    root: Object? /*(!)Element | Document | пусто*/
+    root: Element | Document | None
 
     guarded
     rootMargin: Text
@@ -11587,11 +11587,11 @@ external
 
     operation getKeyframes(): List<ComputedKeyframe>
 
-    operation setKeyframes(keyframes: Object? /*(!)List<Keyframe> | PropertyIndexedKeyframes | пусто*/)
+    operation setKeyframes(keyframes: List<Keyframe> | PropertyIndexedKeyframes | None)
 
     prototype: KeyframeEffect
 
-    on create(target: Element?, keyframes: Object? /*(!)List<Keyframe> | PropertyIndexedKeyframes | пусто*/, options: Object? /*(!)Number | KeyframeEffectOptions | пусто*/ = none) // : KeyframeEffect
+    on create(target: Element?, keyframes: List<Keyframe> | PropertyIndexedKeyframes | None, options: Number | KeyframeEffectOptions | None = none) // : KeyframeEffect
 
     on create(source: KeyframeEffect) // : KeyframeEffect
   }
@@ -11635,11 +11635,11 @@ external
 
     search: Text
 
-    operation assign(url: Object? /*(!)Text | URL*/)
+    operation assign(url: Text | URL)
 
     operation reload()
 
-    operation replace(url: Object? /*(!)Text | URL*/)
+    operation replace(url: Text | URL)
 
     prototype: Location
 
@@ -11709,11 +11709,11 @@ external
     guarded
     sysexEnabled: YesNo
 
-    operation addEventListener<K = /*(!) keyof MIDIAccessEventMap */ Object?>(type`: K, listener: operation(this: MIDIAccess, ev: /*(!) MIDIAccessEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MIDIAccess, ev: /*(!) MIDIAccessEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MIDIAccessEventMap */ Object?>(type`: K, listener: operation(this: MIDIAccess, ev: /*(!) MIDIAccessEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MIDIAccess, ev: /*(!) MIDIAccessEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11754,11 +11754,11 @@ external
   {
     onmidimessage: (operation(this: MIDIInput, ev: Event): Object?)?
 
-    operation addEventListener<K = /*(!) keyof MIDIInputEventMap */ Object?>(type`: K, listener: operation(this: MIDIInput, ev: /*(!) MIDIInputEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MIDIInput, ev: /*(!) MIDIInputEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MIDIInputEventMap */ Object?>(type`: K, listener: operation(this: MIDIInput, ev: /*(!) MIDIInputEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MIDIInput, ev: /*(!) MIDIInputEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11808,11 +11808,11 @@ external
   {
     operation send(data: List<Number>, timestamp: DOMHighResTimeStamp? = none)
 
-    operation addEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIOutput, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MIDIOutput, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIOutput, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MIDIOutput, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11877,11 +11877,11 @@ external
 
     operation open(): JS.Promise<MIDIPort>
 
-    operation addEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIPort, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MIDIPort, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MIDIPortEventMap */ Object?>(type`: K, listener: operation(this: MIDIPort, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MIDIPort, ev: /*(!) MIDIPortEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11900,11 +11900,11 @@ external
 
   type MathMLElement = object Element, ElementCSSInlineStyle, GlobalEventHandlers, HTMLOrSVGElement
   {
-    operation addEventListener<K = /*(!) keyof MathMLElementEventMap */ Object?>(type`: K, listener: operation(this: MathMLElement, ev: /*(!) MathMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MathMLElement, ev: /*(!) MathMLElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MathMLElementEventMap */ Object?>(type`: K, listener: operation(this: MathMLElement, ev: /*(!) MathMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MathMLElement, ev: /*(!) MathMLElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
@@ -11979,11 +11979,11 @@ external
 
     operation getUserMedia(constraints: MediaStreamConstraints? = none): JS.Promise<MediaStream>
 
-    operation addEventListener<K = /*(!) keyof MediaDevicesEventMap */ Object?>(type`: K, listener: operation(this: MediaDevices, ev: /*(!) MediaDevicesEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation addEventListener<K = Text>(type`: K, listener: operation(this: MediaDevices, ev: /*(!) MediaDevicesEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
     operation addEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof MediaDevicesEventMap */ Object?>(type`: K, listener: operation(this: MediaDevices, ev: /*(!) MediaDevicesEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation removeEventListener<K = Text>(type`: K, listener: operation(this: MediaDevices, ev: /*(!) MediaDevicesEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
     operation removeEventListener(type`: Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
