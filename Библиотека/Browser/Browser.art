@@ -30008,7 +30008,7 @@ external
 
   type Float32List = JS.Float32Array | List<GLfloat>
 
-  type FormDataEntryValue = JS.File | Text
+  type FormDataEntryValue = File | Text
 
   type GLbitfield = Number
 
@@ -30042,13 +30042,13 @@ external
 
   type HeadersInit = Object? /*(!)List<object { _0: Text, _1: Text }> | Record<Text, Text> | Headers*/
 
-  type IDBValidKey = Number | Text | Date | BufferSource | List<IDBValidKey>
+  type IDBValidKey = Number | Text | DateTime | BufferSource | List<IDBValidKey>
 
   type ImageBitmapSource = CanvasImageSource | Blob | ImageData
 
   type Int32List = JS.Int32Array | List<GLint>
 
-  type LineAndPositionSetting = Number | AutoKeyword
+  type LineAndPositionSetting = Number /* | "auto" */
 
   type MediaProvider = MediaStream | MediaSource | Blob
 
