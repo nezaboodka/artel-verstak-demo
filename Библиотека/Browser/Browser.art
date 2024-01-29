@@ -141,7 +141,7 @@ external
 
   type AudioContextOptions = aspect
   {
-    latencyHint: Object? /*(!)AudioContextLatencyCategory | Number*/
+    latencyHint: AudioContextLatencyCategory | Number
 
     sampleRate: Number
   }
@@ -289,7 +289,7 @@ external
 
     disabled: YesNo
 
-    media: Object? /*(!)MediaList | Text*/
+    media: MediaList | Text
   }
 
 
@@ -417,9 +417,9 @@ external
 
   type ConstrainDOMStringParameters = aspect
   {
-    exact: Object? /*(!)Text | List<Text>*/
+    exact: Text | List<Text>
 
-    ideal: Object? /*(!)Text | List<Text>*/
+    ideal: Text | List<Text>
   }
 
 
@@ -629,9 +629,9 @@ external
 
   type DisplayMediaStreamOptions = aspect
   {
-    audio: Object? /*(!)YesNo | MediaTrackConstraints*/
+    audio: YesNo | MediaTrackConstraints
 
-    video: Object? /*(!)YesNo | MediaTrackConstraints*/
+    video: YesNo | MediaTrackConstraints
   }
 
 
@@ -705,7 +705,7 @@ external
 
     direction: PlaybackDirection
 
-    duration: Object? /*(!)Number | CSSNumericValue | Text*/
+    duration: Number | CSSNumericValue | Text
 
     easing: Text
 
@@ -1015,7 +1015,7 @@ external
   {
     autoIncrement: YesNo
 
-    keyPath: Object? /*(!)Text | List<Text> | пусто*/
+    keyPath: Text | List<Text> | None
   }
 
 
@@ -1123,11 +1123,11 @@ external
 
   type IntersectionObserverInit = aspect
   {
-    root: Object? /*(!)Element | Document | пусто*/
+    root: Element | Document | None
 
     rootMargin: Text
 
-    threshold: Object? /*(!)Number | List<Number>*/
+    threshold: Number | List<Number>
   }
 
 
@@ -1435,13 +1435,13 @@ external
 
   type MediaStreamConstraints = aspect
   {
-    audio: Object? /*(!)YesNo | MediaTrackConstraints*/
+    audio: YesNo | MediaTrackConstraints
 
     peerIdentity: Text
 
     preferCurrentTab: YesNo
 
-    video: Object? /*(!)YesNo | MediaTrackConstraints*/
+    video: YesNo | MediaTrackConstraints
   }
 
 
@@ -1717,7 +1717,7 @@ external
 
     direction: PlaybackDirection
 
-    duration: Object? /*(!)Number | Text*/
+    duration: Number | Text
 
     easing: Text
 
