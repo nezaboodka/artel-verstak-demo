@@ -12,18 +12,18 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Mode = variant
   {
-    Default = 0
-    IndependentUpdate = 1
-    ManualMount = 2
+    default = 0
+    independentUpdate = 1
+    manualMount = 2
   }
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Priority = variant
   {
-    Realtime = 0
-    Normal = 1
-    Background = 2
+    realtime = 0
+    normal = 1
+    background = 2
   }
 
 

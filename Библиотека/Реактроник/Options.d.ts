@@ -24,18 +24,18 @@ export type MemberOptions = {
     readonly logging?: Partial<LoggingOptions>;
 };
 export declare enum Kind {
-    Plain = 0,
-    Transactional = 1,
-    Reactive = 2,
-    Cached = 3
+    plain = 0,
+    transactional = 1,
+    reactive = 2,
+    cached = 3
 }
 export declare enum Reentrance {
-    PreventWithError = 1,
-    WaitAndRestart = 0,
-    CancelPrevious = -1,
-    CancelAndWaitPrevious = -2,
-    OverwritePrevious = -3,
-    RunSideBySide = -4
+    preventWithError = 1,// fail with error if there is an existing call in progress (default)
+    waitAndRestart = 0,// wait for existing call to finish and then restart reentrant one
+    cancelPrevious = -1,// cancel previous call in favor of recent one
+    cancelAndWaitPrevious = -2,// cancel previous call in favor of recent one (but wait until canceling is completed)
+    overwritePrevious = -3,// allow previous to complete, but overwrite it with ignoring any conflicts
+    runSideBySide = -4
 }
 export type AbstractReaction<T> = {
     readonly options: MemberOptions;

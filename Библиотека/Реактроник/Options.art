@@ -59,22 +59,22 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Kind = variant
   {
-    Plain = 0
-    Transactional = 1
-    Reactive = 2
-    Cached = 3
+    plain = 0
+    transactional = 1
+    reactive = 2
+    cached = 3
   }
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Reentrance = variant
   {
-    PreventWithError = 1
-    WaitAndRestart = 0
-    CancelPrevious = -1
-    CancelAndWaitPrevious = -2
-    OverwritePrevious = -3
-    RunSideBySide = -4
+    preventWithError = 1
+    waitAndRestart = 0
+    cancelPrevious = -1
+    cancelAndWaitPrevious = -2
+    overwritePrevious = -3
+    runSideBySide = -4
   }
 
   type AbstractReaction<T> = aspect

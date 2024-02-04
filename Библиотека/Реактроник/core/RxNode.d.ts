@@ -4,14 +4,14 @@ import { MemberOptions } from "../Options.js";
 export type Delegate<T> = (element: T, base: () => void) => void;
 export type SimpleDelegate<T = unknown, R = void> = (element: T) => R;
 export declare enum Mode {
-    Default = 0,
-    IndependentUpdate = 1,
-    ManualMount = 2
+    default = 0,
+    independentUpdate = 1,
+    manualMount = 2
 }
 export declare const enum Priority {
-    Realtime = 0,
-    Normal = 1,
-    Background = 2
+    realtime = 0,
+    normal = 1,
+    background = 2
 }
 export declare abstract class RxNode<E = unknown> {
     abstract readonly key: string;
