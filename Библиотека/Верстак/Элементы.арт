@@ -2,7 +2,7 @@
 подключить Реактроник
 
 операция Страница(
-  перестроить: Обработчик<DOM.HTMLElement>? = пусто): RxNode<El<DOM.HTMLElement>>
+  перестроить: Обработчик<El<DOM.HTMLElement>>? = пусто): RxNode<El<DOM.HTMLElement>>
 {
   результат = HtmlBody(`(update = перестроить))
 }
@@ -14,10 +14,10 @@
 
 операция Секция(
   режим: Режим? = пусто,
-  перестроить: Обработчик<DOM.HTMLElement>? = пусто)
+  перестроить: Обработчик<El<DOM.HTMLElement, None>>? = пусто)
   : RxNode<El<DOM.HTMLElement, None>>
 {
-  результат = Section<None, None>(`(mode = режим, update = перестроить))
+  результат = Section<None>(`(mode = режим, update = перестроить))
 }
 
 псевдонимы(русский)

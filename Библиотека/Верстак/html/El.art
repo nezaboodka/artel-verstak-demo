@@ -26,27 +26,27 @@ external
 
     area: ElArea
 
-    widthGrowth: Number
+    width-growth: Number
 
-    minWidth: Text
+    min-width: Text
 
-    maxWidth: Text
+    max-width: Text
     
-    heightGrowth: Number
+    height-growth: Number
 
-    minHeight: Text
+    min-height: Text
 
-    maxHeight: Text
+    max-height: Text
 
-    contentAlignment: Align
+    content-alignment: Align
 
-    elementAlignment: Align
+    element-alignment: Align
 
-    contentWrapping: YesNo
+    content-wrapping: YesNo
 
-    overlayVisible: YesNo?
+    overlay-visible: YesNo?
 
-    operation useStyle(styleName: Text, enabled: YesNo? = none)
+    operation useStyle(style-name: Text, enabled: YesNo? = none)
   }
 
 
@@ -108,8 +108,8 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ElArea = None | Text | object
   {
-    cellsOverWidth: Number?
-    cellsOverHeight: Number?
+    cells-over-width: Number?
+    cells-over-height: Number?
   }
 
 
@@ -119,11 +119,11 @@ external
     guarded
     node: RxNode<El<T, M>>;
 
-    maxColumnCount: Number
+    max-column-count: Number
 
-    maxRowCount: Number
+    max-row-count: Number
 
-    cursorPosition: CursorPosition?
+    cursor-position: CursorPosition?
 
     native: T;
 
@@ -173,42 +173,42 @@ external
 
     on create(node: RxNode<El<T, M>>)
 
-    operation prepareForUpdate()
+    operation prepare-for-update()
 
     guarded
-    isSection: YesNo
+    is-section: YesNo
 
     guarded
-    isTable: YesNo
+    is-table: YesNo
 
     guarded
-    isAuxiliary: YesNo
+    is-auxiliary: YesNo
 
     kind: ElKind
 
     area: ElArea
 
-    widthGrowth: Number
+    width-growth: Number
 
-    minWidth: Text
+    min-width: Text
 
-    maxWidth: Text
+    max-width: Text
 
-    heightGrowth: Number
+    height-growth: Number
 
-    minHeight: Text
+    min-height: Text
 
-    maxHeight: Text
+    max-height: Text
 
-    contentAlignment: Align
+    content-alignment: Align
 
-    elementAlignment: Align
+    element-alignment: Align
 
-    contentWrapping: YesNo
+    content-wrapping: YesNo
 
-    overlayVisible: YesNo?
+    overlay-visible: YesNo?
 
-    operation useStyle(styleName: Text, enabled: YesNo? = none)
+    operation use-style(style-name: Text, enabled: YesNo? = none)
 
     // hidden
     // rowBreak
@@ -222,9 +222,9 @@ external
 
     y: Number
 
-    runningMaxX: Number
+    running-max-x: Number
 
-    runningMaxY: Number
+    running-max-y: Number
 
     flags: CursorFlags
 
@@ -236,9 +236,9 @@ external
   type CursorFlags = variant
   {
     none` = 0
-    ownCursorPosition = 1
-    usesRunningColumnCount = 2
-    usesRunningRowCount = 4
+    own-cursor-position = 1
+    uses-running-column-count = 2
+    uses-running-row-count = 4
   }
 
 
@@ -246,8 +246,8 @@ external
   type CursorCommand = object
   {
     absolute: Text?
-    columnShift: Number?
-    rowShift: Number?
+    column-shift: Number?
+    row-shift: Number?
   }
 
 
@@ -268,34 +268,34 @@ external
     operation coords<T: DOM.Element>(element: El<T, Object?>, value: ElCoords?)
 
     global
-    operation widthGrowth<T: DOM.Element>(element: El<T, Object?>, value: Number)
+    operation width-growth<T: DOM.Element>(element: El<T, Object?>, value: Number)
 
     global
-    operation minWidth<T: DOM.Element>(element: El<T, Object?>, value: Text)
+    operation min-width<T: DOM.Element>(element: El<T, Object?>, value: Text)
 
     global
-    operation applyMaxWidth<T: DOM.Element>(element: El<T, Object?>, value: Text)
+    operation apply-max-width<T: DOM.Element>(element: El<T, Object?>, value: Text)
 
     global
-    operation heightGrowth<T: DOM.Element>(element: El<T, Object?>, value: Number)
+    operation height-growth<T: DOM.Element>(element: El<T, Object?>, value: Number)
 
     global
-    operation minHeight<T: DOM.Element>(element: El<T, Object?>, value: Text)
+    operation min-height<T: DOM.Element>(element: El<T, Object?>, value: Text)
 
     global
-    operation maxHeight<T: DOM.Element>(element: El<T, Object?>, value: Text)
+    operation max-height<T: DOM.Element>(element: El<T, Object?>, value: Text)
 
     global
-    operation contentAlignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
+    operation content-alignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
 
     global
-    operation elementAlignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
+    operation element-alignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
 
     global
-    operation contentWrapping<T: DOM.Element>(element: El<T, Object?>, value: YesNo)
+    operation content-wrapping<T: DOM.Element>(element: El<T, Object?>, value: YesNo)
 
     global
-    operation overlayVisible<T: DOM.Element>(element: El<T, Object?>, value: YesNo?)
+    operation overlay-visible<T: DOM.Element>(element: El<T, Object?>, value: YesNo?)
 
     global
     operation style<T: DOM.Element>(element: El<T, Object?>, secondary: YesNo, styleName: Text, enabled: YesNo? = none)
@@ -313,8 +313,8 @@ external
 
     layouts: List<Text>
 
-    keyAttrName: Text
+    key-attr-name: Text
 
-    kindAttrName: Text
+    kind-attr-name: Text
   }
 }
