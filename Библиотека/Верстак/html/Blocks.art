@@ -1,14 +1,14 @@
 
 import JS = Artel.JavaScript
-import Browser
+import DOM = Browser
 
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Section<M = None, R = None>(builder: BlockBuilder<HTMLElement, M, None, R>?, basis: BlockBuilder<HTMLElement, M, None, R>? = none): Block<HTMLElement, M, None, R>
+  operation Section<M = None, R = None>(builder: BlockBuilder<DOM.HTMLElement, M, None, R>?, basis: BlockBuilder<DOM.HTMLElement, M, None, R>? = none): Block<DOM.HTMLElement, M, None, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Table<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
+  operation Table<M, R>(builder: BlockBuilder<DOM.HTMLElement, M, R>?, basis: BlockBuilder<DOM.HTMLElement, M, R>?): Block<DOM.HTMLElement, M, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation row<T>(builder: operation(block: None): T?, shiftCursorDown: Integer?)
@@ -20,19 +20,19 @@ external
   operation cursor(areaParams: BlockArea)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Artel.Text, builder: BlockBuilder<HTMLElement, None, None>? = none): Block<HTMLElement>
+  operation Note(content: Artel.Text, builder: BlockBuilder<DOM.HTMLElement, None, None>? = none): Block<DOM.HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HtmlNote(content: Text, builder: BlockBuilder<HTMLElement, None, None>?): Block<HTMLElement>
+  operation HtmlNote(content: Text, builder: BlockBuilder<DOM.HTMLElement, None, None>?): Block<DOM.HTMLElement>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Group<M, R>(builder: BlockBuilder<HTMLElement, M, R>?, basis: BlockBuilder<HTMLElement, M, R>?): Block<HTMLElement, M, R>
+  operation Group<M, R>(builder: BlockBuilder<DOM.HTMLElement, M, R>?, basis: BlockBuilder<DOM.HTMLElement, M, R>?): Block<DOM.HTMLElement, M, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation Fragment<M, R>(builder: BlockBuilder<None, M, R>?, basis: BlockBuilder<None, M, R>?): Block<None, M, R>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type VerstakHtmlDriver<T = HTMLElement> = object HtmlDriver<T>
+  type VerstakHtmlDriver<T = DOM.HTMLElement> = object HtmlDriver<T>
   {
     operation applyKind(block: Block<T, Object, Object>, value: BlockKind)
 

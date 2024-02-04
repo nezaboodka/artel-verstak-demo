@@ -1,0 +1,45 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  type F<T> = operation(): T
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type Utils = object
+  {
+    global
+    operation freezeSet<T>(obj: Set<T>? = none): Set<T>?
+
+    global
+    operation freezeMap<K, V>(obj: Map<K, V>? = none): Map<K, V>?
+
+    global
+    operation copyAllMembers(source: Object?, target: Object?): Object?
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
+  hidden by package
+  operation UNDEF(args: List<Object>)
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  async
+  operation all(promises: Array<JS.Promise<Object?>>): JS.Promise<List<Object?>>
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  async
+  operation pause(timeout: Integer)
+
+  hidden by package
+  operation emitLetters(n: Number): Text
+
+  hidden by package
+  operation objectHasMember<T>(obj: Object?, member: Text): T // obj is T
+
+  hidden by package
+  operation getCallerInfo(prefix: Text): Text
+}

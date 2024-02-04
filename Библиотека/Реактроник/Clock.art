@@ -3,25 +3,26 @@ import JS = Artel.JavaScript
 
 external
 {
-  // Clock
-
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  type Clock = object
+  type Clock = object ObservableObject
   {
-    hour: Integer
+    hour: Number
 
-    minute: Integer
+    minute: Number
 
-    second: Integer
+    second: Number
 
-    ms: Integer
+    ms: Number
 
-    interval: Integer
+    interval: Number
 
     paused: YesNo
 
-    on create(interval: Integer = 1000)
+    on create(interval: Number? = none)
 
     operation pause(value: YesNo)
+
+    // hidden
+    // tick
   }
 }

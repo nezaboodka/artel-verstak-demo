@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -69,47 +69,47 @@ external
 
     operation clearData(format: Text? /*(!)= none*/)
 
-    operation setDragImage(value: HTMLElement, x: Number, y: Number)
+    operation setDragImage(value: DOM.HTMLElement, x: Number, y: Number)
 
-    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {
-      operation onDragStart(e: DragEvent)
+      operation onDragStart(e: DOM.DragEvent)
 
-      operation onDrag(e: DragEvent)
+      operation onDrag(e: DOM.DragEvent)
 
-      operation onDragEnter(e: DragEvent)
+      operation onDragEnter(e: DOM.DragEvent)
 
-      operation onDragLeave(e: DragEvent)
+      operation onDragLeave(e: DOM.DragEvent)
 
-      operation onDragOver(e: DragEvent)
+      operation onDragOver(e: DOM.DragEvent)
 
-      operation onDrop(e: DragEvent)
+      operation onDrop(e: DOM.DragEvent)
 
-      operation onDragEnd(e: DragEvent)
+      operation onDragEnd(e: DOM.DragEvent)
 
-      operation startDragging(e: DragEvent)
+      operation startDragging(e: DOM.DragEvent)
 
-      operation dragging(e: DragEvent)
+      operation dragging(e: DOM.DragEvent)
 
-      operation finishDragging(e: DragEvent)
+      operation finishDragging(e: DOM.DragEvent)
 
-      operation enterTarget(e: DragEvent)
+      operation enterTarget(e: DOM.DragEvent)
 
-      operation leaveTarget(e: DragEvent)
+      operation leaveTarget(e: DOM.DragEvent)
 
-      operation dragOver(e: DragEvent)
+      operation dragOver(e: DOM.DragEvent)
 
-      operation drop(e: DragEvent)
+      operation drop(e: DOM.DragEvent)
 
-      operation updateEventOnDragStart(e: DragEvent)
+      operation updateEventOnDragStart(e: DOM.DragEvent)
 
-      operation updateEventOnDropAllowed(e: DragEvent)
+      operation updateEventOnDropAllowed(e: DOM.DragEvent)
 
       operation reset()
 
-      operation updateDragTarget(e: DragEvent)
+      operation updateDragTarget(e: DOM.DragEvent)
 
       operation whenDragging()
     }

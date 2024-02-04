@@ -1,0 +1,81 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type RxSystem = object
+  {
+    global
+    operation why(brief: YesNo? = none): Text
+
+    global
+    operation getReaction<T>(method: F<T>): AbstractReaction<T>
+
+    global
+    operation pullLastResult<T>(method: F<JS.Promise<T>>, args: List<Object?>?): T?
+
+    global
+    operation configureCurrentOperation(options: PartialMemberOptions): MemberOptions
+
+    global
+    operation getRevisionOf(obj: Object?): Number
+
+    global
+    operation takeSnapshot<T>(obj: T): T
+
+    global
+    operation dispose`(obj: Object?)
+
+    global
+    reactivityAutoStartDisabled: YesNo
+
+    global guarded
+    isLogging: YesNo
+
+    global guarded
+    loggingOptions: LoggingOptions
+
+    global
+    operation setLoggingMode(isOn: YesNo, options: LoggingOptions? = none)
+
+    global
+    operation setLoggingHint<T: Object>(obj: T, name: Text?)
+
+    global
+    operation getLoggingHint<T: Object>(obj: T, full: YesNo? = none): Text?
+
+    global
+    operation setProfilingMode(isOn: YesNo, options: PartialProfilingOptions? = none)
+  }
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
+  operation transaction<T>(action: F<T>, args: List<Object?>? = none): T
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
+  operation unobs<T>(func: F<T>, args: List<Object?>): T
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  #JS.МассивПараметров
+  operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: List<Object?>): T
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation raw(proto: Object, prop: Text): Object?
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation obs(proto: Object, prop: Text): Object?
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation transactional(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation reactive(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation cached(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  operation options(value: PartialMemberOptions): F<Object?>
+}

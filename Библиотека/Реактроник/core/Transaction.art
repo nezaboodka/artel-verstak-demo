@@ -1,0 +1,86 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Transaction = /*(!) abstract */ object Worker
+  {
+    global guarded
+    current: Transaction
+
+    abstract guarded
+    id: Number
+
+    abstract guarded
+    hint: Text
+
+    abstract guarded
+    options: SnapshotOptions;
+
+    abstract guarded
+    timestamp: Number
+
+    abstract guarded
+    error`: Error?
+
+    abstract guarded
+    changeset: Changeset
+
+    abstract guarded
+    margin: Number
+
+    #JS.МассивПараметров
+    abstract
+    operation run`<T>(func: F<T>, args: List<Object?>): T
+
+    #JS.МассивПараметров
+    abstract
+    operation inspect<T>(func: F<T>, args: List<Object?>): T
+
+    abstract
+    operation apply()
+
+    abstract
+    operation seal(): Transaction // this
+
+    abstract
+    operation wrap<T>(func: F<T>, secondary: YesNo): F<T>
+
+    abstract
+    operation cancel(error`: Error, retryAfterOrIgnore: Worker? /*(!)| null*/ = none): Transaction // this
+
+    abstract guarded
+    isCanceled: YesNo
+
+    abstract guarded
+    isFinished: YesNo
+
+    async
+    operation whenFinished()
+
+    global
+    operation create(options: SnapshotOptions /*(!) | null*/): Transaction
+
+    #JS.МассивПараметров
+    global
+    operation run`<T>(options: SnapshotOptions /*(!)| null*/, func: F<T>, args: List<Object?>): T
+
+    #JS.МассивПараметров
+    global
+    operation separate<T>(func: F<T>, args: List<Object?>): T
+
+    #JS.МассивПараметров
+    global
+    operation outside<T>(func: F<T>, args: List<Object?>): T
+
+    global
+    operation isFrameOver(everyN: Number? = none, timeLimit: Number? = none): YesNo
+
+    global async
+    operation requestNextFrame(sleepTime: Number? = none): JS.Promise<None>
+
+    global guarded
+    isCanceled: YesNo
+  }
+}

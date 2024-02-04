@@ -9,68 +9,126 @@ external
   type LoggingOptions = aspect
   {
     guarded
-    {
-      enabled: YesNo
+    enabled: YesNo
 
-      transaction`: YesNo
+    guarded
+    transaction`: YesNo
 
-      operation`: YesNo
+    guarded
+    operation`: YesNo
 
-      step: YesNo
+    guarded
+    step: YesNo
 
-      monitor: YesNo
+    guarded
+    monitor: YesNo
 
-      read: YesNo
+    guarded
+    read: YesNo
 
-      write: YesNo
+    guarded
+    write: YesNo
 
-      change: YesNo
+    guarded
+    change: YesNo
 
-      obsolete: YesNo
+    guarded
+    obsolete: YesNo
 
-      error`: YesNo
+    guarded
+    error`: YesNo
 
-      warning: YesNo
+    guarded
+    warning: YesNo
 
-      gc: YesNo
+    guarded
+    gc: YesNo
 
-      color: Integer
+    guarded
+    color: Number
 
-      prefix: Текст
+    guarded
+    prefix: Текст
 
-      margin1: Integer
+    guarded
+    margin1: Number
 
-      margin2: Integer
-    }
+    guarded
+    margin2: Number
   }
 
-  // ProfilingOptions
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type ProfilingOptions = aspect
   {
-    repetitiveUsageWarningThreshold: Integer
+    repetitiveUsageWarningThreshold: Number
 
-    mainThreadBlockingWarningThreshold: Integer
+    mainThreadBlockingWarningThreshold: Number
 
-    asyncActionDurationWarningThreshold: Integer
+    asyncActionDurationWarningThreshold: Number
 
-    garbageCollectionSummaryInterval: Integer
+    garbageCollectionSummaryInterval: Number
   }
 
-  // LoggingLevel
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  конст LoggingLevel: aspect
+  конст LoggingLevel: object
   {
-    guarded
-    {
-      Off: LoggingOptions;
-      ErrorsOnly: LoggingOptions;
-      Reactions: LoggingOptions;
-      Transactions: LoggingOptions;
-      Operations: LoggingOptions;
-      Debug: LoggingOptions
-    }
+    guarded Off: LoggingOptions
+    guarded ErrorsOnly: LoggingOptions
+    guarded Reactions: LoggingOptions
+    guarded Transactions: LoggingOptions
+    guarded Operations: LoggingOptions
+    guarded Debug: LoggingOptions
   }
+}
+
+
+// Manual replacement for TS' Partial<LoggingOptions>
+type PartialLoggingOptions = object
+{
+  enabled: YesNo? = none
+
+  transaction: YesNo? = none
+
+  operation`: YesNo? = none
+
+  step: YesNo? = none
+
+  monitor: YesNo? = none
+
+  read: YesNo? = none
+
+  write: YesNo? = none
+
+  change: YesNo? = none
+
+  obsolete: YesNo? = none
+
+  error`: YesNo? = none
+
+  warning: YesNo? = none
+
+  gc: YesNo? = none
+
+  color: Number? = none
+
+  prefix: Текст? = none
+
+  margin1: Number? = none
+
+  margin2: Number? = none
+}
+
+
+// Manual replacement for TS' Partial<LoggingOptions>
+type PartialProfilingOptions = object
+{
+  repetitiveUsageWarningThreshold: Number? = none
+
+  mainThreadBlockingWarningThreshold: Number? = none
+
+  asyncActionDurationWarningThreshold: Number? = none
+
+  garbageCollectionSummaryInterval: Number? = none
 }

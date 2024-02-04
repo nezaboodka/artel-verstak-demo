@@ -1,0 +1,38 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  type Sealable<T> = aspect
+  {
+    operation toMutable(): T
+
+    // [Sealant.SealedType]: object;
+  }
+
+
+  type Sealed<T> = aspect
+  {
+    // [Sealant.CreateCopy]?: () => T;
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type SealedArray<T> = /*(!) incomplete */ object List<T> //, Sealed<Array<T>>
+  {
+    global guared
+    SealedType: JS.Symbol
+
+    global guared
+    CreateCopy: JS.Symbol
+
+    global
+    operation seal<T: Sealable<T>>(collection: T, sealedType: Object, typeName: Text, member: Object?): T
+
+    global
+    operation toMutable<T: Sealable<T>>(collection: T): T
+
+    global
+    operation error`(collection: Sealed<Object?>): Error
+  }
+}

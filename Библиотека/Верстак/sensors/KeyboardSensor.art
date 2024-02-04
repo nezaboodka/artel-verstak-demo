@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -35,21 +35,21 @@ external
 
     при создании()
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo = yes)
 
     operation reset()
 
     hidden by type
     {
-      operation onKeyDown(e: KeyboardEvent)
+      operation onKeyDown(e: DOM.KeyboardEvent)
 
-      operation onKeyUp(e: KeyboardEvent)
+      operation onKeyUp(e: DOM.KeyboardEvent)
 
-      operation keyDown(e: KeyboardEvent)
+      operation keyDown(e: DOM.KeyboardEvent)
 
-      operation keyUp(e: KeyboardEvent)
+      operation keyUp(e: DOM.KeyboardEvent)
 
-      operation updateSensorData(e: KeyboardEvent)
+      operation updateSensorData(e: DOM.KeyboardEvent)
 
       global
       operation getKeyAsModifierIfAny(key: Text): KeyboardModifiers
@@ -57,5 +57,5 @@ external
   }
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation extractModifierKeys(e: Event /*(!)MouseEvent | KeyboardEvent | WheelEvent*/): KeyboardModifiers
+  operation extractModifierKeys(e: DOM.MouseEvent | DOM.KeyboardEvent | DOM.WheelEvent): KeyboardModifiers
 }

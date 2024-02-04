@@ -3,55 +3,58 @@ import JS = Artel.JavaScript
 
 external
 {
-  // SnapshotOptions
-
-  #JS.ВнешняяРеализация(модуль = "reactronic")
   type SnapshotOptions = aspect
   {
     guarded
-    {
-      hint: Text
+    hint: Text?
 
-      separation: SeparationMode
+    guarded
+    separation: SeparationMode?
 
-      //journal: Journal
+    guarded
+    journal: Journal?
 
-      logging: LoggingOptions
+    guarded
+    logging: PartialLoggingOptions?
 
-      token: Объект?
-    }
+    guarded
+    token: Объект?
   }
 
-  // MemberOptions
 
-  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MemberOptions = aspect
   {
     guarded
-    {
-      kind: Kind
+    kind: Kind
 
-      separation: SeparationMode
+    guarded
+    separation: SeparationMode
 
-      order: Integer
+    guarded
+    order: Number
 
-      noSideEffects: YesNo
+    guarded
+    noSideEffects: YesNo
 
-      triggeringArgs: YesNo
+    guarded
+    triggeringArgs: YesNo
 
-      throttling: Integer
+    guarded
+    throttling: Number
 
-      reentrance: Reentrance
+    guarded
+    reentrance: Reentrance
 
-      //journal: Journal?
+    guarded
+    journal: Journal?
 
-      monitor: Monitor?
+    guarded
+    monitor: Monitor? /*(!) | null */
 
-      logging: LoggingOptions
-    }
+    guarded
+    logging: PartialLoggingOptions
   }
 
-  // Kind
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Kind = variant
@@ -62,7 +65,6 @@ external
     Cached = 3
   }
 
-  // Reentrance
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Reentrance = variant
@@ -74,4 +76,55 @@ external
     OverwritePrevious = -3
     RunSideBySide = -4
   }
+
+  type AbstractReaction<T> = aspect
+  {
+    guarded
+    options: MemberOptions
+
+    guarded
+    args: ListReader<Object?>
+
+    guarded
+    result: T
+
+    guarded
+    error`: Object?
+
+    guarded
+    stamp: Number
+
+    guarded
+    isUpToDate: YesNo
+
+    operation configure(options: PartialMemberOptions): MemberOptions
+
+    operation markObsolete()
+
+    operation pullLastResult(args: List<Object?>? = none): T?
+  }
+}
+
+// TS: Parial<MemberOptions>
+type PartialMemberOptions = object
+{
+  kind: Kind? = none
+
+  separation: SeparationMode? = none
+
+  order: Number? = none
+
+  noSideEffects: YesNo? = none
+
+  triggeringArgs: YesNo? = none
+
+  throttling: Number? = none
+
+  reentrance: Reentrance? = none
+
+  journal: Journal? = none
+
+  monitor: Monitor? = none
+
+  logging: LoggingOptions? = none
 }

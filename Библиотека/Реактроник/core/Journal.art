@@ -1,0 +1,91 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  hidden by package
+  type Saver = operation(patch: PatchSet): JS.Promise<None>
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Journal = /* incomplete */ object ObservableObject
+  {
+    abstract
+    capacity: Number
+
+    abstract const
+    edits: ListReader<PatchSet>
+
+    abstract const
+    unsaved: PatchSet
+
+    abstract const
+    canUndo: YesNo
+
+    abstract const
+    canRedo: YesNo
+
+    abstract
+    operation edited(patch: PatchSet)
+
+    abstract
+    operation saved(patch: PatchSet)
+
+    abstract
+    operation undo(count: Number? = none)
+
+    abstract
+    operation redo(count: Number? = none)
+
+    global
+    operation create(): Journal
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type JournalImpl = object ObservableObject
+  {
+    // hidden
+    // _capacity
+
+    // hidden
+    // _edits
+
+    // hidden
+    // _unsaved
+
+    // hidden
+    // _position
+  
+    capacity: Number
+
+    guarded
+    edits: ArrayReader<PatchSet>
+
+    guarded
+    unsaved: PatchSet
+
+    guarded
+    canUndo: YesNo
+
+    guarded
+    canRedo: YesNo
+
+    operation edited(p: PatchSet)
+
+    operation saved(p: PatchSet)
+
+    operation undo(cound: Number?)
+
+    operation redo(cound: Number?)
+
+    global
+    operation buildPatch(hint: Text, items: Map<ObjectHandle, ObjectSnapshot>): PatchSet;
+    
+    global
+    operation applyPatch(patch: PatchSet, undoing: YesNo)
+
+    operation mergePatchToUnsaved(patch: PatchSet, undoing: YesNo)
+  }
+}

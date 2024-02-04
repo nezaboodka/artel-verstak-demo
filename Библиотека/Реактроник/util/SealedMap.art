@@ -3,10 +3,15 @@ import JS = Artel.JavaScript
 
 external
 {
-  // SealedMap
-
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  type SealedMap<K, V> = /*(!) abstract */ object Map<K, V> //, Sealed<Map<K, V>>
+  type SealedMap<K, V> = /*(!) incomplete */ object Map<K, V> //, Sealed<Map<K, V>>
   {
+    operation clear()
+
+    operation delete(key: K): YesNo
+
+    operation set(key: K, value: V): SealedMap<K, V> // this
+
+    // [Sealant.CreateCopy](): Map<K, V>;
   }
 }

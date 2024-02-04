@@ -3,25 +3,23 @@ import JS = Artel.JavaScript
 
 external
 {
-  // Worker
-
-  #JS.ВнешняяРеализация(модуль = "reactronic")
   type Worker = aspect
   {
     guarded
-    {
-      id: Integer
+    id: Integer
 
-      hint: Text
+    guarded
+    hint: Text
 
-      isCanceled: YesNo
+    guarded
+    isCanceled: YesNo
 
-      isFinished: YesNo
-    }
+    guarded
+    isFinished: YesNo
 
     operation cancel(err: Error, restartAfter: Worker? = none): Object?
 
-    parallel
+    async
     operation whenFinished()
   }
 }

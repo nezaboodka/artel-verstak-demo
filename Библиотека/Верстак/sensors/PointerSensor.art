@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -76,33 +76,33 @@ external
 
     operation setData(value: Object?)
 
-    operation listen(element: HTMLElement?, enabled: YesNo /*(!)= yes*/)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
     hidden by type
     {
-      operation onPointerDown(e: PointerEvent)
+      operation onPointerDown(e: DOM.PointerEvent)
 
-      operation onPointerMove(e: PointerEvent)
+      operation onPointerMove(e: DOM.PointerEvent)
 
-      operation onPointerUp(e: PointerEvent)
+      operation onPointerUp(e: DOM.PointerEvent)
 
-      operation onLostPointerCapture(e: PointerEvent)
+      operation onLostPointerCapture(e: DOM.PointerEvent)
 
-      operation onKeyDown(e: KeyboardEvent)
+      operation onKeyDown(e: DOM.KeyboardEvent)
 
-      operation moveOver(e: PointerEvent)
+      operation moveOver(e: DOM.PointerEvent)
 
-      operation tryClickingOrDragging(e: PointerEvent)
+      operation tryClickingOrDragging(e: DOM.PointerEvent)
 
-      operation clickingOver(e: PointerEvent)
+      operation clickingOver(e: DOM.PointerEvent)
 
-      operation click(e: PointerEvent)
+      operation click(e: DOM.PointerEvent)
 
-      operation startDragging(e: PointerEvent)
+      operation startDragging(e: DOM.PointerEvent)
 
-      operation dragOver(e: PointerEvent)
+      operation dragOver(e: DOM.PointerEvent)
 
-      operation drop(e: PointerEvent)
+      operation drop(e: DOM.PointerEvent)
 
       operation finishDragging()
 
@@ -110,9 +110,9 @@ external
 
       operation reset()
 
-      operation updateClicking(e: PointerEvent): YesNo
+      operation updateClicking(e: DOM.PointerEvent): YesNo
 
-      operation updateDragTarget(e: PointerEvent)
+      operation updateDragTarget(e: DOM.PointerEvent)
 
       operation whenClickingOrDragging()
 

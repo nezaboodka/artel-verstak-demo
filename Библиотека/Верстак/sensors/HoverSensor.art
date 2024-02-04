@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -11,15 +11,15 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo = yes)
 
     hidden by type
     {
-      operation onPointerOver(e: PointerEvent)
+      operation onPointerOver(e: DOM.PointerEvent)
 
-      operation onPointerOut(e: PointerEvent)
+      operation onPointerOut(e: DOM.PointerEvent)
 
-      operation doPointerOver(e: PointerEvent)
+      operation doPointerOver(e: DOM.PointerEvent)
 
       operation doPointerOut()
     }

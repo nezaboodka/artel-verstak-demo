@@ -1,0 +1,17 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Reaction<T> = /*(!) incomplete */ object ObservableObject
+  {
+    hidden by type
+    action: F<T>
+
+    on create(action: F<T>)
+
+    hidden by type
+    operation launch(): T
+  }
+}

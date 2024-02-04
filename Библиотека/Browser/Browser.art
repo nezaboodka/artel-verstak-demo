@@ -4826,7 +4826,7 @@ external
   type CSSLayerStatementRule = object CSSRule
   {
     guarded
-    nameList: JS.ReadonlyArray<Text>
+    nameList: ListReader<Text>
 
     prototype: CSSLayerStatementRule
 
@@ -5520,11 +5520,11 @@ external
 
     operation delete(request: RequestInfo | URL, options: CacheQueryOptions? = none): JS.Promise<YesNo>
 
-    operation keys(request: RequestInfo | URL | None = none, options: CacheQueryOptions? = none): JS.Promise<JS.ReadonlyArray<Request>>
+    operation keys(request: RequestInfo | URL | None = none, options: CacheQueryOptions? = none): JS.Promise<ListReader<Request>>
 
     operation match(request: RequestInfo | URL, options: CacheQueryOptions? = none): JS.Promise<Response?>
 
-    operation matchAll(request: RequestInfo | URL | None = none, options: CacheQueryOptions? = none): JS.Promise<JS.ReadonlyArray<Response>>
+    operation matchAll(request: RequestInfo | URL | None = none, options: CacheQueryOptions? = none): JS.Promise<ListReader<Response>>
 
     operation put(request: RequestInfo | URL, response: Response): JS.Promise<None>
 
@@ -5959,7 +5959,7 @@ external
   type ClipboardItem = object
   {
     guarded
-    types: JS.ReadonlyArray<Text>
+    types: ListReader<Text>
 
     operation getType(type`: Text): JS.Promise<Blob>
 
@@ -6752,7 +6752,7 @@ external
     items: DataTransferItemList
 
     guarded
-    types: JS.ReadonlyArray<Text>
+    types: ListReader<Text>
 
     operation clearData(format: Text? = none)
 
@@ -8079,7 +8079,7 @@ external
   type FontFaceSetLoadEvent = object Event
   {
     guarded
-    fontfaces: JS.ReadonlyArray<FontFace>
+    fontfaces: ListReader<FontFace>
 
     prototype: FontFaceSetLoadEvent
 
@@ -8166,16 +8166,16 @@ external
   type Gamepad = object
   {
     guarded
-    axes: JS.ReadonlyArray<Number>
+    axes: ListReader<Number>
 
     guarded
-    buttons: JS.ReadonlyArray<GamepadButton>
+    buttons: ListReader<GamepadButton>
 
     guarded
     connected: YesNo
 
     guarded
-    hapticActuators: JS.ReadonlyArray<GamepadHapticActuator>
+    hapticActuators: ListReader<GamepadHapticActuator>
 
     guarded
     id: Text
@@ -10184,7 +10184,7 @@ external
 
   type HTMLScriptElement = object HTMLElement
   {
-    async: YesNo
+    async`: YesNo
 
     crossOrigin: Text?
 
@@ -11478,7 +11478,7 @@ external
     rootMargin: Text
 
     guarded
-    thresholds: JS.ReadonlyArray<Number>
+    thresholds: ListReader<Number>
 
     operation disconnect()
 
@@ -12236,7 +12236,7 @@ external
 
     artist: Text
 
-    artwork: JS.ReadonlyArray<MediaImage>
+    artwork: ListReader<MediaImage>
 
     title: Text
 
@@ -12915,7 +12915,7 @@ external
     language: Text
 
     guarded 
-    languages: JS.ReadonlyArray<Text>
+    languages: ListReader<Text>
   }
 
 
@@ -13905,7 +13905,7 @@ external
     on create(callback: PerformanceObserverCallback) // : PerformanceObserver
 
     guarded
-    supportedEntryTypes: JS.ReadonlyArray<Text>
+    supportedEntryTypes: ListReader<Text>
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/PerformanceObserverEntryList) */
@@ -13986,7 +13986,7 @@ external
     secureConnectionStart: DOMHighResTimeStamp
 
     guarded
-    serverTiming: JS.ReadonlyArray<PerformanceServerTiming>
+    serverTiming: ListReader<PerformanceServerTiming>
 
     guarded
     transferSize: Number
@@ -14297,7 +14297,7 @@ external
     on create() // : PushManager
 
     guarded
-    supportedContentEncodings: JS.ReadonlyArray<Text>
+    supportedContentEncodings: ListReader<Text>
   }
 
   /**
@@ -14968,7 +14968,7 @@ external
     receiver: RTCRtpReceiver
 
     guarded
-    streams: JS.ReadonlyArray<MediaStream>
+    streams: ListReader<MediaStream>
 
     guarded
     track: MediaStreamTrack
@@ -15366,16 +15366,16 @@ external
   type ResizeObserverEntry = object
   {
     guarded
-    borderBoxSize: JS.ReadonlyArray<ResizeObserverSize>
+    borderBoxSize: ListReader<ResizeObserverSize>
 
     guarded
-    contentBoxSize: JS.ReadonlyArray<ResizeObserverSize>
+    contentBoxSize: ListReader<ResizeObserverSize>
 
     guarded
     contentRect: DOMRectReadOnly
 
     guarded
-    devicePixelContentBoxSize: JS.ReadonlyArray<ResizeObserverSize>
+    devicePixelContentBoxSize: ListReader<ResizeObserverSize>
 
     guarded
     target: Element
@@ -19065,7 +19065,7 @@ external
 
     operation getRegistration(clientURL: Text | URL | None = none): JS.Promise<ServiceWorkerRegistration?>
 
-    operation getRegistrations(): JS.Promise<JS.ReadonlyArray<ServiceWorkerRegistration>>
+    operation getRegistrations(): JS.Promise<ListReader<ServiceWorkerRegistration>>
 
     operation register(scriptURL: Text | URL, options: RegistrationOptions? = none): JS.Promise<ServiceWorkerRegistration>
 
@@ -19759,15 +19759,15 @@ external
 
     // operation exportKey(format: KeyFormat, key: CryptoKey): JS.Promise<Object? /*(!)JS.ArrayBuffer | JsonWebKey*/>
 
-    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: JS.ReadonlyArray<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
+    operation generateKey(algorithm: Text /*"Ed25519"*/, extractable: YesNo, keyUsages: ListReader<Object? /*(!)"sign" | "verify"*/>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: RsaHashedKeyGenParams | EcKeyGenParams, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKeyPair>
+    operation generateKey(algorithm: RsaHashedKeyGenParams | EcKeyGenParams, extractable: YesNo, keyUsages: ListReader<KeyUsage>): JS.Promise<CryptoKeyPair>
 
-    operation generateKey(algorithm: AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation generateKey(algorithm: AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params, extractable: YesNo, keyUsages: ListReader<KeyUsage>): JS.Promise<CryptoKey>
 
     operation generateKey(algorithm: AlgorithmIdentifier, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKeyPair | CryptoKey>
 
-    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: JS.ReadonlyArray<KeyUsage>): JS.Promise<CryptoKey>
+    operation importKey(format: Text /*"jwk"*/, keyData: JsonWebKey, algorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: ListReader<KeyUsage>): JS.Promise<CryptoKey>
 
     operation importKey(format: KeyFormat, keyData: BufferSource, algorithm: AlgorithmIdentifier | RsaHashedImportParams | EcKeyImportParams | HmacImportParams | AesKeyAlgorithm, extractable: YesNo, keyUsages: List<KeyUsage>): JS.Promise<CryptoKey>
 
@@ -26947,7 +26947,7 @@ external
 
     operation open(method: Text, url: Text | URL)
 
-    operation open(method: Text, url: Text | URL, async: YesNo, username: Text? = none, password: Text? = none)
+    operation open(method: Text, url: Text | URL, async`: YesNo, username: Text? = none, password: Text? = none)
 
     operation overrideMimeType(mime: Text)
 

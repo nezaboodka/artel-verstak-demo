@@ -3,12 +3,13 @@ import JS = Artel.JavaScript
 
 external
 {
-  // MvccMap
-
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden
+  hidden by package
   type MvccMap<K, V> = object MvccObject
   {
+    // hidden
+    // impl
+
     on create(isObservable: YesNo, map: Map<K, V>)
 
     operation clear()
@@ -17,11 +18,14 @@ external
 
     operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = none)
 
-    operation get`(key: K): V?
+    operation get(key: K): V?
 
     operation has(key: K): YesNo
 
-    operation set`(key: K, value: V)
+    operation set(key: K, value: V)
+
+    guarded
+    size: Integer
 
     // operation entries(): IterableIterator<Object { _0: K, _1: V }>
 
@@ -31,15 +35,10 @@ external
 
     // operation [Symbol.toStringTag](): Текст
 
-    guarded
-    {
-      size: Integer
-
-      mutable: Map<K, V>
-    }
+    // hidden guarded
+    // mutable
   }
 
-  // TransactionalMap
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type TransactionalMap<K, V> = object MvccMap<K, V>
@@ -51,7 +50,6 @@ external
     on create(args: Object? = none)
   }
 
-  // ObservableMap
 
   type ObservableMap<K, V> = object MvccMap<K, V>
   {

@@ -1,13 +1,13 @@
 
 import JS = Artel.JavaScript
-import Browser
+import DOM = Browser
 
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation FocuserReaction(
     key: Text,
-    target: HTMLElement,
+    target: DOM.HTMLElement,
     model: FocusModel,
     switchEditMode: операция(model: FocusModel?): None? /*(!)= none*/)
 }

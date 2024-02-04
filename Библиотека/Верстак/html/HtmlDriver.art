@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Browser
+import DOM = Browser
 import Реактроник
 
 external
@@ -8,7 +8,7 @@ external
   // BaseHtmlDriver
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type BaseHtmlDriver<T = Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
+  type BaseHtmlDriver<T = DOM.Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
   {
 
     operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
@@ -27,9 +27,9 @@ external
     {
       blinkingEffectMarker: Text?
 
-      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<HTMLElement /*(!)| SVGElement*/>
+      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<DOM.HTMLElement /*(!)| SVGElement*/>
 
-      operation findPrevSiblingHtmlBlock(ties: MergeItem<Block<Object>>): MergeItem<Block<HTMLElement /*(!)| SVGElement*/>>?
+      operation findPrevSiblingHtmlBlock(ties: MergedItem<Block<Object>>): MergedItem<Block<DOM.HTMLElement /*(!)| SVGElement*/>>?
     }
 
   }
@@ -37,7 +37,7 @@ external
   // HtmlDriver
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type HtmlDriver<T = HTMLElement, C> = object BaseHtmlDriver<T, C>
+  type HtmlDriver<T = DOM.HTMLElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C?})
   }
@@ -45,7 +45,7 @@ external
   // SvgDriver
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type SvgDriver<T = SVGElement, C> = object BaseHtmlDriver<T, C>
+  type SvgDriver<T = DOM.SVGElement, C> = object BaseHtmlDriver<T, C>
   {
     operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
   }

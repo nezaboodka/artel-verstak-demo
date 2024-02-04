@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {

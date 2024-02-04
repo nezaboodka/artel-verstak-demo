@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -30,6 +30,6 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: YesNo = да)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo = да)
   }
 }

@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Browser
+import DOM = Browser
 
 external
 {
@@ -14,7 +14,7 @@ external
       windowSensor: WindowSensor?
     }
 
-    sourceElement: HTMLElement?
+    sourceElement: DOM.HTMLElement?
 
     preventDefault: YesNo
 
@@ -25,7 +25,7 @@ external
     hidden by type
     {
       operation getDefaultSensorData(): DataForSensor?
-      operation setPreventDefaultAndStopPropagation(e: Event)
+      operation setPreventDefaultAndStopPropagation(e: DOM.Event)
     }
   }
 

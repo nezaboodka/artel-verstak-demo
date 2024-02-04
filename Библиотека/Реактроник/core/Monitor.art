@@ -1,0 +1,73 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Monitor = /*(!) incomplete */ object ObservableObject
+  {
+    abstract guarded
+    isActive: YesNo
+
+    abstract guarded
+    counter: Number
+
+    abstract guarded
+    workers: SetReader<Worker>
+
+    abstract guarded
+    duration: Number
+
+    global
+    operation create(hint: Text, activationDelay: Number, deactivationDelay: Number, durationResolution: Number): Monitor
+  }
+
+
+  hidden by package
+  type MonitorImpl = object Monitor
+  {
+    isActive: YesNo
+
+    counter: Number
+
+    workers: Set<Worker>
+
+    duration: Number
+
+    guarded
+    internals: object
+    {
+        started: Number
+        activationDelay: Number
+        activationTimeout: None
+        deactivationDelay: Number
+        deactivationTimeout: None
+        durationResolution: Number
+    };
+
+    operation enter(worker: Worker)
+
+    operation leave(worker: Worker)
+
+    global
+    operation create(hint: Text, activationDelay: Number, deactivationDelay: Number, durationResolution: Number): MonitorImpl
+
+    global
+    operation enter(mon: MonitorImpl, worker: Worker)
+    
+    global
+    operation leave(mon: MonitorImpl, worker: Worker)
+
+    // private static
+    // doCreate
+
+    // hidden global
+    // activate
+
+    // hidden global
+    // deactivate
+
+    // hidden global
+    // tick
+  }
+}

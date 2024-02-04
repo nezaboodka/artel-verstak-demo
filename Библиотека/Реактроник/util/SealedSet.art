@@ -3,10 +3,15 @@ import JS = Artel.JavaScript
 
 external
 {
-  // SealedSet
-
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  type SealedSet<T> = /*(!) abstract */ object Set<T> //, Sealed<Set<T>>
+  type SealedSet<T> = /*(!) incomplete */ object Set<T> //, Sealed<Set<T>>
   {
+    operation add(value: T): SealedSet<T> // this
+
+    operation clear()
+
+    operation delete(value: T): YesNo
+
+    // [Sealant.CreateCopy](): Set<T>;
   }
 }

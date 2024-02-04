@@ -1,86 +1,73 @@
 
 import JS = Artel.JavaScript
 
-type MergeListResolution = aspect
-{
-  isDuplicate: YesNo
-}
-
 external
 {
-  // GetMergeItemKey
-
-  #JS.ВнешняяРеализация(модуль = "reactronic")
   type GetMergeItemKey<T> = operation(item: T): Text?
 
-  // MergeListReader
 
-  #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeListReader<T> = aspect
   {
     guarded
-    {
-      isStrict: YesNo
+    isStrict: YesNo
 
-      count: Integer
+    guarded
+    count: Number
 
-      addedCount: Integer
+    guarded
+    addedCount: Number
 
-      removedCount: Integer
+    guarded
+    removedCount: Number
 
-      isMergeInProgress: YesNo
-    }
+    guarded
+    isMergeInProgress: YesNo
 
-    operation lookup(key: Text): MergeItem<T>?
+    operation lookup(key: Text): MergedItem<T>?
 
-    operation claim(key: Text): MergeItem<T>?
+    operation tryMergeAsExisting(key: Text): MergedItem<T>?
 
-    operation add(instance: T): MergeItem<T>
+    operation mergeAsAdded(instance: T): MergedItem<T>
 
-    operation remove(item: MergeItem<T>)
+    operation mergeAsRemoved(item: MergedItem<T>)
 
-    operation move(item: MergeItem<T>, after: MergeItem<T>)
+    operation move(item: MergedItem<T>, after: MergedItem<T>)
 
     operation beginMerge()
 
-    operation endMerge(err`: Object? = none)
+    operation endMerge(error`: Object? = none)
 
     operation resetAddedAndRemovedLists()
 
-    operation lastClaimedItem(): MergeItem<T>?
+    operation lastMergedItem(): MergedItem<T>?
 
-    operation items(): Enumerable<MergeItem<T>>
+    operation items(): Enumerable<MergedItem<T>>
 
-    operation addedItems(reset: YesNo? /*(!)= none*/): Enumerable<MergeItem<T>>
+    operation addedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation removedItems(reset: YesNo? /*(!)= none*/): Enumerable<MergeItem<T>>
+    operation removedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation isAdded(item: MergeItem<T>): YesNo
+    operation isAdded(item: MergedItem<T>): YesNo
 
-    operation isMoved(item: MergeItem<T>): YesNo
+    operation isMoved(item: MergedItem<T>): YesNo
 
-    operation isRemoved(item: MergeItem<T>): YesNo
+    operation isRemoved(item: MergedItem<T>): YesNo
 
-    operation isCurrent(item: MergeItem<T>): YesNo
-
+    operation isActual(item: MergedItem<T>): YesNo
   }
 
-  // MergeItem
 
-  #JS.ВнешняяРеализация(модуль = "reactronic")
-  type MergeItem<T> = aspect
+  type MergedItem<T> = aspect
   {
     guarded
-    {
-      instance: T
+    instance: T
 
-      prev: MergeItem<T>
-    }
+    guarded
+    prev: MergedItem<T>?
 
-    aux: MergeItem<T>
+    aux: MergedItem<T>
   }
 
-  // MergeList
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeList<T> = object MergeListReader<T>
@@ -88,17 +75,55 @@ external
     guarded
     getKey: GetMergeItemKey<T>
 
+    // hidden
+    // strict
+  
+    // hidden
+    // map
+  
+    // hidden
+    // tag
+  
+    // hidden
+    // current
+  
+    // hidden
+    // added
+  
+    // hidden
+    // removed
+  
+    // hidden
+    // lastNotFoundKey
+  
+    // hidden
+    // strictNextItem?
+  
     on create(getKey: GetMergeItemKey<T>, strict: YesNo = no)
 
-    operation lookup(key: Text?): MergeItem<T>?
+    isStrict: YesNo
 
-    operation claim(key: Text, resolution: MergeListResolution? = none, err: Text? = none): MergeItem<T>?
+    guarded
+    count: Number
 
-    operation add(instance: T): MergeItem<T>
+    guarded
+    addedCount: Number
 
-    operation remove(item: MergeItem<T>)
+    guarded
+    removedCount: Number
 
-    operation move(item: MergeItem<T>, after: MergeItem<T>)
+    guarded
+    isMergeInProgress: YesNo
+
+    operation lookup(key: Text?): MergedItem<T>?
+
+    operation tryMergeAsExisting(key: Text, resolution: object { isDuplicate: YesNo } | None = none, error`: Text? = none): MergedItem<T>?
+
+    operation mergeAsAdded(instance: T): MergedItem<T>
+
+    operation mergeAsRemoved(item: MergedItem<T>)
+
+    operation move(item: MergedItem<T>, after: MergedItem<T>)
 
     operation beginMerge()
 
@@ -106,38 +131,25 @@ external
 
     operation resetAddedAndRemovedLists()
 
-    operation lastClaimedItem(): MergeItem<T>?
+    operation lastMergedItem(): MergedItem<T>?
 
-    operation items(): Enumerable<MergeItem<T>>
+    operation items(): Enumerable<MergedItem<T>>
 
-    operation addedItems(reset: YesNo? = none): Enumerable<MergeItem<T>>
+    operation addedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation removedItems(reset: YesNo? = none): Enumerable<MergeItem<T>>
+    operation removedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation isAdded(item: MergeItem<T>): YesNo
+    operation isAdded(item: MergedItem<T>): YesNo
 
-    operation isMoved(item: MergeItem<T>): YesNo
+    operation isMoved(item: MergedItem<T>): YesNo
 
-    operation isRemoved(item: MergeItem<T>): YesNo
+    operation isRemoved(item: MergedItem<T>): YesNo
 
-    operation isCurrent(item: MergeItem<T>): YesNo
+    operation isActual(item: MergedItem<T>): YesNo
 
-    operation markAsMoved(item: MergeItem<T>)
+    operation markAsMoved(item: MergedItem<T>)
 
     global 
-    operation createMergeItem<T>(instance: T): MergeItem<T>
-
-    isStrict: YesNo
-
-    guarded
-    {
-      count: Integer
-
-      addedCount: Integer
-
-      removedCount: Integer
-
-      isMergeInProgress: YesNo
-    }
+    operation createItem<T>(instance: T): MergedItem<T>
   }
 }

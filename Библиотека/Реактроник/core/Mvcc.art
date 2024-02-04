@@ -1,0 +1,157 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type MvccObject = /*(!) incomplete */ object
+  {
+    on create(observable: YesNo)
+
+    // [Symbol.toStringTag](): string;
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type TransactionalObject = /*(!) incomplete */ object MvccObject
+  {
+    on create()
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type ObservableObject = /*(!) incomplete */ object MvccObject
+  {
+    on create()
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type OptionsImpl = object MemberOptions
+  {
+    guarded
+    getter: JS.Function
+
+    guarded
+    setter: JS.Function
+
+    guarded
+    kind: Kind
+
+    guarded
+    separation: SeparationMode
+
+    guarded
+    order: Number
+
+    guarded
+    noSideEffects: YesNo
+
+    guarded
+    triggeringArgs: YesNo
+
+    guarded
+    throttling: Number
+
+    guarded
+    reentrance: Reentrance
+
+    guarded
+    journal: Journal?
+
+    guarded
+    monitor: Monitor /*(!)| JS.Null*/
+
+    guarded
+    logging: PartialLoggingOptions?
+
+    global guarded
+    INITIAL: OptionsImpl
+
+    on create(getter: JS.Function?, setter: JS.Function?,
+      existing: OptionsImpl, patch: PartialMemberOptions,
+      implicit: YesNo);
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type Mvcc = object /*(!) JS.ProxyHandler<ObjectHandle>*/
+  {
+    global
+    reactivityAutoStartDisabled: YesNo
+
+    global
+    repetitiveUsageWarningThreshold: Number
+
+    global
+    mainThreadBlockingWarningThreshold: Number
+
+    global
+    asyncActionDurationWarningThreshold: Number
+
+    global
+    sensitivity: YesNo
+
+    global guarded
+    transactional: Mvcc
+
+    global guarded
+    observable: Mvcc
+
+    guarded
+    isObservable: YesNo
+
+    on create(isObservable: YesNo)
+
+    operation getPrototypeOf(h: ObjectHandle): Object /*(!)| JS.null*/
+
+    operation get(h: ObjectHandle, m: MemberName, receiver: Object?): Object?
+
+    operation set(h: ObjectHandle, m: MemberName, value: Object?, receiver: Object?): YesNo
+
+    operation has(h: ObjectHandle, m: MemberName): YesNo
+
+    operation defineProperty(h: ObjectHandle, m: Text | JS.Symbol, attributes: Object /*(!) JS.PropertyDescriptor*/): YesNo
+
+    operation getOwnPropertyDescriptor(h: ObjectHandle, m: MemberName): Object? /*(!) JS.PropertyDescriptor | undefined */
+
+    operation ownKeys(h: ObjectHandle): List<Text | JS.Symbol>;
+
+    global
+    operation decorateData(isObservable: YesNo, proto: Object?, member: MemberName): Object?
+
+    global
+    operation decorateOperation(implicit: YesNo, decorator: JS.Function, options: PartialMemberOptions, proto: Object?, member: MemberName, pd: Object? /* (!) JS.PropertyDescriptor?*/): Object?
+
+    global
+    operation decorateOperationParametrized(decorator: JS.Function, options: PartialMemberOptions): F<Object?>
+
+    global
+    operation acquireHandle(obj: Object?): ObjectHandle
+
+    global
+    operation createHandleForMvccObject(proto: Object?, data: Object?, blank: Object?, hint: Text, isObservable: YesNo): ObjectHandle
+
+    global
+    operation setProfilingMode(isOn: YesNo, options: ProfilingOptions? = none)
+
+    #JS.МассивПараметров
+    global
+    operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: List<Object?>): T
+
+    global
+    operation setHint<T>(obj: T, hint: Text?): T
+
+    global
+    operation getHint<T>(obj: T): Text
+
+    global
+    createOperation: operation(h: ObjectHandle, m: MemberName, options: OptionsImpl): F<Object?>
+
+    global
+    rememberOperationOptions: operation(proto: Object?, m: MemberName, getter: JS.Function?, setter: JS.Function?, enumerable: YesNo, configurable: YesNo, options: PartialMemberOptions, implicit: YesNo): OptionsImpl
+  }
+}

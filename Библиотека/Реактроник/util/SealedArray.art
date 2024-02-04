@@ -1,14 +1,30 @@
 
-import js = Artel.JavaScript
-
-type Comparer<T> = operation(a: T, b: T): Integer
+import JS = Artel.JavaScript
 
 external
 {
-  // SealedArray
+  // addon to type List
+  // {
+  // }
 
-  #js.ВнешняяРеализация(модуль = "reactronic")
-  type SealedArray<T> = /*(!) abstract */ object Array<T> //, Sealed<Array<T>>
+
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type SealedArray<T> = /*(!) incomplete */ object List<T> //, Sealed<Array<T>>
   {
+    operation pop(): T?
+
+    #JS.МассивПараметров
+    operation push(items: List<T>): Number
+
+    operation sort(compareFn: None | operation(a: T, b: T): Number): SealedArray<T> // this
+
+    operation splice(start: Number, deleteCount: Number? = none): List<T>
+
+    #JS.МассивПараметров
+    operation unshift(items: List<T>): Number
+
+    // [Sealant.CreateCopy](): Array<T>;
+
+    operation slice(start: Number? = none, end: Number? = none): List<T>
   }
 }

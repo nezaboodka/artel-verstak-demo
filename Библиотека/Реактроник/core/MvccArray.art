@@ -3,17 +3,20 @@ import JS = Artel.JavaScript
 
 external
 {
-  // MvccArray
-
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden
+  hidden by package
   type MvccArray<T> = object MvccObject
   {
-    on create(isObservable: YesNo, array: Array<T>)
+    // hidden
+    // impl
 
-    operation getItem(n: Integer): T
+    on create(isObservable: YesNo, array: List<T>)
 
-    operation setItem(n: Integer, item: T)
+    length: Number
+
+    operation getItem(n: Number): T
+
+    operation setItem(n: Number, item: T)
 
     operation toString(): Text
 
@@ -94,13 +97,13 @@ external
 
     operation reduceRight(callbackfn: operation(previousValue: /*(!) any */ Object?, currentValue: T, currentIndex: Число, array: List<T>): /*(!) any */ Object?, initialValue: /*(!) any */ Object? = none): /*(!) any */ Object?
 
-    operation find<S = T>(predicate: operation(this: None, value: T, index: Integer, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = none): S?
+    operation find<S = T>(predicate: operation(this: None, value: T, index: Number, obj: List<T>): /*(!) value is */ S, thisArg: /*(!) any */ Object? = none): S?
 
-    operation findIndex(predicate: operation(value: T, index: Integer, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): Число
+    operation findIndex(predicate: operation(value: T, index: Number, obj: List<T>): /*(!) unknown */ Object?, thisArg: /*(!) any */ Object? = none): Число
 
-    operation fill(value: T, start: Integer? = none, end: Integer? = none): /*(!) any */ Object?
+    operation fill(value: T, start: Number? = none, end: Number? = none): /*(!) any */ Object?
 
-    operation copyWithin(target: Integer, start: Integer, end: Integer? = none): /*(!) any */ Object?
+    operation copyWithin(target: Number, start: Number, end: Number? = none): /*(!) any */ Object?
 
     // operation [Symbol.iterator](): IterableIterator<T>
 
@@ -110,13 +113,10 @@ external
 
     // operation values(): IterableIterator<T>
 
-    length: Integer
-
-    guarded
-    mutable: Array<T>
+    // hidden guarded
+    // mutable: List<T>
   }
 
-  // TransactionalArray
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type TransactionalArray<T> = object MvccArray<T>
@@ -129,11 +129,8 @@ external
 
     #JS.МассивПараметров
     on create(items: List<T>)
-
-    on create(args: Object? = none)
   }
 
-  // ObservableArray
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type ObservableArray<T> = object MvccArray<T>
@@ -146,7 +143,5 @@ external
 
     #JS.МассивПараметров
     on create(items: List<T>)
-
-    on create(args: Object? = none)
   }
 }

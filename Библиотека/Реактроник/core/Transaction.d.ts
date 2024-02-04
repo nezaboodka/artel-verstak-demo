@@ -1,0 +1,30 @@
+import { F } from "../util/Utils.js";
+import { Worker } from "../Worker.js";
+import { SnapshotOptions } from "../Options.js";
+import { Changeset } from "./Changeset.js";
+export declare abstract class Transaction implements Worker {
+    static get current(): Transaction;
+    abstract readonly id: number;
+    abstract readonly hint: string;
+    abstract readonly options: SnapshotOptions;
+    abstract readonly timestamp: number;
+    abstract readonly error: Error | undefined;
+    abstract readonly changeset: Changeset;
+    abstract readonly margin: number;
+    abstract run<T>(func: F<T>, ...args: any[]): T;
+    abstract inspect<T>(func: F<T>, ...args: any[]): T;
+    abstract apply(): void;
+    abstract seal(): this;
+    abstract wrap<T>(func: F<T>, secondary: boolean): F<T>;
+    abstract cancel(error: Error, retryAfterOrIgnore?: Worker | null): this;
+    abstract readonly isCanceled: boolean;
+    abstract readonly isFinished: boolean;
+    whenFinished(): Promise<void>;
+    static create(options: SnapshotOptions | null): Transaction;
+    static run<T>(options: SnapshotOptions | null, func: F<T>, ...args: any[]): T;
+    static separate<T>(func: F<T>, ...args: any[]): T;
+    static outside<T>(func: F<T>, ...args: any[]): T;
+    static isFrameOver(everyN?: number, timeLimit?: number): boolean;
+    static requestNextFrame(sleepTime?: number): Promise<void>;
+    static get isCanceled(): boolean;
+}

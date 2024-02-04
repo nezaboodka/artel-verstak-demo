@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import DOM = Browser
 
 external
 {
@@ -15,19 +15,19 @@ external
 
     on create()
 
-    operation listen(element: HTMLElement?, enabled: YesNo = yes)
+    operation listen(element: DOM.HTMLElement?, enabled: YesNo = yes)
 
     operation reset()
 
     hidden by type
     {
-      operation onWheel(e: WheelEvent)
+      operation onWheel(e: DOM.WheelEvent)
 
-      operation doWheel(e: WheelEvent)
+      operation doWheel(e: DOM.WheelEvent)
 
       operation doReset()
 
-      operation updateSensorData(e: WheelEvent)
+      operation updateSensorData(e: DOM.WheelEvent)
     }
   }
 }

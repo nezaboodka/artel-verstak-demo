@@ -1,0 +1,226 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  hidden by package
+  type ReactionImpl = object Reaction
+  {
+    guarded
+    objectHandle: ObjectHandle
+
+    guarded
+    memberName: MemberName
+
+    operation configure(options: PartialMemberOptions): MemberOptions
+
+    guarded
+    options: MemberOptions
+
+    guarded
+    unobs: Object?
+  
+    guarded
+    args: ListReader<Object?>
+
+    guarded
+    result: Object?
+
+    guarded
+    error`: YesNo
+
+    guarded
+    stamp: Number
+
+    guarded
+    isUpToDate: YesNo
+
+    operation markObsolete()
+
+    operation pullLastResult(args: List<Object?>?): Object?
+
+    on create(h: ObjectHandle, m: MemberName)
+
+    operation reuseOrRelaunch(weak: YesNo, args: List<Object?>?): Launch
+
+    global
+    operation getControllerOf(method: F<Object?>): AbstractReaction<Object?>;
+
+    global
+    operation configureImpl(self: ReactionImpl?, options: PartialMemberOptions): MemberOptions;
+
+    #JS.МассивПараметров
+    global
+    operation proceedWithinGivenLaunch<T>(launch: Launch?, func: F<T>, args: List<Object?>): T;
+
+    global
+    operation why(): Text
+
+    global
+    operation briefWhy(): Text
+
+    global
+    operation dependencies(): List<Text>
+
+    // hidden
+    // peek
+
+    // hidden
+    // use
+
+    // hidden
+    // edit
+
+    // hidden
+    // acquireFromSnapshot
+
+    // hidden
+    // relaunch
+
+    // hidden global
+    // static markObsolete
+  }
+
+
+  type Launch = object ValueSnapshot, Observer
+  {
+    global
+    current: Launch?
+
+    global
+    queuedReactiveFunctions: List<Observer>
+
+    global
+    deferredReactiveFunctions: List<Launch>
+
+    guarded
+    margin: Number
+
+    guarded
+    transaction: Transaction
+
+    guarded
+    reaction: ReactionImpl
+
+    guarded
+    changeset: AbstractChangeset
+
+    observables: Map<ValueSnapshot, Subscription>?
+
+    options: OptionsImpl;
+
+    cause: Text?
+
+    args: List<Object?>
+
+    result: Object?
+
+    error`: Object?
+
+    started: Number
+
+    obsoleteDueTo: Text?
+
+    obsoleteSince: Number
+
+    successor: Launch?
+   
+    on create(reaction: ReactionImpl, changeset: AbstractChangeset, former: Launch | OptionsImpl)
+
+    guarded
+    isOperation: YesNo
+
+    guarded
+    originSnapshotId: Number
+
+    operation hint(): Text
+
+    guarded
+    order: Number
+
+    // get ["#this#"](): string;
+
+    operation why(): Text
+
+    operation briefWhy(): Text
+
+    operation dependencies(): List<Text>
+
+    operation wrap<T>(func: F<T>): F<T>
+
+    operation proceed(proxy: Object?, args: List<Object?>?)
+
+    operation markObsoleteDueTo(observable: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, obsolete: List<Observer>)
+
+    operation relaunchIfNotUpToDate(now: YesNo, nothrow: YesNo)
+
+    operation isNotUpToDate(): YesNo
+
+    operation reenterOver(head: Launch): Launch // this
+
+    // hidden global
+    // proceed;
+
+    // hidden enter;
+
+    // hidden leaveOrAsync;
+
+    // hidden leave;
+
+    // hidden monitorEnter;
+
+    // hidden monitorLeave;
+
+    // hidden addToDeferredReactiveFunctions;
+
+    // hidden global
+    // processDeferredReactiveFunctions;
+
+    // hidden global
+    // markUsed;
+
+    // hidden global
+    // markEdited;
+
+    // hidden global
+    // isConflicting;
+
+    // hidden global
+    // propagateAllChangesThroughSubscriptions;
+
+    // hidden global
+    // revokeAllSubscriptions;
+
+    // hidden global
+    // propagateMemberChangeThroughSubscriptions;
+
+    // hidden global
+    // enqueueReactiveFunctionsToRun;
+
+    // hidden global
+    // processQueuedReactiveFunctions;
+
+    // hidden unsubscribeFromAllObservables;
+
+    // hidden subscribeTo;
+
+    // hidden global
+    // canSubscribeTo;
+
+    // hidden global
+    // createOperation;
+
+    // hidden global
+    // rememberOperationOptions;
+
+    global
+    operation init()
+  }
+
+  hidden by package
+  operation resolveReturn(value: Object?): Object?
+
+  hidden by package
+  operation rejectRethrow(error`: Object?)
+}

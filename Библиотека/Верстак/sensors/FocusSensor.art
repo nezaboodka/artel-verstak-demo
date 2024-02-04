@@ -1,6 +1,6 @@
 
 import JS = Artel.JavaScript
-import Браузер
+import B = Browser
 
 external
 {
@@ -43,23 +43,23 @@ external
 
     operation setActiveData(data: Object?, debugHint: Text = "")
 
-    operation listen(element: HTMLElement?, enabled: YesNo = да)
+    operation listen(element: B.HTMLElement?, enabled: YesNo = да)
 
     operation reset()
 
     hidden by type
     {
-      operation onFocusIn(e: FocusEvent)
+      operation onFocusIn(e: B.FocusEvent)
 
-      operation onFocusOut(e: FocusEvent)
+      operation onFocusOut(e: B.FocusEvent)
 
-      operation onMouseDown(e: MouseEvent)
+      operation onMouseDown(e: B.MouseEvent)
 
-      operation doFocusIn(e: FocusEvent)
+      operation doFocusIn(e: B.FocusEvent)
 
-      operation doFocusOut(e: FocusEvent)
+      operation doFocusOut(e: B.FocusEvent)
 
-      operation doMouseDown(e: MouseEvent)
+      operation doMouseDown(e: B.MouseEvent)
     }
   }
 }

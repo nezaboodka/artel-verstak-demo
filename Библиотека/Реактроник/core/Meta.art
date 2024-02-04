@@ -1,0 +1,42 @@
+
+import JS = Artel.JavaScript
+
+external
+{
+  hidden by package
+  type Meta = /* incomplete */ object
+  {
+    global const
+    Handle: JS.Symbol
+
+    global const
+    Revision: JS.Symbol
+
+    global const
+    Controller: JS.Symbol
+    
+    global const
+    Initial: JS.Symbol
+
+    global const
+    Reactive: JS.Symbol
+
+    global const
+    Raw: JS.Symbol
+
+    global const
+    Undefined: JS.Symbol
+
+    global
+    operation get<T>(obj: Object?, sym: JS.Symbol): T
+
+    global
+    operation set(obj: Object?, sym: JS.Symbol, value: Object?): Object?
+
+    global
+    operation acquire(proto: Object?, sym: JS.Symbol): Object?
+
+    global
+    operation getFrom<T = Object?>(proto: Object?, sym: JS.Symbol): T
+  }
+}
