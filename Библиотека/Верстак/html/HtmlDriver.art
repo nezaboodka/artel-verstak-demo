@@ -5,48 +5,52 @@ import Реактроник
 
 external
 {
-  // BaseHtmlDriver
-
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type BaseHtmlDriver<T = DOM.Element, C> = /*(!) абстрактный */ object BaseDriver<T, C>
+  type WebDriver<T: DOM.Element, M = Object?> = object ElDriver<T, M>
   {
+    operation setNativeElement(node: RxNode<El<T, M>>)
 
-    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
+    operation initialize(node: RxNode<El<T, M>>)
 
-    operation initialize(block: Block<T, Object?, C, None>)
+    operation finalize(node: RxNode<El<T, M>>, isLeader: YesNo): YesNo
 
-    operation finalize(block: Block<T, Object?, C>, isLeader: YesNo): YesNo
+    operation mount(node: RxNode<El<T, M>>)
 
-    operation mount(block: Block<T, Object?, C>)
-
-    operation relocate(block: Block<T, Object?, C>)
-
-    operation update(block: Block<T, Object?, C>)
+    operation update(node: RxNode<El<T, M>>)
 
     global
-    {
-      blinkingEffectMarker: Text?
+    operation findBrotherlyHost<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
 
-      operation findEffectiveHtmlBlockHost(block: Block<Object>): Block<DOM.HTMLElement /*(!)| SVGElement*/>
+    global
+    operation findBrotherlyPrevSibling<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
 
-      operation findPrevSiblingHtmlBlock(ties: MergedItem<Block<Object>>): MergedItem<Block<DOM.HTMLElement /*(!)| SVGElement*/>>?
-    }
-
+    global
+    blinkingEffectMarker: Text?
   }
 
-  // HtmlDriver
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type HtmlDriver<T = DOM.HTMLElement, C> = object BaseHtmlDriver<T, C>
+  type StaticDriver<T: DOM.HTMLElement> = object WebDriver<T>
   {
-    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C?})
+    guarded
+    native: T
+
+    on create(native: T, name: Text, isRow: YesNo, predefine: SimpleDelegate<El<T>>? = none)
+
+    operation setNativeElement(node: RxNode<El<T>>)
   }
 
-  // SvgDriver
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type SvgDriver<T = DOM.SVGElement, C> = object BaseHtmlDriver<T, C>
+  type HtmlElementDriver<T: DOM.HTMLElement, M = Object?> = object WebDriver<T, M>
   {
-    operation create(block: Block<T, Object?, C, None>, b: object { native: T?; controller: C? })
+    operation setNativeElement(node: RxNode<El<T, M>>)
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type SvgElementDriver<T: DOM.SVGElement, M = Object?> = object WebDriver<T, M>
+  {
+    operation setNativeElement(node: RxNode<El<T, M>>)
   }
 }

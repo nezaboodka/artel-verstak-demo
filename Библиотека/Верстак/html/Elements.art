@@ -1,0 +1,53 @@
+
+import JS = Artel.JavaScript
+import DOM = Browser
+import Реактроник
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation Section<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation Table<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation row<T = None>(builder: None | operation(element: None): T, shiftCursorDown: Number? = none)
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation startNewRow(shiftCursorDown: Number? = none)
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation cursor(areaParams: ElArea)
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation Note(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation HtmlNote(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation Group<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation Handler<M = Object?>(update: Delegate<El<None, M>>): RxNode<El<None, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation SyntheticElement<M = Object?>(declaration: RxNodeDecl<El<None, M>>? = none, preset: RxNodeDecl<El<None, M>>? = none): RxNode<El<None, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type VerstakElementDriver<T: DOM.HTMLElement> = object HtmlElementDriver<T>
+  {
+    operation update(node: RxNode<El<T>>)
+  }
+}

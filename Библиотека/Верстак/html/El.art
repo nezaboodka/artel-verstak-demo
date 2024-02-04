@@ -1,0 +1,320 @@
+
+import JS = Artel.JavaScript
+import DOM = Browser
+import Реактроник
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElDriver<T: DOM.Element, M = Object?> = object BaseDriver<El<T, M>>
+  {
+    operation allocate(node: RxNode<El<T, M>>): El<T, M>
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type El<T = Object?, M = Object?> = aspect
+  {
+    guarded
+    node: RxNode<El<T, M>>
+
+    native: T
+
+    model: M
+
+    kind: ElKind
+
+    area: ElArea
+
+    widthGrowth: Number
+
+    minWidth: Text
+
+    maxWidth: Text
+    
+    heightGrowth: Number
+
+    minHeight: Text
+
+    maxHeight: Text
+
+    contentAlignment: Align
+
+    elementAlignment: Align
+
+    contentWrapping: YesNo
+
+    overlayVisible: YesNo?
+
+    operation useStyle(styleName: Text, enabled: YesNo? = none)
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElKind = variant
+  {
+    section = 0
+    table = 1
+    note = 2
+    group = 3
+    part = 4
+    cursor = 5
+    native = 6
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElCoords = aspect
+  {
+    x1: Number
+    y1: Number
+    x2: Number
+    y2: Number
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type Align = variant
+  {
+    default = 16
+    to-bounds = 0
+    to-left = 1
+    to-center-x = 2
+    to-right = 3
+    to-top = 4
+    to-center-y = 8
+    to-bottom = 12
+    to-center = 10
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElasticSize = aspect
+  {
+    cells: Number?
+    min: Text?
+    max: Text?
+    growth: Number?
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type TrackSize = aspect ElasticSize
+  {
+    track: Text | Number | None
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElArea = None | Text | object
+  {
+    cellsOverWidth: Number?
+    cellsOverHeight: Number?
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElImpl<T: DOM.Element = Object?, M = Object?> = object El<T, M>
+  {
+    guarded
+    node: RxNode<El<T, M>>;
+
+    maxColumnCount: Number
+
+    maxRowCount: Number
+
+    cursorPosition: CursorPosition?
+
+    native: T;
+
+    model: M;
+
+    // hidden
+    // _kind
+
+    // hidden
+    // _area
+
+    // hidden
+    // _coords
+
+    // hidden
+    // _widthGrowth
+
+    // hidden
+    // _minWidth
+
+    // hidden
+    // _maxWidth
+
+    // hidden
+    // _heightGrowth
+
+    // hidden
+    // _minHeight
+
+    // hidden
+    // _maxHeight
+
+    // hidden
+    // _contentAlignment
+
+    // hidden
+    // _elementAlignment
+
+    // hidden
+    // _contentWrapping
+
+    // hidden
+    // _overlayVisible
+
+    // hidden
+    // _hasStyles
+
+    on create(node: RxNode<El<T, M>>)
+
+    operation prepareForUpdate()
+
+    guarded
+    isSection: YesNo
+
+    guarded
+    isTable: YesNo
+
+    guarded
+    isAuxiliary: YesNo
+
+    kind: ElKind
+
+    area: ElArea
+
+    widthGrowth: Number
+
+    minWidth: Text
+
+    maxWidth: Text
+
+    heightGrowth: Number
+
+    minHeight: Text
+
+    maxHeight: Text
+
+    contentAlignment: Align
+
+    elementAlignment: Align
+
+    contentWrapping: YesNo
+
+    overlayVisible: YesNo?
+
+    operation useStyle(styleName: Text, enabled: YesNo? = none)
+
+    // hidden
+    // rowBreak
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type CursorPosition = aspect
+  {
+    x: Number
+
+    y: Number
+
+    runningMaxX: Number
+
+    runningMaxY: Number
+
+    flags: CursorFlags
+
+    on create(prev: CursorPosition)
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type CursorFlags = variant
+  {
+    none` = 0
+    ownCursorPosition = 1
+    usesRunningColumnCount = 2
+    usesRunningRowCount = 4
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type CursorCommand = object
+  {
+    absolute: Text?
+    columnShift: Number?
+    rowShift: Number?
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type CursorCommandDriver = object ElDriver<DOM.Element, Object?>
+  {
+    on create()
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type Apply = object
+  {
+    global
+    operation kind<T: DOM.Element>(element: El<T, Object?>, value: ElKind)
+
+    global
+    operation coords<T: DOM.Element>(element: El<T, Object?>, value: ElCoords?)
+
+    global
+    operation widthGrowth<T: DOM.Element>(element: El<T, Object?>, value: Number)
+
+    global
+    operation minWidth<T: DOM.Element>(element: El<T, Object?>, value: Text)
+
+    global
+    operation applyMaxWidth<T: DOM.Element>(element: El<T, Object?>, value: Text)
+
+    global
+    operation heightGrowth<T: DOM.Element>(element: El<T, Object?>, value: Number)
+
+    global
+    operation minHeight<T: DOM.Element>(element: El<T, Object?>, value: Text)
+
+    global
+    operation maxHeight<T: DOM.Element>(element: El<T, Object?>, value: Text)
+
+    global
+    operation contentAlignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
+
+    global
+    operation elementAlignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
+
+    global
+    operation contentWrapping<T: DOM.Element>(element: El<T, Object?>, value: YesNo)
+
+    global
+    operation overlayVisible<T: DOM.Element>(element: El<T, Object?>, value: YesNo?)
+
+    global
+    operation style<T: DOM.Element>(element: El<T, Object?>, secondary: YesNo, styleName: Text, enabled: YesNo? = none)
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  const Constants: object
+  {
+    element: Text
+
+    partition: Text
+
+    group: Text
+
+    layouts: List<Text>
+
+    keyAttrName: Text
+
+    kindAttrName: Text
+  }
+}

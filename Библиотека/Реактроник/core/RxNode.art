@@ -13,8 +13,8 @@ external
   type Mode = variant
   {
     default = 0
-    independentUpdate = 1
-    manualMount = 2
+    independent-update = 1
+    manual-mount = 2
   }
 
 

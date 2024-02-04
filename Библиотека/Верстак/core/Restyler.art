@@ -6,10 +6,17 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation restyler<T>(restyle: operation(): T): ObservablesStyles<T>
 
+
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ObservablesStyles<T> = object
   {
+    // hidden guarded
+    // restyle
+
     on create(restyle: operation(): T)
+
+    hidden by type
+    operation cache(): T
 
     guarded
     class: T

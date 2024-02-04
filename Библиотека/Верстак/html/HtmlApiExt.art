@@ -1,0 +1,13 @@
+
+import JS = Artel.JavaScript
+import DOM = Browser
+
+external
+{
+  // #JS.ВнешняяРеализация(модуль = "verstak")
+  // interface Element {
+  //     sensors: HtmlSensors;
+  //     dataForSensor: DataForSensor;
+  //     resizeObserver?: ResizeObserver;
+  // }
+}

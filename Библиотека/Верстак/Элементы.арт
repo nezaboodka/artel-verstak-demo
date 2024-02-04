@@ -1,95 +1,96 @@
-подключить Browser
+подключить DOM = Browser
+подключить Реактроник
 
 операция Страница(
-  перестроить: Обработчик<HTMLElement>? = пусто)
-  : Block<HTMLElement>
+  перестроить: Обработчик<DOM.HTMLElement>? = пусто): RxNode<El<DOM.HTMLElement>>
 {
-  результат = HtmlBody(`(mode = пусто, update = перестроить))
+  результат = HtmlBody(RxNodeDecl<El<DOM.HTMLElement>>(
+    mode = пусто, update = перестроить))
 }
 
-операция Надпись(текст: Текст): Block<HTMLElement>
+операция Надпись(текст: Текст): RxNode<El<DOM.HTMLElement, None>>
 {
   результат = Note(текст)
 }
 
 операция Секция(
   режим: Режим? = пусто,
-  перестроить: Обработчик<HTMLElement, None, None, None>? = пусто)
-  : Block<HTMLElement, None, None, None>
+  перестроить: Обработчик<DOM.HTMLElement>? = пусто)
+  : RxNode<El<DOM.HTMLElement, None>>
 {
   результат = Section<None, None>(`(mode = режим, update = перестроить))
 }
 
 псевдонимы(русский)
 {
-  тип Обработчик(блок, базис) = Delegate(block, basis)
+  тип Обработчик(элем, базис) = Delegate(element, basis)
 
   тип Режим = Mode
   {
-    Стандартный = Default
-    ТочечноеОбновление = PinpointUpdate
-    РучноеВстраивание = ManualMount
+    стандартный = default
+    независимое-обновление = independent-update
+    ручное-встраивание = manual-mount
   }
 
   тип Выравнивание = Align
   {
-    Стандартно = Default
-    ПоГраницам = ToBounds
-    ПоЛевомуКраю = ToLeft
-    ПоЦентруШирины = ToCenterX
-    ПоПравомуКраю = ToRight
-    ПоВерхнемуКраю = ToTop
-    ПоЦентруВысоты = ToCenterY
-    ПоНижнемуКраю = ToBottom
-    ПоЦентру = ToCenter
+    стандартно = default
+    по-границам = to-bounds
+    по-левому-краю = to-left
+    по-центру-ширины = to-center-x
+    по-правому-краю = to-right
+    по-верхнему-краю = to-top
+    по-центру-высоты = to-center-y
+    по-нижнему-краю = to-bottom
+    по-центру = to-center
   }
 
-  тип Блок = Block
-  {
-    узел = node
+  // тип Блок = Block
+  // {
+  //   узел = node
 
-    html = native
+  //   html = native
 
-    это-есть-секция = isSection
+  //   это-есть-секция = isSection
 
-    это-есть-таблица = isTable
+  //   это-есть-таблица = isTable
 
-    начальное-перестроение = isInitialUpdate
+  //   начальное-перестроение = isInitialUpdate
 
-    модель = model
+  //   модель = model
 
-    контроллер = controller
+  //   контроллер = controller
 
-    вид = kind
+  //   вид = kind
 
-    область = area
+  //   область = area
 
-    рост-ширины = widthGrowth
+  //   рост-ширины = widthGrowth
 
-    минимальная-ширина = minWidth
+  //   минимальная-ширина = minWidth
 
-    максимальная-ширина = maxWidth
+  //   максимальная-ширина = maxWidth
 
-    рост-высоты = heightGrowth
+  //   рост-высоты = heightGrowth
 
-    минимальная-высота = minHeight
+  //   минимальная-высота = minHeight
 
-    максимальная-высота = maxHeight
+  //   максимальная-высота = maxHeight
 
-    выравнивание-содержимого = contentAlignment
+  //   выравнивание-содержимого = contentAlignment
 
-    выравнивание-блока = blockAlignment
+  //   выравнивание-блока = blockAlignment
 
-    перенос-содержимого = contentWrapping
+  //   перенос-содержимого = contentWrapping
 
-    всплывающий-элемент = overlayVisible
+  //   всплывающий-элемент = overlayVisible
 
-    приоритет-перестроения = updatePriority
+  //   приоритет-перестроения = updatePriority
 
-    перетасовка-элементов = childrenShuffling
+  //   перетасовка-элементов = childrenShuffling
 
-    строгий-порядок = strictOrder
-  }
+  //   строгий-порядок = strictOrder
+  // }
 
   операция начать-новую-строку(сместить-курсор-вниз) = startNewRow(shiftCursorDown)
 }

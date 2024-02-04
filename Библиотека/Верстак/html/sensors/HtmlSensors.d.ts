@@ -1,0 +1,34 @@
+import { FocusSensor } from "./FocusSensor.js";
+import { HoverSensor } from "./HoverSensor.js";
+import { HtmlDragSensor } from "./HtmlDragSensor.js";
+import { KeyboardSensor } from "./KeyboardSensor.js";
+import { ButtonSensor } from "./ButtonSensor.js";
+import { ResizeSensor } from "./ResizeSensor.js";
+import { WheelSensor } from "./WheelSensor.js";
+import { ScrollSensor } from "./ScrollSensor.js";
+import { WindowSensor } from "./WindowSensor.js";
+import { PointerSensor } from "./PointerSensor.js";
+export declare class HtmlSensors {
+    private readonly _element;
+    private _window;
+    get window(): WindowSensor;
+    private _focus;
+    get focus(): FocusSensor;
+    private _hover;
+    get hover(): HoverSensor;
+    private _keyboard;
+    get keyboard(): KeyboardSensor;
+    private _wheel;
+    get wheel(): WheelSensor;
+    private _scroll;
+    get scroll(): ScrollSensor;
+    private _resize;
+    get resize(): ResizeSensor;
+    private _htmlDrag;
+    get htmlDrag(): HtmlDragSensor;
+    private _button;
+    get button(): ButtonSensor;
+    private _pointer;
+    get pointer(): PointerSensor;
+    constructor(element: HTMLElement | SVGElement);
+}

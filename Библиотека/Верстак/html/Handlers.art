@@ -1,0 +1,15 @@
+
+import JS = Artel.JavaScript
+import DOM = Browser
+
+external
+{
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation OnClick(target: DOM.HTMLElement, action: operation() | /*(!)ToggleRef |*/ None, key: Text? = none)
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation OnResize(target: DOM.HTMLElement, action: None | operation(element: ResizedElement), key: Text? = none)
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  operation OnFocus(target: DOM.HTMLElement, model: FocusModel, switchEditMode: None | operation(model: FocusModel? = none) = none, key: Text? = none)
+}
