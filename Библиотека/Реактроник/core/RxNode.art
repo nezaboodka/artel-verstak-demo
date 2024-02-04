@@ -1,6 +1,21 @@
 
 import JS = Artel.JavaScript
 
+type Mode = variant
+{
+  default = 0
+  independent-update = 1
+  manual-mount = 2
+}
+
+
+type Priority = variant
+{
+  realtime = 0
+  normal = 1
+  background = 2
+}
+
 external
 {
   type Delegate<T> = operation(element: T, base: operation())
@@ -9,22 +24,22 @@ external
   type SimpleDelegate<T = Object?, R = None> = operation(element: T): R
 
 
-  #JS.ВнешняяРеализация(модуль = "reactronic")
-  type Mode = variant
-  {
-    default = 0
-    independent-update = 1
-    manual-mount = 2
-  }
+  // #JS.ВнешняяРеализация(модуль = "reactronic")
+  // type Mode = variant
+  // {
+  //   default = 0
+  //   independent-update = 1
+  //   manual-mount = 2
+  // }
 
 
-  #JS.ВнешняяРеализация(модуль = "reactronic")
-  type Priority = variant
-  {
-    realtime = 0
-    normal = 1
-    background = 2
-  }
+  // #JS.ВнешняяРеализация(модуль = "reactronic")
+  // type Priority = variant
+  // {
+  //   realtime = 0
+  //   normal = 1
+  //   background = 2
+  // }
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
