@@ -4,8 +4,7 @@
 операция Страница(
   перестроить: Обработчик<DOM.HTMLElement>? = пусто): RxNode<El<DOM.HTMLElement>>
 {
-  результат = HtmlBody(RxNodeDecl<El<DOM.HTMLElement>>(
-    mode = пусто, update = перестроить))
+  результат = HtmlBody(`(update = перестроить))
 }
 
 операция Надпись(текст: Текст): RxNode<El<DOM.HTMLElement, None>>
@@ -23,7 +22,7 @@
 
 псевдонимы(русский)
 {
-  тип Обработчик(элем, базис) = Delegate(element, basis)
+  тип Обработчик<Т>(элем, базис) = Delegate<T>(element, basis)
 
   тип Режим = Mode
   {
