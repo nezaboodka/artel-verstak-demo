@@ -22,15 +22,6 @@
 
 псевдонимы(русский)
 {
-  тип Обработчик<Т>(элем, базис) = Delegate<T>(element, basis)
-
-  тип Режим = Mode
-  {
-    стандартный = default
-    независимое-обновление = independent-update
-    ручное-встраивание = manual-mount
-  }
-
   тип Выравнивание = Align
   {
     стандартно = default
@@ -44,52 +35,38 @@
     по-центру = to-center
   }
 
-  // тип Блок = Block
-  // {
-  //   узел = node
+  тип Эль = El
+  {
+    узел = node
 
-  //   html = native
+    html = native
 
-  //   это-есть-секция = isSection
+    модель = model
 
-  //   это-есть-таблица = isTable
+    вид = kind
 
-  //   начальное-перестроение = isInitialUpdate
+    область = area
 
-  //   модель = model
+    рост-ширины = width-growth
 
-  //   контроллер = controller
+    минимальная-ширина = min-width
 
-  //   вид = kind
+    максимальная-ширина = max-width
 
-  //   область = area
+    рост-высоты = height-growth
 
-  //   рост-ширины = widthGrowth
+    минимальная-высота = min-height
 
-  //   минимальная-ширина = minWidth
+    максимальная-высота = max-height
 
-  //   максимальная-ширина = maxWidth
+    выравнивание-содержимого = content-alignment
 
-  //   рост-высоты = heightGrowth
+    выравнивание-элемента = element-alignment
 
-  //   минимальная-высота = minHeight
+    перенос-содержимого = content-wrapping
 
-  //   максимальная-высота = maxHeight
-
-  //   выравнивание-содержимого = contentAlignment
-
-  //   выравнивание-блока = blockAlignment
-
-  //   перенос-содержимого = contentWrapping
-
-  //   всплывающий-элемент = overlayVisible
-
-  //   приоритет-перестроения = updatePriority
-
-  //   перетасовка-элементов = childrenShuffling
-
-  //   строгий-порядок = strictOrder
-  // }
+    всплывающий-элемент = overlay-visible
+  }
 
   операция начать-новую-строку(сместить-курсор-вниз) = startNewRow(shiftCursorDown)
 }

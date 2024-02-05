@@ -15,10 +15,10 @@
 
     Секция(независимое-обновление,
     {
-      element.width-growth = 1
-      element.height-growth = 1
-      element.element-alignment = по-границам
-      element.content-alignment = по-центру
+      element.рост-ширины = 1
+      element.рост-высоты = 1
+      element.выравнивание-элемента = по-границам
+      element.выравнивание-содержимого = по-центру
 
       Надпись("Поехали!")
 
