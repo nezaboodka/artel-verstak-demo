@@ -51,13 +51,12 @@
 
     фон = background
 
-    фон--вложение = background-attachment
+    вложения-для-фона = background-attachment
 
-    фон--режим-смешивания = background-blend-mode
+    режим-смешивания-фона = background-blend-mode
 
-    фон--отсечение = background-clip
+    отсечение-фона = background-clip
 
-    фон--цвет = background-color
     цвет-фона = background-color
 
     фон--изображение = background-image
@@ -82,61 +81,61 @@
 
     рамка = border
 
-    рамка--блок = border-block
+    блок-рамки = border-block
 
-    рамка--цвет-блока = border-block-color
+    цвет-блока-рамки = border-block-color
 
-    рамка--окончание-блока = border-block-end
+    окончание-блока-рамки = border-block-end
 
-    рамка--цвет-конца-блока = border-block-end-color
+    цвет-конца-блока-рамки = border-block-end-color
 
-    рамка--стиль-конца-блока = border-block-end-style
+    стиль-конца-блока-рамки = border-block-end-style
 
-    рамка--толщина-конца-блока = border-block-end-width
+    толщина-конца-блока-рамки = border-block-end-width
 
-    рамка--начало-блока = border-block-start
+    начало-блока-рамки = border-block-start
 
-    рамка--цвет-начала-блока = border-block-start-color
+    цвет-начала-блока-рамки = border-block-start-color
 
-    рамка--стиль-начала-блока = border-block-start-style
+    стиль-начала-блока-рамки = border-block-start-style
 
-    рамка--толщина-начала-блока = border-block-start-width
+    толщина-начала-блока-рамки = border-block-start-width
 
-    рамка--стиль-блока = border-block-style
+    стиль-блока-рамки = border-block-style
 
-    рамка--толщина-блока = border-block-width
+    толщина-блока-рамки = border-block-width
 
-    рамка--снизу = border-bottom
+    рамка-снизу = border-bottom
 
-    рамка--цвет-снизу = border-bottom-color
+    цвет-рамки-снизу = border-bottom-color
 
-    рамка--радиус-снизу-слева = border-bottom-left-radius
+    радиус-рамки-снизу-слева = border-bottom-left-radius
 
-    рамка--радиус-снизу-справа = border-bottom-right-radius
+    радиус-рамки-снизу-справа = border-bottom-right-radius
 
-    рамка--стиль-снизу = border-bottom-style
+    стиль-рамки-снизу = border-bottom-style
 
-    рамка--толщина-снизу = border-bottom-width
+    толщина-рамки-снизу = border-bottom-width
 
-    рамка--свёртка = border-collapse
+    свёртка-рамки = border-collapse
 
-    рамка--цвет = border-color
+    цвет-рамки = border-color
 
-    рамка--радиус-окончания-окончания = border-end-end-radius
+    радиус-окончания-окончания-рамки = border-end-end-radius
 
-    рамка--радиус-начала-окончания = border-end-start-radius
+    радиус-начала-окончания-рамки = border-end-start-radius
 
-    рамка--изображение = border-image
+    изображение-рамки = border-image
 
-    рамка--начало-изображения = border-image-outset
+    начало-изображения-рамки = border-image-outset
 
-    рамка--повторение-изображения = border-image-repeat
+    повторение-изображения-рамки = border-image-repeat
 
-    рамка--нарезка-изображения = border-image-slice
+    нарезка-изображения-рамки = border-image-slice
 
-    рамка--источник-изображения = border-image-source
+    источник-изображения-рамки = border-image-source
 
-    рамка--шириша-изоражения = border-image-width
+    ширина-изоражения-рамки = border-image-width
 
     рамка--линейно = border-inline
 
@@ -322,7 +321,7 @@
 
     // flex-wrap
 
-    // float
+    плавающий-элемент = float
 
     // flood-color
 
@@ -334,7 +333,7 @@
 
     // font-feature-settings
 
-    // font-kerning
+    кернинг-шрифта = font-kerning
 
     // font-optical-sizing
 
@@ -383,23 +382,23 @@
 
     область-сетки = grid-area
 
-    // grid-auto-columns
+    автоматические-колоонки-сетки = grid-auto-columns
 
-    // grid-auto-flow
+    автоматическое-размещение-на-сетке = grid-auto-flow
 
-    // grid-auto-rows
+    автоматические-строки-сетки = grid-auto-rows
 
     колонка-сетки = grid-column
 
-    // grid-column-end
+    конечная-колонка-сетки = grid-column-end
 
-    // grid-column-start
+    начальная-колонка-сетки = grid-column-start
 
     строка-сетки = grid-row
 
-    // grid-row-end
+    конечная-строка-сетки = grid-row-end
 
-    // grid-row-start
+    начальная-строка-сетки = grid-row-start
 
     // grid-template
 
@@ -413,7 +412,7 @@
 
     // hyphenate-character
 
-    // hyphens
+    перенос-слов = hyphens
 
     // image-rendering
 
@@ -450,11 +449,11 @@
 
     // lighting-color
 
-    // line-break
+    перенос-строки = line-break
 
-    // line-height
+    высота-строки = line-height
 
-    // list-style
+    стиль-списка = list-style
 
     // list-style-image
 
@@ -472,11 +471,11 @@
 
     отступ-снизу = margin-bottom
 
-    // margin-inline
+    отступ-внутри = margin-inline
 
-    // margin-inline-end
+    отступ-окончания-внутри = margin-inline-end
 
-    // margin-inline-start
+    отступ-начала-внутри = margin-inline-start
 
     отступ-слева = margin-left
 
@@ -514,7 +513,7 @@
 
     глубина-маски = math-depth
 
-    // math-style
+    математический-стиль = math-style
 
     // max-block-size
 
@@ -588,7 +587,7 @@
 
     // overscroll-behavior-y
 
-    // padding
+    отступ-внутри = padding
 
     // padding-block
 
@@ -596,7 +595,7 @@
 
     // padding-block-start
 
-    // padding-bottom
+    отступ-внутри-снизу = padding-bottom
 
     // padding-inline
 
@@ -604,11 +603,11 @@
 
     // padding-inline-start
 
-    // padding-left
+    отступ-внутри-слева = padding-left
 
-    // padding-right
+    отступ-внутри-справа = padding-right
 
-    // padding-top
+    отступ-внутри-сверху = padding-top
 
     страница = page
 
@@ -729,7 +728,7 @@
 
     стоп-полупрозрачность = stop-opacity
 
-    // stroke
+    обводка = stroke
 
     // stroke-dasharray
 
@@ -741,13 +740,13 @@
 
     // stroke-miterlimit
 
-    // stroke-opacity
+    полупрозрачность-обводки = stroke-opacity
 
-    // stroke-width
+    толщина-обводки = stroke-width
 
-    // tab-size
+    размер-табуляции = tab-size
 
-    // table-layout
+    табличное-раскладка = table-layout
 
     выравнивание-текста = text-align
 
