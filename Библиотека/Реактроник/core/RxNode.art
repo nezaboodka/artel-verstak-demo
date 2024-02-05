@@ -18,10 +18,10 @@ type Priority = variant
 
 external
 {
-  type Delegate<T> = operation(el: T, base: operation())
+  type Delegate<T> = operation(el: T, basis: operation())
 
 
-  type SimpleDelegate<T = Object?, R = None> = operation(element: T): R
+  type SimpleDelegate<T = Object?, R = None> = operation(el: T): R
 
 
   // #JS.ВнешняяРеализация(модуль = "reactronic")

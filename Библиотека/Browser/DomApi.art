@@ -5258,276 +5258,277 @@ external
 
   type CSSStyleDeclaration = object
   {
-    accentColor: Artel.Text
+    accent-color: Artel.Text
 
-    alignContent: Artel.Text
+    align-content: Artel.Text
 
-    alignItems: Artel.Text
+    align-items: Artel.Text
 
-    alignSelf: Artel.Text
+    align-self: Artel.Text
 
-    alignmentBaseline: Artel.Text
+    alignment-baseline: Artel.Text
 
     all: Artel.Text
 
     animation: Artel.Text
 
-    animationComposition: Artel.Text
+    animation-composition: Artel.Text
 
-    animationDelay: Artel.Text
+    animation-delay: Artel.Text
 
-    animationDirection: Artel.Text
+    animation-direction: Artel.Text
 
-    animationDuration: Artel.Text
+    animation-duration: Artel.Text
 
-    animationFillMode: Artel.Text
+    animation-fill-mode: Artel.Text
 
-    animationIterationCount: Artel.Text
+    animation-iteration-count: Artel.Text
 
-    animationName: Artel.Text
+    animation-name: Artel.Text
 
-    animationPlayState: Artel.Text
+    animation-play-state: Artel.Text
 
-    animationTimingFunction: Artel.Text
+    animation-timing-function: Artel.Text
 
     appearance: Artel.Text
 
-    aspectRatio: Artel.Text
+    aspect-ratio: Artel.Text
 
-    backdropFilter: Artel.Text
+    backdrop-filter: Artel.Text
 
-    backfaceVisibility: Artel.Text
+    backface-visibility: Artel.Text
 
     background: Artel.Text
 
-    backgroundAttachment: Artel.Text
+    background-attachment: Artel.Text
 
-    backgroundBlendMode: Artel.Text
+    background-blend-mode: Artel.Text
 
-    backgroundClip: Artel.Text
+    background-clip: Artel.Text
 
-    backgroundColor: Artel.Text
+    background-color: Artel.Text
 
-    backgroundImage: Artel.Text
+    background-image: Artel.Text
 
-    backgroundOrigin: Artel.Text
+    background-origin: Artel.Text
 
-    backgroundPosition: Artel.Text
+    background-position: Artel.Text
 
-    backgroundPositionX: Artel.Text
+    background-position-x: Artel.Text
 
-    backgroundPositionY: Artel.Text
+    background-position-y: Artel.Text
 
-    backgroundRepeat: Artel.Text
+    background-repeat: Artel.Text
 
-    backgroundSize: Artel.Text
-    baselineShift: Artel.Text
+    background-size: Artel.Text
 
-    baselineSource: Artel.Text
+    baseline-shift: Artel.Text
 
-    blockSize: Artel.Text
+    baseline-source: Artel.Text
+
+    block-size: Artel.Text
 
     border: Artel.Text
 
-    borderBlock: Artel.Text
+    border-block: Artel.Text
 
-    borderBlockColor: Artel.Text
+    border-block-color: Artel.Text
 
-    borderBlockEnd: Artel.Text
+    border-block-end: Artel.Text
 
-    borderBlockEndColor: Artel.Text
+    border-block-end-color: Artel.Text
 
-    borderBlockEndStyle: Artel.Text
+    border-block-end-style: Artel.Text
 
-    borderBlockEndWidth: Artel.Text
+    border-block-end-width: Artel.Text
 
-    borderBlockStart: Artel.Text
+    border-block-start: Artel.Text
 
-    borderBlockStartColor: Artel.Text
+    border-block-start-color: Artel.Text
 
-    borderBlockStartStyle: Artel.Text
+    border-block-start-style: Artel.Text
 
-    borderBlockStartWidth: Artel.Text
+    border-block-start-width: Artel.Text
 
-    borderBlockStyle: Artel.Text
+    border-block-style: Artel.Text
 
-    borderBlockWidth: Artel.Text
+    border-block-width: Artel.Text
 
-    borderBottom: Artel.Text
+    border-bottom: Artel.Text
 
-    borderBottomColor: Artel.Text
+    border-bottom-color: Artel.Text
 
-    borderBottomLeftRadius: Artel.Text
+    border-bottom-left-radius: Artel.Text
 
-    borderBottomRightRadius: Artel.Text
+    border-bottom-right-radius: Artel.Text
 
-    borderBottomStyle: Artel.Text
+    border-bottom-style: Artel.Text
 
-    borderBottomWidth: Artel.Text
+    border-bottom-width: Artel.Text
 
-    borderCollapse: Artel.Text
+    border-collapse: Artel.Text
 
-    borderColor: Artel.Text
+    border-color: Artel.Text
 
-    borderEndEndRadius: Artel.Text
+    border-end-end-radius: Artel.Text
 
-    borderEndStartRadius: Artel.Text
+    border-end-start-radius: Artel.Text
 
-    borderImage: Artel.Text
+    border-image: Artel.Text
 
-    borderImageOutset: Artel.Text
+    border-image-outset: Artel.Text
 
-    borderImageRepeat: Artel.Text
+    border-image-repeat: Artel.Text
 
-    borderImageSlice: Artel.Text
+    border-image-slice: Artel.Text
 
-    borderImageSource: Artel.Text
+    border-image-source: Artel.Text
 
-    borderImageWidth: Artel.Text
+    border-image-width: Artel.Text
 
-    borderInline: Artel.Text
+    border-inline: Artel.Text
 
-    borderInlineColor: Artel.Text
+    border-inline-color: Artel.Text
 
-    borderInlineEnd: Artel.Text
+    border-inline-end: Artel.Text
 
-    borderInlineEndColor: Artel.Text
+    border-inline-end-color: Artel.Text
 
-    borderInlineEndStyle: Artel.Text
+    border-inline-end-style: Artel.Text
 
-    borderInlineEndWidth: Artel.Text
+    border-inline-end-width: Artel.Text
 
-    borderInlineStart: Artel.Text
+    border-inline-start: Artel.Text
 
-    borderInlineStartColor: Artel.Text
+    border-inline-start-color: Artel.Text
 
-    borderInlineStartStyle: Artel.Text
+    border-inline-start-style: Artel.Text
 
-    borderInlineStartWidth: Artel.Text
+    border-inline-start-width: Artel.Text
 
-    borderInlineStyle: Artel.Text
+    border-inline-style: Artel.Text
 
-    borderInlineWidth: Artel.Text
+    border-inline-width: Artel.Text
 
-    borderLeft: Artel.Text
+    border-left: Artel.Text
 
-    borderLeftColor: Artel.Text
+    border-left-color: Artel.Text
 
-    borderLeftStyle: Artel.Text
+    border-left-style: Artel.Text
 
-    borderLeftWidth: Artel.Text
+    border-left-width: Artel.Text
 
-    borderRadius: Artel.Text
+    border-radius: Artel.Text
 
-    borderRight: Artel.Text
+    border-right: Artel.Text
 
-    borderRightColor: Artel.Text
+    border-right-color: Artel.Text
 
-    borderRightStyle: Artel.Text
+    border-right-style: Artel.Text
 
-    borderRightWidth: Artel.Text
+    border-right-width: Artel.Text
 
-    borderSpacing: Artel.Text
+    border-spacing: Artel.Text
 
-    borderStartEndRadius: Artel.Text
+    border-start-end-radius: Artel.Text
 
-    borderStartStartRadius: Artel.Text
+    border-start-start-radius: Artel.Text
 
-    borderStyle: Artel.Text
+    border-style: Artel.Text
 
-    borderTop: Artel.Text
+    border-top: Artel.Text
 
-    borderTopColor: Artel.Text
+    border-top-color: Artel.Text
 
-    borderTopLeftRadius: Artel.Text
+    border-top-left-radius: Artel.Text
 
-    borderTopRightRadius: Artel.Text
+    border-top-right-radius: Artel.Text
 
-    borderTopStyle: Artel.Text
+    border-top-style: Artel.Text
 
-    borderTopWidth: Artel.Text
+    border-top-width: Artel.Text
 
-    borderWidth: Artel.Text
+    border-width: Artel.Text
 
     bottom: Artel.Text
 
-    boxShadow: Artel.Text
+    box-shadow: Artel.Text
 
-    boxSizing: Artel.Text
+    box-sizing: Artel.Text
 
-    breakAfter: Artel.Text
+    break-after: Artel.Text
 
-    breakBefore: Artel.Text
+    break-before: Artel.Text
 
-    breakInside: Artel.Text
+    break-inside: Artel.Text
 
-    captionSide: Artel.Text
+    caption-side: Artel.Text
 
-    caretColor: Artel.Text
+    caret-color: Artel.Text
 
     clear: Artel.Text
 
-    clipPath: Artel.Text
+    clip-path: Artel.Text
 
-    clipRule: Artel.Text
+    clip-rule: Artel.Text
 
     color: Artel.Text
 
-    colorInterpolation: Artel.Text
+    color-interpolation: Artel.Text
 
-    colorInterpolationFilters: Artel.Text
+    color-interpolation-filters: Artel.Text
 
-    colorScheme: Artel.Text
+    color-scheme: Artel.Text
 
-    columnCount: Artel.Text
+    column-count: Artel.Text
 
-    columnFill: Artel.Text
+    column-fill: Artel.Text
 
-    columnGap: Artel.Text
+    column-gap: Artel.Text
 
-    columnRule: Artel.Text
+    column-rule: Artel.Text
 
-    columnRuleColor: Artel.Text
+    column-rule-color: Artel.Text
 
-    columnRuleStyle: Artel.Text
+    column-rule-style: Artel.Text
 
-    columnRuleWidth: Artel.Text
+    column-rule-width: Artel.Text
 
-    columnSpan: Artel.Text
+    column-span: Artel.Text
 
-    columnWidth: Artel.Text
+    column-width: Artel.Text
 
     columns: Artel.Text
 
     contain: Artel.Text
 
-    containIntrinsicBlockSize: Artel.Text
+    contain-intrinsic-block-size: Artel.Text
 
-    containIntrinsicHeight: Artel.Text
+    contain-intrinsic-height: Artel.Text
 
-    containIntrinsicInlineSize: Artel.Text
+    contain-intrinsic-inline-size: Artel.Text
 
-    containIntrinsicSize: Artel.Text
+    contain-intrinsic-size: Artel.Text
 
-    containIntrinsicWidth: Artel.Text
+    contain-intrinsic-width: Artel.Text
 
     container: Artel.Text
 
-    containerName: Artel.Text
+    container-name: Artel.Text
 
-    containerType: Artel.Text
+    container-type: Artel.Text
 
     content: Artel.Text
 
-    counterIncrement: Artel.Text
+    counter-increment: Artel.Text
 
-    counterReset: Artel.Text
+    counter-reset: Artel.Text
 
-    counterSet: Artel.Text
+    counter-set: Artel.Text
 
-    cssFloat: Artel.Text
+    css-float: Artel.Text
 
-    cssText: Artel.Text
+    css-text: Artel.Text
 
     cursor: Artel.Text
 
@@ -5541,258 +5542,258 @@ external
 
     display: Artel.Text
 
-    dominantBaseline: Artel.Text
+    dominant-baseline: Artel.Text
 
-    emptyCells: Artel.Text
+    empty-cells: Artel.Text
 
     fill: Artel.Text
 
-    fillOpacity: Artel.Text
+    fill-opacity: Artel.Text
 
-    fillRule: Artel.Text
+    fill-rule: Artel.Text
 
     filter: Artel.Text
 
     flex: Artel.Text
 
-    flexBasis: Artel.Text
+    flex-basis: Artel.Text
 
-    flexDirection: Artel.Text
+    flex-direction: Artel.Text
 
-    flexFlow: Artel.Text
+    flex-flow: Artel.Text
 
-    flexGrow: Artel.Text
+    flex-grow: Artel.Text
 
-    flexShrink: Artel.Text
+    flex-shrink: Artel.Text
 
-    flexWrap: Artel.Text
+    flex-wrap: Artel.Text
 
     float: Artel.Text
 
-    floodColor: Artel.Text
+    flood-color: Artel.Text
 
-    floodOpacity: Artel.Text
+    flood-opacity: Artel.Text
 
     font: Artel.Text
 
-    fontFamily: Artel.Text
+    font-family: Artel.Text
 
-    fontFeatureSettings: Artel.Text
+    font-feature-settings: Artel.Text
 
-    fontKerning: Artel.Text
+    font-kerning: Artel.Text
 
-    fontOpticalSizing: Artel.Text
+    font-optical-sizing: Artel.Text
 
-    fontPalette: Artel.Text
+    font-palette: Artel.Text
 
-    fontSize: Artel.Text
+    font-size: Artel.Text
 
-    fontSizeAdjust: Artel.Text
+    font-size-adjust: Artel.Text
 
-    fontStretch: Artel.Text
+    font-stretch: Artel.Text
 
-    fontStyle: Artel.Text
+    font-style: Artel.Text
 
-    fontSynthesis: Artel.Text
+    font-synthesis: Artel.Text
 
-    fontSynthesisSmallCaps: Artel.Text
+    font-synthesis-small-caps: Artel.Text
 
-    fontSynthesisStyle: Artel.Text
+    font-synthesis-style: Artel.Text
 
-    fontSynthesisWeight: Artel.Text
+    font-synthesis-weight: Artel.Text
 
-    fontVariant: Artel.Text
+    font-variant: Artel.Text
 
-    fontVariantAlternates: Artel.Text
+    font-variant-alternates: Artel.Text
 
-    fontVariantCaps: Artel.Text
+    font-variant-caps: Artel.Text
 
-    fontVariantEastAsian: Artel.Text
+    font-variant-east-asian: Artel.Text
 
-    fontVariantLigatures: Artel.Text
+    font-variant-ligatures: Artel.Text
 
-    fontVariantNumeric: Artel.Text
+    font-variant-numeric: Artel.Text
 
-    fontVariantPosition: Artel.Text
+    font-variant-position: Artel.Text
 
-    fontVariationSettings: Artel.Text
+    font-variation-settings: Artel.Text
 
-    fontWeight: Artel.Text
+    font-weight: Artel.Text
 
-    forcedColorAdjust: Artel.Text
+    forced-color-adjust: Artel.Text
 
     gap: Artel.Text
 
     grid: Artel.Text
 
-    gridArea: Artel.Text
+    grid-area: Artel.Text
 
-    gridAutoColumns: Artel.Text
+    grid-auto-columns: Artel.Text
 
-    gridAutoFlow: Artel.Text
+    grid-auto-flow: Artel.Text
 
-    gridAutoRows: Artel.Text
+    grid-auto-rows: Artel.Text
 
-    gridColumn: Artel.Text
+    grid-column: Artel.Text
 
-    gridColumnEnd: Artel.Text
+    grid-column-end: Artel.Text
 
-    gridColumnStart: Artel.Text
+    grid-column-start: Artel.Text
 
-    gridRow: Artel.Text
+    grid-row: Artel.Text
 
-    gridRowEnd: Artel.Text
+    grid-row-end: Artel.Text
 
-    gridRowStart: Artel.Text
+    grid-row-start: Artel.Text
 
-    gridTemplate: Artel.Text
+    grid-template: Artel.Text
 
-    gridTemplateAreas: Artel.Text
+    grid-template-areas: Artel.Text
 
-    gridTemplateColumns: Artel.Text
+    grid-template-columns: Artel.Text
 
-    gridTemplateRows: Artel.Text
+    grid-template-rows: Artel.Text
 
     height: Artel.Text
 
-    hyphenateCharacter: Artel.Text
+    hyphenate-character: Artel.Text
 
     hyphens: Artel.Text
 
-    imageRendering: Artel.Text
+    image-rendering: Artel.Text
 
-    inlineSize: Artel.Text
+    inline-size: Artel.Text
 
     inset: Artel.Text
 
-    insetBlock: Artel.Text
+    inset-block: Artel.Text
 
-    insetBlockEnd: Artel.Text
+    inset-block-end: Artel.Text
 
-    insetBlockStart: Artel.Text
+    inset-block-start: Artel.Text
 
-    insetInline: Artel.Text
+    inset-inline: Artel.Text
 
-    insetInlineEnd: Artel.Text
+    inset-inline-end: Artel.Text
 
-    insetInlineStart: Artel.Text
+    inset-inline-start: Artel.Text
 
     isolation: Artel.Text
 
-    justifyContent: Artel.Text
+    justify-content: Artel.Text
 
-    justifyItems: Artel.Text
+    justify-items: Artel.Text
 
-    justifySelf: Artel.Text
+    justify-self: Artel.Text
 
     left: Artel.Text
 
     guarded
     length: Number
 
-    letterSpacing: Artel.Text
+    letter-spacing: Artel.Text
 
-    lightingColor: Artel.Text
+    lighting-color: Artel.Text
 
-    lineBreak: Artel.Text
+    line-break: Artel.Text
 
-    lineHeight: Artel.Text
+    line-height: Artel.Text
 
-    listStyle: Artel.Text
+    list-style: Artel.Text
 
-    listStyleImage: Artel.Text
+    list-style-image: Artel.Text
 
-    listStylePosition: Artel.Text
+    list-style-position: Artel.Text
 
-    listStyleType: Artel.Text
+    list-style-type: Artel.Text
 
     margin: Artel.Text
 
-    marginBlock: Artel.Text
+    margin-block: Artel.Text
 
-    marginBlockEnd: Artel.Text
+    margin-block-end: Artel.Text
 
-    marginBlockStart: Artel.Text
+    margin-block-start: Artel.Text
 
-    marginBottom: Artel.Text
+    margin-bottom: Artel.Text
 
-    marginInline: Artel.Text
+    margin-inline: Artel.Text
 
-    marginInlineEnd: Artel.Text
+    margin-inline-end: Artel.Text
 
-    marginInlineStart: Artel.Text
+    margin-inline-start: Artel.Text
 
-    marginLeft: Artel.Text
+    margin-left: Artel.Text
 
-    marginRight: Artel.Text
+    margin-right: Artel.Text
 
-    marginTop: Artel.Text
+    margin-top: Artel.Text
 
     marker: Artel.Text
 
-    markerEnd: Artel.Text
+    marker-end: Artel.Text
 
-    markerMid: Artel.Text
+    marker-mid: Artel.Text
 
-    markerStart: Artel.Text
+    marker-start: Artel.Text
 
     mask: Artel.Text
 
-    maskClip: Artel.Text
+    mask-clip: Artel.Text
 
-    maskComposite: Artel.Text
+    mask-composite: Artel.Text
 
-    maskImage: Artel.Text
+    mask-image: Artel.Text
 
-    maskMode: Artel.Text
+    mask-mode: Artel.Text
 
-    maskOrigin: Artel.Text
+    mask-origin: Artel.Text
 
-    maskPosition: Artel.Text
+    mask-position: Artel.Text
 
-    maskRepeat: Artel.Text
+    mask-repeat: Artel.Text
 
-    maskSize: Artel.Text
+    mask-size: Artel.Text
 
-    maskType: Artel.Text
+    mask-type: Artel.Text
 
-    mathDepth: Artel.Text
+    math-depth: Artel.Text
 
-    mathStyle: Artel.Text
+    math-style: Artel.Text
 
-    maxBlockSize: Artel.Text
+    max-block-size: Artel.Text
 
-    maxHeight: Artel.Text
+    max-height: Artel.Text
 
-    maxInlineSize: Artel.Text
+    max-inline-size: Artel.Text
 
-    maxWidth: Artel.Text
+    max-width: Artel.Text
 
-    minBlockSize: Artel.Text
+    min-block-size: Artel.Text
 
-    minHeight: Artel.Text
+    min-height: Artel.Text
 
-    minInlineSize: Artel.Text
+    min-inline-size: Artel.Text
 
-    minWidth: Artel.Text
+    min-width: Artel.Text
 
-    mixBlendMode: Artel.Text
+    mix-blend-mode: Artel.Text
 
-    objectFit: Artel.Text
+    object-fit: Artel.Text
 
-    objectPosition: Artel.Text
+    object-position: Artel.Text
 
     offset: Artel.Text
 
-    offsetAnchor: Artel.Text
+    offset-anchor: Artel.Text
 
-    offsetDistance: Artel.Text
+    offset-distance: Artel.Text
 
-    offsetPath: Artel.Text
+    offset-path: Artel.Text
 
-    offsetPosition: Artel.Text
+    offset-position: Artel.Text
 
-    offsetRotate: Artel.Text
+    offset-rotate: Artel.Text
 
     opacity: Artel.Text
 
@@ -5802,86 +5803,86 @@ external
 
     outline: Artel.Text
 
-    outlineColor: Artel.Text
+    outline-color: Artel.Text
 
-    outlineOffset: Artel.Text
+    outline-offset: Artel.Text
 
-    outlineStyle: Artel.Text
+    outline-style: Artel.Text
 
-    outlineWidth: Artel.Text
+    outline-width: Artel.Text
 
     overflow: Artel.Text
 
-    overflowAnchor: Artel.Text
+    overflow-anchor: Artel.Text
 
-    overflowClipMargin: Artel.Text
+    overflow-clip-margin: Artel.Text
 
-    overflowWrap: Artel.Text
+    overflow-wrap: Artel.Text
 
-    overflowX: Artel.Text
+    overflow-x: Artel.Text
 
-    overflowY: Artel.Text
+    overflow-y: Artel.Text
 
-    overscrollBehavior: Artel.Text
+    overscroll-behavior: Artel.Text
 
-    overscrollBehaviorBlock: Artel.Text
+    overscroll-behavior-block: Artel.Text
 
-    overscrollBehaviorInline: Artel.Text
+    overscroll-behavior-inline: Artel.Text
 
-    overscrollBehaviorX: Artel.Text
+    overscroll-behavior-x: Artel.Text
 
-    overscrollBehaviorY: Artel.Text
+    overscroll-behavior-y: Artel.Text
 
     padding: Artel.Text
 
-    paddingBlock: Artel.Text
+    padding-block: Artel.Text
 
-    paddingBlockEnd: Artel.Text
+    padding-block-end: Artel.Text
 
-    paddingBlockStart: Artel.Text
+    padding-block-start: Artel.Text
 
-    paddingBottom: Artel.Text
+    padding-bottom: Artel.Text
 
-    paddingInline: Artel.Text
+    padding-inline: Artel.Text
 
-    paddingInlineEnd: Artel.Text
+    padding-inline-end: Artel.Text
 
-    paddingInlineStart: Artel.Text
+    padding-inline-start: Artel.Text
 
-    paddingLeft: Artel.Text
+    padding-left: Artel.Text
 
-    paddingRight: Artel.Text
+    padding-right: Artel.Text
 
-    paddingTop: Artel.Text
+    padding-top: Artel.Text
 
     page: Artel.Text
 
-    pageBreakAfter: Artel.Text
+    page-break-after: Artel.Text
 
-    pageBreakBefore: Artel.Text
+    page-break-before: Artel.Text
 
-    pageBreakInside: Artel.Text
+    page-break-inside: Artel.Text
 
-    paintOrder: Artel.Text
+    paint-order: Artel.Text
 
     guarded
-    parentRule: CSSRule /*| null*/
+    parent-rule: CSSRule /*| null*/
 
     perspective: Artel.Text
 
-    perspectiveOrigin: Artel.Text
+    perspective-origin: Artel.Text
 
-    placeContent: Artel.Text
+    place-content: Artel.Text
 
-    placeItems: Artel.Text
+    place-items: Artel.Text
 
-    placeSelf: Artel.Text
+    place-self: Artel.Text
 
-    pointerEvents: Artel.Text
+    pointer-events: Artel.Text
 
     position: Artel.Text
 
-    printColorAdjust: Artel.Text
+    print-color-adjust: Artel.Text
 
     quotes: Artel.Text
 
@@ -5893,9 +5894,9 @@ external
 
     rotate: Artel.Text
 
-    rowGap: Artel.Text
+    row-gap: Artel.Text
 
-    rubyPosition: Artel.Text
+    ruby-position: Artel.Text
 
     rx: Artel.Text
 
@@ -5903,219 +5904,219 @@ external
 
     scale: Artel.Text
 
-    scrollBehavior: Artel.Text
+    scroll-behavior: Artel.Text
 
-    scrollMargin: Artel.Text
+    scroll-margin: Artel.Text
 
-    scrollMarginBlock: Artel.Text
+    scroll-margin-block: Artel.Text
 
-    scrollMarginBlockEnd: Artel.Text
+    scroll-margin-block-end: Artel.Text
 
-    scrollMarginBlockStart: Artel.Text
+    scroll-margin-block-start: Artel.Text
 
-    scrollMarginBottom: Artel.Text
+    scroll-margin-bottom: Artel.Text
 
-    scrollMarginInline: Artel.Text
+    scroll-margin-inline: Artel.Text
 
-    scrollMarginInlineEnd: Artel.Text
+    scroll-margin-inline-end: Artel.Text
 
-    scrollMarginInlineStart: Artel.Text
+    scroll-margin-inline-start: Artel.Text
 
-    scrollMarginLeft: Artel.Text
+    scroll-margin-left: Artel.Text
 
-    scrollMarginRight: Artel.Text
+    scroll-margin-right: Artel.Text
 
-    scrollMarginTop: Artel.Text
+    scroll-margin-top: Artel.Text
 
-    scrollPadding: Artel.Text
+    scroll-padding: Artel.Text
 
-    scrollPaddingBlock: Artel.Text
+    scroll-padding-block: Artel.Text
 
-    scrollPaddingBlockEnd: Artel.Text
+    scroll-padding-block-end: Artel.Text
 
-    scrollPaddingBlockStart: Artel.Text
+    scroll-padding-block-start: Artel.Text
 
-    scrollPaddingBottom: Artel.Text
+    scroll-padding-bottom: Artel.Text
 
-    scrollPaddingInline: Artel.Text
+    scroll-padding-inline: Artel.Text
 
-    scrollPaddingInlineEnd: Artel.Text
+    scroll-padding-inline-end: Artel.Text
 
-    scrollPaddingInlineStart: Artel.Text
+    scroll-padding-inline-start: Artel.Text
 
-    scrollPaddingLeft: Artel.Text
+    scroll-padding-left: Artel.Text
 
-    scrollPaddingRight: Artel.Text
+    scroll-padding-right: Artel.Text
 
-    scrollPaddingTop: Artel.Text
+    scroll-padding-top: Artel.Text
 
-    scrollSnapAlign: Artel.Text
+    scroll-snap-align: Artel.Text
 
-    scrollSnapStop: Artel.Text
+    scroll-snap-stop: Artel.Text
 
-    scrollSnapType: Artel.Text
+    scroll-snap-type: Artel.Text
 
-    scrollbarColor: Artel.Text
+    scrollbar-color: Artel.Text
 
-    scrollbarGutter: Artel.Text
+    scrollbar-gutter: Artel.Text
 
-    scrollbarWidth: Artel.Text
+    scrollbar-width: Artel.Text
 
-    shapeImageThreshold: Artel.Text
+    shape-image-threshold: Artel.Text
 
-    shapeMargin: Artel.Text
+    shape-margin: Artel.Text
 
-    shapeOutside: Artel.Text
+    shape-outside: Artel.Text
 
-    shapeRendering: Artel.Text
+    shape-rendering: Artel.Text
 
-    stopColor: Artel.Text
+    stop-color: Artel.Text
 
-    stopOpacity: Artel.Text
+    stop-opacity: Artel.Text
 
     stroke: Artel.Text
 
-    strokeDasharray: Artel.Text
+    stroke-dasharray: Artel.Text
 
-    strokeDashoffset: Artel.Text
+    stroke-dashoffset: Artel.Text
 
-    strokeLinecap: Artel.Text
+    stroke-linecap: Artel.Text
 
-    strokeLinejoin: Artel.Text
+    stroke-linejoin: Artel.Text
 
-    strokeMiterlimit: Artel.Text
+    stroke-miterlimit: Artel.Text
 
-    strokeOpacity: Artel.Text
+    stroke-opacity: Artel.Text
 
-    strokeWidth: Artel.Text
+    stroke-width: Artel.Text
 
-    tabSize: Artel.Text
+    tab-size: Artel.Text
 
-    tableLayout: Artel.Text
+    table-layout: Artel.Text
 
-    textAlign: Artel.Text
+    text-align: Artel.Text
 
-    textAlignLast: Artel.Text
+    text-align-last: Artel.Text
 
-    textAnchor: Artel.Text
+    text-anchor: Artel.Text
 
-    textCombineUpright: Artel.Text
+    text-combine-upright: Artel.Text
 
-    textDecoration: Artel.Text
+    text-decoration: Artel.Text
 
-    textDecorationColor: Artel.Text
+    text-decoration-color: Artel.Text
 
-    textDecorationLine: Artel.Text
+    text-decoration-line: Artel.Text
 
-    textDecorationSkipInk: Artel.Text
+    text-decoration-skip-ink: Artel.Text
 
-    textDecorationStyle: Artel.Text
+    text-decoration-style: Artel.Text
 
-    textDecorationThickness: Artel.Text
+    text-decoration-thickness: Artel.Text
 
-    textEmphasis: Artel.Text
+    text-emphasis: Artel.Text
 
-    textEmphasisColor: Artel.Text
+    text-emphasis-color: Artel.Text
 
-    textEmphasisPosition: Artel.Text
+    text-emphasis-position: Artel.Text
 
-    textEmphasisStyle: Artel.Text
+    text-emphasis-style: Artel.Text
 
-    textIndent: Artel.Text
+    text-indent: Artel.Text
 
-    textOrientation: Artel.Text
+    text-orientation: Artel.Text
 
-    textOverflow: Artel.Text
+    text-overflow: Artel.Text
 
-    textRendering: Artel.Text
+    text-rendering: Artel.Text
 
-    textShadow: Artel.Text
+    text-shadow: Artel.Text
 
-    textTransform: Artel.Text
+    text-transform: Artel.Text
 
-    textUnderlineOffset: Artel.Text
+    text-underline-offset: Artel.Text
 
-    textUnderlinePosition: Artel.Text
+    text-underline-position: Artel.Text
 
-    textWrap: Artel.Text
+    text-wrap: Artel.Text
 
     top: Artel.Text
 
-    touchAction: Artel.Text
+    touch-action: Artel.Text
 
     transform: Artel.Text
 
-    transformBox: Artel.Text
+    transform-box: Artel.Text
 
-    transformOrigin: Artel.Text
+    transform-origin: Artel.Text
 
-    transformStyle: Artel.Text
+    transform-style: Artel.Text
 
     transition: Artel.Text
 
-    transitionDelay: Artel.Text
+    transition-delay: Artel.Text
 
-    transitionDuration: Artel.Text
+    transition-duration: Artel.Text
 
-    transitionProperty: Artel.Text
+    transition-property: Artel.Text
 
-    transitionTimingFunction: Artel.Text
+    transition-timing-function: Artel.Text
 
     translate: Artel.Text
 
-    unicodeBidi: Artel.Text
+    unicode-bidi: Artel.Text
 
-    userSelect: Artel.Text
+    user-select: Artel.Text
 
-    vectorEffect: Artel.Text
+    vector-effect: Artel.Text
 
-    verticalAlign: Artel.Text
+    vertical-align: Artel.Text
 
     visibility: Artel.Text
 
-    webkitAlignContent: Artel.Text
+    webkit-align-content: Artel.Text
 
-    webkitAlignSelf: Artel.Text
+    webkit-align-self: Artel.Text
 
-    webkitLineClamp: Artel.Text
+    webkit-line-clamp: Artel.Text
 
-    webkitTextFillColor: Artel.Text
+    webkit-text-fill-color: Artel.Text
 
-    webkitTextStroke: Artel.Text
+    webkit-text-stroke: Artel.Text
 
-    webkitTextStrokeColor: Artel.Text
+    webkit-text-stroke-color: Artel.Text
 
-    webkitTextStrokeWidth: Artel.Text
+    webkit-text-stroke-width: Artel.Text
 
-    whiteSpace: Artel.Text
+    white-space: Artel.Text
 
     widows: Artel.Text
 
     width: Artel.Text
 
-    willChange: Artel.Text
+    will-change: Artel.Text
 
-    wordBreak: Artel.Text
+    word-break: Artel.Text
 
-    wordSpacing: Artel.Text
+    word-spacing: Artel.Text
 
-    writingMode: Artel.Text
+    writing-mode: Artel.Text
 
     x: Artel.Text
 
     y: Artel.Text
 
-    zIndex: Artel.Text
+    z-index: Artel.Text
 
-    operation getPropertyPriority(property: Artel.Text): Artel.Text
+    operation get-property-priority(property: Artel.Text): Artel.Text
 
-    operation getPropertyValue(property: Artel.Text): Artel.Text
+    operation get-property-value(property: Artel.Text): Artel.Text
 
     operation item(index: Number): Artel.Text
 
-    operation removeProperty(property: Artel.Text): Artel.Text
+    operation remove-property(property: Artel.Text): Artel.Text
 
-    operation setProperty(property: Artel.Text, value: Artel.Text /*| null*/, priority: Artel.Text? = none)
+    operation set-property(property: Artel.Text, value: Artel.Text /*| null*/, priority: Artel.Text? = none)
 
     // (!) [index: number]: string
 

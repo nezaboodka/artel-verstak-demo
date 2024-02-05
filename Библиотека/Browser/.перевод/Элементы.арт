@@ -1,0 +1,872 @@
+псевдонимы(русский)
+{
+  тип СтилизованныйЭлемент = ElementCSSInlineStyle
+  {
+    карта-стилей-атрибутов = attributeStyleMap
+
+    стиль = style
+  }
+
+  тип ОписаниеСтилей = CSSStyleDeclaration
+  {
+    цвет-акцента = accent-color
+
+    выравнивание--содержимого = align-content
+
+    выравнивание--элементов = align-items
+
+    выравнивание--себя = align-self
+
+    базис-выраванивания = alignment-baseline
+
+    всё = all
+
+    анимация = animation
+
+    анимации--композиция = animation-composition
+
+    анимация--задержка = animation-delay
+
+    анимация--направление = animation-direction
+
+    анимация--длительность = animation-duration
+
+    анимация--режим-заполнения = animation-fill-mode
+
+    анимация--количество-повторений = animation-iteration-count
+
+    анимация--имя = animation-name
+
+    анимация--состояние = animation-play-state
+
+    анимация--функция-тайминга = animation-timing-function
+
+    внешность = appearance
+
+    соотношение-сторон = aspect-ratio
+
+    фоновый-фильтр = backdrop-filter
+
+    видимость-обратной-стороный = backface-visibility
+
+    фон = background
+
+    фон--вложение = background-attachment
+
+    фон--режим-смешивания = background-blend-mode
+
+    фон--отсечение = background-clip
+
+    фон--цвет = background-color
+
+    фон--изображение = background-image
+
+    фон--точка-отсчёта = background-origin
+
+    фон--позиция = background-position
+
+    фон--позиция-x = background-position-x
+
+    фон--позиция-y = background-position-y
+
+    фон--повторение = background-repeat
+
+    фон--размер = background-size
+
+    базовое-смещение = baseline-shift
+
+    базовый-источник = baseline-source /*(!)*/
+
+    размер-блока = block-size
+
+    рамка = border
+
+    рамка--блок = border-block
+
+    рамка--цвет-блока = border-block-color
+
+    рамка--окончание-блока = border-block-end
+
+    рамка--цвет-конца-блока = border-block-end-color
+
+    рамка--стиль-конца-блока = border-block-end-style
+
+    рамка--ширина-конца-блока = border-block-end-width
+
+    рамка--начало-блока = border-block-start
+
+    рамка--цвет-начала-блока = border-block-start-color
+
+    рамка--стиль-начала-блока = border-block-start-style
+
+    рамка--ширина-начала-блока = border-block-start-width
+
+    рамка--стиль-блока = border-block-style
+
+    рамка--ширина-блока = border-block-width
+
+    рамка--снизу = border-bottom
+
+    рамка--цвет-снизу = border-bottom-color
+
+    рамка--радиус-снизу-слева = border-bottom-left-radius
+
+    рамка--радиус-снизу-справа = border-bottom-right-radius
+
+    рамка--стиль-снизу = border-bottom-style
+
+    рамка--ширина-снизу = border-bottom-width
+
+    рамка--свёртка = border-collapse
+
+    рамка--цвет = border-color
+
+    рамка--радиус-окончания-окончания = border-end-end-radius
+
+    рамка--радиус-начала-окончания = border-end-start-radius
+
+    рамка--изображение = border-image
+
+    рамка--начало-изображения = border-image-outset
+
+    рамка--повторение-изображения = border-image-repeat
+
+    рамка--нарезка-изображения = border-image-slice
+
+    рамка--источник-изображения = border-image-source
+
+    рамка--шириша-изоражения = border-image-width
+
+    рамка--линейно = border-inline
+
+    рамка--внутренний-цвет = border-inline-color
+
+    рамка--окончание-внутри = border-inline-end
+
+    рамка--конечный-цвет-внутри = border-inline-end-color
+
+    рамка--конечный-стиль-внутри = border-inline-end-style
+
+    рамка--конечная-ширина-внутри = border-inline-end-width
+
+    рамка--начало-внутри = border-inline-start
+
+    рамка--начальный-цвет-внутри = border-inline-start-color
+
+    рамка--начальный-стиль-внутри = border-inline-start-style
+
+    рамка--начальная-ширина-внутри = border-inline-start-width
+
+    рамка--начальный-стиль-внутри = border-inline-style
+
+    рамка--ширина-внутри = border-inline-width
+
+    рамка--слева = border-left
+
+    рамка--цвет-слева = border-left-color
+
+    рамка--стиль-слева = border-left-style
+
+    рамка--ширина-слева = border-left-width
+
+    рамка--радуис = border-radius
+
+    рамка--справа = border-right
+
+    рамка--цвет-справа = border-right-color
+
+    рамка--стиль-справа = border-right-style
+
+    рамка--ширина-справа = border-right-width
+
+    рамка--отступ = border-spacing
+
+    // border-start-end-radius
+
+    // border-start-start-radius
+
+    // border-style
+
+    // border-top
+
+    // border-top-color
+
+    // border-top-left-radius
+
+    // border-top-right-radius
+
+    // border-top-style
+
+    // border-top-width
+
+    // border-width
+
+    // bottom
+
+    // box-shadow
+
+    // box-sizing
+
+    // break-after
+
+    // break-before
+
+    // break-inside
+
+    // caption-side
+
+    // caret-color
+
+    // clear
+
+    // clip-path
+
+    // clip-rule
+
+    цвет = color
+
+    // color-interpolation
+
+    // color-interpolation-filters
+
+    // color-scheme
+
+    // column-count
+
+    // column-fill
+
+    // column-gap
+
+    // column-rule
+
+    // column-rule-color
+
+    // column-rule-style
+
+    // column-rule-width
+
+    // column-span
+
+    // column-width
+
+    // columns
+
+    // contain
+
+    // contain-intrinsic-block-size
+
+    // contain-intrinsic-height
+
+    // contain-intrinsic-inline-size
+
+    // contain-intrinsic-size
+
+    // contain-intrinsic-width
+
+    // container
+
+    // container-name
+
+    // container-type
+
+    // content
+
+    // counter-increment
+
+    // counter-reset
+
+    // counter-set
+
+    // css-float
+
+    // css-text
+
+    // cursor
+
+    // cx
+
+    // cy
+
+    // d
+
+    // direction
+
+    // display
+
+    // dominant-baseline
+
+    // empty-cells
+
+    // fill
+
+    // fill-opacity
+
+    // fill-rule
+
+    // filter
+
+    // flex
+
+    // flex-basis
+
+    // flex-direction
+
+    // flex-flow
+
+    // flex-grow
+
+    // flex-shrink
+
+    // flex-wrap
+
+    // float
+
+    // flood-color
+
+    // flood-opacity
+
+    // font
+
+    // font-family
+
+    // font-feature-settings
+
+    // font-kerning
+
+    // font-optical-sizing
+
+    // font-palette
+
+    шрифт--размер = font-size
+
+    // font-size-adjust
+
+    // font-stretch
+
+    // font-style
+
+    // font-synthesis
+
+    // font-synthesis-small-caps
+
+    // font-synthesis-style
+
+    // font-synthesis-weight
+
+    // font-variant
+
+    // font-variant-alternates
+
+    // font-variant-caps
+
+    // font-variant-east-asian
+
+    // font-variant-ligatures
+
+    // font-variant-numeric
+
+    // font-variant-position
+
+    // font-variation-settings
+
+    // font-weight
+
+    // forced-color-adjust
+
+    // gap
+
+    // grid
+
+    // grid-area
+
+    // grid-auto-columns
+
+    // grid-auto-flow
+
+    // grid-auto-rows
+
+    // grid-column
+
+    // grid-column-end
+
+    // grid-column-start
+
+    // grid-row
+
+    // grid-row-end
+
+    // grid-row-start
+
+    // grid-template
+
+    // grid-template-areas
+
+    // grid-template-columns
+
+    // grid-template-rows
+
+    // height
+
+    // hyphenate-character
+
+    // hyphens
+
+    // image-rendering
+
+    // inline-size
+
+    // inset
+
+    // inset-block
+
+    // inset-block-end
+
+    // inset-block-start
+
+    // inset-inline
+
+    // inset-inline-end
+
+    // inset-inline-start
+
+    // isolation
+
+    // justify-content
+
+    // justify-items
+
+    // justify-self
+
+    // left
+
+    // guarded
+    // length: Number
+
+    // letter-spacing
+
+    // lighting-color
+
+    // line-break
+
+    // line-height
+
+    // list-style
+
+    // list-style-image
+
+    // list-style-position
+
+    // list-style-type
+
+    // margin
+
+    // margin-block
+
+    // margin-block-end
+
+    // margin-block-start
+
+    // margin-bottom
+
+    // margin-inline
+
+    // margin-inline-end
+
+    // margin-inline-start
+
+    // margin-left
+
+    // margin-right
+
+    // margin-top
+
+    // marker
+
+    // marker-end
+
+    // marker-mid
+
+    // marker-start
+
+    // mask
+
+    // mask-clip
+
+    // mask-composite
+
+    // mask-image
+
+    // mask-mode
+
+    // mask-origin
+
+    // mask-position
+
+    // mask-repeat
+
+    // mask-size
+
+    // mask-type
+
+    // math-depth
+
+    // math-style
+
+    // max-block-size
+
+    // max-height
+
+    // max-inline-size
+
+    // max-width
+
+    // min-block-size
+
+    // min-height
+
+    // min-inline-size
+
+    // min-width
+
+    // mix-blend-mode
+
+    // object-fit
+
+    // object-position
+
+    // offset
+
+    // offset-anchor
+
+    // offset-distance
+
+    // offset-path
+
+    // offset-position
+
+    // offset-rotate
+
+    // opacity
+
+    // order
+
+    // orphans
+
+    // outline
+
+    // outline-color
+
+    // outline-offset
+
+    // outline-style
+
+    // outline-width
+
+    // overflow
+
+    // overflow-anchor
+
+    // overflow-clip-margin
+
+    // overflow-wrap
+
+    // overflow-x
+
+    // overflow-y
+
+    // overscroll-behavior
+
+    // overscroll-behavior-block
+
+    // overscroll-behavior-inline
+
+    // overscroll-behavior-x
+
+    // overscroll-behavior-y
+
+    // padding
+
+    // padding-block
+
+    // padding-block-end
+
+    // padding-block-start
+
+    // padding-bottom
+
+    // padding-inline
+
+    // padding-inline-end
+
+    // padding-inline-start
+
+    // padding-left
+
+    // padding-right
+
+    // padding-top
+
+    // page
+
+    // page-break-after
+
+    // page-break-before
+
+    // page-break-inside
+
+    // paint-order
+
+    // guarded
+    // parent-rule: CSSRule /*| null*/
+
+    // perspective
+
+    // perspective-origin
+
+    // place-content
+
+    // place-items
+
+    // place-self
+
+    // pointer-events
+
+    // position
+
+    // print-color-adjust
+
+    // quotes
+
+    // r
+
+    // resize
+
+    // right
+
+    // rotate
+
+    // row-gap
+
+    // ruby-position
+
+    // rx
+
+    // ry
+
+    // scale
+
+    // scroll-behavior
+
+    // scroll-margin
+
+    // scroll-margin-block
+
+    // scroll-margin-block-end
+
+    // scroll-margin-block-start
+
+    // scroll-margin-bottom
+
+    // scroll-margin-inline
+
+    // scroll-margin-inline-end
+
+    // scroll-margin-inline-start
+
+    // scroll-margin-left
+
+    // scroll-margin-right
+
+    // scroll-margin-top
+
+    // scroll-padding
+
+    // scroll-padding-block
+
+    // scroll-padding-block-end
+
+    // scroll-padding-block-start
+
+    // scroll-padding-bottom
+
+    // scroll-padding-inline
+
+    // scroll-padding-inline-end
+
+    // scroll-padding-inline-start
+
+    // scroll-padding-left
+
+    // scroll-padding-right
+
+    // scroll-padding-top
+
+    // scroll-snap-align
+
+    // scroll-snap-stop
+
+    // scroll-snap-type
+
+    // scrollbar-color
+
+    // scrollbar-gutter
+
+    // scrollbar-width
+
+    // shape-image-threshold
+
+    // shape-margin
+
+    // shape-outside
+
+    // shape-rendering
+
+    // stop-color
+
+    // stop-opacity
+
+    // stroke
+
+    // stroke-dasharray
+
+    // stroke-dashoffset
+
+    // stroke-linecap
+
+    // stroke-linejoin
+
+    // stroke-miterlimit
+
+    // stroke-opacity
+
+    // stroke-width
+
+    // tab-size
+
+    // table-layout
+
+    // text-align
+
+    // text-align-last
+
+    // text-anchor
+
+    // text-combine-upright
+
+    // text-decoration
+
+    // text-decoration-color
+
+    // text-decoration-line
+
+    // text-decoration-skip-ink
+
+    // text-decoration-style
+
+    // text-decoration-thickness
+
+    // text-emphasis
+
+    // text-emphasis-color
+
+    // text-emphasis-position
+
+    // text-emphasis-style
+
+    // text-indent
+
+    // text-orientation
+
+    // text-overflow
+
+    // text-rendering
+
+    // text-shadow
+
+    // text-transform
+
+    // text-underline-offset
+
+    // text-underline-position
+
+    // text-wrap
+
+    // top
+
+    // touch-action
+
+    // transform
+
+    // transform-box
+
+    // transform-origin
+
+    // transform-style
+
+    // transition
+
+    // transition-delay
+
+    // transition-duration
+
+    // transition-property
+
+    // transition-timing-function
+
+    // translate
+
+    // unicode-bidi
+
+    // user-select
+
+    // vector-effect
+
+    // vertical-align
+
+    // visibility
+
+    // webkit-align-content
+
+    // webkit-align-self
+
+    // webkit-line-clamp
+
+    // webkit-text-fill-color
+
+    // webkit-text-stroke
+
+    // webkit-text-stroke-color
+
+    // webkit-text-stroke-width
+
+    // white-space
+
+    // widows
+
+    // width
+
+    // will-change
+
+    // word-break
+
+    // word-spacing
+
+    // writing-mode
+
+    // x
+
+    // y
+
+    // z-index
+
+    // operation get-property-priority(property)
+
+    // operation get-property-value(property)
+
+    // operation item(index: Number)
+
+    // operation remove-property(property)
+
+    // operation set-property(property, value /*| null*/, priority? = none)
+  }
+}
