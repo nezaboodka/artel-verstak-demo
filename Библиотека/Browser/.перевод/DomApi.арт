@@ -57,9 +57,8 @@
 
     фон--отсечение = background-clip
 
-    цвет-фона = background-color
-
     фон--цвет = background-color
+    цвет-фона = background-color
 
     фон--изображение = background-image
 
@@ -93,7 +92,7 @@
 
     рамка--стиль-конца-блока = border-block-end-style
 
-    рамка--ширина-конца-блока = border-block-end-width
+    рамка--толщина-конца-блока = border-block-end-width
 
     рамка--начало-блока = border-block-start
 
@@ -101,11 +100,11 @@
 
     рамка--стиль-начала-блока = border-block-start-style
 
-    рамка--ширина-начала-блока = border-block-start-width
+    рамка--толщина-начала-блока = border-block-start-width
 
     рамка--стиль-блока = border-block-style
 
-    рамка--ширина-блока = border-block-width
+    рамка--толщина-блока = border-block-width
 
     рамка--снизу = border-bottom
 
@@ -117,7 +116,7 @@
 
     рамка--стиль-снизу = border-bottom-style
 
-    рамка--ширина-снизу = border-bottom-width
+    рамка--толщина-снизу = border-bottom-width
 
     рамка--свёртка = border-collapse
 
@@ -149,7 +148,7 @@
 
     рамка--конечный-стиль-внутри = border-inline-end-style
 
-    рамка--конечная-ширина-внутри = border-inline-end-width
+    рамка--конечная-толщина-внутри = border-inline-end-width
 
     рамка--начало-внутри = border-inline-start
 
@@ -157,11 +156,11 @@
 
     рамка--начальный-стиль-внутри = border-inline-start-style
 
-    рамка--начальная-ширина-внутри = border-inline-start-width
+    рамка--начальная-толщина-внутри = border-inline-start-width
 
     рамка--начальный-стиль-внутри = border-inline-style
 
-    рамка--ширина-внутри = border-inline-width
+    рамка--толщина-внутри = border-inline-width
 
     рамка--слева = border-left
 
@@ -169,7 +168,7 @@
 
     рамка--стиль-слева = border-left-style
 
-    рамка--ширина-слева = border-left-width
+    рамка--толщина-слева = border-left-width
 
     рамка--радуис = border-radius
 
@@ -183,55 +182,57 @@
 
     рамка--отступ = border-spacing
 
-    // border-start-end-radius
+    рамка--радиус-окончания-начала = border-start-end-radius
 
-    // border-start-start-radius
+    рамка--радиус-начала-начала = border-start-start-radius
 
-    // border-style
+    рамка--стиль = border-style
+    стиль-рамки = border-style
 
-    // border-top
+    рамка--сверху = border-top
 
-    // border-top-color
+    рамка--цвет-сверху = border-top-color
 
-    // border-top-left-radius
+    рамка--радиус-сверху-слева = border-top-left-radius
 
-    // border-top-right-radius
+    рамка--радиус-сверху-справа = border-top-right-radius
 
-    // border-top-style
+    рамка--стиль-сверху = border-top-style
 
-    // border-top-width
+    рамка--толщина-сверху = border-top-width
 
-    // border-width
+    рамка--толщина = border-width
+    толщина-рамки = border-width
 
-    // bottom
+    низ = bottom
 
-    // box-shadow
+    тень-контейнера = box-shadow
 
-    // box-sizing
+    расчёт-размеров-контейнер = box-sizing
 
-    // break-after
+    разрыв-после = break-after
 
-    // break-before
+    разрыв-до = break-before
 
-    // break-inside
+    разрыв-внутри = break-inside
 
-    // caption-side
+    сторона-заголовка = caption-side
 
-    // caret-color
+    цвет-каретки = caret-color
 
-    // clear
+    очистка = clear
 
-    // clip-path
+    контур-отсечение = clip-path
 
-    // clip-rule
+    правило-отсечения = clip-rule
 
     цвет = color
 
-    // color-interpolation
+    цветовая-интерполяция = color-interpolation
 
-    // color-interpolation-filters
+    фильтры-цветовой-интерполяции = color-interpolation-filters
 
-    // color-scheme
+    цветовая-съема = color-scheme
 
     // column-count
 
@@ -339,9 +340,8 @@
 
     // font-palette
 
-    размер-шрифта = font-size
-
     шрифт--размер = font-size
+    размер-шрифта = font-size
 
     // font-size-adjust
 
