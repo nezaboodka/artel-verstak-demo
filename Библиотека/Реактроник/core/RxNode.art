@@ -18,7 +18,7 @@ type Priority = variant
 
 external
 {
-  type Delegate<T> = operation(element: T, base: operation())
+  type Delegate<T> = operation(el: T, base: operation())
 
 
   type SimpleDelegate<T = Object?, R = None> = operation(element: T): R
