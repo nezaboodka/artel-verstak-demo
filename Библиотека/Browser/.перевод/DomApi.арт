@@ -11,11 +11,11 @@
   {
     цвет-акцента = accent-color
 
-    выравнивание--содержимого = align-content
+    выравнивание-содержимого = align-content
 
-    выравнивание--элементов = align-items
+    выравнивание-элементов = align-items
 
-    выравнивание--себя = align-self
+    выравнивание-самого-себя = align-self
 
     базис-выраванивания = alignment-baseline
 
@@ -62,7 +62,7 @@
 
     фон--изображение = background-image
 
-    фон--точка-отсчёта = background-origin
+    фон--основание = background-origin
 
     фон--позиция = background-position
 
@@ -74,9 +74,9 @@
 
     фон--размер = background-size
 
-    базовое-смещение = baseline-shift
+    // базовое-смещение = baseline-shift
 
-    базовый-источник = baseline-source /*(!)*/
+    // базовый-источник = baseline-source /*(!)*/
 
     размер-блока = block-size
 
@@ -234,27 +234,27 @@
 
     цветовая-съема = color-scheme
 
-    // column-count
+    количество-колонок = column-count
 
-    // column-fill
+    заполнение-колонок = column-fill
 
-    // column-gap
+    зазор-колонок = column-gap
 
-    // column-rule
+    отсечка-колонок = column-rule
 
-    // column-rule-color
+    цвет-отсечки-колонок = column-rule-color
 
-    // column-rule-style
+    стиль-отсечки-колонок = column-rule-style
 
-    // column-rule-width
+    толщина-отсечки-колонок = column-rule-width
 
-    // column-span
+    диапазон-колонок = column-span
 
-    // column-width
+    ширина-колонки = column-width
 
-    // columns
+    колонки = columns
 
-    // contain
+    содержит = contain
 
     // contain-intrinsic-block-size
 
@@ -266,13 +266,13 @@
 
     // contain-intrinsic-width
 
-    // container
+    контейнер = container
 
-    // container-name
+    имя-контейнера = container-name
 
-    // container-type
+    тип-контейнера = container-type
 
-    // content
+    содержимое = content
 
     // counter-increment
 
@@ -292,21 +292,21 @@
 
     // d
 
-    // direction
+    направление = direction
 
-    // display
+    дисплей = display
 
     // dominant-baseline
 
-    // empty-cells
+    пустые-ячейки = empty-cells
 
-    // fill
+    заливка = fill
 
-    // fill-opacity
+    полупрозрачность-заливки = fill-opacity
 
-    // fill-rule
+    правило-заливки = fill-rule
 
-    // filter
+    фильтр = filter
 
     // flex
 
@@ -328,9 +328,9 @@
 
     // flood-opacity
 
-    // font
+    шрифт = font
 
-    // font-family
+    семейство-шрифта = font-family
 
     // font-feature-settings
 
@@ -338,16 +338,16 @@
 
     // font-optical-sizing
 
-    // font-palette
+    палитра-шрифта = font-palette
 
     шрифт--размер = font-size
     размер-шрифта = font-size
 
     // font-size-adjust
 
-    // font-stretch
+    растяжение-шрифта = font-stretch
 
-    // font-style
+    стиль-шрифта = font-style
 
     // font-synthesis
 
@@ -357,7 +357,7 @@
 
     // font-synthesis-weight
 
-    // font-variant
+    вариация-шрифта = font-variant
 
     // font-variant-alternates
 
@@ -377,11 +377,11 @@
 
     // forced-color-adjust
 
-    // gap
+    зазор = gap
 
-    // grid
+    сетка = grid
 
-    // grid-area
+    область-сетки = grid-area
 
     // grid-auto-columns
 
@@ -389,13 +389,13 @@
 
     // grid-auto-rows
 
-    // grid-column
+    колонка-сетки = grid-column
 
     // grid-column-end
 
     // grid-column-start
 
-    // grid-row
+    строка-сетки = grid-row
 
     // grid-row-end
 
@@ -409,7 +409,7 @@
 
     // grid-template-rows
 
-    // height
+    высота = height
 
     // hyphenate-character
 
@@ -435,13 +435,13 @@
 
     // isolation
 
-    // justify-content
+    растяжение-содержимого = justify-content
 
-    // justify-items
+    растяжение-элементов = justify-items
 
-    // justify-self
+    растяжение-самого-себя = justify-self
 
-    // left
+    лево = left
 
     // guarded
     // length: Number
@@ -462,7 +462,7 @@
 
     // list-style-type
 
-    // margin
+    отступ = margin
 
     // margin-block
 
@@ -470,7 +470,7 @@
 
     // margin-block-start
 
-    // margin-bottom
+    отступ-снизу = margin-bottom
 
     // margin-inline
 
@@ -478,105 +478,105 @@
 
     // margin-inline-start
 
-    // margin-left
+    отступ-слева = margin-left
 
-    // margin-right
+    отступ-справа = margin-right
 
-    // margin-top
+    отступ-сверху = margin-top
 
-    // marker
+    маркер = marker
 
-    // marker-end
+    конец-маркера = marker-end
 
-    // marker-mid
+    середина-маркера = marker-mid
 
-    // marker-start
+    начало-маркера = marker-start
 
-    // mask
+    маска = mask
 
-    // mask-clip
+    отсечение-маски = mask-clip
 
-    // mask-composite
+    композиция-маски = mask-composite
 
-    // mask-image
+    изображение-маски = mask-image
 
-    // mask-mode
+    режим-маски = mask-mode
 
-    // mask-origin
+    основание-маски = mask-origin
 
-    // mask-position
+    позиция-маски = mask-position
 
-    // mask-repeat
+    повторение-маски = mask-repeat
 
-    // mask-size
+    размер-маски = mask-size
 
-    // mask-type
+    тип-маски = mask-type
 
-    // math-depth
+    глубина-маски = math-depth
 
     // math-style
 
     // max-block-size
 
-    // max-height
+    максимальная-высота = max-height
 
     // max-inline-size
 
-    // max-width
+    максимальная-ширина = max-width
 
     // min-block-size
 
-    // min-height
+    минимальная-высота = min-height
 
     // min-inline-size
 
-    // min-width
+    минимальная-ширина = min-width
 
     // mix-blend-mode
 
     // object-fit
 
-    // object-position
+    позиция-объекта = object-position
 
-    // offset
+    смеение = offset
 
-    // offset-anchor
+    якорь-смещения = offset-anchor
 
-    // offset-distance
+    расстояние-смещения = offset-distance
 
     // offset-path
 
-    // offset-position
+    позиция-смещения = offset-position
 
-    // offset-rotate
+    поворот-смещения = offset-rotate
 
-    // opacity
+    полупрозрачность = opacity
 
-    // order
+    порядок = order
 
     // orphans
 
-    // outline
+    очертание = outline
 
-    // outline-color
+    цвет-очертания = outline-color
 
-    // outline-offset
+    смещение-очертания = outline-offset
 
-    // outline-style
+    стиль-очертания = outline-style
 
-    // outline-width
+    толщина-очертания = outline-width
 
-    // overflow
+    переполнение = overflow
 
-    // overflow-anchor
+    якорь-переполнения = overflow-anchor
 
     // overflow-clip-margin
 
-    // overflow-wrap
+    перенос-переполнения = overflow-wrap
 
-    // overflow-x
+    переполнение-x = overflow-x
 
-    // overflow-y
+    переполнение-y = overflow-y
 
     // overscroll-behavior
 
@@ -610,7 +610,7 @@
 
     // padding-top
 
-    // page
+    страница = page
 
     // page-break-after
 
@@ -623,19 +623,19 @@
     // guarded
     // parent-rule: CSSRule /*| null*/
 
-    // perspective
+    перспектива = perspective
 
-    // perspective-origin
+    основание-перспективы = perspective-origin
 
-    // place-content
+    размещение-содержимого = place-content
 
-    // place-items
+    размещение-элементов = place-items
 
-    // place-self
+    размещение-самого-себя = place-self
 
     // pointer-events
 
-    // position
+    позиция = position
 
     // print-color-adjust
 
@@ -645,11 +645,11 @@
 
     // resize
 
-    // right
+    право = right
 
-    // rotate
+    поворот = rotate
 
-    // row-gap
+    зазор-строки = row-gap
 
     // ruby-position
 
@@ -657,7 +657,7 @@
 
     // ry
 
-    // scale
+    масштаб = scale
 
     // scroll-behavior
 
@@ -749,11 +749,11 @@
 
     // table-layout
 
-    // text-align
+    выравнивание-текста = text-align
 
     // text-align-last
 
-    // text-anchor
+    якорь-текста = text-anchor
 
     // text-combine-upright
 
@@ -795,11 +795,11 @@
 
     // text-wrap
 
-    // top
+    верх = top
 
-    // touch-action
+    действие-по-касанию = touch-action
 
-    // transform
+    трансформация = transform
 
     // transform-box
 
@@ -807,27 +807,27 @@
 
     // transform-style
 
-    // transition
+    переход = transition
 
-    // transition-delay
+    задержка-перехода = transition-delay
 
-    // transition-duration
+    длительность-перехода = transition-duration
 
-    // transition-property
+    переходное-свойство = transition-property
 
-    // transition-timing-function
+    функция-тайминга-перехода = transition-timing-function
 
-    // translate
+    перенос = translate
 
     // unicode-bidi
 
-    // user-select
+    выбор-пользователем = user-select
 
     // vector-effect
 
-    // vertical-align
+    вертикальное-выравнивание = vertical-align
 
-    // visibility
+    видимость = visibility
 
     // webkit-align-content
 
@@ -843,25 +843,25 @@
 
     // webkit-text-stroke-width
 
-    // white-space
+    пробелы = white-space
 
     // widows
 
-    // width
+    ширина = width
 
     // will-change
 
-    // word-break
+    перенос-слов = word-break
 
-    // word-spacing
+    словарный-пробел = word-spacing
 
-    // writing-mode
+    режим-письма = writing-mode
 
     // x
 
     // y
 
-    // z-index
+    номер-слоя = z-index
 
     // operation get-property-priority(property)
 
