@@ -59,19 +59,19 @@
 
     цвет-фона = background-color
 
-    фон--изображение = background-image
+    фоновое-изображение = background-image
 
-    фон--основание = background-origin
+    основание-фона = background-origin
 
-    фон--позиция = background-position
+    позиция-фона = background-position
 
-    фон--позиция-x = background-position-x
+    позиция-фона-x = background-position-x
 
-    фон--позиция-y = background-position-y
+    позиция-фона-y = background-position-y
 
-    фон--повторение = background-repeat
+    повторение-фона = background-repeat
 
-    фон--размер = background-size
+    размер-фона = background-size
 
     // базовое-смещение = baseline-shift
 
@@ -137,70 +137,68 @@
 
     ширина-изоражения-рамки = border-image-width
 
-    рамка--линейно = border-inline
+    рамка-внутри = border-inline
 
-    рамка--внутренний-цвет = border-inline-color
+    цвет-рамки-внутри = border-inline-color
 
-    рамка--окончание-внутри = border-inline-end
+    окончание-рамки-внутри = border-inline-end
 
-    рамка--конечный-цвет-внутри = border-inline-end-color
+    конечный-цвет-рамки-внутри = border-inline-end-color
 
-    рамка--конечный-стиль-внутри = border-inline-end-style
+    конечный-стиль-рамки-внутри = border-inline-end-style
 
-    рамка--конечная-толщина-внутри = border-inline-end-width
+    конечная-толщина-рамки-внутри = border-inline-end-width
 
-    рамка--начало-внутри = border-inline-start
+    начало-рамки-внутри = border-inline-start
 
-    рамка--начальный-цвет-внутри = border-inline-start-color
+    начальный-цвет-рамки-внутри = border-inline-start-color
 
-    рамка--начальный-стиль-внутри = border-inline-start-style
+    начальный-стиль-рамки-внутри = border-inline-start-style
 
-    рамка--начальная-толщина-внутри = border-inline-start-width
+    начальная-толщина-рамки-внутри = border-inline-start-width
 
-    рамка--начальный-стиль-внутри = border-inline-style
+    начальный-стиль-рамки-внутри = border-inline-style
 
-    рамка--толщина-внутри = border-inline-width
+    толщина-рамки-внутри = border-inline-width
 
-    рамка--слева = border-left
+    рамка-слева = border-left
 
-    рамка--цвет-слева = border-left-color
+    цвет-рамки-слева = border-left-color
 
-    рамка--стиль-слева = border-left-style
+    стиль-рамки-слева = border-left-style
 
-    рамка--толщина-слева = border-left-width
+    толщина-рамки-слева = border-left-width
 
-    рамка--радуис = border-radius
+    радуис-рамки = border-radius
 
-    рамка--справа = border-right
+    рамка-справа = border-right
 
-    рамка--цвет-справа = border-right-color
+    цвет-рамки-справа = border-right-color
 
-    рамка--стиль-справа = border-right-style
+    стиль-рамки-справа = border-right-style
 
-    рамка--ширина-справа = border-right-width
+    ширина-рамки-справа = border-right-width
 
-    рамка--отступ = border-spacing
+    отступ-рамки = border-spacing
 
-    рамка--радиус-окончания-начала = border-start-end-radius
+    радиус-окончания-начала-рамки = border-start-end-radius
 
-    рамка--радиус-начала-начала = border-start-start-radius
+    радиус-начала-начала-рамки = border-start-start-radius
 
-    рамка--стиль = border-style
     стиль-рамки = border-style
 
-    рамка--сверху = border-top
+    рамка-сверху = border-top
 
-    рамка--цвет-сверху = border-top-color
+    цвет-рамки-сверху = border-top-color
 
-    рамка--радиус-сверху-слева = border-top-left-radius
+    радиус-рамки-сверху-слева = border-top-left-radius
 
-    рамка--радиус-сверху-справа = border-top-right-radius
+    радиус-рамки-сверху-справа = border-top-right-radius
 
-    рамка--стиль-сверху = border-top-style
+    стиль-рамки-сверху = border-top-style
 
-    рамка--толщина-сверху = border-top-width
+    толщина-рамки-сверху = border-top-width
 
-    рамка--толщина = border-width
     толщина-рамки = border-width
 
     низ = bottom
@@ -339,7 +337,6 @@
 
     палитра-шрифта = font-palette
 
-    шрифт--размер = font-size
     размер-шрифта = font-size
 
     // font-size-adjust
