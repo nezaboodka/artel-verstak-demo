@@ -206,7 +206,7 @@
 
     низ = bottom
 
-    тень-контейнера = box-shadow
+    тень-от-контейнера = box-shadow
 
     расчёт-размеров-контейнер = box-sizing
 
@@ -612,13 +612,13 @@
 
     страница = page
 
-    // page-break-after
+    начало-страницы-после = page-break-after
 
-    // page-break-before
+    начало-страницы-до = page-break-before
 
-    // page-break-inside
+    начало-страницы-внутри = page-break-inside
 
-    // paint-order
+    порядок-рисования = paint-order
 
     // guarded
     // parent-rule: CSSRule /*| null*/
@@ -633,17 +633,17 @@
 
     размещение-самого-себя = place-self
 
-    // pointer-events
+    события-указателя = pointer-events
 
     позиция = position
 
     // print-color-adjust
 
-    // quotes
+    кавычки = quotes
 
     // r
 
-    // resize
+    изменение-размера = resize
 
     право = right
 
@@ -725,9 +725,9 @@
 
     // shape-rendering
 
-    // stop-color
+    стоп-цвет = stop-color
 
-    // stop-opacity
+    стоп-полупрозрачность = stop-opacity
 
     // stroke
 
@@ -777,23 +777,23 @@
 
     // text-emphasis-style
 
-    // text-indent
+    отступ-текста = text-indent
 
-    // text-orientation
+    ориентация-текста = text-orientation
 
-    // text-overflow
+    переполнение-текста = text-overflow
 
-    // text-rendering
+    рендеринг-текста = text-rendering
 
-    // text-shadow
+    тень-от-текста = text-shadow
 
-    // text-transform
+    трансформация-текста = text-transform
 
-    // text-underline-offset
+    смещение-подчеркивания-текста = text-underline-offset
 
-    // text-underline-position
+    позиция-подчеркивания-текста = text-underline-position
 
-    // text-wrap
+    перенос-текста = text-wrap
 
     верх = top
 
@@ -801,11 +801,11 @@
 
     трансформация = transform
 
-    // transform-box
+    контейнер-трансформции = transform-box
 
-    // transform-origin
+    основание-трансформации = transform-origin
 
-    // transform-style
+    стиль-трансформции = transform-style
 
     переход = transition
 
