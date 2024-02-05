@@ -23,23 +23,23 @@
 
     анимация = animation
 
-    анимации--композиция = animation-composition
+    композиция-анимации = animation-composition
 
-    анимация--задержка = animation-delay
+    задержка-анимации = animation-delay
 
-    анимация--направление = animation-direction
+    направление-анимации = animation-direction
 
-    анимация--длительность = animation-duration
+    длительность-анимации = animation-duration
 
-    анимация--режим-заполнения = animation-fill-mode
+    режим-заполнения-анимации = animation-fill-mode
 
-    анимация--количество-повторений = animation-iteration-count
+    количество-повторений-анимации = animation-iteration-count
 
-    анимация--имя = animation-name
+    имя-анимации = animation-name
 
-    анимация--состояние = animation-play-state
+    состояние-анимации = animation-play-state
 
-    анимация--функция-тайминга = animation-timing-function
+    функция-тайминга-анимации = animation-timing-function
 
     внешность = appearance
 
