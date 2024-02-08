@@ -1,257 +1,257 @@
 псевдонимы(русский)
 {
-  тип СтилизованныйЭлемент = ElementCSSInlineStyle
+  type ElementCSSInlineStyle = СтилизованныйЭлемент
   {
-    карта-стилей-атрибутов = attributeStyleMap
+    attributeStyleMap = карта-стилей-атрибутов
 
-    стиль = style
+    style = стиль
   }
 
-  тип ОписаниеСтилей = CSSStyleDeclaration
+  type CSSStyleDeclaration = ОписаниеСтилей
   {
-    цвет-акцента = accent-color
+    accent-color = цвет-акцента
 
-    выравнивание-содержимого = align-content
+    align-content = выравнивание-содержимого
 
-    выравнивание-элементов = align-items
+    align-items = выравнивание-элементов
 
-    выравнивание-самого-себя = align-self
+    align-self = выравнивание-самого-себя
 
-    базис-выраванивания = alignment-baseline
+    alignment-baseline = базис-выраванивания
 
-    всё = all
+    all = всё
 
-    анимация = animation
+    animation = анимация
 
-    композиция-анимации = animation-composition
+    animation-composition = композиция-анимации
 
-    задержка-анимации = animation-delay
+    animation-delay = задержка-анимации
 
-    направление-анимации = animation-direction
+    animation-direction = направление-анимации
 
-    длительность-анимации = animation-duration
+    animation-duration = длительность-анимации
 
-    режим-заполнения-анимации = animation-fill-mode
+    animation-fill-mode = режим-заполнения-анимации
 
-    количество-повторений-анимации = animation-iteration-count
+    animation-iteration-count = количество-повторений-анимации
 
-    имя-анимации = animation-name
+    animation-name = имя-анимации
 
-    состояние-анимации = animation-play-state
+    animation-play-state = состояние-анимации
 
-    функция-тайминга-анимации = animation-timing-function
+    animation-timing-function = функция-тайминга-анимации
 
-    внешность = appearance
+    appearance = внешность
 
-    соотношение-сторон = aspect-ratio
+    aspect-ratio = соотношение-сторон
 
-    фоновый-фильтр = backdrop-filter
+    backdrop-filter = фоновый-фильтр
 
-    видимость-обратной-стороный = backface-visibility
+    backface-visibility = видимость-обратной-стороный
 
-    фон = background
+    background = фон
 
-    вложения-для-фона = background-attachment
+    background-attachment = вложения-для-фона
 
-    режим-смешивания-фона = background-blend-mode
+    background-blend-mode = режим-смешивания-фона
 
-    отсечение-фона = background-clip
+    background-clip = отсечение-фона
 
-    цвет-фона = background-color
+    background-color = цвет-фона
 
-    фоновое-изображение = background-image
+    background-image = фоновое-изображение
 
-    основание-фона = background-origin
+    background-origin = основание-фона
 
-    позиция-фона = background-position
+    background-position = позиция-фона
 
-    позиция-фона-x = background-position-x
+    background-position-x = позиция-фона-x
 
-    позиция-фона-y = background-position-y
+    background-position-y = позиция-фона-y
 
-    повторение-фона = background-repeat
+    background-repeat = повторение-фона
 
-    размер-фона = background-size
+    background-size = размер-фона
 
-    // базовое-смещение = baseline-shift
+    // baseline-shift = базовое-смещение
 
-    // базовый-источник = baseline-source /*(!)*/
+    // baseline-source = /*(!)*/ базовый-источник
 
-    размер-блока = block-size
+    block-size = размер-блока
 
-    рамка = border
+    border = рамка
 
-    блок-рамки = border-block
+    border-block = блок-рамки
 
-    цвет-блока-рамки = border-block-color
+    border-block-color = цвет-блока-рамки
 
-    окончание-блока-рамки = border-block-end
+    border-block-end = окончание-блока-рамки
 
-    цвет-конца-блока-рамки = border-block-end-color
+    border-block-end-color = цвет-конца-блока-рамки
 
-    стиль-конца-блока-рамки = border-block-end-style
+    border-block-end-style = стиль-конца-блока-рамки
 
-    толщина-конца-блока-рамки = border-block-end-width
+    border-block-end-width = толщина-конца-блока-рамки
 
-    начало-блока-рамки = border-block-start
+    border-block-start = начало-блока-рамки
 
-    цвет-начала-блока-рамки = border-block-start-color
+    border-block-start-color = цвет-начала-блока-рамки
 
-    стиль-начала-блока-рамки = border-block-start-style
+    border-block-start-style = стиль-начала-блока-рамки
 
-    толщина-начала-блока-рамки = border-block-start-width
+    border-block-start-width = толщина-начала-блока-рамки
 
-    стиль-блока-рамки = border-block-style
+    border-block-style = стиль-блока-рамки
 
-    толщина-блока-рамки = border-block-width
+    border-block-width = толщина-блока-рамки
 
-    рамка-снизу = border-bottom
+    border-bottom = рамка-снизу
 
-    цвет-рамки-снизу = border-bottom-color
+    border-bottom-color = цвет-рамки-снизу
 
-    радиус-рамки-снизу-слева = border-bottom-left-radius
+    border-bottom-left-radius = радиус-рамки-снизу-слева
 
-    радиус-рамки-снизу-справа = border-bottom-right-radius
+    border-bottom-right-radius = радиус-рамки-снизу-справа
 
-    стиль-рамки-снизу = border-bottom-style
+    border-bottom-style = стиль-рамки-снизу
 
-    толщина-рамки-снизу = border-bottom-width
+    border-bottom-width = толщина-рамки-снизу
 
-    свёртка-рамки = border-collapse
+    border-collapse = свёртка-рамки
 
-    цвет-рамки = border-color
+    border-color = цвет-рамки
 
-    радиус-окончания-окончания-рамки = border-end-end-radius
+    border-end-end-radius = радиус-окончания-окончания-рамки
 
-    радиус-начала-окончания-рамки = border-end-start-radius
+    border-end-start-radius = радиус-начала-окончания-рамки
 
-    изображение-рамки = border-image
+    border-image = изображение-рамки
 
-    начало-изображения-рамки = border-image-outset
+    border-image-outset = начало-изображения-рамки
 
-    повторение-изображения-рамки = border-image-repeat
+    border-image-repeat = повторение-изображения-рамки
 
-    нарезка-изображения-рамки = border-image-slice
+    border-image-slice = нарезка-изображения-рамки
 
-    источник-изображения-рамки = border-image-source
+    border-image-source = источник-изображения-рамки
 
-    ширина-изоражения-рамки = border-image-width
+    border-image-width = ширина-изоражения-рамки
 
-    рамка-внутри = border-inline
+    border-inline = рамка-внутри
 
-    цвет-рамки-внутри = border-inline-color
+    border-inline-color = цвет-рамки-внутри
 
-    окончание-рамки-внутри = border-inline-end
+    border-inline-end = окончание-рамки-внутри
 
-    конечный-цвет-рамки-внутри = border-inline-end-color
+    border-inline-end-color = конечный-цвет-рамки-внутри
 
-    конечный-стиль-рамки-внутри = border-inline-end-style
+    border-inline-end-style = конечный-стиль-рамки-внутри
 
-    конечная-толщина-рамки-внутри = border-inline-end-width
+    border-inline-end-width = конечная-толщина-рамки-внутри
 
-    начало-рамки-внутри = border-inline-start
+    border-inline-start = начало-рамки-внутри
 
-    начальный-цвет-рамки-внутри = border-inline-start-color
+    border-inline-start-color = начальный-цвет-рамки-внутри
 
-    начальный-стиль-рамки-внутри = border-inline-start-style
+    border-inline-start-style = начальный-стиль-рамки-внутри
 
-    начальная-толщина-рамки-внутри = border-inline-start-width
+    border-inline-start-width = начальная-толщина-рамки-внутри
 
-    начальный-стиль-рамки-внутри = border-inline-style
+    border-inline-style = начальный-стиль-рамки-внутри
 
-    толщина-рамки-внутри = border-inline-width
+    border-inline-width = толщина-рамки-внутри
 
-    рамка-слева = border-left
+    border-left = рамка-слева
 
-    цвет-рамки-слева = border-left-color
+    border-left-color = цвет-рамки-слева
 
-    стиль-рамки-слева = border-left-style
+    border-left-style = стиль-рамки-слева
 
-    толщина-рамки-слева = border-left-width
+    border-left-width = толщина-рамки-слева
 
-    радуис-рамки = border-radius
+    border-radius = радуис-рамки
 
-    рамка-справа = border-right
+    border-right = рамка-справа
 
-    цвет-рамки-справа = border-right-color
+    border-right-color = цвет-рамки-справа
 
-    стиль-рамки-справа = border-right-style
+    border-right-style = стиль-рамки-справа
 
-    ширина-рамки-справа = border-right-width
+    border-right-width = ширина-рамки-справа
 
-    отступ-рамки = border-spacing
+    border-spacing = отступ-рамки
 
-    радиус-окончания-начала-рамки = border-start-end-radius
+    border-start-end-radius = радиус-окончания-начала-рамки
 
-    радиус-начала-начала-рамки = border-start-start-radius
+    border-start-start-radius = радиус-начала-начала-рамки
 
-    стиль-рамки = border-style
+    border-style = стиль-рамки
 
-    рамка-сверху = border-top
+    border-top = рамка-сверху
 
-    цвет-рамки-сверху = border-top-color
+    border-top-color = цвет-рамки-сверху
 
-    радиус-рамки-сверху-слева = border-top-left-radius
+    border-top-left-radius = радиус-рамки-сверху-слева
 
-    радиус-рамки-сверху-справа = border-top-right-radius
+    border-top-right-radius = радиус-рамки-сверху-справа
 
-    стиль-рамки-сверху = border-top-style
+    border-top-style = стиль-рамки-сверху
 
-    толщина-рамки-сверху = border-top-width
+    border-top-width = толщина-рамки-сверху
 
-    толщина-рамки = border-width
+    border-width = толщина-рамки
 
-    низ = bottom
+    bottom = низ
 
-    тень-от-контейнера = box-shadow
+    box-shadow = тень-от-контейнера
 
-    расчёт-размеров-контейнер = box-sizing
+    box-sizing = расчёт-размеров-контейнер
 
-    разрыв-после = break-after
+    break-after = разрыв-после
 
-    разрыв-до = break-before
+    break-before = разрыв-до
 
-    разрыв-внутри = break-inside
+    break-inside = разрыв-внутри
 
-    сторона-заголовка = caption-side
+    caption-side = сторона-заголовка
 
-    цвет-каретки = caret-color
+    caret-color = цвет-каретки
 
-    очистка = clear
+    clear = очистка
 
-    контур-отсечение = clip-path
+    clip-path = контур-отсечение
 
-    правило-отсечения = clip-rule
+    clip-rule = правило-отсечения
 
-    цвет = color
+    color = цвет
 
-    цветовая-интерполяция = color-interpolation
+    color-interpolation = цветовая-интерполяция
 
-    фильтры-цветовой-интерполяции = color-interpolation-filters
+    color-interpolation-filters = фильтры-цветовой-интерполяции
 
-    цветовая-съема = color-scheme
+    color-scheme = цветовая-съема
 
-    количество-колонок = column-count
+    column-count = количество-колонок
 
-    заполнение-колонок = column-fill
+    column-fill = заполнение-колонок
 
-    зазор-колонок = column-gap
+    column-gap = зазор-колонок
 
-    отсечка-колонок = column-rule
+    column-rule = отсечка-колонок
 
-    цвет-отсечки-колонок = column-rule-color
+    column-rule-color = цвет-отсечки-колонок
 
-    стиль-отсечки-колонок = column-rule-style
+    column-rule-style = стиль-отсечки-колонок
 
-    толщина-отсечки-колонок = column-rule-width
+    column-rule-width = толщина-отсечки-колонок
 
-    диапазон-колонок = column-span
+    column-span = диапазон-колонок
 
-    ширина-колонки = column-width
+    column-width = ширина-колонки
 
-    колонки = columns
+    columns = колонки
 
-    содержит = contain
+    contain = содержит
 
     // contain-intrinsic-block-size
 
@@ -263,13 +263,13 @@
 
     // contain-intrinsic-width
 
-    контейнер = container
+    container = контейнер
 
-    имя-контейнера = container-name
+    container-name = имя-контейнера
 
-    тип-контейнера = container-type
+    container-type = тип-контейнера
 
-    содержимое = content
+    content = содержимое
 
     // counter-increment
 
@@ -289,21 +289,21 @@
 
     // d
 
-    направление = direction
+    direction = направление
 
-    дисплей = display
+    display = дисплей
 
     // dominant-baseline
 
-    пустые-ячейки = empty-cells
+    empty-cells = пустые-ячейки
 
-    заливка = fill
+    fill = заливка
 
-    полупрозрачность-заливки = fill-opacity
+    fill-opacity = полупрозрачность-заливки
 
-    правило-заливки = fill-rule
+    fill-rule = правило-заливки
 
-    фильтр = filter
+    filter = фильтр
 
     // flex
 
@@ -319,31 +319,31 @@
 
     // flex-wrap
 
-    плавающий-элемент = float
+    float = плавающий-элемент
 
     // flood-color
 
     // flood-opacity
 
-    шрифт = font
+    font = шрифт
 
-    семейство-шрифта = font-family
+    font-family = семейство-шрифта
 
     // font-feature-settings
 
-    кернинг-шрифта = font-kerning
+    font-kerning = кернинг-шрифта
 
     // font-optical-sizing
 
-    палитра-шрифта = font-palette
+    font-palette = палитра-шрифта
 
-    размер-шрифта = font-size
+    font-size = размер-шрифта
 
     // font-size-adjust
 
-    растяжение-шрифта = font-stretch
+    font-stretch = растяжение-шрифта
 
-    стиль-шрифта = font-style
+    font-style = стиль-шрифта
 
     // font-synthesis
 
@@ -353,7 +353,7 @@
 
     // font-synthesis-weight
 
-    вариация-шрифта = font-variant
+    font-variant = вариация-шрифта
 
     // font-variant-alternates
 
@@ -373,29 +373,29 @@
 
     // forced-color-adjust
 
-    зазор = gap
+    gap = зазор
 
-    сетка = grid
+    grid = сетка
 
-    область-сетки = grid-area
+    grid-area = область-сетки
 
-    автоматические-колоонки-сетки = grid-auto-columns
+    grid-auto-columns = автоматические-колоонки-сетки
 
-    автоматическое-размещение-на-сетке = grid-auto-flow
+    grid-auto-flow = автоматическое-размещение-на-сетке
 
-    автоматические-строки-сетки = grid-auto-rows
+    grid-auto-rows = автоматические-строки-сетки
 
-    колонка-сетки = grid-column
+    grid-column = колонка-сетки
 
-    конечная-колонка-сетки = grid-column-end
+    grid-column-end = конечная-колонка-сетки
 
-    начальная-колонка-сетки = grid-column-start
+    grid-column-start = начальная-колонка-сетки
 
-    строка-сетки = grid-row
+    grid-row = строка-сетки
 
-    конечная-строка-сетки = grid-row-end
+    grid-row-end = конечная-строка-сетки
 
-    начальная-строка-сетки = grid-row-start
+    grid-row-start = начальная-строка-сетки
 
     // grid-template
 
@@ -405,11 +405,11 @@
 
     // grid-template-rows
 
-    высота = height
+    height = высота
 
     // hyphenate-character
 
-    перенос-слов = hyphens
+    hyphens = перенос-слов
 
     // image-rendering
 
@@ -431,13 +431,13 @@
 
     // isolation
 
-    растяжение-содержимого = justify-content
+    justify-content = растяжение-содержимого
 
-    растяжение-элементов = justify-items
+    justify-items = растяжение-элементов
 
-    растяжение-самого-себя = justify-self
+    justify-self = растяжение-самого-себя
 
-    лево = left
+    left = лево
 
     // guarded
     // length: Number
@@ -446,11 +446,11 @@
 
     // lighting-color
 
-    перенос-строки = line-break
+    line-break = перенос-строки
 
-    высота-строки = line-height
+    line-height = высота-строки
 
-    стиль-списка = list-style
+    list-style = стиль-списка
 
     // list-style-image
 
@@ -458,7 +458,7 @@
 
     // list-style-type
 
-    отступ = margin
+    margin = отступ
 
     // margin-block
 
@@ -466,113 +466,113 @@
 
     // margin-block-start
 
-    отступ-снизу = margin-bottom
+    margin-bottom = отступ-снизу
 
-    отступ-внутри = margin-inline
+    margin-inline = отступ-внутри
 
-    отступ-окончания-внутри = margin-inline-end
+    margin-inline-end = отступ-окончания-внутри
 
-    отступ-начала-внутри = margin-inline-start
+    margin-inline-start = отступ-начала-внутри
 
-    отступ-слева = margin-left
+    margin-left = отступ-слева
 
-    отступ-справа = margin-right
+    margin-right = отступ-справа
 
-    отступ-сверху = margin-top
+    margin-top = отступ-сверху
 
-    маркер = marker
+    marker = маркер
 
-    конец-маркера = marker-end
+    marker-end = конец-маркера
 
-    середина-маркера = marker-mid
+    marker-mid = середина-маркера
 
-    начало-маркера = marker-start
+    marker-start = начало-маркера
 
-    маска = mask
+    mask = маска
 
-    отсечение-маски = mask-clip
+    mask-clip = отсечение-маски
 
-    композиция-маски = mask-composite
+    mask-composite = композиция-маски
 
-    изображение-маски = mask-image
+    mask-image = изображение-маски
 
-    режим-маски = mask-mode
+    mask-mode = режим-маски
 
-    основание-маски = mask-origin
+    mask-origin = основание-маски
 
-    позиция-маски = mask-position
+    mask-position = позиция-маски
 
-    повторение-маски = mask-repeat
+    mask-repeat = повторение-маски
 
-    размер-маски = mask-size
+    mask-size = размер-маски
 
-    тип-маски = mask-type
+    mask-type = тип-маски
 
-    глубина-маски = math-depth
+    math-depth = глубина-маски
 
-    математический-стиль = math-style
+    math-style = математический-стиль
 
     // max-block-size
 
-    максимальная-высота = max-height
+    max-height = максимальная-высота
 
     // max-inline-size
 
-    максимальная-ширина = max-width
+    max-width = максимальная-ширина
 
     // min-block-size
 
-    минимальная-высота = min-height
+    min-height = минимальная-высота
 
     // min-inline-size
 
-    минимальная-ширина = min-width
+    min-width = минимальная-ширина
 
     // mix-blend-mode
 
     // object-fit
 
-    позиция-объекта = object-position
+    object-position = позиция-объекта
 
-    смеение = offset
+    offset = смеение
 
-    якорь-смещения = offset-anchor
+    offset-anchor = якорь-смещения
 
-    расстояние-смещения = offset-distance
+    offset-distance = расстояние-смещения
 
     // offset-path
 
-    позиция-смещения = offset-position
+    offset-position = позиция-смещения
 
-    поворот-смещения = offset-rotate
+    offset-rotate = поворот-смещения
 
-    полупрозрачность = opacity
+    opacity = полупрозрачность
 
-    порядок = order
+    order = порядок
 
     // orphans
 
-    очертание = outline
+    outline = очертание
 
-    цвет-очертания = outline-color
+    outline-color = цвет-очертания
 
-    смещение-очертания = outline-offset
+    outline-offset = смещение-очертания
 
-    стиль-очертания = outline-style
+    outline-style = стиль-очертания
 
-    толщина-очертания = outline-width
+    outline-width = толщина-очертания
 
-    переполнение = overflow
+    overflow = переполнение
 
-    якорь-переполнения = overflow-anchor
+    overflow-anchor = якорь-переполнения
 
     // overflow-clip-margin
 
-    перенос-переполнения = overflow-wrap
+    overflow-wrap = перенос-переполнения
 
-    переполнение-x = overflow-x
+    overflow-x = переполнение-x
 
-    переполнение-y = overflow-y
+    overflow-y = переполнение-y
 
     // overscroll-behavior
 
@@ -584,7 +584,7 @@
 
     // overscroll-behavior-y
 
-    отступ-внутри = padding
+    padding = отступ-внутри
 
     // padding-block
 
@@ -592,7 +592,7 @@
 
     // padding-block-start
 
-    отступ-внутри-снизу = padding-bottom
+    padding-bottom = отступ-внутри-снизу
 
     // padding-inline
 
@@ -600,52 +600,52 @@
 
     // padding-inline-start
 
-    отступ-внутри-слева = padding-left
+    padding-left = отступ-внутри-слева
 
-    отступ-внутри-справа = padding-right
+    padding-right = отступ-внутри-справа
 
-    отступ-внутри-сверху = padding-top
+    padding-top = отступ-внутри-сверху
 
-    страница = page
+    page = страница
 
-    начало-страницы-после = page-break-after
+    page-break-after = начало-страницы-после
 
-    начало-страницы-до = page-break-before
+    page-break-before = начало-страницы-до
 
-    начало-страницы-внутри = page-break-inside
+    page-break-inside = начало-страницы-внутри
 
-    порядок-рисования = paint-order
+    paint-order = порядок-рисования
 
     // guarded
     // parent-rule: CSSRule /*| null*/
 
-    перспектива = perspective
+    perspective = перспектива
 
-    основание-перспективы = perspective-origin
+    perspective-origin = основание-перспективы
 
-    размещение-содержимого = place-content
+    place-content = размещение-содержимого
 
-    размещение-элементов = place-items
+    place-items = размещение-элементов
 
-    размещение-самого-себя = place-self
+    place-self = размещение-самого-себя
 
-    события-указателя = pointer-events
+    pointer-events = события-указателя
 
-    позиция = position
+    position = позиция
 
     // print-color-adjust
 
-    кавычки = quotes
+    quotes = кавычки
 
     // r
 
-    изменение-размера = resize
+    resize = изменение-размера
 
-    право = right
+    right = право
 
-    поворот = rotate
+    rotate = поворот
 
-    зазор-строки = row-gap
+    row-gap = зазор-строки
 
     // ruby-position
 
@@ -653,7 +653,7 @@
 
     // ry
 
-    масштаб = scale
+    scale = масштаб
 
     // scroll-behavior
 
@@ -721,11 +721,11 @@
 
     // shape-rendering
 
-    стоп-цвет = stop-color
+    stop-color = стоп-цвет
 
-    стоп-полупрозрачность = stop-opacity
+    stop-opacity = стоп-полупрозрачность
 
-    обводка = stroke
+    stroke = обводка
 
     // stroke-dasharray
 
@@ -737,19 +737,19 @@
 
     // stroke-miterlimit
 
-    полупрозрачность-обводки = stroke-opacity
+    stroke-opacity = полупрозрачность-обводки
 
-    толщина-обводки = stroke-width
+    stroke-width = толщина-обводки
 
-    размер-табуляции = tab-size
+    tab-size = размер-табуляции
 
-    табличное-раскладка = table-layout
+    table-layout = табличное-раскладка
 
-    выравнивание-текста = text-align
+    text-align = выравнивание-текста
 
     // text-align-last
 
-    якорь-текста = text-anchor
+    text-anchor = якорь-текста
 
     // text-combine-upright
 
@@ -773,57 +773,57 @@
 
     // text-emphasis-style
 
-    отступ-текста = text-indent
+    text-indent = отступ-текста
 
-    ориентация-текста = text-orientation
+    text-orientation = ориентация-текста
 
-    переполнение-текста = text-overflow
+    text-overflow = переполнение-текста
 
-    рендеринг-текста = text-rendering
+    text-rendering = рендеринг-текста
 
-    тень-от-текста = text-shadow
+    text-shadow = тень-от-текста
 
-    трансформация-текста = text-transform
+    text-transform = трансформация-текста
 
-    смещение-подчеркивания-текста = text-underline-offset
+    text-underline-offset = смещение-подчеркивания-текста
 
-    позиция-подчеркивания-текста = text-underline-position
+    text-underline-position = позиция-подчеркивания-текста
 
-    перенос-текста = text-wrap
+    text-wrap = перенос-текста
 
-    верх = top
+    top = верх
 
-    действие-по-касанию = touch-action
+    touch-action = действие-по-касанию
 
-    трансформация = transform
+    transform = трансформация
 
-    контейнер-трансформции = transform-box
+    transform-box = контейнер-трансформции
 
-    основание-трансформации = transform-origin
+    transform-origin = основание-трансформации
 
-    стиль-трансформции = transform-style
+    transform-style = стиль-трансформции
 
-    переход = transition
+    transition = переход
 
-    задержка-перехода = transition-delay
+    transition-delay = задержка-перехода
 
-    длительность-перехода = transition-duration
+    transition-duration = длительность-перехода
 
-    переходное-свойство = transition-property
+    transition-property = переходное-свойство
 
-    функция-тайминга-перехода = transition-timing-function
+    transition-timing-function = функция-тайминга-перехода
 
-    перенос = translate
+    translate = перенос
 
     // unicode-bidi
 
-    выбор-пользователем = user-select
+    user-select = выбор-пользователем
 
     // vector-effect
 
-    вертикальное-выравнивание = vertical-align
+    vertical-align = вертикальное-выравнивание
 
-    видимость = visibility
+    visibility = видимость
 
     // webkit-align-content
 
@@ -839,25 +839,25 @@
 
     // webkit-text-stroke-width
 
-    пробелы = white-space
+    white-space = пробелы
 
     // widows
 
-    ширина = width
+    width = ширина
 
     // will-change
 
-    перенос-слов = word-break
+    word-break = перенос-слов
 
-    словарный-пробел = word-spacing
+    word-spacing = словарный-пробел
 
-    режим-письма = writing-mode
+    writing-mode = режим-письма
 
     // x
 
     // y
 
-    номер-слоя = z-index
+    z-index = номер-слоя
 
     // operation get-property-priority(property)
 
