@@ -1,12 +1,12 @@
 
 псевдонимы(русский)
 {
-  тип Обработчик<Т>(эл, базис) = Delegate<T>(el, basis)
+  type Delegate<T>(el, basis) = Обработчик<Т>(эл, базис)
 
-  тип Режим = Mode
+  type Mode = Режим
   {
-    стандартный = default
-    независимое-обновление = independent-update
-    ручное-встраивание = manual-mount
+    default = стандартный
+    independent-update = независимое-обновление
+    manual-mount = ручное-встраивание
   }
 }

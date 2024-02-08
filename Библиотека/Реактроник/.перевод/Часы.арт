@@ -1,22 +1,22 @@
 
 псевдонимы(русский)
 {
-  тип Часы = Clock
+  type Clock = Часы
   {
-    час = hour
+    hour = час
 
-    минута = minute
+    minute = минута
 
-    секунда = second
+    second = секунда
 
-    мс = ms
+    ms = мс
 
-    интервал = interval
+    interval = интервал
 
-    на-паузе = paused
+    paused = на-паузе
 
-    при создании(интервал) = on create(interval)
+    on create(interval) = (интервал)
 
-    операция пауза(значение) = pause(value)
+    operation pause(value) = пауза(значение)
   }
 }

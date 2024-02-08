@@ -1,10 +1,10 @@
 
 псевдонимы(русский)
 {
-  операция транзакция(действие) = transaction(action)
+  operation transaction(action) = транзакция(действие)
 
-  тип Транзакция = Transaction
+  type Transaction = Транзакция
   {
-    операция выполнить`(опции, опер) = run`(options, func)
+    operation run`(options, func) = выполнить`(опции, опер)
   }
 }

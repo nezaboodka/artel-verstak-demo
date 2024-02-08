@@ -22,51 +22,51 @@
 
 псевдонимы(русский)
 {
-  тип Выравнивание = Align
+  type Align = Выравнивание
   {
-    стандартно = default
-    по-границам = to-bounds
-    по-левому-краю = to-left
-    по-центру-ширины = to-center-x
-    по-правому-краю = to-right
-    по-верхнему-краю = to-top
-    по-центру-высоты = to-center-y
-    по-нижнему-краю = to-bottom
-    по-центру = to-center
+    default = стандартно
+    to-bounds = по-границам
+    to-left = по-левому-краю
+    to-center-x = по-центру-ширины
+    to-right = по-правому-краю
+    to-top = по-верхнему-краю
+    to-center-y = по-центру-высоты
+    to-bottom = по-нижнему-краю
+    to-center = по-центру
   }
 
-  тип Эль = El
+  type El = Эль
   {
-    узел = node
+    node = узел
 
-    html = native
+    native = html
 
-    модель = model
+    model = модель
 
-    вид = kind
+    kind = вид
 
-    область = area
+    area = область
 
-    рост-ширины = width-growth
+    width-growth = рост-ширины
 
-    минимальная-ширина = min-width
+    min-width = минимальная-ширина
 
-    максимальная-ширина = max-width
+    max-width = максимальная-ширина
 
-    рост-высоты = height-growth
+    height-growth = рост-высоты
 
-    минимальная-высота = min-height
+    min-height = минимальная-высота
 
-    максимальная-высота = max-height
+    max-height = максимальная-высота
 
-    выравнивание-содержимого = content-alignment
+    content-alignment = выравнивание-содержимого
 
-    выравнивание-элемента = element-alignment
+    element-alignment = выравнивание-элемента
 
-    перенос-содержимого = content-wrapping
+    content-wrapping = перенос-содержимого
 
-    всплывающий-элемент = overlay-visible
+    overlay-visible = всплывающий-элемент
   }
 
-  операция начать-новую-строку(сместить-курсор-вниз) = startNewRow(shiftCursorDown)
+  operation startNewRow(shiftCursorDown) = начать-новую-строку(сместить-курсор-вниз)
 }
