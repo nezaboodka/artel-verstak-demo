@@ -25,14 +25,14 @@
   type Align = Выравнивание
   {
     default = стандартно
-    to-bounds = по-границам
-    to-left = по-левому-краю
-    to-center-x = по-центру-ширины
-    to-right = по-правому-краю
-    to-top = по-верхнему-краю
-    to-center-y = по-центру-высоты
-    to-bottom = по-нижнему-краю
-    to-center = по-центру
+    fit = растяжка
+    left = лево
+    center-x = центр-ширины
+    right = право
+    top = верх
+    center-y = центр-высоты
+    bottom = низ
+    center = центр
   }
 
   type El = Эль

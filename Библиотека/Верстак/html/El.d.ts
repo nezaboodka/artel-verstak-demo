@@ -38,14 +38,14 @@ export type ElCoords = {
 };
 export declare enum Align {
     default = 16,
-    toBounds = 0,
-    toLeft = 1,
-    toCenterX = 2,
-    toRight = 3,
-    toTop = 4,
-    toCenterY = 8,
-    toBottom = 12,
-    toCenter = 10
+    fit = 0,
+    left = 1,
+    centerX = 2,
+    right = 3,
+    top = 4,
+    centerY = 8,
+    bottom = 12,
+    center = 10
 }
 export type ElasticSize = {
     cells?: number;

@@ -79,15 +79,15 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type Align = variant
   {
-    default      // = 16
-    to-bounds    // = 0
-    to-left      // = 1
-    to-center-x  // = 2
-    to-right     // = 3
-    to-top       // = 4
-    to-center-y  // = 8
-    to-bottom    // = 12
-    to-center    // = 10
+    default   // = 16
+    fit       // = 0
+    left      // = 1
+    center-x  // = 2
+    right     // = 3
+    top       // = 4
+    center-y  // = 8
+    bottom    // = 12
+    center    // = 10
   }
 
 
