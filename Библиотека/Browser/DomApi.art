@@ -8191,9 +8191,9 @@ external
   type Element = object Node, ARIAMixin, Animatable, ChildNode, InnerHTML, NonDocumentTypeChildNode, ParentNode, Slottable
   {
     guarded
-    ownerDocument: Document
+    owner-document: Document
 
-    operation checkVisibility(options: CheckVisibilityOptions? = none): YesNo
+    operation check-visibility(options: CheckVisibilityOptions? = none): YesNo
 
     operation closest<K = /*(!) keyof SVGElementTagNameMap */ Object?>(selector: K): /*(!) SVGElementTagNameMap[K] */ Object?
 
@@ -8201,31 +8201,31 @@ external
 
     operation closest<E = Element>(selectors: Artel.Text): E?
 
-    operation getElementsByTagName<K = /*(!) keyof SVGElementTagNameMap */ Object?>(qualifiedName: K): HTMLCollectionOf</*(!) SVGElementTagNameMap[K] */ Object?>
+    operation get-elements-by-tag-name<K = /*(!) keyof SVGElementTagNameMap */ Object?>(qualified-name: K): HTMLCollectionOf</*(!) SVGElementTagNameMap[K] */ Object?>
 
-    operation getElementsByTagName<K = /*(!) keyof MathMLElementTagNameMap */ Object?>(qualifiedName: K): HTMLCollectionOf</*(!) MathMLElementTagNameMap[K] */ Object?>
+    operation get-elements-by-tag-name<K = /*(!) keyof MathMLElementTagNameMap */ Object?>(qualified-name: K): HTMLCollectionOf</*(!) MathMLElementTagNameMap[K] */ Object?>
 
-    operation getElementsByTagName(qualifiedName: Artel.Text): HTMLCollectionOf<Element>
+    operation get-elements-by-tag-name(qualified-name: Artel.Text): HTMLCollectionOf<Element>
 
-    operation getElementsByTagNameNS(namespaceURI: Artel.Text /*"http://www.w3.org/2000/svg"*/, localName: Artel.Text): HTMLCollectionOf<SVGElement>
+    operation get-elements-by-tag-name-NS(namespace-URI: Artel.Text /*"http://www.w3.org/2000/svg"*/, local-name: Artel.Text): HTMLCollectionOf<SVGElement>
 
-    operation getElementsByTagNameNS(namespaceURI: Artel.Text /*"http://www.w3.org/1998/Math/MathML"*/, localName: Artel.Text): HTMLCollectionOf<MathMLElement>
+    operation get-elements-by-tag-name-NS(namespace-URI: Artel.Text /*"http://www.w3.org/1998/Math/MathML"*/, local-name: Artel.Text): HTMLCollectionOf<MathMLElement>
 
-    operation getElementsByTagNameNS(namespace: Artel.Text?, localName: Artel.Text): HTMLCollectionOf<Element>
+    operation get-elements-by-tag-name-NS(namespace: Artel.Text?, local-name: Artel.Text): HTMLCollectionOf<Element>
 
     operation scroll(x: Number, y: Number)
 
-    operation scrollBy(x: Number, y: Number)
+    operation scroll-by(x: Number, y: Number)
 
-    operation scrollTo(x: Number, y: Number)
+    operation scroll-to(x: Number, y: Number)
 
-    operation addEventListener<K = /*(!) keyof ElementEventMap */ Object?>(type`: K, listener: operation(this: Element, ev: /*(!) ElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
+    operation add-event-listener<K = /*(!) keyof ElementEventMap */ Object?>(type`: K, listener: operation(this: Element, ev: /*(!) ElementEventMap[K] */ Object?): Object?, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation addEventListener(type`: Artel.Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
+    operation add-event-listener(type`: Artel.Text, listener: EventListenerOrEventListenerObject, options: YesNo | AddEventListenerOptions | None = none)
 
-    operation removeEventListener<K = /*(!) keyof ElementEventMap */ Object?>(type`: K, listener: operation(this: Element, ev: /*(!) ElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
+    operation remove-event-listener<K = /*(!) keyof ElementEventMap */ Object?>(type`: K, listener: operation(this: Element, ev: /*(!) ElementEventMap[K] */ Object?): Object?, options: YesNo | EventListenerOptions | None = none)
 
-    operation removeEventListener(type`: Artel.Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
+    operation remove-event-listener(type`: Artel.Text, listener: EventListenerOrEventListenerObject, options: YesNo | EventListenerOptions | None = none)
 
     prototype: Element
 

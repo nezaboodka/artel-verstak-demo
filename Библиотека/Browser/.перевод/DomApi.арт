@@ -1,120 +1,5 @@
 псевдонимы(русский)
 {
-  type EventTarget = ПолучательСобытий
-  {
-    operation add-event-listener(type`, callback, options) =
-      добавить-обработчик-события(тип`, обработчик, настройки)
-
-    operation dispatch-event(event) =
-      диспетчировать-событие(событие)
-
-    operation remove-event-listener(type`, callback, options) =
-        удалить-собработчик-события(тип`, обработчик, настройки)
-
-    prototype = прототип
-  }
-
-
-  type Node = Узел
-  {
-    base-URI = базовый-адрес
-
-    child-nodes = подчинённые-узлы
-
-    first-child = первый-подчинённый-узел
-
-    is-connected = подключен
-
-    last-child = последний-подчинённый-узел
-
-    next-sibling = следующий-соседний-узел
-
-    node-name = имя-узла
-
-    node-type = тип-узла
-
-    node-value = значение-узла
-
-    owner-document = собственный-документ
-
-    parent-element = вышестоящий-элемент
-
-    parent-node = вышестоящий-узел
-
-    previous-sibling = предыдущий-соседний-узел
-
-    text-content = текстовое-содержимое
-
-    operation append-child(node) = добавить-подчинённый-узел(узел)
-
-    operation clone-node(deep) = клонировать-узел(глубина)
-
-    operation compare-document-position(other) = сравнить-позицию-документа(другой)
-
-    operation contains(other) = содержит(другой)
-
-    operation get-root-node(options) = получить-корневый-узел(настройки)
-
-    operation has-child-nodes() = имеет-подчинённые-узлы()
-
-    operation insert-before(node, child) = вставить-перед(узел, подчинённый-узел)
-
-    operation is-default-namespace(namespace) = это-основное-пространство-имён(пространство-имён)
-
-    operation is-equal-node(other-node) = это-равный-узел(другой-узел)
-
-    operation is-same-node(other-node) = это-тот-же-узел(другой-узел)
-
-    operation lookup-namespace-URI(prefix) = найти-адрес-пространства-имён(префикс)
-
-    operation lookup-prefix(namespace) = найти-префикс(пространство-имён)
-
-    operation normalize() = нормализовать()
-
-    operation remove-child(child) = удалить-подчинённый-узел(узел)
-
-    operation replace-child(node, child) = заменить-подчинённый-узел(узел, подчинённый-узел)
-
-    ELEMENT_NODE = УЗЕЛ_ЭЛЕМЕНТА
-
-    ATTRIBUTE_NODE = АТРИБУТ_УЗЛА
-
-    TEXT_NODE = ТЕКСТОВЫЙ_УЗЕЛ
-
-    CDATA_SECTION_NODE = CDATA_SECTION_NODE
-
-    ENTITY_REFERENCE_NODE = УЗЕЛ_ССЫЛКИ_НА_СУЩНОСТЬ
-
-    ENTITY_NODE = УЗЕЛ_СУЩНОСТИ
-
-    PROCESSING_INSTRUCTION_NODE = УЗЕЛ_ИНСТРУКЦИИ_ОБРАБОТКИ
-
-    COMMENT_NODE = УЗЕЛ_КОММЕНТАРИЯ
-
-    DOCUMENT_NODE = УЗЕЛ_ДОКУМЕНТА
-
-    DOCUMENT_TYPE_NODE = УЗЕЛ_ТИПА_ДОКУМЕНТА
-
-    DOCUMENT_FRAGMENT_NODE = УЗЕЛ_ФРАГМЕНТА_ДОКУМЕНТА
-
-    NOTATION_NODE = УЗЕЛ_НОТАЦИИ
-
-    DOCUMENT_POSITION_DISCONNECTED = ПОЗИЦИЯ_ДОКУМЕНТА_ОТКЛЮЧЕНО
-
-    DOCUMENT_POSITION_PRECEDING = ПОЗИЦИЯ_ДОКУМЕНТА_ПРЕДШЕСТВУЮЩАЯ
-
-    DOCUMENT_POSITION_FOLLOWING = ПОЗИЦИЯ_ДОКУМЕНТА_ПОСЛЕДУЮЩАЯ
-
-    DOCUMENT_POSITION_CONTAINS = ПОЗИЦИЯ_ДОКУМЕНТА_СОДЕРЖИТ
-
-    DOCUMENT_POSITION_CONTAINED_BY = ПОЗИЦИЯ_ДОКУМЕНТА_СОДЕРЖИТСЯ_КЕМ
-
-    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = ПОЗИЦИЯ_ДОКУМЕНТА_СПЕЦИФИЧНА_РЕАЛИЗАЦИИ
-
-    prototype = прототип
-  }
-
-
   type ElementCSSInlineStyle = СтилизованныйЭлемент
   {
     attribute-style-map = карта-стилей-атрибутов
@@ -984,5 +869,150 @@
     // operation remove-property(property)
 
     // operation set-property(property, value /*| null*/, priority? = none)
+  }
+
+
+  type EventTarget = ПолучательСобытий
+  {
+    operation add-event-listener(type`, callback, options) =
+      добавить-обработчик-события(тип`, обработчик, настройки)
+
+    operation dispatch-event(event) =
+      диспетчировать-событие(событие)
+
+    operation remove-event-listener(type`, callback, options) =
+        удалить-собработчик-события(тип`, обработчик, настройки)
+
+    prototype = прототип
+  }
+
+
+  type Node = Узел
+  {
+    base-URI = базовый-адрес
+
+    child-nodes = подчинённые-узлы
+
+    first-child = первый-подчинённый-узел
+
+    is-connected = подключен
+
+    last-child = последний-подчинённый-узел
+
+    next-sibling = следующий-соседний-узел
+
+    node-name = имя-узла
+
+    node-type = тип-узла
+
+    node-value = значение-узла
+
+    owner-document = собственный-документ
+
+    parent-element = вышестоящий-элемент
+
+    parent-node = вышестоящий-узел
+
+    previous-sibling = предыдущий-соседний-узел
+
+    text-content = текстовое-содержимое
+
+    operation append-child(node) = добавить-подчинённый-узел(узел)
+
+    operation clone-node(deep) = клонировать-узел(глубина)
+
+    operation compare-document-position(other) = сравнить-позицию-документа(другой)
+
+    operation contains(other) = содержит(другой)
+
+    operation get-root-node(options) = получить-корневый-узел(настройки)
+
+    operation has-child-nodes() = имеет-подчинённые-узлы()
+
+    operation insert-before(node, child) = вставить-перед(узел, подчинённый-узел)
+
+    operation is-default-namespace(namespace) = это-основное-пространство-имён(пространство-имён)
+
+    operation is-equal-node(other-node) = это-равный-узел(другой-узел)
+
+    operation is-same-node(other-node) = это-тот-же-узел(другой-узел)
+
+    operation lookup-namespace-URI(prefix) = найти-адрес-пространства-имён(префикс)
+
+    operation lookup-prefix(namespace) = найти-префикс(пространство-имён)
+
+    operation normalize() = нормализовать()
+
+    operation remove-child(child) = удалить-подчинённый-узел(узел)
+
+    operation replace-child(node, child) = заменить-подчинённый-узел(узел, подчинённый-узел)
+
+    ELEMENT_NODE = УЗЕЛ_ЭЛЕМЕНТА
+
+    ATTRIBUTE_NODE = АТРИБУТ_УЗЛА
+
+    TEXT_NODE = ТЕКСТОВЫЙ_УЗЕЛ
+
+    CDATA_SECTION_NODE = CDATA_SECTION_NODE
+
+    ENTITY_REFERENCE_NODE = УЗЕЛ_ССЫЛКИ_НА_СУЩНОСТЬ
+
+    ENTITY_NODE = УЗЕЛ_СУЩНОСТИ
+
+    PROCESSING_INSTRUCTION_NODE = УЗЕЛ_ИНСТРУКЦИИ_ОБРАБОТКИ
+
+    COMMENT_NODE = УЗЕЛ_КОММЕНТАРИЯ
+
+    DOCUMENT_NODE = УЗЕЛ_ДОКУМЕНТА
+
+    DOCUMENT_TYPE_NODE = УЗЕЛ_ТИПА_ДОКУМЕНТА
+
+    DOCUMENT_FRAGMENT_NODE = УЗЕЛ_ФРАГМЕНТА_ДОКУМЕНТА
+
+    NOTATION_NODE = УЗЕЛ_НОТАЦИИ
+
+    DOCUMENT_POSITION_DISCONNECTED = ПОЗИЦИЯ_ДОКУМЕНТА_ОТКЛЮЧЕНО
+
+    DOCUMENT_POSITION_PRECEDING = ПОЗИЦИЯ_ДОКУМЕНТА_ПРЕДШЕСТВУЮЩАЯ
+
+    DOCUMENT_POSITION_FOLLOWING = ПОЗИЦИЯ_ДОКУМЕНТА_ПОСЛЕДУЮЩАЯ
+
+    DOCUMENT_POSITION_CONTAINS = ПОЗИЦИЯ_ДОКУМЕНТА_СОДЕРЖИТ
+
+    DOCUMENT_POSITION_CONTAINED_BY = ПОЗИЦИЯ_ДОКУМЕНТА_СОДЕРЖИТСЯ_КЕМ
+
+    DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = ПОЗИЦИЯ_ДОКУМЕНТА_СПЕЦИФИЧНА_РЕАЛИЗАЦИИ
+
+    prototype = прототип
+  }
+
+
+  type Element = Элемент
+  {
+    owner-document = документ-владелец
+
+    operation check-visibility(options) = проверить-видимость()
+
+    operation closest(selector) = ближайший(селектор)
+
+    operation get-elements-by-tag-name(qualified-name) =
+      получить-элементы-по-имени-тега(квалифицированное-имя)
+
+    operation get-elements-by-tag-name-NS(namespace-URI, local-name) =
+      получить-элементы-по-имени-тега-ПИ(адрес-пространства-имён, локальное-имя)
+
+    operation scroll(x, y) = прокрутить(э, ю)
+
+    operation scroll-by(x, y) = прокрутить-на(э, ю)
+
+    operation scroll-to(x, y) = прокрутить-к(э, ю)
+
+    operation add-event-listener(type`, listener, options) =
+      добавить-обработчик-события(тип`, обработчик, настройки)
+
+    operation remove-event-listener(type`, listener, options) =
+      удалить-обработчик-события(тип`, обработчик, настройки)
+
+    prototype = прототип
   }
 }
