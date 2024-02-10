@@ -1,6 +1,4 @@
-/////////////////////////////
-/// Window APIs
-/////////////////////////////
+
 import JS = Artel.JavaScript
 
 external
@@ -8237,7 +8235,7 @@ external
   type ElementCSSInlineStyle = aspect
   {
     guarded 
-    attributeStyleMap: StylePropertyMap
+    attribute-style-map: StylePropertyMap
 
     guarded 
     style: CSSStyleDeclaration
@@ -8477,11 +8475,11 @@ external
 
   type EventTarget = object
   {
-    operation addEventListener(type`: Artel.Text, callback: EventListenerOrEventListenerObject?, options: AddEventListenerOptions | YesNo | None = none)
+    operation add-event-listener(type`: Artel.Text, callback: EventListenerOrEventListenerObject?, options: AddEventListenerOptions | YesNo | None = none)
 
-    operation dispatchEvent(event: Event): YesNo
+    operation dispatch-event(event: Event): YesNo
 
-    operation removeEventListener(type`: Artel.Text, callback: EventListenerOrEventListenerObject?, options: EventListenerOptions | YesNo | None = none)
+    operation remove-event-listener(type`: Artel.Text, callback: EventListenerOrEventListenerObject?, options: EventListenerOptions | YesNo | None = none)
 
     prototype: EventTarget
 
@@ -13763,74 +13761,74 @@ external
   type Node = object EventTarget
   {
     guarded
-    baseURI: Artel.Text
+    base-URI: Artel.Text
 
     guarded
-    childNodes: NodeListOf<ChildNode>
+    child-nodes: NodeListOf<ChildNode>
 
     guarded
-    firstChild: ChildNode?
+    first-child: ChildNode?
 
     guarded
-    isConnected: YesNo
+    is-connected: YesNo
 
     guarded
-    lastChild: ChildNode?
+    last-child: ChildNode?
 
     guarded
-    nextSibling: ChildNode?
+    next-sibling: ChildNode?
 
     guarded
-    nodeName: Artel.Text
+    node-name: Artel.Text
 
     guarded
-    nodeType: Number
+    node-type: Number
 
-    nodeValue: Artel.Text?
-
-    guarded
-    ownerDocument: Document?
+    node-value: Artel.Text?
 
     guarded
-    parentElement: HTMLElement?
+    owner-document: Document?
 
     guarded
-    parentNode: ParentNode?
+    parent-element: HTMLElement?
 
     guarded
-    previousSibling: ChildNode?
+    parent-node: ParentNode?
 
-    textContent: Artel.Text?
+    guarded
+    previous-sibling: ChildNode?
 
-    operation appendChild<T = Node>(node: T): T
+    text-content: Artel.Text?
 
-    operation cloneNode(deep: YesNo? = none): Node
+    operation append-child<T = Node>(node: T): T
 
-    operation compareDocumentPosition(other: Node): Number
+    operation clone-node(deep: YesNo? = none): Node
+
+    operation compare-document-position(other: Node): Number
 
     operation contains(other: Node?): YesNo
 
-    operation getRootNode(options: GetRootNodeOptions? = none): Node
+    operation get-root-node(options: GetRootNodeOptions? = none): Node
 
-    operation hasChildNodes(): YesNo
+    operation has-child-nodes(): YesNo
 
-    operation insertBefore<T = Node>(node: T, child: Node?): T
+    operation insert-before<T = Node>(node: T, child: Node?): T
 
-    operation isDefaultNamespace(namespace: Artel.Text?): YesNo
+    operation is-default-namespace(namespace: Artel.Text?): YesNo
 
-    operation isEqualNode(otherNode: Node?): YesNo
+    operation is-equal-node(other-node: Node?): YesNo
 
-    operation isSameNode(otherNode: Node?): YesNo
+    operation is-same-node(other-node: Node?): YesNo
 
-    operation lookupNamespaceURI(prefix: Artel.Text?): Artel.Text?
+    operation lookup-namespace-URI(prefix: Artel.Text?): Artel.Text?
 
-    operation lookupPrefix(namespace: Artel.Text?): Artel.Text?
+    operation lookup-prefix(namespace: Artel.Text?): Artel.Text?
 
     operation normalize()
 
-    operation removeChild<T = Node>(child: T): T
+    operation remove-child<T = Node>(child: T): T
 
-    operation replaceChild<T = Node>(node: Node, child: T): T
+    operation replace-child<T = Node>(node: Node, child: T): T
 
     guarded
     ELEMENT_NODE // = 1
