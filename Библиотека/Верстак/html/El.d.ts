@@ -1,4 +1,4 @@
-import { RxNode, BaseDriver } from "reactronic";
+import { RxNode, BaseDriver } from "../../Реактроник/api.js";
 export declare class ElDriver<T extends Element, M = unknown> extends BaseDriver<El<T, M>> {
     allocate(node: RxNode<El<T, M>>): El<T, M>;
 }
@@ -18,7 +18,8 @@ export type El<T = any, M = any> = {
     elementAlignment: Align;
     contentWrapping: boolean;
     overlayVisible: boolean | undefined;
-    useStyle(styleName: string, enabled?: boolean): void;
+    readonly style: CSSStyleDeclaration;
+    useStylingPreset(stylingPresetName: string, enabled?: boolean): void;
 };
 export declare enum ElKind {
     section = 0,
@@ -109,7 +110,8 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     set contentWrapping(value: boolean);
     get overlayVisible(): boolean | undefined;
     set overlayVisible(value: boolean | undefined);
-    useStyle(styleName: string, enabled?: boolean): void;
+    get style(): CSSStyleDeclaration;
+    useStylingPreset(stylingPresetName: string, enabled?: boolean): void;
     private rowBreak;
 }
 declare class CursorPosition {

@@ -46,7 +46,10 @@ external
 
     overlay-visible: YesNo?
 
-    operation useStyle(style-name: Text, enabled: YesNo? = none)
+    guarded
+    style: DOM.CSSStyleDeclaration
+  
+    operation use-styling-preset(styling-preset-name: Text, enabled: YesNo? = none)
   }
 
 
@@ -208,7 +211,10 @@ external
 
     overlay-visible: YesNo?
 
-    operation use-style(style-name: Text, enabled: YesNo? = none)
+    guarded
+    style: DOM.CSSStyleDeclaration
+
+    operation use-styling-preset(styling-preset-name: Text, enabled: YesNo? = none)
 
     // hidden
     // rowBreak

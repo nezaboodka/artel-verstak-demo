@@ -66,6 +66,11 @@
     content-wrapping = перенос-содержимого
 
     overlay-visible = всплывающий-элемент
+
+    style = стиль
+
+    operation use-styling-preset(styling-preset-name, enabled) =
+      применить-заготовленный-стиль(имя-заготовленного-стиля, вкл)
   }
 
   operation startNewRow(shiftCursorDown) = начать-новую-строку(сместить-курсор-вниз)
