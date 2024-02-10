@@ -6,7 +6,7 @@ import Реактроник
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HtmlBody(declaration: RxNodeDecl<El<DOM.HTMLElement>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement>>? = none): RxNode<El<DOM.HTMLElement>>
+  operation Page(declaration: RxNodeDecl<El<DOM.HTMLBodyElement>>? = none, preset: RxNodeDecl<El<DOM.HTMLBodyElement>>? = none): RxNode<El<DOM.HTMLBodyElement>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   operation A<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none): RxNode<El<DOM.HTMLAnchorElement, M>>

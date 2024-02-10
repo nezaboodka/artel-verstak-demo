@@ -2,9 +2,9 @@
 подключить Реактроник
 
 операция Страница(
-  перестроить: Обработчик<El<DOM.HTMLElement>>? = пусто): RxNode<El<DOM.HTMLElement>>
+  перестроить: Обработчик<El<DOM.HTMLBodyElement>>? = пусто): RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = HtmlBody(`(update = перестроить))
+  результат = Page(`(update = перестроить))
 }
 
 операция Надпись(текст: Текст): RxNode<El<DOM.HTMLElement, None>>

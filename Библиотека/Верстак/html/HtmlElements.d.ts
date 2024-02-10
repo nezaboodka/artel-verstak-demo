@@ -1,6 +1,6 @@
 import { RxNode, RxNodeDecl } from "../../Реактроник/api.js";
 import { El } from "./El.js";
-export declare function HtmlBody(declaration?: RxNodeDecl<El<HTMLElement>>, preset?: RxNodeDecl<El<HTMLElement>>): RxNode<El<HTMLElement>>;
+export declare function Page(declaration?: RxNodeDecl<El<HTMLBodyElement>>, preset?: RxNodeDecl<El<HTMLBodyElement>>): RxNode<El<HTMLBodyElement>>;
 export declare function A<M = unknown>(declaration?: RxNodeDecl<El<HTMLAnchorElement, M>>, preset?: RxNodeDecl<El<HTMLAnchorElement, M>>): RxNode<El<HTMLAnchorElement, M>>;
 export declare function Abbr<M = unknown>(declaration?: RxNodeDecl<El<HTMLElement, M>>, preset?: RxNodeDecl<El<HTMLElement, M>>): RxNode<El<HTMLElement, M>>;
 export declare function Address<M = unknown>(declaration?: RxNodeDecl<El<HTMLElement, M>>, preset?: RxNodeDecl<El<HTMLElement, M>>): RxNode<El<HTMLElement, M>>;
