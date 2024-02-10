@@ -25,7 +25,7 @@
   type Align = Выравнивание
   {
     default = стандартно
-    fit = растяжка
+    fit = габариты
     left = лево
     center-x = центр-ширины
     right = право
