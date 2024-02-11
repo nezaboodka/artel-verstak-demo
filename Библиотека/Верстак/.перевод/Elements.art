@@ -36,11 +36,15 @@
 
     width = ширина
 
-    width-fixed = ширина-фикс
+    width-only-min = ширина-только-мин
+
+    width-only-growth = ширина-только-прирост
 
     height = высота
 
-    height-fixed = высота-фикс
+    height-only-min = высота-только-мин
+
+    height-only-growth = высота-только-прирост
 
     content-alignment = выравнивание-содержимого
 

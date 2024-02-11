@@ -28,11 +28,15 @@ external
 
     width: Range
 
-    width-fixed: Text
+    width-only-min: Text
+
+    width-only-growth: Number
 
     height: Range
 
-    height-fixed: Text
+    height-only-min: Text
+
+    height-only-growth: Number
 
     content-alignment: Align
 
