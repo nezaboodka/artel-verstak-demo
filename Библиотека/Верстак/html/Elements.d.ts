@@ -9,7 +9,7 @@ export declare function cursor(areaParams: ElArea): void;
 export declare function Note(content: string, declaration?: RxNodeDecl<El<HTMLElement, void>>): RxNode<El<HTMLElement, void>>;
 export declare function HtmlNote(content: string, declaration?: RxNodeDecl<El<HTMLElement, void>>): RxNode<El<HTMLElement, void>>;
 export declare function Group<M = unknown, R = void>(declaration?: RxNodeDecl<El<HTMLElement, M>>, preset?: RxNodeDecl<El<HTMLElement, M>>): RxNode<El<HTMLElement, M>>;
-export declare function Handler<M = unknown>(update: Delegate<El<void, M>>): RxNode<El<void, M>>;
+export declare function Handling<M = unknown>(update: Delegate<El<void, M>>): RxNode<El<void, M>>;
 export declare function SyntheticElement<M = unknown>(declaration?: RxNodeDecl<El<void, M>>, preset?: RxNodeDecl<El<void, M>>): RxNode<El<void, M>>;
 export declare class VerstakElementDriver<T extends HTMLElement> extends HtmlElementDriver<T> {
     update(node: RxNode<El<T>>): void | Promise<void>;

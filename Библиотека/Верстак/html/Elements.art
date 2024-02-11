@@ -105,8 +105,8 @@ external
   operation cursor(areaParams: ElArea)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  #JS.НастоящееИмя("Handler")
-  operation Handler<M = Object?>(update: Delegate<El<None, M>>): RxNode<El<None, M>>
+  #JS.НастоящееИмя("Handling")
+  operation Handling<M = Object?>(update: Delegate<El<None, M>>): RxNode<El<None, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   type VerstakElementDriver<T: DOM.HTMLElement> = object HtmlElementDriver<T>

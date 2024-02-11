@@ -28,7 +28,7 @@
   operation SyntheticElementEx(preset, key, mode, triggers, initialize, update, finalize) =
     СинтетическийЭлемент(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
 
-  operation Handler(update) = Обработка(обновить)
+  operation Handling(update) = Обработка(обновить)
 
   operation row(builder, shift-cursor-down) = строка(построитель, сместить-курсор-вниз)
 
