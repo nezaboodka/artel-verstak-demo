@@ -26,17 +26,13 @@ external
 
     area: ElArea
 
-    width-growth: Number
+    width: Text
 
-    min-width: Text
+    width-range: Range
 
-    max-width: Text
-    
-    height-growth: Number
+    height: Text
 
-    min-height: Text
-
-    max-height: Text
+    height-range: Range
 
     content-alignment: Align
 
@@ -92,9 +88,8 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type ElasticSize = aspect
+  type Range = aspect
   {
-    cells: Number?
     min: Text?
     max: Text?
     growth: Number?
@@ -102,9 +97,9 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type TrackSize = aspect ElasticSize
+  type MarkedRange = aspect Range
   {
-    track: Text | Number | None
+    marker: Text?
   }
 
 

@@ -8,12 +8,10 @@ export type El<T = any, M = any> = {
     model: M;
     kind: ElKind;
     area: ElArea;
-    widthGrowth: number;
-    minWidth: string;
-    maxWidth: string;
-    heightGrowth: number;
-    minHeight: string;
-    maxHeight: string;
+    width: string;
+    widthRange: Range;
+    height: string;
+    heightRange: Range;
     contentAlignment: Align;
     elementAlignment: Align;
     contentWrapping: boolean;
@@ -47,14 +45,13 @@ export declare enum Align {
     bottom = 12,
     center = 10
 }
-export type ElasticSize = {
-    cells?: number;
-    min?: string;
-    max?: string;
-    growth?: number;
+export type Range = {
+    readonly min?: string;
+    readonly max?: string;
+    readonly growth?: number;
 };
-export type TrackSize = ElasticSize & {
-    track?: string | number;
+export type MarkedRange = Range & {
+    readonly marker?: string;
 };
 export type ElArea = undefined | string | {
     cellsOverWidth?: number;
@@ -70,17 +67,13 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     private _kind;
     private _area;
     private _coords;
-    private _widthGrowth;
-    private _minWidth;
-    private _maxWidth;
-    private _heightGrowth;
-    private _minHeight;
-    private _maxHeight;
+    private _widthRange;
+    private _heightRange;
     private _contentAlignment;
     private _elementAlignment;
     private _contentWrapping;
     private _overlayVisible;
-    private _hasStyles;
+    private _hasStylingPresets;
     constructor(node: RxNode<El<T, M>>);
     prepareForUpdate(): void;
     get isSection(): boolean;
@@ -90,18 +83,14 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     set kind(value: ElKind);
     get area(): ElArea;
     set area(value: ElArea);
-    get widthGrowth(): number;
-    set widthGrowth(value: number);
-    get minWidth(): string;
-    set minWidth(value: string);
-    get maxWidth(): string;
-    set maxWidth(value: string);
-    get heightGrowth(): number;
-    set heightGrowth(value: number);
-    get minHeight(): string;
-    set minHeight(value: string);
-    get maxHeight(): string;
-    set maxHeight(value: string);
+    get width(): string;
+    set width(value: string);
+    get widthRange(): Range;
+    set widthRange(value: Range);
+    get height(): string;
+    set height(value: string);
+    get heightRange(): Range;
+    set heightRange(value: Range);
     get contentAlignment(): Align;
     set contentAlignment(value: Align);
     get elementAlignment(): Align;
@@ -141,7 +130,7 @@ export declare class Apply {
     static coords<T extends Element>(element: El<T, any>, value: ElCoords | undefined): void;
     static widthGrowth<T extends Element>(element: El<T, any>, value: number): void;
     static minWidth<T extends Element>(element: El<T, any>, value: string): void;
-    static applyMaxWidth<T extends Element>(element: El<T, any>, value: string): void;
+    static maxWidth<T extends Element>(element: El<T, any>, value: string): void;
     static heightGrowth<T extends Element>(element: El<T, any>, value: number): void;
     static minHeight<T extends Element>(element: El<T, any>, value: string): void;
     static maxHeight<T extends Element>(element: El<T, any>, value: string): void;
@@ -149,7 +138,7 @@ export declare class Apply {
     static elementAlignment<T extends Element>(element: El<T, any>, value: Align): void;
     static contentWrapping<T extends Element>(element: El<T, any>, value: boolean): void;
     static overlayVisible<T extends Element>(element: El<T, any>, value: boolean | undefined): void;
-    static style<T extends Element>(element: El<T, any>, secondary: boolean, styleName: string, enabled?: boolean): void;
+    static stylingPreset<T extends Element>(element: El<T, any>, secondary: boolean, styleName: string, enabled?: boolean): void;
 }
 export declare const Constants: {
     element: string;

@@ -22,19 +22,6 @@
 
 псевдонимы(русский)
 {
-  type Align = Выравнивание
-  {
-    default = стандартно
-    fit = габариты
-    left = лево
-    center-x = центр-ширины
-    right = право
-    top = верх
-    center-y = центр-высоты
-    bottom = низ
-    center = центр
-  }
-
   type El = Эль
   {
     node = узел
@@ -47,17 +34,13 @@
 
     area = область
 
-    width-growth = рост-ширины
+    width = ширина
 
-    min-width = минимальная-ширина
+    width-range = ширина-эластичная
 
-    max-width = максимальная-ширина
+    height = высота
 
-    height-growth = рост-высоты
-
-    min-height = минимальная-высота
-
-    max-height = максимальная-высота
+    height-range = высота-эластичная
 
     content-alignment = выравнивание-содержимого
 
@@ -71,6 +54,26 @@
 
     operation use-styling-preset(styling-preset-name, enabled) =
       применить-заготовленный-стиль(имя-заготовленного-стиля, вкл)
+  }
+
+  type Align = Выравнивание
+  {
+    default = стандартно
+    fit = габариты
+    left = лево
+    center-x = центр-ширины
+    right = право
+    top = верх
+    center-y = центр-высоты
+    bottom = низ
+    center = центр
+  }
+
+  type Range = Интервал
+  {
+    min = мин
+    max = макс
+    growth = прирост
   }
 
   operation startNewRow(shiftCursorDown) = начать-новую-строку(сместить-курсор-вниз)
