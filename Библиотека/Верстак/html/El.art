@@ -88,22 +88,6 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type Range = aspect
-  {
-    min: Text?
-    max: Text?
-    growth: Number?
-  }
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  type MarkedRange = aspect Range
-  {
-    marker: Text?
-  }
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
   type ElArea = None | Text | object
   {
     cells-over-width: Number?
@@ -318,4 +302,19 @@ external
 
     kind-attr-name: Text
   }
+}
+
+// #JS.ВнешняяРеализация(модуль = "verstak")
+type Range = object
+{
+  const min: Text?
+  const max: Text?
+  const growth: Number?
+}
+
+
+// #JS.ВнешняяРеализация(модуль = "verstak")
+type MarkedRange = object Range
+{
+  const marker: Text?
 }

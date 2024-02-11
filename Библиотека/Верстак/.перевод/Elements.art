@@ -36,11 +36,11 @@
 
     width = ширина
 
-    width-fixed = ширина-фиксированная
+    width-fixed = ширина-фикс
 
-    height = высота-фиксированная
+    height = высота
 
-    height-fixed = высота
+    height-fixed = высота-фикс
 
     content-alignment = выравнивание-содержимого
 
