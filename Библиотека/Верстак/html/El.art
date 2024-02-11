@@ -26,13 +26,13 @@ external
 
     area: ElArea
 
-    width: Text
+    width: Range
 
-    width-range: Range
+    width-fixed: Text
 
-    height: Text
+    height: Range
 
-    height-range: Range
+    height-fixed: Text
 
     content-alignment: Align
 

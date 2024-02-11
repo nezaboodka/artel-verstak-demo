@@ -36,11 +36,11 @@
 
     width = ширина
 
-    width-range = ширина-эластичная
+    width-fixed = ширина-фиксированная
 
-    height = высота
+    height = высота-фиксированная
 
-    height-range = высота-эластичная
+    height-fixed = высота
 
     content-alignment = выравнивание-содержимого
 
