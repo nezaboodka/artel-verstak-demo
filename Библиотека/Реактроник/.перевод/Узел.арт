@@ -20,17 +20,11 @@
   type RxNodeDecl = ДекларацияУзла
   {
     formula = формула
-
     key = ключ
-
     mode = режим
-
     activation = активация
-
     deactivation = деактивация
-
     triggers = триггеры
-
     preset = заготовка
   };
 }
