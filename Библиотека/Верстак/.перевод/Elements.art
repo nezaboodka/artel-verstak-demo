@@ -2,31 +2,31 @@
 подключить Реактроник
 
 операция Страница(
-  начинка: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
+  формула: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
   RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(начинка))
+  результат = Page(`(формула))
 }
 
 псевдонимы(русский)
 {
-  operation SectionEx(content, key, mode, activation, deactivation, triggers, preset) =
-    Секция(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation SectionEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    Секция(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation TableEx(content, key, mode, activation, deactivation, triggers, preset) =
-    Таблица(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation TableEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    Таблица(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation NoteEx(content, key, mode, activation, deactivation, triggers, preset) =
-    Надпись(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation NoteEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    Надпись(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation HtmlNoteEx(content, key, mode, activation, deactivation, triggers, preset) =
-    Формат(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation HtmlNoteEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    Формат(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation GroupEx(content, key, mode, activation, deactivation, triggers, preset) =
-    Группа(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation GroupEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    Группа(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElementEx(content, key, mode, activation, deactivation, triggers, preset) =
-    СинтетическийЭлемент(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation SyntheticElementEx(formula, key, mode, activation, deactivation, triggers, preset) =
+    СинтетическийЭлемент(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
   operation Handling(update) = Обработка(обновить)
 
