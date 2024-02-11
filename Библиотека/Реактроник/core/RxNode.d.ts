@@ -55,7 +55,7 @@ export declare abstract class RxNode<E = unknown> {
     static setDefaultLoggingOptions(logging?: LoggingOptions): void;
 }
 export type RxNodeDecl<E = unknown> = {
-    content?: Delegate<E>;
+    formula?: Delegate<E>;
     key?: string;
     mode?: Mode;
     activation?: Delegate<E>;

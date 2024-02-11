@@ -19,7 +19,7 @@
 
   type RxNodeDecl = ДекларацияУзла
   {
-    content = начинка
+    formula = формула
 
     key = ключ
 
