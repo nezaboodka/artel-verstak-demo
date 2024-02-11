@@ -1,4 +1,5 @@
 
+import A = Artel
 import JS = Artel.JavaScript
 import DOM = Browser
 import Реактроник
@@ -6,524 +7,698 @@ import Реактроник
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Page")
   operation Page(declaration: RxNodeDecl<El<DOM.HTMLBodyElement>>? = none, preset: RxNodeDecl<El<DOM.HTMLBodyElement>>? = none): RxNode<El<DOM.HTMLBodyElement>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation A<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none): RxNode<El<DOM.HTMLAnchorElement, M>>
+  #JS.НастоящееИмя("A")
+  operation A<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAnchorElement, M>>? = none): RxNode<El<DOM.HTMLAnchorElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Abbr<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Abbr")
+  operation Abbr<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Address<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Address")
+  operation Address<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Area<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLAreaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAreaElement, M>>? = none): RxNode<El<DOM.HTMLAreaElement, M>>
+  #JS.НастоящееИмя("Area")
+  operation Area<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLAreaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAreaElement, M>>? = none): RxNode<El<DOM.HTMLAreaElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Article<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Article")
+  operation Article<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Aside<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Aside")
+  operation Aside<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Audio<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLAudioElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAudioElement, M>>? = none): RxNode<El<DOM.HTMLAudioElement, M>>
+  #JS.НастоящееИмя("Audio")
+  operation Audio<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLAudioElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLAudioElement, M>>? = none): RxNode<El<DOM.HTMLAudioElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation B<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("B")
+  operation B<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Base<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLBaseElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBaseElement, M>>? = none): RxNode<El<DOM.HTMLBaseElement, M>>
+  #JS.НастоящееИмя("Base")
+  operation Base<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLBaseElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBaseElement, M>>? = none): RxNode<El<DOM.HTMLBaseElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Bdi<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Bdi")
+  operation Bdi<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Bdo<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Bdo")
+  operation Bdo<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Big<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Big")
+  operation Big<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation BlockQuote<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("BlockQuote")
+  operation BlockQuote<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Body<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLBodyElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBodyElement, M>>? = none): RxNode<El<DOM.HTMLBodyElement, M>>
+  #JS.НастоящееИмя("Body")
+  operation Body<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLBodyElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBodyElement, M>>? = none): RxNode<El<DOM.HTMLBodyElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation BR<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLBRElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBRElement, M>>? = none): RxNode<El<DOM.HTMLBRElement, M>>
+  #JS.НастоящееИмя("BR")
+  operation BR<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLBRElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLBRElement, M>>? = none): RxNode<El<DOM.HTMLBRElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Button<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLButtonElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLButtonElement, M>>? = none): RxNode<El<DOM.HTMLButtonElement, M>>
+  #JS.НастоящееИмя("Button")
+  operation Button<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLButtonElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLButtonElement, M>>? = none): RxNode<El<DOM.HTMLButtonElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Canvas<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLCanvasElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLCanvasElement, M>>? = none): RxNode<El<DOM.HTMLCanvasElement, M>>
+  #JS.НастоящееИмя("Canvas")
+  operation Canvas<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLCanvasElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLCanvasElement, M>>? = none): RxNode<El<DOM.HTMLCanvasElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Caption<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCaptionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCaptionElement, M>>? = none): RxNode<El<DOM.HTMLTableCaptionElement, M>>
+  #JS.НастоящееИмя("Caption")
+  operation Caption<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCaptionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCaptionElement, M>>? = none): RxNode<El<DOM.HTMLTableCaptionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Cite<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Cite")
+  operation Cite<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Code<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Code")
+  operation Code<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Col<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none): RxNode<El<DOM.HTMLTableColElement, M>>
+  #JS.НастоящееИмя("Col")
+  operation Col<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none): RxNode<El<DOM.HTMLTableColElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation ColGroup<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none): RxNode<El<DOM.HTMLTableColElement, M>>
+  #JS.НастоящееИмя("ColGroup")
+  operation ColGroup<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableColElement, M>>? = none): RxNode<El<DOM.HTMLTableColElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Data<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLDataElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDataElement, M>>? = none): RxNode<El<DOM.HTMLDataElement, M>>
+  #JS.НастоящееИмя("Data")
+  operation Data<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLDataElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDataElement, M>>? = none): RxNode<El<DOM.HTMLDataElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation DataList<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLDataListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDataListElement, M>>? = none): RxNode<El<DOM.HTMLDataListElement, M>>
+  #JS.НастоящееИмя("DataList")
+  operation DataList<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLDataListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDataListElement, M>>? = none): RxNode<El<DOM.HTMLDataListElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation DD<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("DD")
+  operation DD<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Del<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Del")
+  operation Del<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Details<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Details")
+  operation Details<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Dfn<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Dfn")
+  operation Dfn<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Div<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLDivElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDivElement, M>>? = none): RxNode<El<DOM.HTMLDivElement, M>>
+  #JS.НастоящееИмя("Div")
+  operation Div<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLDivElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDivElement, M>>? = none): RxNode<El<DOM.HTMLDivElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation DL<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLDListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDListElement, M>>? = none): RxNode<El<DOM.HTMLDListElement, M>>
+  #JS.НастоящееИмя("DL")
+  operation DL<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLDListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLDListElement, M>>? = none): RxNode<El<DOM.HTMLDListElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation DT<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("DT")
+  operation DT<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation EM<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("EM")
+  operation EM<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Embed<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLEmbedElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLEmbedElement, M>>? = none): RxNode<El<DOM.HTMLEmbedElement, M>>
+  #JS.НастоящееИмя("Embed")
+  operation Embed<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLEmbedElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLEmbedElement, M>>? = none): RxNode<El<DOM.HTMLEmbedElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FieldSet<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLFieldSetElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLFieldSetElement, M>>? = none): RxNode<El<DOM.HTMLFieldSetElement, M>>
+  #JS.НастоящееИмя("FieldSet")
+  operation FieldSet<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLFieldSetElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLFieldSetElement, M>>? = none): RxNode<El<DOM.HTMLFieldSetElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FigCaption<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("FigCaption")
+  operation FigCaption<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Figure<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Figure")
+  operation Figure<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Footer<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Footer")
+  operation Footer<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Form<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLFormElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLFormElement, M>>? = none): RxNode<El<DOM.HTMLFormElement, M>>
+  #JS.НастоящееИмя("Form")
+  operation Form<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLFormElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLFormElement, M>>? = none): RxNode<El<DOM.HTMLFormElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H1<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H1")
+  operation H1<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H2<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H2")
+  operation H2<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H3<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H3")
+  operation H3<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H4<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H4")
+  operation H4<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H5<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H5")
+  operation H5<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation H6<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
+  #JS.НастоящееИмя("H6")
+  operation H6<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadingElement, M>>? = none): RxNode<El<DOM.HTMLHeadingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Head<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadElement, M>>? = none): RxNode<El<DOM.HTMLHeadElement, M>>
+  #JS.НастоящееИмя("Head")
+  operation Head<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHeadElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHeadElement, M>>? = none): RxNode<El<DOM.HTMLHeadElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Header<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Header")
+  operation Header<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HGroup<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("HGroup")
+  operation HGroup<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HR<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHRElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHRElement, M>>? = none): RxNode<El<DOM.HTMLHRElement, M>>
+  #JS.НастоящееИмя("HR")
+  operation HR<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHRElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHRElement, M>>? = none): RxNode<El<DOM.HTMLHRElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Html<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLHtmlElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHtmlElement, M>>? = none): RxNode<El<DOM.HTMLHtmlElement, M>>
+  #JS.НастоящееИмя("Html")
+  operation Html<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLHtmlElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLHtmlElement, M>>? = none): RxNode<El<DOM.HTMLHtmlElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation I<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("I")
+  operation I<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation IFrame<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLIFrameElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLIFrameElement, M>>? = none): RxNode<El<DOM.HTMLIFrameElement, M>>
+  #JS.НастоящееИмя("IFrame")
+  operation IFrame<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLIFrameElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLIFrameElement, M>>? = none): RxNode<El<DOM.HTMLIFrameElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Img<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLImageElement, M>>? = none): RxNode<El<DOM.HTMLImageElement, M>>
+  #JS.НастоящееИмя("Img")
+  operation Img<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLImageElement, M>>? = none): RxNode<El<DOM.HTMLImageElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Input<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLInputElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLInputElement, M>>? = none): RxNode<El<DOM.HTMLInputElement, M>>
+  #JS.НастоящееИмя("Input")
+  operation Input<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLInputElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLInputElement, M>>? = none): RxNode<El<DOM.HTMLInputElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Ins<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLModElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLModElement, M>>? = none): RxNode<El<DOM.HTMLModElement, M>>
+  #JS.НастоящееИмя("Ins")
+  operation Ins<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLModElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLModElement, M>>? = none): RxNode<El<DOM.HTMLModElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Kbd<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Kbd")
+  operation Kbd<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation KeyGen<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("KeyGen")
+  operation KeyGen<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Label<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLLabelElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLabelElement, M>>? = none): RxNode<El<DOM.HTMLLabelElement, M>>
+  #JS.НастоящееИмя("Label")
+  operation Label<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLLabelElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLabelElement, M>>? = none): RxNode<El<DOM.HTMLLabelElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Legend<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLLegendElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLegendElement, M>>? = none): RxNode<El<DOM.HTMLLegendElement, M>>
+  #JS.НастоящееИмя("Legend")
+  operation Legend<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLLegendElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLegendElement, M>>? = none): RxNode<El<DOM.HTMLLegendElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation LI<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLLIElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLIElement, M>>? = none): RxNode<El<DOM.HTMLLIElement, M>>
+  #JS.НастоящееИмя("LI")
+  operation LI<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLLIElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLIElement, M>>? = none): RxNode<El<DOM.HTMLLIElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Link<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLLinkElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLinkElement, M>>? = none): RxNode<El<DOM.HTMLLinkElement, M>>
+  #JS.НастоящееИмя("Link")
+  operation Link<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLLinkElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLLinkElement, M>>? = none): RxNode<El<DOM.HTMLLinkElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Main<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Main")
+  operation Main<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Map<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLMapElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLMapElement, M>>? = none): RxNode<El<DOM.HTMLMapElement, M>>
+  #JS.НастоящееИмя("Map")
+  operation Map<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLMapElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLMapElement, M>>? = none): RxNode<El<DOM.HTMLMapElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Mark<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Mark")
+  operation Mark<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Menu<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Menu")
+  operation Menu<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation MenuItem<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("MenuItem")
+  operation MenuItem<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Meta<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLMetaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLMetaElement, M>>? = none): RxNode<El<DOM.HTMLMetaElement, M>>
+  #JS.НастоящееИмя("Meta")
+  operation Meta<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLMetaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLMetaElement, M>>? = none): RxNode<El<DOM.HTMLMetaElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Meter<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Meter")
+  operation Meter<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Nav<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Nav")
+  operation Nav<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation NoIndex<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("NoIndex")
+  operation NoIndex<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation NoScript<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("NoScript")
+  operation NoScript<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Obj<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLObjectElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLObjectElement, M>>? = none): RxNode<El<DOM.HTMLObjectElement, M>>
+  #JS.НастоящееИмя("Obj")
+  operation Obj<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLObjectElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLObjectElement, M>>? = none): RxNode<El<DOM.HTMLObjectElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation OL<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLOListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOListElement, M>>? = none): RxNode<El<DOM.HTMLOListElement, M>>
+  #JS.НастоящееИмя("OL")
+  operation OL<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLOListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOListElement, M>>? = none): RxNode<El<DOM.HTMLOListElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation OptGroup<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLOptGroupElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOptGroupElement, M>>? = none): RxNode<El<DOM.HTMLOptGroupElement, M>>
+  #JS.НастоящееИмя("OptGroup")
+  operation OptGroup<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLOptGroupElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOptGroupElement, M>>? = none): RxNode<El<DOM.HTMLOptGroupElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Option<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLOptionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOptionElement, M>>? = none): RxNode<El<DOM.HTMLOptionElement, M>>
+  #JS.НастоящееИмя("Option")
+  operation Option<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLOptionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLOptionElement, M>>? = none): RxNode<El<DOM.HTMLOptionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Output<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Output")
+  operation Output<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation P<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLParagraphElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLParagraphElement, M>>? = none): RxNode<El<DOM.HTMLParagraphElement, M>>
+  #JS.НастоящееИмя("P")
+  operation P<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLParagraphElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLParagraphElement, M>>? = none): RxNode<El<DOM.HTMLParagraphElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Param<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Param")
+  operation Param<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Picture<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Picture")
+  operation Picture<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Pre<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLPreElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLPreElement, M>>? = none): RxNode<El<DOM.HTMLPreElement, M>>
+  #JS.НастоящееИмя("Pre")
+  operation Pre<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLPreElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLPreElement, M>>? = none): RxNode<El<DOM.HTMLPreElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Progress<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLProgressElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLProgressElement, M>>? = none): RxNode<El<DOM.HTMLProgressElement, M>>
+  #JS.НастоящееИмя("Progress")
+  operation Progress<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLProgressElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLProgressElement, M>>? = none): RxNode<El<DOM.HTMLProgressElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Q<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLQuoteElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLQuoteElement, M>>? = none): RxNode<El<DOM.HTMLQuoteElement, M>>
+  #JS.НастоящееИмя("Q")
+  operation Q<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLQuoteElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLQuoteElement, M>>? = none): RxNode<El<DOM.HTMLQuoteElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation RP<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("RP")
+  operation RP<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation RT<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("RT")
+  operation RT<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Ruby<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Ruby")
+  operation Ruby<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation S<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("S")
+  operation S<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Samp<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Samp")
+  operation Samp<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Script<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLScriptElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLScriptElement, M>>? = none): RxNode<El<DOM.HTMLScriptElement, M>>
+  #JS.НастоящееИмя("Script")
+  operation Script<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLScriptElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLScriptElement, M>>? = none): RxNode<El<DOM.HTMLScriptElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Sctn<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Sctn")
+  operation Sctn<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Select<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLSelectElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSelectElement, M>>? = none): RxNode<El<DOM.HTMLSelectElement, M>>
+  #JS.НастоящееИмя("Select")
+  operation Select<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLSelectElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSelectElement, M>>? = none): RxNode<El<DOM.HTMLSelectElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Small<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Small")
+  operation Small<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Source<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLSourceElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSourceElement, M>>? = none): RxNode<El<DOM.HTMLSourceElement, M>>
+  #JS.НастоящееИмя("Source")
+  operation Source<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLSourceElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSourceElement, M>>? = none): RxNode<El<DOM.HTMLSourceElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Span<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLSpanElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSpanElement, M>>? = none): RxNode<El<DOM.HTMLSpanElement, M>>
+  #JS.НастоящееИмя("Span")
+  operation Span<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLSpanElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLSpanElement, M>>? = none): RxNode<El<DOM.HTMLSpanElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Strong<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Strong")
+  operation Strong<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Style<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLStyleElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLStyleElement, M>>? = none): RxNode<El<DOM.HTMLStyleElement, M>>
+  #JS.НастоящееИмя("Style")
+  operation Style<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLStyleElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLStyleElement, M>>? = none): RxNode<El<DOM.HTMLStyleElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Sub<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Sub")
+  operation Sub<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Summary<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Summary")
+  operation Summary<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Sup<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Sup")
+  operation Sup<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Tbl<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableElement, M>>? = none): RxNode<El<DOM.HTMLTableElement, M>>
+  #JS.НастоящееИмя("Tbl")
+  operation Tbl<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableElement, M>>? = none): RxNode<El<DOM.HTMLTableElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Template<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTemplateElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTemplateElement, M>>? = none): RxNode<El<DOM.HTMLTemplateElement, M>>
+  #JS.НастоящееИмя("Template")
+  operation Template<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTemplateElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTemplateElement, M>>? = none): RxNode<El<DOM.HTMLTemplateElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TBody<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
+  #JS.НастоящееИмя("TBody")
+  operation TBody<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TD<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none): RxNode<El<DOM.HTMLTableCellElement, M>>
+  #JS.НастоящееИмя("TD")
+  operation TD<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none): RxNode<El<DOM.HTMLTableCellElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TextArea<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTextAreaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTextAreaElement, M>>? = none): RxNode<El<DOM.HTMLTextAreaElement, M>>
+  #JS.НастоящееИмя("TextArea")
+  operation TextArea<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTextAreaElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTextAreaElement, M>>? = none): RxNode<El<DOM.HTMLTextAreaElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TFoot<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
+  #JS.НастоящееИмя("TFoot")
+  operation TFoot<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TH<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none): RxNode<El<DOM.HTMLTableCellElement, M>>
+  #JS.НастоящееИмя("TH")
+  operation TH<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableCellElement, M>>? = none): RxNode<El<DOM.HTMLTableCellElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation THead<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
+  #JS.НастоящееИмя("THead")
+  operation THead<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableSectionElement, M>>? = none): RxNode<El<DOM.HTMLTableSectionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Time<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Time")
+  operation Time<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Title<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTitleElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTitleElement, M>>? = none): RxNode<El<DOM.HTMLTitleElement, M>>
+  #JS.НастоящееИмя("Title")
+  operation Title<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTitleElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTitleElement, M>>? = none): RxNode<El<DOM.HTMLTitleElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TR<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableRowElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableRowElement, M>>? = none): RxNode<El<DOM.HTMLTableRowElement, M>>
+  #JS.НастоящееИмя("TR")
+  operation TR<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTableRowElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTableRowElement, M>>? = none): RxNode<El<DOM.HTMLTableRowElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Track<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLTrackElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTrackElement, M>>? = none): RxNode<El<DOM.HTMLTrackElement, M>>
+  #JS.НастоящееИмя("Track")
+  operation Track<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLTrackElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLTrackElement, M>>? = none): RxNode<El<DOM.HTMLTrackElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation U<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("U")
+  operation U<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation UL<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLUListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLUListElement, M>>? = none): RxNode<El<DOM.HTMLUListElement, M>>
+  #JS.НастоящееИмя("UL")
+  operation UL<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLUListElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLUListElement, M>>? = none): RxNode<El<DOM.HTMLUListElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Var<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Var")
+  operation Var<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Video<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLVideoElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLVideoElement, M>>? = none): RxNode<El<DOM.HTMLVideoElement, M>>
+  #JS.НастоящееИмя("Video")
+  operation Video<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLVideoElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLVideoElement, M>>? = none): RxNode<El<DOM.HTMLVideoElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Wbr<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+  #JS.НастоящееИмя("Wbr")
+  operation Wbr<M = A.Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Svg<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGSVGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSVGElement, M>>? = none): RxNode<El<DOM.SVGSVGElement, M>>
+  #JS.НастоящееИмя("Svg")
+  operation Svg<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGSVGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSVGElement, M>>? = none): RxNode<El<DOM.SVGSVGElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation SvgA<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGAElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAElement, M>>? = none): RxNode<El<DOM.SVGAElement, M>>
+  #JS.НастоящееИмя("SvgA")
+  operation SvgA<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGAElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAElement, M>>? = none): RxNode<El<DOM.SVGAElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Animate<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateElement, M>>? = none): RxNode<El<DOM.SVGAnimateElement, M>>
+  #JS.НастоящееИмя("Animate")
+  operation Animate<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateElement, M>>? = none): RxNode<El<DOM.SVGAnimateElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation AnimateMotion<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateMotionElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateMotionElement, M>>? = none): RxNode<El<DOM.SVGAnimateMotionElement, M>>
+  #JS.НастоящееИмя("AnimateMotion")
+  operation AnimateMotion<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateMotionElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateMotionElement, M>>? = none): RxNode<El<DOM.SVGAnimateMotionElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation AnimateTransform<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateTransformElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateTransformElement, M>>? = none): RxNode<El<DOM.SVGAnimateTransformElement, M>>
+  #JS.НастоящееИмя("AnimateTransform")
+  operation AnimateTransform<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGAnimateTransformElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGAnimateTransformElement, M>>? = none): RxNode<El<DOM.SVGAnimateTransformElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Circle<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGCircleElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGCircleElement, M>>? = none): RxNode<El<DOM.SVGCircleElement, M>>
+  #JS.НастоящееИмя("Circle")
+  operation Circle<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGCircleElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGCircleElement, M>>? = none): RxNode<El<DOM.SVGCircleElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation ClipPath<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGClipPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGClipPathElement, M>>? = none): RxNode<El<DOM.SVGClipPathElement, M>>
+  #JS.НастоящееИмя("ClipPath")
+  operation ClipPath<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGClipPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGClipPathElement, M>>? = none): RxNode<El<DOM.SVGClipPathElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Defs<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGDefsElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGDefsElement, M>>? = none): RxNode<El<DOM.SVGDefsElement, M>>
+  #JS.НастоящееИмя("Defs")
+  operation Defs<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGDefsElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGDefsElement, M>>? = none): RxNode<El<DOM.SVGDefsElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Desc<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGDescElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGDescElement, M>>? = none): RxNode<El<DOM.SVGDescElement, M>>
+  #JS.НастоящееИмя("Desc")
+  operation Desc<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGDescElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGDescElement, M>>? = none): RxNode<El<DOM.SVGDescElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Ellipse<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGEllipseElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGEllipseElement, M>>? = none): RxNode<El<DOM.SVGEllipseElement, M>>
+  #JS.НастоящееИмя("Ellipse")
+  operation Ellipse<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGEllipseElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGEllipseElement, M>>? = none): RxNode<El<DOM.SVGEllipseElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeBlend<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEBlendElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEBlendElement, M>>? = none): RxNode<El<DOM.SVGFEBlendElement, M>>
+  #JS.НастоящееИмя("FeBlend")
+  operation FeBlend<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEBlendElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEBlendElement, M>>? = none): RxNode<El<DOM.SVGFEBlendElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeColorMatrix<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEColorMatrixElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEColorMatrixElement, M>>? = none): RxNode<El<DOM.SVGFEColorMatrixElement, M>>
+  #JS.НастоящееИмя("FeColorMatrix")
+  operation FeColorMatrix<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEColorMatrixElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEColorMatrixElement, M>>? = none): RxNode<El<DOM.SVGFEColorMatrixElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeComponentTransfer<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEComponentTransferElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEComponentTransferElement, M>>? = none): RxNode<El<DOM.SVGFEComponentTransferElement, M>>
+  #JS.НастоящееИмя("FeComponentTransfer")
+  operation FeComponentTransfer<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEComponentTransferElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEComponentTransferElement, M>>? = none): RxNode<El<DOM.SVGFEComponentTransferElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeComposite<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFECompositeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFECompositeElement, M>>? = none): RxNode<El<DOM.SVGFECompositeElement, M>>
+  #JS.НастоящееИмя("FeComposite")
+  operation FeComposite<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFECompositeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFECompositeElement, M>>? = none): RxNode<El<DOM.SVGFECompositeElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeConvolveMatrix<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEConvolveMatrixElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEConvolveMatrixElement, M>>? = none): RxNode<El<DOM.SVGFEConvolveMatrixElement, M>>
+  #JS.НастоящееИмя("FeConvolveMatrix")
+  operation FeConvolveMatrix<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEConvolveMatrixElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEConvolveMatrixElement, M>>? = none): RxNode<El<DOM.SVGFEConvolveMatrixElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeDiffuseLighting<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDiffuseLightingElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDiffuseLightingElement, M>>? = none): RxNode<El<DOM.SVGFEDiffuseLightingElement, M>>
+  #JS.НастоящееИмя("FeDiffuseLighting")
+  operation FeDiffuseLighting<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDiffuseLightingElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDiffuseLightingElement, M>>? = none): RxNode<El<DOM.SVGFEDiffuseLightingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeDisplacementMap<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDisplacementMapElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDisplacementMapElement, M>>? = none): RxNode<El<DOM.SVGFEDisplacementMapElement, M>>
+  #JS.НастоящееИмя("FeDisplacementMap")
+  operation FeDisplacementMap<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDisplacementMapElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDisplacementMapElement, M>>? = none): RxNode<El<DOM.SVGFEDisplacementMapElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeDistantLight<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDistantLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDistantLightElement, M>>? = none): RxNode<El<DOM.SVGFEDistantLightElement, M>>
+  #JS.НастоящееИмя("FeDistantLight")
+  operation FeDistantLight<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDistantLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDistantLightElement, M>>? = none): RxNode<El<DOM.SVGFEDistantLightElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeDropShadow<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDropShadowElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDropShadowElement, M>>? = none): RxNode<El<DOM.SVGFEDropShadowElement, M>>
+  #JS.НастоящееИмя("FeDropShadow")
+  operation FeDropShadow<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEDropShadowElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEDropShadowElement, M>>? = none): RxNode<El<DOM.SVGFEDropShadowElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeFlood<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFloodElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFloodElement, M>>? = none): RxNode<El<DOM.SVGFEFloodElement, M>>
+  #JS.НастоящееИмя("FeFlood")
+  operation FeFlood<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFloodElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFloodElement, M>>? = none): RxNode<El<DOM.SVGFEFloodElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeFuncA<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncAElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncAElement, M>>? = none): RxNode<El<DOM.SVGFEFuncAElement, M>>
+  #JS.НастоящееИмя("FeFuncA")
+  operation FeFuncA<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncAElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncAElement, M>>? = none): RxNode<El<DOM.SVGFEFuncAElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeFuncB<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncBElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncBElement, M>>? = none): RxNode<El<DOM.SVGFEFuncBElement, M>>
+  #JS.НастоящееИмя("FeFuncB")
+  operation FeFuncB<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncBElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncBElement, M>>? = none): RxNode<El<DOM.SVGFEFuncBElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeFuncG<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncGElement, M>>? = none): RxNode<El<DOM.SVGFEFuncGElement, M>>
+  #JS.НастоящееИмя("FeFuncG")
+  operation FeFuncG<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncGElement, M>>? = none): RxNode<El<DOM.SVGFEFuncGElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeFuncR<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncRElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncRElement, M>>? = none): RxNode<El<DOM.SVGFEFuncRElement, M>>
+  #JS.НастоящееИмя("FeFuncR")
+  operation FeFuncR<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEFuncRElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEFuncRElement, M>>? = none): RxNode<El<DOM.SVGFEFuncRElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeGaussianBlur<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEGaussianBlurElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEGaussianBlurElement, M>>? = none): RxNode<El<DOM.SVGFEGaussianBlurElement, M>>
+  #JS.НастоящееИмя("FeGaussianBlur")
+  operation FeGaussianBlur<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEGaussianBlurElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEGaussianBlurElement, M>>? = none): RxNode<El<DOM.SVGFEGaussianBlurElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeImage<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEImageElement, M>>? = none): RxNode<El<DOM.SVGFEImageElement, M>>
+  #JS.НастоящееИмя("FeImage")
+  operation FeImage<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEImageElement, M>>? = none): RxNode<El<DOM.SVGFEImageElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeMerge<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMergeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMergeElement, M>>? = none): RxNode<El<DOM.SVGFEMergeElement, M>>
+  #JS.НастоящееИмя("FeMerge")
+  operation FeMerge<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMergeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMergeElement, M>>? = none): RxNode<El<DOM.SVGFEMergeElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeMergeNode<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMergeNodeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMergeNodeElement, M>>? = none): RxNode<El<DOM.SVGFEMergeNodeElement, M>>
+  #JS.НастоящееИмя("FeMergeNode")
+  operation FeMergeNode<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMergeNodeElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMergeNodeElement, M>>? = none): RxNode<El<DOM.SVGFEMergeNodeElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeMorphology<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMorphologyElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMorphologyElement, M>>? = none): RxNode<El<DOM.SVGFEMorphologyElement, M>>
+  #JS.НастоящееИмя("FeMorphology")
+  operation FeMorphology<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEMorphologyElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEMorphologyElement, M>>? = none): RxNode<El<DOM.SVGFEMorphologyElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeOffset<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEOffsetElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEOffsetElement, M>>? = none): RxNode<El<DOM.SVGFEOffsetElement, M>>
+  #JS.НастоящееИмя("FeOffset")
+  operation FeOffset<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEOffsetElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEOffsetElement, M>>? = none): RxNode<El<DOM.SVGFEOffsetElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FePointLight<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFEPointLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEPointLightElement, M>>? = none): RxNode<El<DOM.SVGFEPointLightElement, M>>
+  #JS.НастоящееИмя("FePointLight")
+  operation FePointLight<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFEPointLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFEPointLightElement, M>>? = none): RxNode<El<DOM.SVGFEPointLightElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeSpecularLighting<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFESpecularLightingElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFESpecularLightingElement, M>>? = none): RxNode<El<DOM.SVGFESpecularLightingElement, M>>
+  #JS.НастоящееИмя("FeSpecularLighting")
+  operation FeSpecularLighting<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFESpecularLightingElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFESpecularLightingElement, M>>? = none): RxNode<El<DOM.SVGFESpecularLightingElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeSpotLight<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFESpotLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFESpotLightElement, M>>? = none): RxNode<El<DOM.SVGFESpotLightElement, M>>
+  #JS.НастоящееИмя("FeSpotLight")
+  operation FeSpotLight<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFESpotLightElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFESpotLightElement, M>>? = none): RxNode<El<DOM.SVGFESpotLightElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeTile<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFETileElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFETileElement, M>>? = none): RxNode<El<DOM.SVGFETileElement, M>>
+  #JS.НастоящееИмя("FeTile")
+  operation FeTile<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFETileElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFETileElement, M>>? = none): RxNode<El<DOM.SVGFETileElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation FeTurbulence<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFETurbulenceElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFETurbulenceElement, M>>? = none): RxNode<El<DOM.SVGFETurbulenceElement, M>>
+  #JS.НастоящееИмя("FeTurbulence")
+  operation FeTurbulence<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFETurbulenceElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFETurbulenceElement, M>>? = none): RxNode<El<DOM.SVGFETurbulenceElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Filter<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGFilterElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFilterElement, M>>? = none): RxNode<El<DOM.SVGFilterElement, M>>
+  #JS.НастоящееИмя("Filter")
+  operation Filter<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGFilterElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGFilterElement, M>>? = none): RxNode<El<DOM.SVGFilterElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation ForeignObject<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGForeignObjectElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGForeignObjectElement, M>>? = none): RxNode<El<DOM.SVGForeignObjectElement, M>>
+  #JS.НастоящееИмя("ForeignObject")
+  operation ForeignObject<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGForeignObjectElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGForeignObjectElement, M>>? = none): RxNode<El<DOM.SVGForeignObjectElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation G<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGGElement, M>>? = none): RxNode<El<DOM.SVGGElement, M>>
+  #JS.НастоящееИмя("G")
+  operation G<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGGElement, M>>? = none): RxNode<El<DOM.SVGGElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation SvgImage<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGImageElement, M>>? = none): RxNode<El<DOM.SVGImageElement, M>>
+  #JS.НастоящееИмя("SvgImage")
+  operation SvgImage<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGImageElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGImageElement, M>>? = none): RxNode<El<DOM.SVGImageElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation SvgLine<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGLineElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGLineElement, M>>? = none): RxNode<El<DOM.SVGLineElement, M>>
+  #JS.НастоящееИмя("SvgLine")
+  operation SvgLine<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGLineElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGLineElement, M>>? = none): RxNode<El<DOM.SVGLineElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation LinearGradient<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGLinearGradientElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGLinearGradientElement, M>>? = none): RxNode<El<DOM.SVGLinearGradientElement, M>>
+  #JS.НастоящееИмя("LinearGradient")
+  operation LinearGradient<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGLinearGradientElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGLinearGradientElement, M>>? = none): RxNode<El<DOM.SVGLinearGradientElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Marker<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGMarkerElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMarkerElement, M>>? = none): RxNode<El<DOM.SVGMarkerElement, M>>
+  #JS.НастоящееИмя("Marker")
+  operation Marker<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGMarkerElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMarkerElement, M>>? = none): RxNode<El<DOM.SVGMarkerElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Mask<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGMaskElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMaskElement, M>>? = none): RxNode<El<DOM.SVGMaskElement, M>>
+  #JS.НастоящееИмя("Mask")
+  operation Mask<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGMaskElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMaskElement, M>>? = none): RxNode<El<DOM.SVGMaskElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation MetaData<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGMetadataElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMetadataElement, M>>? = none): RxNode<El<DOM.SVGMetadataElement, M>>
+  #JS.НастоящееИмя("MetaData")
+  operation MetaData<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGMetadataElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGMetadataElement, M>>? = none): RxNode<El<DOM.SVGMetadataElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation MPath<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGElement, M>>? = none): RxNode<El<DOM.SVGElement, M>>
+  #JS.НастоящееИмя("MPath")
+  operation MPath<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGElement, M>>? = none): RxNode<El<DOM.SVGElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Path<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPathElement, M>>? = none): RxNode<El<DOM.SVGPathElement, M>>
+  #JS.НастоящееИмя("Path")
+  operation Path<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPathElement, M>>? = none): RxNode<El<DOM.SVGPathElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Pattern<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGPatternElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPatternElement, M>>? = none): RxNode<El<DOM.SVGPatternElement, M>>
+  #JS.НастоящееИмя("Pattern")
+  operation Pattern<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGPatternElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPatternElement, M>>? = none): RxNode<El<DOM.SVGPatternElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Polygon<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGPolygonElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPolygonElement, M>>? = none): RxNode<El<DOM.SVGPolygonElement, M>>
+  #JS.НастоящееИмя("Polygon")
+  operation Polygon<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGPolygonElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPolygonElement, M>>? = none): RxNode<El<DOM.SVGPolygonElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation PolyLine<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGPolylineElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPolylineElement, M>>? = none): RxNode<El<DOM.SVGPolylineElement, M>>
+  #JS.НастоящееИмя("PolyLine")
+  operation PolyLine<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGPolylineElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGPolylineElement, M>>? = none): RxNode<El<DOM.SVGPolylineElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation RadialGradient<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGRadialGradientElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGRadialGradientElement, M>>? = none): RxNode<El<DOM.SVGRadialGradientElement, M>>
+  #JS.НастоящееИмя("RadialGradient")
+  operation RadialGradient<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGRadialGradientElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGRadialGradientElement, M>>? = none): RxNode<El<DOM.SVGRadialGradientElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Rect<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGRectElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGRectElement, M>>? = none): RxNode<El<DOM.SVGRectElement, M>>
+  #JS.НастоящееИмя("Rect")
+  operation Rect<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGRectElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGRectElement, M>>? = none): RxNode<El<DOM.SVGRectElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Stop<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGStopElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGStopElement, M>>? = none): RxNode<El<DOM.SVGStopElement, M>>
+  #JS.НастоящееИмя("Stop")
+  operation Stop<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGStopElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGStopElement, M>>? = none): RxNode<El<DOM.SVGStopElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation SvgSwitch<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGSwitchElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSwitchElement, M>>? = none): RxNode<El<DOM.SVGSwitchElement, M>>
+  #JS.НастоящееИмя("SvgSwitch")
+  operation SvgSwitch<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGSwitchElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSwitchElement, M>>? = none): RxNode<El<DOM.SVGSwitchElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Symbol<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGSymbolElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSymbolElement, M>>? = none): RxNode<El<DOM.SVGSymbolElement, M>>
+  #JS.НастоящееИмя("Symbol")
+  operation Symbol<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGSymbolElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGSymbolElement, M>>? = none): RxNode<El<DOM.SVGSymbolElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Text<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGTextElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTextElement, M>>? = none): RxNode<El<DOM.SVGTextElement, M>>
+  #JS.НастоящееИмя("Text")
+  operation Text<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGTextElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTextElement, M>>? = none): RxNode<El<DOM.SVGTextElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TextPath<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGTextPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTextPathElement, M>>? = none): RxNode<El<DOM.SVGTextPathElement, M>>
+  #JS.НастоящееИмя("TextPath")
+  operation TextPath<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGTextPathElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTextPathElement, M>>? = none): RxNode<El<DOM.SVGTextPathElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation TSpan<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGTSpanElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTSpanElement, M>>? = none): RxNode<El<DOM.SVGTSpanElement, M>>
+  #JS.НастоящееИмя("TSpan")
+  operation TSpan<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGTSpanElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGTSpanElement, M>>? = none): RxNode<El<DOM.SVGTSpanElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Use<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGUseElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGUseElement, M>>? = none): RxNode<El<DOM.SVGUseElement, M>>
+  #JS.НастоящееИмя("Use")
+  operation Use<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGUseElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGUseElement, M>>? = none): RxNode<El<DOM.SVGUseElement, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation View<M = Object?>(declaration: RxNodeDecl<El<DOM.SVGViewElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGViewElement, M>>? = none): RxNode<El<DOM.SVGViewElement, M>>
+  #JS.НастоящееИмя("View")
+  operation View<M = A.Object?>(declaration: RxNodeDecl<El<DOM.SVGViewElement, M>>? = none, preset: RxNodeDecl<El<DOM.SVGViewElement, M>>? = none): RxNode<El<DOM.SVGViewElement, M>>
 }

@@ -2,26 +2,40 @@
 подключить Реактроник
 
 операция Страница(
-  перестроить: Обработчик<El<DOM.HTMLBodyElement>>? = пусто): RxNode<El<DOM.HTMLBodyElement>>
+  обновить: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
+  RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(update = перестроить))
-}
-
-операция Надпись(текст: Текст): RxNode<El<DOM.HTMLElement, None>>
-{
-  результат = Note(текст)
-}
-
-операция Секция(
-  режим: Режим? = пусто,
-  перестроить: Обработчик<El<DOM.HTMLElement, None>>? = пусто)
-  : RxNode<El<DOM.HTMLElement, None>>
-{
-  результат = Section<None>(`(mode = режим, update = перестроить))
+  результат = Page(`(update = обновить))
 }
 
 псевдонимы(русский)
 {
+  operation SectionEx(preset, key, mode, triggers, initialize, update, finalize) =
+    Секция(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation TableEx(preset, key, mode, triggers, initialize, update, finalize) =
+    Таблица(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation NoteEx(preset, key, mode, triggers, initialize, update, finalize) =
+    Надпись(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation HtmlNoteEx(preset, key, mode, triggers, initialize, update, finalize) =
+    Формат(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation GroupEx(preset, key, mode, triggers, initialize, update, finalize) =
+    Группа(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation SyntheticElementEx(preset, key, mode, triggers, initialize, update, finalize) =
+    СинтетическийЭлемент(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+
+  operation Handler(update) = Обработка(обновить)
+
+  operation row(builder, shift-cursor-down) = строка(построитель, сместить-курсор-вниз)
+
+  operation start-new-row(shift-cursor-down) = начать-новую-строку(сместить-курсор-вниз)
+
+  operation cursor(area-params) = курсор(параметры-области)
+
   type El = Эль
   {
     node = узел
@@ -79,6 +93,4 @@
     max = макс
     growth = прирост
   }
-
-  operation startNewRow(shiftCursorDown) = начать-новую-строку(сместить-курсор-вниз)
 }

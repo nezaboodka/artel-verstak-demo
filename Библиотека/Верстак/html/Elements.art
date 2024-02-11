@@ -3,51 +3,146 @@ import JS = Artel.JavaScript
 import DOM = Browser
 import Реактроник
 
+
+operation SectionEx<M = Object?>(
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
+  update: Delegate<El<DOM.HTMLElement, M>>? = none,
+  finalize: Delegate<El<DOM.HTMLElement, M>>? = none):
+  RxNode<El<DOM.HTMLElement, M>>
+{
+  result = SectionImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
+operation TableEx<M = Object?, R = None>(
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
+  update: Delegate<El<DOM.HTMLElement, M>>? = none,
+  finalize: Delegate<El<DOM.HTMLElement, M>>? = none):
+  RxNode<El<DOM.HTMLElement, M>>
+{
+  result = TableImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
+operation NoteEx(
+  content: Text,
+  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<DOM.HTMLElement, None>>? = none,
+  update: Delegate<El<DOM.HTMLElement, None>>? = none,
+  finalize: Delegate<El<DOM.HTMLElement, None>>? = none):
+  RxNode<El<DOM.HTMLElement, None>>
+{
+  result = NoteImpl(content, `(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
+operation HtmlNoteEx(
+  content: Text,
+  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<DOM.HTMLElement, None>>? = none,
+  update: Delegate<El<DOM.HTMLElement, None>>? = none,
+  finalize: Delegate<El<DOM.HTMLElement, None>>? = none):
+  RxNode<El<DOM.HTMLElement, None>>
+{
+  result = HtmlNoteImpl(content, `(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
+operation GroupEx<M = Object?, R = None>(
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
+  update: Delegate<El<DOM.HTMLElement, M>>? = none,
+  finalize: Delegate<El<DOM.HTMLElement, M>>? = none):
+  RxNode<El<DOM.HTMLElement, M>>
+{
+  result = GroupImpl<M, R>(`(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
+operation SyntheticElementEx<M = Object?>(
+  preset: RxNodeDecl<El<None, M>>? = none,
+  key: Text? = none,
+  mode: Mode? = none,
+  triggers: Object? = none,
+  initialize: Delegate<El<None, M>>? = none,
+  update: Delegate<El<None, M>>? = none,
+  finalize: Delegate<El<None, M>>? = none):
+  RxNode<El<None, M>>
+{
+  result = SyntheticElementImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+}
+
+
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Section<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Table<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
-
+  #JS.НастоящееИмя("row")
+  operation row<T = None>(builder: None | operation(element: None): T, shift-cursor-down: Number? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation row<T = None>(builder: None | operation(element: None): T, shiftCursorDown: Number? = none)
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  operation startNewRow(shiftCursorDown: Number? = none)
-
+  #JS.НастоящееИмя("startNewRow")
+  operation start-new-row(shift-cursor-down: Number? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("cursor")
   operation cursor(areaParams: ElArea)
 
-
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Note(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  operation HtmlNote(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  operation Group<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Handler")
   operation Handler<M = Object?>(update: Delegate<El<None, M>>): RxNode<El<None, M>>
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
-  operation SyntheticElement<M = Object?>(declaration: RxNodeDecl<El<None, M>>? = none, preset: RxNodeDecl<El<None, M>>? = none): RxNode<El<None, M>>
-
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   type VerstakElementDriver<T: DOM.HTMLElement> = object HtmlElementDriver<T>
   {
     operation update(node: RxNode<El<T>>)
   }
+}
+
+hidden external
+{
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Section")
+  operation SectionImpl<M = Object?>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Table")
+  operation TableImpl<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Note")
+  operation NoteImpl(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("HtmlNote")
+  operation HtmlNoteImpl(content: Text, declaration: RxNodeDecl<El<DOM.HTMLElement, None>>? = none): RxNode<El<DOM.HTMLElement, None>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("Group")
+  operation GroupImpl<M = Object?, R = None>(declaration: RxNodeDecl<El<DOM.HTMLElement, M>>? = none, preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none): RxNode<El<DOM.HTMLElement, M>>
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  #JS.НастоящееИмя("SyntheticElement")
+  operation SyntheticElementImpl<M = Object?>(declaration: RxNodeDecl<El<None, M>>? = none, preset: RxNodeDecl<El<None, M>>? = none): RxNode<El<None, M>>
 }
