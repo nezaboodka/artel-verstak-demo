@@ -36,15 +36,15 @@
 
     width = ширина
 
-    width-only-min = ширина-только-мин
+    width-only-min = ширина-лишь-мин
 
-    width-only-growth = ширина-только-прирост
+    width-only-growth = ширина-лишь-прирост
 
     height = высота
 
-    height-only-min = высота-только-мин
+    height-only-min = высота-лишь-мин
 
-    height-only-growth = высота-только-прирост
+    height-only-growth = высота-лишь-прирост
 
     content-alignment = выравнивание-содержимого
 
