@@ -28,15 +28,15 @@ external
 
     width: Range
 
-    width-only-min: Text
+    width-merely-min: Text
 
-    width-only-growth: Number
+    width-merely-growth: Number
 
     height: Range
 
-    height-only-min: Text
+    height-merely-min: Text
 
-    height-only-growth: Number
+    height-merely-growth: Number
 
     content-alignment: Align
 
