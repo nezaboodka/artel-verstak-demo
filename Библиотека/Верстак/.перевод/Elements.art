@@ -2,31 +2,31 @@
 подключить Реактроник
 
 операция Страница(
-  обновить: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
+  начинка: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
   RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(update = обновить))
+  результат = Page(`(начинка))
 }
 
 псевдонимы(русский)
 {
-  operation SectionEx(preset, key, mode, triggers, initialize, update, finalize) =
-    Секция(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation SectionEx(content, key, mode, activation, deactivation, triggers, preset) =
+    Секция(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation TableEx(preset, key, mode, triggers, initialize, update, finalize) =
-    Таблица(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation TableEx(content, key, mode, activation, deactivation, triggers, preset) =
+    Таблица(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation NoteEx(preset, key, mode, triggers, initialize, update, finalize) =
-    Надпись(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation NoteEx(content, key, mode, activation, deactivation, triggers, preset) =
+    Надпись(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation HtmlNoteEx(preset, key, mode, triggers, initialize, update, finalize) =
-    Формат(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation HtmlNoteEx(content, key, mode, activation, deactivation, triggers, preset) =
+    Формат(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation GroupEx(preset, key, mode, triggers, initialize, update, finalize) =
-    Группа(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation GroupEx(content, key, mode, activation, deactivation, triggers, preset) =
+    Группа(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElementEx(preset, key, mode, triggers, initialize, update, finalize) =
-    СинтетическийЭлемент(заготовка, ключ, режим, триггеры, подготовить, обновить, завершить)
+  operation SyntheticElementEx(content, key, mode, activation, deactivation, triggers, preset) =
+    СинтетическийЭлемент(начинка, ключ, режим, активация, деактивация, триггеры, заготовка)
 
   operation Handling(update) = Обработка(обновить)
 

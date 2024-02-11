@@ -9,4 +9,28 @@
     independent-update = независимое-обновление
     manual-mount = ручное-встраивание
   }
+
+  type Priority = Приоритет
+  {
+    realtime = реальный   // = 0
+    normal = обычный      // = 1
+    background = фоновый  // = 2
+  }
+
+  type RxNodeDecl = ДекларацияУзла
+  {
+    content = начинка
+
+    key = ключ
+
+    mode = режим
+
+    activation = активация
+
+    deactivation = деактивация
+
+    triggers = триггеры
+
+    preset = заготовка
+  };
 }

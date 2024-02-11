@@ -5,88 +5,88 @@ import Реактроник
 
 
 operation SectionEx<M = Object?>(
-  update: Delegate<El<DOM.HTMLElement, M>>? = none,
-  mode: Mode? = none,
+  content: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  finalize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = SectionImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+  result = SectionImpl<M>(`(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation TableEx<M = Object?, R = None>(
-  update: Delegate<El<DOM.HTMLElement, M>>? = none,
-  mode: Mode? = none,
+  content: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  finalize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = TableImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+  result = TableImpl<M>(`(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation NoteEx(
-  content: Text,
-  update: Delegate<El<DOM.HTMLElement, None>>? = none,
-  mode: Mode? = none,
+  text: Text,
+  content: Delegate<El<DOM.HTMLElement, None>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<DOM.HTMLElement, None>>? = none,
-  finalize: Delegate<El<DOM.HTMLElement, None>>? = none,
-  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<DOM.HTMLElement, None>>? = none,
+  deactivation: Delegate<El<DOM.HTMLElement, None>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none):
   RxNode<El<DOM.HTMLElement, None>>
 {
-  result = NoteImpl(content, `(preset, key, mode, triggers, initialize, update, finalize))
+  result = NoteImpl(text, `(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation HtmlNoteEx(
-  content: Text,
-  update: Delegate<El<DOM.HTMLElement, None>>? = none,
-  mode: Mode? = none,
+  text: Text,
+  content: Delegate<El<DOM.HTMLElement, None>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<DOM.HTMLElement, None>>? = none,
-  finalize: Delegate<El<DOM.HTMLElement, None>>? = none,
-  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<DOM.HTMLElement, None>>? = none,
+  deactivation: Delegate<El<DOM.HTMLElement, None>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none):
   RxNode<El<DOM.HTMLElement, None>>
 {
-  result = HtmlNoteImpl(content, `(preset, key, mode, triggers, initialize, update, finalize))
+  result = HtmlNoteImpl(text, `(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation GroupEx<M = Object?, R = None>(
-  update: Delegate<El<DOM.HTMLElement, M>>? = none,
-  mode: Mode? = none,
+  content: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  finalize: Delegate<El<DOM.HTMLElement, M>>? = none,
-  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = GroupImpl<M, R>(`(preset, key, mode, triggers, initialize, update, finalize))
+  result = GroupImpl<M, R>(`(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation SyntheticElementEx<M = Object?>(
-  update: Delegate<El<None, M>>? = none,
-  mode: Mode? = none,
+  content: Delegate<El<None, M>>? = none,
   key: Text? = none,
-  initialize: Delegate<El<None, M>>? = none,
-  finalize: Delegate<El<None, M>>? = none,
-  preset: RxNodeDecl<El<None, M>>? = none,
-  triggers: Object? = none):
+  mode: Mode? = none,
+  activation: Delegate<El<None, M>>? = none,
+  deactivation: Delegate<El<None, M>>? = none,
+  triggers: Object? = none,
+  preset: RxNodeDecl<El<None, M>>? = none):
   RxNode<El<None, M>>
 {
-  result = SyntheticElementImpl<M>(`(preset, key, mode, triggers, initialize, update, finalize))
+  result = SyntheticElementImpl<M>(`(content, key, mode, activation, deactivation, triggers, preset))
 }
 
 

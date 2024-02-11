@@ -1,21 +1,6 @@
 
 import JS = Artel.JavaScript
 
-type Mode = variant
-{
-  default = 0
-  independent-update = 1
-  manual-mount = 2
-}
-
-
-type Priority = variant
-{
-  realtime = 0
-  normal = 1
-  background = 2
-}
-
 external
 {
   type Delegate<T> = operation(el: T, basis: operation())
@@ -24,22 +9,22 @@ external
   type SimpleDelegate<T = Object?, R = None> = operation(el: T): R
 
 
-  // #JS.ВнешняяРеализация(модуль = "reactronic")
-  // type Mode = variant
-  // {
-  //   default = 0
-  //   independent-update = 1
-  //   manual-mount = 2
-  // }
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Mode = variant
+  {
+    default             // = 0
+    independent-update  // = 1
+    manual-mount        // = 2
+  }
 
 
-  // #JS.ВнешняяРеализация(модуль = "reactronic")
-  // type Priority = variant
-  // {
-  //   realtime = 0
-  //   normal = 1
-  //   background = 2
-  // }
+  #JS.ВнешняяРеализация(модуль = "reactronic")
+  type Priority = variant
+  {
+    realtime    // = 0
+    normal      // = 1
+    background  // = 2
+  }
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
@@ -109,7 +94,7 @@ external
     frameDuration: Number
 
     global
-    operation acquire<E = None>(driver: RxNodeDriver<E>, declaration: RxNodeDecl<E>?, preset: RxNodeDecl<E>?): RxNode<E>
+    operation declare<E = None>(driver: RxNodeDriver<E>, declaration: RxNodeDecl<E>?, preset: RxNodeDecl<E>?): RxNode<E>
 
     global guarded
     isFirstUpdate: YesNo
@@ -133,7 +118,7 @@ external
     operation triggerUpdate(node: RxNode<Object?>, triggers: Object?)
 
     global
-    operation triggerFinalize(node: RxNode<Object?>)
+    operation triggerDeactivation(node: RxNode<Object?>)
 
     global
     operation updateNestedNodesThenDo(action: operation(error`: Object?))
@@ -161,19 +146,19 @@ external
 
 type RxNodeDecl<E = Object?> = object
 {
-  preset: RxNodeDecl<E>? = none
+  content: Delegate<E>? = none
 
   key: Text? = none
 
   mode: Mode? = none
 
+  activation: Delegate<E>? = none
+
+  deactivation: Delegate<E>? = none
+
   triggers: Object? = none
 
-  initialize: Delegate<E>? = none
-
-  update: Delegate<E>? = none
-
-  finalize: Delegate<E>? = none
+  preset: RxNodeDecl<E>? = none
 };
 
 
@@ -190,13 +175,13 @@ type RxNodeDriver<E = Object?> = object
 
   allocate: None | operation(node: RxNode<E>): E = none
 
-  initialize: None | operation(node: RxNode<E>) = none
+  activate: None | operation(node: RxNode<E>) = none
 
   mount: None | operation(node: RxNode<E>) = none
 
   update: None | operation(node: RxNode<E>) = none
 
-  finalize: None | operation(node: RxNode<E>, isLeader: YesNo): YesNo = none
+  deactivate: None | operation(node: RxNode<E>, isLeader: YesNo): YesNo = none
 }
 
 
@@ -224,13 +209,13 @@ external
     abstract
     operation allocate(node: RxNode<E>): E;
 
-    operation initialize(node: RxNode<E>)
+    operation activate(node: RxNode<E>)
 
     operation mount(node: RxNode<E>)
 
     operation update(node: RxNode<E>)
 
-    operation finalize(node: RxNode<E>, isLeader: YesNo): YesNo
+    operation deactivate(node: RxNode<E>, isLeader: YesNo): YesNo
   }
 
 
