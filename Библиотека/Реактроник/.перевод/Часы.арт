@@ -4,19 +4,12 @@
   type Clock = Часы
   {
     hour = час
-
     minute = минута
-
     second = секунда
-
     ms = мс
-
     interval = интервал
-
     paused = на-паузе
-
     on create(interval) = (интервал)
-
     operation pause(value) = пауза(значение)
   }
 }
