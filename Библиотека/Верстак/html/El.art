@@ -40,7 +40,7 @@ external
 
     content-alignment: Align
 
-    element-alignment: Align
+    bounds-alignment: Align
 
     content-wrapping: YesNo
 
@@ -80,7 +80,7 @@ external
   type Align = variant
   {
     default   // = 16
-    fit       // = 0
+    stretch   // = 0
     left      // = 1
     center-x  // = 2
     right     // = 3
@@ -188,7 +188,7 @@ external
 
     content-alignment: Align
 
-    element-alignment: Align
+    bounds-alignment: Align
 
     content-wrapping: YesNo
 
@@ -278,7 +278,7 @@ external
     operation content-alignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
 
     global
-    operation element-alignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
+    operation bounds-alignment<T: DOM.Element>(element: El<T, Object?>, value: Align)
 
     global
     operation content-wrapping<T: DOM.Element>(element: El<T, Object?>, value: YesNo)

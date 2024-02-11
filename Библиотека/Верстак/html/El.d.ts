@@ -15,7 +15,7 @@ export type El<T = any, M = any> = {
     heightMerelyMin: string;
     heightMerelyGrowth: number;
     contentAlignment: Align;
-    elementAlignment: Align;
+    boundsAlignment: Align;
     contentWrapping: boolean;
     overlayVisible: boolean | undefined;
     readonly style: CSSStyleDeclaration;
@@ -38,7 +38,7 @@ export type ElCoords = {
 };
 export declare enum Align {
     default = 16,
-    fit = 0,
+    stretch = 0,
     left = 1,
     centerX = 2,
     right = 3,
@@ -72,7 +72,7 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     private _width;
     private _height;
     private _contentAlignment;
-    private _elementAlignment;
+    private _boundsAlignment;
     private _contentWrapping;
     private _overlayVisible;
     private _hasStylingPresets;
@@ -99,8 +99,8 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     set heightMerelyGrowth(value: number);
     get contentAlignment(): Align;
     set contentAlignment(value: Align);
-    get elementAlignment(): Align;
-    set elementAlignment(value: Align);
+    get boundsAlignment(): Align;
+    set boundsAlignment(value: Align);
     get contentWrapping(): boolean;
     set contentWrapping(value: boolean);
     get overlayVisible(): boolean | undefined;
@@ -141,7 +141,7 @@ export declare class Apply {
     static minHeight<T extends Element>(element: El<T, any>, value: string): void;
     static maxHeight<T extends Element>(element: El<T, any>, value: string): void;
     static contentAlignment<T extends Element>(element: El<T, any>, value: Align): void;
-    static elementAlignment<T extends Element>(element: El<T, any>, value: Align): void;
+    static boundsAlignment<T extends Element>(element: El<T, any>, value: Align): void;
     static contentWrapping<T extends Element>(element: El<T, any>, value: boolean): void;
     static overlayVisible<T extends Element>(element: El<T, any>, value: boolean | undefined): void;
     static stylingPreset<T extends Element>(element: El<T, any>, secondary: boolean, styleName: string, enabled?: boolean): void;

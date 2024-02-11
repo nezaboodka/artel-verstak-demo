@@ -48,7 +48,7 @@
 
     content-alignment = выравнивание-содержимого
 
-    element-alignment = выравнивание-элемента
+    bounds-alignment = выравнивание-габаритов
 
     content-wrapping = перенос-содержимого
 
@@ -63,7 +63,7 @@
   type Align = Выравнивание
   {
     default = стандартно
-    fit = габариты
+    stretch = растяжка
     left = лево
     center-x = центр-ширины
     right = право
