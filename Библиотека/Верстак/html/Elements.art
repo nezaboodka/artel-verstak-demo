@@ -5,7 +5,7 @@ import Реактроник
 
 
 operation Section<M = Object?>(
-  formula: Delegate<El<DOM.HTMLElement, M>>? = none,
+  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
   activation: Delegate<El<DOM.HTMLElement, M>>? = none,
@@ -14,12 +14,12 @@ operation Section<M = Object?>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = SectionImpl<M>(`(formula, key, mode, activation, deactivation, triggers, preset))
+  result = SectionImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation Table<M = Object?, R = None>(
-  formula: Delegate<El<DOM.HTMLElement, M>>? = none,
+  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
   activation: Delegate<El<DOM.HTMLElement, M>>? = none,
@@ -28,14 +28,14 @@ operation Table<M = Object?, R = None>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = TableImpl<M>(`(formula, key, mode, activation, deactivation, triggers, preset))
+  result = TableImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation Note(
   text: Text,
   formatted: YesNo? = none,
-  formula: Delegate<El<DOM.HTMLElement, None>>? = none,
+  autorun: Delegate<El<DOM.HTMLElement, None>>? = none,
   key: Text? = none,
   mode: Mode? = none,
   activation: Delegate<El<DOM.HTMLElement, None>>? = none,
@@ -44,12 +44,12 @@ operation Note(
   preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none):
   RxNode<El<DOM.HTMLElement, None>>
 {
-  result = NoteImpl(text, formatted, `(formula, key, mode, activation, deactivation, triggers, preset))
+  result = NoteImpl(text, formatted, `(autorun, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation Group<M = Object?, R = None>(
-  formula: Delegate<El<DOM.HTMLElement, M>>? = none,
+  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
   activation: Delegate<El<DOM.HTMLElement, M>>? = none,
@@ -58,12 +58,12 @@ operation Group<M = Object?, R = None>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = GroupImpl<M, R>(`(formula, key, mode, activation, deactivation, triggers, preset))
+  result = GroupImpl<M, R>(`(autorun, key, mode, activation, deactivation, triggers, preset))
 }
 
 
 operation SyntheticElement<M = Object?>(
-  formula: Delegate<El<None, M>>? = none,
+  autorun: Delegate<El<None, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
   activation: Delegate<El<None, M>>? = none,
@@ -72,7 +72,7 @@ operation SyntheticElement<M = Object?>(
   preset: RxNodeDecl<El<None, M>>? = none):
   RxNode<El<None, M>>
 {
-  result = SyntheticElementImpl<M>(`(formula, key, mode, activation, deactivation, triggers, preset))
+  result = SyntheticElementImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
 }
 
 
@@ -88,7 +88,7 @@ external
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   #JS.НастоящееИмя("cursor")
-  operation cursor(areaParams: ElArea)
+  operation cursor(area-params: ElArea)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   #JS.НастоящееИмя("Handling")

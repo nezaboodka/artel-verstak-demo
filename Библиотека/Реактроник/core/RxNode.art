@@ -146,7 +146,7 @@ external
 
 type RxNodeDecl<E = Object?> = object
 {
-  formula: Delegate<E>? = none
+  autorun: Delegate<E>? = none
 
   key: Text? = none
 

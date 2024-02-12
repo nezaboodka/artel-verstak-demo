@@ -2,28 +2,28 @@
 подключить Реактроник
 
 операция Страница(
-  формула: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
+  автозапуск: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
   RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(формула))
+  результат = Page(`(автозапуск))
 }
 
 псевдонимы(английский -> русский)
 {
-  operation Section(formula, key, mode, activation, deactivation, triggers, preset) ->
-    Секция(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Section(autorun, key, mode, activation, deactivation, triggers, preset) ->
+    Секция(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Table(formula, key, mode, activation, deactivation, triggers, preset) ->
-    Таблица(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Table(autorun, key, mode, activation, deactivation, triggers, preset) ->
+    Таблица(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Note(formula, key, mode, activation, deactivation, triggers, preset) ->
-    Надпись(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Note(autorun, key, mode, activation, deactivation, triggers, preset) ->
+    Надпись(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Group(formula, key, mode, activation, deactivation, triggers, preset) ->
-    Группа(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Group(autorun, key, mode, activation, deactivation, triggers, preset) ->
+    Группа(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElement(formula, key, mode, activation, deactivation, triggers, preset) ->
-    СинтетическийЭлемент(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation SyntheticElement(autorun, key, mode, activation, deactivation, triggers, preset) ->
+    СинтетическийЭлемент(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
 
   operation Handling(update) -> Обработка(обновить)
 

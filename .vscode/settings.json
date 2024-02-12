@@ -38,6 +38,7 @@
     "yarn.lock",
   ],
   "cSpell.words": [
+    "autorun",
     "contenteditable",
     "Mvcc",
     "reactronic",

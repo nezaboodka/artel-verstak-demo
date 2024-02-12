@@ -19,7 +19,7 @@
 
   type RxNodeDecl -> ДекларацияУзла
   {
-    formula -> формула
+    autorun -> автозапуск
     key -> ключ
     mode -> режим
     activation -> активация
