@@ -19,11 +19,11 @@
 
   type RxNodeDecl -> ДекларацияУзла
   {
-    autorun -> автозапуск
+    on-change -> при-изменении
     key -> ключ
     mode -> режим
-    activation -> активация
-    deactivation -> деактивация
+    on-create -> при-создании
+    on-destroy -> при-уничтожении
     triggers -> триггеры
     preset -> заготовка
   };

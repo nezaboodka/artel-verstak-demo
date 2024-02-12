@@ -146,15 +146,15 @@ external
 
 type RxNodeDecl<E = Object?> = object
 {
-  autorun: Delegate<E>? = none
+  on-change: Delegate<E>? = none
 
   key: Text? = none
 
   mode: Mode? = none
 
-  activation: Delegate<E>? = none
+  on-create: Delegate<E>? = none
 
-  deactivation: Delegate<E>? = none
+  on-destroy: Delegate<E>? = none
 
   triggers: Object? = none
 
@@ -175,13 +175,13 @@ type RxNodeDriver<E = Object?> = object
 
   allocate: None | operation(node: RxNode<E>): E = none
 
-  activate: None | operation(node: RxNode<E>) = none
+  create: None | operation(node: RxNode<E>) = none
 
   mount: None | operation(node: RxNode<E>) = none
 
   update: None | operation(node: RxNode<E>) = none
 
-  deactivate: None | operation(node: RxNode<E>, isLeader: YesNo): YesNo = none
+  destroy: None | operation(node: RxNode<E>, isLeader: YesNo): YesNo = none
 }
 
 
@@ -215,7 +215,7 @@ external
 
     operation update(node: RxNode<E>)
 
-    operation deactivate(node: RxNode<E>, isLeader: YesNo): YesNo
+    operation destroy(node: RxNode<E>, isLeader: YesNo): YesNo
   }
 
 

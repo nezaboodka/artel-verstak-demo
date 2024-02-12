@@ -2,28 +2,28 @@
 подключить Реактроник
 
 операция Страница(
-  автозапуск: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
+  при-изменении: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
   RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(автозапуск))
+  результат = Page(`(при-изменении))
 }
 
 псевдонимы(английский -> русский)
 {
-  operation Section(autorun, key, mode, activation, deactivation, triggers, preset) ->
-    Секция(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Section(on-change, key, mode, on-create, on-destroy, triggers, preset) ->
+    Секция(при-изменении, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Table(autorun, key, mode, activation, deactivation, triggers, preset) ->
-    Таблица(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Table(on-change, key, mode, on-create, on-destroy, triggers, preset) ->
+    Таблица(при-изменении, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Note(autorun, key, mode, activation, deactivation, triggers, preset) ->
-    Надпись(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Note(on-change, key, mode, on-create, on-destroy, triggers, preset) ->
+    Надпись(при-изменении, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Group(autorun, key, mode, activation, deactivation, triggers, preset) ->
-    Группа(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation Group(on-change, key, mode, on-create, on-destroy, triggers, preset) ->
+    Группа(при-изменении, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElement(autorun, key, mode, activation, deactivation, triggers, preset) ->
-    СинтетическийЭлемент(автозапуск, ключ, режим, активация, деактивация, триггеры, заготовка)
+  operation SyntheticElement(on-change, key, mode, on-create, on-destroy, triggers, preset) ->
+    СинтетическийЭлемент(при-изменении, ключ, режим, активация, деактивация, триггеры, заготовка)
 
   operation Handling(update) -> Обработка(обновить)
 

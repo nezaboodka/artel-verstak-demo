@@ -5,74 +5,74 @@ import Реактроник
 
 
 operation Section<M = Object?>(
-  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-change: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
-  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
-  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-create: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-destroy: Delegate<El<DOM.HTMLElement, M>>? = none,
   triggers: Object? = none,
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = SectionImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
+  result = SectionImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
 operation Table<M = Object?, R = None>(
-  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-change: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
-  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
-  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-create: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-destroy: Delegate<El<DOM.HTMLElement, M>>? = none,
   triggers: Object? = none,
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = TableImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
+  result = TableImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
 operation Note(
   text: Text,
   formatted: YesNo? = none,
-  autorun: Delegate<El<DOM.HTMLElement, None>>? = none,
+  on-change: Delegate<El<DOM.HTMLElement, None>>? = none,
   key: Text? = none,
   mode: Mode? = none,
-  activation: Delegate<El<DOM.HTMLElement, None>>? = none,
-  deactivation: Delegate<El<DOM.HTMLElement, None>>? = none,
+  on-create: Delegate<El<DOM.HTMLElement, None>>? = none,
+  on-destroy: Delegate<El<DOM.HTMLElement, None>>? = none,
   triggers: Object? = none,
   preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none):
   RxNode<El<DOM.HTMLElement, None>>
 {
-  result = NoteImpl(text, formatted, `(autorun, key, mode, activation, deactivation, triggers, preset))
+  result = NoteImpl(text, formatted, `(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
 operation Group<M = Object?, R = None>(
-  autorun: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-change: Delegate<El<DOM.HTMLElement, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
-  activation: Delegate<El<DOM.HTMLElement, M>>? = none,
-  deactivation: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-create: Delegate<El<DOM.HTMLElement, M>>? = none,
+  on-destroy: Delegate<El<DOM.HTMLElement, M>>? = none,
   triggers: Object? = none,
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = GroupImpl<M, R>(`(autorun, key, mode, activation, deactivation, triggers, preset))
+  result = GroupImpl<M, R>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
 operation SyntheticElement<M = Object?>(
-  autorun: Delegate<El<None, M>>? = none,
+  on-change: Delegate<El<None, M>>? = none,
   key: Text? = none,
   mode: Mode? = none,
-  activation: Delegate<El<None, M>>? = none,
-  deactivation: Delegate<El<None, M>>? = none,
+  on-create: Delegate<El<None, M>>? = none,
+  on-destroy: Delegate<El<None, M>>? = none,
   triggers: Object? = none,
   preset: RxNodeDecl<El<None, M>>? = none):
   RxNode<El<None, M>>
 {
-  result = SyntheticElementImpl<M>(`(autorun, key, mode, activation, deactivation, triggers, preset))
+  result = SyntheticElementImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
