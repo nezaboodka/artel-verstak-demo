@@ -10,22 +10,19 @@
 
 псевдонимы(английский -> русский)
 {
-  operation SectionEx(formula, key, mode, activation, deactivation, triggers, preset) ->
+  operation Section(formula, key, mode, activation, deactivation, triggers, preset) ->
     Секция(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation TableEx(formula, key, mode, activation, deactivation, triggers, preset) ->
+  operation Table(formula, key, mode, activation, deactivation, triggers, preset) ->
     Таблица(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation NoteEx(formula, key, mode, activation, deactivation, triggers, preset) ->
+  operation Note(formula, key, mode, activation, deactivation, triggers, preset) ->
     Надпись(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation HtmlNoteEx(formula, key, mode, activation, deactivation, triggers, preset) ->
-    Формат(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
-
-  operation GroupEx(formula, key, mode, activation, deactivation, triggers, preset) ->
+  operation Group(formula, key, mode, activation, deactivation, triggers, preset) ->
     Группа(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElementEx(formula, key, mode, activation, deactivation, triggers, preset) ->
+  operation SyntheticElement(formula, key, mode, activation, deactivation, triggers, preset) ->
     СинтетическийЭлемент(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
   operation Handling(update) -> Обработка(обновить)
