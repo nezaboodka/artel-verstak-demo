@@ -8,89 +8,89 @@
   результат = Page(`(формула))
 }
 
-псевдонимы(русский)
+псевдонимы(английский -> русский)
 {
-  operation SectionEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation SectionEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     Секция(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation TableEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation TableEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     Таблица(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation NoteEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation NoteEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     Надпись(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation HtmlNoteEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation HtmlNoteEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     Формат(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation GroupEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation GroupEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     Группа(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation SyntheticElementEx(formula, key, mode, activation, deactivation, triggers, preset) =
+  operation SyntheticElementEx(formula, key, mode, activation, deactivation, triggers, preset) ->
     СинтетическийЭлемент(формула, ключ, режим, активация, деактивация, триггеры, заготовка)
 
-  operation Handling(update) = Обработка(обновить)
+  operation Handling(update) -> Обработка(обновить)
 
-  operation row(builder, shift-cursor-down) = строка(построитель, сместить-курсор-вниз)
+  operation row(builder, shift-cursor-down) -> строка(построитель, сместить-курсор-вниз)
 
-  operation start-new-row(shift-cursor-down) = начать-новую-строку(сместить-курсор-вниз)
+  operation start-new-row(shift-cursor-down) -> начать-новую-строку(сместить-курсор-вниз)
 
-  operation cursor(area-params) = курсор(параметры-области)
+  operation cursor(area-params) -> курсор(параметры-области)
 
-  type El = Эль
+  type El -> Эль
   {
-    node = узел
+    node -> узел
 
-    native = начинка
+    native -> начинка
 
-    model = модель
+    model -> модель
 
-    kind = вид
+    kind -> вид
 
-    area = область
+    area -> область
 
-    width = ширина
+    width -> ширина
 
-    width-just-min = ширина-просто-мин
+    width-just-min -> ширина-просто-мин
 
-    width-just-growth = ширина-просто-прирост
+    width-just-growth -> ширина-просто-прирост
 
-    height = высота
+    height -> высота
 
-    height-just-min = высота-просто-мин
+    height-just-min -> высота-просто-мин
 
-    height-just-growth = высота-просто-прирост
+    height-just-growth -> высота-просто-прирост
 
-    content-alignment = выравнивание-содержимого
+    content-alignment -> выравнивание-содержимого
 
-    bounds-alignment = выравнивание-габаритов
+    bounds-alignment -> выравнивание-габаритов
 
-    content-wrapping = перенос-содержимого
+    content-wrapping -> перенос-содержимого
 
-    overlay-visible = всплывающий-элемент
+    overlay-visible -> всплывающий-элемент
 
-    style = стиль
+    style -> стиль
 
-    operation use-styling-preset(styling-preset-name, enabled) =
+    operation use-styling-preset(styling-preset-name, enabled) ->
       применить-заготовленный-стиль(имя-заготовленного-стиля, вкл)
   }
 
-  type Align = Выравнивание
+  type Align -> Выравнивание
   {
-    default = стандартно
-    stretch = растяжка
-    left = лево
-    center-x = центр-ширины
-    right = право
-    top = верх
-    center-y = центр-высоты
-    bottom = низ
-    center = центр
+    default -> стандартно
+    stretch -> растяжка
+    left -> лево
+    center-x -> центр-ширины
+    right -> право
+    top -> верх
+    center-y -> центр-высоты
+    bottom -> низ
+    center -> центр
   }
 
-  type Range = Интервал
+  type Range -> Интервал
   {
-    min = мин
-    max = макс
-    growth = прирост
+    min -> мин
+    max -> макс
+    growth -> прирост
   }
 }
