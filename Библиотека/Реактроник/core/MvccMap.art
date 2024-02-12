@@ -16,7 +16,7 @@ external
 
     operation delete(key: K): YesNo
 
-    operation forEach(callbackfn: operation(value: V, key: K, map: Map<K, V>), thisArg: Object? = none)
+    operation for-each(callbackfn: operation(value: V, key: K, map: Map<K, V>), this-arg: Object? = none)
 
     operation get(key: K): V?
 

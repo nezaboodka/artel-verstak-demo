@@ -70,34 +70,34 @@ external
     priority: Priority?
 
     abstract
-    childrenShuffling: YesNo
+    children-shuffling: YesNo
 
     abstract
-    strictOrder: YesNo
+    strict-order: YesNo
 
     abstract
     operation has(mode: Mode): YesNo
 
     abstract
-    operation configureReactronic(options: PartialMemberOptions): MemberOptions
+    operation configure-reactronic(options: PartialMemberOptions): MemberOptions
     
     global guarded
-    shortFrameDuration // = 16
+    short-frame-duration // = 16
 
     global guarded
-    longFrameDuration // = 300
+    long-frame-duration // = 300
 
     global
-    currentUpdatePriority: Priority
+    current-update-priority: Priority
 
     global
-    frameDuration: Number
+    frame-duration: Number
 
     global
     operation declare<E = None>(driver: RxNodeDriver<E>, declaration: RxNodeDecl<E>?, preset: RxNodeDecl<E>?): RxNode<E>
 
     global guarded
-    isFirstUpdate: YesNo
+    is-first-update: YesNo
 
     global guarded
     key: Text
@@ -112,34 +112,34 @@ external
     priority: Priority
 
     global
-    childrenShuffling: YesNo
+    children-shuffling: YesNo
 
     global
-    operation triggerUpdate(node: RxNode<Object?>, triggers: Object?)
+    operation trigger-update(node: RxNode<Object?>, triggers: Object?)
 
     global
-    operation triggerDeactivation(node: RxNode<Object?>)
+    operation trigger-deactivation(node: RxNode<Object?>)
 
     global
-    operation updateNestedNodesThenDo(action: operation(error`: Object?))
+    operation update-nested-nodes-then-do(action: operation(error`: Object?))
 
     global
-    operation markAsMounted(node: RxNode<Object?>, yes`: YesNo)
+    operation mark-as-mounted(node: RxNode<Object?>, yes`: YesNo)
 
     global
-    operation findMatchingHost<E = Object?, R = Object?>(node: RxNode<E>, match: SimpleDelegate<RxNode<E>, YesNo>): RxNode<R>?
+    operation find-matching-host<E = Object?, R = Object?>(node: RxNode<E>, match: SimpleDelegate<RxNode<E>, YesNo>): RxNode<R>?
 
     global
-    operation findMatchingPrevSibling<E = Object?, R = Object?>(node: RxNode<E>, match: SimpleDelegate<RxNode<E>, YesNo>): RxNode<R>?
+    operation find-matching-prev-sibling<E = Object?, R = Object?>(node: RxNode<E>, match: SimpleDelegate<RxNode<E>, YesNo>): RxNode<R>?
 
     global
-    operation forEachChildRecursively<E = Object?>(node: RxNode<E>, action: SimpleDelegate<RxNode<E>>)
+    operation for-each-child-recursively<E = Object?>(node: RxNode<E>, action: SimpleDelegate<RxNode<E>>)
 
     global
-    operation getDefaultLoggingOptions(): LoggingOptions?
+    operation get-default-logging-options(): LoggingOptions?
 
     global
-    operation setDefaultLoggingOptions(logging: LoggingOptions?)
+    operation set-default-logging-options(logging: LoggingOptions?)
   }
 }
 
@@ -168,7 +168,7 @@ type RxNodeDriver<E = Object?> = object
   name: Text
 
   guarded
-  isPartitionSeparator: YesNo
+  is-partition-separator: YesNo
 
   guarded
   predefine: SimpleDelegate<E>?
@@ -181,7 +181,7 @@ type RxNodeDriver<E = Object?> = object
 
   update: None | operation(node: RxNode<E>) = none
 
-  destroy: None | operation(node: RxNode<E>, isLeader: YesNo): YesNo = none
+  destroy: None | operation(node: RxNode<E>, is-leader: YesNo): YesNo = none
 }
 
 
@@ -199,12 +199,12 @@ external
     name: Text
 
     guarded
-    isPartitionSeparator: YesNo
+    is-partition-separator: YesNo
 
     guarded
     predefine: SimpleDelegate<E, None>?
 
-    on create(name: Text, isPartitionSeparator: YesNo, predefine: SimpleDelegate<E, None>? = none)
+    on create(name: Text, is-partition-separator: YesNo, predefine: SimpleDelegate<E, None>? = none)
 
     abstract
     operation allocate(node: RxNode<E>): E;
@@ -215,7 +215,7 @@ external
 
     operation update(node: RxNode<E>)
 
-    operation destroy(node: RxNode<E>, isLeader: YesNo): YesNo
+    operation destroy(node: RxNode<E>, is-leader: YesNo): YesNo
   }
 
 
@@ -223,13 +223,13 @@ external
   type RxNodeVariable<T: Object = Object> = object
   {
     guarded
-    defaultValue: T?
+    default-value: T?
 
-    on create(defaultValue: T? = none)
+    on create(default-value: T? = none)
 
     value: T
 
     guarded
-    valueOrUndefined: T?
+    value-or-undefined: T?
   }
 }

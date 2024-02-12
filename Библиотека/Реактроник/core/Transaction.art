@@ -48,16 +48,16 @@ external
     operation wrap<T>(func: F<T>, secondary: YesNo): F<T>
 
     abstract
-    operation cancel(error`: Error, retryAfterOrIgnore: Worker? /*(!)| null*/ = none): Transaction // this
+    operation cancel(error`: Error, retry-after-or-ignore: Worker? /*(!)| null*/ = none): Transaction // this
 
     abstract guarded
-    isCanceled: YesNo
+    is-canceled: YesNo
 
     abstract guarded
-    isFinished: YesNo
+    is-finished: YesNo
 
     async
-    operation whenFinished()
+    operation when-finished()
 
     global
     operation create(options: SnapshotOptions /*(!) | null*/): Transaction
@@ -75,12 +75,12 @@ external
     operation outside<T>(func: F<T>, args: List<Object?>): T
 
     global
-    operation isFrameOver(everyN: Number? = none, timeLimit: Number? = none): YesNo
+    operation is-frame-over(every-n: Number? = none, time-limit: Number? = none): YesNo
 
     global async
-    operation requestNextFrame(sleepTime: Number? = none): JS.Promise<None>
+    operation request-next-frame(sleep-time: Number? = none): JS.Promise<None>
 
     global guarded
-    isCanceled: YesNo
+    is-canceled: YesNo
   }
 }

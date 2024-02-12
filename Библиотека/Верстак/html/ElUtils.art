@@ -4,20 +4,20 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation objectHasMember<T>(obj: Object?, member: Text): T // obj is T
+  operation object-has-member<T>(obj: Object?, member: Text): T // obj is T
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation emitLetters(n: Number): Text
+  operation emit-letters(n: Number): Text
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation parseElCoords(text: Text, result: ElCoords): ElCoords
+  operation parse-el-coords(text: Text, result: ElCoords): ElCoords
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation emitElCoords(value: ElCoords): Text
+  operation emit-el-coords(value: ElCoords): Text
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation emitCellPosition(x: Number, y: Number): Text
+  operation emit-cell-position(x: Number, y: Number): Text
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation equalElCoords(a: ElCoords, b: ElCoords): YesNo
+  operation equal-el-coords(a: ElCoords, b: ElCoords): YesNo
 }

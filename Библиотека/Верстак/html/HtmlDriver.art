@@ -8,7 +8,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type WebDriver<T: DOM.Element, M = Object?> = object ElDriver<T, M>
   {
-    operation setNativeElement(node: RxNode<El<T, M>>)
+    operation set-native-element(node: RxNode<El<T, M>>)
 
     operation initialize(node: RxNode<El<T, M>>)
 
@@ -19,13 +19,13 @@ external
     operation update(node: RxNode<El<T, M>>)
 
     global
-    operation findBrotherlyHost<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
+    operation find-brotherly-host<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
 
     global
-    operation findBrotherlyPrevSibling<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
+    operation find-brotherly-prev-sibling<T, R>(node: RxNode<El<T>>): RxNode<El<R>>?
 
     global
-    blinkingEffectMarker: Text?
+    blinking-effect-marker: Text?
   }
 
 

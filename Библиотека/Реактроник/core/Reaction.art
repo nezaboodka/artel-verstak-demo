@@ -8,10 +8,10 @@ external
   type ReactionImpl = object Reaction
   {
     guarded
-    objectHandle: ObjectHandle
+    object-handle: ObjectHandle
 
     guarded
-    memberName: MemberName
+    member-name: MemberName
 
     operation configure(options: PartialMemberOptions): MemberOptions
 
@@ -34,31 +34,31 @@ external
     stamp: Number
 
     guarded
-    isUpToDate: YesNo
+    is-up-to-date: YesNo
 
-    operation markObsolete()
+    operation mark-obsolete()
 
-    operation pullLastResult(args: List<Object?>?): Object?
+    operation pull-last-result(args: List<Object?>?): Object?
 
     on create(h: ObjectHandle, m: MemberName)
 
-    operation reuseOrRelaunch(weak: YesNo, args: List<Object?>?): Launch
+    operation reuse-or-relaunch(weak: YesNo, args: List<Object?>?): Launch
 
     global
-    operation getControllerOf(method: F<Object?>): AbstractReaction<Object?>;
+    operation get-controller-of(method: F<Object?>): AbstractReaction<Object?>;
 
     global
-    operation configureImpl(self: ReactionImpl?, options: PartialMemberOptions): MemberOptions;
+    operation configure-impl(self: ReactionImpl?, options: PartialMemberOptions): MemberOptions;
 
     #JS.МассивПараметров
     global
-    operation proceedWithinGivenLaunch<T>(launch: Launch?, func: F<T>, args: List<Object?>): T;
+    operation proceed-within-given-launch<T>(launch: Launch?, func: F<T>, args: List<Object?>): T;
 
     global
     operation why(): Text
 
     global
-    operation briefWhy(): Text
+    operation brief-why(): Text
 
     global
     operation dependencies(): List<Text>
@@ -73,13 +73,13 @@ external
     // edit
 
     // hidden
-    // acquireFromSnapshot
+    // acquire-from-snapshot
 
     // hidden
     // relaunch
 
     // hidden global
-    // static markObsolete
+    // static mark-obsolete
   }
 
 
@@ -89,10 +89,10 @@ external
     current: Launch?
 
     global
-    queuedReactiveFunctions: List<Observer>
+    queued-reactive-functions: List<Observer>
 
     global
-    deferredReactiveFunctions: List<Launch>
+    deferred-reactive-functions: List<Launch>
 
     guarded
     margin: Number
@@ -120,19 +120,19 @@ external
 
     started: Number
 
-    obsoleteDueTo: Text?
+    obsolete-due-to: Text?
 
-    obsoleteSince: Number
+    obsolete-since: Number
 
     successor: Launch?
    
     on create(reaction: ReactionImpl, changeset: AbstractChangeset, former: Launch | OptionsImpl)
 
     guarded
-    isOperation: YesNo
+    is-operation: YesNo
 
     guarded
-    originSnapshotId: Number
+    origin-snapshot-id: Number
 
     operation hint(): Text
 
@@ -143,7 +143,7 @@ external
 
     operation why(): Text
 
-    operation briefWhy(): Text
+    operation brief-why(): Text
 
     operation dependencies(): List<Text>
 
@@ -151,76 +151,76 @@ external
 
     operation proceed(proxy: Object?, args: List<Object?>?)
 
-    operation markObsoleteDueTo(observable: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, obsolete: List<Observer>)
+    operation mark-obsolete-due-to(observable: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, obsolete: List<Observer>)
 
-    operation relaunchIfNotUpToDate(now: YesNo, nothrow: YesNo)
+    operation relaunch-if-not-up-to-date(now: YesNo, nothrow: YesNo)
 
-    operation isNotUpToDate(): YesNo
+    operation is-not-up-to-date(): YesNo
 
     operation reenterOver(head: Launch): Launch // this
 
     // hidden global
-    // proceed;
+    // proceed
 
-    // hidden enter;
+    // hidden enter
 
-    // hidden leaveOrAsync;
+    // hidden leave-or-async
 
-    // hidden leave;
+    // hidden leave
 
-    // hidden monitorEnter;
+    // hidden monitor-enter
 
-    // hidden monitorLeave;
+    // hidden monitor-leave
 
-    // hidden addToDeferredReactiveFunctions;
-
-    // hidden global
-    // processDeferredReactiveFunctions;
+    // hidden add-to-deferred-reactive-functions
 
     // hidden global
-    // markUsed;
+    // process-deferred-reactive-functions
 
     // hidden global
-    // markEdited;
+    // mark-used
 
     // hidden global
-    // isConflicting;
+    // mark-edited
 
     // hidden global
-    // propagateAllChangesThroughSubscriptions;
+    // is-conflicting
 
     // hidden global
-    // revokeAllSubscriptions;
+    // propagate-all-changes-through-subscriptions
 
     // hidden global
-    // propagateMemberChangeThroughSubscriptions;
+    // revoke-all-subscriptions
 
     // hidden global
-    // enqueueReactiveFunctionsToRun;
+    // propagate-member-change-through-subscriptions
 
     // hidden global
-    // processQueuedReactiveFunctions;
-
-    // hidden unsubscribeFromAllObservables;
-
-    // hidden subscribeTo;
+    // enqueue-reactive-functions-to-run
 
     // hidden global
-    // canSubscribeTo;
+    // process-queued-reactive-functions
+
+    // hidden unsubscribe-from-all-observables
+
+    // hidden subscribe-to
 
     // hidden global
-    // createOperation;
+    // can-subscribe-to
 
     // hidden global
-    // rememberOperationOptions;
+    // create-operation
+
+    // hidden global
+    // remember-operation-options
 
     global
     operation init()
   }
 
   hidden by package
-  operation resolveReturn(value: Object?): Object?
+  operation resolve-return(value: Object?): Object?
 
   hidden by package
-  operation rejectRethrow(error`: Object?)
+  operation reject-rethrow(error`: Object?)
 }

@@ -7,7 +7,7 @@ external
   type Monitor = /*(!) incomplete */ object ObservableObject
   {
     abstract guarded
-    isActive: YesNo
+    is-active: YesNo
 
     abstract guarded
     counter: Number
@@ -19,14 +19,14 @@ external
     duration: Number
 
     global
-    operation create(hint: Text, activationDelay: Number, deactivationDelay: Number, durationResolution: Number): Monitor
+    operation create(hint: Text, activation-delay: Number, deactivation-delay: Number, duration-resolution: Number): Monitor
   }
 
 
   hidden by package
   type MonitorImpl = object Monitor
   {
-    isActive: YesNo
+    is-active: YesNo
 
     counter: Number
 
@@ -38,11 +38,11 @@ external
     internals: object
     {
         started: Number
-        activationDelay: Number
-        activationTimeout: None
-        deactivationDelay: Number
-        deactivationTimeout: None
-        durationResolution: Number
+        activation-delay: Number
+        activation-timeout: None
+        deactivation-delay: Number
+        deactivation-timeout: None
+        duration-resolution: Number
     };
 
     operation enter(worker: Worker)
@@ -50,7 +50,7 @@ external
     operation leave(worker: Worker)
 
     global
-    operation create(hint: Text, activationDelay: Number, deactivationDelay: Number, durationResolution: Number): MonitorImpl
+    operation create(hint: Text, activation-delay: Number, deactivation-delay: Number, duration-resolution: Number): MonitorImpl
 
     global
     operation enter(mon: MonitorImpl, worker: Worker)

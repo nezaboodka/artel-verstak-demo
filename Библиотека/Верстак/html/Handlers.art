@@ -11,5 +11,5 @@ external
   operation OnResize(target: DOM.HTMLElement, action: None | operation(element: ResizedElement), key: Text? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  operation OnFocus(target: DOM.HTMLElement, model: FocusModel, switchEditMode: None | operation(model: FocusModel? /*(!)= none*/) = none, key: Text? = none)
+  operation OnFocus(target: DOM.HTMLElement, model: FocusModel, switch-edit-mode: None | operation(model: FocusModel? /*(!)= none*/) = none, key: Text? = none)
 }

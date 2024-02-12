@@ -47,10 +47,10 @@ external
     order: Number
 
     guarded
-    noSideEffects: YesNo
+    no-side-effects: YesNo
 
     guarded
-    triggeringArgs: YesNo
+    triggering-args: YesNo
 
     guarded
     throttling: Number
@@ -81,16 +81,16 @@ external
   type Mvcc = object /*(!) JS.ProxyHandler<ObjectHandle>*/
   {
     global
-    reactivityAutoStartDisabled: YesNo
+    reactivity-auto-start-disabled: YesNo
 
     global
-    repetitiveUsageWarningThreshold: Number
+    repetitive-usage-warning-threshold: Number
 
     global
-    mainThreadBlockingWarningThreshold: Number
+    main-thread-blocking-warning-threshold: Number
 
     global
-    asyncActionDurationWarningThreshold: Number
+    async-action-duration-warning-threshold: Number
 
     global
     sensitivity: YesNo
@@ -102,11 +102,11 @@ external
     observable: Mvcc
 
     guarded
-    isObservable: YesNo
+    is-observable: YesNo
 
-    on create(isObservable: YesNo)
+    on create(is-observable: YesNo)
 
-    operation getPrototypeOf(h: ObjectHandle): Object /*(!)| JS.null*/
+    operation get-prototype-of(h: ObjectHandle): Object /*(!)| JS.null*/
 
     operation get(h: ObjectHandle, m: MemberName, receiver: Object?): Object?
 
@@ -114,44 +114,44 @@ external
 
     operation has(h: ObjectHandle, m: MemberName): YesNo
 
-    operation defineProperty(h: ObjectHandle, m: Text | JS.Symbol, attributes: Object /*(!) JS.PropertyDescriptor*/): YesNo
+    operation define-property(h: ObjectHandle, m: Text | JS.Symbol, attributes: Object /*(!) JS.PropertyDescriptor*/): YesNo
 
-    operation getOwnPropertyDescriptor(h: ObjectHandle, m: MemberName): Object? /*(!) JS.PropertyDescriptor | undefined */
+    operation get-own-property-descriptor(h: ObjectHandle, m: MemberName): Object? /*(!) JS.PropertyDescriptor | undefined */
 
-    operation ownKeys(h: ObjectHandle): List<Text | JS.Symbol>;
-
-    global
-    operation decorateData(isObservable: YesNo, proto: Object?, member: MemberName): Object?
+    operation own-keys(h: ObjectHandle): List<Text | JS.Symbol>;
 
     global
-    operation decorateOperation(implicit: YesNo, decorator: JS.Function, options: PartialMemberOptions, proto: Object?, member: MemberName, pd: Object? /* (!) JS.PropertyDescriptor?*/): Object?
+    operation decorate-data(isObservable: YesNo, proto: Object?, member: MemberName): Object?
 
     global
-    operation decorateOperationParametrized(decorator: JS.Function, options: PartialMemberOptions): F<Object?>
+    operation decorate-operation(implicit: YesNo, decorator: JS.Function, options: PartialMemberOptions, proto: Object?, member: MemberName, pd: Object? /* (!) JS.PropertyDescriptor?*/): Object?
 
     global
-    operation acquireHandle(obj: Object?): ObjectHandle
+    operation decorate-operation-parametrized(decorator: JS.Function, options: PartialMemberOptions): F<Object?>
 
     global
-    operation createHandleForMvccObject(proto: Object?, data: Object?, blank: Object?, hint: Text, isObservable: YesNo): ObjectHandle
+    operation acquire-handle(obj: Object?): ObjectHandle
 
     global
-    operation setProfilingMode(isOn: YesNo, options: ProfilingOptions? = none)
+    operation create-handle-for-mvcc-object(proto: Object?, data: Object?, blank: Object?, hint: Text, isObservable: YesNo): ObjectHandle
+
+    global
+    operation set-profiling-mode(isOn: YesNo, options: ProfilingOptions? = none)
 
     #JS.МассивПараметров
     global
     operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: List<Object?>): T
 
     global
-    operation setHint<T>(obj: T, hint: Text?): T
+    operation set-hint<T>(obj: T, hint: Text?): T
 
     global
-    operation getHint<T>(obj: T): Text
+    operation get-hint<T>(obj: T): Text
 
     global
-    createOperation: operation(h: ObjectHandle, m: MemberName, options: OptionsImpl): F<Object?>
+    create-operation: operation(h: ObjectHandle, m: MemberName, options: OptionsImpl): F<Object?>
 
     global
-    rememberOperationOptions: operation(proto: Object?, m: MemberName, getter: JS.Function?, setter: JS.Function?, enumerable: YesNo, configurable: YesNo, options: PartialMemberOptions, implicit: YesNo): OptionsImpl
+    remember-operation-options: operation(proto: Object?, m: MemberName, getter: JS.Function?, setter: JS.Function?, enumerable: YesNo, configurable: YesNo, options: PartialMemberOptions, implicit: YesNo): OptionsImpl
   }
 }

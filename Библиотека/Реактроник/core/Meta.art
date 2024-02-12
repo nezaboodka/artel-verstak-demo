@@ -37,6 +37,6 @@ external
     operation acquire(proto: Object?, sym: JS.Symbol): Object?
 
     global
-    operation getFrom<T = Object?>(proto: Object?, sym: JS.Symbol): T
+    operation get-from<T = Object?>(proto: Object?, sym: JS.Symbol): T
   }
 }

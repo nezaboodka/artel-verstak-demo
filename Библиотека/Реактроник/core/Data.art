@@ -30,10 +30,10 @@ external
     observers: Set<Observer>?
 
     guarded
-    isOperation: YesNo
+    is-operation: YesNo
 
     guarded
-    originSnapshotId: Number?
+    origin-snapshot-id: Number?
 
     on create(content: T)
   }
@@ -54,13 +54,13 @@ external
     observables: Map<ValueSnapshot, Subscription>?
 
     guarded
-    obsoleteSince: Number
+    obsolete-since: Number
 
     операция hint(nop: YesNo? = none): Text
 
-    операция markObsoleteDueTo(observable`: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, reactive`: Array<Observer>)
+    операция mark-obsolete-due-to(observable`: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, reactive`: Array<Observer>)
 
-    операция runIfNotUpToDate(now: YesNo, nothrow: YesNo)
+    операция run-if-not-up-to-date(now: YesNo, nothrow: YesNo)
 
   }
 
@@ -74,10 +74,10 @@ external
   type Subscription = aspect
   {
     guarded
-    memberHint: Text
+    member-hint: Text
 
     guarded
-    usageCount: Number
+    usage-count: Number
   }
 
 
@@ -152,7 +152,7 @@ external
   hidden by package
   type ValuePatch = aspect
   {
-    memberName: MemberName
+    member-mame: MemberName
 
     patchKind: Text /*(!)variant
     {
@@ -161,8 +161,8 @@ external
       remove = "remove"
     }*/
 
-    freshValue: Object?
+    fresh-value: Object?
 
-    formerValue: Object?
+    former-value: Object?
   }
 }

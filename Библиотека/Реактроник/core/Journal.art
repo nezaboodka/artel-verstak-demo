@@ -81,11 +81,11 @@ external
     operation redo(cound: Number?)
 
     global
-    operation buildPatch(hint: Text, items: Map<ObjectHandle, ObjectSnapshot>): PatchSet;
+    operation build-patch(hint: Text, items: Map<ObjectHandle, ObjectSnapshot>): PatchSet;
     
     global
-    operation applyPatch(patch: PatchSet, undoing: YesNo)
+    operation apply-patch(patch: PatchSet, undoing: YesNo)
 
-    operation mergePatchToUnsaved(patch: PatchSet, undoing: YesNo)
+    operation merge-patch-to-unsaved(patch: PatchSet, undoing: YesNo)
   }
 }
