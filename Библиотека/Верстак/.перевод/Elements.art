@@ -50,15 +50,15 @@
 
     width = ширина
 
-    width-merely-min = ширина-просто-мин
+    width-just-min = ширина-просто-мин
 
-    width-merely-growth = ширина-просто-прирост
+    width-just-growth = ширина-просто-прирост
 
     height = высота
 
-    height-merely-min = высота-просто-мин
+    height-just-min = высота-просто-мин
 
-    height-merely-growth = высота-просто-прирост
+    height-just-growth = высота-просто-прирост
 
     content-alignment = выравнивание-содержимого
 
