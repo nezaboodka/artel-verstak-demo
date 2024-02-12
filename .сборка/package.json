@@ -12,6 +12,6 @@
   {
     "скачать-пакеты": "npm install",
     "собрать": "node n-artel.js build .. Executable",
-    "пуск-сервера": "npm run собрать && vite"
+    "запуск-сервера": "npm run собрать && vite"
   }
 }
