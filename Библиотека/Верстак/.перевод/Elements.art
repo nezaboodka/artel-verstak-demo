@@ -47,15 +47,15 @@
 
     width -> ширина
 
-    width-just-min -> ширина-просто-мин
+    width-just-min -> ширина-это-лишь-мин
 
-    width-just-growth -> ширина-просто-прирост
+    width-just-growth -> ширина-это-лишь-прирост
 
     height -> высота
 
-    height-just-min -> высота-просто-мин
+    height-just-min -> высота-это-лишь-мин
 
-    height-just-growth -> высота-просто-прирост
+    height-just-growth -> высота-это-лишь-прирост
 
     content-alignment -> выравнивание-содержимого
 
