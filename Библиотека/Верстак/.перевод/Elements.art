@@ -29,7 +29,7 @@
 
   operation row(builder, shift-cursor-down) -> строка(построитель, сместить-курсор-вниз)
 
-  operation start-new-row(shift-cursor-down) -> начать-новую-строку(сместить-курсор-вниз)
+  operation row-break(shift-cursor-down) -> новая-строка(сместить-курсор-вниз)
 
   operation cursor(area-params) -> курсор(параметры-области)
 

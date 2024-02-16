@@ -14,7 +14,7 @@ operation Section<M = Object?>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = SectionImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
+  result = SectionImpl<M>(.(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
@@ -28,7 +28,7 @@ operation Table<M = Object?, R = None>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = TableImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
+  result = TableImpl<M>(.(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
@@ -44,7 +44,7 @@ operation Note(
   preset: RxNodeDecl<El<DOM.HTMLElement, None>>? = none):
   RxNode<El<DOM.HTMLElement, None>>
 {
-  result = NoteImpl(text, formatted, `(on-change, key, mode, on-create, on-destroy, triggers, preset))
+  result = NoteImpl(text, formatted, .(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
@@ -58,7 +58,7 @@ operation Group<M = Object?, R = None>(
   preset: RxNodeDecl<El<DOM.HTMLElement, M>>? = none):
   RxNode<El<DOM.HTMLElement, M>>
 {
-  result = GroupImpl<M, R>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
+  result = GroupImpl<M, R>(.(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
@@ -72,7 +72,7 @@ operation SyntheticElement<M = Object?>(
   preset: RxNodeDecl<El<None, M>>? = none):
   RxNode<El<None, M>>
 {
-  result = SyntheticElementImpl<M>(`(on-change, key, mode, on-create, on-destroy, triggers, preset))
+  result = SyntheticElementImpl<M>(.(on-change, key, mode, on-create, on-destroy, triggers, preset))
 }
 
 
@@ -83,8 +83,8 @@ external
   operation row<T = None>(builder: None | operation(element: None): T, shift-cursor-down: Number? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  #JS.НастоящееИмя("startNewRow")
-  operation start-new-row(shift-cursor-down: Number? = none)
+  #JS.НастоящееИмя("rowBreak")
+  operation row-break(shift-cursor-down: Number? = none)
 
   #JS.ВнешняяРеализация(модуль = "verstak")
   #JS.НастоящееИмя("cursor")
