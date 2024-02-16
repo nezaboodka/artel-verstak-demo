@@ -65,27 +65,29 @@ export type RxNodeDecl<E = unknown> = {
 };
 export type RxNodeDriver<E = unknown> = {
     readonly name: string;
-    readonly isPartitionSeparator: boolean;
+    readonly isPartition: boolean;
     readonly predefine?: SimpleDelegate<E>;
     allocate(node: RxNode<E>): E;
     create(node: RxNode<E>): void;
+    destroy(node: RxNode<E>, isLeader: boolean): boolean;
     mount(node: RxNode<E>): void;
     update(node: RxNode<E>): void | Promise<void>;
-    destroy(node: RxNode<E>, isLeader: boolean): boolean;
+    child(ownerNode: RxNode<E>, childDriver: RxNodeDriver<any>, childDeclaration?: RxNodeDecl<any>, childPreset?: RxNodeDecl<any>): void;
 };
 export type RxNodeContext<T extends Object = Object> = {
     value: T;
 };
 export declare abstract class BaseDriver<E = unknown> implements RxNodeDriver<E> {
     readonly name: string;
-    readonly isPartitionSeparator: boolean;
+    readonly isPartition: boolean;
     readonly predefine?: SimpleDelegate<E, void> | undefined;
-    constructor(name: string, isPartitionSeparator: boolean, predefine?: SimpleDelegate<E, void> | undefined);
+    constructor(name: string, isPartition: boolean, predefine?: SimpleDelegate<E, void> | undefined);
     abstract allocate(node: RxNode<E>): E;
     create(node: RxNode<E>): void;
+    destroy(node: RxNode<E>, isLeader: boolean): boolean;
     mount(node: RxNode<E>): void;
     update(node: RxNode<E>): void | Promise<void>;
-    destroy(node: RxNode<E>, isLeader: boolean): boolean;
+    child(ownerNode: RxNode<E>, childDriver: RxNodeDriver<any>, childDeclaration?: RxNodeDecl<any>, childPreset?: RxNodeDecl<any>): void;
 }
 export declare class RxNodeVariable<T extends Object = Object> {
     readonly defaultValue: T | undefined;

@@ -10,10 +10,10 @@ export type El<T = any, M = any> = {
     area: ElArea;
     width: Range;
     widthJustMin: string;
-    widthJustGrowth: number;
+    widthGrowth: number | undefined;
     height: Range;
     heightJustMin: string;
-    heightJustGrowth: number;
+    heightGrowth: number | undefined;
     contentAlignment: Align;
     boundsAlignment: Align;
     contentWrapping: boolean;
@@ -50,7 +50,6 @@ export declare enum Align {
 export type Range = {
     readonly min?: string;
     readonly max?: string;
-    readonly growth?: number;
 };
 export type MarkedRange = Range & {
     readonly marker?: string;
@@ -63,14 +62,16 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     readonly node: RxNode<El<T, M>>;
     maxColumnCount: number;
     maxRowCount: number;
-    cursorPosition?: CursorPosition;
+    layoutInfo?: ElLayoutInfo;
     native: T;
     model: M;
     private _kind;
     private _area;
     private _coords;
     private _width;
+    private _widthGrowth;
     private _height;
+    private _heightGrowth;
     private _contentAlignment;
     private _boundsAlignment;
     private _contentWrapping;
@@ -89,14 +90,14 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     set width(value: Range);
     get widthJustMin(): string;
     set widthJustMin(value: string);
-    get widthJustGrowth(): number;
-    set widthJustGrowth(value: number);
+    get widthGrowth(): number | undefined;
+    set widthGrowth(value: number | undefined);
     get height(): Range;
     set height(value: Range);
     get heightJustMin(): string;
     set heightJustMin(value: string);
-    get heightJustGrowth(): number;
-    set heightJustGrowth(value: number);
+    get heightGrowth(): number | undefined;
+    set heightGrowth(value: number | undefined);
     get contentAlignment(): Align;
     set contentAlignment(value: Align);
     get boundsAlignment(): Align;
@@ -109,15 +110,15 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     useStylingPreset(stylingPresetName: string, enabled?: boolean): void;
     private rowBreak;
 }
-declare class CursorPosition {
+declare class ElLayoutInfo {
     x: number;
     y: number;
     runningMaxX: number;
     runningMaxY: number;
-    flags: CursorFlags;
-    constructor(prev: CursorPosition);
+    flags: ElLayoutInfoFlags;
+    constructor(prev: ElLayoutInfo);
 }
-declare enum CursorFlags {
+declare enum ElLayoutInfoFlags {
     none = 0,
     ownCursorPosition = 1,
     usesRunningColumnCount = 2,

@@ -30,13 +30,13 @@ external
 
     width-just-min: Text
 
-    width-just-growth: Number
+    width-growth: Number
 
     height: Range
 
     height-just-min: Text
 
-    height-just-growth: Number
+    height-growth: Number
 
     content-alignment: Align
 
@@ -109,7 +109,7 @@ external
 
     max-row-count: Number
 
-    cursor-position: CursorPosition?
+    layout-into: ElLayoutInfo?
 
     native: T;
 
@@ -125,22 +125,16 @@ external
     // _coords
 
     // hidden
+    // _width
+
+    // hidden
     // _widthGrowth
 
     // hidden
-    // _minWidth
-
-    // hidden
-    // _maxWidth
+    // _height
 
     // hidden
     // _heightGrowth
-
-    // hidden
-    // _minHeight
-
-    // hidden
-    // _maxHeight
 
     // hidden
     // _contentAlignment
@@ -174,17 +168,13 @@ external
 
     area: ElArea
 
+    width: Range
+
     width-growth: Number
 
-    min-width: Text
-
-    max-width: Text
+    height: Range
 
     height-growth: Number
-
-    min-height: Text
-
-    max-height: Text
 
     content-alignment: Align
 
@@ -205,7 +195,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type CursorPosition = aspect
+  type ElLayoutInfo = aspect
   {
     x: Number
 
@@ -215,14 +205,14 @@ external
 
     running-max-y: Number
 
-    flags: CursorFlags
+    flags: ElLayoutInfoFlags
 
-    on create(prev: CursorPosition)
+    on create(prev: ElLayoutInfo)
   }
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type CursorFlags = variant
+  type ElLayoutInfoFlags = variant
   {
     none` = 0
     own-cursor-position = 1
@@ -313,7 +303,6 @@ type Range = object
 {
   const min: Text?
   const max: Text?
-  const growth: Number?
 }
 
 

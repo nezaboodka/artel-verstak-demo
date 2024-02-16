@@ -168,7 +168,7 @@ type RxNodeDriver<E = Object?> = object
   name: Text
 
   guarded
-  is-partition-separator: YesNo
+  is-partition: YesNo
 
   guarded
   predefine: SimpleDelegate<E>?
@@ -177,11 +177,17 @@ type RxNodeDriver<E = Object?> = object
 
   create: None | operation(node: RxNode<E>) = none
 
+  destroy: None | operation(node: RxNode<E>, is-leader: YesNo): YesNo = none
+
   mount: None | operation(node: RxNode<E>) = none
 
   update: None | operation(node: RxNode<E>) = none
 
-  destroy: None | operation(node: RxNode<E>, is-leader: YesNo): YesNo = none
+  child: None | operation(
+    owner-node: RxNode<E>,
+    child-driver: RxNodeDriver<Object?>,
+    child-declaration: RxNodeDecl<Object?>? /*= none*/,
+    child-preset: RxNodeDecl<Object?>? /*= none*/) = none
 }
 
 
@@ -199,12 +205,12 @@ external
     name: Text
 
     guarded
-    is-partition-separator: YesNo
+    is-partition: YesNo
 
     guarded
     predefine: SimpleDelegate<E, None>?
 
-    on create(name: Text, is-partition-separator: YesNo, predefine: SimpleDelegate<E, None>? = none)
+    on create(name: Text, is-partition: YesNo, predefine: SimpleDelegate<E, None>? = none)
 
     abstract
     operation allocate(node: RxNode<E>): E;

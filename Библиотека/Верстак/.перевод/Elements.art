@@ -5,7 +5,7 @@
   при-изменении: Обработчик<El<DOM.HTMLBodyElement>>? = пусто):
   RxNode<El<DOM.HTMLBodyElement>>
 {
-  результат = Page(`(при-изменении))
+  результат = Page(.(при-изменении))
 }
 
 псевдонимы(английский -> русский)
@@ -49,13 +49,13 @@
 
     width-just-min -> ширина-это-лишь-мин
 
-    width-just-growth -> ширина-это-лишь-прирост
+    width-growth -> экспансия-ширины
 
     height -> высота
 
     height-just-min -> высота-это-лишь-мин
 
-    height-just-growth -> высота-это-лишь-прирост
+    height-growth -> экспансия-высоты
 
     content-alignment -> выравнивание-содержимого
 
@@ -88,6 +88,5 @@
   {
     min -> мин
     max -> макс
-    growth -> прирост
   }
 }
