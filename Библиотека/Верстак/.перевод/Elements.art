@@ -49,13 +49,13 @@
 
     width-just-min -> ширина-это-лишь-мин
 
-    width-growth -> экспансия-ширины
+    width-growth -> доля-роста-ширины
 
     height -> высота
 
     height-just-min -> высота-это-лишь-мин
 
-    height-growth -> экспансия-высоты
+    height-growth -> доля-роста-высоты
 
     content-alignment -> выравнивание-содержимого
 
