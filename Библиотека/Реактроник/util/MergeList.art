@@ -9,51 +9,51 @@ external
   type MergeListReader<T> = aspect
   {
     guarded
-    isStrict: YesNo
+    is-strict: YesNo
 
     guarded
     count: Number
 
     guarded
-    addedCount: Number
+    added-count: Number
 
     guarded
-    removedCount: Number
+    removed-count: Number
 
     guarded
-    isMergeInProgress: YesNo
+    is-merge-in-progress: YesNo
 
     operation lookup(key: Text): MergedItem<T>?
 
-    operation tryMergeAsExisting(key: Text): MergedItem<T>?
+    operation try-merge-as-existing(key: Text): MergedItem<T>?
 
-    operation mergeAsAdded(instance: T): MergedItem<T>
+    operation merge-as-added(instance: T): MergedItem<T>
 
-    operation mergeAsRemoved(item: MergedItem<T>)
+    operation merge-as-removed(item: MergedItem<T>)
 
     operation move(item: MergedItem<T>, after: MergedItem<T>)
 
-    operation beginMerge()
+    operation begin-merge()
 
-    operation endMerge(error`: Object? = none)
+    operation end-merge(error`: Object? = none)
 
-    operation resetAddedAndRemovedLists()
+    operation reset-added-and-removed-lists()
 
-    operation lastMergedItem(): MergedItem<T>?
+    operation last-merged-item(): MergedItem<T>?
 
-    operation items(): Enumerable<MergedItem<T>>
+    operation items(only-after: MergedItem<T>? = none): Enumerable<MergedItem<T>>
 
-    operation addedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
+    operation added-items(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation removedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
+    operation removed-items(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation isAdded(item: MergedItem<T>): YesNo
+    operation is-added(item: MergedItem<T>): YesNo
 
-    operation isMoved(item: MergedItem<T>): YesNo
+    operation is-moved(item: MergedItem<T>): YesNo
 
-    operation isRemoved(item: MergedItem<T>): YesNo
+    operation is-removed(item: MergedItem<T>): YesNo
 
-    operation isActual(item: MergedItem<T>): YesNo
+    operation is-actual(item: MergedItem<T>): YesNo
   }
 
 
@@ -79,7 +79,7 @@ external
   type MergeList<T> = object MergeListReader<T>
   {
     guarded
-    getKey: GetMergedItemKey<T>
+    get-key: GetMergedItemKey<T>
 
     // hidden
     // strict
@@ -105,57 +105,57 @@ external
     // hidden
     // strictNextItem?
   
-    on create(getKey: GetMergedItemKey<T>, strict: YesNo = no)
+    on create(get-key: GetMergedItemKey<T>, strict: YesNo = no)
 
-    isStrict: YesNo
+    is-strict: YesNo
 
     guarded
     count: Number
 
     guarded
-    addedCount: Number
+    added-count: Number
 
     guarded
-    removedCount: Number
+    removed-count: Number
 
     guarded
-    isMergeInProgress: YesNo
+    is-merge-in-progress: YesNo
 
     operation lookup(key: Text?): MergedItem<T>?
 
-    operation tryMergeAsExisting(key: Text, resolution: object { isDuplicate: YesNo } | None = none, error`: Text? = none): MergedItem<T>?
+    operation try-merge-as-existing(key: Text, resolution: object { isDuplicate: YesNo } | None = none, error`: Text? = none): MergedItem<T>?
 
-    operation mergeAsAdded(instance: T): MergedItem<T>
+    operation merge-as-added(instance: T): MergedItem<T>
 
-    operation mergeAsRemoved(item: MergedItem<T>)
+    operation merge-as-removed(item: MergedItem<T>)
 
     operation move(item: MergedItem<T>, after: MergedItem<T>)
 
-    operation beginMerge()
+    operation begin-merge()
 
-    operation endMerge(err: Object? = none)
+    operation end-merge(err: Object? = none)
 
-    operation resetAddedAndRemovedLists()
+    operation reset-added-and-removed-lists()
 
-    operation lastMergedItem(): MergedItem<T>?
+    operation last-merged-item(): MergedItem<T>?
 
     operation items(): Enumerable<MergedItem<T>>
 
-    operation addedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
+    operation added-items(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation removedItems(reset: YesNo? = none): Enumerable<MergedItem<T>>
+    operation removed-items(reset: YesNo? = none): Enumerable<MergedItem<T>>
 
-    operation isAdded(item: MergedItem<T>): YesNo
+    operation is-added(item: MergedItem<T>): YesNo
 
-    operation isMoved(item: MergedItem<T>): YesNo
+    operation is-moved(item: MergedItem<T>): YesNo
 
-    operation isRemoved(item: MergedItem<T>): YesNo
+    operation is-removed(item: MergedItem<T>): YesNo
 
-    operation isActual(item: MergedItem<T>): YesNo
+    operation is-actual(item: MergedItem<T>): YesNo
 
-    operation markAsMoved(item: MergedItem<T>)
+    operation mark-as-moved(item: MergedItem<T>)
 
     global 
-    operation createItem<T>(instance: T): MergedItem<T>
+    operation create-item<T>(instance: T): MergedItem<T>
   }
 }

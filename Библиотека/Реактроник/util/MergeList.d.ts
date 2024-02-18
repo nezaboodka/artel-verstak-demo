@@ -57,7 +57,7 @@ export declare class MergeList<T> implements MergeListReader<T> {
     endMerge(error?: unknown): void;
     resetAddedAndRemovedLists(): void;
     lastMergedItem(): MergedItem<T> | undefined;
-    items(): Generator<MergedItem<T>>;
+    items(onlyAfter?: MergedItem<T>): Generator<MergedItem<T>>;
     addedItems(reset?: boolean): Generator<MergedItem<T>>;
     removedItems(reset?: boolean): Generator<MergedItem<T>>;
     isAdded(item: MergedItem<T>): boolean;

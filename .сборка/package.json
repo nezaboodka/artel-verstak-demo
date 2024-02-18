@@ -4,7 +4,7 @@
   "devDependencies":
   {
     "artel": "0.6.59",
-    "reactronic": "0.24.266",
+    "reactronic": "0.24.267",
     "verstak": "0.24.265",
     "vite": "4.5.0"
   },
