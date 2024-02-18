@@ -1,4 +1,4 @@
-export type GetMergeItemKey<T = unknown> = (item: T) => string | undefined;
+export type GetMergedItemKey<T = unknown> = (item: T) => string | undefined;
 export type MergeListReader<T> = {
     readonly isStrict: boolean;
     readonly count: number;
@@ -24,11 +24,13 @@ export type MergeListReader<T> = {
 };
 export type MergedItem<T> = {
     readonly instance: T;
+    readonly index: number;
+    readonly next?: MergedItem<T>;
     readonly prev?: MergedItem<T>;
     aux?: MergedItem<T>;
 };
 export declare class MergeList<T> implements MergeListReader<T> {
-    readonly getKey: GetMergeItemKey<T>;
+    readonly getKey: GetMergedItemKey<T>;
     private strict;
     private map;
     private tag;
@@ -37,7 +39,7 @@ export declare class MergeList<T> implements MergeListReader<T> {
     private removed;
     private lastNotFoundKey;
     private strictNextItem?;
-    constructor(getKey: GetMergeItemKey<T>, strict?: boolean);
+    constructor(getKey: GetMergedItemKey<T>, strict?: boolean);
     get isStrict(): boolean;
     set isStrict(value: boolean);
     get count(): number;

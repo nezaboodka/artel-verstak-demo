@@ -3,7 +3,7 @@ import JS = Artel.JavaScript
 
 external
 {
-  type GetMergeItemKey<T> = operation(item: T): Text?
+  type GetMergedItemKey<T> = operation(item: T): Text?
 
 
   type MergeListReader<T> = aspect
@@ -63,6 +63,12 @@ external
     instance: T
 
     guarded
+    index: Integer
+
+    guarded
+    next: MergedItem<T>?
+
+    guarded
     prev: MergedItem<T>?
 
     aux: MergedItem<T>
@@ -73,7 +79,7 @@ external
   type MergeList<T> = object MergeListReader<T>
   {
     guarded
-    getKey: GetMergeItemKey<T>
+    getKey: GetMergedItemKey<T>
 
     // hidden
     // strict
@@ -99,7 +105,7 @@ external
     // hidden
     // strictNextItem?
   
-    on create(getKey: GetMergeItemKey<T>, strict: YesNo = no)
+    on create(getKey: GetMergedItemKey<T>, strict: YesNo = no)
 
     isStrict: YesNo
 
