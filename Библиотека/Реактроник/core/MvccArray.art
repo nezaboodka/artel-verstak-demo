@@ -24,11 +24,9 @@ external
 
     operation pop(): T?
 
-    #JS.МассивПараметров
-    operation push(items: List<T>): Число
+    operation push(items: JS.МассивПараметров<T>): Число
 
-    #JS.МассивПараметров
-    operation concat(items: List<T>): List<T>
+    operation concat(items: JS.МассивПараметров<T>): List<T>
 
     // #JS.МассивПараметров
     // operation concat(items: List<ConcatArray<T>>): List<T>
@@ -48,14 +46,11 @@ external
 
     operation splice(start: Число, deleteCount: Число? = none): List<T>
 
-    #JS.МассивПараметров
-    operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
+    operation splice(start: Число, deleteCount: Число, items: JS.МассивПараметров<T>): List<T>
 
-    #JS.МассивПараметров
-    operation splice(start: Число, deleteCount: Число, items: List<T>): List<T>
+    operation splice(start: Число, deleteCount: Число, items: JS.МассивПараметров<T>): List<T>
 
-    #JS.МассивПараметров
-    operation unshift(items: List<T>): Число
+    operation unshift(items: JS.МассивПараметров<T>): Число
 
     operation includes(searchElement: T, fromIndex: Число? = none): YesNo
 
@@ -127,8 +122,7 @@ external
 
     on create(array-length: Число? = none)
 
-    #JS.МассивПараметров
-    on create(items: List<T>)
+    on create(items: JS.МассивПараметров<T>)
   }
 
 
@@ -141,7 +135,6 @@ external
 
     on create(array-length: Число? = none)
 
-    #JS.МассивПараметров
-    on create(items: List<T>)
+    on create(items: JS.МассивПараметров<T>)
   }
 }

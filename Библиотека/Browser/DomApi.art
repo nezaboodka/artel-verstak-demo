@@ -4868,8 +4868,7 @@ external
 
     prototype: CSSMathMax
 
-    #JS.МассивПараметров
-    on create(args: List<CSSNumberish>) // : CSSMathMax
+    on create(args: JS.МассивПараметров<CSSNumberish>) // : CSSMathMax
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathMin) */
@@ -4881,8 +4880,7 @@ external
 
     prototype: CSSMathMin
 
-    #JS.МассивПараметров
-    on create(args: List<CSSNumberish>) // : CSSMathMin
+    on create(args: JS.МассивПараметров<CSSNumberish>) // : CSSMathMin
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathNegate) */
@@ -4906,8 +4904,7 @@ external
 
     prototype: CSSMathProduct
 
-    #JS.МассивПараметров
-    on create(args: List<CSSNumberish>) // : CSSMathProduct
+    on create(args: JS.МассивПараметров<CSSNumberish>) // : CSSMathProduct
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathSum) */
@@ -4919,8 +4916,7 @@ external
 
     prototype: CSSMathSum
 
-    #JS.МассивПараметров
-    on create(args: List<CSSNumberish>) // : CSSMathSum
+    on create(args: JS.МассивПараметров<CSSNumberish>) // : CSSMathSum
   }
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CSSMathValue) */
@@ -5001,31 +4997,23 @@ external
 
   type CSSNumericValue = object CSSStyleValue
   {
-    #JS.МассивПараметров
-    operation add(values: List<CSSNumberish>): CSSNumericValue
+    operation add(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
-    #JS.МассивПараметров
-    operation div(values: List<CSSNumberish>): CSSNumericValue
+    operation div(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
-    #JS.МассивПараметров
-    operation equals(value: List<CSSNumberish>): YesNo
+    operation equals(value: JS.МассивПараметров<CSSNumberish>): YesNo
 
-    #JS.МассивПараметров
-    operation max(values: List<CSSNumberish>): CSSNumericValue
+    operation max(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
-    #JS.МассивПараметров
-    operation min(values: List<CSSNumberish>): CSSNumericValue
+    operation min(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
-    #JS.МассивПараметров
-    operation mul(values: List<CSSNumberish>): CSSNumericValue
+    operation mul(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
-    #JS.МассивПараметров
-    operation sub(values: List<CSSNumberish>): CSSNumericValue
+    operation sub(values: JS.МассивПараметров<CSSNumberish>): CSSNumericValue
 
     operation to(unit: Artel.Text): CSSUnitValue
 
-    #JS.МассивПараметров
-    operation toSum(units: List<Text>): CSSMathSum
+    operation toSum(units: JS.МассивПараметров<Text>): CSSMathSum
 
     operation type`(): CSSNumericType
 
@@ -6702,16 +6690,13 @@ external
 
   type ChildNode = aspect Node
   {
-    #JS.МассивПараметров
-    operation after(nodes: List<Node | Text>)
+    operation after(nodes: JS.МассивПараметров<Node | Text>)
 
-    #JS.МассивПараметров
-    operation before(nodes: List<Node | Text>)
+    operation before(nodes: JS.МассивПараметров<Node | Text>)
 
     operation remove()
 
-    #JS.МассивПараметров
-    operation replaceWith(nodes: List<Node | Text>)
+    operation replaceWith(nodes: JS.МассивПараметров<Node | Text>)
   }
 
 
@@ -7510,15 +7495,13 @@ external
 
     operation toString(): Artel.Text
 
-    #JS.МассивПараметров
-    operation add(tokens: List<Text>)
+    operation add(tokens: JS.МассивПараметров<Text>)
 
     operation contains(token: Artel.Text): YesNo
 
     operation item(index: Number): Artel.Text?
 
-    #JS.МассивПараметров
-    operation remove(tokens: List<Text>)
+    operation remove(tokens: JS.МассивПараметров<Text>)
 
     operation replace(token: Artel.Text, newToken: Artel.Text): YesNo
 
@@ -11096,8 +11079,7 @@ external
   {
     name: Artel.Text
 
-    #JS.МассивПараметров
-    operation assign(nodes: List<Element | Text>)
+    operation assign(nodes: JS.МассивПараметров<Element | Text>)
 
     operation assignedElements(options: AssignedNodesOptions? = none): List<Element>
 
@@ -15656,8 +15638,7 @@ external
 
     operation setParameters(parameters: RTCRtpSendParameters): JS.Promise<None>
 
-    #JS.МассивПараметров
-    operation setStreams(streams: List<MediaStream>)
+    operation setStreams(streams: JS.МассивПараметров<MediaStream>)
 
     prototype: RTCRtpSender
 
@@ -20436,15 +20417,13 @@ external
 
   type StylePropertyMap = object StylePropertyMapReadOnly
   {
-    #JS.МассивПараметров
-    operation append(property: Artel.Text, values: List<CSSStyleValue | Text>)
+    operation append(property: Artel.Text, values: JS.МассивПараметров<CSSStyleValue | Text>)
 
     operation clear()
 
     operation delete(property: Artel.Text)
 
-    #JS.МассивПараметров
-    operation set(property: Artel.Text, values: List<CSSStyleValue | Text>)
+    operation set(property: Artel.Text, values: JS.МассивПараметров<CSSStyleValue | Text>)
 
     prototype: StylePropertyMap
 
@@ -27533,11 +27512,9 @@ external
 
     operation reportError(e: Object?)
 
-    #JS.МассивПараметров
-    operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: List<Object?>): Number
+    operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: JS.МассивПараметров<Object?>): Number
 
-    #JS.МассивПараметров
-    operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: List<Object?>): Number
+    operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: JS.МассивПараметров<Object?>): Number
 
     operation structuredClone<T>(value: T, options: StructuredSerializeOptions? = none): T
   }
@@ -28050,8 +28027,7 @@ external
 
   type Console = aspect
   {
-    #JS.МассивПараметров
-    operation assert(condition: YesNo? = none, data: List<Object?>)
+    operation assert(condition: YesNo? = none, data: JS.МассивПараметров<Object?>)
 
     operation clear()
 
@@ -28059,30 +28035,23 @@ external
 
     operation countReset(label: Artel.Text? = none)
 
-    #JS.МассивПараметров
-    operation debug(data: List<Object?>)
+    operation debug(data: JS.МассивПараметров<Object?>)
 
     operation dir(item: Object? = none, options: Object? = none)
 
-    #JS.МассивПараметров
-    operation dirxml(data: List<Object?>)
+    operation dirxml(data: JS.МассивПараметров<Object?>)
 
-    #JS.МассивПараметров
-    operation error`(data: List<Object?>)
+    operation error`(data: JS.МассивПараметров<Object?>)
 
-    #JS.МассивПараметров
-    operation group(data: List<Object?>)
+    operation group(data: JS.МассивПараметров<Object?>)
 
-    #JS.МассивПараметров
-    operation groupCollapsed(data: List<Object?>)
+    operation groupCollapsed(data: JS.МассивПараметров<Object?>)
 
     operation groupEnd()
 
-    #JS.МассивПараметров
-    operation info(data: List<Object?>)
+    operation info(data: JS.МассивПараметров<Object?>)
 
-    #JS.МассивПараметров
-    operation log(data: List<Object?>)
+    operation log(data: JS.МассивПараметров<Object?>)
 
     operation table(tabularData: Object? = none, properties: List<Text>? = none)
 
@@ -28090,16 +28059,13 @@ external
 
     operation timeEnd(label: Artel.Text? = none)
 
-    #JS.МассивПараметров
-    operation timeLog(label: Artel.Text? = none, data: List<Object?>)
+    operation timeLog(label: Artel.Text? = none, data: JS.МассивПараметров<Object?>)
 
     operation timeStamp(label: Artel.Text? = none)
 
-    #JS.МассивПараметров
-    operation trace(data: List<Object?>)
+    operation trace(data: JS.МассивПараметров<Object?>)
 
-    #JS.МассивПараметров
-    operation warn(data: List<Object?>)
+    operation warn(data: JS.МассивПараметров<Object?>)
   }
 
 
@@ -28626,8 +28592,7 @@ external
 
   type CustomElementConstructor = aspect
   {
-    #JS.МассивПараметров
-    on create(params: List<Object?>) // : HTMLElement
+    on create(params: JS.МассивПараметров<Object?>) // : HTMLElement
   }
 
 
@@ -30730,13 +30695,11 @@ external
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setInterval) */
 
-  #JS.МассивПараметров
-  operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: List<Object?>): Number
+  operation setInterval(handler: TimerHandler, timeout: Number? = none, arguments: JS.МассивПараметров<Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/setTimeout) */
 
-  #JS.МассивПараметров
-  operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: List<Object?>): Number
+  operation setTimeout(handler: TimerHandler, timeout: Number? = none, arguments: JS.МассивПараметров<Object?>): Number
 
   /** [MDN Reference](https://developer.mozilla.org/docs/Web/API/structuredClone) */
 

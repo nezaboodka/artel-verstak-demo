@@ -50,9 +50,8 @@ external
     global
     operation configure-impl(self: ReactionImpl?, options: PartialMemberOptions): MemberOptions;
 
-    #JS.МассивПараметров
     global
-    operation proceed-within-given-launch<T>(launch: Launch?, func: F<T>, args: List<Object?>): T;
+    operation proceed-within-given-launch<T>(launch: Launch?, func: F<T>, args: JS.МассивПараметров<Object?>): T;
 
     global
     operation why(): Text

@@ -30,13 +30,11 @@ external
     abstract guarded
     margin: Number
 
-    #JS.МассивПараметров
     abstract
-    operation run`<T>(func: F<T>, args: List<Object?>): T
+    operation run`<T>(func: F<T>, args: JS.МассивПараметров<Object?>): T
 
-    #JS.МассивПараметров
     abstract
-    operation inspect<T>(func: F<T>, args: List<Object?>): T
+    operation inspect<T>(func: F<T>, args: JS.МассивПараметров<Object?>): T
 
     abstract
     operation apply()
@@ -62,17 +60,14 @@ external
     global
     operation create(options: SnapshotOptions /*(!) | null*/): Transaction
 
-    #JS.МассивПараметров
     global
-    operation run`<T>(options: SnapshotOptions /*(!)| null*/, func: F<T>, args: List<Object?>): T
+    operation run`<T>(options: SnapshotOptions /*(!)| null*/, func: F<T>, args: JS.МассивПараметров<Object?>): T
 
-    #JS.МассивПараметров
     global
-    operation separate<T>(func: F<T>, args: List<Object?>): T
+    operation separate<T>(func: F<T>, args: JS.МассивПараметров<Object?>): T
 
-    #JS.МассивПараметров
     global
-    operation outside<T>(func: F<T>, args: List<Object?>): T
+    operation outside<T>(func: F<T>, args: JS.МассивПараметров<Object?>): T
 
     global
     operation is-frame-over(every-n: Number? = none, time-limit: Number? = none): YesNo

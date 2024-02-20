@@ -138,9 +138,8 @@ external
     global
     operation set-profiling-mode(isOn: YesNo, options: ProfilingOptions? = none)
 
-    #JS.МассивПараметров
     global
-    operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: List<Object?>): T
+    operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: JS.МассивПараметров<Object?>): T
 
     global
     operation set-hint<T>(obj: T, hint: Text?): T

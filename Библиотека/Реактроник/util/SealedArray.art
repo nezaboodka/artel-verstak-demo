@@ -13,15 +13,13 @@ external
   {
     operation pop(): T?
 
-    #JS.МассивПараметров
-    operation push(items: List<T>): Number
+    operation push(items: JS.МассивПараметров<T>): Number
 
     operation sort(compareFn: None | operation(a: T, b: T): Number): SealedArray<T> // this
 
     operation splice(start: Number, deleteCount: Number? = none): List<T>
 
-    #JS.МассивПараметров
-    operation unshift(items: List<T>): Number
+    operation unshift(items: JS.МассивПараметров<T>): Number
 
     // [Sealant.CreateCopy](): Array<T>;
 

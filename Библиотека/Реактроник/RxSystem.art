@@ -50,16 +50,13 @@ external
   }
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  #JS.МассивПараметров
-  operation transaction<T>(action: F<T>, args: List<Object?>? = none): T
+  operation transaction<T>(action: F<T>, args: JS.МассивПараметров<Object?>? = none): T
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  #JS.МассивПараметров
-  operation unobs<T>(func: F<T>, args: List<Object?>): T
+  operation unobs<T>(func: F<T>, args: JS.МассивПараметров<Object?>): T
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  #JS.МассивПараметров
-  operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: List<Object?>): T
+  operation sensitive<T>(sensitivity: YesNo, func: F<T>, args: JS.МассивПараметров<Object?>): T
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   operation raw(proto: Object, prop: Text): Object?

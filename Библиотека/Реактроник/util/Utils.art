@@ -22,9 +22,8 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  #JS.МассивПараметров
   hidden by package
-  operation UNDEF(args: List<Object>)
+  operation UNDEF(args: JS.МассивПараметров<Object>)
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   async
