@@ -6,17 +6,14 @@ import Реактроник
 external
 {
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type ElDriver<T: DOM.Element, M = Object?> = object BaseDriver<El<T, M>>
-  {
-    operation allocate(node: RxNode<El<T, M>>): El<T, M>
-  }
-
-
-  #JS.ВнешняяРеализация(модуль = "verstak")
   type El<T = Object?, M = Object?> = aspect
   {
     guarded
-    node: RxNode<El<T, M>>
+    {
+      node: RxNode<El<T, M>>
+
+      index: Integer
+    }
 
     native: T
 
@@ -28,23 +25,21 @@ external
 
     width: Range
 
-    width-just-min: Text
-
-    width-growth: Number
-
     height: Range
 
-    height-just-min: Text
+    alignment: Align
 
-    height-growth: Number
+    alignment-inside: Align
 
-    content-alignment: Align
+    stretching-strength-x: Number
 
-    bounds-alignment: Align
+    stretching-strength-y: Number
 
     content-wrapping: YesNo
 
     overlay-visible: YesNo?
+
+    split-view: SplitView?
 
     guarded
     style: DOM.CSSStyleDeclaration
@@ -56,13 +51,14 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ElKind = variant
   {
-    section // = 0
-    table // = 1
-    note // = 2
-    group // = 3
-    part // = 4
-    cursor // = 5
-    native // = 6
+    section  // = 0
+    table    // = 1
+    note     // = 2
+    group    // = 3
+    part     // = 4
+    splitter // = 5
+    cursor   // = 6
+    native   // = 7
   }
 
 
@@ -79,15 +75,17 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type Align = variant
   {
-    default   // = 16
-    stretch   // = 0
-    left      // = 1
-    center-x  // = 2
-    right     // = 3
-    top       // = 4
-    center-y  // = 8
-    bottom    // = 12
-    center    // = 10
+    default    // = 0
+    left       // = 4
+    center-x    // = 5
+    right      // = 6
+    stretch-x  // = 7
+    top        // = 32
+    center-y   // = 40
+    bottom     // = 48
+    stretch-y  // = 56
+    center-x-y  // = 45
+    stretch-x-y // = 63
   }
 
 
@@ -100,10 +98,29 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
+  type SplitView = variant
+  {
+    horizontal // = 0
+    vertical   // = 1
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
+  type ElDriver<T: DOM.Element, M = Object?> = object BaseDriver<El<T, M>>
+  {
+    operation allocate(node: RxNode<El<T, M>>): El<T, M>
+  }
+
+
+  #JS.ВнешняяРеализация(модуль = "verstak")
   type ElImpl<T: DOM.Element = Object?, M = Object?> = object El<T, M>
   {
     guarded
-    node: RxNode<El<T, M>>;
+    {
+      node: RxNode<El<T, M>>
+
+      index: Integer
+    }
 
     max-column-count: Number
 
@@ -128,28 +145,31 @@ external
     // _width
 
     // hidden
-    // _widthGrowth
-
-    // hidden
     // _height
 
     // hidden
-    // _heightGrowth
+    // _alignment
 
     // hidden
-    // _contentAlignment
+    // _alignment-inside
 
     // hidden
-    // _elementAlignment
+    // _stretching-stretgth-x
 
     // hidden
-    // _contentWrapping
+    // _stretching-stretgth-y
 
     // hidden
-    // _overlayVisible
+    // _content-wrapping
 
     // hidden
-    // _hasStyles
+    // _overlay-visible
+
+    // hidden
+    // _split-view
+
+    // hidden
+    // _has-styles
 
     on create(node: RxNode<El<T, M>>)
 
@@ -170,19 +190,21 @@ external
 
     width: Range
 
-    width-growth: Number
-
     height: Range
 
-    height-growth: Number
+    alignment: Align
 
-    content-alignment: Align
+    alignment-inside: Align
 
-    bounds-alignment: Align
+    stretching-stretgth-x: Number
+
+    stretching-stretgth-y: Number
 
     content-wrapping: YesNo
 
     overlay-visible: YesNo?
+
+    split-view: SplitView?
 
     guarded
     style: DOM.CSSStyleDeclaration
@@ -190,7 +212,7 @@ external
     operation use-styling-preset(styling-preset-name: Text, enabled: YesNo? = none)
 
     // hidden
-    // rowBreak
+    // row-break
   }
 
 
@@ -205,7 +227,21 @@ external
 
     running-max-y: Number
 
+    aligner-x: ElImpl?
+
+    aligner-y: ElImpl?
+
     flags: ElLayoutInfoFlags
+
+    effective-size-px: Number
+
+    offset-x-px: Number
+
+    offset-y-px: Number
+
+    container-size-x-px: Number
+
+    container-size-y-px: Number
 
     on create(prev: ElLayoutInfo)
   }
@@ -214,10 +250,11 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ElLayoutInfoFlags = variant
   {
-    none` = 0
-    own-cursor-position = 1
-    uses-running-column-count = 2
-    uses-running-row-count = 4
+    none`                      // = 0
+    own-cursor-position        // = 1
+    uses-running-column-count  // = 2
+    uses-running-row-count     // = 4
+    childrenRelayoutIsNeeded   // = 8
   }
 
 
@@ -287,6 +324,8 @@ external
     element: Text
 
     partition: Text
+
+    splitter: Text
 
     group: Text
 

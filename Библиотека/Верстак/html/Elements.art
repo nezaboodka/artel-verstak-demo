@@ -95,7 +95,7 @@ external
   operation Handling<M = Object?>(update: Delegate<El<None, M>>): RxNode<El<None, M>>
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type VerstakElementDriver<T: DOM.HTMLElement> = object HtmlElementDriver<T>
+  type SectionDriver<T: DOM.HTMLElement> = object HtmlDriver<T>
   {
     operation update(node: RxNode<El<T>>)
   }

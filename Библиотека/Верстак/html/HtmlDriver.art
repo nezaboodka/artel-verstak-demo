@@ -10,9 +10,9 @@ external
   {
     operation set-native-element(node: RxNode<El<T, M>>)
 
-    operation initialize(node: RxNode<El<T, M>>)
+    operation create(node: RxNode<El<T, M>>)
 
-    operation finalize(node: RxNode<El<T, M>>, isLeader: YesNo): YesNo
+    operation destroy(node: RxNode<El<T, M>>, isLeader: YesNo): YesNo
 
     operation mount(node: RxNode<El<T, M>>)
 
@@ -42,14 +42,14 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type HtmlElementDriver<T: DOM.HTMLElement, M = Object?> = object WebDriver<T, M>
+  type HtmlDriver<T: DOM.HTMLElement, M = Object?> = object WebDriver<T, M>
   {
     operation setNativeElement(node: RxNode<El<T, M>>)
   }
 
 
   #JS.ВнешняяРеализация(модуль = "verstak")
-  type SvgElementDriver<T: DOM.SVGElement, M = Object?> = object WebDriver<T, M>
+  type SvgDriver<T: DOM.SVGElement, M = Object?> = object WebDriver<T, M>
   {
     operation setNativeElement(node: RxNode<El<T, M>>)
   }

@@ -29056,7 +29056,7 @@ external
 
     ul: HTMLUListElement
 
-    var: HTMLElement
+    var`: HTMLElement
 
     video: HTMLVideoElement
 

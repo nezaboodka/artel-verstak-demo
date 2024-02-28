@@ -1,23 +1,20 @@
 import { RxNode, BaseDriver } from "../../Реактроник/api.js";
-export declare class ElDriver<T extends Element, M = unknown> extends BaseDriver<El<T, M>> {
-    allocate(node: RxNode<El<T, M>>): El<T, M>;
-}
 export type El<T = any, M = any> = {
     readonly node: RxNode<El<T, M>>;
+    readonly index: number;
     native: T;
     model: M;
     kind: ElKind;
     area: ElArea;
     width: Range;
-    widthJustMin: string;
-    widthGrowth: number | undefined;
     height: Range;
-    heightJustMin: string;
-    heightGrowth: number | undefined;
-    contentAlignment: Align;
-    boundsAlignment: Align;
+    alignment: Align;
+    alignmentInside: Align;
+    stretchingStrengthX: number | undefined;
+    stretchingStrengthY: number | undefined;
     contentWrapping: boolean;
     overlayVisible: boolean | undefined;
+    splitView: SplitView | undefined;
     readonly style: CSSStyleDeclaration;
     useStylingPreset(stylingPresetName: string, enabled?: boolean): void;
 };
@@ -27,8 +24,9 @@ export declare enum ElKind {
     note = 2,
     group = 3,
     part = 4,
-    cursor = 5,
-    native = 6
+    splitter = 5,
+    cursor = 6,
+    native = 7
 }
 export type ElCoords = {
     x1: number;
@@ -37,15 +35,17 @@ export type ElCoords = {
     y2: number;
 };
 export declare enum Align {
-    default = 16,
-    stretch = 0,
-    left = 1,
-    centerX = 2,
-    right = 3,
-    top = 4,
-    centerY = 8,
-    bottom = 12,
-    center = 10
+    default = 0,
+    left = 4,
+    centerX = 5,
+    right = 6,
+    stretchX = 7,
+    top = 32,
+    centerY = 40,
+    bottom = 48,
+    stretchY = 56,
+    centerXY = 45,
+    stretchXY = 63
 }
 export type Range = {
     readonly min?: string;
@@ -58,6 +58,13 @@ export type ElArea = undefined | string | {
     cellsOverWidth?: number;
     cellsOverHeight?: number;
 };
+export declare enum SplitView {
+    horizontal = 0,
+    vertical = 1
+}
+export declare class ElDriver<T extends Element, M = unknown> extends BaseDriver<El<T, M>> {
+    allocate(node: RxNode<El<T, M>>): El<T, M>;
+}
 export declare class ElImpl<T extends Element = any, M = any> implements El<T, M> {
     readonly node: RxNode<El<T, M>>;
     maxColumnCount: number;
@@ -69,16 +76,18 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     private _area;
     private _coords;
     private _width;
-    private _widthGrowth;
     private _height;
-    private _heightGrowth;
-    private _contentAlignment;
-    private _boundsAlignment;
+    private _alignment;
+    private _alignmentInside;
+    private _stretchingStrengthX;
+    private _stretchingStrengthY;
     private _contentWrapping;
     private _overlayVisible;
+    private _splitView;
     private _hasStylingPresets;
     constructor(node: RxNode<El<T, M>>);
     prepareForUpdate(): void;
+    get index(): number;
     get isSection(): boolean;
     get isTable(): boolean;
     get isAuxiliary(): boolean;
@@ -88,42 +97,78 @@ export declare class ElImpl<T extends Element = any, M = any> implements El<T, M
     set area(value: ElArea);
     get width(): Range;
     set width(value: Range);
-    get widthJustMin(): string;
-    set widthJustMin(value: string);
-    get widthGrowth(): number | undefined;
-    set widthGrowth(value: number | undefined);
+    get widthPx(): {
+        minPx: number;
+        maxPx: number;
+    };
+    set widthPx(value: {
+        minPx: number;
+        maxPx: number;
+    });
     get height(): Range;
     set height(value: Range);
-    get heightJustMin(): string;
-    set heightJustMin(value: string);
-    get heightGrowth(): number | undefined;
-    set heightGrowth(value: number | undefined);
-    get contentAlignment(): Align;
-    set contentAlignment(value: Align);
-    get boundsAlignment(): Align;
-    set boundsAlignment(value: Align);
+    get heightPx(): {
+        minPx: number;
+        maxPx: number;
+    };
+    set heightPx(value: {
+        minPx: number;
+        maxPx: number;
+    });
+    get alignment(): Align;
+    set alignment(value: Align);
+    get alignmentInside(): Align;
+    set alignmentInside(value: Align);
+    get stretchingStrengthX(): number | undefined;
+    set stretchingStrengthX(value: number | undefined);
+    get stretchingStrengthY(): number | undefined;
+    set stretchingStrengthY(value: number | undefined);
     get contentWrapping(): boolean;
     set contentWrapping(value: boolean);
     get overlayVisible(): boolean | undefined;
     set overlayVisible(value: boolean | undefined);
+    get splitView(): SplitView | undefined;
+    set splitView(value: SplitView | undefined);
     get style(): CSSStyleDeclaration;
     useStylingPreset(stylingPresetName: string, enabled?: boolean): void;
+    protected children(onlyAfter?: ElImpl): Generator<ElImpl>;
+    static childrenOf(node: RxNode<El>, onlyAfter?: El): Generator<ElImpl>;
     private rowBreak;
+    private static applyKind;
+    private static applyCoords;
+    private static applyWidth;
+    private static applyHeight;
+    private static applyAlignment;
+    private static applyStretchingStrengthX;
+    private static applyStretchingStrengthY;
+    private static applyContentWrapping;
+    private static applyOverlayVisible;
+    static applySplitView<T extends Element>(element: El<T, any>, value: SplitView | undefined): void;
+    private static applyStylingPreset;
 }
-declare class ElLayoutInfo {
+export declare class ElLayoutInfo {
     x: number;
     y: number;
     runningMaxX: number;
     runningMaxY: number;
+    alignerX?: ElImpl;
+    alignerY?: ElImpl;
     flags: ElLayoutInfoFlags;
+    effectiveSizePx: number;
+    offsetXpx: number;
+    offsetYpx: number;
+    containerSizeXpx: number;
+    containerSizeYpx: number;
     constructor(prev: ElLayoutInfo);
 }
 declare enum ElLayoutInfoFlags {
     none = 0,
     ownCursorPosition = 1,
     usesRunningColumnCount = 2,
-    usesRunningRowCount = 4
+    usesRunningRowCount = 4,
+    childrenRelayoutIsNeeded = 8
 }
+export declare const InitialElLayoutInfo: ElLayoutInfo;
 export declare class CursorCommand {
     absolute?: string;
     columnShift?: number;
@@ -132,24 +177,10 @@ export declare class CursorCommand {
 export declare class CursorCommandDriver extends ElDriver<Element, unknown> {
     constructor();
 }
-export declare class Apply {
-    static kind<T extends Element>(element: El<T, any>, value: ElKind): void;
-    static coords<T extends Element>(element: El<T, any>, value: ElCoords | undefined): void;
-    static widthGrowth<T extends Element>(element: El<T, any>, value: number): void;
-    static minWidth<T extends Element>(element: El<T, any>, value: string): void;
-    static maxWidth<T extends Element>(element: El<T, any>, value: string): void;
-    static heightGrowth<T extends Element>(element: El<T, any>, value: number): void;
-    static minHeight<T extends Element>(element: El<T, any>, value: string): void;
-    static maxHeight<T extends Element>(element: El<T, any>, value: string): void;
-    static contentAlignment<T extends Element>(element: El<T, any>, value: Align): void;
-    static boundsAlignment<T extends Element>(element: El<T, any>, value: Align): void;
-    static contentWrapping<T extends Element>(element: El<T, any>, value: boolean): void;
-    static overlayVisible<T extends Element>(element: El<T, any>, value: boolean | undefined): void;
-    static stylingPreset<T extends Element>(element: El<T, any>, secondary: boolean, styleName: string, enabled?: boolean): void;
-}
 export declare const Constants: {
     element: string;
     partition: string;
+    splitter: string;
     group: string;
     layouts: string[];
     keyAttrName: string;
