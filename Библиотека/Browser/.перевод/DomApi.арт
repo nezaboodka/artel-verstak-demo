@@ -440,7 +440,7 @@
 
     left -> лево
 
-    // guarded
+    // hidden set
     // length: Number
 
     // letter-spacing
@@ -617,7 +617,7 @@
 
     paint-order -> порядок-рисования
 
-    // guarded
+    // hidden set
     // parent-rule: CSSRule /*| null*/
 
     perspective -> перспектива

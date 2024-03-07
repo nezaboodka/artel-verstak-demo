@@ -11,7 +11,7 @@ external
 
     elementDataList: List<Object?>
 
-    guarded
+    hidden set
     topElementData: Object?
   }
 }

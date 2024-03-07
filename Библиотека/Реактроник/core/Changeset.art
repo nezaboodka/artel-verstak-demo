@@ -40,16 +40,16 @@ external
     global
     total-object-snapshot-count: Number
   
-    guarded
+    hidden set
     id: Number
 
-    guarded
+    hidden set
     options: SnapshotOptions
 
-    guarded
+    hidden set
     hint: Text
 
-    guarded
+    hidden set
     timestamp: Number
 
     // hidden revision

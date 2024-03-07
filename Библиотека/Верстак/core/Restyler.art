@@ -10,7 +10,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ObservablesStyles<T> = object
   {
-    // hidden guarded
+    // hidden hidden set
     // restyle
 
     on create(restyle: operation(): T)
@@ -18,7 +18,7 @@ external
     hidden (in type)
     operation cache(): T
 
-    guarded
+    hidden set
     class: T
   }
 }

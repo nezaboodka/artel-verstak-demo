@@ -7,33 +7,33 @@ external
   hidden (in package)
   type ReactionImpl = object Reaction
   {
-    guarded
+    hidden set
     object-handle: ObjectHandle
 
-    guarded
+    hidden set
     member-name: MemberName
 
     operation configure(options: PartialMemberOptions): MemberOptions
 
-    guarded
+    hidden set
     options: MemberOptions
 
-    guarded
+    hidden set
     unobs: Object?
   
-    guarded
+    hidden set
     args: ListReader<Object?>
 
-    guarded
+    hidden set
     result: Object?
 
-    guarded
+    hidden set
     error`: YesNo
 
-    guarded
+    hidden set
     stamp: Number
 
-    guarded
+    hidden set
     is-up-to-date: YesNo
 
     operation mark-obsolete()
@@ -93,16 +93,16 @@ external
     global
     deferred-reactive-functions: List<Launch>
 
-    guarded
+    hidden set
     margin: Number
 
-    guarded
+    hidden set
     transaction: Transaction
 
-    guarded
+    hidden set
     reaction: ReactionImpl
 
-    guarded
+    hidden set
     changeset: AbstractChangeset
 
     observables: Map<ValueSnapshot, Subscription>?
@@ -127,15 +127,15 @@ external
    
     on create(reaction: ReactionImpl, changeset: AbstractChangeset, former: Launch | OptionsImpl)
 
-    guarded
+    hidden set
     is-operation: YesNo
 
-    guarded
+    hidden set
     origin-snapshot-id: Number
 
     operation hint(): Text
 
-    guarded
+    hidden set
     order: Number
 
     // get ["#this#"](): string;

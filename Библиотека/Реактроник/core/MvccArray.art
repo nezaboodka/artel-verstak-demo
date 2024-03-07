@@ -108,7 +108,7 @@ external
 
     // operation values(): IterableIterator<T>
 
-    // hidden guarded
+    // hidden hidden set
     // mutable: List<T>
   }
 

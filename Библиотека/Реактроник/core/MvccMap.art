@@ -24,7 +24,7 @@ external
 
     operation set(key: K, value: V)
 
-    guarded
+    hidden set
     size: Integer
 
     // operation entries(): IterableIterator<Object { _0: K, _1: V }>
@@ -35,7 +35,7 @@ external
 
     // operation [Symbol.toStringTag](): Текст
 
-    // hidden guarded
+    // hidden hidden set
     // mutable
   }
 

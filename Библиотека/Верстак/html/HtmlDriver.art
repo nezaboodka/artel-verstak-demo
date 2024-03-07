@@ -32,7 +32,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type StaticDriver<T: DOM.HTMLElement> = object WebDriver<T>
   {
-    guarded
+    hidden set
     native: T
 
     on create(native: T, name: Text, isRow: YesNo, predefine: SimpleDelegate<El<T>>? = none)

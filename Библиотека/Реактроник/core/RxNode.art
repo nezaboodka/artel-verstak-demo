@@ -30,40 +30,40 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type RxNode<E = Object?> = /*(!) incomplete */ object
   {
-    abstract guarded
+    abstract hidden set
     key: Text
 
-    abstract guarded
+    abstract hidden set
     driver: RxNodeDriver<E>
 
-    abstract guarded
+    abstract hidden set
     declaration: RxNodeDecl<E>
 
-    abstract guarded
+    abstract hidden set
     level: Number
 
-    abstract guarded
+    abstract hidden set
     owner: RxNode
 
     abstract
     element: E
     
-    abstract guarded
+    abstract hidden set
     host: RxNode
 
-    abstract guarded
+    abstract hidden set
     children: MergeListReader<RxNode>
 
-    abstract guarded
+    abstract hidden set
     seat: MergedItem<RxNode<E>>?
 
-    abstract guarded
+    abstract hidden set
     stamp: Number
 
-    abstract guarded
+    abstract hidden set
     outer: RxNode;
 
-    abstract guarded
+    abstract hidden set
     context: RxNodeContext?
 
     abstract
@@ -81,10 +81,10 @@ external
     abstract
     operation configure-reactronic(options: PartialMemberOptions): MemberOptions
     
-    global guarded
+    global hidden set
     short-frame-duration // = 16
 
-    global guarded
+    global hidden set
     long-frame-duration // = 300
 
     global
@@ -96,16 +96,16 @@ external
     global
     operation declare<E = None>(driver: RxNodeDriver<E>, declaration: RxNodeDecl<E>?, preset: RxNodeDecl<E>?): RxNode<E>
 
-    global guarded
+    global hidden set
     is-first-update: YesNo
 
-    global guarded
+    global hidden set
     key: Text
 
-    global guarded
+    global hidden set
     stamp: Number
 
-    global guarded
+    global hidden set
     triggers: Object?
 
     global
@@ -164,13 +164,13 @@ type RxNodeDecl<E = Object?> = object
 
 type RxNodeDriver<E = Object?> = object
 {
-  guarded
+  hidden set
   name: Text
 
-  guarded
+  hidden set
   is-partition: YesNo
 
-  guarded
+  hidden set
   predefine: SimpleDelegate<E>?
 
   allocate: None | operation(node: RxNode<E>): E = none
@@ -201,13 +201,13 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type BaseDriver<E = Object?> = /*(!) incomplete*/ object RxNodeDriver<E>
   {
-    guarded
+    hidden set
     name: Text
 
-    guarded
+    hidden set
     is-partition: YesNo
 
-    guarded
+    hidden set
     predefine: SimpleDelegate<E, None>?
 
     on create(name: Text, is-partition: YesNo, predefine: SimpleDelegate<E, None>? = none)
@@ -228,14 +228,14 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type RxNodeVariable<T: Object = Object> = object
   {
-    guarded
+    hidden set
     default-value: T?
 
     on create(default-value: T? = none)
 
     value: T
 
-    guarded
+    hidden set
     value-or-undefined: T?
   }
 }

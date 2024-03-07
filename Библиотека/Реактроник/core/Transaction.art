@@ -6,28 +6,28 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Transaction = /*(!) abstract */ object Worker
   {
-    global guarded
+    global hidden set
     current: Transaction
 
-    abstract guarded
+    abstract hidden set
     id: Number
 
-    abstract guarded
+    abstract hidden set
     hint: Text
 
-    abstract guarded
+    abstract hidden set
     options: SnapshotOptions;
 
-    abstract guarded
+    abstract hidden set
     timestamp: Number
 
-    abstract guarded
+    abstract hidden set
     error`: Error?
 
-    abstract guarded
+    abstract hidden set
     changeset: Changeset
 
-    abstract guarded
+    abstract hidden set
     margin: Number
 
     abstract
@@ -48,10 +48,10 @@ external
     abstract
     operation cancel(error`: Error, retry-after-or-ignore: Worker? /*(!)| null*/ = none): Transaction // this
 
-    abstract guarded
+    abstract hidden set
     is-canceled: YesNo
 
-    abstract guarded
+    abstract hidden set
     is-finished: YesNo
 
     async
@@ -75,7 +75,7 @@ external
     global async
     operation request-next-frame(sleep-time: Number? = none): JS.Promise<None>
 
-    global guarded
+    global hidden set
     is-canceled: YesNo
   }
 }

@@ -30,10 +30,12 @@ external
     global
     reactivityAutoStartDisabled: YesNo
 
-    global guarded
+    global
+    hidden set
     isLogging: YesNo
 
-    global guarded
+    global
+    hidden set
     loggingOptions: LoggingOptions
 
     global

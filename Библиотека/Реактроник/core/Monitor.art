@@ -6,16 +6,16 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Monitor = /*(!) incomplete */ object ObservableObject
   {
-    abstract guarded
+    abstract hidden set
     is-active: YesNo
 
-    abstract guarded
+    abstract hidden set
     counter: Number
 
-    abstract guarded
+    abstract hidden set
     workers: SetReader<Worker>
 
-    abstract guarded
+    abstract hidden set
     duration: Number
 
     global
@@ -34,7 +34,7 @@ external
 
     duration: Number
 
-    guarded
+    hidden set
     internals: object
     {
         started: Number

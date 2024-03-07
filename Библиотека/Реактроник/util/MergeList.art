@@ -8,19 +8,19 @@ external
 
   type MergeListReader<T> = aspect
   {
-    guarded
+    hidden set
     is-strict: YesNo
 
-    guarded
+    hidden set
     count: Number
 
-    guarded
+    hidden set
     added-count: Number
 
-    guarded
+    hidden set
     removed-count: Number
 
-    guarded
+    hidden set
     is-merge-in-progress: YesNo
 
     operation lookup(key: Text): MergedItem<T>?
@@ -59,16 +59,16 @@ external
 
   type MergedItem<T> = aspect
   {
-    guarded
+    hidden set
     instance: T
 
-    guarded
+    hidden set
     index: Integer
 
-    guarded
+    hidden set
     next: MergedItem<T>?
 
-    guarded
+    hidden set
     prev: MergedItem<T>?
 
     aux: MergedItem<T>
@@ -78,7 +78,7 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type MergeList<T> = object MergeListReader<T>
   {
-    guarded
+    hidden set
     get-key: GetMergedItemKey<T>
 
     // hidden
@@ -109,16 +109,16 @@ external
 
     is-strict: YesNo
 
-    guarded
+    hidden set
     count: Number
 
-    guarded
+    hidden set
     added-count: Number
 
-    guarded
+    hidden set
     removed-count: Number
 
-    guarded
+    hidden set
     is-merge-in-progress: YesNo
 
     operation lookup(key: Text?): MergedItem<T>?

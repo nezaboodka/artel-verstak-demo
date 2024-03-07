@@ -5,53 +5,53 @@ external
 {
   type SnapshotOptions = aspect
   {
-    guarded
+    hidden set
     hint: Text?
 
-    guarded
+    hidden set
     separation: SeparationMode?
 
-    guarded
+    hidden set
     journal: Journal?
 
-    guarded
+    hidden set
     logging: PartialLoggingOptions?
 
-    guarded
+    hidden set
     token: Объект?
   }
 
 
   type MemberOptions = aspect
   {
-    guarded
+    hidden set
     kind: Kind
 
-    guarded
+    hidden set
     separation: SeparationMode
 
-    guarded
+    hidden set
     order: Number
 
-    guarded
+    hidden set
     noSideEffects: YesNo
 
-    guarded
+    hidden set
     triggeringArgs: YesNo
 
-    guarded
+    hidden set
     throttling: Number
 
-    guarded
+    hidden set
     reentrance: Reentrance
 
-    guarded
+    hidden set
     journal: Journal?
 
-    guarded
+    hidden set
     monitor: Monitor? /*(!) | null */
 
-    guarded
+    hidden set
     logging: PartialLoggingOptions
   }
 
@@ -79,22 +79,22 @@ external
 
   type AbstractReaction<T> = aspect
   {
-    guarded
+    hidden set
     options: MemberOptions
 
-    guarded
+    hidden set
     args: ListReader<Object?>
 
-    guarded
+    hidden set
     result: T
 
-    guarded
+    hidden set
     error`: Object?
 
-    guarded
+    hidden set
     stamp: Number
 
-    guarded
+    hidden set
     isUpToDate: YesNo
 
     operation configure(options: PartialMemberOptions): MemberOptions

@@ -7,16 +7,16 @@ external
   hidden (in package)
   type AbstractChangeset = aspect
   {
-    guarded
+    hidden set
     id: Number
 
-    guarded
+    hidden set
     hint: Text
 
-    guarded
+    hidden set
     timestamp: Number
 
-    guarded
+    hidden set
     sealed: YesNo
   }
 
@@ -29,10 +29,10 @@ external
 
     observers: Set<Observer>?
 
-    guarded
+    hidden set
     is-operation: YesNo
 
-    guarded
+    hidden set
     origin-snapshot-id: Number?
 
     on create(content: T)
@@ -47,13 +47,13 @@ external
   hidden (in package)
   type Observer = aspect
   {
-    guarded
+    hidden set
     order: Number
 
-    guarded
+    hidden set
     observables: Map<ValueSnapshot, Subscription>?
 
-    guarded
+    hidden set
     obsolete-since: Number
 
     операция hint(nop: YesNo? = none): Text
@@ -73,10 +73,10 @@ external
   hidden (in package)
   type Subscription = aspect
   {
-    guarded
+    hidden set
     member-hint: Text
 
-    guarded
+    hidden set
     usage-count: Number
   }
 
@@ -85,25 +85,25 @@ external
   hidden (in package)
   type ObjectSnapshot = object
   {
-    guarded
+    hidden set
     changeset: AbstractChangeset
 
-    guarded
+    hidden set
     former: object
     {
       snapshot: ObjectSnapshot
     }
 
-    guarded
+    hidden set
     data: Object?
 
-    guarded
+    hidden set
     changes: Set<MemberName>
 
-    guarded
+    hidden set
     conflicts: Map<MemberName, ObjectSnapshot>
 
-    guarded
+    hidden set
     revision: Number
 
     disposed: YesNo
@@ -119,13 +119,13 @@ external
     // hidden global
     // generator
 
-    guarded
+    hidden set
     id: Number
 
-    guarded
+    hidden set
     data: Object?
 
-    guarded
+    hidden set
     proxy: Object?
 
     head: ObjectSnapshot

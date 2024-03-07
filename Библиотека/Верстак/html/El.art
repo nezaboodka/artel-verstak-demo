@@ -41,7 +41,7 @@ external
 
     split-view: SplitView?
 
-    guarded
+    hidden set
     style: DOM.CSSStyleDeclaration
   
     operation use-styling-preset(styling-preset-name: Text, enabled: YesNo? = none)
@@ -175,13 +175,13 @@ external
 
     operation prepare-for-update()
 
-    guarded
+    hidden set
     is-section: YesNo
 
-    guarded
+    hidden set
     is-table: YesNo
 
-    guarded
+    hidden set
     is-auxiliary: YesNo
 
     kind: ElKind
@@ -206,7 +206,7 @@ external
 
     split-view: SplitView?
 
-    guarded
+    hidden set
     style: DOM.CSSStyleDeclaration
 
     operation use-styling-preset(styling-preset-name: Text, enabled: YesNo? = none)

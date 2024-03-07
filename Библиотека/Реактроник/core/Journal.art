@@ -60,16 +60,16 @@ external
   
     capacity: Number
 
-    guarded
+    hidden set
     edits: ArrayReader<PatchSet>
 
-    guarded
+    hidden set
     unsaved: PatchSet
 
-    guarded
+    hidden set
     canUndo: YesNo
 
-    guarded
+    hidden set
     canRedo: YesNo
 
     operation edited(p: PatchSet)
