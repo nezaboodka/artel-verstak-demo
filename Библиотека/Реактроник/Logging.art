@@ -8,52 +8,52 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type LoggingOptions = aspect
   {
-    guarded
+    hidden set
     enabled: YesNo
 
-    guarded
+    hidden set
     transaction`: YesNo
 
-    guarded
+    hidden set
     operation`: YesNo
 
-    guarded
+    hidden set
     step: YesNo
 
-    guarded
+    hidden set
     monitor: YesNo
 
-    guarded
+    hidden set
     read: YesNo
 
-    guarded
+    hidden set
     write: YesNo
 
-    guarded
+    hidden set
     change: YesNo
 
-    guarded
+    hidden set
     obsolete: YesNo
 
-    guarded
+    hidden set
     error`: YesNo
 
-    guarded
+    hidden set
     warning: YesNo
 
-    guarded
+    hidden set
     gc: YesNo
 
-    guarded
+    hidden set
     color: Number
 
-    guarded
+    hidden set
     prefix: Текст
 
-    guarded
+    hidden set
     margin1: Number
 
-    guarded
+    hidden set
     margin2: Number
   }
 
@@ -74,12 +74,12 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   конст LoggingLevel: object
   {
-    guarded Off: LoggingOptions
-    guarded ErrorsOnly: LoggingOptions
-    guarded Reactions: LoggingOptions
-    guarded Transactions: LoggingOptions
-    guarded Operations: LoggingOptions
-    guarded Debug: LoggingOptions
+    hidden set Off: LoggingOptions
+    hidden set ErrorsOnly: LoggingOptions
+    hidden set Reactions: LoggingOptions
+    hidden set Transactions: LoggingOptions
+    hidden set Operations: LoggingOptions
+    hidden set Debug: LoggingOptions
   }
 }
 

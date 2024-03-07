@@ -7,7 +7,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type HtmlElementSensor = object Sensor
   {
-    guarded
+    hidden set
     {
       focusSensor: Object?
 
@@ -22,7 +22,7 @@ external
 
     on create(focusSensor: Object? = none, windowSensor: WindowSensor? = none)
 
-    hidden by type
+    hidden (in type)
     {
       operation getDefaultSensorData(): DataForSensor?
       operation setPreventDefaultAndStopPropagation(e: DOM.Event)

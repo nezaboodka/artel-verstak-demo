@@ -34,7 +34,7 @@ external
 
     operation listen(element: DOM.HTMLElement?, enabled: YesNo = yes)
 
-    hidden by type
+    hidden (in type)
     {
       operation onPointerDown(e: DOM.PointerEvent)
 

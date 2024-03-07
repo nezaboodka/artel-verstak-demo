@@ -8,7 +8,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type El<T = Object?, M = Object?> = aspect
   {
-    guarded
+    hidden set
     {
       node: RxNode<El<T, M>>
 
@@ -115,7 +115,7 @@ external
   #JS.ВнешняяРеализация(модуль = "verstak")
   type ElImpl<T: DOM.Element = Object?, M = Object?> = object El<T, M>
   {
-    guarded
+    hidden set
     {
       node: RxNode<El<T, M>>
 

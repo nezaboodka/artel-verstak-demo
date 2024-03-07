@@ -4,10 +4,10 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type MvccObject = /*(!) incomplete */ object
   {
-    on create(observable: YesNo)
+    on create(observable`: YesNo)
 
     // [Symbol.toStringTag](): string;
   }
@@ -28,46 +28,47 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type OptionsImpl = object MemberOptions
   {
-    guarded
+    hidden set
     getter: JS.Function
 
-    guarded
+    hidden set
     setter: JS.Function
 
-    guarded
+    hidden set
     kind: Kind
 
-    guarded
+    hidden set
     separation: SeparationMode
 
-    guarded
+    hidden set
     order: Number
 
-    guarded
+    hidden set
     no-side-effects: YesNo
 
-    guarded
+    hidden set
     triggering-args: YesNo
 
-    guarded
+    hidden set
     throttling: Number
 
-    guarded
+    hidden set
     reentrance: Reentrance
 
-    guarded
+    hidden set
     journal: Journal?
 
-    guarded
+    hidden set
     monitor: Monitor /*(!)| JS.Null*/
 
-    guarded
+    hidden set
     logging: PartialLoggingOptions?
 
-    global guarded
+    global
+    hidden set
     INITIAL: OptionsImpl
 
     on create(getter: JS.Function?, setter: JS.Function?,
@@ -77,7 +78,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type Mvcc = object /*(!) JS.ProxyHandler<ObjectHandle>*/
   {
     global
@@ -95,13 +96,15 @@ external
     global
     sensitivity: YesNo
 
-    global guarded
-    transactional: Mvcc
+    global
+    hidden set
+    transactional`: Mvcc
 
-    global guarded
-    observable: Mvcc
+    global
+    hidden set
+    observable`: Mvcc
 
-    guarded
+    hidden set
     is-observable: YesNo
 
     on create(is-observable: YesNo)

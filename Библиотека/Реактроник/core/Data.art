@@ -4,7 +4,7 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type AbstractChangeset = aspect
   {
     guarded
@@ -22,7 +22,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type ValueSnapshot<T = Object?> = object
   {
     content: T
@@ -39,12 +39,12 @@ external
   }
 
 
-  hidden by package
+  hidden (in package)
   type SeparationMode = YesNo // | "isolated" | "disposal"
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type Observer = aspect
   {
     guarded
@@ -65,12 +65,12 @@ external
   }
 
 
-  hidden by package
+  hidden (in package)
   type MemberName = Text /*(!) PropertyKey*/
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type Subscription = aspect
   {
     guarded
@@ -82,7 +82,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type ObjectSnapshot = object
   {
     guarded
@@ -113,7 +113,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type ObjectHandle = object
   {
     // hidden global
@@ -144,12 +144,12 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type PatchSet = Map<Object, Map<MemberName, ValuePatch>>
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type ValuePatch = aspect
   {
     member-mame: MemberName

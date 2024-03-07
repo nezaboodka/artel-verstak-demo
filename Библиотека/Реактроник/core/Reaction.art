@@ -4,7 +4,7 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type ReactionImpl = object Reaction
   {
     guarded
@@ -150,7 +150,7 @@ external
 
     operation proceed(proxy: Object?, args: List<Object?>?)
 
-    operation mark-obsolete-due-to(observable: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, obsolete: List<Observer>)
+    operation mark-obsolete-due-to(observable`: ValueSnapshot, m: MemberName, changeset: AbstractChangeset, h: ObjectHandle, outer: Text, since: Number, obsolete: List<Observer>)
 
     operation relaunch-if-not-up-to-date(now: YesNo, nothrow: YesNo)
 
@@ -217,9 +217,9 @@ external
     operation init()
   }
 
-  hidden by package
+  hidden (in package)
   operation resolve-return(value: Object?): Object?
 
-  hidden by package
+  hidden (in package)
   operation reject-rethrow(error`: Object?)
 }

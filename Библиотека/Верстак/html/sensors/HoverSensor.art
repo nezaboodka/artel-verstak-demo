@@ -13,7 +13,7 @@ external
 
     operation listen(element: DOM.HTMLElement?, enabled: YesNo = yes)
 
-    hidden by type
+    hidden (in type)
     {
       operation onPointerOver(e: DOM.PointerEvent)
 

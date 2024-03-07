@@ -7,7 +7,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type Utils = object
   {
     global
@@ -22,7 +22,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   operation UNDEF(args: JS.МассивПараметров<Object>)
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
@@ -33,12 +33,12 @@ external
   async
   operation pause(timeout: Integer)
 
-  hidden by package
+  hidden (in package)
   operation emitLetters(n: Number): Text
 
-  hidden by package
+  hidden (in package)
   operation objectHasMember<T>(obj: Object?, member: Text): T // obj is T
 
-  hidden by package
+  hidden (in package)
   operation getCallerInfo(prefix: Text): Text
 }

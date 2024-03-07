@@ -4,7 +4,7 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type MvccArray<T> = object MvccObject
   {
     // hidden

@@ -19,7 +19,7 @@ external
 
     operation reset()
 
-    hidden by type
+    hidden (in type)
     {
       operation onWheel(e: DOM.WheelEvent)
 

@@ -65,7 +65,7 @@ external
   operation obs(proto: Object, prop: Text): Object?
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  operation transactional(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?
+  operation transactional`(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
   operation reactive(proto: Object, prop: Text, pd: Object? /*(!) PropertyDescriptor*/): Object?

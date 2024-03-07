@@ -47,7 +47,7 @@ external
 
     operation reset()
 
-    hidden by type
+    hidden (in type)
     {
       operation onFocusIn(e: B.FocusEvent)
 

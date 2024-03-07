@@ -6,12 +6,12 @@ external
   #JS.ВнешняяРеализация(модуль = "reactronic")
   type Reaction<T> = /*(!) incomplete */ object ObservableObject
   {
-    hidden by type
+    hidden (in type)
     action: F<T>
 
     on create(action: F<T>)
 
-    hidden by type
+    hidden (in type)
     operation launch(): T
   }
 }

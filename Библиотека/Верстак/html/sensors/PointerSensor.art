@@ -67,7 +67,7 @@ external
 
     immediateModifiers: KeyboardModifiers
 
-    global hidden by type
+    global hidden (in type)
     DraggingThreshold: Object?
 
     on create(focusSensor: FocusSensor, windowSensor: WindowSensor)
@@ -78,7 +78,7 @@ external
 
     operation listen(element: DOM.HTMLElement?, enabled: YesNo /*(!)= yes*/)
 
-    hidden by type
+    hidden (in type)
     {
       operation onPointerDown(e: DOM.PointerEvent)
 

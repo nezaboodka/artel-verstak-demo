@@ -3,7 +3,7 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "artel": "0.6.62",
+    "artel": "0.6.65",
     "reactronic": "0.24.270",
     "verstak": "0.24.270",
     "vite": "4.5.0"
@@ -11,7 +11,7 @@
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать": "node n-artel.js build .. Executable",
+    "собрать": "node n-artel.mjs build .. Executable",
     "запуск-сервера": "npm run собрать && vite"
   }
 }

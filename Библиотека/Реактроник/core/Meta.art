@@ -3,7 +3,7 @@ import JS = Artel.JavaScript
 
 external
 {
-  hidden by package
+  hidden (in package)
   type Meta = /* incomplete */ object
   {
     global const

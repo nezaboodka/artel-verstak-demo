@@ -60,7 +60,7 @@ external
   type Kind = variant
   {
     plain = 0
-    transactional = 1
+    transactional` = 1
     reactive = 2
     cached = 3
   }

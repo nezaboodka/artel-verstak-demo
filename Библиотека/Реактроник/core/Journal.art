@@ -3,7 +3,7 @@ import JS = Artel.JavaScript
 
 external
 {
-  hidden by package
+  hidden (in package)
   type Saver = operation(patch: PatchSet): JS.Promise<None>
 
 
@@ -43,7 +43,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type JournalImpl = object ObservableObject
   {
     // hidden

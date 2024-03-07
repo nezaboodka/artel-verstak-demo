@@ -4,12 +4,12 @@ import JS = Artel.JavaScript
 external
 {
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   const MAX_REVISION: Number
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   const UNDEFINED_REVISION: Number
 
 
@@ -135,7 +135,7 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   type Dump = object
   {
     global
@@ -159,11 +159,11 @@ external
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   const EMPTY_SNAPSHOT: ObjectSnapshot;
 
 
   #JS.ВнешняяРеализация(модуль = "reactronic")
-  hidden by package
+  hidden (in package)
   const DefaultSnapshotOptions: SnapshotOptions;
 }

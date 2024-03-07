@@ -15,7 +15,7 @@ external
 
     on create(restyle: operation(): T)
 
-    hidden by type
+    hidden (in type)
     operation cache(): T
 
     guarded

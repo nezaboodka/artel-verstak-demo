@@ -39,7 +39,7 @@ external
 
     operation reset()
 
-    hidden by type
+    hidden (in type)
     {
       operation onKeyDown(e: DOM.KeyboardEvent)
 

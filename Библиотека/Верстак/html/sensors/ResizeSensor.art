@@ -30,7 +30,7 @@ external
 
     // operation observeResizing(block: Block<Объект, Объект, Объект>, value: YesNo, boxSizing: ResizeObserverBoxOptions /*(!)= "content-box"*/)
 
-    // hidden by type
+    // hidden (in type)
     // {
     //   operation onResize(entries: List<ResizeObserverEntry>)
 
