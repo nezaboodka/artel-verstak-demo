@@ -27,7 +27,7 @@ if (!isUpToDate) {
 else
   console.log("\n")
 
-import * as a from "artel/build/artel-cli.mjs"
+import * as a from "@artel/artel/build/artel-cli.mjs"
 
 a.awaiter.then(
   result => { /* do nothing */ },
