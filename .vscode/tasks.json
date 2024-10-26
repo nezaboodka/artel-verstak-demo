@@ -7,7 +7,7 @@
       "type": "shell",
       "command": "npm run запуск-сервера",
       "options": {
-        // "cwd": "${workspaceFolder}/.сборка"
+        "cwd": "${workspaceFolder}/.сборка"
       },
     },
     {
@@ -25,7 +25,7 @@
       "type": "shell",
       "command": "npm run скачать-пакеты",
       "options": {
-        // "cwd": "${workspaceFolder}/.сборка"
+        "cwd": "${workspaceFolder}/.сборка"
       },
     },
   ]
