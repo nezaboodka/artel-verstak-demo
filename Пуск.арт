@@ -13,16 +13,16 @@
       с.color = "#f0f0f0"
       с.background-color = "#1a3043"
       с.font-size = "300%"
-      // el.horizontal = растяжка-области
+      el.horizontal = PosH.stretch
 
       row-break() // новая-строка()
 
       Panel(
-        // mode = Mode.independent-update,
+        mode = Mode.independent-update,
         creation =
         {
-          // el.horizontal выравнивание = растяжка-области
-          // el.выравнивание-внутри = центр-области
+          el.horizontal = PosH.stretch
+          el.contentHorizontal = PosH.center
         },
         script =
         {
