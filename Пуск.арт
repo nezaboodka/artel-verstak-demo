@@ -15,7 +15,7 @@
       с.font-size = "300%"
       el.horizontal = PosH.stretch
 
-      row-break() // новая-строка()
+      row-break()
 
       Panel(
         mode = Mode.independent-update,
