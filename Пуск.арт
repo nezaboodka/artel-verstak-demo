@@ -1,10 +1,10 @@
 
-подключить Reactronic
+подключить Реактроник
 подключить Verstak
 
 выполнить
 {
-  пусть время = transaction<Clock>({ Clock(100) }, [])
+  пусть время = транзакция<Часы>({ Часы(100) }, [])
 
   Page(
     script = 
@@ -18,7 +18,7 @@
       row-break()
 
       Panel(
-        mode = Mode.independent-update,
+        mode = Режим.независимое-обновление,
         creation =
         {
           el.horizontal = PosH.stretch
@@ -30,7 +30,7 @@
 
           row-break()
 
-          Note("{время.hour}:{время.minute}:{время.second}")
+          Note("{время.час}:{время.минута}:{время.секунда}")
         })
     })
 }
