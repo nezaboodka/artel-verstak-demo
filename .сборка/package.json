@@ -11,7 +11,7 @@
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать": "node n-artel.mjs build . Executable",
+    "собрать": "node n-artel.mjs build .. Executable",
     "запуск-сервера": "npm run собрать && vite"
   }
 }
