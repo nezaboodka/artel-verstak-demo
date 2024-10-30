@@ -16,7 +16,7 @@
       "type": "shell",
       "command": "npm run собрать",
       "options": {
-        // "cwd": "${workspaceFolder}/.сборка"
+        "cwd": "${workspaceFolder}/.сборка"
       },
     },
     {
