@@ -3,9 +3,9 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/artel": "0.6.146",
-    "reactronic": "0.24.316",
-    "verstak": "0.24.317",
+    "@artel/artel": "0.6.148",
+    "reactronic": "0.24.400",
+    "verstak": "0.24.400",
     "vite": "4.5.0"
   },
   "scripts":
