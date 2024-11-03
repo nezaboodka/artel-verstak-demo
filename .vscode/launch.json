@@ -9,7 +9,7 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:1234",
-      "webRoot": "${workspaceRoot}/.сборка",
+      "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "smartStep": true,
       "pauseForSourceMap": true,

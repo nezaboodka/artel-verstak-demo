@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-build/Executable
-.build/Executable
-сборка/Executable
-.сборка/Executable
+build
+.build
+сборка
+.сборка
