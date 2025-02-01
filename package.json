@@ -3,15 +3,15 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/artel": "0.6.150",
-    "reactronic": "0.24.501",
-    "verstak": "0.24.508",
+    "@artel/artel": "0.6.25182",
+    "reactronic": "0.91.25002",
+    "verstak": "0.91.25002",
     "vite": "4.5.0"
   },
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать": "node n-artel.mjs build . ./.сборка",
+    "собрать": "node ./n-artel.mjs build . ./.сборка",
     "запуск-сервера": "npm run собрать && vite --port 1234"
   }
 }
