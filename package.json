@@ -5,7 +5,7 @@
   {
     "@artel/artel": "0.6.25184",
     "@artel/browser-ru": "0.6.25004",
-    "@artel/reactivity-ru": "^0.91.2500",
+    "@artel/reactivity-ru": "^0.91.25004",
     "@artel/verstak-ru": "^0.91.25004",
     "vite": "4.5.0"
   },
