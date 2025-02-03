@@ -4,11 +4,8 @@
   "devDependencies":
   {
     "@artel/artel": "0.6.25184",
-    "@artel/browser": "0.6.25002",
     "@artel/browser-ru": "0.6.25004",
-    "@artel/reactivity": "^0.91.25003",
     "@artel/reactivity-ru": "^0.91.2500",
-    "@artel/verstak": "^0.91.25004",
     "@artel/verstak-ru": "^0.91.25004",
     "vite": "4.5.0"
   },
