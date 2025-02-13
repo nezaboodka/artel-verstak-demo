@@ -3,11 +3,11 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "artel": "0.6.25189-a",
-    "@artel/artel": "0.6.25189",
+    "artel": "0.6.25191-b",
+    "@artel/artc": "0.6.25191",
     "@artel/ru-browser": "^0.6.25002",
-    "@artel/ru-reactivity": "^0.91.25002-c",
-    "@artel/ru-verstak": "^0.91.25002-c",
+    "@artel/ru-reactivity": "^0.92.25006",
+    "@artel/ru-verstak": "^0.92.25006",
     "vite": "4.5.0"
   },
   "scripts":

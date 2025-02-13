@@ -27,7 +27,7 @@ if (!isUpToDate) {
 else
   console.log("\n")
 
-import * as a from "@artel/artel/cli"
+import * as a from "@artel/artc/cli"
 
 // a.then(
 //   result => { /* do nothing */ },
