@@ -28,5 +28,14 @@
         "cwd": "${workspaceFolder}"
       },
     },
+    {
+      "label": "Сборка активной Артель-программы",
+      "type": "artel",
+      "command": "build",
+      "project": "${fileDirname}",
+      "output": "${workspaceFolder}/сборка/${relativeFileDirname}",
+      "workspace": "${workspaceFolder}",
+      "standardPackages": "${workspaceFolder}/projects/СтандартныеПакеты"
+    },
   ]
 }

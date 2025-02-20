@@ -17,5 +17,18 @@
         "<node_internals>/**",
       ],
     },
+    {
+      "name": "Отладка активной Артель-программы",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "Сборка активной Артель-программы",
+      "program": "${workspaceFolder}/сборка/${relativeFileDirname}/launch.mjs",
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "pauseForSourceMap": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
   ]
 }
