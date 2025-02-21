@@ -5,8 +5,10 @@
   {
     "@artel/artc": "0.6.25206",
     "@artel/ru-browser": "0.6.25002-a",
-    "@artel/ru-reactivity": "0.92.25012-a",
-    "@artel/ru-user-interface": "0.92.25014-a",
+    "@artel/ru-reactivity": "0.92.25013",
+    "@artel/en-reactivity": "0.92.25013",
+    "@artel/ru-user-interface": "0.92.25015",
+    "@artel/en-user-interface": "0.92.25015",
     "vite": "4.5.0"
   },
   "scripts":
