@@ -3,7 +3,7 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/artc": "0.6.25206",
+    "@artel/artc": "0.6.25207",
     "@artel/ru-browser": "0.6.25002-a",
     "@artel/ru-reactivity": "0.92.25013",
     "@artel/en-reactivity": "0.92.25013",
