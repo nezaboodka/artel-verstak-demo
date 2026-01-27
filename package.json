@@ -3,15 +3,8 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/artc": "0.6.25231",
-    "@artel/ru-artel-system": "0.6.25231",
-    "@artel/en-artel-system": "0.6.25231",
-    "@artel/en-platform-javascript": "0.6.25004",
-    "@artel/ru-browser": "0.6.25002",
-    "@artel/ru-reactivity": "0.93.25025",
-    "@artel/en-reactivity": "0.93.25025",
-    "@artel/ru-user-interface": "0.93.25025",
-    "@artel/en-user-interface": "0.93.25025",
+    "@artel/standard-edition": "0.6.26007",
+    "verstak": "0.96.26010",
     "vite": "4.5.0"
   },
   "scripts":
