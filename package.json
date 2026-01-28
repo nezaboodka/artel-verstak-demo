@@ -4,8 +4,11 @@
   "devDependencies":
   {
     "@artel/standard-edition": "0.6.26009",
-    "verstak": "0.96.26011",
     "vite": "4.5.0"
+  },
+  "overrides": {
+    "reactronic": "0.96.26011",
+    "verstak": "0.96.26011"
   },
   "scripts":
   {
