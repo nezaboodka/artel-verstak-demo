@@ -3,12 +3,8 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/standard-edition": "0.6.26010",
+    "@artel/standard-edition": "0.6.26016",
     "vite": "4.5.0"
-  },
-  "overrides": {
-    "reactronic": "0.96.26012",
-    "verstak": "0.96.26012"
   },
   "scripts":
   {
