@@ -31,8 +31,8 @@ NPM-пакеты, выполнив в командной строке:
 - http://localhost:1234
 
 Для комфортного редактирования исходного кода с
-подсветкой синтаксиса, подсказками в редакторе и
-отладчиком требуются:
+подсветкой синтаксиса, подсказками и отладчиком
+требуются:
 
 - Visual Studio Code 1.95+ ([ссылка](https://code.visualstudio.com/)).
 - Расширение Артель для VS Code 0.6.26035+ ([ссылка](https://marketplace.visualstudio.com/items?itemName=nezaboodka.artel-vscode))
