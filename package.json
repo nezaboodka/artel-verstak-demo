@@ -9,7 +9,7 @@
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать": "node ./n-artel.mjs build . ./.сборка --no-warnings",
-    "запуск-сервера": "npm run собрать && vite --port 1234"
+    "собрать-приложение": "node ./n-artel.mjs build . ./.сборка --no-warnings",
+    "запустить-сервер": "vite --port 1234"
   }
 }

@@ -2,19 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Запуск сервера (vite)",
+      "label": "Запустить сервер (vite)",
       "group": "build",
       "type": "shell",
-      "command": "npm run запуск-сервера",
+      "command": "npm run запустить-сервер",
       "options": {
         "cwd": "${workspaceFolder}"
       },
     },
     {
-      "label": "Собрать (артель собрать)",
+      "label": "Собрать приложение (артель собрать)",
       "group": "build",
       "type": "shell",
-      "command": "npm run собрать",
+      "command": "npm run собрать-приложение",
       "options": {
         "cwd": "${workspaceFolder}"
       },
