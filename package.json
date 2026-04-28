@@ -3,8 +3,8 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/standard-edition": "0.6.26036",
-    "vite": "4.5.0"
+    "@artel/standard-edition": "0.6.26039",
+    "vite": "8.0.10"
   },
   "scripts":
   {
