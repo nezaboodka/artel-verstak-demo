@@ -3,13 +3,14 @@
   "description": "Демонстрация возможностей: Артель + Верстак",
   "devDependencies":
   {
-    "@artel/standard-edition": "0.6.26039",
+    "@artel/standard-edition": "0.9.26016",
     "vite": "8.0.10"
   },
   "scripts":
   {
     "скачать-пакеты": "npm install",
-    "собрать-приложение": "node ./n-artel.mjs build . ./.сборка --no-warnings",
+    "собрать-приложение-а": "node ./n-artel.mjs build Примеры-А ./.сборка --no-warnings",
+    "собрать-приложение-м": "node ./n-artel.mjs build Примеры-М ./.сборка --no-warnings",
     "запустить-сервер": "vite --port 1234"
   }
 }

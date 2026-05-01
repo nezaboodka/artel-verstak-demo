@@ -11,10 +11,19 @@
       },
     },
     {
-      "label": "Собрать приложение (артель собрать)",
+      "label": "Собрать приложение А (артель собрать)",
       "group": "build",
       "type": "shell",
-      "command": "npm run собрать-приложение",
+      "command": "npm run собрать-приложение-а",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+    },
+    {
+      "label": "Собрать приложение М (артель собрать)",
+      "group": "build",
+      "type": "shell",
+      "command": "npm run собрать-приложение-м",
       "options": {
         "cwd": "${workspaceFolder}"
       },
