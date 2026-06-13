@@ -9,8 +9,8 @@
 подсветкой синтаксиса, подсказками и отладчиком
 требуются:
 
-- Visual Studio Code 1.95+ ([ссылка](https://code.visualstudio.com/)).
-- Расширение Артель для VS Code 0.9.26022+ ([ссылка](https://marketplace.visualstudio.com/items?itemName=nezaboodka.artel-vscode))
+- Visual Studio Code 1.124+ ([ссылка](https://code.visualstudio.com/)).
+- Расширение Артель для VS Code 0.9.26030+ ([ссылка](https://marketplace.visualstudio.com/items?itemName=nezaboodka.artel-vscode))
 
 Для запуска приложения нужно скачать требуемые
 NPM-пакеты, выполнив в командной строке:
